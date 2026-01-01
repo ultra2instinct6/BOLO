@@ -2,6 +2,10 @@
 // Games Module - owns screen-play
 // =====================================
 
+// Feature flag: gentle difficulty ramp for Games 1–6 only (normal mode)
+const ENABLE_GENTLE_RAMP = true;
+const DEBUG_GENTLE_RAMP = false;
+
 /*
 QA / MANUAL TEST CHECKLIST
 - Normal mode: each game reaches Round Complete (no last-question loop)
@@ -57,6 +61,181 @@ var Games = {
     _posHintWhyStateByQid: {}
   },
 
+  // ===== How-to (first launch overlay) =====
+  _howtoOverlayEl: null,
+
+  _howtoSeenKeyForGameNum: function(gameNum) {
+    return "bolo_howto_seen_game_" + String(gameNum | 0);
+  },
+
+  _parseGameNumFromKey: function(gameKey) {
+    // startGame uses "game" + N (e.g., game6)
+    var s = String(gameKey || "");
+    if (!s) return null;
+    if (s.indexOf("game") !== 0) return null;
+    var n = parseInt(s.slice(4), 10);
+    if (!isFinite(n)) return null;
+    return n;
+  },
+
+  _getHowtoBulletsForGame: function(gameNum, gameType) {
+    if (gameNum === 1 || gameType === "tapWord") {
+      return ["Tap the correct word.", "Move fast for streak."];
+    }
+    if (gameNum === 2 || gameType === "pos") {
+      return ["Pick the correct part of speech."];
+    }
+    if (gameNum === 3 || gameType === "tense") {
+      return ["Pick the correct tense."];
+    }
+    if (gameNum === 4 || gameType === "sentenceCheck") {
+      return ["Choose the correct sentence."];
+    }
+    if (gameNum === 5 || gameType === "convoReply") {
+      return ["Pick the best reply."];
+    }
+    if (gameNum === 6 || gameType === "vocabTranslation") {
+      return ["Choose the correct English meaning."];
+    }
+    return ["Start the round."];
+  },
+
+  _removeHowtoOverlay: function() {
+    try {
+      if (Games._howtoOverlayEl && Games._howtoOverlayEl.parentNode) {
+        Games._howtoOverlayEl.parentNode.removeChild(Games._howtoOverlayEl);
+      }
+    } catch (e) {}
+    Games._howtoOverlayEl = null;
+  },
+
+  _showHowtoOverlayForGame: function(gameNum, gameType, onStart) {
+    // Safety: ensure only one overlay exists
+    Games._removeHowtoOverlay();
+
+    var bullets = Games._getHowtoBulletsForGame(gameNum, gameType);
+    var prevActive = null;
+    try { prevActive = document.activeElement; } catch (e) {}
+
+    var overlay = document.createElement("div");
+    overlay.className = "howto-overlay";
+
+    var backdrop = document.createElement("div");
+    backdrop.className = "howto-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+
+    var card = document.createElement("div");
+    card.className = "howto-card";
+    card.setAttribute("role", "dialog");
+    card.setAttribute("aria-modal", "true");
+    card.setAttribute("aria-label", "How to play");
+    card.setAttribute("tabindex", "-1");
+
+    var title = document.createElement("div");
+    title.className = "section-title";
+    title.textContent = "How to play";
+    card.appendChild(title);
+
+    var ul = document.createElement("ul");
+    ul.style.margin = "6px 0 10px 18px";
+    ul.style.color = "var(--text)";
+    ul.style.fontSize = "13px";
+    for (var i = 0; i < bullets.length; i++) {
+      var li = document.createElement("li");
+      li.textContent = String(bullets[i]);
+      ul.appendChild(li);
+    }
+    card.appendChild(ul);
+
+    var dontWrap = document.createElement("label");
+    dontWrap.style.display = "flex";
+    dontWrap.style.alignItems = "center";
+    dontWrap.style.gap = "8px";
+    dontWrap.style.fontSize = "13px";
+    dontWrap.style.color = "var(--muted)";
+
+    var dontCb = document.createElement("input");
+    dontCb.type = "checkbox";
+    dontCb.id = "howto-dont-show";
+    dontWrap.appendChild(dontCb);
+
+    var dontText = document.createElement("span");
+    dontText.textContent = "Don\u2019t show again";
+    dontWrap.appendChild(dontText);
+    card.appendChild(dontWrap);
+
+    var actions = document.createElement("div");
+    actions.className = "howto-actions";
+
+    var startBtn = document.createElement("button");
+    startBtn.type = "button";
+    startBtn.className = "btn btn-primary";
+    startBtn.textContent = "Start";
+    actions.appendChild(startBtn);
+    card.appendChild(actions);
+
+    overlay.appendChild(backdrop);
+    overlay.appendChild(card);
+    document.body.appendChild(overlay);
+    Games._howtoOverlayEl = overlay;
+
+    function cleanupAndStart(shouldPersist) {
+      if (shouldPersist) {
+        try {
+          localStorage.setItem(Games._howtoSeenKeyForGameNum(gameNum), "1");
+        } catch (e) {}
+      }
+      Games._removeHowtoOverlay();
+      try { if (prevActive && typeof prevActive.focus === "function") prevActive.focus(); } catch (e2) {}
+      if (typeof onStart === "function") onStart();
+    }
+
+    startBtn.addEventListener("click", function() {
+      cleanupAndStart(!!dontCb.checked);
+    });
+
+    // Minimal focus trap + Escape
+    function getFocusables() {
+      try {
+        return card.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+      } catch (e) {
+        return [];
+      }
+    }
+
+    overlay.addEventListener("keydown", function(ev) {
+      var e = ev || window.event;
+      var key = e && (e.key || e.keyCode);
+      if (key === "Escape" || key === "Esc" || key === 27) {
+        try { e.preventDefault(); } catch (e3) {}
+        // Escape closes and proceeds (does NOT persist)
+        cleanupAndStart(false);
+        return;
+      }
+
+      if (key === "Tab" || key === 9) {
+        var focusables = getFocusables();
+        if (!focusables || !focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        var active = null;
+        try { active = document.activeElement; } catch (e4) {}
+
+        var shift = !!(e && e.shiftKey);
+        if (shift && active === first) {
+          try { e.preventDefault(); } catch (e5) {}
+          try { last.focus(); } catch (e6) {}
+        } else if (!shift && active === last) {
+          try { e.preventDefault(); } catch (e7) {}
+          try { first.focus(); } catch (e8) {}
+        }
+      }
+    });
+
+    // Initial focus
+    try { startBtn.focus(); } catch (e9) {}
+  },
+
   // ===== Feedback + Microcopy =====
   GAME3_UI: {
     howtoEn: "How to play: Choose the tense (Present / Past / Future).",
@@ -106,6 +285,14 @@ var Games = {
       examplePa: "ਉਦਾਹਰਨ: ਮਾਫ਼ ਕਰਨਾ → ਕੋਈ ਗੱਲ ਨਹੀਂ।",
       wrongCueEn: "Pick the reply that is kind, clear, and polite.",
       wrongCuePa: "ਦਇਆਲੂ, ਸਪੱਸ਼ਟ ਅਤੇ ਸ਼ਿਸ਼ਟ ਜਵਾਬ ਚੁਣੋ।"
+    },
+    vocabTranslation: {
+      goalEn: "Goal: Pick the correct translation.",
+      goalPa: "ਮਕਸਦ: ਸਹੀ ਅਨੁਵਾਦ ਚੁਣੋ।",
+      exampleEn: "Example: ਬਿੱਲੀ → cat",
+      examplePa: "ਉਦਾਹਰਨ: ਬਿੱਲੀ → cat",
+      wrongCueEn: "Look at the word carefully. Think about what it means.",
+      wrongCuePa: "ਸ਼ਬਦ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ। ਇਸਦੇ ਅਰਥ ਬਾਰੇ ਸੋਚੋ।"
     }
   },
 
@@ -140,6 +327,12 @@ var Games = {
       hintPa: "ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਸਭ ਤੋਂ ਸ਼ਿਸ਼ਟ ਅਤੇ ਮਦਦਗਾਰ ਜਵਾਬ ਚੁਣੋ।",
       explanationEn: "A good reply is kind, clear, and respectful.",
       explanationPa: "ਚੰਗਾ ਜਵਾਬ ਦਇਆਲੂ, ਸਪੱਸ਼ਟ ਅਤੇ ਆਦਰ ਵਾਲਾ ਹੁੰਦਾ ਹੈ।"
+    },
+    vocabTranslation: {
+      hintEn: "Try again. Look at the word carefully.",
+      hintPa: "ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਸ਼ਬਦ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।",
+      explanationEn: "Think about what the word means in English or Punjabi.",
+      explanationPa: "ਸੋਚੋ ਕਿ ਸ਼ਬਦ ਦਾ ਅੰਗਰੇਜ਼ੀ ਜਾਂ ਪੰਜਾਬੀ ਵਿੱਚ ਕੀ ਮਤਲਬ ਹੈ।"
     }
   },
 
@@ -157,6 +350,9 @@ var Games = {
     onClick("btn-playhome-game3", function() { Games.selectPlayHomeGame(3); });
     onClick("btn-playhome-game4", function() { Games.selectPlayHomeGame(4); });
     onClick("btn-playhome-game5", function() { Games.selectPlayHomeGame(5); });
+    onClick("btn-playhome-game6", function() { Games.selectPlayHomeGame(6); });
+    onClick("btn-playhome-game7", function(e) { Games._handleComingSoonTileClick(e, 7); });
+    onClick("btn-playhome-game8", function(e) { Games._handleComingSoonTileClick(e, 8); });
 
     onClick("btn-playhome-diff-1", function() { Games.setPlayHomeDifficulty(1); });
     onClick("btn-playhome-diff-2", function() { Games.setPlayHomeDifficulty(2); });
@@ -207,6 +403,33 @@ var Games = {
   },
 
   // ===== Play Home (Game Home Menu) =====
+  _handleComingSoonTileClick: function(e, gameNum) {
+    try {
+      if (e && typeof e.preventDefault === "function") e.preventDefault();
+      if (e && typeof e.stopPropagation === "function") e.stopPropagation();
+    } catch (e2) {}
+
+    // Required copy (keep exact)
+    var msg = "Coming soon — try Vocab Vault (Game 6) for now.";
+    try {
+      if (window.UI && typeof UI.showToast === "function") {
+        UI.showToast(msg, 2500);
+        return;
+      }
+    } catch (e3) {}
+
+    // Fallback: use the existing toast host directly
+    try {
+      var host = document.getElementById("toastHost");
+      if (!host) return;
+      host.textContent = msg;
+      host.classList.add("is-visible");
+      setTimeout(function() {
+        try { host.classList.remove("is-visible"); } catch (e4) {}
+      }, 2500);
+    } catch (e5) {}
+  },
+
   getPlayHomeRegistry: function() {
     return [
       {
@@ -278,6 +501,50 @@ var Games = {
           "Choose the best reply.",
           "If you miss, you’ll get a hint and can try again."
         ]
+      },
+      {
+        num: 6,
+        id: "GAME6",
+        enabled: true,
+        title: "Vocab Vault",
+        description: "10 questions • translation",
+        goalEn: "Pick the correct translation.",
+        trackTags: ["Vocabulary", "Translation"],
+        instructions: [
+          "Look at the word.",
+          "Pick the correct translation.",
+          "If you miss, you'll get a hint and can try again."
+        ]
+      },
+      {
+        num: 7,
+        id: "GAME7",
+        enabled: false,
+        comingSoon: true,
+        title: "Vocab Vault Jr",
+        description: "10 questions • translation",
+        goalEn: "Pick the correct translation.",
+        trackTags: ["Vocabulary", "Translation"],
+        instructions: [
+          "Look at the Punjabi word.",
+          "Pick the matching English meaning.",
+          "If you miss, you’ll get a hint."
+        ]
+      },
+      {
+        num: 8,
+        id: "GAME8",
+        enabled: false,
+        comingSoon: true,
+        title: "Vocab Vault Expert",
+        description: "10 questions • translation",
+        goalEn: "Pick the correct translation (trickier words).",
+        trackTags: ["Vocabulary", "Translation"],
+        instructions: [
+          "Read the Punjabi prompt.",
+          "Choose the best English answer.",
+          "Harder set with close distractors."
+        ]
       }
     ];
   },
@@ -333,7 +600,8 @@ var Games = {
     Games.playHome.selectedGameNum = gameNum;
 
     // Tile selection state
-    for (var i = 1; i <= 5; i++) {
+    var total = Games.getPlayHomeRegistry().length;
+    for (var i = 1; i <= total; i++) {
       var tile = document.getElementById("btn-playhome-game" + i);
       if (!tile) continue;
       if (i === gameNum) tile.classList.add("is-selected");
@@ -504,6 +772,9 @@ var Games = {
     if (gameNum === 3) return "tense";
     if (gameNum === 4) return "sentenceCheck";
     if (gameNum === 5) return "convoReply";
+    if (gameNum === 6) return "vocabTranslation";
+    if (gameNum === 7) return "vocabTranslation";
+    if (gameNum === 8) return "vocabTranslation";
     return null;
   },
 
@@ -513,6 +784,9 @@ var Games = {
     if (gameId === "GAME3") return "tense";
     if (gameId === "GAME4") return "sentenceCheck";
     if (gameId === "GAME5") return "convoReply";
+    if (gameId === "GAME6") return "vocabTranslation";
+    if (gameId === "GAME7") return "vocabTranslation";
+    if (gameId === "GAME8") return "vocabTranslation";
     return null;
   },
 
@@ -847,6 +1121,113 @@ var Games = {
     return out;
   },
 
+  normalizeGame6Questions: function(rawArray, gameNum) {
+    var raw = Array.isArray(rawArray) ? rawArray : [];
+    var out = [];
+    var seen = {};
+    var gameNumber = (typeof gameNum === "number" && gameNum > 0) ? gameNum : 6;
+    var gameKey = "GAME" + String(gameNumber);
+
+    for (var i = 0; i < raw.length; i++) {
+      var q = raw[i] || {};
+      var id = String(q.id || ("G" + String(gameNumber) + "_" + String(i + 1)));
+      if (!id || seen[id]) continue;
+      seen[id] = true;
+
+      var choicesEn = Array.isArray(q.choicesEn)
+        ? q.choicesEn
+        : (Array.isArray(q.optionsEn)
+          ? q.optionsEn
+          : (Array.isArray(q.options)
+            ? q.options
+            : []));
+
+      var choicesPa = Array.isArray(q.choicesPa)
+        ? q.choicesPa
+        : (Array.isArray(q.optionsPa)
+          ? q.optionsPa
+          : null);
+
+      var answerIndex = (typeof q.answerIndex === "number")
+        ? (q.answerIndex | 0)
+        : ((typeof q.correctIndex === "number")
+          ? (q.correctIndex | 0)
+          : ((typeof q.correctChoiceIndex === "number")
+            ? (q.correctChoiceIndex | 0)
+            : -1));
+
+      if (choicesEn.length < 3 || choicesEn.length > 8) continue;
+      if (answerIndex < 0 || answerIndex >= choicesEn.length) continue;
+
+      var base = Games._baseNormalized("vocabTranslation");
+      base.qid = id;
+      base.trackId = String(q.trackId || "VOCAB_TRANSLATION");
+      base.difficulty = Math.max(1, Math.min(3, (q.difficulty | 0) || 2));
+
+      base.promptEn = String(q.promptEn || "");
+      base.promptPa = String(q.promptPa || "");
+
+      base.optionsEn = choicesEn.map(function(s) { return String(s || ""); });
+      if (choicesPa) {
+        base.optionsPa = choicesEn.map(function(_, idx) {
+          return (choicesPa && choicesPa[idx] != null) ? String(choicesPa[idx] || "") : "";
+        });
+      } else {
+        base.optionsPa = null;
+      }
+
+      base.correctIndex = answerIndex;
+      base.answerIndex = answerIndex;
+
+      base.hintEn = String(q.hintEn || q.hint || "");
+      base.hintPa = String(q.hintPa || "");
+      base.explanationEn = String(q.explainEn || q.explanationEn || q.explain || q.explanation || "");
+      base.explanationPa = String(q.explainPa || q.explanationPa || "");
+
+      // Additive, richer shape (safe for older renderer)
+      base.id = id;
+      base.gameId = gameNumber;
+      base.gameKey = gameKey;
+      base.prompt = { en: base.promptEn, pa: base.promptPa || undefined };
+      base.choices = base.optionsEn.map(function(en, idx) {
+        var pa = (choicesPa && choicesPa[idx] != null) ? String(choicesPa[idx] || "") : "";
+        return { en: en, pa: pa || undefined };
+      });
+      base.hint = { en: base.hintEn, pa: base.hintPa || undefined };
+      base.explanation = { en: base.explanationEn, pa: base.explanationPa || undefined };
+
+      if (q.topic) base.tags = ["VOCAB:" + String(q.topic).toUpperCase()];
+
+      // === TRANSLATION GAME UX FIX ===
+      // For translation questions (Punjabi → English), showing Punjabi on choice buttons
+      // creates a visual-matching task instead of translation task, because the correct
+      // button will contain the exact Punjabi word from the prompt.
+      // Solution: suppress Punjabi choices for this game type.
+      // This is DATA-DRIVEN: set a flag that the renderer respects (not game-type check).
+      base.suppressChoicePa = true;  // Always true for Game 6 (vocab translation)
+      
+      // ALSO suppress Punjabi PROMPT: showing the translated question is redundant and
+      // can give away answer structure. Translation games should show question in ONE language.
+      base.suppressPromptPa = true;  // Don't show Punjabi version of the question
+
+      // GUARDRAIL: Auto-detect if prompt contains a Punjabi choice string.
+      // If so, ensure Punjabi choices are suppressed (prevents accidental regressions).
+      if (base.promptPa && base.optionsPa && Array.isArray(base.optionsPa)) {
+        for (var j = 0; j < base.optionsPa.length; j++) {
+          var pChoice = String(base.optionsPa[j] || "");
+          if (pChoice && base.promptPa.indexOf(pChoice) !== -1) {
+            base.suppressChoicePa = true;  // Force suppress if giveaway detected
+            break;
+          }
+        }
+      }
+
+      out.push(base);
+    }
+
+    return out;
+  },
+
   normalizeFromLessonStepTapWord: function(lessonId, step, stepIndex) {
     if (!lessonId || !step || step.step_type !== "question") return null;
     if (!Array.isArray(step.options) || typeof step.correct_answer !== "string") return null;
@@ -944,6 +1325,24 @@ var Games = {
       return Games.normalizeGame5Questions(raw5);
     }
 
+    // Game 6+: Vocab Vault (Two-way Translation)
+    if (gameType === "vocabTranslation") {
+      var raw6 = (typeof RAW_GAME6_QUESTIONS !== "undefined") ? RAW_GAME6_QUESTIONS : [];
+      var dataKey = "GAME" + String(gameNum || 6);
+      var raw = raw6;
+
+      try {
+        if (typeof GAMES_DATA !== "undefined" && GAMES_DATA[dataKey]) {
+          raw = GAMES_DATA[dataKey];
+          if (raw && Array.isArray(raw.questions)) raw = raw.questions; // tolerate object-wrapped banks
+        }
+      } catch (e) {}
+
+      if (!Array.isArray(raw)) raw = raw6;
+      if (!Array.isArray(raw)) raw = [];
+      return Games.normalizeGame6Questions(raw, gameNum);
+    }
+
     var raw = null;
     if (gameType === "pos") raw = (typeof GAME2_QUESTIONS !== "undefined") ? GAME2_QUESTIONS : [];
     if (gameType === "tense") raw = (typeof GAME3_QUESTIONS !== "undefined") ? GAME3_QUESTIONS : [];
@@ -998,6 +1397,7 @@ var Games = {
     if (!gameType) return;
 
     var key = Games._getGameKey(gameNum);
+    var entry = Games._getPlayHomeEntry(gameNum);
     Games.currentGameType = gameNum;
     Games.currentGameQuestionIndex = 0;
     Games.currentGameScore = 0;
@@ -1016,10 +1416,13 @@ var Games = {
       ? Games.selectQuestionsTenseRamped(pool, difficulty, 10, false, null)
       : Games.selectQuestions(pool, gameType, difficulty, 10, false, null);
 
+    // Gentle ramp: reorder only (do not change which questions were selected)
+    selected = Games._applyGentleRampOrdering(selected, gameNum);
+
     Games.beginRound({
       mode: "normal",
       gameId: key,
-      label: Games.defaultLabelForGameType(gameType),
+      label: (entry && entry.title) ? entry.title : Games.defaultLabelForGameType(gameType),
       difficulty: difficulty,
       questions: selected,
       onDone: null,
@@ -1065,6 +1468,30 @@ var Games = {
       return a;
     }
 
+    // Helper: normalize sentence for near-duplicate detection
+    function normalizeSentence(s) {
+      return String(s || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    // Helper: check if two normalized sentences are too similar (token overlap > 60%)
+    function areSimilar(s1, s2) {
+      var n1 = normalizeSentence(s1).split(" ");
+      var n2 = normalizeSentence(s2).split(" ");
+      if (!n1.length || !n2.length) return false;
+      var common = 0;
+      for (var ci = 0; ci < n1.length; ci++) {
+        for (var cj = 0; cj < n2.length; cj++) {
+          if (n1[ci] === n2[cj]) { common++; break; }
+        }
+      }
+      var overlapRatio = common / Math.max(n1.length, n2.length);
+      return overlapRatio > 0.6;
+    }
+
     var tier1 = [];
     var tier2 = [];
     var tier3 = [];
@@ -1105,13 +1532,34 @@ var Games = {
 
     var out = [];
     var seen = {};
+    var lastTense = null;
+    var tenseRunLength = 0;
+    var lastSentence = "";
+
     for (var k = 0; k < plan.length && out.length < n; k++) {
       var tierWanted = plan[k];
       var qPick = pickFromTier(tierWanted) || pickFromTier(2) || pickFromTier(1) || pickFromTier(3);
       if (!qPick) break;
       var key = qPick.qid || (qPick.promptEn + "|" + String(out.length));
       if (seen[key]) { k--; continue; }
+
+      // Guard: skip if same tense repeated >2 times in a row (Enhancement 1)
+      var currentTense = qPick.correctChoiceId || qPick.correctTense || "";
+      if (currentTense === lastTense) {
+        tenseRunLength++;
+        if (tenseRunLength > 2) { k--; continue; } // skip and try next
+      } else {
+        lastTense = currentTense;
+        tenseRunLength = 1;
+      }
+
+      // Guard: skip if near-duplicate of last sentence (Enhancement 1)
+      if (lastSentence && areSimilar(qPick.promptEn || "", lastSentence)) {
+        k--; continue;
+      }
+
       seen[key] = true;
+      lastSentence = qPick.promptEn || "";
       out.push(qPick);
     }
 
@@ -1123,7 +1571,14 @@ var Games = {
         var q2 = rest[r];
         var key2 = q2.qid || (q2.promptEn + "|" + String(out.length));
         if (seen[key2]) continue;
+
+        // Also check tense run and similarity in fallback
+        var fallbackTense = q2.correctChoiceId || q2.correctTense || "";
+        if (fallbackTense === lastTense && tenseRunLength > 2) continue;
+        if (lastSentence && areSimilar(q2.promptEn || "", lastSentence)) continue;
+
         seen[key2] = true;
+        lastSentence = q2.promptEn || "";
         out.push(q2);
       }
     }
@@ -1172,6 +1627,7 @@ var Games = {
   beginRound: function(opts) {
     var questions = (opts && Array.isArray(opts.questions)) ? opts.questions : [];
     var gameType = (questions[0] && questions[0].gameType) ? questions[0].gameType : null;
+    var gameNum = Games._parseGameNumFromKey(opts && opts.gameId ? opts.gameId : null);
     Games.runtime.round = {
       mode: opts.mode || "normal",
       gameId: opts.gameId || null,
@@ -1189,6 +1645,7 @@ var Games = {
     Games.runtime.correctTags = {};
     Games.runtime.correctCount = 0;
     Games.runtime.totalCount = questions.length;
+    Games.runtime.bestStreakInRound = 0;
     Games.runtime.mode = opts.mode || "normal";
     Games.runtime.onDone = opts.onDone || null;
     Games.runtime.seed = opts.seed || null;
@@ -1199,6 +1656,19 @@ var Games = {
 
     Games._clearCompletionUI();
     Games._saveSessionToState();
+
+    // How-to micro overlay: first launch only for Games 1–6 (NOT 7–8)
+    if ((opts && opts.mode === "normal") && (gameNum != null) && gameNum >= 1 && gameNum <= 6) {
+      var seen = false;
+      try { seen = localStorage.getItem(Games._howtoSeenKeyForGameNum(gameNum)) === "1"; } catch (e) {}
+      if (!seen) {
+        Games._showHowtoOverlayForGame(gameNum, gameType, function() {
+          Games.render();
+        });
+        return;
+      }
+    }
+
     Games.render();
   },
 
@@ -1245,12 +1715,118 @@ var Games = {
     };
   },
 
+  // ===== Gentle Ramp Ordering (Games 1–6, normal mode only) =====
+  _estimateDifficulty: function(q) {
+    // Lower score = easier.
+    if (!q || typeof q !== "object") return 9999;
+
+    var score = 0;
+
+    // Prefer authored difficulty if present.
+    if (typeof q.difficulty === "number" && isFinite(q.difficulty)) {
+      // Keep this dominant, but not absolute.
+      score += Math.max(1, Math.min(3, q.difficulty | 0)) * 100;
+    }
+
+    // Fewer choices -> easier.
+    var choiceCount = null;
+    if (Array.isArray(q.optionsEn)) choiceCount = q.optionsEn.length;
+    else if (Array.isArray(q.choices)) choiceCount = q.choices.length;
+    else if (Array.isArray(q._choiceIds)) choiceCount = q._choiceIds.length;
+    if (typeof choiceCount === "number" && isFinite(choiceCount) && choiceCount > 0) {
+      score += choiceCount * 10;
+    }
+
+    // Shorter prompt -> easier.
+    var p = String(q.promptEn || q.prompt || "");
+    if (p) score += Math.min(200, p.length) / 4;
+
+    // tapWord: fewer tokens -> easier
+    if (Array.isArray(q.tokens) && q.tokens.length) {
+      score += q.tokens.length * 6;
+    }
+
+    return score;
+  },
+
+  _applyGentleRampOrdering: function(selectedQuestions, gameNum) {
+    if (!ENABLE_GENTLE_RAMP) return selectedQuestions;
+    if (!(gameNum >= 1 && gameNum <= 6)) return selectedQuestions;
+    if (!Array.isArray(selectedQuestions)) return selectedQuestions;
+    if (selectedQuestions.length < 2) return selectedQuestions;
+
+    // If small set, do a simple ascending sort and return.
+    if (selectedQuestions.length < 6) {
+      var small = selectedQuestions.map(function(q, idx) {
+        return { q: q, idx: idx, d: Games._estimateDifficulty(q) };
+      });
+      small.sort(function(a, b) {
+        if (a.d < b.d) return -1;
+        if (a.d > b.d) return 1;
+        return a.idx - b.idx; // stable tie-break
+      });
+      var outSmall = small.map(function(x) { return x.q; });
+      if (DEBUG_GENTLE_RAMP) {
+        try { console.log("[GentleRamp] game", gameNum, small.map(function(x) { return x.d; })); } catch (e) {}
+      }
+      return outSmall;
+    }
+
+    // For normal-size sets: pick 2 easiest + 2 hardest by estimated difficulty.
+    // Keep the middle in original order to preserve the “normal” feel.
+    var scored = selectedQuestions.map(function(q, idx) {
+      return { q: q, idx: idx, d: Games._estimateDifficulty(q) };
+    });
+
+    var sorted = scored.slice().sort(function(a, b) {
+      if (a.d < b.d) return -1;
+      if (a.d > b.d) return 1;
+      return a.idx - b.idx;
+    });
+
+    var easyA = sorted[0];
+    var easyB = sorted[1];
+    var hardA = sorted[sorted.length - 1];
+    var hardB = sorted[sorted.length - 2];
+
+    // Exclude the chosen indices from the middle.
+    var exclude = {};
+    exclude[easyA.idx] = true;
+    exclude[easyB.idx] = true;
+    exclude[hardA.idx] = true;
+    exclude[hardB.idx] = true;
+
+    var middle = [];
+    for (var i = 0; i < scored.length; i++) {
+      if (!exclude[scored[i].idx]) middle.push(scored[i]);
+    }
+
+    var out = [easyA.q, easyB.q];
+    for (var j = 0; j < middle.length; j++) out.push(middle[j].q);
+    // End with harder ones (harder-last). Reverse the two for a stronger finish.
+    out.push(hardB.q);
+    out.push(hardA.q);
+
+    if (DEBUG_GENTLE_RAMP) {
+      try {
+        console.log("[GentleRamp] game", gameNum, {
+          easy: [easyA.d, easyB.d],
+          hard: [hardB.d, hardA.d],
+          all: out.map(function(q) { return Games._estimateDifficulty(q); })
+        });
+      } catch (e2) {}
+    }
+
+    return out;
+  },
+
   defaultLabelForGameType: function(gameType) {
     if (gameType === "tapWord") return "Game 1: Tap the Word";
     if (gameType === "pos") return "Game 2: Part of Speech";
     if (gameType === "tense") return "Game 3: Tense Detective";
     if (gameType === "sentenceCheck") return "Game 4: Sentence Check";
     if (gameType === "convoReply") return "Game 5: Conversation Coach";
+    if (gameType === "vocabTranslation") return "Vocab Vault (Translation)";
     return "Game";
   },
 
@@ -1352,7 +1928,14 @@ var Games = {
         }
       } catch (e) {}
 
-      if (punjabiOn && promptPa) {
+      // Respect suppressPromptPa flag (data-driven UX policy for translation games).
+      // For translation questions, showing the Punjabi prompt is redundant: the question
+      // is essentially asked twice with the same structure, which can leak answer patterns.
+      // Example: "What is ਨੀਲਾ in English?" + "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਨੀਲਾ ਕੀ ਹੈ?" (same structure, different language)
+      var suppressPromptPa = !!(q && q.suppressPromptPa);
+      var showPromptPa = !suppressPromptPa && punjabiOn && promptPa;
+
+      if (showPromptPa) {
         qTextEl.innerHTML = "";
         var en = document.createElement("div");
         en.textContent = promptEn || "";
@@ -1378,6 +1961,8 @@ var Games = {
     } else if (q.gameType === "sentenceCheck") {
       Games._renderChoiceQuestion(q, optionsEl);
     } else if (q.gameType === "convoReply") {
+      Games._renderChoiceQuestion(q, optionsEl);
+    } else if (q.gameType === "vocabTranslation") {
       Games._renderChoiceQuestion(q, optionsEl);
     }
 
@@ -1418,7 +2003,41 @@ var Games = {
     feedback.setAttribute("aria-live", "polite");
     feedback.setAttribute("aria-atomic", "true");
 
+    // Enhancement 3: Static verb-form cues (shown first 3 Qs)
+    var cuesRow = ensureEl("g3-cues-row", "div", "section-subtitle");
+    cuesRow.style.fontSize = "0.9em";
+    cuesRow.style.opacity = "0.8";
+
     var btnRow = ensureEl("g3-why-row", "div", "button-row");
+
+    // Enhancement 2: Focus button
+    var focusBtn = document.getElementById("g3-focus-button");
+    if (!focusBtn) {
+      focusBtn = document.createElement("button");
+      focusBtn.type = "button";
+      focusBtn.id = "g3-focus-button";
+      focusBtn.className = "btn btn-secondary btn-small";
+      focusBtn.innerHTML = '<span class="btn-label-en">Focus sentence</span><span class="btn-label-pa" lang="pa">ਵਾਕ \'ਤੇ ਫੋਕਸ</span>';
+      btnRow.insertBefore(focusBtn, btnRow.firstChild);
+
+      // Bind focus logic once
+      try {
+        if (!(focusBtn.dataset && focusBtn.dataset.bound)) {
+          focusBtn.dataset.bound = "1";
+          focusBtn.addEventListener("click", function() {
+            var prompt = document.getElementById("play-question-text");
+            if (prompt) {
+              if (!prompt.hasAttribute("tabindex")) {
+                prompt.setAttribute("tabindex", "-1");
+              }
+              prompt.focus();
+              try { prompt.scrollIntoView({ block: "nearest" }); } catch (e) {}
+            }
+          });
+        }
+      } catch (e) {}
+    }
+
     var whyBtn = document.getElementById("g3-why-toggle");
     if (!whyBtn) {
       whyBtn = document.createElement("button");
@@ -1447,7 +2066,7 @@ var Games = {
       }
     } catch (e) {}
 
-    return { wrap: wrap, howto: howto, progress: progress, feedback: feedback, whyBtn: whyBtn, exp: exp };
+    return { wrap: wrap, howto: howto, progress: progress, feedback: feedback, cuesRow: cuesRow, focusBtn: focusBtn, whyBtn: whyBtn, exp: exp };
   },
 
   _setGame3ExplanationOpen: function(isOpen) {
@@ -1493,6 +2112,17 @@ var Games = {
       ui.howto.style.display = "none";
     }
 
+    // Enhancement 3: Static verb-form cues (shown first 3 Qs only)
+    if (idx < 3) {
+      ui.cuesRow.style.display = "block";
+      ui.cuesRow.textContent = punjabiOn
+        ? "Present: ਹੁਣ / ਹਰ ਰੋਜ਼ / am-is-are + -ing  |  Past: ਭੀਤਾ / -ed / was-were  |  Future: will / ਭਲਕੇ"
+        : "Present: now / every day / am-is-are + -ing  |  Past: -ed / was-were  |  Future: will / tomorrow";
+    } else {
+      ui.cuesRow.textContent = "";
+      ui.cuesRow.style.display = "none";
+    }
+
     // Progress: always visible.
     ui.progress.style.display = "block";
     ui.progress.textContent = punjabiOn
@@ -1501,6 +2131,7 @@ var Games = {
 
     // Clear feedback + hide Why/explanation until answered.
     ui.feedback.innerHTML = "";
+    ui.focusBtn.style.display = "inline-flex";
     ui.whyBtn.style.display = "none";
     ui.exp.textContent = "";
     Games._setGame3ExplanationOpen(false);
@@ -1643,7 +2274,15 @@ var Games = {
 
         var en = String(set.optionLabels[idx] || "");
         var pa = (set.optionLabelsPa && set.optionLabelsPa[idx]) ? String(set.optionLabelsPa[idx]) : "";
-        if (punjabiOn && pa) {
+        
+        // Respect suppressChoicePa flag (data-driven approach, not game-type specific).
+        // This prevents answer giveaway in translation games where the prompt already
+        // contains the Punjabi word, making the correct button an exact visual match.
+        // Example: prompt "What is ਬਿੱਲੀ?" with choice "cat / ਬਿੱਲੀ" creates visual matching instead of translation.
+        var suppressPa = !!(q && q.suppressChoicePa);
+        var showChoicePa = !suppressPa && punjabiOn && pa;
+        
+        if (showChoicePa) {
           btn.innerHTML = "";
           // Game 2: Punjabi-first labels when Punjabi mode is on.
           if (q && q.gameType === "pos") {
@@ -1771,6 +2410,7 @@ var Games = {
           var xpG3 = Games._xpEach();
           Games.currentGameScore = (Games.currentGameScore || 0) + xpG3;
           Games.currentGameStreak = (Games.currentGameStreak || 0) + 1;
+          Games.runtime.bestStreakInRound = Math.max((Games.runtime.bestStreakInRound | 0) || 0, (Games.currentGameStreak | 0) || 0);
           Games.runtime.correctCount += 1;
 
           if (State && State.awardXP) {
@@ -1791,6 +2431,12 @@ var Games = {
           if (ui) {
             ui.feedback.className = "feedback correct";
             ui.feedback.textContent = "Correct! +" + Games._xpEach() + " XP";
+
+            // Enhancement 4: Streak reinforcement cues
+            if (Games.currentGameStreak >= 2) {
+              ui.feedback.textContent += " • Nice—keep watching the verb form.";
+            }
+
             var expText = punjabiOnG3 ? Games._pickActiveExplanationText(q) : Games._pickActiveExplanationText(q);
             ui.exp.textContent = expText || "";
             Games._setGame3ExplanationOpen(false);
@@ -1867,6 +2513,7 @@ var Games = {
         var xp = Games._xpEach();
         Games.currentGameScore = (Games.currentGameScore || 0) + xp;
         Games.currentGameStreak = (Games.currentGameStreak || 0) + 1;
+        Games.runtime.bestStreakInRound = Math.max((Games.runtime.bestStreakInRound | 0) || 0, (Games.currentGameStreak | 0) || 0);
         Games.runtime.correctCount += 1;
 
         if (State && State.awardXP) {
@@ -2432,6 +3079,131 @@ var Games = {
   },
 
   // ===== Completion panel =====
+  _nextTipForGameType: function(gameType) {
+    if (gameType === "tapWord") return "Tip: scan the whole line before tapping.";
+    if (gameType === "pos") return "Tip: look for function words (the, a, to).";
+    if (gameType === "tense") return "Tip: time words (yesterday/now/tomorrow) help.";
+    if (gameType === "sentenceCheck") return "Tip: check subject–verb agreement first.";
+    if (gameType === "convoReply") return "Tip: pick the most polite + relevant reply.";
+    if (gameType === "vocabTranslation") return "Tip: visualize the word in a sentence.";
+    return "";
+  },
+
+  _renderRoundSummaryAndTipCard: function() {
+    var r = Games.runtime.round;
+    if (!r) return;
+
+    // Only Games 1–6 (never 7–8), only normal rounds.
+    if (Games.runtime.mode !== "normal") return;
+    var gameNum = Games.currentGameType || Games._parseGameNumFromKey(r.gameId);
+    if (!(gameNum >= 1 && gameNum <= 6)) return;
+
+    var panel = document.getElementById("play-complete-panel");
+    if (!panel) return;
+
+    // Remove existing injected card (if any)
+    var existing = document.getElementById("round-summary-card");
+    if (existing && existing.parentNode) {
+      try { existing.parentNode.removeChild(existing); } catch (e0) {}
+    }
+
+    var gameType = (r.questions && r.questions[0] && r.questions[0].gameType) ? r.questions[0].gameType : Games._mapGameNumToType(gameNum);
+
+    var correct = (typeof Games.runtime.correctCount === "number") ? Games.runtime.correctCount : null;
+    var total = (typeof Games.runtime.totalCount === "number") ? Games.runtime.totalCount : null;
+
+    var card = document.createElement("div");
+    card.className = "round-summary-card";
+    card.id = "round-summary-card";
+
+    var title = document.createElement("div");
+    title.className = "section-title";
+    title.style.fontSize = "15px";
+    title.textContent = "Round Summary";
+    card.appendChild(title);
+
+    var metrics = document.createElement("div");
+    metrics.className = "round-summary-metrics";
+
+    // a) Score (always show using existing counters when available)
+    if (correct != null && total != null && total > 0) {
+      var scoreLine = document.createElement("div");
+      scoreLine.className = "section-subtitle";
+      scoreLine.textContent = "Score: " + String(correct) + "/" + String(total);
+      metrics.appendChild(scoreLine);
+    }
+
+    // b) Accuracy
+    if (correct != null && total != null && total > 0) {
+      var acc = Math.round((correct / total) * 100);
+      if (isFinite(acc)) {
+        var accLine = document.createElement("div");
+        accLine.className = "section-subtitle";
+        accLine.textContent = "Accuracy: " + String(acc) + "%";
+        metrics.appendChild(accLine);
+      }
+    }
+
+    // c) Best streak in round
+    if (typeof Games.runtime.bestStreakInRound === "number" && isFinite(Games.runtime.bestStreakInRound)) {
+      var bs = Games.runtime.bestStreakInRound | 0;
+      if (bs > 0) {
+        var bsLine = document.createElement("div");
+        bsLine.className = "section-subtitle";
+        bsLine.textContent = "Best streak: " + String(bs);
+        metrics.appendChild(bsLine);
+      }
+    }
+
+    if (metrics.childNodes && metrics.childNodes.length) {
+      card.appendChild(metrics);
+    }
+
+    var tip = Games._nextTipForGameType(gameType);
+    if (tip) {
+      var tipLine = document.createElement("div");
+      tipLine.className = "round-summary-tip";
+      tipLine.textContent = tip;
+      card.appendChild(tipLine);
+    }
+
+    // Buttons under the card (reuse existing logic)
+    var actions = document.createElement("div");
+    actions.className = "button-row";
+    actions.style.marginTop = "10px";
+
+    var btnAgain = document.createElement("button");
+    btnAgain.type = "button";
+    btnAgain.className = "btn btn-secondary";
+    btnAgain.textContent = "Play again";
+
+    var btnBack = document.createElement("button");
+    btnBack.type = "button";
+    btnBack.className = "btn";
+    btnBack.textContent = "Back to Play";
+
+    actions.appendChild(btnBack);
+    actions.appendChild(btnAgain);
+    card.appendChild(actions);
+
+    // Bind once per render
+    try {
+      if (!(card.dataset && card.dataset.bound)) {
+        if (card.dataset) card.dataset.bound = "1";
+        btnAgain.addEventListener("click", function() { Games.playAgain(); });
+        btnBack.addEventListener("click", function() { Games.backToPlayMenu(); });
+      }
+    } catch (e1) {}
+
+    // Insert before the existing completion buttons (safe append if not found)
+    var firstBtnRow = panel.querySelector(".button-row");
+    if (firstBtnRow && firstBtnRow.parentNode) {
+      firstBtnRow.parentNode.insertBefore(card, firstBtnRow);
+    } else {
+      panel.appendChild(card);
+    }
+  },
+
   showCompletionPanel: function() {
     var r = Games.runtime.round;
     if (!r) return;
@@ -2466,6 +3238,9 @@ var Games = {
     if (btnCQ) {
       btnCQ.style.display = (Games.runtime.mode === "quest") ? "inline-block" : "none";
     }
+
+    // Append enhanced summary card (Games 1–6 only)
+    Games._renderRoundSummaryAndTipCard();
 
     Games.disableNext();
     Games.updateScoreUI();
@@ -2519,9 +3294,13 @@ var Games = {
 
     // Restart with the same question list (quest) or reselect (normal)
     if (mode === "normal") {
-      var gameNum = Games.currentGameType || 1;
+      var gameNum = Games.currentGameType || Games._parseGameNumFromKey(gameId) || 1;
+      var gameType = Games._mapGameNumToType(gameNum);
       var pool = Games.buildPoolForGameNum(gameNum);
-      var selected = Games.selectQuestions(pool, Games._mapGameNumToType(gameNum), difficulty, 10, false, null);
+      var selected = (gameType === "tense")
+        ? Games.selectQuestionsTenseRamped(pool, difficulty, 10, false, null)
+        : Games.selectQuestions(pool, gameType, difficulty, 10, false, null);
+      selected = Games._applyGentleRampOrdering(selected, gameNum);
       questions = selected;
     }
 

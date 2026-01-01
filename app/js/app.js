@@ -207,6 +207,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Initialize feature modules
     Lessons.init();
     Games.init();
+    if (typeof TypeGame !== "undefined" && TypeGame && typeof TypeGame.init === "function") {
+      TypeGame.init();
+    }
     Reading.init();
     Progress.init();
     DailyQuest.init();
@@ -275,8 +278,21 @@ document.addEventListener("DOMContentLoaded", function() {
   var btnHomeType = document.getElementById("btn-home-type");
   if (btnHomeType) {
     UI.bindOnce(btnHomeType, "homeTypeBound", "click", function() {
-      UI.goTo("screen-play-home");
-      try { if (Games && typeof Games.selectPlayHomeGame === "function") Games.selectPlayHomeGame(2); } catch (e) {}
+      UI.goTo("screen-typing-center");
+    });
+  }
+
+  var btnTypeStart = document.getElementById("btn-type-start");
+  if (btnTypeStart) {
+    UI.bindOnce(btnTypeStart, "typeStartBound", "click", function() {
+      try { if (Games && typeof Games.startGame === "function") Games.startGame(2); } catch (e) {}
+    });
+  }
+
+  var btnTypeBack = document.getElementById("btn-type-back");
+  if (btnTypeBack) {
+    UI.bindOnce(btnTypeBack, "typeBackBound", "click", function() {
+      UI.goTo("screen-home");
     });
   }
 

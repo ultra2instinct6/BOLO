@@ -1,5 +1,130 @@
 // -------------------- GAME QUESTION BANKS --------------------
 
+// NOTE: This file is loaded as a vanilla script (no imports).
+// A few small helpers are defined here defensively so Daily Quest
+// normalization can run even if other modules are not loaded.
+
+if (typeof trimSpaces !== "function") {
+  function trimSpaces(s) {
+    return String(s == null ? "" : s).replace(/\s+/g, " ").trim();
+  }
+}
+
+if (typeof shuffleArrayCopy !== "function") {
+  function shuffleArrayCopy(arr) {
+    var a = Array.isArray(arr) ? arr.slice() : [];
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i];
+      a[i] = a[j];
+      a[j] = tmp;
+    }
+    return a;
+  }
+}
+
+if (typeof sanitizeSentenceText !== "function") {
+  function sanitizeSentenceText(s) {
+    // Keep it conservative: normalize whitespace only.
+    return trimSpaces(s);
+  }
+}
+
+if (typeof sanitizeOptionText !== "function") {
+  function sanitizeOptionText(s) {
+    // Keep it conservative: normalize whitespace only.
+    return trimSpaces(s);
+  }
+}
+
+if (typeof warnSanitizationChange !== "function") {
+  function warnSanitizationChange(before, after, meta) {
+    try {
+      if (before === after) return;
+      if (typeof window !== "undefined" && window && window.BOLO_DEBUG === true) {
+        console.warn("Sanitized text", { before: before, after: after, meta: meta || {} });
+      }
+    } catch (e) {}
+  }
+}
+
+if (typeof warnGame4 !== "function") {
+  function warnGame4(msg, meta) {
+    try {
+      if (typeof window !== "undefined" && window && window.BOLO_DEBUG === true) {
+        console.warn(msg, meta || {});
+      }
+    } catch (e) {}
+  }
+}
+
+if (typeof POS_HINTS === "undefined") {
+  var POS_HINTS = {
+    noun: { hintEn: "Noun = person/place/thing.", hintPa: "ਨਾਂ = ਵਿਅਕਤੀ/ਥਾਂ/ਚੀਜ਼।", explanationEn: "Pick the option that names a person, place, or thing.", explanationPa: "ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਿਅਕਤੀ/ਥਾਂ/ਚੀਜ਼ ਦੱਸਦੀ ਹੈ।" },
+    verb: { hintEn: "Verb = action word.", hintPa: "ਕਿਰਿਆ = ਕੰਮ ਵਾਲਾ ਸ਼ਬਦ।", explanationEn: "Pick the option that shows an action.", explanationPa: "ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਕੰਮ/ਕਿਰਿਆ ਦੱਸਦੀ ਹੈ।" },
+    adjective: { hintEn: "Adjective describes a noun.", hintPa: "ਵਿਸ਼ੇਸ਼ਣ noun ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ।", explanationEn: "Pick the option that describes what something is like.", explanationPa: "ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਰਣਨ ਕਰਦੀ ਹੈ।" },
+    adverb: { hintEn: "Adverb tells how/when.", hintPa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਵੇਂ/ਕਦੋਂ ਦੱਸਦਾ ਹੈ।", explanationEn: "Pick the option that tells how/when an action happens.", explanationPa: "ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਕਿਵੇਂ/ਕਦੋਂ ਦੱਸਦੀ ਹੈ।" },
+    _default: { hintEn: "Try again.", hintPa: "ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।", explanationEn: "Pick the best answer.", explanationPa: "ਸਭ ਤੋਂ ਵਧੀਆ ਜਵਾਬ ਚੁਣੋ।" }
+  };
+}
+
+if (typeof TENSE_HINTS === "undefined") {
+  var TENSE_HINTS = {
+    present: { hintEn: "Present = now / every day.", hintPa: "ਵਰਤਮਾਨ = ਹੁਣ / ਹਰ ਰੋਜ਼।", explanationEn: "Present tense talks about now or usual actions.", explanationPa: "ਵਰਤਮਾਨ ਕਾਲ ਹੁਣ ਜਾਂ ਆਦਤ ਵਾਲੇ ਕੰਮਾਂ ਲਈ ਹੁੰਦਾ ਹੈ।" },
+    past: { hintEn: "Past = already happened.", hintPa: "ਭੂਤਕਾਲ = ਹੋ ਚੁੱਕਾ।", explanationEn: "Past tense talks about what already happened.", explanationPa: "ਭੂਤਕਾਲ ਵਿੱਚ ਹੋ ਚੁੱਕੀਆਂ ਘਟਨਾਵਾਂ ਆਉਂਦੀਆਂ ਹਨ।" },
+    future: { hintEn: "Future = will / tomorrow.", hintPa: "ਭਵਿੱਖ = will / ਕੱਲ੍ਹ।", explanationEn: "Future tense talks about what will happen.", explanationPa: "ਭਵਿੱਖ ਕਾਲ ਵਿੱਚ ਜੋ ਹੋਵੇਗਾ ਉਹ ਆਉਂਦਾ ਹੈ।" },
+    _default: { hintEn: "Look for time words (yesterday / will / tomorrow).", hintPa: "ਸਮੇਂ ਦੇ ਸ਼ਬਦ ਲੱਭੋ (yesterday / will / tomorrow)।", explanationEn: "Tense tells when the action happens.", explanationPa: "ਕਾਲ ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਕਦੋਂ ਹੁੰਦਾ ਹੈ।" }
+  };
+}
+
+if (typeof GAME4_FALLBACK === "undefined") {
+  var GAME4_FALLBACK = {
+    hintEn: "Pick the sentence that sounds correct.",
+    hintPa: "ਉਹ ਵਾਕ ਚੁਣੋ ਜੋ ਸਹੀ ਲੱਗਦਾ ਹੈ।",
+    explanationEn: "Pick the sentence with correct grammar.",
+    explanationPa: "ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਵਾਕ ਚੁਣੋ।"
+  };
+}
+
+if (typeof standardizeGame2Word !== "function") {
+  function standardizeGame2Word(word, partId) {
+    // Conservative: normalize whitespace only.
+    return trimSpaces(word);
+  }
+}
+
+if (typeof canonicalGame2WordLower !== "function") {
+  function canonicalGame2WordLower(word, partId) {
+    return String(standardizeGame2Word(word, partId) || "").toLowerCase();
+  }
+}
+
+if (typeof sanitizeGame2StableIdToken !== "function") {
+  function sanitizeGame2StableIdToken(s) {
+    return String(s || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 40);
+  }
+}
+
+if (typeof validateNormalizedQuestions !== "function") {
+  function validateNormalizedQuestions(list) {
+    if (!Array.isArray(list)) return;
+    // Lightweight validation to prevent hard crashes.
+    for (var i = 0; i < list.length; i++) {
+      var q = list[i];
+      if (!q || typeof q !== "object") continue;
+      if (!q.id || !q.gameId) {
+        if (typeof window !== "undefined" && window && window.BOLO_DEBUG === true) {
+          console.warn("Normalized question missing id/gameId", { index: i, q: q });
+        }
+      }
+    }
+  }
+}
+
 // Game 2/3/4 banks (safe defaults; keep app bootable)
 // Defined up-front so normalization/validation code can reference them safely.
 var GAME2_QUESTIONS = [];
@@ -540,6 +665,584 @@ var GAME4_QUESTIONS = [
 
     // Alias for consistency with other banks (safe)
     var GAME5_QUESTIONS = RAW_GAME5_QUESTIONS;
+
+  // Game 6: Vocab Vault (Two-way Translation) | Ages 7–10
+  // English mode: promptEn shows Punjabi; choicesEn are English.
+  // Punjabi mode: promptPa shows English; choicesPa are Punjabi.
+  var RAW_GAME6_QUESTIONS = [
+    // ---------- EASY (10): very common nouns ----------
+    {
+      id: "G6_001",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "animals",
+      promptEn: 'What does "ਬਿੱਲੀ" mean in English?',
+      promptPa: '"cat" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["cat", "dog", "cow", "goat"],
+      choicesPa: ["ਬਿੱਲੀ", "ਕੁੱਤਾ", "ਗਾਂ", "ਬੱਕਰੀ"],
+      answerIndex: 0,
+      hintEn: "It is a common pet.",
+      hintPa: "ਇਹ ਘਰ ਵਿੱਚ ਪਾਲਣ ਵਾਲਾ ਜਾਨਵਰ ਹੈ।",
+      explainEn: '"ਬਿੱਲੀ" = cat.',
+      explainPa: '"cat" = ਬਿੱਲੀ।'
+    },
+    {
+      id: "G6_002",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "animals",
+      promptEn: 'What does "ਕੁੱਤਾ" mean in English?',
+      promptPa: '"dog" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["horse", "dog", "cat", "bird"],
+      choicesPa: ["ਘੋੜਾ", "ਕੁੱਤਾ", "ਬਿੱਲੀ", "ਪੰਛੀ"],
+      answerIndex: 1,
+      hintEn: "It barks.",
+      hintPa: "ਇਹ ਭੌਂਕਦਾ ਹੈ।",
+      explainEn: '"ਕੁੱਤਾ" = dog.',
+      explainPa: '"dog" = ਕੁੱਤਾ।'
+    },
+    {
+      id: "G6_003",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "food",
+      promptEn: 'What does "ਸੇਬ" mean in English?',
+      promptPa: '"apple" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["mango", "apple", "banana", "orange"],
+      choicesPa: ["ਆਮ", "ਸੇਬ", "ਕੇਲਾ", "ਸੰਤਰਾ"],
+      answerIndex: 1,
+      hintEn: "A red or green fruit.",
+      hintPa: "ਇਹ ਲਾਲ ਜਾਂ ਹਰਾ ਫਲ ਹੁੰਦਾ ਹੈ।",
+      explainEn: '"ਸੇਬ" = apple.',
+      explainPa: '"apple" = ਸੇਬ।'
+    },
+    {
+      id: "G6_004",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "school",
+      promptEn: 'What does "ਕਿਤਾਬ" mean in English?',
+      promptPa: '"book" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["book", "pencil", "bag", "chair"],
+      choicesPa: ["ਕਿਤਾਬ", "ਪੈਂਸਲ", "ਬੈਗ", "ਕੁਰਸੀ"],
+      answerIndex: 0,
+      hintEn: "You read it.",
+      hintPa: "ਤੁਸੀਂ ਇਹ ਪੜ੍ਹਦੇ ਹੋ।",
+      explainEn: '"ਕਿਤਾਬ" = book.',
+      explainPa: '"book" = ਕਿਤਾਬ।'
+    },
+    {
+      id: "G6_005",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "places",
+      promptEn: 'What does "ਸਕੂਲ" mean in English?',
+      promptPa: '"school" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["school", "home", "park", "shop"],
+      choicesPa: ["ਸਕੂਲ", "ਘਰ", "ਪਾਰਕ", "ਦੁਕਾਨ"],
+      answerIndex: 0,
+      hintEn: "You go there to learn.",
+      hintPa: "ਤੁਸੀਂ ਓਥੇ ਪੜ੍ਹਨ/ਸਿੱਖਣ ਜਾਂਦੇ ਹੋ।",
+      explainEn: '"ਸਕੂਲ" = school.',
+      explainPa: '"school" = ਸਕੂਲ।'
+    },
+    {
+      id: "G6_006",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "drinks",
+      promptEn: 'What does "ਪਾਣੀ" mean in English?',
+      promptPa: '"water" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["tea", "milk", "water", "juice"],
+      choicesPa: ["ਚਾਹ", "ਦੂਧ", "ਪਾਣੀ", "ਜੂਸ"],
+      answerIndex: 2,
+      hintEn: "You drink it every day.",
+      hintPa: "ਤੁਸੀਂ ਇਹ ਹਰ ਰੋਜ਼ ਪੀਂਦੇ ਹੋ।",
+      explainEn: '"ਪਾਣੀ" = water.',
+      explainPa: '"water" = ਪਾਣੀ।'
+    },
+    {
+      id: "G6_007",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "family",
+      promptEn: 'What does "ਮਾਂ" mean in English?',
+      promptPa: '"mother" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["mother", "father", "brother", "sister"],
+      choicesPa: ["ਮਾਂ", "ਪਿਤਾ", "ਭਰਾ", "ਭੈਣ"],
+      answerIndex: 0,
+      hintEn: "Your mom.",
+      hintPa: "ਤੁਹਾਡੀ ਮੰਮੀ।",
+      explainEn: '"ਮਾਂ" = mother.',
+      explainPa: '"mother" = ਮਾਂ।'
+    },
+    {
+      id: "G6_008",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "family",
+      promptEn: 'What does "ਪਿਤਾ" mean in English?',
+      promptPa: '"father" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["friend", "father", "sister", "child"],
+      choicesPa: ["ਦੋਸਤ", "ਪਿਤਾ", "ਭੈਣ", "ਬੱਚਾ"],
+      answerIndex: 1,
+      hintEn: "Your dad.",
+      hintPa: "ਤੁਹਾਡੇ ਪਾਪਾ।",
+      explainEn: '"ਪਿਤਾ" = father.',
+      explainPa: '"father" = ਪਿਤਾ।'
+    },
+    {
+      id: "G6_009",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "transport",
+      promptEn: 'What does "ਗੱਡੀ" mean in English?',
+      promptPa: '"car" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["car", "bus", "train", "bicycle"],
+      choicesPa: ["ਗੱਡੀ", "ਬੱਸ", "ਰੇਲ", "ਸਾਈਕਲ"],
+      answerIndex: 0,
+      hintEn: "A vehicle with four wheels.",
+      hintPa: "ਚਾਰ ਪਹੀਏ ਵਾਲੀ ਸਵਾਰੀ।",
+      explainEn: '"ਗੱਡੀ" = car.',
+      explainPa: '"car" = ਗੱਡੀ।'
+    },
+    {
+      id: "G6_010",
+      difficulty: 1,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "home",
+      promptEn: 'What does "ਘਰ" mean in English?',
+      promptPa: '"house" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["house", "room", "door", "garden"],
+      choicesPa: ["ਘਰ", "ਕਮਰਾ", "ਦਰਵਾਜ਼ਾ", "ਬਾਗ"],
+      answerIndex: 0,
+      hintEn: "You live there.",
+      hintPa: "ਤੁਸੀਂ ਇੱਥੇ ਰਹਿੰਦੇ ਹੋ।",
+      explainEn: '"ਘਰ" = house.',
+      explainPa: '"house" = ਘਰ।'
+    },
+    {
+      id: "G6_011",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "colors",
+      promptEn: 'What does "ਲਾਲ" mean in English?',
+      promptPa: '"red" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["red", "blue", "green", "yellow"],
+      choicesPa: ["ਲਾਲ", "ਨੀਲਾ", "ਹਰਾ", "ਪੀਲਾ"],
+      answerIndex: 0,
+      hintEn: "Color of many apples.",
+      hintPa: "ਅਕਸਰ ਸੇਬ ਦਾ ਰੰਗ।",
+      explainEn: '"ਲਾਲ" = red.',
+      explainPa: '"red" = ਲਾਲ।'
+    },
+    {
+      id: "G6_012",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "colors",
+      promptEn: 'What does "ਨੀਲਾ" mean in English?',
+      promptPa: '"blue" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["yellow", "blue", "red", "black"],
+      choicesPa: ["ਪੀਲਾ", "ਨੀਲਾ", "ਲਾਲ", "ਕਾਲਾ"],
+      answerIndex: 1,
+      hintEn: "Color of the sky (often).",
+      hintPa: "ਅਕਸਰ ਆਸਮਾਨ ਦਾ ਰੰਗ।",
+      explainEn: '"ਨੀਲਾ" = blue.',
+      explainPa: '"blue" = ਨੀਲਾ।'
+    },
+    {
+      id: "G6_013",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "verbs",
+      promptEn: 'What does "ਦੌੜਨਾ" mean in English?',
+      promptPa: '"run" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["run", "eat", "sleep", "sit"],
+      choicesPa: ["ਦੌੜਨਾ", "ਖਾਣਾ", "ਸੋਣਾ", "ਬੈਠਣਾ"],
+      answerIndex: 0,
+      hintEn: "Move fast.",
+      hintPa: "ਤੇਜ਼ ਦੌੜਨਾ।",
+      explainEn: '"ਦੌੜਨਾ" = run.',
+      explainPa: '"run" = ਦੌੜਨਾ।'
+    },
+    {
+      id: "G6_014",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "verbs",
+      promptEn: 'What does "ਖਾਣਾ" mean in English?',
+      promptPa: '"eat" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["drink", "eat", "read", "write"],
+      choicesPa: ["ਪੀਣਾ", "ਖਾਣਾ", "ਪੜ੍ਹਨਾ", "ਲਿਖਣਾ"],
+      answerIndex: 1,
+      hintEn: "Do this with food.",
+      hintPa: "ਖਾਣੇ ਨਾਲ ਇਹ ਕਰਦੇ ਹੋ।",
+      explainEn: '"ਖਾਣਾ" = eat.',
+      explainPa: '"eat" = ਖਾਣਾ।'
+    },
+    {
+      id: "G6_015",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "verbs",
+      promptEn: 'What does "ਸੋਣਾ" mean in English?',
+      promptPa: '"sleep" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["sleep", "wake up", "run", "dance"],
+      choicesPa: ["ਸੋਣਾ", "ਜਾਗਣਾ", "ਦੌੜਨਾ", "ਨੱਚਣਾ"],
+      answerIndex: 0,
+      hintEn: "You do this at night.",
+      hintPa: "ਤੁਸੀਂ ਇਹ ਰਾਤ ਨੂੰ ਕਰਦੇ ਹੋ।",
+      explainEn: '"ਸੋਣਾ" = sleep.',
+      explainPa: '"sleep" = ਸੋਣਾ।'
+    },
+    {
+      id: "G6_016",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "verbs",
+      promptEn: 'What does "ਖੇਡਣਾ" mean in English?',
+      promptPa: '"play" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["play", "study", "write", "cry"],
+      choicesPa: ["ਖੇਡਣਾ", "ਪੜ੍ਹਨਾ", "ਲਿਖਣਾ", "ਰੋਣਾ"],
+      answerIndex: 0,
+      hintEn: "Kids do this for fun.",
+      hintPa: "ਬੱਚੇ ਮਜ਼ੇ ਲਈ ਇਹ ਕਰਦੇ ਹਨ।",
+      explainEn: '"ਖੇਡਣਾ" = play.',
+      explainPa: '"play" = ਖੇਡਣਾ।'
+    },
+    {
+      id: "G6_017",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "feelings",
+      promptEn: 'What does "ਖੁਸ਼" mean in English?',
+      promptPa: '"happy" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["sad", "happy", "angry", "scared"],
+      choicesPa: ["ਉਦਾਸ", "ਖੁਸ਼", "ਗੁੱਸੇ", "ਡਰੇ ਹੋਏ"],
+      answerIndex: 1,
+      hintEn: "Feel good.",
+      hintPa: "ਚੰਗਾ ਅਹਿਸਾਸ।",
+      explainEn: '"ਖੁਸ਼" = happy.',
+      explainPa: '"happy" = ਖੁਸ਼।'
+    },
+    {
+      id: "G6_018",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "feelings",
+      promptEn: 'What does "ਉਦਾਸ" mean in English?',
+      promptPa: '"sad" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["happy", "sad", "big", "fast"],
+      choicesPa: ["ਖੁਸ਼", "ਉਦਾਸ", "ਵੱਡਾ", "ਤੇਜ਼"],
+      answerIndex: 1,
+      hintEn: "Not happy.",
+      hintPa: "ਖੁਸ਼ ਨਹੀਂ।",
+      explainEn: '"ਉਦਾਸ" = sad.',
+      explainPa: '"sad" = ਉਦਾਸ।'
+    },
+    {
+      id: "G6_019",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "size",
+      promptEn: 'What does "ਵੱਡਾ" mean in English?',
+      promptPa: '"big" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["small", "big", "cold", "new"],
+      choicesPa: ["ਛੋਟਾ", "ਵੱਡਾ", "ਠੰਢਾ", "ਨਵਾਂ"],
+      answerIndex: 1,
+      hintEn: "Not small.",
+      hintPa: "ਛੋਟਾ ਨਹੀਂ।",
+      explainEn: '"ਵੱਡਾ" = big.',
+      explainPa: '"big" = ਵੱਡਾ।'
+    },
+    {
+      id: "G6_020",
+      difficulty: 2,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "size",
+      promptEn: 'What does "ਛੋਟਾ" mean in English?',
+      promptPa: '"small" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["big", "small", "hot", "happy"],
+      choicesPa: ["ਵੱਡਾ", "ਛੋਟਾ", "ਗਰਮ", "ਖੁਸ਼"],
+      answerIndex: 1,
+      hintEn: "Not big.",
+      hintPa: "ਵੱਡਾ ਨਹੀਂ।",
+      explainEn: '"ਛੋਟਾ" = small.',
+      explainPa: '"small" = ਛੋਟਾ।'
+    },
+    {
+      id: "G6_021",
+      difficulty: 3,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "greetings",
+      promptEn: 'What does "ਸ਼ੁਭ ਸਵੇਰ" mean in English?',
+      promptPa: '"Good morning" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["Good morning", "Good night", "Good afternoon", "Good evening"],
+      choicesPa: ["ਸ਼ੁਭ ਸਵੇਰ", "ਸ਼ੁਭ ਰਾਤ", "ਸ਼ੁਭ ਦੁਪਹਿਰ", "ਸ਼ੁਭ ਸ਼ਾਮ"],
+      answerIndex: 0,
+      hintEn: "You say it in the morning.",
+      hintPa: "ਇਹ ਸਵੇਰੇ ਕਹਿੰਦੇ ਹਨ।",
+      explainEn: '"ਸ਼ੁਭ ਸਵੇਰ" = Good morning.',
+      explainPa: '"Good morning" = ਸ਼ੁਭ ਸਵੇਰ।'
+    },
+    {
+      id: "G6_022",
+      difficulty: 3,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "polite_words",
+      promptEn: 'What does "ਧੰਨਵਾਦ" mean in English?',
+      promptPa: '"Thank you" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["Thank you", "Sorry", "Please", "See you later"],
+      choicesPa: ["ਧੰਨਵਾਦ", "ਮਾਫ਼ ਕਰਨਾ", "ਕਿਰਪਾ ਕਰਕੇ", "ਫਿਰ ਮਿਲਾਂਗੇ"],
+      answerIndex: 0,
+      hintEn: "You say it when someone helps you.",
+      hintPa: "ਜਦੋਂ ਕੋਈ ਮਦਦ ਕਰੇ ਤਾਂ ਇਹ ਕਹਿੰਦੇ ਹਨ।",
+      explainEn: '"ਧੰਨਵਾਦ" = Thank you.',
+      explainPa: '"Thank you" = ਧੰਨਵਾਦ।'
+    },
+    {
+      id: "G6_023",
+      difficulty: 3,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "needs",
+      promptEn: 'What does "ਮੈਨੂੰ ਭੁੱਖ ਲੱਗੀ ਹੈ" mean in English?',
+      promptPa: '"I am hungry" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["I am hungry", "I am thirsty", "I am happy", "I am scared"],
+      choicesPa: ["ਮੈਨੂੰ ਭੁੱਖ ਲੱਗੀ ਹੈ", "ਮੈਨੂੰ ਪਿਆਸ ਲੱਗੀ ਹੈ", "ਮੈਂ ਖੁਸ਼ ਹਾਂ", "ਮੈਂ ਡਰ ਗਿਆ/ਗਈ ਹਾਂ"],
+      answerIndex: 0,
+      hintEn: "It means you want food.",
+      hintPa: "ਇਸਦਾ ਮਤਲਬ ਹੈ ਤੁਹਾਨੂੰ ਖਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
+      explainEn: '"ਮੈਨੂੰ ਭੁੱਖ ਲੱਗੀ ਹੈ" = I am hungry.',
+      explainPa: '"I am hungry" = ਮੈਨੂੰ ਭੁੱਖ ਲੱਗੀ ਹੈ।'
+    },
+    {
+      id: "G6_024",
+      difficulty: 3,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "questions",
+      promptEn: 'What does "ਬਾਥਰੂਮ ਕਿੱਥੇ ਹੈ?" mean in English?',
+      promptPa: '"Where is the bathroom?" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["Where is the bathroom?", "Where is the school?", "Where is my book?", "How are you?"],
+      choicesPa: ["ਬਾਥਰੂਮ ਕਿੱਥੇ ਹੈ?", "ਸਕੂਲ ਕਿੱਥੇ ਹੈ?", "ਮੇਰੀ ਕਿਤਾਬ ਕਿੱਥੇ ਹੈ?", "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?"],
+      answerIndex: 0,
+      hintEn: "Bathroom = place to wash/use toilet.",
+      hintPa: "ਬਾਥਰੂਮ = ਨ੍ਹਾਉਣ/ਟਾਇਲਟ ਵਾਲੀ ਥਾਂ।",
+      explainEn: '"ਬਾਥਰੂਮ ਕਿੱਥੇ ਹੈ?" = Where is the bathroom?',
+      explainPa: '"Where is the bathroom?" = ਬਾਥਰੂਮ ਕਿੱਥੇ ਹੈ?'
+    },
+    {
+      id: "G6_025",
+      difficulty: 3,
+      trackId: "VOCAB_TRANSLATION",
+      topic: "help",
+      promptEn: 'What does "ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰੋ" mean in English?',
+      promptPa: '"Help me, please" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+      choicesEn: ["Help me, please", "Come here", "Wait", "Stop"],
+      choicesPa: ["ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰੋ", "ਇੱਥੇ ਆਓ", "ਉਡੀਕ ਕਰੋ", "ਰੁਕੋ"],
+      answerIndex: 0,
+      hintEn: "It is asking for help politely.",
+      hintPa: "ਇਹ ਨਮ੍ਰਤਾ ਨਾਲ ਮਦਦ ਮੰਗਣਾ ਹੈ।",
+      explainEn: '"ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰੋ" = Help me, please.',
+      explainPa: '"Help me, please" = ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰੋ।'
+    }
+  ];
+
+  // Alias for consistency with other banks (safe)
+  var GAME6_QUESTIONS = RAW_GAME6_QUESTIONS;
+
+// Game 7: Vocab Vault Jr (Translation Set 2)
+// Same schema as Game 6 (Punjabi prompt → English choices)
+var RAW_GAME7_QUESTIONS = [
+  {
+    id: "G7_001",
+    difficulty: 1,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "family",
+    promptEn: 'What does "ਮਾਤਾ" mean in English?',
+    promptPa: '"mother" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["mother", "father", "sister", "brother"],
+    choicesPa: ["ਮਾਤਾ", "ਪਿਤਾ", "ਭੈਣ", "ਭਰਾ"],
+    answerIndex: 0,
+    hintEn: "The person who cares like a mom.",
+    hintPa: "ਜੋ ਮਾਂ ਵਾਂਗ ਸਾਂਭਦੀ ਹੈ।",
+    explainEn: '"ਮਾਤਾ" = mother.',
+    explainPa: '"mother" = ਮਾਤਾ।'
+  },
+  {
+    id: "G7_002",
+    difficulty: 1,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "body",
+    promptEn: 'What does "ਅੱਖ" mean in English?',
+    promptPa: '"eye" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["eye", "ear", "nose", "mouth"],
+    choicesPa: ["ਅੱਖ", "ਕੰਨ", "ਨੱਕ", "ਮੂੰਹ"],
+    answerIndex: 0,
+    hintEn: "You see with it.",
+    hintPa: "ਤੁਸੀਂ ਇਸ ਨਾਲ ਵੇਖਦੇ ਹੋ।",
+    explainEn: '"ਅੱਖ" = eye.',
+    explainPa: '"eye" = ਅੱਖ।'
+  },
+  {
+    id: "G7_003",
+    difficulty: 1,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "food",
+    promptEn: 'What does "ਦੁੱਧ" mean in English?',
+    promptPa: '"milk" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["milk", "juice", "water", "tea"],
+    choicesPa: ["ਦੁੱਧ", "ਜੂਸ", "ਪਾਣੀ", "ਚਾਹ"],
+    answerIndex: 0,
+    hintEn: "You pour it on cereal.",
+    hintPa: "ਤੁਸੀਂ ਇਸ ਨੂੰ ਸੀਰੀਅਲ 'ਤੇ ਪਾਉਂਦੇ ਹੋ।",
+    explainEn: '"ਦੁੱਧ" = milk.',
+    explainPa: '"milk" = ਦੁੱਧ।'
+  },
+  {
+    id: "G7_004",
+    difficulty: 2,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "weather",
+    promptEn: 'What does "ਬਰਫ਼" mean in English?',
+    promptPa: '"snow" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["snow", "rain", "wind", "sun"],
+    choicesPa: ["ਬਰਫ਼", "ਮੀਂਹ", "ਹਵਾ", "ਸੂਰਜ"],
+    answerIndex: 0,
+    hintEn: "It is white and cold.",
+    hintPa: "ਇਹ ਚਿੱਟੀ ਤੇ ਠੰਡੀ ਹੁੰਦੀ ਹੈ।",
+    explainEn: '"ਬਰਫ਼" = snow.',
+    explainPa: '"snow" = ਬਰਫ਼।'
+  },
+  {
+    id: "G7_005",
+    difficulty: 2,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "actions",
+    promptEn: 'What does "ਸੁਣਨਾ" mean in English?',
+    promptPa: '"listen" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["listen", "speak", "run", "jump"],
+    choicesPa: ["ਸੁਣਨਾ", "ਬੋਲਨਾ", "ਦੌੜਨਾ", "ਛਾਲ ਮਾਰਨਾ"],
+    answerIndex: 0,
+    hintEn: "You do this with your ears.",
+    hintPa: "ਇਹ ਤੁਸੀਂ ਆਪਣੇ ਕੰਨਾਂ ਨਾਲ ਕਰਦੇ ਹੋ।",
+    explainEn: '"ਸੁਣਨਾ" = listen.',
+    explainPa: '"listen" = ਸੁਣਨਾ।'
+  },
+  {
+    id: "G7_006",
+    difficulty: 3,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "feelings",
+    promptEn: 'What does "ਖੁਸ਼" mean in English?',
+    promptPa: '"happy" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["happy", "sad", "angry", "tired"],
+    choicesPa: ["ਖੁਸ਼", "ਉਦਾਸ", "ਗੁੱਸੇ", "ਥੱਕਿਆ"],
+    answerIndex: 0,
+    hintEn: "A smile shows this feeling.",
+    hintPa: "ਮੁਸਕਾਨ ਇਹ ਅਹਿਸਾਸ ਦਿਖਾਉਂਦੀ ਹੈ।",
+    explainEn: '"ਖੁਸ਼" = happy.',
+    explainPa: '"happy" = ਖੁਸ਼।'
+  }
+];
+
+var GAME7_QUESTIONS = RAW_GAME7_QUESTIONS;
+
+// Game 8: Vocab Vault Expert (Translation Set 3)
+var RAW_GAME8_QUESTIONS = [
+  {
+    id: "G8_001",
+    difficulty: 2,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "objects",
+    promptEn: 'What does "ਘੜੀ" mean in English?',
+    promptPa: '"clock" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["clock", "door", "window", "chair"],
+    choicesPa: ["ਘੜੀ", "ਦਰਵਾਜ਼ਾ", "ਖਿੜਕੀ", "ਕੁਰਸੀ"],
+    answerIndex: 0,
+    hintEn: "It tells time.",
+    hintPa: "ਇਹ ਸਮਾਂ ਦੱਸਦੀ ਹੈ।",
+    explainEn: '"ਘੜੀ" = clock.',
+    explainPa: '"clock" = ਘੜੀ।'
+  },
+  {
+    id: "G8_002",
+    difficulty: 2,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "nature",
+    promptEn: 'What does "ਪਹਾੜ" mean in English?',
+    promptPa: '"mountain" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["mountain", "river", "forest", "desert"],
+    choicesPa: ["ਪਹਾੜ", "ਦਰੀਆ", "ਜੰਗਲ", "ਰੇਗਿਸਤਾਨ"],
+    answerIndex: 0,
+    hintEn: "Very tall land.",
+    hintPa: "ਬਹੁਤ ਉੱਚੀ ਧਰਤੀ।",
+    explainEn: '"ਪਹਾੜ" = mountain.',
+    explainPa: '"mountain" = ਪਹਾੜ।'
+  },
+  {
+    id: "G8_003",
+    difficulty: 2,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "school",
+    promptEn: 'What does "ਸਵਾਲ" mean in English?',
+    promptPa: '"question" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["question", "answer", "lesson", "teacher"],
+    choicesPa: ["ਸਵਾਲ", "ਜਵਾਬ", "ਪਾਠ", "ਅਧਿਆਪਕ"],
+    answerIndex: 0,
+    hintEn: "You ask this to learn.",
+    hintPa: "ਸਿੱਖਣ ਲਈ ਤੁਸੀਂ ਇਹ ਪੁੱਛਦੇ ਹੋ।",
+    explainEn: '"ਸਵਾਲ" = question.',
+    explainPa: '"question" = ਸਵਾਲ।'
+  },
+  {
+    id: "G8_004",
+    difficulty: 3,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "actions",
+    promptEn: 'What does "ਸੋਚਣਾ" mean in English?',
+    promptPa: '"think" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["think", "sleep", "shout", "write"],
+    choicesPa: ["ਸੋਚਣਾ", "ਸੌਣਾ", "ਚਿਲਾਉਣਾ", "ਲਿਖਣਾ"],
+    answerIndex: 0,
+    hintEn: "You do this with your mind.",
+    hintPa: "ਇਹ ਤੁਸੀਂ ਆਪਣੇ ਮਨ ਨਾਲ ਕਰਦੇ ਹੋ।",
+    explainEn: '"ਸੋਚਣਾ" = think.',
+    explainPa: '"think" = ਸੋਚਣਾ।'
+  },
+  {
+    id: "G8_005",
+    difficulty: 3,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "feelings",
+    promptEn: 'What does "ਹੈਰਾਨ" mean in English?',
+    promptPa: '"surprised" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["surprised", "bored", "calm", "angry"],
+    choicesPa: ["ਹੈਰਾਨ", "ਉਕਤਾਇਆ", "ਸ਼ਾਂਤ", "ਗੁੱਸੇ"],
+    answerIndex: 0,
+    hintEn: "A big wow feeling.",
+    hintPa: "ਵੱਡਾ ਅਚੰਭੇ ਵਾਲਾ ਅਹਿਸਾਸ।",
+    explainEn: '"ਹੈਰਾਨ" = surprised.',
+    explainPa: '"surprised" = ਹੈਰਾਨ।'
+  },
+  {
+    id: "G8_006",
+    difficulty: 3,
+    trackId: "VOCAB_TRANSLATION",
+    topic: "time",
+    promptEn: 'What does "ਕੱਲ੍ਹ" mean in English?',
+    promptPa: '"tomorrow" ਦਾ ਪੰਜਾਬੀ ਕੀ ਹੈ?',
+    choicesEn: ["tomorrow", "yesterday", "today", "always"],
+    choicesPa: ["ਕੱਲ੍ਹ", "ਕੱਲ੍ਹ (ਬੀਤਿਆ)", "ਅੱਜ", "ਹਮੇਸ਼ਾਂ"],
+    answerIndex: 0,
+    hintEn: "The day after today.",
+    hintPa: "ਅੱਜ ਤੋਂ ਅੱਗਲਾ ਦਿਨ।",
+    explainEn: '"ਕੱਲ੍ਹ" = tomorrow.',
+    explainPa: '"tomorrow" = ਕੱਲ੍ਹ।'
+  }
+];
+
+var GAME8_QUESTIONS = RAW_GAME8_QUESTIONS;
 
 function normalizeGame1Questions() {
   return GAME1_QUESTIONS.map(function(q, idx) {
@@ -1209,8 +1912,8 @@ function normalizeGame4Questions() {
 
 function buildAllGameQuestions() {
   var results = [];
-  validateGame1Bank();
-  results = results.concat(normalizeGame1Questions());
+  // Daily Quest only uses GAME2–GAME4 today; skip GAME1 here to keep
+  // normalization independent from the heavier GAME1 token utilities.
   validateGame2Bank();
   results = results.concat(normalizeGame2Questions());
   results = results.concat(normalizeGame3Questions());
@@ -1372,5 +2075,10 @@ var GAMES_DATA = {
   GAME2: (typeof GAME2_QUESTIONS !== "undefined") ? GAME2_QUESTIONS : [],
   GAME3: (typeof GAME3_QUESTIONS !== "undefined") ? GAME3_QUESTIONS : [],
   GAME4: (typeof GAME4_QUESTIONS !== "undefined") ? GAME4_QUESTIONS : [],
-  GAME5: RAW_GAME5_QUESTIONS
+  GAME5: RAW_GAME5_QUESTIONS,
+  GAME6: RAW_GAME6_QUESTIONS,
+  // Placeholder slot for upcoming game 7 content
+  GAME7: (typeof GAME7_QUESTIONS !== "undefined") ? GAME7_QUESTIONS : [],
+  GAME8: (typeof GAME8_QUESTIONS !== "undefined") ? GAME8_QUESTIONS : []
 };
+

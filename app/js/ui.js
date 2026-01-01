@@ -11,6 +11,7 @@ var SECTION_LABELS = window.SECTION_LABELS || {
   learn: "Learn",
   reading: "Reading",
   play: "Play",
+  type: "Type",
   speak: "Speak",
   progress: "Progress",
   home: "Home"
@@ -26,6 +27,9 @@ var SCREEN_TO_SECTION = window.SCREEN_TO_SECTION || {
   "screen-reading-detail": "reading",
   "screen-play-home": "play",
   "screen-play": "play",
+  "screen-type": "type",
+  "screen-typing-center": "type",
+  "screen-typing-race": "type",
   "screen-progress": "progress",
   "screen-flashcards": "learn",
   "screen-parent": "home"
@@ -165,7 +169,7 @@ var UI = {
 
   // Major sections only (entry overlay)
   isMajorSection: function(sectionKey) {
-    return sectionKey === "dailyQuest" || sectionKey === "learn" || sectionKey === "reading" || sectionKey === "play" || sectionKey === "speak" || sectionKey === "progress";
+    return sectionKey === "dailyQuest" || sectionKey === "learn" || sectionKey === "reading" || sectionKey === "play" || sectionKey === "type" || sectionKey === "speak" || sectionKey === "progress";
   },
 
   // Gate section transitions (Phase 2)
@@ -456,8 +460,10 @@ var UI = {
       // Allow screens to clean up before switching
       UI._runScreenHook(prevScreenId, "unmount");
 
-      // Activate target screen and hide others from interaction/assistive tech
-      UI.setActiveScreen(targetScreen);
+      // Make target screen visible (but don't hide others yet)
+      // This is critical: we must make the new screen visible BEFORE moving focus
+      // to avoid any timing gap where a focused element could be inside an aria-hidden ancestor.
+      UI.makeScreenVisible(targetScreen);
 
       // Screen-specific mount hooks (render/sync after becoming active)
       UI._runScreenHook(screenId, "mount");
@@ -483,8 +489,14 @@ var UI = {
       // Scroll to top
       window.scrollTo(0, 0);
 
-      // Move focus into the destination screen after it is active
+      // CRITICAL: Move focus into the destination screen BEFORE hiding the previous screen.
+      // This is the key to WCAG 2.1 compliance (Section 2.4.3 Focus Order).
+      // If we hide the old screen (aria-hidden=true) before moving focus, the browser will
+      // emit a warning that the focused element is hidden from assistive technology.
       UI.focusFirst(targetScreen);
+
+      // NOW safe to hide all other screens from interaction/assistive tech
+      UI.hideOtherScreens(targetScreen);
 
       // Home-specific UI refreshes
       if (screenId === "screen-home") {
@@ -718,27 +730,18 @@ var UI = {
     }
   },
 
-  // Toggle active screen and apply accessibility hiding semantics
-  setActiveScreen: function(targetScreen) {
-    var screens = document.querySelectorAll("section.screen");
-    screens.forEach(function(screen) {
-      var isTarget = screen === targetScreen;
-      screen.classList.toggle("active", isTarget);
-      screen.setAttribute("aria-hidden", isTarget ? "false" : "true");
-
-      // Use hidden for inactive screens (single-main landmark approach)
-      if (isTarget) {
-        screen.removeAttribute("hidden");
-      } else {
-        screen.setAttribute("hidden", "");
-      }
-
-      // Prefer inert where supported to prevent off-screen interaction
-      if ("inert" in screen) {
-        screen.inert = !isTarget;
-      }
-    });
-
+  // Make a target screen visible to users and assistive technology.
+  // Does NOT hide other screens (see hideOtherScreens for that).
+  // This is called BEFORE moving focus to ensure the screen is not hidden when focus arrives.
+  makeScreenVisible: function(targetScreen) {
+    if (!targetScreen) return;
+    targetScreen.classList.add("active");
+    targetScreen.setAttribute("aria-hidden", "false");
+    targetScreen.removeAttribute("hidden");
+    if ("inert" in targetScreen) {
+      targetScreen.inert = false;
+    }
+    
     // Keep Speak nav button state in sync (safe even if button not present)
     try {
       var sid = targetScreen && targetScreen.id ? targetScreen.id : null;
@@ -746,6 +749,31 @@ var UI = {
     } catch (e) {
       // no-op
     }
+  },
+
+  // Hide all screens EXCEPT the target from interaction and assistive technology.
+  // This is called AFTER focus has been moved to ensure no focused element is hidden.
+  // Critical for WCAG 2.1 Section 2.4.3 (Focus Order) compliance.
+  hideOtherScreens: function(targetScreen) {
+    var screens = document.querySelectorAll("section.screen");
+    screens.forEach(function(screen) {
+      if (screen === targetScreen) return; // Skip target screen
+      
+      // Hide non-target screens from assistive tech and user interaction
+      screen.classList.remove("active");
+      screen.setAttribute("aria-hidden", "true");
+      screen.setAttribute("hidden", "");
+      if ("inert" in screen) {
+        screen.inert = true;
+      }
+    });
+  },
+
+  // [DEPRECATED] Use makeScreenVisible + hideOtherScreens instead.
+  // Kept for backwards compatibility but should not be called directly.
+  setActiveScreen: function(targetScreen) {
+    this.makeScreenVisible(targetScreen);
+    this.hideOtherScreens(targetScreen);
   },
 
   // Sync Speak navigation button active state to the current screen
@@ -1132,15 +1160,35 @@ var UI = {
 
     streakEl.textContent = String(count);
 
-    // Sync the Roz half (if present) to show Ready vs Done today.
+    // Sync the Roz Abhyas button/card: completion state via classes + aria-label.
     try {
       var rozBtn = document.getElementById("btn-home-roz");
+      var streakCard = document.getElementById("streak-card") || document.querySelector("#home-streak-section .streak-card");
+      var hasMotion = !(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+      if (streakCard) {
+        streakCard.classList.toggle("is-active", count > 0);
+        streakCard.classList.toggle("is-done", completedToday);
+
+        if (completedToday && hasMotion) {
+          streakCard.classList.remove("pulse");
+          void streakCard.offsetWidth; // restart animation
+          streakCard.classList.add("pulse");
+          setTimeout(function() { streakCard.classList.remove("pulse"); }, 350);
+        } else {
+          streakCard.classList.remove("pulse");
+        }
+      }
+
       if (rozBtn) {
         rozBtn.classList.toggle("is-complete", completedToday);
-        // Keep Punjabi line consistent; only adjust the English line for clarity.
-        var en = rozBtn.querySelector(".btn-label-en");
-        if (en) en.textContent = completedToday ? "Roz ✓" : "Roz (ਰੋਜ਼)";
-        rozBtn.setAttribute("aria-label", completedToday ? "Roz (Daily Quest) — Done today" : "Roz (Daily Quest)");
+        rozBtn.classList.toggle("is-done", completedToday);
+        // Update aria-label based on completion state (visual feedback now via CSS + "Done today" badge)
+        if (completedToday) {
+          rozBtn.setAttribute("aria-label", "Roz Abhyas — Daily Practice. Completed today. Come back tomorrow to continue your streak.");
+        } else {
+          rozBtn.setAttribute("aria-label", "Roz Abhyas — Daily Practice. Start today to keep your streak.");
+        }
       }
     } catch (eRoz) {
       // no-op
@@ -1334,6 +1382,11 @@ var UI = {
       toastTimer = null;
     }, Math.max(250, ms));
   }
+
+  // Expose toast utility for other modules (Games, Reading, etc.)
+  try {
+    if (window.UI) window.UI.showToast = showToast;
+  } catch (e) {}
 
   window.HomeLanes = {
     init: function() {

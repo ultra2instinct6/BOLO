@@ -272,6 +272,12 @@ var State = {
       State.state.progress.readingByProfile = {};
     }
 
+    // Reading question mastery stats (per profile)
+    // Keyed by readingId:qIndex, stores {attempts, correctEver, lastAttemptAt}
+    if (!State.state.progress.readingQuestionStatsByProfile || typeof State.state.progress.readingQuestionStatsByProfile !== "object") {
+      State.state.progress.readingQuestionStatsByProfile = {};
+    }
+
     // Games: persistent missed-question flags (per profile)
     // Used for BOLO v2 adaptive feedback ("Nice improvement!" on first-try correct after a previous miss)
     if (!State.state.progress.gamesMissedByProfile || typeof State.state.progress.gamesMissedByProfile !== "object") {
@@ -558,6 +564,132 @@ var State = {
     obj[key] = true;
     cont.xpByReadingId[readingId] = obj;
     State.save();
+  },
+
+  // ===== Reading question mastery tracking (per profile) =====
+
+  _getReadingQuestionStatsContainer: function() {
+    var p = State.getActiveProfile();
+    if (!p) return null;
+    State.ensureTracksInitialized();
+    var map = State.state.progress.readingQuestionStatsByProfile;
+    var obj = map[p.id];
+    if (!obj || typeof obj !== "object") obj = {};
+    map[p.id] = obj;
+    return obj;
+  },
+
+  recordReadingAnswer: function(readingId, qIndex, isCorrect) {
+    if (!readingId || typeof qIndex !== "number") return;
+    var cont = State._getReadingQuestionStatsContainer();
+    if (!cont) return;
+    
+    var qKey = readingId + ":" + qIndex;
+    var stat = cont[qKey];
+    if (!stat || typeof stat !== "object") {
+      stat = { attempts: 0, correctEver: false, lastAttemptAt: 0 };
+    }
+    
+    stat.attempts = (stat.attempts || 0) + 1;
+    if (isCorrect) stat.correctEver = true; // idempotent: once true stays true
+    stat.lastAttemptAt = Date.now();
+    
+    cont[qKey] = stat;
+    State.save();
+  },
+
+  isQuestionMastered: function(readingId, qIndex) {
+    if (!readingId || typeof qIndex !== "number") return false;
+    var cont = State._getReadingQuestionStatsContainer();
+    if (!cont) return false;
+    
+    var qKey = readingId + ":" + qIndex;
+    var stat = cont[qKey];
+    return !!(stat && stat.correctEver === true);
+  },
+
+  // ===== Bundle helpers (use READINGS global from readings.js) =====
+
+  getBundleReadings: function(bundleId) {
+    if (typeof READINGS === "undefined" || !Array.isArray(READINGS)) return [];
+    var result = [];
+    for (var i = 0; i < READINGS.length; i++) {
+      var r = READINGS[i];
+      // Fallback: if bundleId missing, treat as bundle 1
+      var rBundleId = (typeof r.bundleId === "number") ? r.bundleId : 1;
+      if (rBundleId === bundleId) result.push(r);
+    }
+    return result;
+  },
+
+  isBundleComplete: function(bundleId) {
+    var readings = State.getBundleReadings(bundleId);
+    if (readings.length === 0) return false;
+    
+    for (var i = 0; i < readings.length; i++) {
+      var stars = State.getReadingStars(readings[i].id);
+      if (stars < 2) return false; // Star 2 = completed (answered correctly)
+    }
+    return true;
+  },
+
+  getBundleMasteryPct: function(bundleId) {
+    var readings = State.getBundleReadings(bundleId);
+    if (readings.length === 0) return 0;
+    
+    var totalQuestions = 0;
+    var masteredQuestions = 0;
+    
+    for (var i = 0; i < readings.length; i++) {
+      var r = readings[i];
+      if (r.questions && Array.isArray(r.questions)) {
+        for (var q = 0; q < r.questions.length; q++) {
+          totalQuestions++;
+          if (State.isQuestionMastered(r.id, q)) {
+            masteredQuestions++;
+          }
+        }
+      }
+    }
+    
+    return totalQuestions > 0 ? (masteredQuestions / totalQuestions) : 0;
+  },
+
+  isBundleUnlocked: function(bundleId) {
+    if (bundleId === 1) return true; // Bundle 1 always unlocked
+    
+    var prevBundleId = bundleId - 1;
+    if (prevBundleId < 1) return false;
+    
+    // Unlock if previous bundle is complete AND mastery >= 70%
+    if (!State.isBundleComplete(prevBundleId)) return false;
+    
+    var masteryPct = State.getBundleMasteryPct(prevBundleId);
+    return masteryPct >= 0.7;
+  },
+
+  isBundleReviewNeeded: function(bundleId) {
+    if (!State.isBundleComplete(bundleId)) return false;
+    var masteryPct = State.getBundleMasteryPct(bundleId);
+    return masteryPct < 0.7;
+  },
+
+  getUnmasteredQuestionsInBundle: function(bundleId) {
+    var readings = State.getBundleReadings(bundleId);
+    var result = [];
+    
+    for (var i = 0; i < readings.length; i++) {
+      var r = readings[i];
+      if (r.questions && Array.isArray(r.questions)) {
+        for (var q = 0; q < r.questions.length; q++) {
+          if (!State.isQuestionMastered(r.id, q)) {
+            result.push({ readingId: r.id, qIndex: q });
+          }
+        }
+      }
+    }
+    
+    return result;
   },
 
   // Add a new profile

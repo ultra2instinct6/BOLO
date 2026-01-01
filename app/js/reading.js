@@ -8,6 +8,20 @@ var Reading = {
   _vocabQuizState: null,
   _vocabEnabledFallback: null,
   _detailUiState: null,
+
+  // ===== HTML & Validation Helpers =====
+
+  _escapeHtml: function(text) {
+    if (!text || typeof text !== "string") return "";
+    var map = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    };
+    return text.replace(/[&<>"']/g, function(c) { return map[c]; });
+  },
   // ===== QUEST CONTEXT HELPERS =====
 
   getQuestContext: function() {
@@ -36,29 +50,171 @@ var Reading = {
     window.DQ_QUEST_CONTEXT = null;
   },
 
+  startBundleMasteryReview: function(bundleId) {
+    if (typeof State === "undefined" || !State.getUnmasteredQuestionsInBundle) return;
+    
+    var queueItems = State.getUnmasteredQuestionsInBundle(bundleId);
+    if (!queueItems || queueItems.length === 0) {
+      alert("No unmastered questions in this bundle.");
+      return;
+    }
+    
+    Reading._initMasteryReviewState(bundleId, queueItems);
+    UI.goTo("screen-reading-detail");
+    Reading._renderNextMasteryReviewQuestion();
+  },
+
+  _renderNextMasteryReviewQuestion: function() {
+    var state = Reading._masteryReviewState;
+    if (!state || !state.queue) return;
+    
+    if (state.currentIndex >= state.queue.length) {
+      // All questions answered; check mastery
+      var masteryPct = State.getBundleMasteryPct(state.bundleId);
+      if (masteryPct >= 0.7) {
+        Reading._endMasteryReview();
+      } else {
+        // Recalculate unmastered questions (some may have been mastered)
+        var remaining = State.getUnmasteredQuestionsInBundle(state.bundleId);
+        if (remaining.length === 0) {
+          Reading._endMasteryReview();
+        } else {
+          // Continue with remaining questions
+          state.queue = remaining;
+          state.currentIndex = 0;
+          Reading._renderNextMasteryReviewQuestion();
+        }
+      }
+      return;
+    }
+    
+    var item = state.queue[state.currentIndex];
+    var readingId = item.readingId;
+    var qIndex = item.qIndex;
+    
+    // Find the reading
+    var rd = null;
+    if (typeof READINGS !== "undefined" && Array.isArray(READINGS)) {
+      for (var i = 0; i < READINGS.length; i++) {
+        if (READINGS[i].id === readingId) {
+          rd = READINGS[i];
+          break;
+        }
+      }
+    }
+    
+    if (!rd || !rd.questions || !rd.questions[qIndex]) {
+      // Skip this question
+      state.currentIndex++;
+      Reading._renderNextMasteryReviewQuestion();
+      return;
+    }
+    
+    // Set detail UI state for this reading
+    Reading._initDetailUiState(readingId);
+    
+    // Render the passage and question
+    Reading._initDetailUiState(readingId);
+    Reading.openReadingDetail(readingId, null, true); // true = skipProgressUpdate
+    
+    // Mark that we're in review mode
+    var header = document.getElementById("reading-detail-header");
+    if (header) {
+      var reviewLabel = document.createElement("span");
+      reviewLabel.style.marginLeft = "10px";
+      reviewLabel.style.fontSize = "0.9em";
+      reviewLabel.style.opacity = "0.7";
+      reviewLabel.textContent = "Mastery Review: " + (state.currentIndex + 1) + " of " + state.queue.length;
+      if (header.lastChild) {
+        header.insertBefore(reviewLabel, header.lastChild);
+      }
+    }
+  },
+
+  _handleMasteryReviewAnswer: function(rd, q, chosenIndex) {
+    if (!Reading._masteryReviewState) return;
+    
+    var state = Reading._masteryReviewState;
+    var item = state.queue[state.currentIndex];
+    var isCorrect = (chosenIndex === q.correctIndex);
+    
+    // Record the answer
+    if (typeof State !== "undefined" && State.recordReadingAnswer) {
+      State.recordReadingAnswer(rd.id, item.qIndex, isCorrect);
+    }
+    
+    // Advance to next question
+    state.currentIndex++;
+    setTimeout(function() {
+      Reading._renderNextMasteryReviewQuestion();
+    }, 1000);
+  },
+
   // ===== VALIDATION & SAFE ACCESS =====
 
   validateReadingContent: function(readingId) {
+    if (!readingId || typeof readingId !== "string") return false;
     var rd = READINGS.find(function(r) { return r.id === readingId; });
     if (!rd) return false;
+    if (typeof rd.id !== "string" || !rd.id.trim()) return false;
     
     // Check passage text exists
-    if (!rd.english || !rd.punjabi) return false;
+    if (!rd.english || typeof rd.english !== "string" || !rd.english.trim()) return false;
+    if (!rd.punjabi || typeof rd.punjabi !== "string" || !rd.punjabi.trim()) return false;
     
     // Check questions array exists and has at least one
     if (!rd.questions || !Array.isArray(rd.questions) || rd.questions.length === 0) return false;
     
     // Check primary question has valid structure
     var q = rd.questions[0];
-    if (!q || typeof q.q !== "string" || !q.q.trim()) return false;
+    if (!q || typeof q !== "object") return false;
+    if (typeof q.q !== "string" || !q.q.trim()) return false;
     
     // Check options array
     if (!Array.isArray(q.options) || q.options.length < 2) return false;
     
-    // Check correctIndex is valid
-    if (typeof q.correctIndex !== "number" || q.correctIndex < 0 || q.correctIndex >= q.options.length) return false;
+    // Check correctIndex is valid and in range
+    if (typeof q.correctIndex !== "number" || !Number.isInteger(q.correctIndex)) return false;
+    if (q.correctIndex < 0 || q.correctIndex >= q.options.length) return false;
     
     return true;
+  },
+
+  _renderErrorFallback: function(errorMsg) {
+    UI.goTo("screen-reading-detail");
+    var detailScreen = document.getElementById("screen-reading-detail");
+    if (!detailScreen) return;
+    
+    detailScreen.innerHTML = "";
+    
+    var container = document.createElement("div");
+    container.style.padding = "20px";
+    container.style.textAlign = "center";
+    container.style.marginTop = "40px";
+    
+    var title = document.createElement("h2");
+    title.textContent = "⚠️ Reading Not Available";
+    title.style.color = "#d32f2f";
+    
+    var message = document.createElement("p");
+    message.textContent = errorMsg || "This story could not be loaded.";
+    message.style.marginTop = "16px";
+    message.style.color = "#666";
+    
+    var backBtn = document.createElement("button");
+    backBtn.type = "button";
+    backBtn.className = "btn";
+    backBtn.textContent = "← Back to Reading List";
+    backBtn.style.marginTop = "20px";
+    backBtn.addEventListener("click", function() {
+      UI.goTo("screen-reading");
+      Reading.renderReadingList();
+    });
+    
+    container.appendChild(title);
+    container.appendChild(message);
+    container.appendChild(backBtn);
+    detailScreen.appendChild(container);
   },
 
   getPrimaryQuestion: function(rd) {
@@ -114,6 +270,37 @@ var Reading = {
       checked: false,
       locked: false
     };
+  },
+
+  // ===== Mastery Review mode (bundle-level unmastered question review) =====
+
+  _masteryReviewState: null,
+
+  _initMasteryReviewState: function(bundleId, queueItems) {
+    Reading._masteryReviewState = {
+      bundleId: bundleId,
+      queue: queueItems,
+      currentIndex: 0,
+      startedAt: Date.now()
+    };
+  },
+
+  _endMasteryReview: function() {
+    var bundleId = Reading._masteryReviewState ? Reading._masteryReviewState.bundleId : null;
+    Reading._masteryReviewState = null;
+    
+    if (bundleId && typeof State !== "undefined" && State.isBundleReviewNeeded) {
+      // Check if mastery is now >= 70%
+      var masteryPct = State.getBundleMasteryPct(bundleId);
+      if (masteryPct >= 0.7) {
+        var nextBundleId = bundleId + 1;
+        alert("🎉 Mastery achieved! Bundle " + nextBundleId + " unlocked.");
+      }
+    }
+    
+    // Return to reading list
+    UI.goTo("screen-reading");
+    Reading.renderReadingList();
   },
 
   _ensureFocusModeDom: function() {
@@ -1012,58 +1199,214 @@ var Reading = {
     }
   },
 
+  // ===== Bundle Card Helpers =====
+
+  _getNextUnfinishedInBundle: function(bundleId) {
+    var readings = (typeof State !== "undefined" && State.getBundleReadings) ? State.getBundleReadings(bundleId) : [];
+    for (var i = 0; i < readings.length; i++) {
+      var stars = (typeof State !== "undefined" && State.getReadingStars) ? State.getReadingStars(readings[i].id) : 0;
+      if (stars < 2) {
+        return readings[i].id;
+      }
+    }
+    return readings.length > 0 ? readings[0].id : null;
+  },
+
+  _expandBundlePassages: function(bundleId) {
+    var container = document.getElementById("bundle-passages-" + bundleId);
+    if (!container) return;
+    
+    var isExpanded = container.style.display !== "none";
+    container.style.display = isExpanded ? "none" : "block";
+    
+    var toggleBtn = document.getElementById("bundle-expand-" + bundleId);
+    if (toggleBtn) {
+      toggleBtn.textContent = isExpanded ? "View all passages" : "Hide passages";
+    }
+  },
+
+  _handleBundleCardAction: function(bundleId, action) {
+    if (typeof State === "undefined") return;
+    
+    var isLocked = !State.isBundleUnlocked(bundleId);
+    if (isLocked) {
+      alert("Complete the previous bundle and reach 70% mastery to unlock this bundle.");
+      return;
+    }
+    
+    if (action === "continue") {
+      var nextReadingId = Reading._getNextUnfinishedInBundle(bundleId);
+      if (nextReadingId) {
+        Reading.openReadingDetail(nextReadingId);
+      }
+    } else if (action === "review") {
+      Reading.startBundleMasteryReview(bundleId);
+    } else if (action === "next") {
+      if (bundleId < 5) {
+        var nextReadingId = Reading._getNextUnfinishedInBundle(bundleId + 1);
+        if (nextReadingId) {
+          Reading.openReadingDetail(nextReadingId);
+        }
+      }
+    }
+  },
+
   renderReadingList: function() {
     var ul = document.getElementById("reading-list");
     if (!ul) return;
     ul.innerHTML = "";
 
-    // Render all available readings
-    for (var i = 0; i < READINGS.length; i++) {
-      var r = READINGS[i];
-      var li = document.createElement("li");
-      li.className = "reading-item";
+    if (typeof State === "undefined" || !State.getBundleReadings || typeof BUNDLES === "undefined") return;
 
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "reading-item-btn";
-      btn.dataset.readingId = r.id;
-      btn.addEventListener("click", (function(id) {
-        return function() { Reading.openReadingDetail(id); };
-      })(r.id));
+    // Render 5 bundle cards
+    for (var bundleId = 1; bundleId <= BUNDLES.length; bundleId++) {
+      var readings = State.getBundleReadings(bundleId);
+      var isUnlocked = State.isBundleUnlocked(bundleId);
+      var masteryPct = State.getBundleMasteryPct(bundleId);
+      var isComplete = State.isBundleComplete(bundleId);
+      var isReviewNeeded = isComplete && masteryPct < 0.7;
 
-      var level = r.levelHint || "–";
-      var title = r.titleEn || "Story";
-      var titlePa = r.titlePa || "";
+      var cardLi = document.createElement("li");
+      cardLi.className = "bundle-card";
+      if (!isUnlocked) cardLi.classList.add("bundle-card--locked");
+      else if (isReviewNeeded) cardLi.classList.add("bundle-card--review-needed");
+      else if (isComplete) cardLi.classList.add("bundle-card--complete");
+      else cardLi.classList.add("bundle-card--in-progress");
 
-      var idx = i + 1;
-      var total = READINGS.length;
-      var stars = (typeof State !== "undefined" && State.getReadingStars) ? State.getReadingStars(r.id) : 0;
-      var starHtml =
-        '<span class="reading-row-stars" aria-label="Stars">' +
-          '<span class="star ' + (stars >= 1 ? 'filled' : '') + '">★</span>' +
-          '<span class="star ' + (stars >= 2 ? 'filled' : '') + '">★</span>' +
-          '<span class="star ' + (stars >= 3 ? 'filled' : '') + '">★</span>' +
-        '</span>';
+      // Header with title and status chip
+      var header = document.createElement("div");
+      header.className = "bundle-card__header";
 
-      btn.innerHTML =
-        '<div class="reading-title-row">\n' +
-          '<span>' + escapeHtml(title) + '</span>' +
-          '<span class="reading-row-right">' +
-            '<span class="reading-row-progress">R' + idx + '/' + total + '</span>' +
-            starHtml +
-          '</span>' +
-        '</div>\n' +
-        '<div class="reading-meta">Level: ' + escapeHtml(level) + ' · Track: Reading & Stories</div>' +
-        (titlePa ? ('<div class="lesson-title-pa" lang="pa" style="margin-top:4px;">' + escapeHtml(titlePa) + '</div>') : '');
+      var titleSpan = document.createElement("h3");
+      titleSpan.className = "bundle-card__title";
+      titleSpan.textContent = "Bundle " + bundleId;
 
-      li.appendChild(btn);
-      ul.appendChild(li);
+      var statusChip = document.createElement("span");
+      statusChip.className = "status-chip";
+      if (!isUnlocked) statusChip.textContent = "🔒 Locked";
+      else if (isReviewNeeded) statusChip.textContent = "📋 Review Needed";
+      else if (isComplete) statusChip.textContent = "✓ Complete";
+      else statusChip.textContent = "→ In Progress";
+
+      header.appendChild(titleSpan);
+      header.appendChild(statusChip);
+
+      // Meta: completion + mastery
+      var meta = document.createElement("div");
+      meta.className = "bundle-card__meta";
+      meta.innerHTML =
+        '<div class="bundle-card__progress">' + readings.length + '/10 passages completed</div>' +
+        '<div class="bundle-card__mastery">' + Math.round(masteryPct * 100) + '% mastery (needs 70%)</div>';
+
+      // Actions: primary button + expand link
+      var actions = document.createElement("div");
+      actions.className = "bundle-card__actions";
+
+      var primaryBtn = document.createElement("button");
+      primaryBtn.type = "button";
+      primaryBtn.className = "bundle-card__button btn";
+      if (!isUnlocked) {
+        primaryBtn.disabled = true;
+        primaryBtn.textContent = "Locked";
+      } else if (isReviewNeeded) {
+        primaryBtn.textContent = "📚 Mastery Review";
+        primaryBtn.addEventListener("click", (function(bId) {
+          return function() { Reading._handleBundleCardAction(bId, "review"); };
+        })(bundleId));
+      } else if (isComplete) {
+        if (bundleId < 5) {
+          primaryBtn.textContent = "Start Bundle " + (bundleId + 1);
+          primaryBtn.addEventListener("click", (function(bId) {
+            return function() { Reading._handleBundleCardAction(bId, "next"); };
+          })(bundleId));
+        } else {
+          primaryBtn.disabled = true;
+          primaryBtn.textContent = "All bundles complete! 🎉";
+        }
+      } else {
+        primaryBtn.textContent = "Continue";
+        primaryBtn.addEventListener("click", (function(bId) {
+          return function() { Reading._handleBundleCardAction(bId, "continue"); };
+        })(bundleId));
+      }
+
+      var expandBtn = document.createElement("button");
+      expandBtn.type = "button";
+      expandBtn.id = "bundle-expand-" + bundleId;
+      expandBtn.className = "bundle-card__expand btn-link";
+      expandBtn.textContent = "View all passages";
+      expandBtn.addEventListener("click", (function(bId) {
+        return function() { Reading._expandBundlePassages(bId); };
+      })(bundleId));
+
+      actions.appendChild(primaryBtn);
+      actions.appendChild(expandBtn);
+
+      // Passages list (hidden by default)
+      var passagesContainer = document.createElement("div");
+      passagesContainer.id = "bundle-passages-" + bundleId;
+      passagesContainer.className = "bundle-card__passages";
+      passagesContainer.style.display = "none";
+      passagesContainer.style.marginTop = "12px";
+      passagesContainer.style.paddingTop = "12px";
+      passagesContainer.style.borderTop = "1px solid #e0e0e0";
+
+      var passagesList = document.createElement("ul");
+      passagesList.style.listStyle = "none";
+      passagesList.style.padding = "0";
+      passagesList.style.margin = "0";
+
+      for (var j = 0; j < readings.length; j++) {
+        var r = readings[j];
+        var passageLi = document.createElement("li");
+        passageLi.style.marginBottom = "8px";
+
+        var passageBtn = document.createElement("button");
+        passageBtn.type = "button";
+        passageBtn.className = "btn-link";
+        passageBtn.style.fontSize = "0.95em";
+        var rIdx = READINGS.findIndex(function(x) { return x.id === r.id; });
+        var passageNum = rIdx >= 0 ? (rIdx + 1) : (j + 1);
+        var pStars = (typeof State !== "undefined" && State.getReadingStars) ? State.getReadingStars(r.id) : 0;
+        var starIndicator = pStars >= 2 ? "✓" : pStars === 1 ? "◐" : "○";
+
+        passageBtn.textContent = starIndicator + " R" + passageNum + ": " + escapeHtml(r.titleEn || "Story");
+        passageBtn.addEventListener("click", (function(id) {
+          return function() { Reading.openReadingDetail(id); };
+        })(r.id));
+
+        passageLi.appendChild(passageBtn);
+        passagesList.appendChild(passageLi);
+      }
+
+      passagesContainer.appendChild(passagesList);
+
+      // Assemble card
+      cardLi.appendChild(header);
+      cardLi.appendChild(meta);
+      cardLi.appendChild(actions);
+      cardLi.appendChild(passagesContainer);
+
+      ul.appendChild(cardLi);
     }
   },
 
   openReadingDetail: function(id) {
+    if (!id || typeof id !== "string") {
+      Reading._renderErrorFallback("Invalid reading ID.");
+      return;
+    }
     var rd = READINGS.find(function(r) { return r.id === id; });
-    if (!rd) return;
+    if (!rd) {
+      console.warn("Reading not found: " + id);
+      Reading._renderErrorFallback("This story does not exist.");
+      return;
+    }
+    if (!Reading.validateReadingContent(id)) {
+      console.warn("Reading content invalid: " + id);
+      Reading._renderErrorFallback("This story has incomplete data.");
+      return;
+    }
 
     // Persist last opened reading for Home resume card
     try {
@@ -1375,9 +1718,20 @@ var Reading = {
 
     var correct = (chosenIndex === q.correctIndex);
 
+    // If in mastery review mode, use review handler
+    if (Reading._masteryReviewState) {
+      Reading._handleMasteryReviewAnswer(rd, q, chosenIndex);
+      return;
+    }
+
     // Track attempts for Reading track
     if (typeof State !== "undefined" && State.recordQuestionAttempt) {
       State.recordQuestionAttempt("T_READING", correct);
+    }
+
+    // Track per-question mastery (qIndex=0 for primary question)
+    if (typeof State !== "undefined" && State.recordReadingAnswer && rd && rd.id) {
+      State.recordReadingAnswer(rd.id, 0, correct);
     }
 
     if (feedbackEl) {
@@ -1403,7 +1757,26 @@ var Reading = {
           var explanationEl = document.getElementById("reading-detail-explanation");
           if (explanationEl) {
             explanationEl.style.display = "block";
-            explanationEl.innerHTML = '<div class="lang-label">English</div><div>' + q.explanation.en + '</div><div class="lang-label" style="margin-top: 8px;">ਪੰਜਾਬੀ</div><div>' + q.explanation.pa + '</div>';
+            explanationEl.innerHTML = "";
+            
+            var enLabel = document.createElement("div");
+            enLabel.className = "lang-label";
+            enLabel.textContent = "English";
+            explanationEl.appendChild(enLabel);
+            
+            var enText = document.createElement("div");
+            enText.textContent = q.explanation.en || "";
+            explanationEl.appendChild(enText);
+            
+            var paLabel = document.createElement("div");
+            paLabel.className = "lang-label";
+            paLabel.style.marginTop = "8px";
+            paLabel.textContent = "ਪੰਜਾਬੀ";
+            explanationEl.appendChild(paLabel);
+            
+            var paText = document.createElement("div");
+            paText.textContent = q.explanation.pa || "";
+            explanationEl.appendChild(paText);
           }
         }
         

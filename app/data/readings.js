@@ -1,6 +1,16 @@
+var BUNDLES = [
+  { id: 1, nameEn: "Bundle 1", masteryThreshold: 0.7, requiredPassages: 10 },
+  { id: 2, nameEn: "Bundle 2", masteryThreshold: 0.7, requiredPassages: 10 },
+  { id: 3, nameEn: "Bundle 3", masteryThreshold: 0.7, requiredPassages: 10 },
+  { id: 4, nameEn: "Bundle 4", masteryThreshold: 0.7, requiredPassages: 10 },
+  { id: 5, nameEn: "Bundle 5", masteryThreshold: 0.7, requiredPassages: 10 }
+];
+
 var READINGS = [
   {
     id: "R1",
+    bundleId: 1,
+    orderInBundle: 1,
     titleEn: "The Park",
     titlePa: "ਪਾਰਕ",
     levelHint: "Easy",
@@ -32,6 +42,8 @@ var READINGS = [
   },
   {
     id: "R2",
+    bundleId: 1,
+    orderInBundle: 2,
     titleEn: "A School Day",
     titlePa: "ਸਕੂਲ ਦਾ ਦਿਨ",
     levelHint: "Easy",
@@ -63,6 +75,8 @@ var READINGS = [
   },
   {
     id: "R3",
+    bundleId: 1,
+    orderInBundle: 3,
     titleEn: "What I Did",
     titlePa: "ਮੈਂ ਕੀ ਕੀਤਾ",
     levelHint: "Easy",
@@ -94,6 +108,8 @@ var READINGS = [
   },
   {
     id: "R4",
+    bundleId: 1,
+    orderInBundle: 4,
     titleEn: "My Family",
     titlePa: "ਮੇਰਾ ਪਰਿਵਾਰ",
     levelHint: "Easy",
@@ -125,6 +141,8 @@ var READINGS = [
   },
   {
     id: "R5",
+    bundleId: 1,
+    orderInBundle: 5,
     titleEn: "Tomorrow's Plan",
     titlePa: "ਕੱਲ੍ਹ ਦੀ ਯੋਜਨਾ",
     levelHint: "Easy",
@@ -156,6 +174,8 @@ var READINGS = [
   },
   {
     id: "R6",
+    bundleId: 1,
+    orderInBundle: 6,
     titleEn: "Colors and Things",
     titlePa: "ਰੰਗ ਅਤੇ ਚੀਜ਼ਾਂ",
     levelHint: "Easy",
@@ -187,6 +207,8 @@ var READINGS = [
   },
   {
     id: "R7",
+    bundleId: 1,
+    orderInBundle: 7,
     titleEn: "Where Is It?",
     titlePa: "ਇਹ ਕਿੱਥੇ ਹੈ?",
     levelHint: "Easy",
@@ -218,6 +240,8 @@ var READINGS = [
   },
   {
     id: "R8",
+    bundleId: 1,
+    orderInBundle: 8,
     titleEn: "My Friend and Me",
     titlePa: "ਮੇਰਾ ਦੋਸਤ ਅਤੇ ਮੈਂ",
     levelHint: "Easy",
@@ -249,6 +273,8 @@ var READINGS = [
   },
   {
     id: "R9",
+    bundleId: 1,
+    orderInBundle: 9,
     titleEn: "My Birthday",
     titlePa: "ਮੇਰਾ ਜਨਮਦਿਨ",
     levelHint: "Easy",
@@ -280,6 +306,8 @@ var READINGS = [
   },
   {
     id: "R10",
+    bundleId: 1,
+    orderInBundle: 10,
     titleEn: "At the Market",
     titlePa: "ਬਾਜ਼ਾਰ ਵਿੱਚ",
     levelHint: "Easy",

@@ -2137,6 +2137,9 @@ var Lessons = {
     header.appendChild(left);
     header.appendChild(right);
 
+    // Attach track health indicators (data attributes for CSS)
+    Lessons._attachTrackHealthIndicators(header, trackId);
+
     var sub = document.createElement('div');
     sub.className = 'learn-section-sub';
     sub.textContent = track.descEn || '';
@@ -2293,6 +2296,12 @@ var Lessons = {
     LearnQA.logFilterState(filtered);
     
     Lessons.renderActiveFilters();
+
+    // Display results count
+    Lessons._updateResultsCount(filtered.length);
+
+    // Update filters summary badge
+    Lessons._updateFiltersSummary();
 
     // Map filtered ids (used to keep Saved/Recent consistent with filters)
     var filteredById = {};
@@ -2656,7 +2665,7 @@ var Lessons = {
     if (streakEl) {
       var dq = (typeof State !== 'undefined' && State.getDailyQuestProfileContainer) ? State.getDailyQuestProfileContainer() : null;
       var streak = dq && dq.streakCount ? dq.streakCount : 0;
-      streakEl.textContent = streak + (streak === 1 ? ' day' : ' days');
+      Lessons._updateStreakBadge(streak);
     }
   },
 
@@ -3353,6 +3362,95 @@ var Lessons = {
     Lessons.renderLearnSections();
     alert("Lesson Complete! / ਪਾਠ ਮੁਕਤ ਹੋ ਗਿਆ!");
     UI.goTo("screen-learn");
+  },
+
+  // Results count display
+  _updateResultsCount: function(count) {
+    var countDisplay = document.getElementById('learn-results-count');
+    if (countDisplay) {
+      countDisplay.textContent = 'Showing ' + count + ' lesson' + (count === 1 ? '' : 's');
+    }
+  },
+
+  // Count active filters for badge display
+  _countActiveFilters: function() {
+    var f = Lessons.activeFilters;
+    var count = 0;
+    if (f.search && f.search.trim()) count++;
+    if (f.status !== 'all') count++;
+    if (f.difficulty && f.difficulty.join('') !== '123') count++;
+    if (f.track !== 'all') count++;
+    return count;
+  },
+
+  // Update Filters summary label with active count
+  _updateFiltersSummary: function() {
+    var summary = document.querySelector('.learn-filters-summary');
+    if (!summary) return;
+    var activeCount = Lessons._countActiveFilters();
+    var label = 'Filters';
+    if (activeCount > 0) label += ' (' + activeCount + ')';
+    summary.textContent = label;
+  },
+
+  // Streak Badge: Update display with tier styling
+  _updateStreakBadge: function(streakDays) {
+    streakDays = parseInt(streakDays) || 0;
+    var el = document.getElementById('learn-streak');
+    if (!el) return;
+    
+    // Set tier for CSS styling
+    var tier = 'none';
+    if (streakDays >= 30) tier = 'platinum';
+    else if (streakDays >= 7) tier = 'gold';
+    else if (streakDays > 0) tier = 'warm';
+    
+    el.dataset.streakTier = tier;
+    el.className = 'learn-streak-badge';
+    
+    // Set display text
+    if (streakDays === 0) {
+      el.textContent = '0d';
+    } else {
+      el.textContent = '🔥 ' + streakDays + 'd';
+    }
+  },
+
+  // Track Health: Attach completion % and progress bar via data attributes
+  _attachTrackHealthIndicators: function(trackHeaderEl, trackId) {
+    if (!trackHeaderEl || !trackId) return;
+    
+    // Get lessons for this track using existing helper
+    var trackLessons = Lessons.getLessonsByTrack(trackId);
+    if (!trackLessons || trackLessons.length === 0) return;
+    
+    var total = trackLessons.length;
+    var completed = 0;
+    
+    // Count completed lessons
+    try {
+      if (typeof State !== 'undefined' && State && typeof State.getProfileContainer === 'function') {
+        var profile = State.getProfileContainer();
+        if (profile && profile.lessonProgress) {
+          trackLessons.forEach(function(meta) {
+            if (profile.lessonProgress[meta.id] && profile.lessonProgress[meta.id].completed) {
+              completed++;
+            }
+          });
+        }
+      }
+    } catch (e) {
+      // Graceful degradation: no completion stats
+      return;
+    }
+    
+    if (total === 0) return;
+    
+    var pct = Math.round((completed / total) * 100);
+    
+    // Set data attributes for CSS pseudo-element rendering
+    trackHeaderEl.dataset.trackSummary = completed + '/' + total + ' (' + pct + '%)';
+    trackHeaderEl.style.setProperty('--track-pct', pct);
   }
 };
 

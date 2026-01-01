@@ -45,7 +45,7 @@
             <div class="home-resume-subtitle" id="home-resume-subtitle">Pick up where you left off, or start your Daily Quest.</div>
             <div class="button-row" style="margin-top:10px;">
               <button class="btn btn-small" id="btn-home-resume-primary">
-                Start Daily Quest
+                Start Roz Abhyas
               </button>
             </div>
           </div>
@@ -88,15 +88,22 @@
             </div>
 
             <div id="home-streak-section" class="home-streak">
-              <div class="streak-card streak-card-split" role="group" aria-label="Streak and Roz">
+              <div id="streak-card" class="streak-card streak-card-split" role="group" aria-label="Streak and Roz">
                 <div class="streak-split-left">
                   <h3>🔥 <span class="streak-label-en">Current Streak</span> <span class="streak-label-pa" lang="pa">ਮੌਜੂਦਾ ਲੜੀ</span></h3>
                   <p class="streak-number" id="current-streak">0</p>
+                  <p class="streak-subtitle">Do Roz Abhyas daily to keep your streak.</p>
+                  <p class="streak-subtitle-pa" lang="pa">ਲੜੀ ਬਣਾਈ ਰੱਖਣ ਲਈ ਰੋਜ਼ ਅਭਿਆਸ ਕਰੋ।</p>
                 </div>
 
-                <button class="streak-split-right ink-ripple" id="btn-home-roz" type="button" aria-label="Roz (Daily Quest)">
-                  <span class="btn-label-en">Roz (ਰੋਜ਼)</span>
-                  <span class="btn-label-pa" lang="pa">ਰੋਜ਼ਾਨਾ ਕਵੈਸਟ</span>
+                <button class="streak-split-right ink-ripple" id="btn-home-roz" type="button" aria-label="Roz Abhyas — Daily Practice. Start today to keep your streak.">
+                  <span class="btn-label-primary">Roz Abhyas</span>
+                  <span class="btn-label-sub">
+                    <span class="btn-label-en">Daily Practice</span>
+                    <span class="btn-sep" aria-hidden="true">•</span>
+                    <span class="btn-label-pa" lang="pa">ਰੋਜ਼ ਅਭਿਆਸ</span>
+                  </span>
+                  <span class="btn-cta roz-cta">Start ›</span>
                 </button>
               </div>
             </div>
@@ -151,14 +158,19 @@
           </p>
           
           <div id="learn-content">
-            <!-- Progress Summary -->
+            <!-- Continue Card (primary action, above fold) -->
+            <div id="learn-sticky-header">
+              <div id="learn-continue-slot"></div>
+            </div>
+
+            <!-- Progress Summary (compact row) -->
             <div class="progress-summary">
               <div class="summary-card">
-                <div class="summary-label">Total Lessons</div>
+                <div class="summary-label">Total</div>
                 <div class="summary-value" id="total-lessons">0</div>
               </div>
               <div class="summary-card">
-                <div class="summary-label">Completed</div>
+                <div class="summary-label">Done</div>
                 <div class="summary-value" id="completed-lessons">0</div>
               </div>
               <div class="summary-card">
@@ -166,87 +178,96 @@
                 <div class="summary-value" id="progress-lessons">0</div>
               </div>
               <div class="summary-card">
-                <div class="summary-label">Total XP</div>
+                <div class="summary-label">XP</div>
                 <div class="summary-value" id="total-xp">0</div>
               </div>
             </div>
 
+            <!-- Next Suggestion (slim banner) + Track Accuracy + Streak (inline) -->
             <div class="progress-highlights" aria-live="polite" aria-label="Learn progress highlights">
               <div class="highlight-block">
-                <div class="highlight-label">Next Suggestion</div>
+                <div class="highlight-label">Next</div>
                 <div class="highlight-value" id="learn-next-lesson">–</div>
-                <div class="highlight-sub" id="learn-next-reason">Adaptive pick based on your progress.</div>
+                <div class="highlight-sub" id="learn-next-reason">Based on your progress.</div>
               </div>
               <div class="highlight-row">
-                <div class="highlight-label">Track Accuracy</div>
+                <div class="highlight-label">Accuracy</div>
                 <div class="highlight-value" id="learn-accuracy">–</div>
               </div>
               <div class="highlight-row">
-                <div class="highlight-label">Daily Streak</div>
+                <div class="highlight-label">Streak</div>
                 <div class="highlight-value" id="learn-streak">–</div>
               </div>
             </div>
-          </div>
-          
-          <div id="learn-sticky-header">
-            <div id="learn-continue-slot"></div>
-            <div id="learn-filters-slot"></div>
 
-            <!-- Filters -->
+            <!-- Search (always visible) -->
             <div class="learn-filters" id="learn-controls">
-            <div class="filters-row-top">
-              <div class="search-bar">
-                <input type="text" id="lesson-search" placeholder="Search lessons..." aria-label="Search lessons" />
+              <div class="filters-row-top">
+                <div class="search-bar">
+                  <input type="text" id="lesson-search" placeholder="Search lessons..." aria-label="Search lessons" />
+                </div>
               </div>
-              <div class="filters-actions">
-                <button class="btn btn-secondary btn-small clear-filters-btn" id="btn-clear-filters" aria-label="Clear all filters">Clear Filters</button>
-              </div>
-            </div>
-            <div class="qa-toggle-row">
-              <label class="qa-toggle" for="learn-qa-toggle">
-                <input type="checkbox" id="learn-qa-toggle" aria-label="Toggle Learn QA logging" />
-                <span class="qa-toggle-switch" aria-hidden="true"></span>
-                <span class="qa-toggle-label">QA Logs</span>
-              </label>
-              <div class="qa-toggle-help">Enable console logging for Learn QA mode.</div>
-            </div>
-            <div class="active-filters" id="active-filters" aria-live="polite"></div>
-            
-            <div class="filter-toggles">
-              <button class="filter-btn active" data-filter="all">All</button>
-              <button class="filter-btn" data-filter="not-started">Not Started</button>
-              <button class="filter-btn" data-filter="in-progress">In Progress</button>
-              <button class="filter-btn" data-filter="done">Completed</button>
-            </div>
-            
-            <div class="difficulty-filters">
-              <label class="difficulty-toggle">
-                <input type="checkbox" class="diff-filter" data-difficulty="1" checked />
-                <span>★ Easy</span>
-              </label>
-              <label class="difficulty-toggle">
-                <input type="checkbox" class="diff-filter" data-difficulty="2" checked />
-                <span>★★ Medium</span>
-              </label>
-              <label class="difficulty-toggle">
-                <input type="checkbox" class="diff-filter" data-difficulty="3" checked />
-                <span>★★★ Hard</span>
-              </label>
-            </div>
-            
-            <div class="track-filter-dropdown">
-              <select id="track-filter" aria-label="Filter by track">
-                <option value="all">All Tracks</option>
-                <option value="T_WORDS">Words</option>
-                <option value="T_ACTIONS">Actions</option>
-                <option value="T_DESCRIBE">Describe</option>
-                <option value="T_SENTENCE">Sentences</option>
-                <option value="T_READING">Reading</option>
-              </select>
+
+              <!-- Filters + QA (collapsed by default) -->
+              <details class="learn-filters-details">
+                <summary class="learn-filters-summary">Filters</summary>
+                <div class="learn-filters-panel">
+                  <div class="filters-actions" style="margin-bottom: 8px;">
+                    <button class="btn btn-secondary btn-small clear-filters-btn" id="btn-clear-filters" aria-label="Clear all filters">Clear Filters</button>
+                  </div>
+
+                  <div class="filter-toggles">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="not-started">Not Started</button>
+                    <button class="filter-btn" data-filter="in-progress">In Progress</button>
+                    <button class="filter-btn" data-filter="done">Completed</button>
+                  </div>
+
+                  <div class="difficulty-filters">
+                    <label class="difficulty-toggle">
+                      <input type="checkbox" class="diff-filter" data-difficulty="1" checked />
+                      <span>★ Easy</span>
+                    </label>
+                    <label class="difficulty-toggle">
+                      <input type="checkbox" class="diff-filter" data-difficulty="2" checked />
+                      <span>★★ Medium</span>
+                    </label>
+                    <label class="difficulty-toggle">
+                      <input type="checkbox" class="diff-filter" data-difficulty="3" checked />
+                      <span>★★★ Hard</span>
+                    </label>
+                  </div>
+
+                  <div class="track-filter-dropdown">
+                    <select id="track-filter" aria-label="Filter by track">
+                      <option value="all">All Tracks</option>
+                      <option value="T_WORDS">Words</option>
+                      <option value="T_ACTIONS">Actions</option>
+                      <option value="T_DESCRIBE">Describe</option>
+                      <option value="T_SENTENCE">Sentences</option>
+                      <option value="T_READING">Reading</option>
+                    </select>
+                  </div>
+
+                  <div class="active-filters" id="active-filters" aria-live="polite"></div>
+
+                  <div id="learn-results-count" class="learn-results-count"></div>
+
+                  <div style="margin-top: 8px; border-top: 1px solid #e0e7ff; padding-top: 8px;">
+                    <label class="qa-toggle" for="learn-qa-toggle">
+                      <input type="checkbox" id="learn-qa-toggle" aria-label="Toggle Learn QA logging" />
+                      <span class="qa-toggle-switch" aria-hidden="true"></span>
+                      <span class="qa-toggle-label">QA Logs</span>
+                    </label>
+                    <div class="qa-toggle-help">Enable console logging for Learn QA mode.</div>
+                  </div>
+                </div>
+              </details>
+
+              <div id="learn-filters-slot"></div>
             </div>
           </div>
 
-          </div>
           <div id="learn-track-sections"></div>
         </div>
       </section>
@@ -386,6 +407,39 @@
                 <div class="playhome-tile-meta" id="playhome-meta-game5"></div>
               </div>
             </button>
+
+            <button type="button" class="playhome-tile" id="btn-playhome-game6" data-playhome-game="6" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">6</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Vocab Vault</div>
+                <div class="playhome-tile-desc">10 questions • translation</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game6"></div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile game-tile--disabled" id="btn-playhome-game7" data-playhome-game="7" role="gridcell" aria-disabled="true" data-toast="Coming soon — try Vocab Vault (Game 6) for now.">
+              <div class="playhome-tile-icon" aria-hidden="true">7</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Vocab Vault Jr</div>
+                <div class="playhome-tile-desc">10 questions • translation</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game7">
+                  <span class="badge-coming-soon">Coming Soon</span>
+                  <span class="playhome-lock" aria-hidden="true">🔒</span>
+                </div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile game-tile--disabled" id="btn-playhome-game8" data-playhome-game="8" role="gridcell" aria-disabled="true" data-toast="Coming soon — try Vocab Vault (Game 6) for now.">
+              <div class="playhome-tile-icon" aria-hidden="true">8</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Vocab Vault Expert</div>
+                <div class="playhome-tile-desc">10 questions • translation</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game8">
+                  <span class="badge-coming-soon">Coming Soon</span>
+                  <span class="playhome-lock" aria-hidden="true">🔒</span>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -416,6 +470,220 @@
 
           <div class="button-row" style="margin-top:10px;">
             <button class="btn" id="btn-playhome-start" disabled>Start Round</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TYPE HOME (Parts of Speech) -->
+      <section id="screen-type" class="screen" aria-label="Type">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-type-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <div class="section-title">Type</div>
+          <div class="section-subtitle" lang="pa">ਸ਼ਬਦ ਦਾ ਭਾਗ</div>
+          <p class="info-text">10 questions • pick the word type.</p>
+          <div class="tracks-strip">
+            <div class="track-pill"><span class="dot"></span> Word Types</div>
+            <div class="track-pill"><span class="dot"></span> Parts of Speech</div>
+          </div>
+          <div class="button-row" style="margin-top:10px;">
+            <button class="btn" id="btn-type-start">Start</button>
+          </div>
+        </div>
+
+        <div class="card" id="type-game-card" style="margin-top:8px; display:none;" aria-hidden="true">
+          <div class="section-title">Word Type Round</div>
+          <div class="section-subtitle" id="type-progress"></div>
+          <div id="type-word" style="margin-top:12px; font-size:1.3em; font-weight:bold; text-align:center;"></div>
+          <div class="options" id="type-options" role="group" style="margin-top:16px;"></div>
+          <div class="feedback" id="type-feedback" style="margin-top:12px; text-align:center; min-height:24px;"></div>
+          <div class="button-row" style="margin-top:12px;">
+            <button class="btn btn-secondary" id="btn-type-next" style="display:none;">Next</button>
+            <button class="btn btn-secondary" id="btn-type-restart">Restart</button>
+          </div>
+          <div id="type-summary" style="margin-top:16px; display:none;">
+            <div id="type-score-line"></div>
+            <div id="type-accuracy-line" style="margin-top:6px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           TYPING CENTER (Premium)
+           ========================= -->
+      <section id="screen-typing-center" class="screen" aria-label="Typing Center">
+        <div class="typing-shell">
+          <div class="typing-topbar">
+            <div class="typing-topbar__left">
+              <button class="typing-backbtn" id="typingCenterBackBtn" type="button" aria-label="Back">←</button>
+              <div class="typing-titleblock">
+                <div class="typing-title">Typing Center</div>
+                <div class="typing-subtitle" id="typingCenterSubtitle">Practice, race, and build speed</div>
+              </div>
+            </div>
+
+            <div class="typing-topbar__right">
+              <button class="pill-btn is-locked" id="typingPremiumBtn" type="button" aria-label="Premium">Upgrade</button>
+            </div>
+          </div>
+
+          <div class="typing-hero">
+            <div class="typing-hero__title">Typing</div>
+            <div class="typing-hero__sub">Build speed and accuracy with short, friendly prompts.</div>
+
+            <!-- Prompt-aligned objective line (additive; JS will populate when present) -->
+            <div class="typing-hero__subtitle" id="typingCenterObjective">Focus: Accuracy first</div>
+
+            <div class="typing-hero__cta button-row typing-hero__ctaRow" aria-label="Quick start">
+              <button id="typingHeroPracticeBtn" class="btn" type="button">Start Practice</button>
+              <button id="typingHeroRaceBtn" class="btn btn-secondary" type="button">Typing Race</button>
+            </div>
+
+            <div class="typing-last-row">
+              <span id="typingLastModeLine" class="typing-last-mode" aria-live="polite"></span>
+              <button type="button" class="typing-resume-link" id="typingResumeBtn">Resume</button>
+            </div>
+
+            <div class="typing-chip-row" aria-label="Mode hints">
+              <span class="typing-chip">No timer</span>
+              <span class="typing-chip">Warm-up</span>
+              <span class="typing-chip">Accuracy goal 95%+</span>
+            </div>
+
+            <div class="typing-mode-grid" role="list">
+              <button class="typing-mode-card" id="typingModePractice" type="button" role="listitem">
+                <div class="typing-mode-card__row">
+                  <div class="typing-mode-icon">⌨️</div>
+                  <div class="typing-mode-name">Practice</div>
+                </div>
+                <div class="typing-mode-desc">Warm-up with short prompts. No timer.</div>
+                <div class="typing-mode-chips" aria-hidden="true">
+                  <span class="typing-chip">No timer</span>
+                  <span class="typing-chip">Warm-up</span>
+                </div>
+              </button>
+
+              <button class="typing-mode-card" id="typingModeTime" type="button" role="listitem" aria-disabled="true" data-status="comingSoon" tabindex="-1">
+                <div class="typing-mode-card__row">
+                  <div class="typing-mode-icon">⏱</div>
+                  <div class="typing-mode-name">Time Trial</div>
+                </div>
+                <div class="typing-mode-desc">Type for 30–60 seconds and track WPM.</div>
+                <div class="typing-mode-soon" aria-hidden="true">Coming soon</div>
+                <div class="typing-mode-chips" aria-hidden="true">
+                  <span class="typing-chip">30–60s</span>
+                  <span class="typing-chip">Soon</span>
+                </div>
+              </button>
+
+              <button class="typing-mode-card is-premium" id="typingModeRace" type="button" role="listitem">
+                <div class="typing-mode-card__row">
+                  <div class="typing-mode-icon">⚡</div>
+                  <div class="typing-mode-name">Typing Race</div>
+                </div>
+                <div class="typing-mode-desc">Countdown start, progress bar, clean stats.</div>
+                <div class="typing-mode-chips" aria-hidden="true">
+                  <span class="typing-chip">Countdown</span>
+                  <span class="typing-chip">Best</span>
+                </div>
+              </button>
+
+              <button class="typing-mode-card" id="typingModeLessons" type="button" role="listitem" aria-disabled="true" data-status="comingSoon" tabindex="-1">
+                <div class="typing-mode-card__row">
+                  <div class="typing-mode-icon">📚</div>
+                  <div class="typing-mode-name">Lessons</div>
+                </div>
+                <div class="typing-mode-desc">Letter-by-letter mastery.</div>
+                <div class="typing-mode-soon" aria-hidden="true">Coming soon</div>
+                <div class="typing-mode-chips" aria-hidden="true">
+                  <span class="typing-chip">Soon</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="button-row" style="margin-top:12px;">
+              <button id="btn-typing-center-classic" class="btn btn-secondary" type="button">
+                <span class="btn-label-en">Type Lessons</span>
+                <span class="btn-label-pa" lang="pa">ਟਾਈਪ ਲੈਸਨ</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           TYPING RACE (Premium)
+           ========================= -->
+      <section id="screen-typing-race" class="screen" aria-label="Typing Race">
+        <div class="typing-shell">
+          <div class="typing-topbar">
+            <div class="typing-topbar__left">
+              <button class="typing-backbtn" id="typingRaceBackBtn" type="button" aria-label="Back">←</button>
+              <div class="typing-titleblock">
+                <div class="typing-title">Typing Race</div>
+                <div class="typing-subtitle" id="raceSubtitle">Beat your best time</div>
+                <div id="raceGoalLine" class="race-goal-line race-goal" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <div class="typing-topbar__right">
+              <button class="pill-btn" id="raceFullscreenBtn" type="button" aria-pressed="false">Fullscreen</button>
+            </div>
+          </div>
+
+          <div class="race-card" aria-label="Typing Race">
+            <div class="race-card__header">
+              <div class="race-metrics" aria-label="Race metrics">
+                <div class="race-metric"><span class="race-metric__label" title="Words per minute">WPM</span><span class="race-metric__value" id="raceWpm">0</span></div>
+                <div class="race-metric"><span class="race-metric__label" title="Accuracy">Acc</span><span class="race-metric__value" id="raceAcc">100%</span></div>
+                <div class="race-metric"><span class="race-metric__label" title="Elapsed time">Time</span><span class="race-metric__value" id="raceTime">0.0s</span></div>
+                <div class="race-metric"><span class="race-metric__label" title="Total wrong characters">Mistakes</span><span class="race-metric__value" id="raceMistakes">0</span></div>
+              </div>
+            </div>
+
+            <div class="race-progress" aria-hidden="true">
+              <div class="race-progress__fill" id="raceProgressFill"></div>
+            </div>
+
+            <div class="race-card__body">
+              <div class="type-promptCard" id="racePromptCard" aria-label="Prompt">
+                <div class="race-prompt" id="racePrompt" aria-label="Prompt text"></div>
+
+                <input
+                  class="race-input"
+                  id="raceInput"
+                  type="text"
+                  inputmode="text"
+                  autocomplete="off"
+                  autocapitalize="none"
+                  spellcheck="false"
+                  placeholder="Start typing here…"
+                  aria-label="Type here"
+                />
+              </div>
+
+              <div class="race-dock" aria-label="Race actions">
+                <div class="race-dock__row">
+                  <button class="pill-btn is-primary" id="raceStartBtn" type="button">Start</button>
+                  <button class="pill-btn" id="raceResetBtn" type="button">Reset</button>
+                  <button type="button" class="pill-btn pill-btn--ghost" id="raceFocusBtn">Focus</button>
+                  <button class="pill-btn is-accent" id="raceNextBtn" type="button">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown overlay -->
+        <div class="race-countdown" id="raceCountdown" aria-hidden="true">
+          <div class="race-countdown__card" role="dialog" aria-label="Countdown">
+            <div class="race-countdown__num" id="raceCountdownNum">3</div>
+            <div class="race-countdown__msg">Get ready…</div>
           </div>
         </div>
       </section>
@@ -763,6 +1031,7 @@
   <script src="./data/readings.js?v=20251231" defer></script>
   <script src="./data/readingVocab.js?v=20251231" defer></script>
   <script src="./data/games.js?v=20260101" defer></script>
+  <script src="./data/typing.js?v=20260101" defer></script>
   <script src="./data/parentGuide.js?v=20251231" defer></script>
   <!-- State management -->
   <script src="./js/state.js?v=20251231" defer></script>
@@ -770,6 +1039,8 @@
   <script src="./js/ui.js?v=20251231" defer></script>
   <script src="./js/lessons.js?v=20251231" defer></script>
   <script src="./js/games.js?v=20251231" defer></script>
+  <script src="./js/type.js?v=20251231" defer></script>
+  <script src="./js/typing.js?v=20260101" defer></script>
   <script src="./js/reading.js?v=20251231" defer></script>
   <script src="./js/progress.js?v=20251231" defer></script>
   <script src="./js/dailyQuest.js?v=20251231" defer></script>

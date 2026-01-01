@@ -1,0 +1,355 @@
+{
+  "normalizedKeys": [
+    "step_type -> type",
+    "english_text/englishText -> englishText (questions)",
+    "punjabi_text -> punjabiText (questions)",
+    "correct_answer/correctAnswer -> correctAnswer",
+    "guidedPractice -> guided_practice",
+    "definition/example text fields -> contentEn/contentPa or exampleEn/examplePa"
+  ],
+  "generatedQuestionIds": [
+    "q_l_legacy_noun_01_tap_the_noun",
+    "q_l_legacy_noun_01_tap_the_noun_2",
+    "q_l_legacy_noun_01_tap_the_noun_3",
+    "q_l_legacy_pronoun_01_tap_the_pronoun",
+    "q_l_legacy_singular_plural_01_tap_the_plural_word",
+    "q_l_legacy_singular_plural_01_tap_the_singular_word",
+    "q_l_legacy_verb_01_tap_the_verb",
+    "q_l_legacy_verb_01_tap_the_verb_2",
+    "q_l_legacy_adverb_01_tap_the_adverb",
+    "q_l_legacy_adverb_01_tap_the_adverb_2",
+    "q_l_legacy_simple_present_01_which_verb_is_in_simple_present",
+    "q_l_legacy_simple_past_01_which_verb_is_in_simple_past",
+    "q_l_legacy_simple_future_01_which_verb_is_in_simple_future",
+    "q_l_legacy_adjective_01_tap_the_adjective",
+    "q_l_legacy_adjective_01_tap_the_adjective_2",
+    "q_l_legacy_preposition_01_tap_the_preposition",
+    "q_l_legacy_conjunction_01_tap_the_conjunction",
+    "q_l_legacy_interjection_01_tap_the_interjection",
+    "q_l_legacy_article_01_tap_the_article",
+    "q_l_legacy_article_01_tap_the_article_2",
+    "q_l_legacy_sv_agreement_01_tap_the_correct_sentence",
+    "q_l_example_new_format_which_word_is_a_noun",
+    "q_l_example_new_format_tap_the_sentence_with_the_most_n",
+    "q_l_nouns_common_01_which_word_is_a_common_noun",
+    "q_l_nouns_common_01_in_the_sentence_the_dog_is_sleep",
+    "q_l_nouns_common_01_which_word_is_a_common_noun_2",
+    "q_l_nouns_proper_01_which_word_is_a_proper_noun",
+    "q_l_nouns_proper_01_choose_the_proper_noun",
+    "q_l_pronouns_personal_01_tap_the_pronoun",
+    "q_l_pronouns_personal_01_choose_the_correct_pronoun",
+    "q_l_pronouns_personal_01_which_pronoun_is_correct",
+    "q_l_nouns_plurals_possession_01_choose_the_correct_plural",
+    "q_l_nouns_plurals_possession_01_which_shows_possession_correctly",
+    "q_l_nouns_plurals_possession_01_form_the_plural_of_child",
+    "q_l_nouns_plurals_possession_01_which_is_the_possessive_form",
+    "q_l_nouns_plurals_possession_01_choose_the_correct_plural_2",
+    "q_l_adj_comparison_01_which_is_the_comparative_of_good",
+    "q_l_adj_comparison_01_complete_my_house_is_than_yours",
+    "q_l_adj_vs_adv_01_she_sings",
+    "q_l_adj_vs_adv_01_complete_the_dog_is_running",
+    "q_l_prep_place_move_01_choose_the_correct_preposition",
+    "q_l_prep_place_move_01_he_walked_the_bridge",
+    "q_l_prep_place_move_01_the_book_is_the_shelf",
+    "q_l_prep_place_move_01_the_cat_is_the_box",
+    "q_l_prep_place_move_01_she_ran_the_park",
+    "q_l_prep_time_01_we_meet_sunday",
+    "q_l_prep_time_01_he_lived_here_2019",
+    "q_l_prep_time_01_school_starts_8_am",
+    "q_l_prep_time_01_they_waited_an_hour",
+    "q_l_prep_time_01_she_s_been_here_monday",
+    "q_l_conj_joining_01_choose_the_best_conjunction",
+    "q_l_conj_joining_01_he_was_tired_he_kept_working",
+    "q_l_conj_joining_01_complete_you_ready",
+    "q_l_conj_joining_01_she_was_late_she_ran",
+    "q_l_conj_joining_01_you_can_come_stay_home",
+    "q_l_interjections_01_tap_the_interjection",
+    "q_l_interjections_01_which_shows_pain",
+    "q_l_interjections_01_choose_the_interjection",
+    "q_l_interjections_01_shh_means",
+    "q_l_interjections_01_which_shows_relief",
+    "q_l_nouns_basics_01_which_is_a_noun",
+    "q_l_nouns_basics_01_pick_the_noun",
+    "q_l_nouns_basics_01_find_the_noun_in_she_played_in_t",
+    "q_l_nouns_basics_01_nouns_can_be_people_which_is_a_p",
+    "q_l_nouns_basics_01_which_word_is_not_a_noun",
+    "q_l_nouns_basics_01_what_type_of_noun_is_india",
+    "q_l_pronouns_basics_01_pick_the_pronoun",
+    "q_l_pronouns_basics_01_which_is_a_pronoun",
+    "q_l_pronouns_basics_01_complete_am_happy",
+    "q_l_pronouns_basics_01_what_pronoun_replaces_mary",
+    "q_l_pronouns_basics_01_choose_the_sentence_using_pronou",
+    "q_l_pronouns_basics_01_what_does_we_mean",
+    "q_l_singular_plural_01_which_is_plural",
+    "q_l_singular_plural_01_form_plural_of_dog",
+    "q_l_singular_plural_01_which_is_singular",
+    "q_l_singular_plural_01_form_plural_of_box",
+    "q_l_singular_plural_01_which_pair_is_correct_singular_p",
+    "q_l_singular_plural_01_count_the_singular_nouns_cat_dog",
+    "q_l_simple_present_01_which_sentence_is_present_tense",
+    "q_l_adjective_basics_01_adjectives_can_describe_size_whi",
+    "q_l_preposition_basics_01_pick_the_preposition",
+    "q_l_preposition_basics_01_complete_the_cat_is_the_chair",
+    "q_l_preposition_basics_01_which_is_a_preposition",
+    "q_l_preposition_basics_01_the_book_is_the_desk",
+    "q_l_preposition_basics_01_which_preposition_shows_time",
+    "q_l_preposition_basics_01_pick_the_sentence_with_a_preposi",
+    "q_l_conjunction_basics_01_pick_the_conjunction",
+    "q_l_conjunction_basics_01_complete_i_like_pizza_burger",
+    "q_l_conjunction_basics_01_which_is_a_conjunction",
+    "q_l_conjunction_basics_01_this_word_shows_contrast",
+    "q_l_conjunction_basics_01_choose_the_correct_use_of_and",
+    "q_l_conjunction_basics_01_conjunctions_connect_together",
+    "q_l_article_basics_01_pick_the_article",
+    "q_l_article_basics_01_complete_apple",
+    "q_l_article_basics_01_which_is_correct",
+    "q_l_article_basics_01_when_do_we_use_the",
+    "q_l_article_basics_01_choose_the_correct_sentence",
+    "q_l_article_basics_01_what_does_a_mean",
+    "q_l_sv_agreement_01_which_sentence_is_correct",
+    "q_l_sv_agreement_01_complete_correctly_they_to_schoo",
+    "q_l_sv_agreement_01_which_is_grammatically_correct",
+    "q_l_sv_agreement_01_pick_the_correct_form",
+    "q_l_sv_agreement_01_complete_it_beautiful",
+    "q_l_sv_agreement_01_which_subject_verb_pair_is_corre",
+    "q_l_sv_agreement_01_i_happy_today",
+    "q_l_possessive_nouns_01_which_shows_correct_possession",
+    "q_l_possessive_nouns_01_complete_the_toy_is_in_the_corne",
+    "q_l_possessive_pronouns_01_which_is_a_possessive_pronoun",
+    "q_l_possessive_pronouns_01_complete_this_is_notebook",
+    "q_l_tutorial_t01_make_this_word_plural_cat",
+    "q_l_tutorial_t02_choose_the_best_word_i_don_t_hav",
+    "q_l_tutorial_t06_choose_the_best_word_the_cat_is_",
+    "q_l_tutorial_t07_choose_the_correct_question",
+    "q_l_tutorial_t08_choose_the_best_request_please_y",
+    "q_l_tutorial_t03_choose_the_correct_sentence_for_",
+    "q_l_tutorial_t05_choose_the_correct_word_the_blue",
+    "q_l_tutorial_t09_choose_the_best_word_i_brush_my_",
+    "q_l_tutorial_t04_choose_the_correct_sentence_this",
+    "q_l_tutorial_t10_choose_the_most_polite_request_f"
+  ],
+  "correctedOptionMismatches": [
+    {
+      "lessonId": "L_SIMPLE_PAST_01",
+      "detail": "Normalized option 'seeд' -> 'seed'"
+    }
+  ],
+  "pointsAvailableAdjustments": [
+    {
+      "lessonId": "L_LEGACY_NOUN_01",
+      "from": 0,
+      "to": 19
+    },
+    {
+      "lessonId": "L_LEGACY_PRONOUN_01",
+      "from": 0,
+      "to": 6
+    },
+    {
+      "lessonId": "L_LEGACY_SINGULAR_PLURAL_01",
+      "from": 0,
+      "to": 13
+    },
+    {
+      "lessonId": "L_LEGACY_VERB_01",
+      "from": 0,
+      "to": 13
+    },
+    {
+      "lessonId": "L_LEGACY_ADVERB_01",
+      "from": 0,
+      "to": 13
+    },
+    {
+      "lessonId": "L_LEGACY_SIMPLE_PRESENT_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_LEGACY_SIMPLE_PAST_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_LEGACY_SIMPLE_FUTURE_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_LEGACY_ADJECTIVE_01",
+      "from": 0,
+      "to": 13
+    },
+    {
+      "lessonId": "L_LEGACY_PREPOSITION_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_LEGACY_CONJUNCTION_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_LEGACY_INTERJECTION_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_LEGACY_ARTICLE_01",
+      "from": 0,
+      "to": 13
+    },
+    {
+      "lessonId": "L_LEGACY_SV_AGREEMENT_01",
+      "from": 0,
+      "to": 7
+    },
+    {
+      "lessonId": "L_EXAMPLE_NEW_FORMAT",
+      "from": 15,
+      "to": 19
+    },
+    {
+      "lessonId": "L_NOUNS_COMMON_01",
+      "from": 15,
+      "to": 17
+    },
+    {
+      "lessonId": "L_PRONOUNS_PERSONAL_01",
+      "from": 12,
+      "to": 17
+    },
+    {
+      "lessonId": "L_VERBS_BASICS_01",
+      "from": 12,
+      "to": 22
+    },
+    {
+      "lessonId": "L_NOUNS_PLURALS_POSSESSION_01",
+      "from": 12,
+      "to": 27
+    },
+    {
+      "lessonId": "L_VERBS_POWERUPS_01",
+      "from": 12,
+      "to": 22
+    },
+    {
+      "lessonId": "L_ADJ_COMPARISON_01",
+      "from": 12,
+      "to": 22
+    },
+    {
+      "lessonId": "L_ADJ_VS_ADV_01",
+      "from": 12,
+      "to": 22
+    },
+    {
+      "lessonId": "L_PREP_PLACE_MOVE_01",
+      "from": 12,
+      "to": 27
+    },
+    {
+      "lessonId": "L_PREP_TIME_01",
+      "from": 12,
+      "to": 27
+    },
+    {
+      "lessonId": "L_CONJ_JOINING_01",
+      "from": 12,
+      "to": 27
+    },
+    {
+      "lessonId": "L_INTERJECTIONS_01",
+      "from": 10,
+      "to": 25
+    },
+    {
+      "lessonId": "L_PROGRESSIVE_PRESENT_01",
+      "from": 35,
+      "to": 17
+    },
+    {
+      "lessonId": "L_PROGRESSIVE_PAST_01",
+      "from": 35,
+      "to": 17
+    },
+    {
+      "lessonId": "L_MODAL_VERBS_01",
+      "from": 37,
+      "to": 23
+    },
+    {
+      "lessonId": "L_POSSESSIVE_NOUNS_01",
+      "from": 35,
+      "to": 18
+    },
+    {
+      "lessonId": "L_POSSESSIVE_PRONOUNS_01",
+      "from": 35,
+      "to": 18
+    },
+    {
+      "lessonId": "L_COMPARATIVE_ADJECTIVES_01",
+      "from": 35,
+      "to": 18
+    },
+    {
+      "lessonId": "L_SUPERLATIVE_ADJECTIVES_01",
+      "from": 35,
+      "to": 18
+    },
+    {
+      "lessonId": "L_TUTORIAL_T01",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T02",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T06",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T07",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T08",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T03",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T05",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T09",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T04",
+      "from": 0,
+      "to": 8
+    },
+    {
+      "lessonId": "L_TUTORIAL_T10",
+      "from": 0,
+      "to": 8
+    }
+  ],
+  "punjabiEdits": []
+}

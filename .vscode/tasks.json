@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Serve BOLO app (8000)",
+			"type": "shell",
+			"command": "cd app && python3 -m http.server 8000 --directory .",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

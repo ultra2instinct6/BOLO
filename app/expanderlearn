@@ -1,0 +1,382 @@
+[
+{
+“id”: “T01”,
+“titleEn”: “Make Plurals with -s”,
+“titlePa”: “ਬਹੁਵਚਨ ਬਣਾਉਣਾ (-s)”,
+“objective”: {
+“en”: “Learn to add -s to make regular nouns plural.”,
+“pa”: “ਸਧਾਰਣ ਨਾਂਵਾਂ ਨੂੰ ਬਹੁਵਚਨ ਬਣਾਉਣ ਲਈ -s ਜੋੜਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Make this word plural: cat”,
+“pa”: “ਇਸ ਸ਼ਬਦ ਨੂੰ ਬਹੁਵਚਨ ਬਣਾਓ: ਬਿੱਲੀ”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “One dog, two dogs.”,
+“pa”: “ਇੱਕ ਕੁੱਤਾ, ਦੋ ਕੁੱਤੇ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “One book, many books.”,
+“pa”: “ਇੱਕ ਕਿਤਾਬ, ਬਹੁਤ ਕਿਤਾਬਾਂ।”
+}
+],
+“answerChoices”: [
+{ “en”: “cats”, “pa”: “ਬਿੱਲੀਆਂ” },
+{ “en”: “cat”, “pa”: “ਬਿੱਲੀ” },
+{ “en”: “cates”, “pa”: “ਕੇਟਸ” },
+{ “en”: “cat’s”, “pa”: “ਬਿੱਲੀ ਦਾ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “We add -s to talk about more than one regular noun.”,
+“pa”: “ਇੱਕ ਤੋਂ ਵੱਧ ਲਈ ਅਸੀਂ ਸਧਾਰਣ ਨਾਂਵਾਂ ਨਾਲ -s ਜੋੜਦੇ ਹਾਂ।”
+},
+“difficulty”: 1,
+“primaryTrackId”: “T_SENTENCE”
+},
+{
+“id”: “T02”,
+“titleEn”: “Use Some and Any”,
+“titlePa”: “Some ਅਤੇ Any ਵਰਤੋ”,
+“objective”: {
+“en”: “Learn to use “some” and “any” with things you can count or not count.”,
+“pa”: “ਗਿਣ ਸਕਣ ਵਾਲੀਆਂ ਅਤੇ ਨਾ ਗਿਣ ਸਕਣ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਨਾਲ “some” ਅਤੇ “any” ਵਰਤਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the best word: I don’t have ___ apples.”,
+“pa”: “ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਮੇਰੇ ਕੋਲ ___ ਸੇਬ ਨਹੀਂ ਹਨ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “I have some cookies.”,
+“pa”: “ਮੇਰੇ ਕੋਲ ਕੁਝ ਬਿਸਕੁਟ ਹਨ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “Do you have any water?”,
+“pa”: “ਕੀ ਤੇਰੇ ਕੋਲ ਕੁਝ ਪਾਣੀ ਹੈ?”
+}
+],
+“answerChoices”: [
+{ “en”: “any”, “pa”: “any” },
+{ “en”: “some”, “pa”: “some” },
+{ “en”: “many”, “pa”: “ਬਹੁਤ” },
+{ “en”: “a”, “pa”: “ਇੱਕ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “In a negative sentence, we usually use “any.””,
+“pa”: “ਨਕਾਰਾਤਮਕ ਵਾਕ ਵਿੱਚ ਅਸੀਂ ਆਮ ਤੌਰ ਤੇ “any” ਵਰਤਦੇ ਹਾਂ।”
+},
+“difficulty”: 2,
+“primaryTrackId”: “T_SENTENCE”
+},
+{
+“id”: “T03”,
+“titleEn”: “Doing It Now: -ing”,
+“titlePa”: “ਹੁਣ ਵਾਲੀ ਕਿਰਿਆ (-ing)”,
+“objective”: {
+“en”: “Learn to use am/is/are + -ing for actions happening right now.”,
+“pa”: “ਇਸ ਵੇਲੇ ਹੋ ਰਹੀ ਕਿਰਿਆ ਲਈ am/is/are + -ing ਵਰਤਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the correct sentence for right now.”,
+“pa”: “ਹੁਣ ਲਈ ਸਹੀ ਵਾਕ ਚੁਣੋ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “I am running now.”,
+“pa”: “ਮੈਂ ਹੁਣ ਦੌੜ ਰਿਹਾ ਹਾਂ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “She is eating now.”,
+“pa”: “ਉਹ ਹੁਣ ਖਾ ਰਹੀ ਹੈ।”
+}
+],
+“answerChoices”: [
+{ “en”: “He is jumping.”, “pa”: “ਉਹ ਛਾਲਾਂ ਮਾਰ ਰਿਹਾ ਹੈ।” },
+{ “en”: “He jump.”, “pa”: “ਉਹ ਛਾਲ ਮਾਰਦਾ ਹੈ।” },
+{ “en”: “He jumped.”, “pa”: “ਉਹ ਛਾਲ ਮਾਰਿਆ।” },
+{ “en”: “He will jump.”, “pa”: “ਉਹ ਛਾਲ ਮਾਰੇਗਾ।” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “For an action happening now, we use “is” + the -ing word.”,
+“pa”: “ਹੁਣ ਹੋ ਰਹੀ ਕਿਰਿਆ ਲਈ ਅਸੀਂ “is” + -ing ਵਾਲਾ ਸ਼ਬਦ ਵਰਤਦੇ ਹਾਂ।”
+},
+“difficulty”: 2,
+“primaryTrackId”: “T_ACTIONS”
+},
+{
+“id”: “T04”,
+“titleEn”: “Whose? Use ’s”,
+“titlePa”: “ਕਿਸ ਦੀ? ’s ਵਰਤੋ”,
+“objective”: {
+“en”: “Learn to use ’s to show who owns something.”,
+“pa”: “ਕਿਸ ਦੀ ਚੀਜ਼ ਹੈ ਦਿਖਾਉਣ ਲਈ ’s ਵਰਤਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the correct sentence: This is ___ pencil.”,
+“pa”: “ਸਹੀ ਵਾਕ ਚੁਣੋ: ਇਹ ___ ਪੈਂਸਿਲ ਹੈ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “Sara’s book is new.”,
+“pa”: “ਸਾਰਾ ਦੀ ਕਿਤਾਬ ਨਵੀਂ ਹੈ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “This is Ali’s bag.”,
+“pa”: “ਇਹ ਅਲੀ ਦਾ ਬੈਗ ਹੈ।”
+}
+],
+“answerChoices”: [
+{ “en”: “Ravi’s”, “pa”: “ਰਵੀ ਦਾ” },
+{ “en”: “Ravis”, “pa”: “ਰਵੀਸ” },
+{ “en”: “Ravi”, “pa”: “ਰਵੀ” },
+{ “en”: “Ravi s”, “pa”: “ਰਵੀ ਐੱਸ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “We add ’s after a name to show it belongs to that person.”,
+“pa”: “ਨਾਮ ਤੋਂ ਬਾਅਦ ’s ਲਗਾ ਕੇ ਅਸੀਂ ਮਾਲਕੀ ਦਿਖਾਂਦੇ ਹਾਂ।”
+},
+“difficulty”: 1,
+“primaryTrackId”: “T_WORDS”
+},
+{
+“id”: “T05”,
+“titleEn”: “Compare with -er”,
+“titlePa”: “ਤੁਲਨਾ ਲਈ -er”,
+“objective”: {
+“en”: “Learn to use comparative adjectives like bigger and smaller.”,
+“pa”: “bigger ਅਤੇ smaller ਵਰਗੇ ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਵਰਤਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the correct word: The blue ball is ___ than the red ball.”,
+“pa”: “ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਨੀਲੀ ਗੇਂਦ ਲਾਲ ਗੇਂਦ ਨਾਲੋਂ ___ ਹੈ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “This box is bigger than that box.”,
+“pa”: “ਇਹ ਡੱਬਾ ਉਸ ਡੱਬੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “My pencil is shorter than your pencil.”,
+“pa”: “ਮੇਰੀ ਪੈਂਸਿਲ ਤੇਰੀ ਪੈਂਸਿਲ ਨਾਲੋਂ ਛੋਟੀ ਹੈ।”
+}
+],
+“answerChoices”: [
+{ “en”: “bigger”, “pa”: “ਵੱਡੀ” },
+{ “en”: “big”, “pa”: “ਵੱਡੀ” },
+{ “en”: “biggest”, “pa”: “ਸਭ ਤੋਂ ਵੱਡੀ” },
+{ “en”: “more big”, “pa”: “ਹੋਰ ਵੱਡੀ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “When we compare two things, we often use the -er form like “bigger.””,
+“pa”: “ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਕਰਨ ਲਈ ਅਸੀਂ ਅਕਸਰ -er ਵਾਲਾ ਰੂਪ ਵਰਤਦੇ ਹਾਂ, ਜਿਵੇਂ “bigger।””
+},
+“difficulty”: 2,
+“primaryTrackId”: “T_DESCRIBE”
+},
+{
+“id”: “T06”,
+“titleEn”: “In, On, Under, Next To”,
+“titlePa”: “ਜਗ੍ਹਾ ਵਾਲੇ ਸ਼ਬਦ”,
+“objective”: {
+“en”: “Learn prepositions of place: in, on, under, and next to.”,
+“pa”: “ਜਗ੍ਹਾ ਦੱਸਣ ਵਾਲੇ ਸ਼ਬਦ in, on, under, ਅਤੇ next to ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the best word: The cat is ___ the table.”,
+“pa”: “ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ___ ਹੈ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “The shoes are under the bed.”,
+“pa”: “ਜੁੱਤੇ ਬਿਸਤਰ ਦੇ ਹੇਠਾਂ ਹਨ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “The book is on the chair.”,
+“pa”: “ਕਿਤਾਬ ਕੁਰਸੀ ਤੇ ਹੈ।”
+}
+],
+“answerChoices”: [
+{ “en”: “under”, “pa”: “ਹੇਠਾਂ” },
+{ “en”: “on”, “pa”: “ਤੇ” },
+{ “en”: “in”, “pa”: “ਵਿੱਚ” },
+{ “en”: “next to”, “pa”: “ਦੇ ਕੋਲ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “If the cat is below the table, we use “under.””,
+“pa”: “ਜੇ ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ, ਤਾਂ ਅਸੀਂ “under” ਵਰਤਦੇ ਹਾਂ।”
+},
+“difficulty”: 1,
+“primaryTrackId”: “T_SENTENCE”
+},
+{
+“id”: “T07”,
+“titleEn”: “Ask Where with Is/Are”,
+“titlePa”: “Where ਨਾਲ ਸਵਾਲ”,
+“objective”: {
+“en”: “Learn to ask Wh- questions using is/are.”,
+“pa”: “is/are ਨਾਲ Wh- ਸਵਾਲ ਪੁੱਛਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the correct question.”,
+“pa”: “ਸਹੀ ਸਵਾਲ ਚੁਣੋ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “Where is the ball?”,
+“pa”: “ਗੇਂਦ ਕਿੱਥੇ ਹੈ?”
+},
+{
+“label”: “Punjabi”,
+“en”: “Where are the books?”,
+“pa”: “ਕਿਤਾਬਾਂ ਕਿੱਥੇ ਹਨ?”
+}
+],
+“answerChoices”: [
+{ “en”: “Where is the ball?”, “pa”: “ਗੇਂਦ ਕਿੱਥੇ ਹੈ?” },
+{ “en”: “Where the ball is?”, “pa”: “ਗੇਂਦ ਕਿੱਥੇ ਹੈ?” },
+{ “en”: “Where are the ball?”, “pa”: “ਗੇਂਦ ਕਿੱਥੇ ਹੈ?” },
+{ “en”: “Where is ball are?”, “pa”: “ਗੇਂਦ ਕਿੱਥੇ ਹੈ?” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “We start with “Where,” then use “is” with one thing like “the ball.””,
+“pa”: “ਅਸੀਂ “Where” ਨਾਲ ਸ਼ੁਰੂ ਕਰਦੇ ਹਾਂ, ਫਿਰ ਇੱਕ ਚੀਜ਼ ਲਈ “is” ਵਰਤਦੇ ਹਾਂ।”
+},
+“difficulty”: 2,
+“primaryTrackId”: “T_SENTENCE”
+},
+{
+“id”: “T08”,
+“titleEn”: “Polite Classroom Commands”,
+“titlePa”: “ਕਲਾਸ ਦੇ ਨਿਮਰ ਹੁਕਮ”,
+“objective”: {
+“en”: “Learn imperatives for simple, polite classroom requests.”,
+“pa”: “ਕਲਾਸ ਵਿੱਚ ਸਧਾਰਣ ਅਤੇ ਨਿਮਰ ਹੁਕਮ ਵਾਲੇ ਵਾਕ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the best request: Please ___ your book.”,
+“pa”: “ਸਹੀ ਬੇਨਤੀ ਚੁਣੋ: ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਕਿਤਾਬ ___.”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “Please open your book.”,
+“pa”: “ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਕਿਤਾਬ ਖੋਲ੍ਹੋ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “Please sit down.”,
+“pa”: “ਕਿਰਪਾ ਕਰਕੇ ਬੈਠ ਜਾਓ।”
+}
+],
+“answerChoices”: [
+{ “en”: “open”, “pa”: “ਖੋਲ੍ਹੋ” },
+{ “en”: “opens”, “pa”: “ਖੋਲ੍ਹਦਾ ਹੈ” },
+{ “en”: “opening”, “pa”: “ਖੋਲ੍ਹ ਰਹੇ ਹੋ” },
+{ “en”: “opened”, “pa”: “ਖੋਲ੍ਹਿਆ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “Imperatives use the base verb, so “open” is correct.”,
+“pa”: “ਆਦੇਸ਼ ਵਾਲੇ ਵਾਕ ਵਿੱਚ ਕਿਰਿਆ ਦਾ ਸਧਾਰਣ ਰੂਪ ਹੁੰਦਾ ਹੈ, ਇਸ ਲਈ “open” ਸਹੀ ਹੈ।”
+},
+“difficulty”: 1,
+“primaryTrackId”: “T_SENTENCE”
+},
+{
+“id”: “T09”,
+“titleEn”: “Daily Routines with Time”,
+“titlePa”: “ਰੋਜ਼ ਦੀਆਂ ਆਦਤਾਂ ਅਤੇ ਸਮਾਂ”,
+“objective”: {
+“en”: “Learn to talk about everyday routines using a time like 7 a.m.”,
+“pa”: “7 a.m. ਵਰਗੇ ਸਮੇਂ ਨਾਲ ਰੋਜ਼ ਦੀਆਂ ਆਦਤਾਂ ਬਾਰੇ ਬੋਲਣਾ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the best word: I brush my teeth ___ 7 a.m.”,
+“pa”: “ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਮੈਂ 7 a.m. ___ ਦੰਦ ਸਾਫ਼ ਕਰਦਾ ਹਾਂ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “I go to school at 9 a.m.”,
+“pa”: “ਮੈਂ 9 ਵਜੇ ਸਵੇਰੇ ਸਕੂਲ ਜਾਂਦਾ ਹਾਂ।”
+},
+{
+“label”: “Punjabi”,
+“en”: “She eats lunch at 1 p.m.”,
+“pa”: “ਉਹ 1 ਵਜੇ ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ ਖਾਂਦੀ ਹੈ।”
+}
+],
+“answerChoices”: [
+{ “en”: “at”, “pa”: “ਤੇ” },
+{ “en”: “in”, “pa”: “ਵਿੱਚ” },
+{ “en”: “on”, “pa”: “ਤੇ (ਦਿਨ ਲਈ)” },
+{ “en”: “under”, “pa”: “ਹੇਠਾਂ” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: “We use “at” for clock times like 7 a.m.”,
+“pa”: “7 a.m. ਵਰਗੇ ਘੜੀ ਦੇ ਸਮੇਂ ਲਈ ਅਸੀਂ “at” ਵਰਤਦੇ ਹਾਂ।”
+},
+“difficulty”: 2,
+“primaryTrackId”: “T_ACTIONS”
+},
+{
+“id”: “T10”,
+“titleEn”: “Polite Requests: Can or Could”,
+“titlePa”: “ਨਿਮਰ ਬੇਨਤੀ: Can/Could”,
+“objective”: {
+“en”: “Learn to ask politely using “can” or “could.””,
+“pa”: ““can” ਜਾਂ “could” ਨਾਲ ਨਿਮਰ ਤਰੀਕੇ ਨਾਲ ਬੇਨਤੀ ਕਰਨੀ ਸਿੱਖੋ।”
+},
+“prompt”: {
+“en”: “Choose the most polite request for water.”,
+“pa”: “ਪਾਣੀ ਲਈ ਸਭ ਤੋਂ ਨਿਮਰ ਬੇਨਤੀ ਚੁਣੋ।”
+},
+“examples”: [
+{
+“label”: “English”,
+“en”: “Could I have some water, please?”,
+“pa”: “ਕੀ ਮੈਨੂੰ ਕੁਝ ਪਾਣੀ ਮਿਲ ਸਕਦਾ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ?”
+},
+{
+“label”: “Punjabi”,
+“en”: “Can I go outside, please?”,
+“pa”: “ਕੀ ਮੈਂ ਬਾਹਰ ਜਾ ਸਕਦਾ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ?”
+}
+],
+“answerChoices”: [
+{ “en”: “Could I have water, please?”, “pa”: “ਕੀ ਮੈਨੂੰ ਪਾਣੀ ਮਿਲ ਸਕਦਾ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ?” },
+{ “en”: “Give me water.”, “pa”: “ਮੈਨੂੰ ਪਾਣੀ ਦੇ।” },
+{ “en”: “Water now!”, “pa”: “ਹੁਣੇ ਪਾਣੀ!” },
+{ “en”: “I want water.”, “pa”: “ਮੈਨੂੰ ਪਾਣੀ ਚਾਹੀਦਾ ਹੈ।” }
+],
+“correctIndex”: 0,
+“explanation”: {
+“en”: ““Could I… please?” is a very polite way to ask.”,
+“pa”: ““Could I… ਕਿਰਪਾ ਕਰਕੇ?” ਪੁੱਛਣ ਦਾ ਬਹੁਤ ਨਿਮਰ ਤਰੀਕਾ ਹੈ।”
+},
+“difficulty”: 2,
+“primaryTrackId”: “T_SENTENCE”
+}
+]

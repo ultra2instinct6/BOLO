@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BOLO – English Grammar for Punjabi Learners</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0050a8" />
+  <link rel="stylesheet" href="./css/main.css?v=20251231" />
+</head>
+<body>
+  <!-- Section Transition Overlay (Phase 1 primitive; hidden by default) -->
+  <div id="section-transition" class="section-transition" aria-hidden="true">
+    <div class="section-transition__content" role="status" aria-live="polite" aria-atomic="true">
+      <div class="section-transition__label" id="section-transition-label"></div>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <div class="header-logo">
+        <img src="./img/logo.png" alt="BOLO logo" class="logo-img logo-img-header" />
+      </div>
+      <div class="header-text-block">
+        <div class="header-top-row">
+          <div class="brand-title">BOLO</div>
+        </div>
+        <div class="header-profile-row">
+          <span><span class="profile-name-label">User:</span> <span id="header-profile-name">Player 1</span></span>
+          <span class="level-pill">Level <span id="header-level">1</span></span>
+          <a href="#" id="link-switch-profile" class="header-switch-link">Switch</a>
+        </div>
+        <div class="xp-bar-container">
+          <div id="xp-bar-fill" class="xp-bar-fill"></div>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- HOME SCREEN -->
+      <section id="screen-home" class="screen active" aria-label="Home">
+        <div class="home">
+          <div class="card home-resume-card" id="home-resume-card" role="region" aria-label="Resume">
+            <div class="home-resume-title" id="home-resume-title">Today</div>
+            <div class="home-resume-subtitle" id="home-resume-subtitle">Pick up where you left off, or start your Daily Quest.</div>
+            <div class="button-row" style="margin-top:10px;">
+              <button class="btn btn-small" id="btn-home-resume-primary">
+                Start Daily Quest
+              </button>
+            </div>
+          </div>
+
+          <div class="home-actions" aria-label="Quick actions">
+            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-clear">
+              <span class="btn-label-en">Clear</span>
+              <span class="btn-label-pa" lang="pa">ਸਾਫ਼ ਕਰੋ</span>
+            </button>
+            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-bolo" type="button" aria-label="BOLO / ਬੋਲੋ — Speaking Practice">
+              <span class="btn-label-en">BOLO</span>
+              <span class="btn-label-pa" lang="pa">ਬੋਲੋ</span>
+            </button>
+            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-learn">
+              <span class="btn-label-en">Learn</span>
+              <span class="btn-label-pa" lang="pa">ਸਿੱਖੋ</span>
+            </button>
+            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-reading">
+              <span class="btn-label-en">Reading</span>
+              <span class="btn-label-pa" lang="pa">ਪੜ੍ਹਨਾ</span>
+            </button>
+
+            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-play">
+              <span class="btn-label-en">Play</span>
+              <span class="btn-label-pa" lang="pa">ਖੇਡੋ</span>
+            </button>
+
+            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-type" type="button" aria-label="Type — Word Type game">
+              <span class="btn-label-en">Type</span>
+              <span class="btn-label-pa" lang="pa">ਟਾਈਪ</span>
+            </button>
+          </div>
+
+          <div class="home-stats" aria-label="Stats">
+            <div class="button-row" aria-label="Home quick toggles">
+              <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-flashcards" aria-label="Flashcards">
+                <span class="btn-label-en">Flashcards</span>
+                <span class="btn-label-pa" lang="pa">ਫਲੈਸ਼ਕਾਰਡ</span>
+              </button>
+            </div>
+
+            <div id="home-streak-section" class="home-streak">
+              <div class="streak-card streak-card-split" role="group" aria-label="Streak and Roz">
+                <div class="streak-split-left">
+                  <h3>🔥 <span class="streak-label-en">Current Streak</span> <span class="streak-label-pa" lang="pa">ਮੌਜੂਦਾ ਲੜੀ</span></h3>
+                  <p class="streak-number" id="current-streak">0</p>
+                </div>
+
+                <button class="streak-split-right ink-ripple" id="btn-home-roz" type="button" aria-label="Roz (Daily Quest)">
+                  <span class="btn-label-en">Roz (ਰੋਜ਼)</span>
+                  <span class="btn-label-pa" lang="pa">ਰੋਜ਼ਾਨਾ ਕਵੈਸਟ</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Home Lane Tabs (Home-only; does not replace module tiles) -->
+          <div id="homeLanePanel" class="home-lane-panel">
+            <div id="homeLaneTabs" class="lane-tabs" role="tablist" aria-label="Home lanes"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPEAKING PRACTICE SCREEN (placeholder) -->
+      <section id="screen-speak" class="screen" aria-label="Speaking Practice">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-speak-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+
+          <button id="btn-speak-nav"
+                  class="nav-speak-btn"
+                  type="button"
+                  aria-label="Speak / ਬੋਲੋ — Speaking Practice">
+            <img src="./img/logo.png" class="nav-speak-logo" alt="" aria-hidden="true" />
+            <span class="nav-speak-text">
+              <span class="nav-speak-en">Speak</span>
+              <span class="nav-speak-pa" lang="pa">ਬੋਲੋ</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <div class="section-title">Speaking Practice</div>
+          <p class="section-subtitle">Coming soon.</p>
+          <p class="section-subtitle" lang="pa">ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ।</p>
+        </div>
+      </section>
+
+      <!-- LEARN SCREEN -->
+      <section id="screen-learn" class="screen" aria-label="Learn">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-learn-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+        <div style="margin-top:10px;">
+          <div class="section-title">Learn – Skill Tracks</div>
+          <p class="section-subtitle">
+            Short bilingual lessons grouped by skill: words, actions, describing, sentence building, and reading.
+          </p>
+          
+          <div id="learn-content">
+            <!-- Progress Summary -->
+            <div class="progress-summary">
+              <div class="summary-card">
+                <div class="summary-label">Total Lessons</div>
+                <div class="summary-value" id="total-lessons">0</div>
+              </div>
+              <div class="summary-card">
+                <div class="summary-label">Completed</div>
+                <div class="summary-value" id="completed-lessons">0</div>
+              </div>
+              <div class="summary-card">
+                <div class="summary-label">In Progress</div>
+                <div class="summary-value" id="progress-lessons">0</div>
+              </div>
+              <div class="summary-card">
+                <div class="summary-label">Total XP</div>
+                <div class="summary-value" id="total-xp">0</div>
+              </div>
+            </div>
+
+            <div class="progress-highlights" aria-live="polite" aria-label="Learn progress highlights">
+              <div class="highlight-block">
+                <div class="highlight-label">Next Suggestion</div>
+                <div class="highlight-value" id="learn-next-lesson">–</div>
+                <div class="highlight-sub" id="learn-next-reason">Adaptive pick based on your progress.</div>
+              </div>
+              <div class="highlight-row">
+                <div class="highlight-label">Track Accuracy</div>
+                <div class="highlight-value" id="learn-accuracy">–</div>
+              </div>
+              <div class="highlight-row">
+                <div class="highlight-label">Daily Streak</div>
+                <div class="highlight-value" id="learn-streak">–</div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="learn-sticky-header">
+            <div id="learn-continue-slot"></div>
+            <div id="learn-filters-slot"></div>
+
+            <!-- Filters -->
+            <div class="learn-filters" id="learn-controls">
+            <div class="filters-row-top">
+              <div class="search-bar">
+                <input type="text" id="lesson-search" placeholder="Search lessons..." aria-label="Search lessons" />
+              </div>
+              <div class="filters-actions">
+                <button class="btn btn-secondary btn-small clear-filters-btn" id="btn-clear-filters" aria-label="Clear all filters">Clear Filters</button>
+              </div>
+            </div>
+            <div class="qa-toggle-row">
+              <label class="qa-toggle" for="learn-qa-toggle">
+                <input type="checkbox" id="learn-qa-toggle" aria-label="Toggle Learn QA logging" />
+                <span class="qa-toggle-switch" aria-hidden="true"></span>
+                <span class="qa-toggle-label">QA Logs</span>
+              </label>
+              <div class="qa-toggle-help">Enable console logging for Learn QA mode.</div>
+            </div>
+            <div class="active-filters" id="active-filters" aria-live="polite"></div>
+            
+            <div class="filter-toggles">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="not-started">Not Started</button>
+              <button class="filter-btn" data-filter="in-progress">In Progress</button>
+              <button class="filter-btn" data-filter="done">Completed</button>
+            </div>
+            
+            <div class="difficulty-filters">
+              <label class="difficulty-toggle">
+                <input type="checkbox" class="diff-filter" data-difficulty="1" checked />
+                <span>★ Easy</span>
+              </label>
+              <label class="difficulty-toggle">
+                <input type="checkbox" class="diff-filter" data-difficulty="2" checked />
+                <span>★★ Medium</span>
+              </label>
+              <label class="difficulty-toggle">
+                <input type="checkbox" class="diff-filter" data-difficulty="3" checked />
+                <span>★★★ Hard</span>
+              </label>
+            </div>
+            
+            <div class="track-filter-dropdown">
+              <select id="track-filter" aria-label="Filter by track">
+                <option value="all">All Tracks</option>
+                <option value="T_WORDS">Words</option>
+                <option value="T_ACTIONS">Actions</option>
+                <option value="T_DESCRIBE">Describe</option>
+                <option value="T_SENTENCE">Sentences</option>
+                <option value="T_READING">Reading</option>
+              </select>
+            </div>
+          </div>
+
+          </div>
+          <div id="learn-track-sections"></div>
+        </div>
+      </section>
+
+      <!-- LESSON DETAIL SCREEN -->
+      <section id="screen-lesson" class="screen" aria-label="Lesson">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-lesson-back">
+            <span class="btn-label-en">← Learn</span>
+            <span class="btn-label-pa" lang="pa">ਸਿੱਖੋ</span>
+          </button>
+        </div>
+        <div class="lesson-header" style="margin-top:8px;">
+          <h2 id="lesson-title">Lesson</h2>
+          <div class="lesson-title-pa" id="lesson-title-pa" lang="pa"></div>
+          <div class="lesson-step-type">
+            <span id="lesson-step-type">Definition / ਪਰਿਭਾਸ਼ਾ</span>
+            <span class="step-indicator" id="lesson-step-indicator">Step 1 / 1</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="lang-label">ENGLISH</div>
+          <div class="lesson-text-en" id="lesson-text-en"></div>
+          <div class="lang-label" style="margin-top:6px;">ਪੰਜਾਬੀ</div>
+          <div class="lesson-text-pa" id="lesson-text-pa" lang="pa"></div>
+
+          <div class="lesson-instruction" id="lesson-instruction" aria-live="polite" aria-atomic="true">
+            <div class="lesson-instruction-en" id="lesson-instruction-en"></div>
+            <div class="lesson-instruction-pa" id="lesson-instruction-pa" lang="pa"></div>
+          </div>
+
+          <div class="options" id="lesson-options"></div>
+          <div class="feedback" id="lesson-feedback"></div>
+        </div>
+        <div class="button-row">
+          <button class="btn btn-secondary" id="btn-lesson-prev">
+            <span class="btn-label-en">Previous</span>
+            <span class="btn-label-pa" lang="pa">ਪਿੱਛੇ</span>
+          </button>
+          <button class="btn" id="btn-lesson-next">
+            <span class="btn-label-en">Next</span>
+            <span class="btn-label-pa" lang="pa">ਅੱਗੇ</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- GAMES SCREEN -->
+            <!-- DAILY QUEST SCREEN -->
+            <section id="screen-daily-quest" class="screen" aria-label="Daily Quest">
+              <div class="button-row">
+                <button class="btn btn-secondary btn-small" id="btn-daily-quest-back">
+                  <span class="btn-label-en">← Home</span>
+                  <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+                </button>
+              </div>
+              <div class="card" style="margin-top:8px;">
+                <div class="section-title">Daily Quest</div>
+                <div class="section-subtitle">Complete all 3 games to finish your quest for today!</div>
+                <div id="daily-quest-counter" class="quest-counter" style="margin:8px 0;"></div>
+                <ul class="quest-list" style="list-style:none; padding:0;">
+                  <li><span id="quest-check-learn">☐</span> <span class="quest-label"></span></li>
+                  <li><span id="quest-check-reading">☐</span> <span class="quest-label"></span></li>
+                  <li><span id="quest-check-games">☐</span> <span class="quest-label"></span></li>
+                </ul>
+                <div id="daily-quest-complete-badge" class="quest-complete-badge" style="display:none; margin:10px 0; color:green; font-weight:bold;">Quest Complete! 🎉</div>
+                <div class="quest-streak-row" style="margin-top:10px;">
+                  <span>Streak: <span id="daily-quest-streak">0</span> days</span>
+                </div>
+                <div class="button-row" style="margin-top:12px;">
+                  <button class="btn btn-primary" id="btn-daily-quest-start">
+                    <span class="btn-label-en" id="daily-quest-start-en">Start Daily Quest</span>
+                    <span class="btn-label-pa" id="daily-quest-start-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+      
+      <!-- PLAY HOME (Game Home Menu) -->
+      <section id="screen-play-home" class="screen" aria-label="Play">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-playhome-back-home">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <div class="section-title">Play</div>
+          <div class="section-subtitle" lang="pa">ਖੇਡੋ</div>
+          <div class="info-text">Choose a game, pick difficulty, then start a round.</div>
+        </div>
+
+        <div class="card">
+          <div class="section-title" style="font-size:15px;">Games</div>
+          <div class="playhome-grid" id="playhome-grid" role="grid" aria-label="Games grid">
+            <button type="button" class="playhome-tile" id="btn-playhome-game1" data-playhome-game="1" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">1</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Tap the Word</div>
+                <div class="playhome-tile-desc">10 questions • quick</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game1"></div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile" id="btn-playhome-game2" data-playhome-game="2" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">2</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Parts of Speech</div>
+                <div class="playhome-tile-desc">10 questions • multiple choice</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game2"></div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile" id="btn-playhome-game3" data-playhome-game="3" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">3</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Tense Detective</div>
+                <div class="playhome-tile-desc">10 questions • multiple choice</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game3"></div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile" id="btn-playhome-game4" data-playhome-game="4" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">4</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Sentence Check</div>
+                <div class="playhome-tile-desc">10 questions • pick the best sentence</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game4"></div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile" id="btn-playhome-game5" data-playhome-game="5" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">5</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Conversation Coach</div>
+                <div class="playhome-tile-desc">10 questions • best reply</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game5"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="card is-hidden" id="playhome-setup" aria-hidden="true">
+          <div class="playhome-setup-header">
+            <div class="section-title" style="font-size:15px;" id="playhome-setup-title">Game</div>
+            <div class="section-subtitle" id="playhome-setup-goal">Goal: —</div>
+          </div>
+
+          <div class="playhome-difficulty" aria-label="Difficulty">
+            <div class="section-subtitle" style="margin-bottom:6px;">Difficulty</div>
+            <div class="playhome-difficulty-row" role="group" aria-label="Difficulty selector">
+              <button type="button" class="btn btn-secondary btn-small playhome-diff-btn" id="btn-playhome-diff-1" data-playhome-diff="1">Easy</button>
+              <button type="button" class="btn btn-secondary btn-small playhome-diff-btn" id="btn-playhome-diff-2" data-playhome-diff="2">Medium</button>
+              <button type="button" class="btn btn-secondary btn-small playhome-diff-btn" id="btn-playhome-diff-3" data-playhome-diff="3">Hard</button>
+            </div>
+          </div>
+
+          <details class="playhome-details" id="playhome-practice-details" open>
+            <summary>What you’ll practice</summary>
+            <div class="tracks-strip" id="playhome-practice-chips" aria-label="Practice areas"></div>
+          </details>
+
+          <details class="playhome-details" id="playhome-instructions-details" open>
+            <summary>Instructions</summary>
+            <ul class="playhome-instructions" id="playhome-instructions"></ul>
+          </details>
+
+          <div class="button-row" style="margin-top:10px;">
+            <button class="btn" id="btn-playhome-start" disabled>Start Round</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLASHCARDS SCREEN (placeholder) -->
+      <section id="screen-flashcards" class="screen" aria-label="Flashcards">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-flashcards-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+
+        <div class="card" style="margin-top:8px;">
+          <div class="section-title">Flashcards</div>
+          <p class="section-subtitle">Coming soon.</p>
+          <p class="section-subtitle" lang="pa">ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ।</p>
+        </div>
+      </section>
+
+      <section id="screen-play" class="screen" aria-label="Games">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-play-back-home">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+        <div id="playActivePanel" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
+          <!-- IN_ROUND: Round in progress (answering questions) -->
+          <div id="playRound" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
+            <div class="card">
+              <div class="button-row" style="justify-content:space-between; margin-bottom:6px;">
+                <button class="btn btn-secondary btn-small" id="btn-play-back-games">← Games</button>
+                <button class="btn btn-secondary btn-small" id="btn-play-difficulty">Difficulty: Medium</button>
+              </div>
+              <div class="section-subtitle play-difficulty-note" id="play-difficulty-note">Applies to next round</div>
+
+              <div class="score-row">
+                <span>Score: <strong id="play-score">0</strong></span>
+                <span>Streak: <strong id="play-streak">0</strong></span>
+                <span>Best (this game): <strong id="play-best">0</strong><span id="play-best-suffix"></span></span>
+              </div>
+              <div class="score-row" style="margin-top:4px;">
+                <span id="play-game-label">Game 1: Tap the Word</span>
+              </div>
+
+              <div class="track-label" id="play-track-label">Track: Words & Names</div>
+              <div class="section-subtitle" id="play-goal-line" style="margin-top:6px;">Goal: —</div>
+              <div class="section-subtitle" id="play-example-line">Example: —</div>
+              <div class="lang-label" style="margin-top:6px;">ENGLISH / ਪੰਜਾਬੀ</div>
+              <div class="lesson-text-en" id="play-question-text" tabindex="-1"></div>
+              <div class="options" id="play-options"></div>
+              <div class="feedback" id="play-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+
+              <div class="button-row" id="play-next-row" style="margin-top:10px;">
+                <button class="btn" id="btn-play-next" disabled>Next →</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- COMPLETE: Round ended (summary + next actions) -->
+        <div id="playCompletePanel" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
+        <div id="playComplete" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
+          <div class="card">
+            <div class="play-complete-panel" id="play-complete-panel">
+              <h2 class="section-title" id="play-complete-title" tabindex="-1" style="font-size:15px;">Round complete</h2>
+              <div class="section-subtitle" id="play-complete-score">Score: 0/0</div>
+              <div class="section-subtitle" id="play-complete-best">Best: 0</div>
+              <div class="section-subtitle" id="play-complete-accuracy">Accuracy: —</div>
+              <div class="section-subtitle" id="play-complete-praise">Nice work!</div>
+              <div class="section-subtitle" id="play-complete-skill">You improved at: —</div>
+              <div class="section-subtitle" id="play-complete-next">Next up: —</div>
+              <div class="button-row" style="margin-top:10px;">
+                <button class="btn" id="btn-play-back-menu">Back to Games</button>
+                <button class="btn btn-secondary" id="btn-play-again">Play again</button>
+              </div>
+              <div class="button-row" style="margin-top:8px;">
+                <button class="btn btn-secondary" id="btnChooseAnotherGame" type="button">Choose another game</button>
+              </div>
+              <div class="button-row" style="margin-top:8px;">
+                <button class="btn" id="btn-play-continue-quest" style="display:none;">Continue Quest</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- Play feedback toast overlay (popup style) -->
+      <div id="play-feedback-overlay" aria-live="polite" aria-atomic="true" aria-hidden="true">
+        <div class="overlay-card" id="play-feedback-overlay-card" role="status" tabindex="-1">
+          <div class="overlay-status" id="play-feedback-overlay-status"></div>
+          <div class="overlay-status-pa" id="play-feedback-overlay-status-pa" lang="pa" style="display:none;"></div>
+          <div class="overlay-body" id="play-feedback-overlay-body"></div>
+        </div>
+      </div>
+
+      <!-- READING SCREEN -->
+      <section id="screen-reading" class="screen" aria-label="Reading">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-reading-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+        <div style="margin-top:8px;">
+          <div class="section-title">Reading & Stories</div>
+          <p class="section-subtitle">
+            Short bilingual passages with one simple question each. Great for daily practice.
+          </p>
+          <div class="tracks-strip">
+            <div class="track-pill"><span class="dot"></span> Reading & Stories</div>
+          </div>
+          <div id="reading-list-content">
+            <div class="card">
+              <div class="section-title" style="font-size:15px;">Passages</div>
+              <p class="info-text">
+                Choose a passage. Read in English and Punjabi. Then answer the question to earn XP.
+              </p>
+              <ul class="reading-list" id="reading-list"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- READING DETAIL SCREEN -->
+      <section id="screen-reading-detail" class="screen" aria-label="Reading Detail">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-reading-detail-back">
+            <span class="btn-label-en">← Reading</span>
+            <span class="btn-label-pa" lang="pa">ਪੜ੍ਹਨਾ</span>
+          </button>
+        </div>
+        <div class="lesson-header" style="margin-top:8px;">
+          <h2 id="reading-detail-title">Story</h2>
+          <div class="lesson-title-pa" id="reading-detail-title-pa" lang="pa"></div>
+          <div class="lesson-step-type">
+            <span id="reading-detail-meta">Level: Easy · Track: Reading & Stories</span>
+          </div>
+        </div>
+        <div class="card" id="reading-story-card">
+          <div class="reading-readmode-controls">
+            <div class="reading-controls-row">
+              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-font-dec">A−</button>
+              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-font-inc">A+</button>
+              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-spacing">Spacing: Normal</button>
+            </div>
+            <div class="reading-controls-row">
+              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-lang-both">EN + ਪੰਜਾਬੀ</button>
+              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-lang-en">English</button>
+              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-lang-pa">ਪੰਜਾਬੀ</button>
+            </div>
+            <div class="reading-vocab-toggle-row">
+              <button type="button" class="btn btn-secondary btn-small" id="toggle-reading-vocab" aria-pressed="false">
+                <span class="btn-label-en">Vocabulary <span class="footer-tab-status" id="reading-vocab-status">Off</span></span>
+                <span class="btn-label-pa" lang="pa">ਸ਼ਬਦਾਵਲੀ</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Passage Media (images) -->
+          <div id="passageMedia" class="passage-media" style="display:none;" aria-label="Passage media">
+            <div id="passageCarousel" class="passage-carousel" role="group" aria-label="Story images">
+              <img id="passageActiveImg" class="passage-active-img" alt="" />
+              <div class="passage-counter" id="passageCounter" aria-live="polite">1/4</div>
+            </div>
+            <div id="passageThumbs" class="passage-thumbs" role="list" aria-label="Image thumbnails"></div>
+          </div>
+
+          <div class="lang-label" id="reading-detail-label-en">ENGLISH</div>
+          <div class="lesson-text-en" id="reading-detail-text-en"></div>
+          <div class="lang-label" id="reading-detail-label-pa" style="margin-top:6px;">ਪੰਜਾਬੀ</div>
+          <div class="lesson-text-pa" id="reading-detail-text-pa" lang="pa"></div>
+        </div>
+
+        <div class="card" id="reading-vocab-card" style="display:none;">
+          <div class="vocab-card-header">
+            <div class="lang-label" style="margin:0;">Vocabulary / ਸ਼ਬਦਾਵਲੀ</div>
+            <button type="button" class="btn btn-secondary btn-small" id="btn-reading-vocab-collapse" aria-expanded="true">
+              <span class="btn-label-en" id="reading-vocab-collapse-en">Hide</span>
+              <span class="btn-label-pa" id="reading-vocab-collapse-pa" lang="pa">ਲੁਕਾਓ</span>
+            </button>
+          </div>
+          <div id="reading-vocab-panel"></div>
+        </div>
+
+        <div class="card">
+          <div class="lang-label">Question / ਪ੍ਰਸ਼ਨ</div>
+          <div class="lesson-step-progress" id="reading-progress-counter">Passage 1 of 10</div>
+          <div class="lesson-text-en" id="reading-detail-question-text"></div>
+          <div class="options" id="reading-detail-options"></div>
+          <div class="feedback" id="reading-detail-feedback"></div>
+          <div class="reading-explanation" id="reading-detail-explanation" style="display:none;"></div>
+          <div class="reading-xp-badge" id="reading-xp-badge" style="display:none;">+10 XP</div>
+
+          <div class="reading-vocab-quiz-card" id="reading-vocab-quiz-card" style="display:none;">
+            <div class="lang-label">Vocab Challenge / ਸ਼ਬਦ ਚੈਲੈਂਜ</div>
+            <div class="reading-vocab-quiz-prompt" id="reading-vocab-quiz-prompt"></div>
+            <div id="reading-vocab-quiz-options"></div>
+            <div class="feedback" id="reading-vocab-quiz-feedback"></div>
+          </div>
+
+          <button class="btn btn-primary" id="reading-next-btn" style="display:none; margin-top:10px;">Next Passage →</button>
+        </div>
+      </section>
+
+      <!-- PROGRESS SCREEN -->
+      <section id="screen-progress" class="screen" aria-label="Progress">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-progress-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+        <div style="margin-top:8px;">
+          <div class="section-title">Progress & Tracks</div>
+          <p class="section-subtitle">
+            Track learning by skill: Words & Names, Actions & Time, Describing Words, Sentence Building, and Reading.
+          </p>
+          <div class="card">
+            <div class="progress-row-top">
+              <span>Overall Level</span>
+              <span>Level <strong id="progress-level">1</strong></span>
+            </div>
+            <div class="progress-row-sub">
+              XP: <span id="progress-xp">0</span> · To next level: <span id="progress-xp-next">–</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-bar-fill" id="progress-xp-bar"></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="section-title" style="font-size:15px;">Tracks Overview</div>
+            <ul class="progress-list" id="progress-tracks-list"></ul>
+          </div>
+          <div class="card">
+            <div class="section-title" style="font-size:15px;">Reading Progress</div>
+            <div class="progress-row-sub" id="progress-reading-summary">–</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARENT/TEACHER SCREEN -->
+      <section id="screen-parent" class="screen" aria-label="Parent/Teacher">
+        <div class="button-row">
+          <button class="btn btn-secondary btn-small" id="btn-parent-back">
+            <span class="btn-label-en">← Home</span>
+            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
+          </button>
+        </div>
+        <h2 style="margin-top:12px; margin-left:12px; color:#003f7f;">Parent / Teacher Guide</h2>
+        <div id="parent-screen-body"></div>
+      </section>
+    </main>
+
+    <footer class="footer-nav" role="navigation" aria-label="Quick actions">
+      <div class="footer-nav-inner">
+        <div class="footer-tab-container">
+          <button class="footer-tab" id="toggle-punjabi" type="button" aria-label="Toggle Punjabi">
+            <span class="footer-tab-label">Punjabi</span>
+            <span class="footer-tab-status" id="footer-punjabi-status">On</span>
+          </button>
+          <button class="footer-tab" id="toggle-progress" type="button" aria-label="Progress">
+            <span class="footer-tab-label">Progress / ਤਰੱਕੀ</span>
+            <span class="footer-badge" id="footer-progress-badge" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <button class="footer-tab footer-tab-gear" id="toggle-settings" type="button" aria-label="Settings" title="Settings">
+          <span aria-hidden="true">⚙️</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Toast host (generic, lightweight) -->
+  <div id="toastHost" class="toast-host" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Modals -->
+  <div id="modal-profiles" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-profiles-title">
+    <div class="modal-card">
+      <div class="modal-close-row">
+        <button class="modal-close-btn" data-modal-close="modal-profiles">
+          <span class="btn-label-en">Close ✕</span>
+          <span class="btn-label-pa" lang="pa">ਬੰਦ ਕਰੋ ✕</span>
+        </button>
+      </div>
+      <h3 id="modal-profiles-title">
+        <span class="modal-title-en">Profiles</span>
+        <span class="modal-title-pa" lang="pa">ਪ੍ਰੋਫ਼ਾਈਲ</span>
+      </h3>
+      <p style="margin-top:4px;">Up to 3 profiles per device. Use nicknames only.</p>
+      <p style="margin-top:4px;" lang="pa">ਹਰ ਜੰਤਰ 'ਤੇ ਵੱਧ ਤੋਂ ਵੱਧ 3 ਪ੍ਰੋਫ਼ਾਈਲ। ਸਿਰਫ਼ ਨਿੱਕ ਨੇਮ ਵਰਤੋ।</p>
+      <div id="profiles-list" style="margin-top:6px;"></div>
+    </div>
+  </div>
+
+  <div id="modal-howto" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-howto-title">
+    <div class="modal-card">
+      <div class="modal-close-row">
+        <button class="modal-close-btn" data-modal-close="modal-howto">
+          <span class="btn-label-en">Close ✕</span>
+          <span class="btn-label-pa" lang="pa">ਬੰਦ ਕਰੋ ✕</span>
+        </button>
+      </div>
+      <h3 id="modal-howto-title">
+        <span class="modal-title-en">How to Play</span>
+        <span class="modal-title-pa" lang="pa">ਖੇਡਣ ਦਾ ਤਰੀਕਾ</span>
+      </h3>
+      <h4>
+        <span class="modal-title-en">Game 1 – Tap the Word (Easy–Medium)</span>
+        <span class="modal-title-pa" lang="pa">ਖੇਡ 1 – ਸ਼ਬਦ ਤੇ ਟੈਪ ਕਰੋ (ਆਸਾਨ–ਦਰਮਿਆਨਾ)</span>
+      </h4>
+      <p>Read the sentence. Tap the word that matches the question.</p>
+      <p lang="pa">ਵਾਕ ਪੜ੍ਹੋ। ਪ੍ਰਸ਼ਨ ਨਾਲ ਮਿਲਦਾ ਸ਼ਬਦ ਟੈਪ ਕਰੋ।</p>
+      <h4 style="margin-top:6px;">
+        <span class="modal-title-en">Game 2 – Part of Speech (Medium)</span>
+        <span class="modal-title-pa" lang="pa">ਖੇਡ 2 – ਸ਼ਬਦ ਦਾ ਭਾਗ (ਦਰਮਿਆਨਾ)</span>
+      </h4>
+      <p>Look at the word. Choose if it is a noun, verb, adjective, etc.</p>
+      <p lang="pa">ਸ਼ਬਦ ਵੇਖੋ। ਚੁਣੋ ਕਿ ਇਹ ਨਾਮ ਹੈ, ਕਿਰਿਆ ਹੈ, ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਆਦਿ।</p>
+      <h4 style="margin-top:6px;">
+        <span class="modal-title-en">Game 3 – Tense Detective (Medium–Hard)</span>
+        <span class="modal-title-pa" lang="pa">ਖੇਡ 3 – ਕਾਲ ਪਛਾਣੋ (ਦਰਮਿਆਨਾ–ਮੁਸ਼ਕਲ)</span>
+      </h4>
+      <p>Read the sentence. Decide if it is present, past, or future.</p>
+      <p lang="pa">ਵਾਕ ਪੜ੍ਹੋ। ਫੈਸਲਾ ਕਰੋ ਕਿ ਇਹ ਵਰਤਮਾਨ, ਭੂਤਕਾਲ ਜਾਂ ਭਵਿੱਖ ਹੈ।</p>
+      <h4 style="margin-top:6px;">
+        <span class="modal-title-en">Game 4 – Sentence Check (Medium–Hard)</span>
+        <span class="modal-title-pa" lang="pa">ਖੇਡ 4 – ਵਾਕ ਜਾਂਚ (ਦਰਮਿਆਨਾ–ਮੁਸ਼ਕਲ)</span>
+      </h4>
+      <p>Two similar sentences are shown. Tap the one that is grammatically correct.</p>
+      <p lang="pa">ਦੋ ਮਿਲਦੇ-ਜੁਲਦੇ ਵਾਕ ਦਿਖਾਏ ਗਏ ਹਨ। ਉਹ ਵਾਕ ਟੈਪ ਕਰੋ ਜੋ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ।</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Data files must load first -->
+  <script src="./js/utils.js?v=20251231" defer></script>
+  <script src="./data/tracks.js?v=20251231" defer></script>
+  <script src="./data/lessons.js?v=20251231" defer></script>
+  <script src="./data/readings.js?v=20251231" defer></script>
+  <script src="./data/readingVocab.js?v=20251231" defer></script>
+  <script src="./data/games.js?v=20260101" defer></script>
+  <script src="./data/parentGuide.js?v=20251231" defer></script>
+  <!-- State management -->
+  <script src="./js/state.js?v=20251231" defer></script>
+  <!-- UI modules -->
+  <script src="./js/ui.js?v=20251231" defer></script>
+  <script src="./js/lessons.js?v=20251231" defer></script>
+  <script src="./js/games.js?v=20251231" defer></script>
+  <script src="./js/reading.js?v=20251231" defer></script>
+  <script src="./js/progress.js?v=20251231" defer></script>
+  <script src="./js/dailyQuest.js?v=20251231" defer></script>
+  <script src="./js/parentGuide.js?v=20251231" defer></script>
+  <!-- App initialization (must load last) -->
+  <script src="./js/app.js?v=20251231" defer></script>
+
+  <!-- DevTools Utilities (development only) -->
+  <script>
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      const devScript = document.createElement('script');
+      devScript.src = './js/devtools-utilities.js?v=20251231';
+      devScript.defer = true;
+      document.head.appendChild(devScript);
+    }
+  </script>
+</body>
+</html>

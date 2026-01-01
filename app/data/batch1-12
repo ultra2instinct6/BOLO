@@ -1,0 +1,5470 @@
+Batch 1 — Nouns: People, Places, Things (Common Nouns)
+Batch 2 — Nouns: Names and Titles (Proper Nouns + Capitalization)
+Batch 3 — Nouns: Plurals and Possession (Regular/Irregular + ’s)
+Batch 4 — Pronouns: Personal Pronouns (I/you/he/she/we/they)
+Batch 5 — Verbs: Basics in Real Sentences (Action + Be Verbs)
+Batch 6 — Verbs: Power-Ups (Helping Verbs, Modals, Phrasal, Transitive/Intransitive)
+Batch 7 — Adjectives: Description and Comparison (Comparative/Superlative)
+Batch 8 — Adjectives vs Adverbs: Sentence Clarity (Order + -ly + Time/Manner)
+Batch 9 — Prepositions: Place and Movement (in/on/under/into/across)
+Batch 10 — Prepositions: Time and Common Phrases (at/on/in/since/for/by)
+Batch 11 — Conjunctions: Joining Ideas (and/but/or/so/because/although)
+Batch 12 — Interjections: Feelings and Reactions (Wow/Ouch/Oops/Shh/Phew)
+---
+
+Batch 1 — Nouns: People, Places, Things (Common Nouns)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is a common noun (a general person, place, or thing)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ (common noun) ਹੈ? (ਆਮ ਵਿਅਕਤੀ/ਥਾਂ/ਚੀਜ਼)",
+"options": ["teacher", "London", "Gurpreet", "Monday"],
+"correct_index": 0,
+"correct_answer": "teacher",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The teacher helps the students.",
+"sentencePa": "ਅਧਿਆਪਕ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।",
+"explainEn": "“Teacher” is a general word for a job, not a specific name.",
+"explainPa": "“ਅਧਿਆਪਕ” ਇੱਕ ਆਮ ਪੇਸ਼ੇ ਦਾ ਨਾਂ ਹੈ, ਕਿਸੇ ਖ਼ਾਸ ਨਾਮ ਵਾਂਗ ਨਹੀਂ।",
+"highlight": "teacher"
+},
+{
+"sentenceEn": "A teacher can work in many schools.",
+"sentencePa": "ਇੱਕ ਅਧਿਆਪਕ ਕਈ ਸਕੂਲਾਂ ਵਿੱਚ ਕੰਮ ਕਰ ਸਕਦਾ ਹੈ।",
+"explainEn": "Common nouns name general things; they are not unique names.",
+"explainPa": "ਸਧਾਰਣ ਨਾਂ ਆਮ ਚੀਜ਼ਾਂ/ਲੋਕਾਂ ਨੂੰ ਦੱਸਦੇ ਹਨ; ਇਹ ਵਿਲੱਖਣ ਨਾਮ ਨਹੀਂ ਹੁੰਦੇ।",
+"highlight": "teacher"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “The dog is sleeping.” which word is the common noun?",
+"punjabi_text": "ਵਾਕ “The dog is sleeping.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ (common noun) ਹੈ?",
+"options": ["dog", "sleeping", "is", "The"],
+"correct_index": 0,
+"correct_answer": "dog",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The dog is sleeping on the floor.",
+"sentencePa": "ਕੁੱਤਾ ਫਰਸ਼ ਤੇ ਸੋ ਰਿਹਾ ਹੈ।",
+"explainEn": "“Dog” is a thing (an animal). It names a general category.",
+"explainPa": "“ਕੁੱਤਾ” ਇੱਕ ਚੀਜ਼/ਜਾਨਵਰ ਹੈ। ਇਹ ਆਮ ਸ਼੍ਰੇਣੀ ਦਾ ਨਾਂ ਹੈ।",
+"highlight": "dog"
+},
+{
+"sentenceEn": "That dog is very friendly.",
+"sentencePa": "ਉਹ ਕੁੱਤਾ ਬਹੁਤ ਦੋਸਤਾਨਾ ਹੈ।",
+"explainEn": "A common noun can be used for many dogs, not just one name.",
+"explainPa": "ਸਧਾਰਣ ਨਾਂ ਕਈ ਕੁੱਤਿਆਂ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਇੱਕ ਖ਼ਾਸ ਨਾਮ ਨਹੀਂ।",
+"highlight": "dog"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a common noun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ (common noun) ਹੈ?",
+"options": ["city", "Amritsar", "Punjab", "Mr. Khan"],
+"correct_index": 0,
+"correct_answer": "city",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This city is busy.",
+"sentencePa": "ਇਹ ਸ਼ਹਿਰ ਰੁੱਝਿਆ ਹੋਇਆ ਹੈ।",
+"explainEn": "“City” is a general place word, not a specific city name.",
+"explainPa": "“ਸ਼ਹਿਰ” ਆਮ ਥਾਂ ਦਾ ਸ਼ਬਦ ਹੈ, ਕਿਸੇ ਖ਼ਾਸ ਸ਼ਹਿਰ ਦਾ ਨਾਮ ਨਹੀਂ।",
+"highlight": "city"
+},
+{
+"sentenceEn": "Many cities have parks.",
+"sentencePa": "ਕਈ ਸ਼ਹਿਰਾਂ ਵਿੱਚ ਪਾਰਕ ਹੁੰਦੇ ਹਨ।",
+"explainEn": "Common nouns can be plural because they describe categories.",
+"explainPa": "ਸਧਾਰਣ ਨਾਂ ਸ਼੍ਰੇਣੀ ਦੱਸਦੇ ਹਨ, ਇਸ ਲਈ ਇਹ ਬਹੁਵਚਨ ਵੀ ਹੋ ਸਕਦੇ ਹਨ।",
+"highlight": "city"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the common noun (not a name).",
+"punjabi_text": "ਸਧਾਰਣ ਨਾਂ ਚੁਣੋ (ਨਾਂ/ਖ਼ਾਸ ਨਾਮ ਨਹੀਂ)।",
+"options": ["book", "Amazon", "Sara", "January"],
+"correct_index": 0,
+"correct_answer": "book",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I bought a book today.",
+"sentencePa": "ਅੱਜ ਮੈਂ ਇੱਕ ਕਿਤਾਬ ਖਰੀਦੀ।",
+"explainEn": "“Book” is a general thing, so it is a common noun.",
+"explainPa": "“ਕਿਤਾਬ” ਇੱਕ ਆਮ ਚੀਜ਼ ਹੈ, ਇਸ ਲਈ ਇਹ ਸਧਾਰਣ ਨਾਂ ਹੈ।",
+"highlight": "book"
+},
+{
+"sentenceEn": "This book is interesting.",
+"sentencePa": "ਇਹ ਕਿਤਾਬ ਦਿਲਚਸਪ ਹੈ।",
+"explainEn": "A common noun does not need capitalization unless it starts a sentence.",
+"explainPa": "ਸਧਾਰਣ ਨਾਂ ਆਮ ਤੌਰ ਤੇ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਨਹੀਂ ਲਿਖਿਆ ਜਾਂਦਾ (ਸਿਵਾਏ ਵਾਕ ਦੇ ਸ਼ੁਰੂ ਵਿੱਚ)।",
+"highlight": "book"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “My sister drives a car.” which word is a common noun?",
+"punjabi_text": "ਵਾਕ “My sister drives a car.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ ਹੈ?",
+"options": ["car", "drives", "My", "a"],
+"correct_index": 0,
+"correct_answer": "car",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She drives a car to work.",
+"sentencePa": "ਉਹ ਕੰਮ ਤੇ ਕਾਰ ਚਲਾਕੇ ਜਾਂਦੀ ਹੈ।",
+"explainEn": "“Car” is a general thing; it is not a unique name.",
+"explainPa": "“ਕਾਰ” ਇੱਕ ਆਮ ਚੀਜ਼ ਹੈ; ਇਹ ਕੋਈ ਖ਼ਾਸ ਨਾਮ ਨਹੀਂ।",
+"highlight": "car"
+},
+{
+"sentenceEn": "That car is new.",
+"sentencePa": "ਉਹ ਕਾਰ ਨਵੀਂ ਹੈ।",
+"explainEn": "Common nouns name everyday objects.",
+"explainPa": "ਸਧਾਰਣ ਨਾਂ ਰੋਜ਼ਾਨਾ ਦੀਆਂ ਚੀਜ਼ਾਂ ਦੇ ਨਾਂ ਹੁੰਦੇ ਹਨ।",
+"highlight": "car"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a proper noun (a specific name)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਖ਼ਾਸ ਨਾਮ (proper noun) ਹੈ? (ਕਿਸੇ ਵਿਅਕਤੀ/ਥਾਂ ਦਾ ਵਿਲੱਖਣ ਨਾਮ)",
+"options": ["Gurpreet", "girl", "school", "city"],
+"correct_index": 0,
+"correct_answer": "Gurpreet",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Gurpreet is my friend.",
+"sentencePa": "ਗੁਰਪ੍ਰੀਤ ਮੇਰਾ ਦੋਸਤ ਹੈ।",
+"explainEn": "“Gurpreet” is a specific person’s name, so it is a proper noun.",
+"explainPa": "“ਗੁਰਪ੍ਰੀਤ” ਇੱਕ ਖ਼ਾਸ ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਹੈ, ਇਸ ਲਈ ਇਹ ਖ਼ਾਸ ਨਾਮ ਹੈ।",
+"highlight": "Gurpreet"
+},
+{
+"sentenceEn": "I met Gurpreet at the market.",
+"sentencePa": "ਮੈਂ ਗੁਰਪ੍ਰੀਤ ਨੂੰ ਬਾਜ਼ਾਰ ਵਿੱਚ ਮਿਲਿਆ।",
+"explainEn": "Proper nouns are usually capitalized in English.",
+"explainPa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਖ਼ਾਸ ਨਾਮ ਆਮ ਤੌਰ ਤੇ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਲਿਖੇ ਜਾਂਦੇ ਹਨ।",
+"highlight": "Gurpreet"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the proper noun.",
+"punjabi_text": "ਖ਼ਾਸ ਨਾਮ (proper noun) ਚੁਣੋ।",
+"options": ["Amritsar", "temple", "river", "street"],
+"correct_index": 0,
+"correct_answer": "Amritsar",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Amritsar is a city in Punjab.",
+"sentencePa": "ਅੰਮ੍ਰਿਤਸਰ ਪੰਜਾਬ ਦਾ ਇੱਕ ਸ਼ਹਿਰ ਹੈ।",
+"explainEn": "“Amritsar” is the name of one specific city.",
+"explainPa": "“ਅੰਮ੍ਰਿਤਸਰ” ਇੱਕ ਖ਼ਾਸ ਸ਼ਹਿਰ ਦਾ ਨਾਮ ਹੈ।",
+"highlight": "Amritsar"
+},
+{
+"sentenceEn": "I traveled to Amritsar last year.",
+"sentencePa": "ਪਿਛਲੇ ਸਾਲ ਮੈਂ ਅੰਮ੍ਰਿਤਸਰ ਗਿਆ ਸੀ।",
+"explainEn": "A proper noun names a unique person, place, or organization.",
+"explainPa": "ਖ਼ਾਸ ਨਾਮ ਕਿਸੇ ਵਿਲੱਖਣ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਸੰਗਠਨ ਦਾ ਨਾਮ ਹੁੰਦਾ ਹੈ।",
+"highlight": "Amritsar"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “Sara works in a clinic.” which word is a proper noun?",
+"punjabi_text": "ਵਾਕ “Sara works in a clinic.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ ਖ਼ਾਸ ਨਾਮ (proper noun) ਹੈ?",
+"options": ["Sara", "works", "clinic", "in"],
+"correct_index": 0,
+"correct_answer": "Sara",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Sara works in a clinic.",
+"sentencePa": "ਸਾਰਾ ਇੱਕ ਕਲੀਨਿਕ ਵਿੱਚ ਕੰਮ ਕਰਦੀ ਹੈ।",
+"explainEn": "“Sara” is a person’s name, so it is a proper noun.",
+"explainPa": "“ਸਾਰਾ” ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਹੈ, ਇਸ ਲਈ ਇਹ ਖ਼ਾਸ ਨਾਮ ਹੈ।",
+"highlight": "Sara"
+},
+{
+"sentenceEn": "Sara is very kind.",
+"sentencePa": "ਸਾਰਾ ਬਹੁਤ ਦਇਆਲੂ ਹੈ।",
+"explainEn": "Names are proper nouns because they refer to one specific person.",
+"explainPa": "ਨਾਮ ਖ਼ਾਸ ਨਾਮ ਹੁੰਦੇ ਹਨ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਖ਼ਾਸ ਵਿਅਕਤੀ ਨੂੰ ਦੱਸਦੇ ਹਨ।",
+"highlight": "Sara"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a proper noun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਖ਼ਾਸ ਨਾਮ (proper noun) ਹੈ?",
+"options": ["India", "country", "people", "food"],
+"correct_index": 0,
+"correct_answer": "India",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "India is a large country.",
+"sentencePa": "ਭਾਰਤ ਇੱਕ ਵੱਡਾ ਦੇਸ਼ ਹੈ।",
+"explainEn": "“India” is the official name of a specific country.",
+"explainPa": "“ਭਾਰਤ” ਇੱਕ ਖ਼ਾਸ ਦੇਸ਼ ਦਾ ਅਧਿਕਾਰਿਕ ਨਾਮ ਹੈ।",
+"highlight": "India"
+},
+{
+"sentenceEn": "Many people visit India.",
+"sentencePa": "ਕਈ ਲੋਕ ਭਾਰਤ ਆਉਂਦੇ ਹਨ।",
+"explainEn": "Proper nouns identify one specific place.",
+"explainPa": "ਖ਼ਾਸ ਨਾਮ ਇੱਕ ਖ਼ਾਸ ਥਾਂ ਦੀ ਪਛਾਣ ਕਰਾਉਂਦੇ ਹਨ।",
+"highlight": "India"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is an abstract noun (an idea or feeling)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਅਮੂਰਤ ਨਾਂ (abstract noun) ਹੈ? (ਵਿਚਾਰ ਜਾਂ ਭਾਵਨਾ)",
+"options": ["happiness", "chair", "apple", "river"],
+"correct_index": 0,
+"correct_answer": "happiness",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Happiness is important in life.",
+"sentencePa": "ਜ਼ਿੰਦਗੀ ਵਿੱਚ ਖੁਸ਼ੀ ਮਹੱਤਵਪੂਰਣ ਹੈ।",
+"explainEn": "“Happiness” is a feeling. You cannot touch it like an object.",
+"explainPa": "“ਖੁਸ਼ੀ” ਇੱਕ ਭਾਵਨਾ ਹੈ। ਇਹ ਚੀਜ਼ ਵਾਂਗ ਛੂਹੀ ਨਹੀਂ ਜਾ ਸਕਦੀ।",
+"highlight": "happiness"
+},
+{
+"sentenceEn": "Her happiness made everyone smile.",
+"sentencePa": "ਉਸਦੀ ਖੁਸ਼ੀ ਨੇ ਸਭ ਨੂੰ ਮੁਸਕੁਰਾ ਦਿੱਤਾ।",
+"explainEn": "Abstract nouns name emotions, ideas, or qualities.",
+"explainPa": "ਅਮੂਰਤ ਨਾਂ ਭਾਵਨਾਵਾਂ, ਵਿਚਾਰਾਂ ਜਾਂ ਗੁਣਾਂ ਦੇ ਨਾਂ ਹੁੰਦੇ ਹਨ।",
+"highlight": "happiness"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the abstract noun.",
+"punjabi_text": "ਅਮੂਰਤ ਨਾਂ (abstract noun) ਚੁਣੋ।",
+"options": ["freedom", "table", "bus", "shirt"],
+"correct_index": 0,
+"correct_answer": "freedom",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Freedom is valuable.",
+"sentencePa": "ਆਜ਼ਾਦੀ ਕੀਮਤੀ ਹੈ।",
+"explainEn": "“Freedom” is an idea, not a physical object.",
+"explainPa": "“ਆਜ਼ਾਦੀ” ਇੱਕ ਵਿਚਾਰ ਹੈ, ਕੋਈ ਭੌਤਿਕ ਚੀਜ਼ ਨਹੀਂ।",
+"highlight": "freedom"
+},
+{
+"sentenceEn": "They fought for freedom.",
+"sentencePa": "ਉਨ੍ਹਾਂ ਨੇ ਆਜ਼ਾਦੀ ਲਈ ਲੜਾਈ ਕੀਤੀ।",
+"explainEn": "You can feel or understand freedom, but you cannot hold it.",
+"explainPa": "ਆਜ਼ਾਦੀ ਨੂੰ ਮਹਿਸੂਸ ਜਾਂ ਸਮਝਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਪਰ ਹੱਥ ਵਿੱਚ ਫੜਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।",
+"highlight": "freedom"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “Honesty matters.” which word is an abstract noun?",
+"punjabi_text": "ਵਾਕ “Honesty matters.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ ਅਮੂਰਤ ਨਾਂ ਹੈ?",
+"options": ["Honesty", "matters", "the", "and"],
+"correct_index": 0,
+"correct_answer": "Honesty",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Honesty matters in relationships.",
+"sentencePa": "ਰਿਸ਼ਤਿਆਂ ਵਿੱਚ ਇਮਾਨਦਾਰੀ ਮਹੱਤਵ ਰੱਖਦੀ ਹੈ।",
+"explainEn": "“Honesty” is a quality. It is an abstract noun.",
+"explainPa": "“ਇਮਾਨਦਾਰੀ” ਇੱਕ ਗੁਣ ਹੈ। ਇਹ ਅਮੂਰਤ ਨਾਂ ਹੈ।",
+"highlight": "Honesty"
+},
+{
+"sentenceEn": "Honesty builds trust.",
+"sentencePa": "ਇਮਾਨਦਾਰੀ ਭਰੋਸਾ ਬਣਾਉਂਦੀ ਹੈ।",
+"explainEn": "Abstract nouns can describe qualities that people have.",
+"explainPa": "ਅਮੂਰਤ ਨਾਂ ਉਹ ਗੁਣ ਦੱਸਦੇ ਹਨ ਜੋ ਲੋਕਾਂ ਵਿੱਚ ਹੋ ਸਕਦੇ ਹਨ।",
+"highlight": "Honesty"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is an abstract noun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਅਮੂਰਤ ਨਾਂ (abstract noun) ਹੈ?",
+"options": ["fear", "door", "phone", "bottle"],
+"correct_index": 0,
+"correct_answer": "fear",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He felt fear in the dark.",
+"sentencePa": "ਅੰਨ੍ਹੇਰੇ ਵਿੱਚ ਉਸਨੂੰ ਡਰ ਮਹਿਸੂਸ ਹੋਇਆ।",
+"explainEn": "“Fear” is a feeling, so it is abstract.",
+"explainPa": "“ਡਰ” ਇੱਕ ਭਾਵਨਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਅਮੂਰਤ ਨਾਂ ਹੈ।",
+"highlight": "fear"
+},
+{
+"sentenceEn": "Fear can stop people from trying.",
+"sentencePa": "ਡਰ ਲੋਕਾਂ ਨੂੰ ਕੋਸ਼ਿਸ਼ ਕਰਨ ਤੋਂ ਰੋਕ ਸਕਦਾ ਹੈ।",
+"explainEn": "Abstract nouns often name emotions like fear, love, or joy.",
+"explainPa": "ਅਮੂਰਤ ਨਾਂ ਅਕਸਰ ਭਾਵਨਾਵਾਂ ਦੇ ਨਾਂ ਹੁੰਦੇ ਹਨ, ਜਿਵੇਂ ਡਰ, ਪਿਆਰ, ਖੁਸ਼ੀ।",
+"highlight": "fear"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a collective noun (a group word)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਸਮੂਹਵਾਚਕ ਨਾਂ (collective noun) ਹੈ? (ਗਰੁੱਪ ਲਈ ਸ਼ਬਦ)",
+"options": ["team", "player", "ball", "goal"],
+"correct_index": 0,
+"correct_answer": "team",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The team won the match.",
+"sentencePa": "ਟੀਮ ਨੇ ਮੈਚ ਜਿੱਤ ਲਿਆ।",
+"explainEn": "“Team” refers to a group of people together.",
+"explainPa": "“ਟੀਮ” ਇਕੱਠੇ ਲੋਕਾਂ ਦੇ ਗਰੁੱਪ ਨੂੰ ਦੱਸਦਾ ਹੈ।",
+"highlight": "team"
+},
+{
+"sentenceEn": "Our team practices every day.",
+"sentencePa": "ਸਾਡੀ ਟੀਮ ਹਰ ਰੋਜ਼ ਅਭਿਆਸ ਕਰਦੀ ਹੈ।",
+"explainEn": "A collective noun names one group as a unit.",
+"explainPa": "ਸਮੂਹਵਾਚਕ ਨਾਂ ਇੱਕ ਗਰੁੱਪ ਨੂੰ ਇੱਕ ਇਕਾਈ ਵਾਂਗ ਦੱਸਦਾ ਹੈ।",
+"highlight": "team"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the collective noun.",
+"punjabi_text": "ਸਮੂਹਵਾਚਕ ਨਾਂ (collective noun) ਚੁਣੋ।",
+"options": ["family", "mother", "child", "house"],
+"correct_index": 0,
+"correct_answer": "family",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "My family eats dinner together.",
+"sentencePa": "ਮੇਰਾ ਪਰਿਵਾਰ ਇਕੱਠੇ ਰਾਤ ਦਾ ਖਾਣਾ ਖਾਂਦਾ ਹੈ।",
+"explainEn": "“Family” is a group of related people.",
+"explainPa": "“ਪਰਿਵਾਰ” ਸੰਬੰਧਤ ਲੋਕਾਂ ਦਾ ਗਰੁੱਪ ਹੈ।",
+"highlight": "family"
+},
+{
+"sentenceEn": "Her family lives in Canada.",
+"sentencePa": "ਉਸਦਾ ਪਰਿਵਾਰ ਕੈਨੇਡਾ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ।",
+"explainEn": "Collective nouns can represent many people with one word.",
+"explainPa": "ਸਮੂਹਵਾਚਕ ਨਾਂ ਇੱਕ ਸ਼ਬਦ ਨਾਲ ਕਈ ਲੋਕਾਂ ਨੂੰ ਦਰਸਾ ਸਕਦਾ ਹੈ।",
+"highlight": "family"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a collective noun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ ਸਮੂਹਵਾਚਕ ਨਾਂ (collective noun) ਹੈ?",
+"options": ["crowd", "person", "street", "car"],
+"correct_index": 0,
+"correct_answer": "crowd",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "A crowd waited outside the store.",
+"sentencePa": "ਦੁਕਾਨ ਦੇ ਬਾਹਰ ਭੀੜ ਉਡੀਕ ਕਰ ਰਹੀ ਸੀ।",
+"explainEn": "“Crowd” means a large group of people together.",
+"explainPa": "“ਭੀੜ” ਦਾ ਮਤਲਬ ਹੈ ਇਕੱਠੇ ਬਹੁਤ ਸਾਰੇ ਲੋਕ।",
+"highlight": "crowd"
+},
+{
+"sentenceEn": "The crowd was noisy.",
+"sentencePa": "ਭੀੜ ਸ਼ੋਰ ਕਰ ਰਹੀ ਸੀ।",
+"explainEn": "A collective noun names a group as one unit.",
+"explainPa": "ਸਮੂਹਵਾਚਕ ਨਾਂ ਗਰੁੱਪ ਨੂੰ ਇੱਕ ਇਕਾਈ ਵਾਂਗ ਦੱਸਦਾ ਹੈ।",
+"highlight": "crowd"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the collective noun.",
+"punjabi_text": "ਸਮੂਹਵਾਚਕ ਨਾਂ (collective noun) ਚੁਣੋ।",
+"options": ["flock", "bird", "tree", "sky"],
+"correct_index": 0,
+"correct_answer": "flock",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "A flock of birds flew away.",
+"sentencePa": "ਪੰਛੀਆਂ ਦਾ ਝੁੰਡ ਉੱਡ ਗਿਆ।",
+"explainEn": "“Flock” is a group word, often used for birds.",
+"explainPa": "“ਝੁੰਡ” ਗਰੁੱਪ ਲਈ ਸ਼ਬਦ ਹੈ, ਅਕਸਰ ਪੰਛੀਆਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "flock"
+},
+{
+"sentenceEn": "We saw a flock near the lake.",
+"sentencePa": "ਅਸੀਂ ਝੀਲ ਕੋਲ ਇੱਕ ਝੁੰਡ ਵੇਖਿਆ।",
+"explainEn": "Collective nouns name groups: flock, team, family, crowd.",
+"explainPa": "ਸਮੂਹਵਾਚਕ ਨਾਂ ਗਰੁੱਪ ਦੱਸਦੇ ਹਨ: ਝੁੰਡ, ਟੀਮ, ਪਰਿਵਾਰ, ਭੀੜ।",
+"highlight": "flock"
+}
+]
+}
+]
+Batch 2 — Nouns: Names and Titles (Proper Nouns + Capitalization)
+[
+{
+"step_type": "question",
+"english_text": "Which noun is NON-COUNT (you cannot count it as 1, 2, 3 easily)?",
+"punjabi_text": "ਕਿਹੜਾ ਨਾਂ NON-COUNT ਹੈ? (ਜਿਸਨੂੰ 1, 2, 3 ਵਾਂਗ ਆਸਾਨੀ ਨਾਲ ਨਹੀਂ ਗਿਣ ਸਕਦੇ)",
+"options": ["water", "apple", "chair", "book"],
+"correct_index": 0,
+"correct_answer": "water",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I drink water every day.",
+"sentencePa": "ਮੈਂ ਹਰ ਰੋਜ਼ ਪਾਣੀ ਪੀਂਦਾ/ਪੀਂਦੀ ਹਾਂ।",
+"explainEn": "“Water” is usually non-count. We say “some water,” not “two waters” (unless we mean two bottles).",
+"explainPa": "“ਪਾਣੀ” ਆਮ ਤੌਰ ਤੇ non-count ਹੁੰਦਾ ਹੈ। ਅਸੀਂ “some water” ਕਹਿੰਦੇ ਹਾਂ, “two waters” ਨਹੀਂ (ਜਦ ਤੱਕ ਦੋ ਬੋਤਲਾਂ ਨਾ ਹੋਣ)।",
+"highlight": "water"
+},
+{
+"sentenceEn": "Can I have some water?",
+"sentencePa": "ਕੀ ਮੈਂ ਕੁਝ ਪਾਣੀ ਲੈ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+"explainEn": "Non-count nouns often use “some” and “a little.”",
+"explainPa": "Non-count ਨਾਂ ਅਕਸਰ “some” ਅਤੇ “a little” ਨਾਲ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।",
+"highlight": "water"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which noun is COUNT (you can count it: 1, 2, 3)?",
+"punjabi_text": "ਕਿਹੜਾ ਨਾਂ COUNT ਹੈ? (ਜਿਸਨੂੰ 1, 2, 3 ਵਾਂਗ ਗਿਣ ਸਕਦੇ ਹਾਂ)",
+"options": ["egg", "milk", "rice", "furniture"],
+"correct_index": 0,
+"correct_answer": "egg",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I bought three eggs.",
+"sentencePa": "ਮੈਂ ਤਿੰਨ ਅੰਡੇ ਖਰੀਦੇ।",
+"explainEn": "“Egg” is countable. You can say one egg, two eggs, three eggs.",
+"explainPa": "“ਅੰਡਾ” countable ਹੈ। ਤੁਸੀਂ one egg, two eggs, three eggs ਕਹਿ ਸਕਦੇ ਹੋ।",
+"highlight": "egg"
+},
+{
+"sentenceEn": "There is an egg on the plate.",
+"sentencePa": "ਥਾਲੀ ਤੇ ਇੱਕ ਅੰਡਾ ਹੈ।",
+"explainEn": "Count nouns can use “a/an” and numbers.",
+"explainPa": "Count ਨਾਂ “a/an” ਅਤੇ ਨੰਬਰਾਂ ਨਾਲ ਵਰਤੇ ਜਾ ਸਕਦੇ ਹਨ।",
+"highlight": "egg"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which noun is NON-COUNT?",
+"punjabi_text": "ਕਿਹੜਾ ਨਾਂ NON-COUNT ਹੈ?",
+"options": ["information", "ticket", "shirt", "coin"],
+"correct_index": 0,
+"correct_answer": "information",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This information is helpful.",
+"sentencePa": "ਇਹ ਜਾਣਕਾਰੀ ਮਦਦਗਾਰ ਹੈ।",
+"explainEn": "“Information” is usually non-count. We say “some information,” not “informations.”",
+"explainPa": "“ਜਾਣਕਾਰੀ” ਆਮ ਤੌਰ ਤੇ non-count ਹੁੰਦੀ ਹੈ। ਅਸੀਂ “some information” ਕਹਿੰਦੇ ਹਾਂ, “informations” ਨਹੀਂ।",
+"highlight": "information"
+},
+{
+"sentenceEn": "I need more information.",
+"sentencePa": "ਮੈਨੂੰ ਹੋਰ ਜਾਣਕਾਰੀ ਚਾਹੀਦੀ ਹੈ।",
+"explainEn": "Non-count nouns often use “more/less,” not plural -s.",
+"explainPa": "Non-count ਨਾਂ ਅਕਸਰ “more/less” ਨਾਲ ਵਰਤੇ ਜਾਂਦੇ ਹਨ, plural -s ਨਾਲ ਨਹੀਂ।",
+"highlight": "information"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which noun is NON-COUNT?",
+"punjabi_text": "ਕਿਹੜਾ ਨਾਂ NON-COUNT ਹੈ?",
+"options": ["furniture", "table", "pen", "bag"],
+"correct_index": 0,
+"correct_answer": "furniture",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We bought new furniture.",
+"sentencePa": "ਅਸੀਂ ਨਵਾਂ ਫਰਨੀਚਰ ਖਰੀਦਿਆ।",
+"explainEn": "“Furniture” is non-count. We don’t usually say “furnitures.”",
+"explainPa": "“ਫਰਨੀਚਰ” non-count ਹੈ। ਅਸੀਂ ਆਮ ਤੌਰ ਤੇ “furnitures” ਨਹੀਂ ਕਹਿੰਦੇ।",
+"highlight": "furniture"
+},
+{
+"sentenceEn": "The furniture is expensive.",
+"sentencePa": "ਫਰਨੀਚਰ ਮਹਿੰਗਾ ਹੈ।",
+"explainEn": "Use “a piece of furniture” for one item.",
+"explainPa": "ਇੱਕ ਚੀਜ਼ ਲਈ “a piece of furniture” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "furniture"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best phrase for a NON-COUNT noun.",
+"punjabi_text": "NON-COUNT ਨਾਂ ਲਈ ਸਭ ਤੋਂ ਠੀਕ ਫਰੇਜ਼ ਚੁਣੋ।",
+"options": ["some rice", "two rices", "a rice", "many rice"],
+"correct_index": 0,
+"correct_answer": "some rice",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I ate some rice for lunch.",
+"sentencePa": "ਮੈਂ ਦੁਪਹਿਰ ਨੂੰ ਕੁਝ ਚੌਲ ਖਾਧੇ।",
+"explainEn": "“Rice” is usually non-count, so “some rice” is natural.",
+"explainPa": "“ਚੌਲ” ਆਮ ਤੌਰ ਤੇ non-count ਹੁੰਦੇ ਹਨ, ਇਸ ਲਈ “some rice” ਠੀਕ ਹੈ।",
+"highlight": "some rice"
+},
+{
+"sentenceEn": "Can you give me a little rice?",
+"sentencePa": "ਕੀ ਤੁਸੀਂ ਮੈਨੂੰ ਥੋੜ੍ਹੇ ਚੌਲ ਦੇ ਸਕਦੇ ਹੋ?",
+"explainEn": "Non-count nouns often use “some” or “a little.”",
+"explainPa": "Non-count ਨਾਂ ਅਕਸਰ “some” ਜਾਂ “a little” ਨਾਲ ਆਉਂਦੇ ਹਨ।",
+"highlight": "rice"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses the correct possessive form?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ possessive (ਮਾਲਕੀ) ਦਾ ਸਹੀ ਰੂਪ ਵਰਤਦਾ ਹੈ?",
+"options": ["This is Ali's phone.", "This is Ali phone.", "This is Alis phone.", "This is Ali' phone."],
+"correct_index": 0,
+"correct_answer": "This is Ali's phone.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is Ali's phone.",
+"sentencePa": "ਇਹ ਅਲੀ ਦਾ ਫ਼ੋਨ ਹੈ।",
+"explainEn": "Use ’s to show ownership for one person: Ali’s phone.",
+"explainPa": "ਇੱਕ ਵਿਅਕਤੀ ਦੀ ਮਾਲਕੀ ਦਿਖਾਉਣ ਲਈ ’s ਵਰਤਦੇ ਹਾਂ: Ali’s phone।",
+"highlight": "Ali's"
+},
+{
+"sentenceEn": "Ali's phone is on the table.",
+"sentencePa": "ਅਲੀ ਦਾ ਫ਼ੋਨ ਮੇਜ਼ ਤੇ ਹੈ।",
+"explainEn": "The apostrophe goes before s for singular ownership.",
+"explainPa": "ਇਕਵਚਨ ਮਾਲਕੀ ਵਿੱਚ apostrophe s ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "Ali's"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct possessive phrase for one girl.",
+"punjabi_text": "ਇੱਕ ਕੁੜੀ ਲਈ ਸਹੀ possessive ਫਰੇਜ਼ ਚੁਣੋ।",
+"options": ["the girl's bag", "the girls bag", "the girls' bag", "the girl bag"],
+"correct_index": 0,
+"correct_answer": "the girl's bag",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The girl's bag is red.",
+"sentencePa": "ਉਸ ਕੁੜੀ ਦਾ ਬੈਗ ਲਾਲ ਹੈ।",
+"explainEn": "One girl = girl’s (apostrophe + s).",
+"explainPa": "ਇੱਕ ਕੁੜੀ = girl’s (apostrophe + s)।",
+"highlight": "girl's"
+},
+{
+"sentenceEn": "I found the girl's bag.",
+"sentencePa": "ਮੈਨੂੰ ਉਸ ਕੁੜੀ ਦਾ ਬੈਗ ਮਿਲਿਆ।",
+"explainEn": "Singular possessive uses ’s.",
+"explainPa": "ਇਕਵਚਨ possessive ਵਿੱਚ ’s ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "girl's"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct possessive phrase for many students.",
+"punjabi_text": "ਕਈ ਵਿਦਿਆਰਥੀਆਂ ਲਈ ਸਹੀ possessive ਫਰੇਜ਼ ਚੁਣੋ।",
+"options": ["the students' books", "the student's books", "the students books", "the student' books"],
+"correct_index": 0,
+"correct_answer": "the students' books",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The students' books are on the desk.",
+"sentencePa": "ਵਿਦਿਆਰਥੀਆਂ ਦੀਆਂ ਕਿਤਾਬਾਂ ਮੇਜ਼ ਤੇ ਹਨ।",
+"explainEn": "Plural noun ending in s: add apostrophe after s (students’).",
+"explainPa": "ਜੇ plural ਨਾਂ s ਨਾਲ ਖਤਮ ਹੋਵੇ, apostrophe s ਤੋਂ ਬਾਅਦ ਲਗਦਾ ਹੈ (students’)।",
+"highlight": "students'"
+},
+{
+"sentenceEn": "I returned the students' books.",
+"sentencePa": "ਮੈਂ ਵਿਦਿਆਰਥੀਆਂ ਦੀਆਂ ਕਿਤਾਬਾਂ ਵਾਪਸ ਕਰ ਦਿੱਤੀਆਂ।",
+"explainEn": "This shows the books belong to many students.",
+"explainPa": "ਇਸਦਾ ਮਤਲਬ ਕਿਤਾਬਾਂ ਕਈ ਵਿਦਿਆਰਥੀਆਂ ਦੀਆਂ ਹਨ।",
+"highlight": "students'"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence is correct?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+"options": ["My parents' car is new.", "My parents's car is new.", "My parent' car is new.", "My parents car is new."],
+"correct_index": 0,
+"correct_answer": "My parents' car is new.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "My parents' car is new.",
+"sentencePa": "ਮੇਰੇ ਮਾਪਿਆਂ ਦੀ ਕਾਰ ਨਵੀਂ ਹੈ।",
+"explainEn": "“Parents” is plural and ends in s, so we add apostrophe after s.",
+"explainPa": "“Parents” plural ਹੈ ਅਤੇ s ਨਾਲ ਖਤਮ ਹੁੰਦਾ ਹੈ, ਇਸ ਲਈ apostrophe s ਤੋਂ ਬਾਅਦ ਆਉਂਦਾ ਹੈ।",
+"highlight": "parents'"
+},
+{
+"sentenceEn": "I use my parents' car on weekends.",
+"sentencePa": "ਮੈਂ ਹਫ਼ਤੇ ਅਖੀਰ ਨੂੰ ਮਾਪਿਆਂ ਦੀ ਕਾਰ ਵਰਤਦਾ/ਵਰਤਦੀ ਹਾਂ।",
+"explainEn": "This shows the car belongs to both parents.",
+"explainPa": "ਇਹ ਦਿਖਾਉਂਦਾ ਹੈ ਕਿ ਕਾਰ ਦੋਵੇਂ ਮਾਪਿਆਂ ਦੀ ਹੈ।",
+"highlight": "parents'"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a compound noun (two words used as one noun)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ compound noun ਹੈ? (ਦੋ ਸ਼ਬਦ ਮਿਲ ਕੇ ਇੱਕ ਨਾਂ ਬਣਦੇ ਹਨ)",
+"options": ["toothpaste", "happy", "quickly", "beautiful"],
+"correct_index": 0,
+"correct_answer": "toothpaste",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I need toothpaste.",
+"sentencePa": "ਮੈਨੂੰ ਟੂਥਪੇਸਟ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "“Toothpaste” combines tooth + paste to make one noun.",
+"explainPa": "“Toothpaste” tooth + paste ਤੋਂ ਬਣਿਆ ਇੱਕ ਨਾਂ ਹੈ।",
+"highlight": "toothpaste"
+},
+{
+"sentenceEn": "This toothpaste tastes minty.",
+"sentencePa": "ਇਹ ਟੂਥਪੇਸਟ ਪੁਦੀਨੇ ਵਰਗਾ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "Compound nouns can be written as one word.",
+"explainPa": "Compound nouns ਕਈ ਵਾਰੀ ਇੱਕ ਸ਼ਬਦ ਵਾਂਗ ਲਿਖੇ ਜਾਂਦੇ ਹਨ।",
+"highlight": "toothpaste"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the compound noun.",
+"punjabi_text": "Compound noun ਚੁਣੋ।",
+"options": ["bus stop", "very fast", "in front", "must go"],
+"correct_index": 0,
+"correct_answer": "bus stop",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am waiting at the bus stop.",
+"sentencePa": "ਮੈਂ ਬਸ ਸਟਾਪ ਤੇ ਉਡੀਕ ਕਰ ਰਿਹਾ/ਰਹੀ ਹਾਂ।",
+"explainEn": "“Bus stop” is a noun phrase used as one place name (a compound noun).",
+"explainPa": "“Bus stop” ਇੱਕ ਥਾਂ ਦਾ ਨਾਂ ਹੈ ਜੋ ਇਕੱਠੇ ਇੱਕ ਨਾਂ ਵਾਂਗ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "bus stop"
+},
+{
+"sentenceEn": "The bus stop is near my house.",
+"sentencePa": "ਬਸ ਸਟਾਪ ਮੇਰੇ ਘਰ ਦੇ ਨੇੜੇ ਹੈ।",
+"explainEn": "Some compound nouns are written as two words.",
+"explainPa": "ਕੁਝ compound nouns ਦੋ ਸ਼ਬਦਾਂ ਵਾਂਗ ਲਿਖੇ ਜਾਂਦੇ ਹਨ।",
+"highlight": "bus stop"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which option is a compound noun?",
+"punjabi_text": "ਕਿਹੜਾ ਵਿਕਲਪ compound noun ਹੈ?",
+"options": ["bedroom", "sleepy", "under", "slowly"],
+"correct_index": 0,
+"correct_answer": "bedroom",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "My bedroom is small.",
+"sentencePa": "ਮੇਰਾ ਬੈੱਡਰੂਮ ਛੋਟਾ ਹੈ।",
+"explainEn": "“Bedroom” combines bed + room to name one place.",
+"explainPa": "“Bedroom” bed + room ਮਿਲ ਕੇ ਇੱਕ ਥਾਂ ਦਾ ਨਾਂ ਬਣਾਉਂਦੇ ਹਨ।",
+"highlight": "bedroom"
+},
+{
+"sentenceEn": "I clean my bedroom every week.",
+"sentencePa": "ਮੈਂ ਹਰ ਹਫ਼ਤੇ ਆਪਣਾ ਬੈੱਡਰੂਮ ਸਾਫ਼ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ।",
+"explainEn": "Compound nouns can name rooms, places, or things.",
+"explainPa": "Compound nouns ਕਮਰਿਆਂ, ਥਾਵਾਂ ਜਾਂ ਚੀਜ਼ਾਂ ਦੇ ਨਾਂ ਹੋ ਸਕਦੇ ਹਨ।",
+"highlight": "bedroom"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the compound noun.",
+"punjabi_text": "Compound noun ਚੁਣੋ।",
+"options": ["police station", "police quickly", "stationary police", "police is"],
+"correct_index": 0,
+"correct_answer": "police station",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The police station is on this road.",
+"sentencePa": "ਪੁਲਿਸ ਸਟੇਸ਼ਨ ਇਸ ਸੜਕ ਤੇ ਹੈ।",
+"explainEn": "“Police station” works as one noun naming a place.",
+"explainPa": "“Police station” ਇੱਕ ਥਾਂ ਦਾ ਨਾਂ ਹੈ ਜੋ ਇੱਕ ਨਾਂ ਵਾਂਗ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "police station"
+},
+{
+"sentenceEn": "I went to the police station for help.",
+"sentencePa": "ਮੈਂ ਮਦਦ ਲਈ ਪੁਲਿਸ ਸਟੇਸ਼ਨ ਗਿਆ/ਗਈ।",
+"explainEn": "Two words can combine to form a single noun idea.",
+"explainPa": "ਦੋ ਸ਼ਬਦ ਮਿਲ ਕੇ ਇੱਕ ਨਾਂ ਦੀ ਇਕਾਈ ਬਣ ਸਕਦੇ ਹਨ।",
+"highlight": "police station"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct plural of “book”?",
+"punjabi_text": "“book” ਦਾ ਸਹੀ plural ਕੀ ਹੈ?",
+"options": ["books", "bookes", "book's", "bookies"],
+"correct_index": 0,
+"correct_answer": "books",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I have two books.",
+"sentencePa": "ਮੇਰੇ ਕੋਲ ਦੋ ਕਿਤਾਬਾਂ ਹਨ।",
+"explainEn": "Most regular plurals add -s: book → books.",
+"explainPa": "ਜ਼ਿਆਦਾਤਰ ਸਧਾਰਣ plural ਵਿੱਚ -s ਲੱਗਦਾ ਹੈ: book → books।",
+"highlight": "books"
+},
+{
+"sentenceEn": "These books are new.",
+"sentencePa": "ਇਹ ਕਿਤਾਬਾਂ ਨਵੀਆਂ ਹਨ।",
+"explainEn": "Regular plural is simple: add -s.",
+"explainPa": "Regular plural ਸਧਾਰਣ ਹੈ: -s ਜੋੜੋ।",
+"highlight": "books"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct plural of “box”?",
+"punjabi_text": "“box” ਦਾ ਸਹੀ plural ਕੀ ਹੈ?",
+"options": ["boxes", "boxs", "boxies", "box's"],
+"correct_index": 0,
+"correct_answer": "boxes",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "There are three boxes here.",
+"sentencePa": "ਇੱਥੇ ਤਿੰਨ ਡੱਬੇ ਹਨ।",
+"explainEn": "Words ending in x often add -es: box → boxes.",
+"explainPa": "x ਨਾਲ ਖਤਮ ਹੋਣ ਵਾਲੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਅਕਸਰ -es ਲੱਗਦਾ ਹੈ: box → boxes।",
+"highlight": "boxes"
+},
+{
+"sentenceEn": "These boxes are heavy.",
+"sentencePa": "ਇਹ ਡੱਬੇ ਭਾਰੀ ਹਨ।",
+"explainEn": "For many endings like s, x, ch, sh, we add -es.",
+"explainPa": "ਕਈ endings ਜਿਵੇਂ s, x, ch, sh ਲਈ ਅਸੀਂ -es ਜੋੜਦੇ ਹਾਂ।",
+"highlight": "boxes"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct plural of “baby”?",
+"punjabi_text": "“baby” ਦਾ ਸਹੀ plural ਕੀ ਹੈ?",
+"options": ["babies", "babys", "babyes", "babie's"],
+"correct_index": 0,
+"correct_answer": "babies",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Two babies are sleeping.",
+"sentencePa": "ਦੋ ਬੱਚੇ ਸੋ ਰਹੇ ਹਨ।",
+"explainEn": "If a word ends in consonant + y, change y to ies: baby → babies.",
+"explainPa": "ਜੇ ਸ਼ਬਦ consonant + y ਨਾਲ ਖਤਮ ਹੋਵੇ, ਤਾਂ y ਨੂੰ ies ਬਣਾਉਂਦੇ ਹਾਂ: baby → babies।",
+"highlight": "babies"
+},
+{
+"sentenceEn": "The babies are quiet now.",
+"sentencePa": "ਹੁਣ ਬੱਚੇ ਚੁੱਪ ਹਨ।",
+"explainEn": "This is a common spelling rule for plurals.",
+"explainPa": "ਇਹ plural ਦੀ ਇੱਕ ਆਮ spelling rule ਹੈ।",
+"highlight": "babies"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct plural of “child”?",
+"punjabi_text": "“child” ਦਾ ਸਹੀ plural ਕੀ ਹੈ?",
+"options": ["children", "childs", "childes", "childrens"],
+"correct_index": 0,
+"correct_answer": "children",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The children are playing.",
+"sentencePa": "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।",
+"explainEn": "“Child” is irregular: child → children.",
+"explainPa": "“Child” irregular ਹੈ: child → children।",
+"highlight": "children"
+},
+{
+"sentenceEn": "I work with children.",
+"sentencePa": "ਮੈਂ ਬੱਚਿਆਂ ਨਾਲ ਕੰਮ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ।",
+"explainEn": "Some nouns change completely in plural form.",
+"explainPa": "ਕੁਝ ਨਾਂ plural ਵਿੱਚ ਵੱਖਰੇ ਤਰੀਕੇ ਨਾਲ ਬਦਲ ਜਾਂਦੇ ਹਨ।",
+"highlight": "children"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct plural of “mouse”?",
+"punjabi_text": "“mouse” ਦਾ ਸਹੀ plural ਕੀ ਹੈ?",
+"options": ["mice", "mouses", "mouse", "mices"],
+"correct_index": 0,
+"correct_answer": "mice",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "There are mice in the house.",
+"sentencePa": "ਘਰ ਵਿੱਚ ਚੂਹੇ ਹਨ।",
+"explainEn": "“Mouse” is irregular: mouse → mice.",
+"explainPa": "“Mouse” irregular ਹੈ: mouse → mice।",
+"highlight": "mice"
+},
+{
+"sentenceEn": "The mice ran away.",
+"sentencePa": "ਚੂਹੇ ਭੱਜ ਗਏ।",
+"explainEn": "Irregular plurals must be memorized.",
+"explainPa": "Irregular plurals ਯਾਦ ਕਰਨੇ ਪੈਂਦੇ ਹਨ।",
+"highlight": "mice"
+}
+]
+}
+]
+
+Batch 3 — Nouns: Plurals and Possession (Regular/Irregular + ’s)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is a personal pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ personal pronoun ਹੈ?",
+"options": ["she", "girl", "school", "happy"],
+"correct_index": 0,
+"correct_answer": "she",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She is my sister.",
+"sentencePa": "ਉਹ ਮੇਰੀ ਭੈਣ ਹੈ।",
+"explainEn": "“She” is a pronoun used for a female person.",
+"explainPa": "“She” ਇੱਕ pronoun ਹੈ ਜੋ ਇਸਤਰੀ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "She"
+},
+{
+"sentenceEn": "She lives in this house.",
+"sentencePa": "ਉਹ ਇਸ ਘਰ ਵਿੱਚ ਰਹਿੰਦੀ ਹੈ।",
+"explainEn": "Personal pronouns replace a person’s name.",
+"explainPa": "Personal pronouns ਕਿਸੇ ਵਿਅਕਤੀ ਦੇ ਨਾਮ ਦੀ ਥਾਂ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।",
+"highlight": "She"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which pronoun can replace the name “Ali” in the sentence: “Ali is tired.”?",
+"punjabi_text": "ਵਾਕ “Ali is tired.” ਵਿੱਚ “Ali” ਦੀ ਥਾਂ ਕਿਹੜਾ pronoun ਆ ਸਕਦਾ ਹੈ?",
+"options": ["he", "we", "they", "it"],
+"correct_index": 0,
+"correct_answer": "he",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Ali is tired. He is going to sleep.",
+"sentencePa": "ਅਲੀ ਥੱਕਿਆ ਹੈ। ਉਹ ਸੋਣ ਜਾ ਰਿਹਾ ਹੈ।",
+"explainEn": "Use “he” for a male person.",
+"explainPa": "ਮਰਦ ਲਈ “he” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "He"
+},
+{
+"sentenceEn": "He is tired after work.",
+"sentencePa": "ਉਹ ਕੰਮ ਤੋਂ ਬਾਅਦ ਥੱਕਿਆ ਹੁੰਦਾ ਹੈ।",
+"explainEn": "Personal pronouns help avoid repeating names.",
+"explainPa": "Personal pronouns ਨਾਮ ਵਾਰ-ਵਾਰ ਦੋਹਰਾਉਣ ਤੋਂ ਬਚਾਉਂਦੇ ਹਨ।",
+"highlight": "He"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which pronoun can replace “Sara and I” in this sentence: “Sara and I are ready.”?",
+"punjabi_text": "ਵਾਕ “Sara and I are ready.” ਵਿੱਚ “Sara and I” ਦੀ ਥਾਂ ਕਿਹੜਾ pronoun ਆ ਸਕਦਾ ਹੈ?",
+"options": ["we", "you", "they", "he"],
+"correct_index": 0,
+"correct_answer": "we",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Sara and I are ready. We can go now.",
+"sentencePa": "ਸਾਰਾ ਅਤੇ ਮੈਂ ਤਿਆਰ ਹਾਂ। ਅਸੀਂ ਹੁਣ ਜਾ ਸਕਦੇ ਹਾਂ।",
+"explainEn": "Use “we” for a group that includes “I.”",
+"explainPa": "ਜੇ ਗਰੁੱਪ ਵਿੱਚ “I” ਸ਼ਾਮਲ ਹੋਵੇ, ਤਾਂ “we” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "We"
+},
+{
+"sentenceEn": "We are ready for the meeting.",
+"sentencePa": "ਅਸੀਂ ਮੀਟਿੰਗ ਲਈ ਤਿਆਰ ਹਾਂ।",
+"explainEn": "“We” = I + another person/people.",
+"explainPa": "“We” = ਮੈਂ + ਹੋਰ ਵਿਅਕਤੀ/ਲੋਕ।",
+"highlight": "We"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which pronoun can replace “the book” in this sentence: “The book is heavy.”?",
+"punjabi_text": "ਵਾਕ “The book is heavy.” ਵਿੱਚ “the book” ਦੀ ਥਾਂ ਕਿਹੜਾ pronoun ਆ ਸਕਦਾ ਹੈ?",
+"options": ["it", "he", "we", "they"],
+"correct_index": 0,
+"correct_answer": "it",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The book is heavy. It is on the table.",
+"sentencePa": "ਕਿਤਾਬ ਭਾਰੀ ਹੈ। ਉਹ ਮੇਜ਼ ਤੇ ਹੈ।",
+"explainEn": "Use “it” for one thing or object.",
+"explainPa": "ਇੱਕ ਚੀਜ਼/ਵਸਤੂ ਲਈ “it” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "It"
+},
+{
+"sentenceEn": "It is heavy to carry.",
+"sentencePa": "ਇਹ ਚੁੱਕਣ ਲਈ ਭਾਰੀ ਹੈ।",
+"explainEn": "“It” replaces a singular object noun.",
+"explainPa": "“It” ਇਕਵਚਨ ਚੀਜ਼ ਵਾਲੇ ਨਾਂ ਦੀ ਥਾਂ ਲੈਂਦਾ ਹੈ।",
+"highlight": "It"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses the correct personal pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ personal pronoun ਵਰਤਦਾ ਹੈ?",
+"options": ["They are my parents.", "He are my parents.", "It are my parents.", "We is my parents."],
+"correct_index": 0,
+"correct_answer": "They are my parents.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "They are my parents.",
+"sentencePa": "ਉਹ ਮੇਰੇ ਮਾਪੇ ਹਨ।",
+"explainEn": "Use “they” for more than one person.",
+"explainPa": "ਇੱਕ ਤੋਂ ਵੱਧ ਲੋਕਾਂ ਲਈ “they” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "They"
+},
+{
+"sentenceEn": "They live nearby.",
+"sentencePa": "ਉਹ ਨੇੜੇ ਰਹਿੰਦੇ ਹਨ।",
+"explainEn": "Plural subject pronoun “they” goes with “are.”",
+"explainPa": "Plural pronoun “they” ਨਾਲ “are” ਆਉਂਦਾ ਹੈ।",
+"highlight": "They"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a possessive pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ possessive pronoun ਹੈ?",
+"options": ["mine", "me", "I", "my"],
+"correct_index": 0,
+"correct_answer": "mine",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This pen is mine.",
+"sentencePa": "ਇਹ ਕਲਮ ਮੇਰੀ ਹੈ।",
+"explainEn": "“Mine” shows ownership and can stand alone.",
+"explainPa": "“Mine” ਮਾਲਕੀ ਦੱਸਦਾ ਹੈ ਅਤੇ ਅਕੇਲਾ ਵੀ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+"highlight": "mine"
+},
+{
+"sentenceEn": "That seat is mine, not yours.",
+"sentencePa": "ਉਹ ਸੀਟ ਮੇਰੀ ਹੈ, ਤੁਹਾਡੀ ਨਹੀਂ।",
+"explainEn": "Possessive pronouns replace “my + noun.”",
+"explainPa": "Possessive pronouns “my + noun” ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ।",
+"highlight": "mine"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct possessive pronoun: “This phone is ****.”",
+"punjabi_text": "ਸਹੀ possessive pronoun ਚੁਣੋ: “This phone is ****.”",
+"options": ["hers", "her", "she", "herself"],
+"correct_index": 0,
+"correct_answer": "hers",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This phone is hers.",
+"sentencePa": "ਇਹ ਫ਼ੋਨ ਉਸਦਾ ਹੈ।",
+"explainEn": "“Hers” is a possessive pronoun used without a noun.",
+"explainPa": "“Hers” ਬਿਨਾਂ noun ਦੇ ਮਾਲਕੀ ਦੱਸਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "hers"
+},
+{
+"sentenceEn": "That bag is hers.",
+"sentencePa": "ਉਹ ਬੈਗ ਉਸਦਾ ਹੈ।",
+"explainEn": "Use “her” before a noun (her bag), but “hers” alone.",
+"explainPa": "noun ਤੋਂ ਪਹਿਲਾਂ “her” (her bag), ਪਰ ਅਕੇਲਾ “hers”।",
+"highlight": "hers"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence is correct?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+"options": ["This is our car. The car is ours.", "This is our car. The car is our.", "This is ours car. The car is ours.", "This is we car. The car is ours."],
+"correct_index": 0,
+"correct_answer": "This is our car. The car is ours.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is our car. The car is ours.",
+"sentencePa": "ਇਹ ਸਾਡੀ ਕਾਰ ਹੈ। ਕਾਰ ਸਾਡੀ ਹੈ।",
+"explainEn": "“Our” comes before a noun; “ours” is used alone.",
+"explainPa": "“Our” noun ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ; “ours” ਅਕੇਲਾ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "ours"
+},
+{
+"sentenceEn": "That house is ours.",
+"sentencePa": "ਉਹ ਘਰ ਸਾਡਾ ਹੈ।",
+"explainEn": "Possessive pronouns like “ours” replace “our + noun.”",
+"explainPa": "“Ours” ਵਰਗੇ possessive pronouns “our + noun” ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ।",
+"highlight": "ours"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a demonstrative pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ demonstrative pronoun ਹੈ?",
+"options": ["this", "run", "quick", "teacher"],
+"correct_index": 0,
+"correct_answer": "this",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is my seat.",
+"sentencePa": "ਇਹ ਮੇਰੀ ਸੀਟ ਹੈ।",
+"explainEn": "Demonstrative pronouns point to things: this/that/these/those.",
+"explainPa": "Demonstrative pronouns ਚੀਜ਼ਾਂ ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦੇ ਹਨ: this/that/these/those।",
+"highlight": "This"
+},
+{
+"sentenceEn": "This is very important.",
+"sentencePa": "ਇਹ ਬਹੁਤ ਮਹੱਤਵਪੂਰਣ ਹੈ।",
+"explainEn": "“This” points to something near or present.",
+"explainPa": "“This” ਨੇੜੇ ਜਾਂ ਮੌਜੂਦ ਚੀਜ਼ ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦਾ ਹੈ।",
+"highlight": "This"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best option: “**** are my keys.” (keys are near me)",
+"punjabi_text": "ਸਹੀ ਵਿਕਲਪ ਚੁਣੋ: “**** are my keys.” (ਚਾਬੀਆਂ ਮੇਰੇ ਨੇੜੇ ਹਨ)",
+"options": ["These", "Those", "This", "That"],
+"correct_index": 0,
+"correct_answer": "These",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "These are my keys.",
+"sentencePa": "ਇਹ ਮੇਰੀਆਂ ਚਾਬੀਆਂ ਹਨ।",
+"explainEn": "Use “these” for plural things that are near.",
+"explainPa": "ਨੇੜੇ ਵਾਲੀਆਂ ਬਹੁਵਚਨ ਚੀਜ਼ਾਂ ਲਈ “these” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "These"
+},
+{
+"sentenceEn": "These are the keys I need.",
+"sentencePa": "ਇਹ ਉਹ ਚਾਬੀਆਂ ਹਨ ਜੋ ਮੈਨੂੰ ਚਾਹੀਦੀਆਂ ਹਨ।",
+"explainEn": "“These” = plural + near.",
+"explainPa": "“These” = ਬਹੁਵਚਨ + ਨੇੜੇ।",
+"highlight": "These"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best option: “____ is my bus.” (bus is far away)",
+"punjabi_text": "ਸਹੀ ਵਿਕਲਪ ਚੁਣੋ: “____ is my bus.” (ਬਸ ਦੂਰ ਹੈ)",
+"options": ["That", "This", "These", "Those"],
+"correct_index": 0,
+"correct_answer": "That",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "That is my bus.",
+"sentencePa": "ਉਹ ਮੇਰੀ ਬਸ ਹੈ।",
+"explainEn": "Use “that” for one thing that is far away.",
+"explainPa": "ਦੂਰ ਵਾਲੀ ਇਕਵਚਨ ਚੀਜ਼ ਲਈ “that” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "That"
+},
+{
+"sentenceEn": "That is the bus I take every day.",
+"sentencePa": "ਉਹ ਉਹੀ ਬਸ ਹੈ ਜੋ ਮੈਂ ਹਰ ਰੋਜ਼ ਲੈਂਦਾ/ਲੈਂਦੀ ਹਾਂ।",
+"explainEn": "“That” points to a singular item at a distance.",
+"explainPa": "“That” ਦੂਰ ਵਾਲੀ ਇਕਵਚਨ ਚੀਜ਼ ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦਾ ਹੈ।",
+"highlight": "That"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a reflexive pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ reflexive pronoun ਹੈ?",
+"options": ["myself", "my", "me", "mine"],
+"correct_index": 0,
+"correct_answer": "myself",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I did it myself.",
+"sentencePa": "ਮੈਂ ਇਹ ਆਪਣੇ ਆਪ ਕੀਤਾ।",
+"explainEn": "Reflexive pronouns end in -self/-selves: myself, yourself, himself, herself.",
+"explainPa": "Reflexive pronouns -self/-selves ਨਾਲ ਖਤਮ ਹੁੰਦੇ ਹਨ: myself, yourself, himself, herself।",
+"highlight": "myself"
+},
+{
+"sentenceEn": "I can cook for myself.",
+"sentencePa": "ਮੈਂ ਆਪਣੇ ਲਈ ਖਾਣਾ ਬਣਾ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ।",
+"explainEn": "“Myself” refers back to the subject “I.”",
+"explainPa": "“Myself” ਵਿਸ਼ਾ “I” ਵੱਲ ਹੀ ਵਾਪਸ ਇਸ਼ਾਰਾ ਕਰਦਾ ਹੈ।",
+"highlight": "myself"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct word: “He hurt ____.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “He hurt ____.”",
+"options": ["himself", "him", "his", "he"],
+"correct_index": 0,
+"correct_answer": "himself",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He hurt himself.",
+"sentencePa": "ਉਸਨੇ ਆਪਣੇ ਆਪ ਨੂੰ ਚੋਟ ਲਗਾ ਲਈ।",
+"explainEn": "Use reflexive pronoun when the subject and object are the same person.",
+"explainPa": "ਜਦੋਂ subject ਅਤੇ object ਇੱਕੋ ਵਿਅਕਤੀ ਹੋਣ, reflexive pronoun ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "himself"
+},
+{
+"sentenceEn": "He blamed himself.",
+"sentencePa": "ਉਸਨੇ ਆਪਣੇ ਆਪ ਨੂੰ ਦੋਸ਼ ਦਿੱਤਾ।",
+"explainEn": "“Himself” refers back to “he.”",
+"explainPa": "“Himself” “he” ਵੱਲ ਹੀ ਵਾਪਸ ਆਉਂਦਾ ਹੈ।",
+"highlight": "himself"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct word: “She looked at ____ in the mirror.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “She looked at ____ in the mirror.”",
+"options": ["herself", "her", "hers", "she"],
+"correct_index": 0,
+"correct_answer": "herself",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She looked at herself in the mirror.",
+"sentencePa": "ਉਸਨੇ ਸ਼ੀਸ਼ੇ ਵਿੱਚ ਆਪਣੇ ਆਪ ਨੂੰ ਦੇਖਿਆ।",
+"explainEn": "“Herself” is reflexive and refers back to “she.”",
+"explainPa": "“Herself” reflexive ਹੈ ਅਤੇ “she” ਵੱਲ ਵਾਪਸ ਇਸ਼ਾਰਾ ਕਰਦਾ ਹੈ।",
+"highlight": "herself"
+},
+{
+"sentenceEn": "She taught herself English.",
+"sentencePa": "ਉਸਨੇ ਆਪਣੇ ਆਪ ਨੂੰ ਅੰਗਰੇਜ਼ੀ ਸਿਖਾਈ।",
+"explainEn": "Reflexive pronouns often show “by oneself” or same subject/object.",
+"explainPa": "Reflexive pronouns ਅਕਸਰ “ਆਪਣੇ ਆਪ” ਜਾਂ same subject/object ਦੱਸਦੇ ਹਨ।",
+"highlight": "herself"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence is correct?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+"options": ["I made this sandwich myself.", "I made this sandwich my.", "I made this sandwich mine.", "I made this sandwich me."],
+"correct_index": 0,
+"correct_answer": "I made this sandwich myself.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I made this sandwich myself.",
+"sentencePa": "ਮੈਂ ਇਹ ਸੈਂਡਵਿੱਚ ਆਪਣੇ ਆਪ ਬਣਾਇਆ।",
+"explainEn": "“Myself” shows the action was done by me alone.",
+"explainPa": "“Myself” ਦੱਸਦਾ ਹੈ ਕਿ ਇਹ ਕੰਮ ਮੈਂ ਆਪਣੇ ਆਪ ਕੀਤਾ।",
+"highlight": "myself"
+},
+{
+"sentenceEn": "I fixed the problem myself.",
+"sentencePa": "ਮੈਂ ਸਮੱਸਿਆ ਆਪਣੇ ਆਪ ਹੱਲ ਕੀਤੀ।",
+"explainEn": "Reflexive pronouns can emphasize the subject.",
+"explainPa": "Reflexive pronouns ਵਿਸ਼ਾ (subject) ਉਤੇ ਜ਼ੋਰ ਵੀ ਦਿਖਾਉਂਦੇ ਹਨ।",
+"highlight": "myself"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct option: “This bag is not mine. It is ____.”",
+"punjabi_text": "ਸਹੀ ਵਿਕਲਪ ਚੁਣੋ: “This bag is not mine. It is ____.”",
+"options": ["yours", "your", "you", "yourself"],
+"correct_index": 0,
+"correct_answer": "yours",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This bag is not mine. It is yours.",
+"sentencePa": "ਇਹ ਬੈਗ ਮੇਰਾ ਨਹੀਂ। ਇਹ ਤੁਹਾਡਾ ਹੈ।",
+"explainEn": "“Yours” is a possessive pronoun used without a noun.",
+"explainPa": "“Yours” ਬਿਨਾਂ noun ਦੇ ਮਾਲਕੀ ਦੱਸਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "yours"
+},
+{
+"sentenceEn": "This seat is yours.",
+"sentencePa": "ਇਹ ਸੀਟ ਤੁਹਾਡੀ ਹੈ।",
+"explainEn": "Use “your” before a noun (your seat), but “yours” alone.",
+"explainPa": "noun ਤੋਂ ਪਹਿਲਾਂ “your” (your seat), ਪਰ ਅਕੇਲਾ “yours”।",
+"highlight": "yours"
+}
+]
+}
+]
+
+Batch 4 — Pronouns: Personal Pronouns (I/you/he/she/we/they)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is a relative pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ relative pronoun ਹੈ?",
+"options": ["who", "quickly", "blue", "under"],
+"correct_index": 0,
+"correct_answer": "who",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The man who lives here is friendly.",
+"sentencePa": "ਉਹ ਆਦਮੀ ਜੋ ਇੱਥੇ ਰਹਿੰਦਾ ਹੈ, ਦੋਸਤਾਨਾ ਹੈ।",
+"explainEn": "“Who” connects a clause to a person noun (man).",
+"explainPa": "“Who” ਕਿਸੇ ਵਿਅਕਤੀ ਵਾਲੇ ਨਾਂ (man) ਨਾਲ ਕਲੌਜ਼ ਜੋੜਦਾ ਹੈ।",
+"highlight": "who"
+},
+{
+"sentenceEn": "She is the doctor who helped me.",
+"sentencePa": "ਉਹ ਡਾਕਟਰ ਹੈ ਜੋ ਮੇਰੀ ਮਦਦ ਕਰੇ/ਕੀਤੀ ਸੀ।",
+"explainEn": "Use “who” for people.",
+"explainPa": "ਲੋਕਾਂ ਲਈ “who” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "who"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best relative pronoun: “The girl ____ is singing is my cousin.”",
+"punjabi_text": "ਸਹੀ relative pronoun ਚੁਣੋ: “The girl ____ is singing is my cousin.”",
+"options": ["who", "which", "where", "what"],
+"correct_index": 0,
+"correct_answer": "who",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The girl who is singing is my cousin.",
+"sentencePa": "ਉਹ ਕੁੜੀ ਜੋ ਗਾ ਰਹੀ ਹੈ, ਮੇਰੀ ਕਜ਼ਨ ਹੈ।",
+"explainEn": "Use “who” when you talk about a person (girl).",
+"explainPa": "ਜਦੋਂ ਗੱਲ ਵਿਅਕਤੀ (girl) ਦੀ ਹੋਵੇ, “who” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "who"
+},
+{
+"sentenceEn": "He is the boy who won the prize.",
+"sentencePa": "ਉਹ ਮੁੰਡਾ ਹੈ ਜੋ ਇਨਾਮ ਜਿੱਤਿਆ ਸੀ।",
+"explainEn": "“Who” introduces extra information about a person.",
+"explainPa": "“Who” ਵਿਅਕਤੀ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਜੋੜਦਾ ਹੈ।",
+"highlight": "who"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best relative pronoun: “This is the book ____ I borrowed.”",
+"punjabi_text": "ਸਹੀ relative pronoun ਚੁਣੋ: “This is the book ____ I borrowed.”",
+"options": ["that", "who", "where", "when"],
+"correct_index": 0,
+"correct_answer": "that",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is the book that I borrowed.",
+"sentencePa": "ਇਹ ਉਹ ਕਿਤਾਬ ਹੈ ਜੋ ਮੈਂ ਉਧਾਰ ਲਈ ਸੀ।",
+"explainEn": "Use “that” for things (book) in many cases.",
+"explainPa": "ਕਈ ਹਾਲਤਾਂ ਵਿੱਚ ਚੀਜ਼ਾਂ (book) ਲਈ “that” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "that"
+},
+{
+"sentenceEn": "I like the movie that we watched.",
+"sentencePa": "ਮੈਨੂੰ ਉਹ ਫਿਲਮ ਪਸੰਦ ਹੈ ਜੋ ਅਸੀਂ ਦੇਖੀ ਸੀ।",
+"explainEn": "“That” links a thing to extra information.",
+"explainPa": "“That” ਕਿਸੇ ਚੀਜ਼ ਨੂੰ ਹੋਰ ਜਾਣਕਾਰੀ ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+"highlight": "that"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best relative pronoun: “The car ____ is outside is mine.”",
+"punjabi_text": "ਸਹੀ relative pronoun ਚੁਣੋ: “The car ____ is outside is mine.”",
+"options": ["which", "who", "when", "where"],
+"correct_index": 0,
+"correct_answer": "which",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The car which is outside is mine.",
+"sentencePa": "ਜੋ ਕਾਰ ਬਾਹਰ ਖੜੀ ਹੈ, ਉਹ ਮੇਰੀ ਹੈ।",
+"explainEn": "Use “which” for things (car).",
+"explainPa": "ਚੀਜ਼ਾਂ (car) ਲਈ “which” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "which"
+},
+{
+"sentenceEn": "This is the phone which I bought yesterday.",
+"sentencePa": "ਇਹ ਉਹ ਫ਼ੋਨ ਹੈ ਜੋ ਮੈਂ ਕੱਲ੍ਹ ਖਰੀਦਿਆ ਸੀ।",
+"explainEn": "“Which” often describes a thing with more details.",
+"explainPa": "“Which” ਅਕਸਰ ਕਿਸੇ ਚੀਜ਼ ਬਾਰੇ ਹੋਰ ਵੇਰਵਾ ਦਿੰਦਾ ਹੈ।",
+"highlight": "which"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence correctly uses a relative pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ relative pronoun ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ?",
+"options": ["This is the man who fixed my bike.", "This is the man which fixed my bike.", "This is the man where fixed my bike.", "This is the man when fixed my bike."],
+"correct_index": 0,
+"correct_answer": "This is the man who fixed my bike.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is the man who fixed my bike.",
+"sentencePa": "ਇਹ ਉਹ ਆਦਮੀ ਹੈ ਜਿਸਨੇ ਮੇਰੀ ਸਾਈਕਲ ਠੀਕ ਕੀਤੀ ਸੀ।",
+"explainEn": "Use “who” for a person (man).",
+"explainPa": "ਵਿਅਕਤੀ (man) ਲਈ “who” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "who"
+},
+{
+"sentenceEn": "She is the nurse who helped us.",
+"sentencePa": "ਉਹ ਨਰਸ ਹੈ ਜੋ ਸਾਡੀ ਮਦਦ ਕਰਦੀ ਸੀ।",
+"explainEn": "Relative pronouns connect two parts of a sentence.",
+"explainPa": "Relative pronouns ਵਾਕ ਦੇ ਦੋ ਹਿੱਸੇ ਜੋੜਦੇ ਹਨ।",
+"highlight": "who"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is an indefinite pronoun?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ indefinite pronoun ਹੈ?",
+"options": ["someone", "Sara", "this", "we"],
+"correct_index": 0,
+"correct_answer": "someone",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Someone is at the door.",
+"sentencePa": "ਕੋਈ ਦਰਵਾਜ਼ੇ ਤੇ ਹੈ।",
+"explainEn": "“Someone” refers to an unknown person.",
+"explainPa": "“Someone” ਕਿਸੇ ਅਣਜਾਣ ਵਿਅਕਤੀ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "Someone"
+},
+{
+"sentenceEn": "Someone called you.",
+"sentencePa": "ਕਿਸੇ ਨੇ ਤੁਹਾਨੂੰ ਫ਼ੋਨ ਕੀਤਾ।",
+"explainEn": "Indefinite pronouns do not name a specific person.",
+"explainPa": "Indefinite pronouns ਕਿਸੇ ਖ਼ਾਸ ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਨਹੀਂ ਦੱਸਦੇ।",
+"highlight": "Someone"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best word: “Is ____ at home?”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “Is ____ at home?”",
+"options": ["anyone", "anybody's", "any", "anywhere"],
+"correct_index": 0,
+"correct_answer": "anyone",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Is anyone at home?",
+"sentencePa": "ਕੀ ਘਰ ਤੇ ਕੋਈ ਹੈ?",
+"explainEn": "“Anyone” is common in questions for an unknown person.",
+"explainPa": "ਸਵਾਲਾਂ ਵਿੱਚ ਅਣਜਾਣ ਵਿਅਕਤੀ ਲਈ “anyone” ਆਮ ਹੈ।",
+"highlight": "anyone"
+},
+{
+"sentenceEn": "I didn’t see anyone.",
+"sentencePa": "ਮੈਂ ਕਿਸੇ ਨੂੰ ਨਹੀਂ ਦੇਖਿਆ।",
+"explainEn": "“Anyone” can also be used with negatives.",
+"explainPa": "“Anyone” ਨਕਾਰਾਤਮਕ ਵਾਕਾਂ ਵਿੱਚ ਵੀ ਆ ਸਕਦਾ ਹੈ।",
+"highlight": "anyone"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best word: “____ knows the answer.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “____ knows the answer.”",
+"options": ["everyone", "every", "everything", "everywhere"],
+"correct_index": 0,
+"correct_answer": "everyone",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Everyone knows the answer.",
+"sentencePa": "ਸਭ ਨੂੰ ਜਵਾਬ ਪਤਾ ਹੈ।",
+"explainEn": "“Everyone” means all people.",
+"explainPa": "“Everyone” ਦਾ ਮਤਲਬ ਸਭ ਲੋਕ।",
+"highlight": "Everyone"
+},
+{
+"sentenceEn": "Everyone is ready.",
+"sentencePa": "ਸਭ ਤਿਆਰ ਹਨ।",
+"explainEn": "Indefinite pronouns can mean many people together.",
+"explainPa": "Indefinite pronouns ਕਈ ਲੋਕਾਂ ਨੂੰ ਇਕੱਠੇ ਵੀ ਦੱਸ ਸਕਦੇ ਹਨ।",
+"highlight": "Everyone"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best word: “I need ____ to help me.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “I need ____ to help me.”",
+"options": ["someone", "something", "somewhere", "some"],
+"correct_index": 0,
+"correct_answer": "someone",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I need someone to help me.",
+"sentencePa": "ਮੈਨੂੰ ਕਿਸੇ ਦੀ ਮਦਦ ਚਾਹੀਦੀ ਹੈ।",
+"explainEn": "“Someone” refers to an unknown person who can help.",
+"explainPa": "“Someone” ਅਣਜਾਣ ਵਿਅਕਤੀ ਲਈ ਹੈ ਜੋ ਮਦਦ ਕਰ ਸਕੇ।",
+"highlight": "someone"
+},
+{
+"sentenceEn": "Someone can explain it.",
+"sentencePa": "ਕੋਈ ਇਸਨੂੰ ਸਮਝਾ ਸਕਦਾ ਹੈ।",
+"explainEn": "Use “someone” when you mean a person.",
+"explainPa": "ਜਦੋਂ ਮਤਲਬ ਵਿਅਕਤੀ ਹੋਵੇ, “someone” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "someone"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence is correct?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+"options": ["Nobody is here.", "Nobody are here.", "Nobody were here.", "Nobody be here."],
+"correct_index": 0,
+"correct_answer": "Nobody is here.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Nobody is here.",
+"sentencePa": "ਇੱਥੇ ਕੋਈ ਨਹੀਂ ਹੈ।",
+"explainEn": "“Nobody” is treated as singular in English, so use “is.”",
+"explainPa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ “nobody” ਨੂੰ ਆਮ ਤੌਰ ਤੇ singular ਮੰਨਦੇ ਹਨ, ਇਸ ਲਈ “is” ਆਉਂਦਾ ਹੈ।",
+"highlight": "Nobody is"
+},
+{
+"sentenceEn": "Nobody knows my secret.",
+"sentencePa": "ਮੇਰਾ ਰਾਜ਼ ਕਿਸੇ ਨੂੰ ਨਹੀਂ ਪਤਾ।",
+"explainEn": "Many indefinite pronouns take singular verbs.",
+"explainPa": "ਕਈ indefinite pronouns ਨਾਲ singular verb ਆਉਂਦੀ ਹੈ।",
+"highlight": "Nobody"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses “the” correctly?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ “the” ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ?",
+"options": ["The sun is bright.", "A sun is bright.", "An sun is bright.", "Sun is bright."],
+"correct_index": 0,
+"correct_answer": "The sun is bright.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The sun is bright.",
+"sentencePa": "ਸੂਰਜ ਚਮਕਦਾ ਹੈ।",
+"explainEn": "We use “the” for something unique: there is one sun.",
+"explainPa": "ਜਦੋਂ ਚੀਜ਼ ਵਿਲੱਖਣ ਹੋਵੇ (ਇੱਕ ਹੀ ਸੂਰਜ), ਤਾਂ “the” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "The"
+},
+{
+"sentenceEn": "The moon looks beautiful tonight.",
+"sentencePa": "ਅੱਜ ਰਾਤ ਚੰਦਰਮਾ ਸੁੰਦਰ ਲੱਗ ਰਿਹਾ ਹੈ।",
+"explainEn": "“The” is common with unique things (sun, moon).",
+"explainPa": "ਵਿਲੱਖਣ ਚੀਜ਼ਾਂ (sun, moon) ਨਾਲ “the” ਆਮ ਹੈ।",
+"highlight": "The"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["Please close the door.", "Please close a door.", "Please close an door.", "Please close door."],
+"correct_index": 0,
+"correct_answer": "Please close the door.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Please close the door.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰੋ।",
+"explainEn": "Use “the” when both people know which door you mean.",
+"explainPa": "ਜਦੋਂ ਦੋਵੇਂ ਨੂੰ ਪਤਾ ਹੋਵੇ ਕਿ ਕਿਹੜਾ ਦਰਵਾਜ਼ਾ ਹੈ, ਤਾਂ “the” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "the"
+},
+{
+"sentenceEn": "The door is open.",
+"sentencePa": "ਦਰਵਾਜ਼ਾ ਖੁੱਲ੍ਹਾ ਹੈ।",
+"explainEn": "“The” points to a specific door in the situation.",
+"explainPa": "“The” ਹਾਲਾਤ ਵਿੱਚ ਖ਼ਾਸ ਦਰਵਾਜ਼ੇ ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦਾ ਹੈ।",
+"highlight": "The"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct article: “I saw ____ cat.”",
+"punjabi_text": "ਸਹੀ article ਚੁਣੋ: “I saw ____ cat.”",
+"options": ["a", "an", "the", "no article"],
+"correct_index": 0,
+"correct_answer": "a",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I saw a cat.",
+"sentencePa": "ਮੈਂ ਇੱਕ ਬਿੱਲੀ ਦੇਖੀ।",
+"explainEn": "Use “a” before a consonant sound (cat).",
+"explainPa": "consonant sound ਵਾਲੇ ਸ਼ਬਦ ਤੋਂ ਪਹਿਲਾਂ “a” ਵਰਤਦੇ ਹਾਂ (cat)।",
+"highlight": "a"
+},
+{
+"sentenceEn": "A cat was sitting outside.",
+"sentencePa": "ਇੱਕ ਬਿੱਲੀ ਬਾਹਰ ਬੈਠੀ ਸੀ।",
+"explainEn": "Use “a” when it’s not a specific cat.",
+"explainPa": "ਜਦੋਂ ਬਿੱਲੀ ਖ਼ਾਸ ਨਾ ਹੋਵੇ, ਤਾਂ “a” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "A"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct article: “She ate ____ apple.”",
+"punjabi_text": "ਸਹੀ article ਚੁਣੋ: “She ate ____ apple.”",
+"options": ["an", "a", "the", "no article"],
+"correct_index": 0,
+"correct_answer": "an",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She ate an apple.",
+"sentencePa": "ਉਸਨੇ ਇੱਕ ਸੇਬ ਖਾਧਾ।",
+"explainEn": "Use “an” before a vowel sound (apple).",
+"explainPa": "vowel sound ਵਾਲੇ ਸ਼ਬਦ ਤੋਂ ਪਹਿਲਾਂ “an” ਵਰਤਦੇ ਹਾਂ (apple)।",
+"highlight": "an"
+},
+{
+"sentenceEn": "An apple is healthy.",
+"sentencePa": "ਇੱਕ ਸੇਬ ਸਿਹਤਮੰਦ ਹੁੰਦਾ ਹੈ।",
+"explainEn": "“An” is used with vowel sounds, not just letters.",
+"explainPa": "“An” vowel sounds ਨਾਲ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਸਿਰਫ਼ ਅੱਖਰਾਂ ਨਾਲ ਨਹੀਂ।",
+"highlight": "An"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["He is an honest man.", "He is a honest man.", "He is the honest man.", "He is honest man."],
+"correct_index": 0,
+"correct_answer": "He is an honest man.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He is an honest man.",
+"sentencePa": "ਉਹ ਇੱਕ ਇਮਾਨਦਾਰ ਆਦਮੀ ਹੈ।",
+"explainEn": "“Honest” starts with a vowel sound (silent h), so use “an.”",
+"explainPa": "“Honest” ਵਿੱਚ h ਖਾਮੋਸ਼ ਹੁੰਦਾ ਹੈ, ਇਸ ਲਈ vowel sound ਆਉਂਦੀ ਹੈ ਅਤੇ “an” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "an"
+},
+{
+"sentenceEn": "She is an honest person.",
+"sentencePa": "ਉਹ ਇੱਕ ਇਮਾਨਦਾਰ ਵਿਅਕਤੀ ਹੈ।",
+"explainEn": "Choose articles by sound, not spelling.",
+"explainPa": "Article ਅੱਖਰਾਂ ਨਹੀਂ, ਆਵਾਜ਼ (sound) ਦੇ ਅਧਾਰ ਤੇ ਚੁਣਦੇ ਹਾਂ।",
+"highlight": "an"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct article: “We went to ____ hospital.” (general meaning: for treatment)",
+"punjabi_text": "ਸਹੀ article ਚੁਣੋ: “We went to ____ hospital.” (ਆਮ ਮਤਲਬ: ਇਲਾਜ ਲਈ)",
+"options": ["the", "a", "an", "no article"],
+"correct_index": 3,
+"correct_answer": "no article",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We went to hospital.",
+"sentencePa": "ਅਸੀਂ ਇਲਾਜ ਲਈ ਹਸਪਤਾਲ ਗਏ।",
+"explainEn": "In some varieties of English, “go to hospital” can mean for treatment (general idea).",
+"explainPa": "ਕੁਝ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ “go to hospital” ਦਾ ਮਤਲਬ ਇਲਾਜ ਲਈ (ਆਮ ਅਰਥ) ਹੁੰਦਾ ਹੈ।",
+"highlight": "to hospital"
+},
+{
+"sentenceEn": "We went to the hospital to visit a friend.",
+"sentencePa": "ਅਸੀਂ ਦੋਸਤ ਨੂੰ ਮਿਲਣ ਲਈ ਹਸਪਤਾਲ ਗਏ।",
+"explainEn": "“The hospital” often means a specific hospital building.",
+"explainPa": "“The hospital” ਅਕਸਰ ਕਿਸੇ ਖ਼ਾਸ ਹਸਪਤਾਲ ਦੀ ਇਮਾਰਤ ਲਈ ਹੁੰਦਾ ਹੈ।",
+"highlight": "the hospital"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence (general activity).",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ (ਆਮ ਗਤੀਵਿਧੀ ਵਾਲਾ ਅਰਥ)।",
+"options": ["She goes to school every day.", "She goes to the school every day.", "She goes to a school every day.", "She goes to an school every day."],
+"correct_index": 0,
+"correct_answer": "She goes to school every day.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She goes to school every day.",
+"sentencePa": "ਉਹ ਹਰ ਰੋਜ਼ ਸਕੂਲ ਜਾਂਦੀ ਹੈ।",
+"explainEn": "“Go to school” often means the general activity of studying.",
+"explainPa": "“Go to school” ਅਕਸਰ ਪੜ੍ਹਾਈ ਕਰਨ ਵਾਲਾ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ।",
+"highlight": "to school"
+},
+{
+"sentenceEn": "She went to the school to meet the teacher.",
+"sentencePa": "ਉਹ ਅਧਿਆਪਕ ਨੂੰ ਮਿਲਣ ਲਈ ਸਕੂਲ ਗਈ।",
+"explainEn": "“The school” can mean a specific building.",
+"explainPa": "“The school” ਕਿਸੇ ਖ਼ਾਸ ਇਮਾਰਤ ਲਈ ਵੀ ਹੋ ਸਕਦਾ ਹੈ।",
+"highlight": "the school"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I eat breakfast at home.", "I eat a breakfast at home.", "I eat the breakfast at home.", "I eat an breakfast at home."],
+"correct_index": 0,
+"correct_answer": "I eat breakfast at home.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I eat breakfast at home.",
+"sentencePa": "ਮੈਂ ਘਰ ਵਿੱਚ ਨਾਸ਼ਤਾ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ।",
+"explainEn": "Meals often have no article: breakfast, lunch, dinner.",
+"explainPa": "ਖਾਣਿਆਂ ਦੇ ਨਾਮ ਅਕਸਰ ਬਿਨਾਂ article ਦੇ ਆਉਂਦੇ ਹਨ: breakfast, lunch, dinner।",
+"highlight": "breakfast"
+},
+{
+"sentenceEn": "We have dinner at 8.",
+"sentencePa": "ਅਸੀਂ 8 ਵਜੇ ਰਾਤ ਦਾ ਖਾਣਾ ਖਾਂਦੇ ਹਾਂ।",
+"explainEn": "No article is common for regular meals.",
+"explainPa": "ਰੋਜ਼ਾਨਾ ਖਾਣਿਆਂ ਲਈ ਬਿਨਾਂ article ਦੇ ਆਉਣਾ ਆਮ ਹੈ।",
+"highlight": "dinner"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I like music.", "I like a music.", "I like the music (in general).", "I like an music."],
+"correct_index": 0,
+"correct_answer": "I like music.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I like music.",
+"sentencePa": "ਮੈਨੂੰ ਸੰਗੀਤ ਪਸੰਦ ਹੈ।",
+"explainEn": "For things in general, we often use no article: music, water, sugar.",
+"explainPa": "ਆਮ ਤੌਰ ਤੇ ਚੀਜ਼ਾਂ ਲਈ ਬਿਨਾਂ article ਦੇ ਵਰਤਦੇ ਹਾਂ: music, water, sugar।",
+"highlight": "music"
+},
+{
+"sentenceEn": "I like the music in this movie.",
+"sentencePa": "ਮੈਨੂੰ ਇਸ ਫਿਲਮ ਦਾ ਸੰਗੀਤ ਪਸੰਦ ਹੈ।",
+"explainEn": "Use “the” when you mean specific music (in this movie).",
+"explainPa": "ਜਦੋਂ ਖ਼ਾਸ ਸੰਗੀਤ ਦੀ ਗੱਲ ਹੋਵੇ, “the” ਵਰਤਦੇ ਹਾਂ (ਇਸ ਫਿਲਮ ਦਾ)।",
+"highlight": "the music"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["Can you pass the salt?", "Can you pass a salt?", "Can you pass salt? (in this situation)", "Can you pass an salt?"],
+"correct_index": 0,
+"correct_answer": "Can you pass the salt?",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Can you pass the salt?",
+"sentencePa": "ਕੀ ਤੁਸੀਂ ਨਮਕ ਦੇ ਸਕਦੇ ਹੋ?",
+"explainEn": "At a table, “the salt” means the specific salt in front of us.",
+"explainPa": "ਖਾਣੇ ਦੀ ਮੇਜ਼ ਤੇ “the salt” ਦਾ ਮਤਲਬ ਸਾਹਮਣੇ ਵਾਲਾ ਖ਼ਾਸ ਨਮਕ ਹੁੰਦਾ ਹੈ।",
+"highlight": "the"
+},
+{
+"sentenceEn": "Please pass the water bottle.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਪਾਣੀ ਦੀ ਬੋਤਲ ਦੇ ਦਿਓ।",
+"explainEn": "Use “the” when the listener can identify the item.",
+"explainPa": "ਜਦੋਂ ਸੁਣਨ ਵਾਲਾ ਚੀਜ਼ ਪਛਾਣ ਸਕੇ, “the” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "the"
+}
+]
+}
+]
+
+Batch 5 — Verbs: Basics in Real Sentences (Action + Be Verbs)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is an action verb (it shows an action)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ action verb ਹੈ? (ਜੋ ਕੰਮ/ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ)",
+"options": ["run", "happy", "blue", "table"],
+"correct_index": 0,
+"correct_answer": "run",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I run in the park.",
+"sentencePa": "ਮੈਂ ਪਾਰਕ ਵਿੱਚ ਦੌੜਦਾ/ਦੌੜਦੀ ਹਾਂ।",
+"explainEn": "“Run” shows an action, so it is an action verb.",
+"explainPa": "“Run” ਕੰਮ/ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ action verb ਹੈ।",
+"highlight": "run"
+},
+{
+"sentenceEn": "They run every morning.",
+"sentencePa": "ਉਹ ਹਰ ਸਵੇਰੇ ਦੌੜਦੇ ਹਨ।",
+"explainEn": "Action verbs tell what someone does.",
+"explainPa": "Action verbs ਦੱਸਦੇ ਹਨ ਕਿ ਕੋਈ ਕੀ ਕਰਦਾ ਹੈ।",
+"highlight": "run"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “She eats rice.” which word is the action verb?",
+"punjabi_text": "ਵਾਕ “She eats rice.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ action verb ਹੈ?",
+"options": ["eats", "rice", "She", "the"],
+"correct_index": 0,
+"correct_answer": "eats",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She eats rice.",
+"sentencePa": "ਉਹ ਚੌਲ ਖਾਂਦੀ ਹੈ।",
+"explainEn": "“Eats” shows the action (what she does).",
+"explainPa": "“Eats” ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਉਹ ਕੀ ਕਰਦੀ ਹੈ)।",
+"highlight": "eats"
+},
+{
+"sentenceEn": "He eats an apple.",
+"sentencePa": "ਉਹ ਇੱਕ ਸੇਬ ਖਾਂਦਾ ਹੈ।",
+"explainEn": "Eating is an action, so “eat/eats” is an action verb.",
+"explainPa": "ਖਾਣਾ ਇੱਕ ਕਿਰਿਆ ਹੈ, ਇਸ ਲਈ “eat/eats” action verb ਹੈ।",
+"highlight": "eats"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct verb: “They ____ to school every day.”",
+"punjabi_text": "ਸਹੀ verb ਚੁਣੋ: “They ____ to school every day.”",
+"options": ["go", "goes", "going", "gone"],
+"correct_index": 0,
+"correct_answer": "go",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "They go to school every day.",
+"sentencePa": "ਉਹ ਹਰ ਰੋਜ਼ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।",
+"explainEn": "With “they,” we use the base verb: go.",
+"explainPa": "“They” ਨਾਲ base verb ਵਰਤਦੇ ਹਾਂ: go।",
+"highlight": "go"
+},
+{
+"sentenceEn": "We go to work on weekdays.",
+"sentencePa": "ਅਸੀਂ ਹਫ਼ਤੇ ਦੇ ਦਿਨਾਂ ਵਿੱਚ ਕੰਮ ਤੇ ਜਾਂਦੇ ਹਾਂ।",
+"explainEn": "Plural subjects (we/they) usually take the base verb.",
+"explainPa": "Plural subject (we/they) ਨਾਲ ਆਮ ਤੌਰ ਤੇ base verb ਆਉਂਦੀ ਹੈ।",
+"highlight": "go"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct verb: “He ____ football on Sundays.”",
+"punjabi_text": "ਸਹੀ verb ਚੁਣੋ: “He ____ football on Sundays.”",
+"options": ["plays", "play", "playing", "played"],
+"correct_index": 0,
+"correct_answer": "plays",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He plays football on Sundays.",
+"sentencePa": "ਉਹ ਐਤਵਾਰ ਨੂੰ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।",
+"explainEn": "With “he/she/it,” present simple often adds -s: plays.",
+"explainPa": "“He/She/It” ਨਾਲ present simple ਵਿੱਚ ਅਕਸਰ -s ਲੱਗਦਾ ਹੈ: plays।",
+"highlight": "plays"
+},
+{
+"sentenceEn": "She plays cricket too.",
+"sentencePa": "ਉਹ ਕ੍ਰਿਕੇਟ ਵੀ ਖੇਡਦੀ ਹੈ।",
+"explainEn": "This is a common rule for third person singular.",
+"explainPa": "ਇਹ third person singular ਲਈ ਆਮ ਨਿਯਮ ਹੈ।",
+"highlight": "plays"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct action verb: “I ____ dinner.”",
+"punjabi_text": "ਸਹੀ action verb ਚੁਣੋ: “I ____ dinner.”",
+"options": ["cook", "cooks", "cooking", "cooked"],
+"correct_index": 0,
+"correct_answer": "cook",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I cook dinner at home.",
+"sentencePa": "ਮੈਂ ਘਰ ਵਿੱਚ ਰਾਤ ਦਾ ਖਾਣਾ ਬਣਾਉਂਦਾ/ਬਣਾਉਂਦੀ ਹਾਂ।",
+"explainEn": "With “I,” use the base verb: cook.",
+"explainPa": "“I” ਨਾਲ base verb ਵਰਤਦੇ ਹਾਂ: cook।",
+"highlight": "cook"
+},
+{
+"sentenceEn": "I cook on weekends.",
+"sentencePa": "ਮੈਂ ਹਫ਼ਤੇ ਅਖੀਰ ਨੂੰ ਖਾਣਾ ਬਣਾਉਂਦਾ/ਬਣਾਉਂਦੀ ਹਾਂ।",
+"explainEn": "Cooking is an action, so “cook” is an action verb.",
+"explainPa": "ਖਾਣਾ ਬਣਾਉਣਾ ਇੱਕ ਕਿਰਿਆ ਹੈ, ਇਸ ਲਈ “cook” action verb ਹੈ।",
+"highlight": "cook"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “We write emails.” which word is the action verb?",
+"punjabi_text": "ਵਾਕ “We write emails.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ action verb ਹੈ?",
+"options": ["write", "emails", "We", "to"],
+"correct_index": 0,
+"correct_answer": "write",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We write emails at work.",
+"sentencePa": "ਅਸੀਂ ਕੰਮ ਤੇ ਈਮੇਲ ਲਿਖਦੇ ਹਾਂ।",
+"explainEn": "“Write” shows the action (what we do).",
+"explainPa": "“Write” ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਅਸੀਂ ਕੀ ਕਰਦੇ ਹਾਂ)।",
+"highlight": "write"
+},
+{
+"sentenceEn": "They write their names on the form.",
+"sentencePa": "ਉਹ ਫਾਰਮ ਤੇ ਆਪਣੇ ਨਾਮ ਲਿਖਦੇ ਹਨ।",
+"explainEn": "Action verbs describe activities like write, read, play.",
+"explainPa": "Action verbs ਲਿਖਣਾ, ਪੜ੍ਹਨਾ, ਖੇਡਣਾ ਵਰਗੀਆਂ ਕਿਰਿਆਵਾਂ ਦੱਸਦੇ ਹਨ।",
+"highlight": "write"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which verb is a “being” verb (state/being verb)?",
+"punjabi_text": "ਕਿਹੜਾ verb “being” verb ਹੈ? (is/am/are ਵਾਲੀ ਕਿਰਿਆ)",
+"options": ["is", "run", "eat", "sleep"],
+"correct_index": 0,
+"correct_answer": "is",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He is tired.",
+"sentencePa": "ਉਹ ਥੱਕਿਆ ਹੈ।",
+"explainEn": "“Is” shows a state (being), not an action.",
+"explainPa": "“Is” ਹਾਲਤ/ਅਸਤੀਤਵ ਦੱਸਦਾ ਹੈ, ਕੰਮ ਨਹੀਂ।",
+"highlight": "is"
+},
+{
+"sentenceEn": "The room is quiet.",
+"sentencePa": "ਕਮਰਾ ਸ਼ਾਂਤ ਹੈ।",
+"explainEn": "Being verbs connect the subject to a description.",
+"explainPa": "Being verbs ਵਿਸ਼ੇ ਨੂੰ ਵਰਣਨ ਨਾਲ ਜੋੜਦੇ ਹਨ।",
+"highlight": "is"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct being verb: “I ____ happy.”",
+"punjabi_text": "ਸਹੀ being verb ਚੁਣੋ: “I ____ happy.”",
+"options": ["am", "is", "are", "be"],
+"correct_index": 0,
+"correct_answer": "am",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am happy.",
+"sentencePa": "ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+"explainEn": "With “I,” the correct form of be is “am.”",
+"explainPa": "“I” ਨਾਲ be ਦਾ ਸਹੀ ਰੂਪ “am” ਹੁੰਦਾ ਹੈ।",
+"highlight": "am"
+},
+{
+"sentenceEn": "I am ready now.",
+"sentencePa": "ਮੈਂ ਹੁਣ ਤਿਆਰ ਹਾਂ।",
+"explainEn": "“Am” is used only with “I.”",
+"explainPa": "“Am” ਸਿਰਫ਼ “I” ਨਾਲ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "am"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct being verb: “She ____ a nurse.”",
+"punjabi_text": "ਸਹੀ being verb ਚੁਣੋ: “She ____ a nurse.”",
+"options": ["is", "am", "are", "be"],
+"correct_index": 0,
+"correct_answer": "is",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She is a nurse.",
+"sentencePa": "ਉਹ ਨਰਸ ਹੈ।",
+"explainEn": "With “she,” use “is.”",
+"explainPa": "“She” ਨਾਲ “is” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "is"
+},
+{
+"sentenceEn": "He is a teacher.",
+"sentencePa": "ਉਹ ਅਧਿਆਪਕ ਹੈ।",
+"explainEn": "“Is” is used with he/she/it.",
+"explainPa": "“Is” he/she/it ਨਾਲ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "is"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct being verb: “They ____ busy.”",
+"punjabi_text": "ਸਹੀ being verb ਚੁਣੋ: “They ____ busy.”",
+"options": ["are", "is", "am", "be"],
+"correct_index": 0,
+"correct_answer": "are",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "They are busy.",
+"sentencePa": "ਉਹ ਰੁੱਝੇ ਹੋਏ ਹਨ।",
+"explainEn": "With “they,” use “are.”",
+"explainPa": "“They” ਨਾਲ “are” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "are"
+},
+{
+"sentenceEn": "We are late.",
+"sentencePa": "ਅਸੀਂ ਦੇਰ ਨਾਲ ਹਾਂ।",
+"explainEn": "“Are” is used with we/you/they.",
+"explainPa": "“Are” we/you/they ਨਾਲ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "are"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses the correct being verb?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ being verb ਵਰਤਦਾ ਹੈ?",
+"options": ["You are my friend.", "You is my friend.", "You am my friend.", "You be my friend."],
+"correct_index": 0,
+"correct_answer": "You are my friend.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "You are my friend.",
+"sentencePa": "ਤੂੰ/ਤੁਸੀਂ ਮੇਰਾ ਦੋਸਤ ਹੈ/ਹੋ।",
+"explainEn": "With “you,” we use “are.”",
+"explainPa": "“You” ਨਾਲ “are” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "are"
+},
+{
+"sentenceEn": "You are welcome.",
+"sentencePa": "ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ।",
+"explainEn": "“You are” is common and correct in English.",
+"explainPa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ “You are” ਆਮ ਅਤੇ ਸਹੀ ਹੈ।",
+"highlight": "You are"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is a helping verb (auxiliary verb)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ helping verb (auxiliary) ਹੈ?",
+"options": ["can", "apple", "quick", "table"],
+"correct_index": 0,
+"correct_answer": "can",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I can swim.",
+"sentencePa": "ਮੈਂ ਤੈਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ।",
+"explainEn": "“Can” helps the main verb (swim) and shows ability.",
+"explainPa": "“Can” ਮੁੱਖ verb (swim) ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ ਅਤੇ ਸਮਰੱਥਾ ਦੱਸਦਾ ਹੈ।",
+"highlight": "can"
+},
+{
+"sentenceEn": "She can speak English.",
+"sentencePa": "ਉਹ ਅੰਗਰੇਜ਼ੀ ਬੋਲ ਸਕਦੀ ਹੈ।",
+"explainEn": "Helping verbs come before the main verb.",
+"explainPa": "Helping verbs ਮੁੱਖ verb ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦੇ ਹਨ।",
+"highlight": "can"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct helping verb: “We ____ go now.”",
+"punjabi_text": "ਸਹੀ helping verb ਚੁਣੋ: “We ____ go now.”",
+"options": ["can", "cans", "to", "gone"],
+"correct_index": 0,
+"correct_answer": "can",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We can go now.",
+"sentencePa": "ਅਸੀਂ ਹੁਣ ਜਾ ਸਕਦੇ ਹਾਂ।",
+"explainEn": "“Can” is a helping verb used with the base verb “go.”",
+"explainPa": "“Can” helping verb ਹੈ ਜੋ base verb “go” ਨਾਲ ਆਉਂਦਾ ਹੈ।",
+"highlight": "can"
+},
+{
+"sentenceEn": "They can come later.",
+"sentencePa": "ਉਹ ਬਾਅਦ ਵਿੱਚ ਆ ਸਕਦੇ ਹਨ।",
+"explainEn": "After “can,” use the base verb (come/go/do).",
+"explainPa": "“Can” ਤੋਂ ਬਾਅਦ base verb (come/go/do) ਆਉਂਦੀ ਹੈ।",
+"highlight": "can"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct helping verb: “I ____ call you tomorrow.”",
+"punjabi_text": "ਸਹੀ helping verb ਚੁਣੋ: “I ____ call you tomorrow.”",
+"options": ["will", "wills", "am", "does"],
+"correct_index": 0,
+"correct_answer": "will",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I will call you tomorrow.",
+"sentencePa": "ਮੈਂ ਤੁਹਾਨੂੰ ਕੱਲ੍ਹ ਫ਼ੋਨ ਕਰਾਂਗਾ/ਕਰਾਂਗੀ।",
+"explainEn": "“Will” helps show the future.",
+"explainPa": "“Will” ਭਵਿੱਖ (future) ਦੱਸਣ ਲਈ ਮਦਦ ਕਰਦਾ ਹੈ।",
+"highlight": "will"
+},
+{
+"sentenceEn": "She will visit her parents.",
+"sentencePa": "ਉਹ ਆਪਣੇ ਮਾਪਿਆਂ ਨੂੰ ਮਿਲਣ ਜਾਏਗੀ।",
+"explainEn": "“Will” comes before the base verb (call/visit).",
+"explainPa": "“Will” base verb (call/visit) ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "will"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best helping verb: “You ____ study more.”",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ helping verb ਚੁਣੋ: “You ____ study more.”",
+"options": ["should", "shoulds", "are", "studies"],
+"correct_index": 0,
+"correct_answer": "should",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "You should study more.",
+"sentencePa": "ਤੁਹਾਨੂੰ ਹੋਰ ਪੜ੍ਹਨਾ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "“Should” gives advice and helps the main verb “study.”",
+"explainPa": "“Should” ਸਲਾਹ ਦਿੰਦਾ ਹੈ ਅਤੇ ਮੁੱਖ verb “study” ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।",
+"highlight": "should"
+},
+{
+"sentenceEn": "We should leave early.",
+"sentencePa": "ਸਾਨੂੰ ਜਲਦੀ ਨਿਕਲਣਾ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "Helping verbs like “should” are used before the base verb.",
+"explainPa": "“Should” ਵਰਗੇ helping verbs base verb ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦੇ ਹਨ।",
+"highlight": "should"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct helping verb for a rule: “You ____ wear a seatbelt.”",
+"punjabi_text": "ਨਿਯਮ ਲਈ ਸਹੀ helping verb ਚੁਣੋ: “You ____ wear a seatbelt.”",
+"options": ["must", "musts", "am", "do"],
+"correct_index": 0,
+"correct_answer": "must",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "You must wear a seatbelt.",
+"sentencePa": "ਤੁਹਾਨੂੰ ਸੀਟਬੈਲਟ ਲਗਾਉਣੀ ਹੀ ਚਾਹੀਦੀ ਹੈ।",
+"explainEn": "“Must” shows a strong rule or necessity.",
+"explainPa": "“Must” ਤਗੜਾ ਨਿਯਮ ਜਾਂ ਲੋੜ ਦੱਸਦਾ ਹੈ।",
+"highlight": "must"
+},
+{
+"sentenceEn": "We must be on time.",
+"sentencePa": "ਸਾਨੂੰ ਸਮੇਂ ਤੇ ਹੋਣਾ ਹੀ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "After “must,” use the base verb (wear/be/go).",
+"explainPa": "“Must” ਤੋਂ ਬਾਅਦ base verb (wear/be/go) ਆਉਂਦੀ ਹੈ।",
+"highlight": "must"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which verb is a linking verb (it connects the subject to a description)?",
+"punjabi_text": "ਕਿਹੜਾ verb linking verb ਹੈ? (ਜੋ ਵਿਸ਼ੇ ਨੂੰ ਵਰਣਨ ਨਾਲ ਜੋੜਦਾ ਹੈ)",
+"options": ["seems", "runs", "eats", "writes"],
+"correct_index": 0,
+"correct_answer": "seems",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He seems tired today.",
+"sentencePa": "ਉਹ ਅੱਜ ਥੱਕਿਆ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "“Seems” links the subject to an adjective (tired).",
+"explainPa": "“Seems” ਵਿਸ਼ੇ ਨੂੰ ਵਿਸ਼ੇਸ਼ਣ (tired) ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+"highlight": "seems"
+},
+{
+"sentenceEn": "This plan seems good.",
+"sentencePa": "ਇਹ ਯੋਜਨਾ ਚੰਗੀ ਲੱਗਦੀ ਹੈ।",
+"explainEn": "Linking verbs describe a state, not an action.",
+"explainPa": "Linking verbs ਹਾਲਤ/ਵਰਣਨ ਦੱਸਦੇ ਹਨ, ਕਿਰਿਆ ਨਹੀਂ।",
+"highlight": "seems"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct linking verb: “She ____ happy.”",
+"punjabi_text": "ਸਹੀ linking verb ਚੁਣੋ: “She ____ happy.”",
+"options": ["feels", "plays", "writes", "cooks"],
+"correct_index": 0,
+"correct_answer": "feels",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She feels happy.",
+"sentencePa": "ਉਹ ਖੁਸ਼ ਮਹਿਸੂਸ ਕਰਦੀ ਹੈ।",
+"explainEn": "“Feels” links the subject to a feeling (happy).",
+"explainPa": "“Feels” ਵਿਸ਼ੇ ਨੂੰ ਭਾਵਨਾ/ਵਰਣਨ (happy) ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+"highlight": "feels"
+},
+{
+"sentenceEn": "I feel sick today.",
+"sentencePa": "ਮੈਂ ਅੱਜ ਬਿਮਾਰ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ।",
+"explainEn": "“Feel” often works as a linking verb with adjectives.",
+"explainPa": "“Feel” ਅਕਸਰ adjectives ਨਾਲ linking verb ਵਾਂਗ ਕੰਮ ਕਰਦਾ ਹੈ।",
+"highlight": "feel"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best linking verb: “The boy ____ a doctor.” (change over time)",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ linking verb ਚੁਣੋ: “The boy ____ a doctor.” (ਬਦਲਾਅ ਦੱਸਣ ਲਈ)",
+"options": ["became", "ran", "ate", "wrote"],
+"correct_index": 0,
+"correct_answer": "became",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The boy became a doctor.",
+"sentencePa": "ਉਹ ਮੁੰਡਾ ਡਾਕਟਰ ਬਣ ਗਿਆ।",
+"explainEn": "“Became” links the subject to a new identity (a doctor).",
+"explainPa": "“Became” ਵਿਸ਼ੇ ਨੂੰ ਨਵੇਂ ਰੂਪ/ਪਛਾਣ (a doctor) ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+"highlight": "became"
+},
+{
+"sentenceEn": "She became confident after practice.",
+"sentencePa": "ਅਭਿਆਸ ਤੋਂ ਬਾਅਦ ਉਹ ਆਤਮ-ਵਿਸ਼ਵਾਸੀ ਬਣ ਗਈ।",
+"explainEn": "“Become” often shows a change in state.",
+"explainPa": "“Become” ਅਕਸਰ ਹਾਲਤ ਵਿੱਚ ਬਦਲਾਅ ਦੱਸਦਾ ਹੈ।",
+"highlight": "became"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses a linking verb correctly?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ linking verb ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ?",
+"options": ["The food tastes good.", "The food tastes quickly.", "The food taste good.", "The food tasting good."],
+"correct_index": 0,
+"correct_answer": "The food tastes good.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The food tastes good.",
+"sentencePa": "ਖਾਣਾ ਵਧੀਆ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "“Tastes” links the subject (food) to a description (good).",
+"explainPa": "“Tastes” ਵਿਸ਼ੇ (food) ਨੂੰ ਵਰਣਨ (good) ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+"highlight": "tastes"
+},
+{
+"sentenceEn": "This soup tastes spicy.",
+"sentencePa": "ਇਹ ਸੁੱਪ ਤਿੱਖਾ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "Linking verbs are often followed by adjectives (good/spicy).",
+"explainPa": "Linking verbs ਤੋਂ ਬਾਅਦ ਅਕਸਰ adjectives (good/spicy) ਆਉਂਦੇ ਹਨ।",
+"highlight": "tastes"
+}
+]
+}
+]
+Batch 6 — Verbs: Power-Ups (Helping Verbs, Modals, Phrasal, Transitive/Intransitive)
+
+[
+{
+"step_type": "question",
+"english_text": "Which verb is TRANSITIVE (it usually needs an object)?",
+"punjabi_text": "ਕਿਹੜਾ verb TRANSITIVE ਹੈ? (ਅਕਸਰ object ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ)",
+"options": ["buy", "sleep", "arrive", "laugh"],
+"correct_index": 0,
+"correct_answer": "buy",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I buy a new phone.",
+"sentencePa": "ਮੈਂ ਇੱਕ ਨਵਾਂ ਫ਼ੋਨ ਖਰੀਦਦਾ/ਖਰੀਦਦੀ ਹਾਂ।",
+"explainEn": "“Buy” usually needs an object: buy something.",
+"explainPa": "“Buy” ਨੂੰ ਅਕਸਰ object ਚਾਹੀਦਾ ਹੈ: ਕੁਝ ਖਰੀਦੋ।",
+"highlight": "buy"
+},
+{
+"sentenceEn": "She bought milk.",
+"sentencePa": "ਉਸਨੇ ਦੁੱਧ ਖਰੀਦਿਆ।",
+"explainEn": "The object answers: buy what?",
+"explainPa": "Object ਦੱਸਦਾ ਹੈ: ਕੀ ਖਰੀਦਿਆ?",
+"highlight": "bought"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which verb is INTRANSITIVE (it does not need an object)?",
+"punjabi_text": "ਕਿਹੜਾ verb INTRANSITIVE ਹੈ? (object ਦੀ ਲੋੜ ਨਹੀਂ ਹੁੰਦੀ)",
+"options": ["sleep", "make", "bring", "fix"],
+"correct_index": 0,
+"correct_answer": "sleep",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The baby sleeps.",
+"sentencePa": "ਬੱਚਾ ਸੋ ਰਿਹਾ ਹੈ।",
+"explainEn": "“Sleep” can be complete without an object.",
+"explainPa": "“Sleep” ਬਿਨਾਂ object ਦੇ ਵੀ ਪੂਰਾ ਵਾਕ ਬਣ ਜਾਂਦਾ ਹੈ।",
+"highlight": "sleeps"
+},
+{
+"sentenceEn": "I slept early last night.",
+"sentencePa": "ਮੈਂ ਕੱਲ੍ਹ ਰਾਤ ਜਲਦੀ ਸੋ ਗਿਆ/ਸੋ ਗਈ।",
+"explainEn": "Intransitive verbs show an action that doesn’t pass to an object.",
+"explainPa": "Intransitive verb ਵਿੱਚ ਕਿਰਿਆ object ਵੱਲ ਨਹੀਂ ਜਾਂਦੀ।",
+"highlight": "slept"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses an INTRANSITIVE verb correctly?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ intransitive verb ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ?",
+"options": ["He arrived late.", "He arrived the station.", "He arrived the bus.", "He arrived a message."],
+"correct_index": 0,
+"correct_answer": "He arrived late.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He arrived late.",
+"sentencePa": "ਉਹ ਦੇਰ ਨਾਲ ਪਹੁੰਚਿਆ।",
+"explainEn": "“Arrive” does not take a direct object. You can add time or place details.",
+"explainPa": "“Arrive” direct object ਨਹੀਂ ਲੈਂਦਾ। ਤੁਸੀਂ ਸਮਾਂ ਜਾਂ ਥਾਂ ਦੀ ਜਾਣਕਾਰੀ ਜੋੜ ਸਕਦੇ ਹੋ।",
+"highlight": "arrived"
+},
+{
+"sentenceEn": "They arrived at the station.",
+"sentencePa": "ਉਹ ਸਟੇਸ਼ਨ ਤੇ ਪਹੁੰਚ ਗਏ।",
+"explainEn": "To add a place, we often use a preposition (at/in).",
+"explainPa": "ਥਾਂ ਦੱਸਣ ਲਈ ਅਕਸਰ preposition (at/in) ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "arrived"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses a TRANSITIVE verb correctly (with an object)?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ transitive verb ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ (object ਨਾਲ)?",
+"options": ["She opened the door.", "She opened quickly.", "She opened to school.", "She opened at night."],
+"correct_index": 0,
+"correct_answer": "She opened the door.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She opened the door.",
+"sentencePa": "ਉਸਨੇ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਿਆ।",
+"explainEn": "“Open” here takes an object: open what? the door.",
+"explainPa": "ਇੱਥੇ “open” object ਲੈਂਦਾ ਹੈ: ਕੀ ਖੋਲ੍ਹਿਆ? ਦਰਵਾਜ਼ਾ।",
+"highlight": "opened"
+},
+{
+"sentenceEn": "He closed the window.",
+"sentencePa": "ਉਸਨੇ ਖਿੜਕੀ ਬੰਦ ਕੀਤੀ।",
+"explainEn": "Many transitive verbs describe actions done to something.",
+"explainPa": "ਕਈ transitive verbs ਦੱਸਦੇ ਹਨ ਕਿ ਕਿਰਿਆ ਕਿਸੇ ਚੀਜ਼ ਉੱਤੇ ਹੋਈ।",
+"highlight": "closed"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence is correct for a transitive verb?",
+"punjabi_text": "Transitive verb ਲਈ ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+"options": ["I need help.", "I need.", "I need quickly.", "I need at home."],
+"correct_index": 0,
+"correct_answer": "I need help.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I need help.",
+"sentencePa": "ਮੈਨੂੰ ਮਦਦ ਚਾਹੀਦੀ ਹੈ।",
+"explainEn": "“Need” usually needs an object: need what? help.",
+"explainPa": "“Need” ਨੂੰ ਅਕਸਰ object ਚਾਹੀਦਾ ਹੈ: ਕੀ ਚਾਹੀਦਾ? ਮਦਦ।",
+"highlight": "need"
+},
+{
+"sentenceEn": "She needs a doctor.",
+"sentencePa": "ਉਸਨੂੰ ਡਾਕਟਰ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "The object completes the meaning of “need.”",
+"explainPa": "Object “need” ਦਾ ਮਤਲਬ ਪੂਰਾ ਕਰਦਾ ਹੈ।",
+"highlight": "needs"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What does the phrasal verb “look up” mean in: “Look up this word.”?",
+"punjabi_text": "ਵਾਕ “Look up this word.” ਵਿੱਚ phrasal verb “look up” ਦਾ ਕੀ ਮਤਲਬ ਹੈ?",
+"options": ["search for information", "sit down", "turn off", "give away"],
+"correct_index": 0,
+"correct_answer": "search for information",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Look up this word in the dictionary.",
+"sentencePa": "ਇਹ ਸ਼ਬਦ ਡਿਕਸ਼ਨਰੀ ਵਿੱਚ ਲੱਭੋ।",
+"explainEn": "“Look up” means to search for information.",
+"explainPa": "“Look up” ਦਾ ਮਤਲਬ ਜਾਣਕਾਰੀ ਲੱਭਣਾ ਹੈ।",
+"highlight": "look up"
+},
+{
+"sentenceEn": "I looked up the meaning online.",
+"sentencePa": "ਮੈਂ ਮਤਲਬ ਆਨਲਾਈਨ ਲੱਭਿਆ।",
+"explainEn": "Phrasal verbs often have a special meaning.",
+"explainPa": "Phrasal verbs ਦਾ ਅਕਸਰ ਖ਼ਾਸ ਮਤਲਬ ਹੁੰਦਾ ਹੈ।",
+"highlight": "looked up"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct phrasal verb: “Please turn ____ the lights.”",
+"punjabi_text": "ਸਹੀ phrasal verb ਚੁਣੋ: “Please turn ____ the lights.”",
+"options": ["on", "in", "to", "at"],
+"correct_index": 0,
+"correct_answer": "on",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Please turn on the lights.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਬੱਤੀਆਂ ਚਾਲੂ ਕਰੋ।",
+"explainEn": "“Turn on” means make the lights start working.",
+"explainPa": "“Turn on” ਦਾ ਮਤਲਬ ਬੱਤੀਆਂ ਚਾਲੂ ਕਰਨਾ ਹੈ।",
+"highlight": "turn on"
+},
+{
+"sentenceEn": "Turn on the fan, please.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਪੱਖਾ ਚਾਲੂ ਕਰੋ।",
+"explainEn": "“Turn on” is used for devices.",
+"explainPa": "“Turn on” ਉਪਕਰਨਾਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "Turn on"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct phrasal verb: “It’s late. Please turn ____ the TV.”",
+"punjabi_text": "ਸਹੀ phrasal verb ਚੁਣੋ: “It’s late. Please turn ____ the TV.”",
+"options": ["off", "up", "over", "into"],
+"correct_index": 0,
+"correct_answer": "off",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Please turn off the TV.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਟੀਵੀ ਬੰਦ ਕਰੋ।",
+"explainEn": "“Turn off” means stop the device.",
+"explainPa": "“Turn off” ਦਾ ਮਤਲਬ ਉਪਕਰਨ ਬੰਦ ਕਰਨਾ ਹੈ।",
+"highlight": "turn off"
+},
+{
+"sentenceEn": "Turn off the lights before you sleep.",
+"sentencePa": "ਸੋਣ ਤੋਂ ਪਹਿਲਾਂ ਬੱਤੀਆਂ ਬੰਦ ਕਰੋ।",
+"explainEn": "“Off” is the opposite of “on.”",
+"explainPa": "“Off” “on” ਦਾ ਉਲਟ ਹੈ।",
+"highlight": "Turn off"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What does “get up” mean?",
+"punjabi_text": "“get up” ਦਾ ਕੀ ਮਤਲਬ ਹੈ?",
+"options": ["wake and rise from bed", "sit and rest", "buy something", "look for information"],
+"correct_index": 0,
+"correct_answer": "wake and rise from bed",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I get up at 7 a.m.",
+"sentencePa": "ਮੈਂ ਸਵੇਰੇ 7 ਵਜੇ ਉੱਠਦਾ/ਉੱਠਦੀ ਹਾਂ।",
+"explainEn": "“Get up” means to rise from bed.",
+"explainPa": "“Get up” ਦਾ ਮਤਲਬ ਬਿਸਤਰ ਤੋਂ ਉੱਠਣਾ ਹੈ।",
+"highlight": "get up"
+},
+{
+"sentenceEn": "He got up early today.",
+"sentencePa": "ਉਹ ਅੱਜ ਜਲਦੀ ਉੱਠ ਗਿਆ।",
+"explainEn": "It’s a common daily routine phrasal verb.",
+"explainPa": "ਇਹ ਰੋਜ਼ਾਨਾ ਦੀ ਰੁਟੀਨ ਵਾਲਾ ਆਮ phrasal verb ਹੈ।",
+"highlight": "got up"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What does “pick up” mean in: “Pick up the phone.”?",
+"punjabi_text": "ਵਾਕ “Pick up the phone.” ਵਿੱਚ “pick up” ਦਾ ਕੀ ਮਤਲਬ ਹੈ?",
+"options": ["answer the phone", "put the phone down", "throw the phone", "lose the phone"],
+"correct_index": 0,
+"correct_answer": "answer the phone",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Pick up the phone, please.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਫ਼ੋਨ ਚੁੱਕੋ।",
+"explainEn": "“Pick up the phone” means answer the call.",
+"explainPa": "“Pick up the phone” ਦਾ ਮਤਲਬ ਕਾਲ ਦਾ ਜਵਾਬ ਦੇਣਾ ਹੈ।",
+"highlight": "Pick up"
+},
+{
+"sentenceEn": "He didn’t pick up, so I texted him.",
+"sentencePa": "ਉਸਨੇ ਫ਼ੋਨ ਨਹੀਂ ਚੁੱਕਿਆ, ਇਸ ਲਈ ਮੈਂ ਮੈਸੇਜ ਕੀਤਾ।",
+"explainEn": "Here, “pick up” refers to answering.",
+"explainPa": "ਇੱਥੇ “pick up” ਜਵਾਬ ਦੇਣ ਲਈ ਹੈ।",
+"highlight": "pick up"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What does “give up” mean?",
+"punjabi_text": "“give up” ਦਾ ਕੀ ਮਤਲਬ ਹੈ?",
+"options": ["stop trying", "start again", "look for", "turn on"],
+"correct_index": 0,
+"correct_answer": "stop trying",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Don’t give up.",
+"sentencePa": "ਹਾਰ ਨਾ ਮੰਨੋ।",
+"explainEn": "“Give up” means stop trying.",
+"explainPa": "“Give up” ਦਾ ਮਤਲਬ ਕੋਸ਼ਿਸ਼ ਛੱਡ ਦੇਣਾ ਹੈ।",
+"highlight": "give up"
+},
+{
+"sentenceEn": "He gave up smoking.",
+"sentencePa": "ਉਸਨੇ ਸਿਗਰਟ ਪੀਣਾ ਛੱਡ ਦਿੱਤਾ।",
+"explainEn": "“Give up” can also mean stop a habit.",
+"explainPa": "“Give up” ਦਾ ਮਤਲਬ ਆਦਤ ਛੱਡਣਾ ਵੀ ਹੋ ਸਕਦਾ ਹੈ।",
+"highlight": "gave up"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence with a modal verb.",
+"punjabi_text": "Modal verb ਵਾਲਾ ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["He can swim.", "He can swims.", "He can to swim.", "He can swimming."],
+"correct_index": 0,
+"correct_answer": "He can swim.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He can swim.",
+"sentencePa": "ਉਹ ਤੈਰ ਸਕਦਾ ਹੈ।",
+"explainEn": "After a modal verb (can), use the base verb (swim).",
+"explainPa": "Modal verb (can) ਤੋਂ ਬਾਅਦ base verb (swim) ਆਉਂਦੀ ਹੈ।",
+"highlight": "can swim"
+},
+{
+"sentenceEn": "They can come later.",
+"sentencePa": "ਉਹ ਬਾਅਦ ਵਿੱਚ ਆ ਸਕਦੇ ਹਨ।",
+"explainEn": "Modal + base verb is the standard pattern.",
+"explainPa": "Modal + base verb ਆਮ ਪੈਟਰਨ ਹੈ।",
+"highlight": "can come"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best modal verb for possibility: “It ____ rain today.”",
+"punjabi_text": "ਸੰਭਾਵਨਾ ਲਈ ਸਭ ਤੋਂ ਠੀਕ modal verb ਚੁਣੋ: “It ____ rain today.”",
+"options": ["might", "must", "should", "will"],
+"correct_index": 0,
+"correct_answer": "might",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "It might rain today.",
+"sentencePa": "ਅੱਜ ਮੀਂਹ ਪੈ ਸਕਦਾ ਹੈ।",
+"explainEn": "“Might” shows possibility, not certainty.",
+"explainPa": "“Might” ਸੰਭਾਵਨਾ ਦੱਸਦਾ ਹੈ, ਪੱਕਾਪਣ ਨਹੀਂ।",
+"highlight": "might"
+},
+{
+"sentenceEn": "She might be late.",
+"sentencePa": "ਉਹ ਦੇਰ ਨਾਲ ਆ ਸਕਦੀ ਹੈ।",
+"explainEn": "Use “might” when you are not sure.",
+"explainPa": "ਜਦੋਂ ਪੱਕਾ ਨਾ ਹੋਵੇ, “might” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "might"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best modal verb for advice: “You ____ drink more water.”",
+"punjabi_text": "ਸਲਾਹ ਲਈ ਸਭ ਤੋਂ ਠੀਕ modal verb ਚੁਣੋ: “You ____ drink more water.”",
+"options": ["should", "might", "must", "can"],
+"correct_index": 0,
+"correct_answer": "should",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "You should drink more water.",
+"sentencePa": "ਤੁਹਾਨੂੰ ਹੋਰ ਪਾਣੀ ਪੀਣਾ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "“Should” is used for advice.",
+"explainPa": "“Should” ਸਲਾਹ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "should"
+},
+{
+"sentenceEn": "You should rest today.",
+"sentencePa": "ਤੁਹਾਨੂੰ ਅੱਜ ਆਰਾਮ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "Advice is softer than a strict rule.",
+"explainPa": "ਸਲਾਹ ਨਿਯਮ ਤੋਂ ਹੌਲੀ ਹੁੰਦੀ ਹੈ।",
+"highlight": "should"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best modal verb for a strong rule: “You ____ show your ID.”",
+"punjabi_text": "ਤਗੜੇ ਨਿਯਮ ਲਈ ਸਭ ਤੋਂ ਠੀਕ modal verb ਚੁਣੋ: “You ____ show your ID.”",
+"options": ["must", "might", "should", "could"],
+"correct_index": 0,
+"correct_answer": "must",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "You must show your ID.",
+"sentencePa": "ਤੁਹਾਨੂੰ ਆਪਣੀ ID ਦਿਖਾਉਣੀ ਹੀ ਪਵੇਗੀ।",
+"explainEn": "“Must” shows a strong rule or necessity.",
+"explainPa": "“Must” ਤਗੜਾ ਨਿਯਮ ਜਾਂ ਲੋੜ ਦੱਸਦਾ ਹੈ।",
+"highlight": "must"
+},
+{
+"sentenceEn": "You must be on time.",
+"sentencePa": "ਤੁਹਾਨੂੰ ਸਮੇਂ ਤੇ ਹੋਣਾ ਹੀ ਪਵੇਗਾ।",
+"explainEn": "Use “must” when something is required.",
+"explainPa": "ਜਦੋਂ ਕੁਝ ਲਾਜ਼ਮੀ ਹੋਵੇ, “must” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "must"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best modal verb for polite request: “____ you help me?”",
+"punjabi_text": "ਨਰਮ ਬੇਨਤੀ ਲਈ ਸਭ ਤੋਂ ਠੀਕ modal verb ਚੁਣੋ: “____ you help me?”",
+"options": ["Could", "Must", "Should", "Might"],
+"correct_index": 0,
+"correct_answer": "Could",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Could you help me?",
+"sentencePa": "ਕੀ ਤੁਸੀਂ ਮੇਰੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?",
+"explainEn": "“Could” is often used for polite requests.",
+"explainPa": "ਨਮ੍ਰ ਬੇਨਤੀ ਲਈ ਅਕਸਰ “could” ਵਰਤਦੇ ਹਨ।",
+"highlight": "Could"
+},
+{
+"sentenceEn": "Could you repeat that, please?",
+"sentencePa": "ਕੀ ਤੁਸੀਂ ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕਹਿ ਸਕਦੇ ਹੋ?",
+"explainEn": "It sounds more polite than a direct command.",
+"explainPa": "ਇਹ ਹੁਕਮ ਨਾਲੋਂ ਜ਼ਿਆਦਾ ਨਮ੍ਰ ਲੱਗਦਾ ਹੈ।",
+"highlight": "Could"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct past tense of “go”?",
+"punjabi_text": "“go” ਦਾ ਸਹੀ past tense ਕੀ ਹੈ?",
+"options": ["went", "goed", "goes", "going"],
+"correct_index": 0,
+"correct_answer": "went",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Yesterday, I went to the store.",
+"sentencePa": "ਕੱਲ੍ਹ ਮੈਂ ਦੁਕਾਨ ਗਿਆ/ਗਈ ਸੀ।",
+"explainEn": "“Go” is irregular: go → went.",
+"explainPa": "“Go” irregular ਹੈ: go → went।",
+"highlight": "went"
+},
+{
+"sentenceEn": "We went home early.",
+"sentencePa": "ਅਸੀਂ ਜਲਦੀ ਘਰ ਚਲੇ ਗਏ।",
+"explainEn": "Irregular verbs do not follow the -ed rule.",
+"explainPa": "Irregular verbs -ed ਵਾਲਾ ਨਿਯਮ ਨਹੀਂ ਮੰਨਦੇ।",
+"highlight": "went"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct past tense of “eat”?",
+"punjabi_text": "“eat” ਦਾ ਸਹੀ past tense ਕੀ ਹੈ?",
+"options": ["ate", "eated", "eats", "eating"],
+"correct_index": 0,
+"correct_answer": "ate",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I ate rice for lunch.",
+"sentencePa": "ਮੈਂ ਦੁਪਹਿਰ ਨੂੰ ਚੌਲ ਖਾਧੇ।",
+"explainEn": "“Eat” is irregular: eat → ate.",
+"explainPa": "“Eat” irregular ਹੈ: eat → ate।",
+"highlight": "ate"
+},
+{
+"sentenceEn": "She ate an apple.",
+"sentencePa": "ਉਸਨੇ ਇੱਕ ਸੇਬ ਖਾਧਾ।",
+"explainEn": "This past form is not made with -ed.",
+"explainPa": "ਇਹ past form -ed ਨਾਲ ਨਹੀਂ ਬਣਦਾ।",
+"highlight": "ate"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct past tense of “see”?",
+"punjabi_text": "“see” ਦਾ ਸਹੀ past tense ਕੀ ਹੈ?",
+"options": ["saw", "seed", "seen", "sees"],
+"correct_index": 0,
+"correct_answer": "saw",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I saw him yesterday.",
+"sentencePa": "ਮੈਂ ਉਸਨੂੰ ਕੱਲ੍ਹ ਵੇਖਿਆ ਸੀ।",
+"explainEn": "“See” is irregular: see → saw.",
+"explainPa": "“See” irregular ਹੈ: see → saw।",
+"highlight": "saw"
+},
+{
+"sentenceEn": "We saw a movie last night.",
+"sentencePa": "ਅਸੀਂ ਕੱਲ੍ਹ ਰਾਤ ਇੱਕ ਫਿਲਮ ਵੇਖੀ।",
+"explainEn": "Use “saw” for simple past.",
+"explainPa": "Simple past ਲਈ “saw” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "saw"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct past tense of “buy”?",
+"punjabi_text": "“buy” ਦਾ ਸਹੀ past tense ਕੀ ਹੈ?",
+"options": ["bought", "buyed", "buys", "buying"],
+"correct_index": 0,
+"correct_answer": "bought",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I bought a new shirt.",
+"sentencePa": "ਮੈਂ ਇੱਕ ਨਵੀਂ ਕਮੀਜ਼ ਖਰੀਦੀ।",
+"explainEn": "“Buy” is irregular: buy → bought.",
+"explainPa": "“Buy” irregular ਹੈ: buy → bought।",
+"highlight": "bought"
+},
+{
+"sentenceEn": "She bought groceries.",
+"sentencePa": "ਉਸਨੇ ਸਾਮਾਨ ਖਰੀਦਿਆ।",
+"explainEn": "Many irregular verbs change spelling completely.",
+"explainPa": "ਕਈ irregular verbs ਦੀ ਸਪੈਲਿੰਗ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦੀ ਹੈ।",
+"highlight": "bought"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct past tense of “take”?",
+"punjabi_text": "“take” ਦਾ ਸਹੀ past tense ਕੀ ਹੈ?",
+"options": ["took", "taked", "taken", "takes"],
+"correct_index": 0,
+"correct_answer": "took",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I took the bus today.",
+"sentencePa": "ਮੈਂ ਅੱਜ ਬਸ ਲਈ।",
+"explainEn": "“Take” is irregular: take → took.",
+"explainPa": "“Take” irregular ਹੈ: take → took।",
+"highlight": "took"
+},
+{
+"sentenceEn": "He took my advice.",
+"sentencePa": "ਉਸਨੇ ਮੇਰੀ ਸਲਾਹ ਮੰਨੀ।",
+"explainEn": "Use “took” for simple past actions.",
+"explainPa": "Simple past ਕਿਰਿਆ ਲਈ “took” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "took"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "What is the correct past tense of “come”?",
+"punjabi_text": "“come” ਦਾ ਸਹੀ past tense ਕੀ ਹੈ?",
+"options": ["came", "comed", "comes", "coming"],
+"correct_index": 0,
+"correct_answer": "came",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She came home late.",
+"sentencePa": "ਉਹ ਦੇਰ ਨਾਲ ਘਰ ਆਈ।",
+"explainEn": "“Come” is irregular: come → came.",
+"explainPa": "“Come” irregular ਹੈ: come → came।",
+"highlight": "came"
+},
+{
+"sentenceEn": "They came to visit us.",
+"sentencePa": "ਉਹ ਸਾਨੂੰ ਮਿਲਣ ਆਏ।",
+"explainEn": "Irregular past forms must be learned.",
+"explainPa": "Irregular past forms ਯਾਦ ਕਰਨੇ ਪੈਂਦੇ ਹਨ।",
+"highlight": "came"
+}
+]
+}
+]
+
+Batch 7 — Adjectives: Description and Comparison (Comparative/Superlative)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is an adjective (it describes a noun)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ adjective ਹੈ? (ਜੋ noun ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ)",
+"options": ["big", "run", "quickly", "teacher"],
+"correct_index": 0,
+"correct_answer": "big",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I live in a big house.",
+"sentencePa": "ਮੈਂ ਇੱਕ ਵੱਡੇ ਘਰ ਵਿੱਚ ਰਹਿੰਦਾ/ਰਹਿੰਦੀ ਹਾਂ।",
+"explainEn": "“Big” describes the noun “house,” so it is an adjective.",
+"explainPa": "“Big” noun “house” ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ adjective ਹੈ।",
+"highlight": "big"
+},
+{
+"sentenceEn": "That is a big problem.",
+"sentencePa": "ਉਹ ਇੱਕ ਵੱਡੀ ਸਮੱਸਿਆ ਹੈ।",
+"explainEn": "Adjectives tell size, color, or quality.",
+"explainPa": "Adjectives ਆਕਾਰ, ਰੰਗ ਜਾਂ ਗੁਣ ਦੱਸਦੇ ਹਨ।",
+"highlight": "big"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "In the sentence “She has a red bag.” which word is the adjective?",
+"punjabi_text": "ਵਾਕ “She has a red bag.” ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ adjective ਹੈ?",
+"options": ["red", "bag", "has", "She"],
+"correct_index": 0,
+"correct_answer": "red",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She has a red bag.",
+"sentencePa": "ਉਸਦੇ ਕੋਲ ਇੱਕ ਲਾਲ ਬੈਗ ਹੈ।",
+"explainEn": "“Red” describes the noun “bag.”",
+"explainPa": "“Red” noun “bag” ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ।",
+"highlight": "red"
+},
+{
+"sentenceEn": "The red bag is mine.",
+"sentencePa": "ਲਾਲ ਬੈਗ ਮੇਰਾ ਹੈ।",
+"explainEn": "Adjectives can come before the noun.",
+"explainPa": "Adjectives noun ਤੋਂ ਪਹਿਲਾਂ ਆ ਸਕਦੇ ਹਨ।",
+"highlight": "red"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the adjective.",
+"punjabi_text": "Adjective ਚੁਣੋ।",
+"options": ["tired", "sleep", "slowly", "market"],
+"correct_index": 0,
+"correct_answer": "tired",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am tired today.",
+"sentencePa": "ਮੈਂ ਅੱਜ ਥੱਕਿਆ/ਥੱਕੀ ਹਾਂ।",
+"explainEn": "“Tired” describes how someone feels, so it is an adjective.",
+"explainPa": "“Tired” ਹਾਲਤ/ਭਾਵਨਾ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ adjective ਹੈ।",
+"highlight": "tired"
+},
+{
+"sentenceEn": "He looks tired.",
+"sentencePa": "ਉਹ ਥੱਕਿਆ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "Adjectives can come after linking verbs like “is/looks/feels.”",
+"explainPa": "Adjectives linking verbs (is/looks/feels) ਤੋਂ ਬਾਅਦ ਵੀ ਆ ਸਕਦੇ ਹਨ।",
+"highlight": "tired"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the adjective.",
+"punjabi_text": "Adjective ਚੁਣੋ।",
+"options": ["clean", "cleaning", "cleaned", "cleanly"],
+"correct_index": 0,
+"correct_answer": "clean",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This room is clean.",
+"sentencePa": "ਇਹ ਕਮਰਾ ਸਾਫ਼ ਹੈ।",
+"explainEn": "“Clean” describes the room, so it is an adjective here.",
+"explainPa": "ਇੱਥੇ “clean” ਕਮਰੇ ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ adjective ਹੈ।",
+"highlight": "clean"
+},
+{
+"sentenceEn": "A clean kitchen feels nice.",
+"sentencePa": "ਸਾਫ਼ ਰਸੋਈ ਚੰਗੀ ਲੱਗਦੀ ਹੈ।",
+"explainEn": "Adjectives describe nouns like room, kitchen, clothes.",
+"explainPa": "Adjectives room, kitchen, clothes ਵਰਗੇ nouns ਦਾ ਵਰਣਨ ਕਰਦੇ ਹਨ।",
+"highlight": "clean"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct comparative form: “This bag is ____ than that bag.”",
+"punjabi_text": "ਸਹੀ comparative ਰੂਪ ਚੁਣੋ: “This bag is ____ than that bag.”",
+"options": ["bigger", "biggest", "big", "more big"],
+"correct_index": 0,
+"correct_answer": "bigger",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This bag is bigger than that bag.",
+"sentencePa": "ਇਹ ਬੈਗ ਉਸ ਬੈਗ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।",
+"explainEn": "Use comparative -er with short adjectives: big → bigger.",
+"explainPa": "ਛੋਟੇ adjectives ਨਾਲ comparative -er ਲੱਗਦਾ ਹੈ: big → bigger।",
+"highlight": "bigger"
+},
+{
+"sentenceEn": "My house is bigger than yours.",
+"sentencePa": "ਮੇਰਾ ਘਰ ਤੁਹਾਡੇ ਘਰ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।",
+"explainEn": "Comparatives compare two things.",
+"explainPa": "Comparative ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਕਰਦਾ ਹੈ।",
+"highlight": "bigger"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct comparative form: “Today is ____ than yesterday.”",
+"punjabi_text": "ਸਹੀ comparative ਰੂਪ ਚੁਣੋ: “Today is ____ than yesterday.”",
+"options": ["colder", "coldest", "cold", "more colder"],
+"correct_index": 0,
+"correct_answer": "colder",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Today is colder than yesterday.",
+"sentencePa": "ਅੱਜ ਕੱਲ੍ਹ ਨਾਲੋਂ ਠੰਢਾ ਹੈ।",
+"explainEn": "Cold → colder is the comparative form for two days.",
+"explainPa": "Cold → colder ਦੋ ਦਿਨਾਂ ਦੀ ਤੁਲਨਾ ਲਈ comparative ਹੈ।",
+"highlight": "colder"
+},
+{
+"sentenceEn": "This tea is hotter than that tea.",
+"sentencePa": "ਇਹ ਚਾਹ ਉਸ ਚਾਹ ਨਾਲੋਂ ਜ਼ਿਆਦਾ ਗਰਮ ਹੈ।",
+"explainEn": "Many short adjectives add -er in comparative form.",
+"explainPa": "ਕਈ ਛੋਟੇ adjectives ਵਿੱਚ comparative ਲਈ -er ਲੱਗਦਾ ਹੈ।",
+"highlight": "hotter"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct comparative form: “This road is ____ than that road.”",
+"punjabi_text": "ਸਹੀ comparative ਰੂਪ ਚੁਣੋ: “This road is ____ than that road.”",
+"options": ["narrower", "narrowest", "narrow", "more narrowest"],
+"correct_index": 0,
+"correct_answer": "narrower",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This road is narrower than that road.",
+"sentencePa": "ਇਹ ਸੜਕ ਉਸ ਸੜਕ ਨਾਲੋਂ ਤੰਗ ਹੈ।",
+"explainEn": "Narrow → narrower is the comparative form.",
+"explainPa": "Narrow → narrower comparative ਰੂਪ ਹੈ।",
+"highlight": "narrower"
+},
+{
+"sentenceEn": "This lane is narrower.",
+"sentencePa": "ਇਹ ਗਲੀ ਹੋਰ ਤੰਗ ਹੈ।",
+"explainEn": "Comparatives often end in -er for short adjectives.",
+"explainPa": "ਛੋਟੇ adjectives ਵਿੱਚ comparative ਅਕਸਰ -er ਨਾਲ ਬਣਦਾ ਹੈ।",
+"highlight": "narrower"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct comparative form: “This movie is ____ than that movie.”",
+"punjabi_text": "ਸਹੀ comparative ਰੂਪ ਚੁਣੋ: “This movie is ____ than that movie.”",
+"options": ["more interesting", "interestinger", "most interesting", "interestingest"],
+"correct_index": 0,
+"correct_answer": "more interesting",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This movie is more interesting than that movie.",
+"sentencePa": "ਇਹ ਫਿਲਮ ਉਸ ਫਿਲਮ ਨਾਲੋਂ ਜ਼ਿਆਦਾ ਦਿਲਚਸਪ ਹੈ।",
+"explainEn": "Longer adjectives often use “more”: interesting → more interesting.",
+"explainPa": "ਲੰਮੇ adjectives ਨਾਲ ਅਕਸਰ “more” ਵਰਤਦੇ ਹਾਂ: interesting → more interesting।",
+"highlight": "more interesting"
+},
+{
+"sentenceEn": "This book is more useful for me.",
+"sentencePa": "ਇਹ ਕਿਤਾਬ ਮੇਰੇ ਲਈ ਹੋਰ ਲਾਭਦਾਇਕ ਹੈ।",
+"explainEn": "Use “more” with many multi-syllable adjectives.",
+"explainPa": "ਕਈ multi-syllable adjectives ਨਾਲ “more” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "more useful"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct superlative form: “This is the ____ bag in the shop.”",
+"punjabi_text": "ਸਹੀ superlative ਰੂਪ ਚੁਣੋ: “This is the ____ bag in the shop.”",
+"options": ["biggest", "bigger", "big", "more big"],
+"correct_index": 0,
+"correct_answer": "biggest",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is the biggest bag in the shop.",
+"sentencePa": "ਇਹ ਦੁਕਾਨ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਡਾ ਬੈਗ ਹੈ।",
+"explainEn": "Superlative for big is biggest (the + -est).",
+"explainPa": "Big ਦਾ superlative biggest ਹੁੰਦਾ ਹੈ (the + -est)।",
+"highlight": "biggest"
+},
+{
+"sentenceEn": "He is the tallest student in the class.",
+"sentencePa": "ਉਹ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਲੰਮਾ ਵਿਦਿਆਰਥੀ ਹੈ।",
+"explainEn": "Superlatives compare one item with a group.",
+"explainPa": "Superlative ਇੱਕ ਚੀਜ਼ ਦੀ ਗਰੁੱਪ ਨਾਲ ਤੁਲਨਾ ਕਰਦਾ ਹੈ।",
+"highlight": "tallest"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct superlative form: “She is the ____ person here.”",
+"punjabi_text": "ਸਹੀ superlative ਰੂਪ ਚੁਣੋ: “She is the ____ person here.”",
+"options": ["kindest", "kinder", "kind", "more kind"],
+"correct_index": 0,
+"correct_answer": "kindest",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She is the kindest person here.",
+"sentencePa": "ਉਹ ਇੱਥੇ ਸਭ ਤੋਂ ਦਇਆਲੂ ਵਿਅਕਤੀ ਹੈ।",
+"explainEn": "Kind → kindest is the superlative form.",
+"explainPa": "Kind → kindest superlative ਰੂਪ ਹੈ।",
+"highlight": "kindest"
+},
+{
+"sentenceEn": "This is the safest road.",
+"sentencePa": "ਇਹ ਸਭ ਤੋਂ ਸੁਰੱਖਿਅਤ ਰਸਤਾ ਹੈ।",
+"explainEn": "Many short adjectives use -est for superlative.",
+"explainPa": "ਕਈ ਛੋਟੇ adjectives ਵਿੱਚ superlative ਲਈ -est ਲੱਗਦਾ ਹੈ।",
+"highlight": "safest"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct superlative form: “This is the ____ story.”",
+"punjabi_text": "ਸਹੀ superlative ਰੂਪ ਚੁਣੋ: “This is the ____ story.”",
+"options": ["most beautiful", "more beautiful", "beautifullest", "beautifuler"],
+"correct_index": 0,
+"correct_answer": "most beautiful",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is the most beautiful story.",
+"sentencePa": "ਇਹ ਸਭ ਤੋਂ ਸੁੰਦਰ ਕਹਾਣੀ ਹੈ।",
+"explainEn": "Long adjectives often use “most”: beautiful → most beautiful.",
+"explainPa": "ਲੰਮੇ adjectives ਨਾਲ ਅਕਸਰ “most” ਵਰਤਦੇ ਹਾਂ: beautiful → most beautiful।",
+"highlight": "most beautiful"
+},
+{
+"sentenceEn": "She is the most confident student.",
+"sentencePa": "ਉਹ ਸਭ ਤੋਂ ਆਤਮ-ਵਿਸ਼ਵਾਸੀ ਵਿਦਿਆਰਥਣ ਹੈ।",
+"explainEn": "Superlative with “most” compares one person to the whole group.",
+"explainPa": "“Most” ਵਾਲਾ superlative ਇੱਕ ਵਿਅਕਤੀ ਨੂੰ ਪੂਰੇ ਗਰੁੱਪ ਨਾਲ ਤੁਲਨਾ ਕਰਦਾ ਹੈ।",
+"highlight": "most confident"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["This is better than that.", "This is gooder than that.", "This is more good than that.", "This is best than that."],
+"correct_index": 0,
+"correct_answer": "This is better than that.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is better than that.",
+"sentencePa": "ਇਹ ਉਸ ਨਾਲੋਂ ਚੰਗਾ ਹੈ।",
+"explainEn": "Good is irregular: good → better → best.",
+"explainPa": "Good irregular ਹੈ: good → better → best।",
+"highlight": "better"
+},
+{
+"sentenceEn": "This is the best option.",
+"sentencePa": "ਇਹ ਸਭ ਤੋਂ ਵਧੀਆ ਵਿਕਲਪ ਹੈ।",
+"explainEn": "Irregular forms must be memorized.",
+"explainPa": "Irregular ਰੂਪ ਯਾਦ ਕਰਨੇ ਪੈਂਦੇ ਹਨ।",
+"highlight": "best"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["He is the best player.", "He is the goodest player.", "He is the most good player.", "He is the betterest player."],
+"correct_index": 0,
+"correct_answer": "He is the best player.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He is the best player.",
+"sentencePa": "ਉਹ ਸਭ ਤੋਂ ਵਧੀਆ ਖਿਡਾਰੀ ਹੈ।",
+"explainEn": "Best is the superlative of good.",
+"explainPa": "Best, good ਦਾ superlative ਹੈ।",
+"highlight": "best"
+},
+{
+"sentenceEn": "She is the best teacher.",
+"sentencePa": "ਉਹ ਸਭ ਤੋਂ ਵਧੀਆ ਅਧਿਆਪਕ ਹੈ।",
+"explainEn": "Use “best” for the top in a group.",
+"explainPa": "ਗਰੁੱਪ ਵਿੱਚ ਸਭ ਤੋਂ ਉੱਤੇ ਲਈ “best” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "best"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the possessive adjective.",
+"punjabi_text": "Possessive adjective ਚੁਣੋ।",
+"options": ["my", "mine", "me", "I"],
+"correct_index": 0,
+"correct_answer": "my",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is my phone.",
+"sentencePa": "ਇਹ ਮੇਰਾ ਫ਼ੋਨ ਹੈ।",
+"explainEn": "“My” comes before a noun, so it is a possessive adjective.",
+"explainPa": "“My” noun ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ possessive adjective ਹੈ।",
+"highlight": "my"
+},
+{
+"sentenceEn": "My bag is heavy.",
+"sentencePa": "ਮੇਰਾ ਬੈਗ ਭਾਰੀ ਹੈ।",
+"explainEn": "Possessive adjectives describe ownership before a noun.",
+"explainPa": "Possessive adjectives noun ਤੋਂ ਪਹਿਲਾਂ ਮਾਲਕੀ ਦੱਸਦੇ ਹਨ।",
+"highlight": "My"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct possessive adjective: “Is this ____ jacket?”",
+"punjabi_text": "ਸਹੀ possessive adjective ਚੁਣੋ: “Is this ____ jacket?”",
+"options": ["your", "yours", "you", "yourself"],
+"correct_index": 0,
+"correct_answer": "your",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Is this your jacket?",
+"sentencePa": "ਕੀ ਇਹ ਤੁਹਾਡੀ ਜੈਕਟ ਹੈ?",
+"explainEn": "“Your” is used before a noun (jacket).",
+"explainPa": "“Your” noun (jacket) ਤੋਂ ਪਹਿਲਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "your"
+},
+{
+"sentenceEn": "Your jacket is on the chair.",
+"sentencePa": "ਤੁਹਾਡੀ ਜੈਕਟ ਕੁਰਸੀ ਤੇ ਹੈ।",
+"explainEn": "Possessive adjectives come before nouns.",
+"explainPa": "Possessive adjectives noun ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦੇ ਹਨ।",
+"highlight": "Your"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct possessive adjective: “He forgot ____ keys.”",
+"punjabi_text": "ਸਹੀ possessive adjective ਚੁਣੋ: “He forgot ____ keys.”",
+"options": ["his", "him", "he", "hers"],
+"correct_index": 0,
+"correct_answer": "his",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He forgot his keys.",
+"sentencePa": "ਉਹ ਆਪਣੀਆਂ ਚਾਬੀਆਂ ਭੁੱਲ ਗਿਆ।",
+"explainEn": "“His” is a possessive adjective used before a noun (keys).",
+"explainPa": "“His” noun (keys) ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ possessive adjective ਹੈ।",
+"highlight": "his"
+},
+{
+"sentenceEn": "His phone is ringing.",
+"sentencePa": "ਉਸਦਾ ਫ਼ੋਨ ਵੱਜ ਰਿਹਾ ਹੈ।",
+"explainEn": "Possessive adjectives show who owns something.",
+"explainPa": "Possessive adjectives ਮਾਲਕੀ ਦੱਸਦੇ ਹਨ।",
+"highlight": "His"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct possessive adjective: “She is with ____ friend.”",
+"punjabi_text": "ਸਹੀ possessive adjective ਚੁਣੋ: “She is with ____ friend.”",
+"options": ["her", "hers", "she", "herself"],
+"correct_index": 0,
+"correct_answer": "her",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She is with her friend.",
+"sentencePa": "ਉਹ ਆਪਣੀ ਦੋਸਤ ਨਾਲ ਹੈ।",
+"explainEn": "“Her” is used before a noun (friend), so it is a possessive adjective here.",
+"explainPa": "“Her” noun (friend) ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਇੱਥੇ possessive adjective ਹੈ।",
+"highlight": "her"
+},
+{
+"sentenceEn": "Her friend is waiting.",
+"sentencePa": "ਉਸਦੀ ਦੋਸਤ ਉਡੀਕ ਕਰ ਰਹੀ ਹੈ।",
+"explainEn": "Use “her” before nouns; use “hers” alone.",
+"explainPa": "noun ਤੋਂ ਪਹਿਲਾਂ “her”; ਅਕੇਲਾ “hers”।",
+"highlight": "Her"
+}
+]
+}
+]
+
+Batch 8 — Adjectives vs Adverbs: Sentence Clarity (Order + -ly + Time/Manner)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is a demonstrative adjective (it comes before a noun)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ demonstrative adjective ਹੈ? (ਜੋ noun ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ)",
+"options": ["this", "quickly", "mine", "run"],
+"correct_index": 0,
+"correct_answer": "this",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This book is mine.",
+"sentencePa": "ਇਹ ਕਿਤਾਬ ਮੇਰੀ ਹੈ।",
+"explainEn": "“This” is a demonstrative adjective because it comes before the noun “book.”",
+"explainPa": "“This” demonstrative adjective ਹੈ ਕਿਉਂਕਿ ਇਹ noun “book” ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "This"
+},
+{
+"sentenceEn": "This phone is new.",
+"sentencePa": "ਇਹ ਫ਼ੋਨ ਨਵਾਂ ਹੈ।",
+"explainEn": "Demonstrative adjectives point to nouns: this/that/these/those.",
+"explainPa": "Demonstrative adjectives nouns ਵੱਲ ਇਸ਼ਾਰਾ ਕਰਦੇ ਹਨ: this/that/these/those।",
+"highlight": "This"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence with a demonstrative adjective.",
+"punjabi_text": "Demonstrative adjective ਵਾਲਾ ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["That car is fast.", "That is car fast.", "Car that is fast.", "That fast car is."],
+"correct_index": 0,
+"correct_answer": "That car is fast.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "That car is fast.",
+"sentencePa": "ਉਹ ਕਾਰ ਤੇਜ਼ ਹੈ।",
+"explainEn": "“That” comes before the noun “car,” so it works as a demonstrative adjective.",
+"explainPa": "“That” noun “car” ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ demonstrative adjective ਵਾਂਗ ਵਰਤਿਆ ਗਿਆ ਹੈ।",
+"highlight": "That"
+},
+{
+"sentenceEn": "Those shoes are expensive.",
+"sentencePa": "ਉਹ ਜੁੱਤੇ ਮਹਿੰਗੇ ਹਨ।",
+"explainEn": "Use those/these for plural nouns.",
+"explainPa": "Plural nouns ਲਈ those/these ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "Those"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["These books are helpful.", "This books are helpful.", "Those book are helpful.", "These book is helpful."],
+"correct_index": 0,
+"correct_answer": "These books are helpful.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "These books are helpful.",
+"sentencePa": "ਇਹ ਕਿਤਾਬਾਂ ਮਦਦਗਾਰ ਹਨ।",
+"explainEn": "Use “these” with a plural noun (books) and “are.”",
+"explainPa": "Plural noun (books) ਨਾਲ “these” ਅਤੇ “are” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "These"
+},
+{
+"sentenceEn": "Those books are mine.",
+"sentencePa": "ਉਹ ਕਿਤਾਬਾਂ ਮੇਰੀਆਂ ਹਨ।",
+"explainEn": "These/those are for plural nouns.",
+"explainPa": "These/those plural nouns ਲਈ ਹੁੰਦੇ ਹਨ।",
+"highlight": "Those"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I like this song.", "I like these song.", "I like this songs.", "I like those song."],
+"correct_index": 0,
+"correct_answer": "I like this song.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I like this song.",
+"sentencePa": "ਮੈਨੂੰ ਇਹ ਗੀਤ ਪਸੰਦ ਹੈ।",
+"explainEn": "Use “this” with a singular noun (song).",
+"explainPa": "Singular noun (song) ਨਾਲ “this” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "this"
+},
+{
+"sentenceEn": "I like these songs.",
+"sentencePa": "ਮੈਨੂੰ ਇਹ ਗੀਤ ਪਸੰਦ ਹਨ।",
+"explainEn": "Use “these” with plural nouns.",
+"explainPa": "Plural nouns ਨਾਲ “these” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "these"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best order of adjectives: “a ____ bag” (color + size).",
+"punjabi_text": "Adjectives ਦੀ ਸਭ ਤੋਂ ਠੀਕ ਕ੍ਰਮਵਾਰਤਾ ਚੁਣੋ: “a ____ bag” (color + size)।",
+"options": ["big red", "red big", "bigly red", "redly big"],
+"correct_index": 0,
+"correct_answer": "big red",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I bought a big red bag.",
+"sentencePa": "ਮੈਂ ਇੱਕ ਵੱਡਾ ਲਾਲ ਬੈਗ ਖਰੀਦਿਆ।",
+"explainEn": "A common order is size before color: big (size) + red (color).",
+"explainPa": "ਆਮ ਕ੍ਰਮ ਵਿੱਚ size ਪਹਿਲਾਂ ਅਤੇ color ਬਾਅਦ: big (size) + red (color)।",
+"highlight": "big red"
+},
+{
+"sentenceEn": "She has a small black purse.",
+"sentencePa": "ਉਸਦੇ ਕੋਲ ਇੱਕ ਛੋਟਾ ਕਾਲਾ ਪਰਸ ਹੈ।",
+"explainEn": "Size often comes before color in English adjective order.",
+"explainPa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ size ਅਕਸਰ color ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "small black"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best order: “a ____ car” (age + color).",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ ਕ੍ਰਮ ਚੁਣੋ: “a ____ car” (age + color)।",
+"options": ["old blue", "blue old", "older blue", "blue older"],
+"correct_index": 0,
+"correct_answer": "old blue",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He drives an old blue car.",
+"sentencePa": "ਉਹ ਇੱਕ ਪੁਰਾਣੀ ਨੀਲੀ ਕਾਰ ਚਲਾਉਂਦਾ ਹੈ।",
+"explainEn": "Age often comes before color: old (age) + blue (color).",
+"explainPa": "Age ਅਕਸਰ color ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ: old (age) + blue (color)।",
+"highlight": "old blue"
+},
+{
+"sentenceEn": "She bought a new red phone.",
+"sentencePa": "ਉਸਨੇ ਇੱਕ ਨਵਾਂ ਲਾਲ ਫ਼ੋਨ ਖਰੀਦਿਆ।",
+"explainEn": "New/old (age) commonly comes before color.",
+"explainPa": "New/old (age) ਆਮ ਤੌਰ ਤੇ color ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "new red"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best order: “a ____ house” (opinion + size).",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ ਕ੍ਰਮ ਚੁਣੋ: “a ____ house” (opinion + size)।",
+"options": ["beautiful big", "big beautiful", "beauty big", "bigly beautiful"],
+"correct_index": 0,
+"correct_answer": "beautiful big",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "They live in a beautiful big house.",
+"sentencePa": "ਉਹ ਇੱਕ ਸੁੰਦਰ ਵੱਡੇ ਘਰ ਵਿੱਚ ਰਹਿੰਦੇ ਹਨ।",
+"explainEn": "Opinion adjectives often come before size: beautiful (opinion) + big (size).",
+"explainPa": "Opinion adjectives ਅਕਸਰ size ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦੇ ਹਨ: beautiful (opinion) + big (size)।",
+"highlight": "beautiful big"
+},
+{
+"sentenceEn": "It is a nice small room.",
+"sentencePa": "ਇਹ ਇੱਕ ਸੋਹਣਾ ਛੋਟਾ ਕਮਰਾ ਹੈ।",
+"explainEn": "Nice (opinion) commonly comes before small (size).",
+"explainPa": "Nice (opinion) ਅਕਸਰ small (size) ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "nice small"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is an adverb of manner (how someone does something)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ adverb of manner ਹੈ? (ਕਿਵੇਂ ਕੰਮ ਹੁੰਦਾ ਹੈ)",
+"options": ["quickly", "quick", "speed", "runner"],
+"correct_index": 0,
+"correct_answer": "quickly",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He walks quickly.",
+"sentencePa": "ਉਹ ਜਲਦੀ ਤੁਰਦਾ ਹੈ।",
+"explainEn": "“Quickly” tells how he walks, so it is an adverb of manner.",
+"explainPa": "“Quickly” ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਤੁਰਦਾ ਹੈ, ਇਸ ਲਈ manner adverb ਹੈ।",
+"highlight": "quickly"
+},
+{
+"sentenceEn": "She speaks politely.",
+"sentencePa": "ਉਹ ਨਮ੍ਰਤਾ ਨਾਲ ਬੋਲਦੀ ਹੈ।",
+"explainEn": "Manner adverbs often end in -ly.",
+"explainPa": "Manner adverbs ਅਕਸਰ -ly ਨਾਲ ਖਤਮ ਹੁੰਦੇ ਹਨ।",
+"highlight": "politely"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct adverb: “She sings ____.”",
+"punjabi_text": "ਸਹੀ adverb ਚੁਣੋ: “She sings ____.”",
+"options": ["beautifully", "beautiful", "beauty", "beautify"],
+"correct_index": 0,
+"correct_answer": "beautifully",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She sings beautifully.",
+"sentencePa": "ਉਹ ਬਹੁਤ ਸੋਹਣੇ ਢੰਗ ਨਾਲ ਗਾਂਦੀ ਹੈ।",
+"explainEn": "We use an adverb to describe a verb (sings).",
+"explainPa": "Verb (sings) ਨੂੰ ਵਰਣਨ ਕਰਨ ਲਈ adverb ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "beautifully"
+},
+{
+"sentenceEn": "He drives carefully.",
+"sentencePa": "ਉਹ ਧਿਆਨ ਨਾਲ ਗੱਡੀ ਚਲਾਉਂਦਾ ਹੈ।",
+"explainEn": "Adverbs tell how an action happens.",
+"explainPa": "Adverbs ਦੱਸਦੇ ਹਨ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।",
+"highlight": "carefully"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct word: “He is a ____ driver.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “He is a ____ driver.”",
+"options": ["careful", "carefully", "care", "cared"],
+"correct_index": 0,
+"correct_answer": "careful",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He is a careful driver.",
+"sentencePa": "ਉਹ ਧਿਆਨ ਵਾਲਾ ਡਰਾਈਵਰ ਹੈ।",
+"explainEn": "We use an adjective to describe a noun (driver).",
+"explainPa": "Noun (driver) ਨੂੰ ਵਰਣਨ ਕਰਨ ਲਈ adjective ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "careful"
+},
+{
+"sentenceEn": "He drives carefully.",
+"sentencePa": "ਉਹ ਧਿਆਨ ਨਾਲ ਗੱਡੀ ਚਲਾਉਂਦਾ ਹੈ।",
+"explainEn": "Adjective describes the person; adverb describes the action.",
+"explainPa": "Adjective ਵਿਅਕਤੀ/ਨਾਮ ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ; adverb ਕਿਰਿਆ ਦਾ।",
+"highlight": "carefully"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which word is an adverb of time (when)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ adverb of time ਹੈ? (ਕਦੋਂ?)",
+"options": ["today", "blue", "chair", "under"],
+"correct_index": 0,
+"correct_answer": "today",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am busy today.",
+"sentencePa": "ਮੈਂ ਅੱਜ ਰੁੱਝਿਆ/ਰੁੱਝੀ ਹਾਂ।",
+"explainEn": "“Today” tells when, so it is an adverb of time.",
+"explainPa": "“Today” ਕਦੋਂ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ time adverb ਹੈ।",
+"highlight": "today"
+},
+{
+"sentenceEn": "We will meet tomorrow.",
+"sentencePa": "ਅਸੀਂ ਕੱਲ੍ਹ ਮਿਲਾਂਗੇ।",
+"explainEn": "Time adverbs include today, tomorrow, yesterday, now.",
+"explainPa": "Time adverbs ਵਿੱਚ today, tomorrow, yesterday, now ਆਉਂਦੇ ਹਨ।",
+"highlight": "tomorrow"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct adverb of time: “I studied ____.”",
+"punjabi_text": "ਸਹੀ time adverb ਚੁਣੋ: “I studied ____.”",
+"options": ["yesterday", "red", "soft", "kitchen"],
+"correct_index": 0,
+"correct_answer": "yesterday",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I studied yesterday.",
+"sentencePa": "ਮੈਂ ਕੱਲ੍ਹ ਪੜ੍ਹਿਆ ਸੀ।",
+"explainEn": "“Yesterday” tells when the studying happened.",
+"explainPa": "“Yesterday” ਦੱਸਦਾ ਹੈ ਕਿ ਪੜ੍ਹਾਈ ਕਦੋਂ ਹੋਈ।",
+"highlight": "yesterday"
+},
+{
+"sentenceEn": "She called me yesterday.",
+"sentencePa": "ਉਸਨੇ ਮੈਨੂੰ ਕੱਲ੍ਹ ਫ਼ੋਨ ਕੀਤਾ ਸੀ।",
+"explainEn": "Time adverbs can be placed at the end of a sentence.",
+"explainPa": "Time adverbs ਵਾਕ ਦੇ ਅਖੀਰ ਵਿੱਚ ਵੀ ਆ ਸਕਦੇ ਹਨ।",
+"highlight": "yesterday"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best sentence with an adverb of time.",
+"punjabi_text": "Time adverb ਵਾਲਾ ਸਭ ਤੋਂ ਠੀਕ ਵਾਕ ਚੁਣੋ।",
+"options": ["We will leave now.", "We will now leave yesterday.", "We now yesterday will leave.", "We will leave quick."],
+"correct_index": 0,
+"correct_answer": "We will leave now.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We will leave now.",
+"sentencePa": "ਅਸੀਂ ਹੁਣ ਨਿਕਲਾਂਗੇ।",
+"explainEn": "“Now” is an adverb of time meaning at this moment.",
+"explainPa": "“Now” time adverb ਹੈ ਜਿਸਦਾ ਮਤਲਬ ਇਸ ਸਮੇਂ ਹੈ।",
+"highlight": "now"
+},
+{
+"sentenceEn": "I will call you later.",
+"sentencePa": "ਮੈਂ ਤੁਹਾਨੂੰ ਬਾਅਦ ਵਿੱਚ ਫ਼ੋਨ ਕਰਾਂਗਾ/ਕਰਾਂਗੀ।",
+"explainEn": "Time adverbs like now/later show when something happens.",
+"explainPa": "Now/later ਵਰਗੇ time adverbs ਦੱਸਦੇ ਹਨ ਕਿ ਕੰਮ ਕਦੋਂ ਹੋਵੇਗਾ।",
+"highlight": "later"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct word: “He speaks ____.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “He speaks ____.”",
+"options": ["slowly", "slow", "slowness", "slowed"],
+"correct_index": 0,
+"correct_answer": "slowly",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He speaks slowly.",
+"sentencePa": "ਉਹ ਹੌਲੀ ਬੋਲਦਾ ਹੈ।",
+"explainEn": "Adverbs describe verbs; “slowly” describes how he speaks.",
+"explainPa": "Adverb verb ਦਾ ਵਰਣਨ ਕਰਦਾ ਹੈ; “slowly” ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਬੋਲਦਾ ਹੈ।",
+"highlight": "slowly"
+},
+{
+"sentenceEn": "Please talk slowly.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ ਹੌਲੀ ਗੱਲ ਕਰੋ।",
+"explainEn": "Manner adverbs are common after the verb.",
+"explainPa": "Manner adverbs ਅਕਸਰ verb ਤੋਂ ਬਾਅਦ ਆਉਂਦੇ ਹਨ।",
+"highlight": "slowly"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["She is very smart.", "She is very smartly.", "She very smart is.", "She is smart very."],
+"correct_index": 0,
+"correct_answer": "She is very smart.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She is very smart.",
+"sentencePa": "ਉਹ ਬਹੁਤ ਸਮਝਦਾਰ ਹੈ।",
+"explainEn": "“Smart” is an adjective after “is.” “Very” intensifies the adjective.",
+"explainPa": "“Is” ਤੋਂ ਬਾਅਦ “smart” adjective ਹੈ। “Very” adjective ਨੂੰ ਵਧਾਉਂਦਾ ਹੈ।",
+"highlight": "very smart"
+},
+{
+"sentenceEn": "He is really tired.",
+"sentencePa": "ਉਹ ਵਾਕਈ ਥੱਕਿਆ ਹੈ।",
+"explainEn": "Words like very/really are adverbs that modify adjectives.",
+"explainPa": "Very/really ਵਰਗੇ ਸ਼ਬਦ adverbs ਹਨ ਜੋ adjectives ਨੂੰ modify ਕਰਦੇ ਹਨ।",
+"highlight": "really tired"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["He did the work carefully.", "He did the work careful.", "He carefully did work the.", "He did carefully the work."],
+"correct_index": 0,
+"correct_answer": "He did the work carefully.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He did the work carefully.",
+"sentencePa": "ਉਸਨੇ ਕੰਮ ਧਿਆਨ ਨਾਲ ਕੀਤਾ।",
+"explainEn": "Use an adverb to describe how the work was done: carefully.",
+"explainPa": "ਕੰਮ ਕਿਵੇਂ ਕੀਤਾ ਗਿਆ, ਇਹ ਦੱਸਣ ਲਈ adverb ਵਰਤਦੇ ਹਾਂ: carefully।",
+"highlight": "carefully"
+},
+{
+"sentenceEn": "She cleaned the room quickly.",
+"sentencePa": "ਉਸਨੇ ਕਮਰਾ ਜਲਦੀ ਸਾਫ਼ ਕੀਤਾ।",
+"explainEn": "Manner adverbs commonly appear after the object.",
+"explainPa": "Manner adverbs ਅਕਸਰ object ਤੋਂ ਬਾਅਦ ਆਉਂਦੇ ਹਨ।",
+"highlight": "quickly"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct word: “This is a ____ answer.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “This is a ____ answer.”",
+"options": ["correct", "correctly", "correctness", "correcting"],
+"correct_index": 0,
+"correct_answer": "correct",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "This is a correct answer.",
+"sentencePa": "ਇਹ ਸਹੀ ਜਵਾਬ ਹੈ।",
+"explainEn": "We use an adjective to describe a noun (answer).",
+"explainPa": "Noun (answer) ਨੂੰ ਵਰਣਨ ਕਰਨ ਲਈ adjective ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "correct"
+},
+{
+"sentenceEn": "You answered correctly.",
+"sentencePa": "ਤੁਸੀਂ ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਜਵਾਬ ਦਿੱਤਾ।",
+"explainEn": "Adjective = correct (answer). Adverb = correctly (answered).",
+"explainPa": "Adjective = correct (answer). Adverb = correctly (answered).",
+"highlight": "correctly"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct word: “She answered ____.”",
+"punjabi_text": "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: “She answered ____.”",
+"options": ["correctly", "correct", "correction", "correctness"],
+"correct_index": 0,
+"correct_answer": "correctly",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She answered correctly.",
+"sentencePa": "ਉਸਨੇ ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਜਵਾਬ ਦਿੱਤਾ।",
+"explainEn": "We use an adverb to describe a verb (answered).",
+"explainPa": "Verb (answered) ਨੂੰ ਵਰਣਨ ਕਰਨ ਲਈ adverb ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "correctly"
+},
+{
+"sentenceEn": "He spoke clearly.",
+"sentencePa": "ਉਸਨੇ ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ ਬੋਲਿਆ।",
+"explainEn": "Many adverbs end in -ly and describe actions.",
+"explainPa": "ਕਈ adverbs -ly ਨਾਲ ਖਤਮ ਹੁੰਦੇ ਹਨ ਅਤੇ ਕਿਰਿਆ ਦਾ ਵਰਣਨ ਕਰਦੇ ਹਨ।",
+"highlight": "clearly"
+}
+]
+}
+]
+
+Batch 9 — Prepositions: Place and Movement (in/on/under/into/across)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is a preposition (it shows place or position)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ preposition ਹੈ? (ਜੋ ਥਾਂ/ਸਥਿਤੀ ਦੱਸਦਾ ਹੈ)",
+"options": ["under", "happy", "run", "quickly"],
+"correct_index": 0,
+"correct_answer": "under",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The cat is under the table.",
+"sentencePa": "ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।",
+"explainEn": "“Under” shows position, so it is a preposition.",
+"explainPa": "“Under” ਸਥਿਤੀ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ preposition ਹੈ।",
+"highlight": "under"
+},
+{
+"sentenceEn": "My shoes are under the bed.",
+"sentencePa": "ਮੇਰੇ ਜੁੱਤੇ ਬਿਸਤਰ ਦੇ ਹੇਠਾਂ ਹਨ।",
+"explainEn": "Prepositions tell where something is.",
+"explainPa": "Prepositions ਦੱਸਦੇ ਹਨ ਕਿ ਚੀਜ਼ ਕਿੱਥੇ ਹੈ।",
+"highlight": "under"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The book is ____ the table.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The book is ____ the table.”",
+"options": ["on", "in", "at", "to"],
+"correct_index": 0,
+"correct_answer": "on",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The book is on the table.",
+"sentencePa": "ਕਿਤਾਬ ਮੇਜ਼ ਤੇ ਹੈ।",
+"explainEn": "Use “on” when something is on a surface.",
+"explainPa": "ਜਦੋਂ ਚੀਜ਼ ਸਤ੍ਹਾ ਉੱਤੇ ਹੋਵੇ, “on” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "on"
+},
+{
+"sentenceEn": "The phone is on the desk.",
+"sentencePa": "ਫ਼ੋਨ ਡੈੱਸਕ ਤੇ ਹੈ।",
+"explainEn": "“On” is common for desks, tables, walls (surface).",
+"explainPa": "Desk, table, wall ਵਰਗੀਆਂ ਸਤ੍ਹਾਂ ਲਈ “on” ਆਮ ਹੈ।",
+"highlight": "on"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The keys are ____ my bag.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The keys are ____ my bag.”",
+"options": ["in", "on", "at", "under"],
+"correct_index": 0,
+"correct_answer": "in",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The keys are in my bag.",
+"sentencePa": "ਚਾਬੀਆਂ ਮੇਰੇ ਬੈਗ ਵਿੱਚ ਹਨ।",
+"explainEn": "Use “in” when something is inside.",
+"explainPa": "ਜਦੋਂ ਚੀਜ਼ ਅੰਦਰ ਹੋਵੇ, “in” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "in"
+},
+{
+"sentenceEn": "My wallet is in my pocket.",
+"sentencePa": "ਮੇਰਾ ਬਟੂਆ ਮੇਰੀ ਜੇਬ ਵਿੱਚ ਹੈ।",
+"explainEn": "“In” shows something is inside a space/container.",
+"explainPa": "“In” ਦੱਸਦਾ ਹੈ ਕਿ ਚੀਜ਼ ਕਿਸੇ ਜਗ੍ਹਾ/ਡੱਬੇ ਦੇ ਅੰਦਰ ਹੈ।",
+"highlight": "in"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “He is waiting ____ the bus stop.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “He is waiting ____ the bus stop.”",
+"options": ["at", "in", "on", "to"],
+"correct_index": 0,
+"correct_answer": "at",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He is waiting at the bus stop.",
+"sentencePa": "ਉਹ ਬਸ ਸਟਾਪ ਤੇ ਉਡੀਕ ਕਰ ਰਿਹਾ ਹੈ।",
+"explainEn": "Use “at” for specific points/places (bus stop, station).",
+"explainPa": "ਖ਼ਾਸ ਥਾਵਾਂ/ਪੌਇੰਟ ਲਈ “at” ਵਰਤਦੇ ਹਾਂ (bus stop, station)।",
+"highlight": "at"
+},
+{
+"sentenceEn": "We met at the station.",
+"sentencePa": "ਅਸੀਂ ਸਟੇਸ਼ਨ ਤੇ ਮਿਲੇ।",
+"explainEn": "“At” is common for meeting points.",
+"explainPa": "ਮਿਲਣ ਵਾਲੀ ਥਾਂ ਲਈ “at” ਆਮ ਹੈ।",
+"highlight": "at"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The picture is ____ the wall.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The picture is ____ the wall.”",
+"options": ["on", "in", "at", "to"],
+"correct_index": 0,
+"correct_answer": "on",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The picture is on the wall.",
+"sentencePa": "ਤਸਵੀਰ ਦੀਵਾਰ ਤੇ ਹੈ।",
+"explainEn": "Use “on” when something is attached to a surface (wall).",
+"explainPa": "ਜਦੋਂ ਚੀਜ਼ ਸਤ੍ਹਾ (wall) ਨਾਲ ਲੱਗੀ/ਲਟਕੀ ਹੋਵੇ, “on” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "on"
+},
+{
+"sentenceEn": "There is a clock on the wall.",
+"sentencePa": "ਦੀਵਾਰ ਤੇ ਘੜੀ ਹੈ।",
+"explainEn": "“On the wall” is a common phrase for hanging items.",
+"explainPa": "ਲਟਕੀਆਂ ਚੀਜ਼ਾਂ ਲਈ “on the wall” ਆਮ ਹੈ।",
+"highlight": "on"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The chair is ____ the table.” (position: next to)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The chair is ____ the table.” (ਮਤਲਬ: ਕੋਲ/ਬਗਲ ਵਿੱਚ)",
+"options": ["next to", "under", "inside", "behind"],
+"correct_index": 0,
+"correct_answer": "next to",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The chair is next to the table.",
+"sentencePa": "ਕੁਰਸੀ ਮੇਜ਼ ਦੇ ਕੋਲ ਹੈ।",
+"explainEn": "“Next to” means beside/near.",
+"explainPa": "“Next to” ਦਾ ਮਤਲਬ ਕੋਲ/ਬਗਲ ਵਿੱਚ ਹੁੰਦਾ ਹੈ।",
+"highlight": "next to"
+},
+{
+"sentenceEn": "My house is next to the park.",
+"sentencePa": "ਮੇਰਾ ਘਰ ਪਾਰਕ ਦੇ ਕੋਲ ਹੈ।",
+"explainEn": "Use “next to” for two things side by side.",
+"explainPa": "ਦੋ ਚੀਜ਼ਾਂ ਇਕੱਠੇ/ਬਗਲ ਵਿੱਚ ਹੋਣ ਲਈ “next to” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "next to"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The cat is ____ the chair.” (position: behind)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The cat is ____ the chair.” (ਮਤਲਬ: ਪਿੱਛੇ)",
+"options": ["behind", "between", "above", "into"],
+"correct_index": 0,
+"correct_answer": "behind",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The cat is behind the chair.",
+"sentencePa": "ਬਿੱਲੀ ਕੁਰਸੀ ਦੇ ਪਿੱਛੇ ਹੈ।",
+"explainEn": "“Behind” shows the position at the back.",
+"explainPa": "“Behind” ਪਿੱਛੇ ਵਾਲੀ ਸਥਿਤੀ ਦੱਸਦਾ ਹੈ।",
+"highlight": "behind"
+},
+{
+"sentenceEn": "The shop is behind the bank.",
+"sentencePa": "ਦੁਕਾਨ ਬੈਂਕ ਦੇ ਪਿੱਛੇ ਹੈ।",
+"explainEn": "“Behind” is used for location relative to another place.",
+"explainPa": "ਕਿਸੇ ਹੋਰ ਥਾਂ ਦੇ ਮੁਕਾਬਲੇ ਸਥਿਤੀ ਦੱਸਣ ਲਈ “behind” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "behind"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The lamp is ____ the table.” (position: above)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The lamp is ____ the table.” (ਮਤਲਬ: ਉੱਪਰ)",
+"options": ["above", "under", "between", "into"],
+"correct_index": 0,
+"correct_answer": "above",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The lamp is above the table.",
+"sentencePa": "ਲੈਂਪ ਮੇਜ਼ ਦੇ ਉੱਪਰ ਹੈ।",
+"explainEn": "“Above” means higher than something.",
+"explainPa": "“Above” ਦਾ ਮਤਲਬ ਕਿਸੇ ਚੀਜ਼ ਤੋਂ ਉੱਚਾ/ਉੱਪਰ ਹੁੰਦਾ ਹੈ।",
+"highlight": "above"
+},
+{
+"sentenceEn": "The clock is above the door.",
+"sentencePa": "ਘੜੀ ਦਰਵਾਜ਼ੇ ਦੇ ਉੱਪਰ ਹੈ।",
+"explainEn": "Use “above” when something is higher in position.",
+"explainPa": "ਉੱਚੀ ਸਥਿਤੀ ਲਈ “above” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "above"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The ball is ____ the box.” (position: inside)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The ball is ____ the box.” (ਮਤਲਬ: ਅੰਦਰ)",
+"options": ["in", "on", "at", "over"],
+"correct_index": 0,
+"correct_answer": "in",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The ball is in the box.",
+"sentencePa": "ਗੇਂਦ ਡੱਬੇ ਵਿੱਚ ਹੈ।",
+"explainEn": "Use “in” for inside a container/space.",
+"explainPa": "ਡੱਬੇ/ਜਗ੍ਹਾ ਦੇ ਅੰਦਰ ਲਈ “in” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "in"
+},
+{
+"sentenceEn": "The milk is in the fridge.",
+"sentencePa": "ਦੁੱਧ ਫ੍ਰਿਜ਼ ਵਿੱਚ ਹੈ।",
+"explainEn": "Fridge, box, bag are common with “in.”",
+"explainPa": "fridge, box, bag ਨਾਲ “in” ਆਮ ਹੈ।",
+"highlight": "in"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “He walked ____ the room.” (movement: into)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “He walked ____ the room.” (ਮਤਲਬ: ਅੰਦਰ ਗਿਆ)",
+"options": ["into", "in", "on", "at"],
+"correct_index": 0,
+"correct_answer": "into",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He walked into the room.",
+"sentencePa": "ਉਹ ਕਮਰੇ ਵਿੱਚ ਅੰਦਰ ਗਿਆ।",
+"explainEn": "“Into” shows movement from outside to inside.",
+"explainPa": "“Into” ਬਾਹਰ ਤੋਂ ਅੰਦਰ ਜਾਣ ਵਾਲੀ ਗਤੀ ਦੱਸਦਾ ਹੈ।",
+"highlight": "into"
+},
+{
+"sentenceEn": "She ran into the house.",
+"sentencePa": "ਉਹ ਘਰ ਵਿੱਚ ਦੌੜ ਕੇ ਅੰਦਰ ਗਈ।",
+"explainEn": "Use “into” when there is motion toward inside.",
+"explainPa": "ਜਦੋਂ ਅੰਦਰ ਵੱਲ ਗਤੀ ਹੋਵੇ, “into” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "into"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “He walked ____ the park.” (movement: across)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “He walked ____ the park.” (ਮਤਲਬ: ਪਾਰ)",
+"options": ["across", "into", "under", "at"],
+"correct_index": 0,
+"correct_answer": "across",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He walked across the park.",
+"sentencePa": "ਉਹ ਪਾਰਕ ਨੂੰ ਪਾਰ ਕਰਕੇ ਤੁਰਿਆ।",
+"explainEn": "“Across” means from one side to the other.",
+"explainPa": "“Across” ਦਾ ਮਤਲਬ ਇੱਕ ਪਾਸੇ ਤੋਂ ਦੂਜੇ ਪਾਸੇ।",
+"highlight": "across"
+},
+{
+"sentenceEn": "They ran across the street.",
+"sentencePa": "ਉਹ ਸੜਕ ਪਾਰ ਦੌੜੇ।",
+"explainEn": "“Across” is common for streets, bridges, parks.",
+"explainPa": "Street, bridge, park ਨਾਲ “across” ਆਮ ਹੈ।",
+"highlight": "across"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The school is ____ the bank and the store.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The school is ____ the bank and the store.”",
+"options": ["between", "behind", "under", "into"],
+"correct_index": 0,
+"correct_answer": "between",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The school is between the bank and the store.",
+"sentencePa": "ਸਕੂਲ ਬੈਂਕ ਅਤੇ ਦੁਕਾਨ ਦੇ ਵਿਚਕਾਰ ਹੈ।",
+"explainEn": "“Between” is used for two things/places.",
+"explainPa": "ਦੋ ਚੀਜ਼ਾਂ/ਥਾਵਾਂ ਲਈ “between” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "between"
+},
+{
+"sentenceEn": "Sit between your friends.",
+"sentencePa": "ਆਪਣੇ ਦੋਸਤਾਂ ਦੇ ਵਿਚਕਾਰ ਬੈਠੋ।",
+"explainEn": "Between = middle of two sides.",
+"explainPa": "Between = ਦੋ ਪਾਸਿਆਂ ਦੇ ਵਿਚਕਾਰ।",
+"highlight": "between"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["The dog is in front of the house.", "The dog is front of the house.", "The dog is in front the house.", "The dog is in front to the house."],
+"correct_index": 0,
+"correct_answer": "The dog is in front of the house.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The dog is in front of the house.",
+"sentencePa": "ਕੁੱਤਾ ਘਰ ਦੇ ਸਾਹਮਣੇ ਹੈ।",
+"explainEn": "The correct phrase is “in front of + noun.”",
+"explainPa": "ਸਹੀ ਫਰੇਜ਼ “in front of + noun” ਹੈ।",
+"highlight": "in front of"
+},
+{
+"sentenceEn": "The car is in front of the shop.",
+"sentencePa": "ਕਾਰ ਦੁਕਾਨ ਦੇ ਸਾਹਮਣੇ ਹੈ।",
+"explainEn": "Use “of” after “in front.”",
+"explainPa": "“In front” ਤੋਂ ਬਾਅਦ “of” ਆਉਂਦਾ ਹੈ।",
+"highlight": "in front of"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["The shop is near my house.", "The shop is near to my house.", "The shop is near at my house.", "The shop is near in my house."],
+"correct_index": 0,
+"correct_answer": "The shop is near my house.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The shop is near my house.",
+"sentencePa": "ਦੁਕਾਨ ਮੇਰੇ ਘਰ ਦੇ ਨੇੜੇ ਹੈ।",
+"explainEn": "“Near” can be used directly before a noun phrase: near my house.",
+"explainPa": "“Near” noun phrase ਤੋਂ ਪਹਿਲਾਂ ਸਿੱਧਾ ਆ ਸਕਦਾ ਹੈ: near my house।",
+"highlight": "near"
+},
+{
+"sentenceEn": "The station is near the hotel.",
+"sentencePa": "ਸਟੇਸ਼ਨ ਹੋਟਲ ਦੇ ਨੇੜੇ ਹੈ।",
+"explainEn": "Near = close to (often without “to”).",
+"explainPa": "Near = close to (ਅਕਸਰ “to” ਤੋਂ ਬਿਨਾਂ)।",
+"highlight": "near"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The plane flew ____ the city.” (position: over)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The plane flew ____ the city.” (ਮਤਲਬ: ਉੱਪਰੋਂ)",
+"options": ["over", "under", "between", "into"],
+"correct_index": 0,
+"correct_answer": "over",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The plane flew over the city.",
+"sentencePa": "ਜਹਾਜ਼ ਸ਼ਹਿਰ ਦੇ ਉੱਪਰੋਂ ਉੱਡਿਆ।",
+"explainEn": "“Over” shows movement above something.",
+"explainPa": "“Over” ਕਿਸੇ ਚੀਜ਼ ਦੇ ਉੱਪਰੋਂ ਗਤੀ ਦੱਸਦਾ ਹੈ।",
+"highlight": "over"
+},
+{
+"sentenceEn": "We walked over the bridge.",
+"sentencePa": "ਅਸੀਂ ਪੁਲ ਦੇ ਉੱਪਰੋਂ ਤੁਰੇ।",
+"explainEn": "“Over” can be used for bridges and obstacles too.",
+"explainPa": "ਪੁਲ ਜਾਂ ਰੁਕਾਵਟਾਂ ਲਈ ਵੀ “over” ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+"highlight": "over"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The river goes ____ the village.” (movement: through)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The river goes ____ the village.” (ਮਤਲਬ: ਵਿਚੋਂ)",
+"options": ["through", "into", "between", "under"],
+"correct_index": 0,
+"correct_answer": "through",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The river goes through the village.",
+"sentencePa": "ਦਰੀਆ ਪਿੰਡ ਦੇ ਵਿਚੋਂ ਲੰਘਦਾ ਹੈ।",
+"explainEn": "“Through” means inside and from one side to the other.",
+"explainPa": "“Through” ਦਾ ਮਤਲਬ ਅੰਦਰੋਂ ਅਤੇ ਇੱਕ ਪਾਸੇ ਤੋਂ ਦੂਜੇ ਪਾਸੇ।",
+"highlight": "through"
+},
+{
+"sentenceEn": "We walked through the market.",
+"sentencePa": "ਅਸੀਂ ਬਜ਼ਾਰ ਦੇ ਵਿਚੋਂ ਤੁਰੇ।",
+"explainEn": "Use “through” for moving inside a place/area.",
+"explainPa": "ਕਿਸੇ ਖੇਤਰ ਦੇ ਅੰਦਰੋਂ ਲੰਘਣ ਲਈ “through” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "through"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["The cat jumped onto the bed.", "The cat jumped on the bed. (meaning: landed there)", "The cat jumped into the bed.", "The cat jumped at the bed."],
+"correct_index": 0,
+"correct_answer": "The cat jumped onto the bed.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The cat jumped onto the bed.",
+"sentencePa": "ਬਿੱਲੀ ਬਿਸਤਰ ਉੱਤੇ ਛਾਲ ਮਾਰ ਕੇ ਚੜ੍ਹੀ।",
+"explainEn": "“Onto” emphasizes movement to a surface.",
+"explainPa": "“Onto” ਸਤ੍ਹਾ ਉੱਤੇ ਜਾਣ ਵਾਲੀ ਗਤੀ ਉਤੇ ਜ਼ੋਰ ਦਿੰਦਾ ਹੈ।",
+"highlight": "onto"
+},
+{
+"sentenceEn": "Put the book onto the table.",
+"sentencePa": "ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਰੱਖੋ।",
+"explainEn": "Onto = movement; on = location.",
+"explainPa": "Onto = ਗਤੀ; on = ਸਥਿਤੀ।",
+"highlight": "onto"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “We are walking ____ the school.” (direction: to)",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “We are walking ____ the school.” (ਦਿਸ਼ਾ: ਵੱਲ)",
+"options": ["to", "at", "in", "on"],
+"correct_index": 0,
+"correct_answer": "to",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We are walking to the school.",
+"sentencePa": "ਅਸੀਂ ਸਕੂਲ ਵੱਲ ਤੁਰ ਰਹੇ ਹਾਂ।",
+"explainEn": "Use “to” for direction or destination.",
+"explainPa": "ਦਿਸ਼ਾ ਜਾਂ ਮੰਜ਼ਿਲ ਲਈ “to” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "to"
+},
+{
+"sentenceEn": "She goes to work every day.",
+"sentencePa": "ਉਹ ਹਰ ਰੋਜ਼ ਕੰਮ ਤੇ ਜਾਂਦੀ ਹੈ।",
+"explainEn": "“To” shows where someone is going.",
+"explainPa": "“To” ਦੱਸਦਾ ਹੈ ਕਿ ਕੋਈ ਕਿੱਥੇ ਜਾ ਰਿਹਾ ਹੈ।",
+"highlight": "to"
+}
+]
+}
+]
+
+Batch 10 — Prepositions: Time and Common Phrases (at/on/in/since/for/by)
+
+[
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition of time: “I wake up ____ 7:00.”",
+"punjabi_text": "ਸਹੀ time preposition ਚੁਣੋ: “I wake up ____ 7:00.”",
+"options": ["at", "on", "in", "to"],
+"correct_index": 0,
+"correct_answer": "at",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I wake up at 7:00.",
+"sentencePa": "ਮੈਂ 7 ਵਜੇ ਉੱਠਦਾ/ਉੱਠਦੀ ਹਾਂ।",
+"explainEn": "Use “at” for exact times (7:00, 9:30).",
+"explainPa": "ਠੀਕ ਸਮੇਂ (7:00, 9:30) ਲਈ “at” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "at"
+},
+{
+"sentenceEn": "The class starts at 10:15.",
+"sentencePa": "ਕਲਾਸ 10:15 ਤੇ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ।",
+"explainEn": "“At” points to a specific clock time.",
+"explainPa": "“At” ਖ਼ਾਸ ਘੜੀ ਵਾਲਾ ਸਮਾਂ ਦੱਸਦਾ ਹੈ।",
+"highlight": "at"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition of time: “We meet ____ Monday.”",
+"punjabi_text": "ਸਹੀ time preposition ਚੁਣੋ: “We meet ____ Monday.”",
+"options": ["on", "at", "in", "to"],
+"correct_index": 0,
+"correct_answer": "on",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We meet on Monday.",
+"sentencePa": "ਅਸੀਂ ਸੋਮਵਾਰ ਨੂੰ ਮਿਲਦੇ ਹਾਂ।",
+"explainEn": "Use “on” for days and dates (on Monday, on June 5).",
+"explainPa": "ਦਿਨਾਂ ਅਤੇ ਤਾਰੀਖਾਂ ਲਈ “on” ਵਰਤਦੇ ਹਾਂ (on Monday, on June 5)।",
+"highlight": "on"
+},
+{
+"sentenceEn": "My birthday is on May 2.",
+"sentencePa": "ਮੇਰਾ ਜਨਮਦਿਨ 2 ਮਈ ਨੂੰ ਹੈ।",
+"explainEn": "“On” is used with a specific day/date.",
+"explainPa": "ਖ਼ਾਸ ਦਿਨ/ਤਾਰੀਖ਼ ਨਾਲ “on” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "on"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition of time: “I study ____ the morning.”",
+"punjabi_text": "ਸਹੀ time preposition ਚੁਣੋ: “I study ____ the morning.”",
+"options": ["in", "on", "at", "to"],
+"correct_index": 0,
+"correct_answer": "in",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I study in the morning.",
+"sentencePa": "ਮੈਂ ਸਵੇਰੇ ਪੜ੍ਹਦਾ/ਪੜ੍ਹਦੀ ਹਾਂ।",
+"explainEn": "Use “in” for parts of the day: in the morning/afternoon/evening.",
+"explainPa": "ਦਿਨ ਦੇ ਹਿੱਸਿਆਂ ਲਈ “in” ਵਰਤਦੇ ਹਾਂ: in the morning/afternoon/evening।",
+"highlight": "in"
+},
+{
+"sentenceEn": "He works in the afternoon.",
+"sentencePa": "ਉਹ ਦੁਪਹਿਰ ਨੂੰ ਕੰਮ ਕਰਦਾ ਹੈ।",
+"explainEn": "“In” works for general time periods.",
+"explainPa": "“In” ਆਮ ਸਮੇਂ ਦੇ ਹਿੱਸੇ ਲਈ ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "in"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition of time: “We eat dinner ____ night.”",
+"punjabi_text": "ਸਹੀ time preposition ਚੁਣੋ: “We eat dinner ____ night.”",
+"options": ["at", "in", "on", "to"],
+"correct_index": 0,
+"correct_answer": "at",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "We eat dinner at night.",
+"sentencePa": "ਅਸੀਂ ਰਾਤ ਨੂੰ ਖਾਣਾ ਖਾਂਦੇ ਹਾਂ।",
+"explainEn": "Common phrase: at night (also: at noon, at midnight).",
+"explainPa": "ਆਮ ਫਰੇਜ਼: at night (ਇਸੇ ਤਰ੍ਹਾਂ: at noon, at midnight)।",
+"highlight": "at night"
+},
+{
+"sentenceEn": "I sleep at night.",
+"sentencePa": "ਮੈਂ ਰਾਤ ਨੂੰ ਸੌਂਦਾ/ਸੌਂਦੀ ਹਾਂ।",
+"explainEn": "Use “at night” as a set time phrase.",
+"explainPa": "“At night” ਇੱਕ set phrase ਵਾਂਗ ਵਰਤਦੇ ਹਨ।",
+"highlight": "at night"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I was born in 2001.", "I was born on 2001.", "I was born at 2001.", "I was born to 2001."],
+"correct_index": 0,
+"correct_answer": "I was born in 2001.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I was born in 2001.",
+"sentencePa": "ਮੇਰਾ ਜਨਮ 2001 ਵਿੱਚ ਹੋਇਆ ਸੀ।",
+"explainEn": "Use “in” for years and months (in 2001, in July).",
+"explainPa": "ਸਾਲ ਅਤੇ ਮਹੀਨੇ ਲਈ “in” ਵਰਤਦੇ ਹਾਂ (in 2001, in July)।",
+"highlight": "in"
+},
+{
+"sentenceEn": "She moved here in March.",
+"sentencePa": "ਉਹ ਮਾਰਚ ਵਿੱਚ ਇੱਥੇ ਆਈ।",
+"explainEn": "“In” is used for longer time periods.",
+"explainPa": "ਲੰਮੇ ਸਮੇਂ ਦੇ ਹਿੱਸੇ ਲਈ “in” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "in"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “The meeting is ____ Friday at 3.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “The meeting is ____ Friday at 3.”",
+"options": ["on", "in", "at", "to"],
+"correct_index": 0,
+"correct_answer": "on",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "The meeting is on Friday at 3.",
+"sentencePa": "ਮੀਟਿੰਗ ਸ਼ੁੱਕਰਵਾਰ ਨੂੰ 3 ਵਜੇ ਹੈ।",
+"explainEn": "Use “on” for the day (Friday) and “at” for the time (3).",
+"explainPa": "ਦਿਨ (Friday) ਲਈ “on” ਅਤੇ ਸਮੇਂ (3) ਲਈ “at” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "on Friday"
+},
+{
+"sentenceEn": "The class is on Monday at 10.",
+"sentencePa": "ਕਲਾਸ ਸੋਮਵਾਰ ਨੂੰ 10 ਵਜੇ ਹੈ।",
+"explainEn": "Day + time = on + at.",
+"explainPa": "Day + time = on + at।",
+"highlight": "on"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “I will call you ____ an hour.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “I will call you ____ an hour.”",
+"options": ["in", "on", "at", "by"],
+"correct_index": 0,
+"correct_answer": "in",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I will call you in an hour.",
+"sentencePa": "ਮੈਂ ਇੱਕ ਘੰਟੇ ਵਿੱਚ ਤੁਹਾਨੂੰ ਫ਼ੋਨ ਕਰਾਂਗਾ/ਕਰਾਂਗੀ।",
+"explainEn": "Use “in” for time in the future (after a period).",
+"explainPa": "ਭਵਿੱਖ ਵਿੱਚ ਸਮੇਂ (ਇੱਕ ਅੰਤਰਾਲ ਤੋਂ ਬਾਅਦ) ਲਈ “in” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "in"
+},
+{
+"sentenceEn": "The bus will come in 10 minutes.",
+"sentencePa": "ਬਸ 10 ਮਿੰਟ ਵਿੱਚ ਆਵੇਗੀ।",
+"explainEn": "“In” answers: how soon?",
+"explainPa": "“In” ਦਾ ਜਵਾਬ: ਕਿੰਨੀ ਦੇਰ ਵਿੱਚ?",
+"highlight": "in"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “Please finish the work ____ 5 p.m.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “Please finish the work ____ 5 p.m.”",
+"options": ["by", "in", "at", "on"],
+"correct_index": 0,
+"correct_answer": "by",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Please finish the work by 5 p.m.",
+"sentencePa": "ਕਿਰਪਾ ਕਰਕੇ 5 ਵਜੇ ਤੱਕ ਕੰਮ ਮੁਕਾ ਦਿਓ।",
+"explainEn": "“By” means not later than (deadline).",
+"explainPa": "“By” ਦਾ ਮਤਲਬ ਅਖੀਰਲੀ ਮਿਆਦ (5 ਵਜੇ ਤੋਂ ਦੇਰ ਨਹੀਂ)।",
+"highlight": "by"
+},
+{
+"sentenceEn": "Send me the file by tomorrow.",
+"sentencePa": "ਮੈਨੂੰ ਕੱਲ੍ਹ ਤੱਕ ਫ਼ਾਈਲ ਭੇਜ ਦਿਓ।",
+"explainEn": "“By” is used for deadlines.",
+"explainPa": "Deadline ਲਈ “by” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "by"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “I have lived here ____ 2019.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “I have lived here ____ 2019.”",
+"options": ["since", "for", "in", "at"],
+"correct_index": 0,
+"correct_answer": "since",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I have lived here since 2019.",
+"sentencePa": "ਮੈਂ 2019 ਤੋਂ ਇੱਥੇ ਰਹਿ ਰਿਹਾ/ਰਹੀ ਹਾਂ।",
+"explainEn": "Use “since” with a starting point (2019).",
+"explainPa": "ਸ਼ੁਰੂਆਤੀ ਬਿੰਦੂ (2019) ਲਈ “since” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "since"
+},
+{
+"sentenceEn": "She has worked here since Monday.",
+"sentencePa": "ਉਹ ਸੋਮਵਾਰ ਤੋਂ ਇੱਥੇ ਕੰਮ ਕਰ ਰਹੀ ਹੈ।",
+"explainEn": "Since = from a specific time until now.",
+"explainPa": "Since = ਖ਼ਾਸ ਸਮੇਂ ਤੋਂ ਹੁਣ ਤੱਕ।",
+"highlight": "since"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “I have lived here ____ five years.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “I have lived here ____ five years.”",
+"options": ["for", "since", "in", "on"],
+"correct_index": 0,
+"correct_answer": "for",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I have lived here for five years.",
+"sentencePa": "ਮੈਂ ਪੰਜ ਸਾਲਾਂ ਤੋਂ ਇੱਥੇ ਰਹਿ ਰਿਹਾ/ਰਹੀ ਹਾਂ।",
+"explainEn": "Use “for” with a duration (five years).",
+"explainPa": "ਅਵਧੀ (five years) ਲਈ “for” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "for"
+},
+{
+"sentenceEn": "He has waited for 30 minutes.",
+"sentencePa": "ਉਸਨੇ 30 ਮਿੰਟ ਉਡੀਕ ਕੀਤੀ ਹੈ।",
+"explainEn": "For = length of time.",
+"explainPa": "For = ਸਮੇਂ ਦੀ ਲੰਬਾਈ।",
+"highlight": "for"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I have been here for two hours.", "I have been here since two hours.", "I have been here in two hours.", "I have been here at two hours."],
+"correct_index": 0,
+"correct_answer": "I have been here for two hours.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I have been here for two hours.",
+"sentencePa": "ਮੈਂ ਦੋ ਘੰਟਿਆਂ ਤੋਂ ਇੱਥੇ ਹਾਂ।",
+"explainEn": "“For” is correct with a duration (two hours).",
+"explainPa": "ਅਵਧੀ (two hours) ਨਾਲ “for” ਸਹੀ ਹੈ।",
+"highlight": "for"
+},
+{
+"sentenceEn": "I have been here since 2 p.m.",
+"sentencePa": "ਮੈਂ 2 ਵਜੇ ਤੋਂ ਇੱਥੇ ਹਾਂ।",
+"explainEn": "Use “since” with a start time (2 p.m.).",
+"explainPa": "ਸ਼ੁਰੂਆਤੀ ਸਮੇਂ (2 p.m.) ਨਾਲ “since” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "since"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “I am interested ____ English.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “I am interested ____ English.”",
+"options": ["in", "on", "at", "to"],
+"correct_index": 0,
+"correct_answer": "in",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am interested in English.",
+"sentencePa": "ਮੈਨੂੰ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਦਿਲਚਸਪੀ ਹੈ।",
+"explainEn": "Common phrase: interested in.",
+"explainPa": "ਆਮ ਫਰੇਜ਼: interested in।",
+"highlight": "in"
+},
+{
+"sentenceEn": "She is interested in music.",
+"sentencePa": "ਉਸਨੂੰ ਸੰਗੀਤ ਵਿੱਚ ਦਿਲਚਸਪੀ ਹੈ।",
+"explainEn": "Many adjective + preposition pairs are fixed.",
+"explainPa": "ਕਈ adjective + preposition ਜੋੜ fixed ਹੁੰਦੇ ਹਨ।",
+"highlight": "interested in"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “He is good ____ math.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “He is good ____ math.”",
+"options": ["at", "in", "on", "to"],
+"correct_index": 0,
+"correct_answer": "at",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He is good at math.",
+"sentencePa": "ਉਹ ਗਣਿਤ ਵਿੱਚ ਚੰਗਾ ਹੈ।",
+"explainEn": "Common phrase: good at (skills).",
+"explainPa": "ਆਮ ਫਰੇਜ਼: good at (ਕੌਸ਼ਲ/ਸਕਿਲ)।",
+"highlight": "at"
+},
+{
+"sentenceEn": "She is good at cooking.",
+"sentencePa": "ਉਹ ਖਾਣਾ ਬਣਾਉਣ ਵਿੱਚ ਚੰਗੀ ਹੈ।",
+"explainEn": "Use “at” for abilities and skills.",
+"explainPa": "ਕੌਸ਼ਲ ਲਈ “at” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "good at"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “I am afraid ____ dogs.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “I am afraid ____ dogs.”",
+"options": ["of", "from", "in", "at"],
+"correct_index": 0,
+"correct_answer": "of",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am afraid of dogs.",
+"sentencePa": "ਮੈਨੂੰ ਕੁੱਤਿਆਂ ਤੋਂ ਡਰ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "Common phrase: afraid of.",
+"explainPa": "ਆਮ ਫਰੇਜ਼: afraid of।",
+"highlight": "of"
+},
+{
+"sentenceEn": "She is afraid of heights.",
+"sentencePa": "ਉਸਨੂੰ ਉੱਚਾਈ ਤੋਂ ਡਰ ਲੱਗਦਾ ਹੈ।",
+"explainEn": "“Of” is used after afraid.",
+"explainPa": "Afraid ਤੋਂ ਬਾਅਦ “of” ਵਰਤਦੇ ਹਨ।",
+"highlight": "afraid of"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “Thank you ____ your help.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “Thank you ____ your help.”",
+"options": ["for", "of", "to", "at"],
+"correct_index": 0,
+"correct_answer": "for",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Thank you for your help.",
+"sentencePa": "ਤੁਹਾਡੀ ਮਦਦ ਲਈ ਧੰਨਵਾਦ।",
+"explainEn": "Common phrase: thank you for + noun/gerund.",
+"explainPa": "ਆਮ ਫਰੇਜ਼: thank you for + noun/gerund।",
+"highlight": "for"
+},
+{
+"sentenceEn": "Thank you for coming today.",
+"sentencePa": "ਅੱਜ ਆਉਣ ਲਈ ਧੰਨਵਾਦ।",
+"explainEn": "“For” is used to say the reason.",
+"explainPa": "ਕਾਰਨ ਦੱਸਣ ਲਈ “for” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "Thank you for"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I am listening to music.", "I am listening music.", "I am listening at music.", "I am listening on music."],
+"correct_index": 0,
+"correct_answer": "I am listening to music.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I am listening to music.",
+"sentencePa": "ਮੈਂ ਸੰਗੀਤ ਸੁਣ ਰਿਹਾ/ਰਹੀ ਹਾਂ।",
+"explainEn": "In English, we say “listen to + something.”",
+"explainPa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ “listen to + something” ਕਹਿੰਦੇ ਹਨ।",
+"highlight": "to"
+},
+{
+"sentenceEn": "She listens to podcasts.",
+"sentencePa": "ਉਹ ਪੋਡਕਾਸਟ ਸੁਣਦੀ ਹੈ।",
+"explainEn": "This is a fixed verb + preposition pattern.",
+"explainPa": "ਇਹ verb + preposition ਦਾ fixed pattern ਹੈ।",
+"highlight": "listens to"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “He arrived ____ the airport at 6.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “He arrived ____ the airport at 6.”",
+"options": ["at", "in", "on", "to"],
+"correct_index": 0,
+"correct_answer": "at",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He arrived at the airport at 6.",
+"sentencePa": "ਉਹ 6 ਵਜੇ ਏਅਰਪੋਰਟ ਤੇ ਪਹੁੰਚਿਆ।",
+"explainEn": "Arrive at is common for specific places (airport, station).",
+"explainPa": "ਖ਼ਾਸ ਥਾਵਾਂ (airport, station) ਲਈ arrive at ਆਮ ਹੈ।",
+"highlight": "arrived at"
+},
+{
+"sentenceEn": "We arrived at the bus stop.",
+"sentencePa": "ਅਸੀਂ ਬਸ ਸਟਾਪ ਤੇ ਪਹੁੰਚੇ।",
+"explainEn": "Use “at” for points/locations.",
+"explainPa": "ਪੌਇੰਟ/ਥਾਂ ਲਈ “at” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "at"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct preposition: “She arrived ____ India last week.”",
+"punjabi_text": "ਸਹੀ preposition ਚੁਣੋ: “She arrived ____ India last week.”",
+"options": ["in", "at", "on", "to"],
+"correct_index": 0,
+"correct_answer": "in",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She arrived in India last week.",
+"sentencePa": "ਉਹ ਪਿਛਲੇ ਹਫ਼ਤੇ ਭਾਰਤ ਪਹੁੰਚੀ।",
+"explainEn": "Arrive in is common for countries and large places (India, New York).",
+"explainPa": "ਦੇਸ਼ਾਂ ਅਤੇ ਵੱਡੀਆਂ ਥਾਵਾਂ ਲਈ arrive in ਆਮ ਹੈ (India, New York)।",
+"highlight": "in"
+},
+{
+"sentenceEn": "They arrived in the city at night.",
+"sentencePa": "ਉਹ ਰਾਤ ਨੂੰ ਸ਼ਹਿਰ ਪਹੁੰਚੇ।",
+"explainEn": "Use “in” for larger areas.",
+"explainPa": "ਵੱਡੇ ਖੇਤਰ ਲਈ “in” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "arrived in"
+}
+]
+}
+]
+
+Batch 11 — Conjunctions: Joining Ideas (and/but/or/so/because/although)
+## Batch 11 — Conjunctions: Joining Ideas (20 questions)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is a conjunction (it joins words or sentences)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ conjunction ਹੈ? (ਜੋ ਸ਼ਬਦਾਂ/ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ)",
+"options": ["and", "quickly", "blue", "under"],
+"correct_index": 0,
+"correct_answer": "and",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I like tea and coffee.",
+"sentencePa": "ਮੈਨੂੰ ਚਾਹ ਅਤੇ ਕੌਫੀ ਪਸੰਦ ਹੈ।",
+"explainEn": "“And” joins two words: tea + coffee.",
+"explainPa": "“And” ਦੋ ਸ਼ਬਦ ਜੋੜਦਾ ਹੈ: tea + coffee।",
+"highlight": "and"
+},
+{
+"sentenceEn": "She is smart and kind.",
+"sentencePa": "ਉਹ ਸਮਝਦਾਰ ਅਤੇ ਦਇਆਲੂ ਹੈ।",
+"explainEn": "Conjunctions connect ideas.",
+"explainPa": "Conjunctions ਵਿਚਾਰਾਂ ਨੂੰ ਜੋੜਦੇ ਹਨ।",
+"highlight": "and"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “I wanted to go, ____ I was sick.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “I wanted to go, ____ I was sick.”",
+"options": ["but", "and", "so", "or"],
+"correct_index": 0,
+"correct_answer": "but",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I wanted to go, but I was sick.",
+"sentencePa": "ਮੈਂ ਜਾਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਸੀ, ਪਰ ਮੈਂ ਬਿਮਾਰ ਸੀ।",
+"explainEn": "“But” shows contrast between two ideas.",
+"explainPa": "“But” ਦੋ ਵਿਚਾਰਾਂ ਵਿੱਚ ਵਿਰੋਧ (contrast) ਦੱਸਦਾ ਹੈ।",
+"highlight": "but"
+},
+{
+"sentenceEn": "He is tired, but he will work.",
+"sentencePa": "ਉਹ ਥੱਕਿਆ ਹੈ, ਪਰ ਉਹ ਕੰਮ ਕਰੇਗਾ।",
+"explainEn": "Use “but” when the second idea is surprising or opposite.",
+"explainPa": "ਜਦੋਂ ਦੂਜਾ ਵਿਚਾਰ ਉਲਟ/ਹੈਰਾਨੀ ਵਾਲਾ ਹੋਵੇ, “but” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "but"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “Hurry up, ____ we will be late.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “Hurry up, ____ we will be late.”",
+"options": ["or", "and", "but", "because"],
+"correct_index": 0,
+"correct_answer": "or",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Hurry up, or we will be late.",
+"sentencePa": "ਜਲਦੀ ਕਰੋ, ਨਹੀਂ ਤਾਂ ਅਸੀਂ ਦੇਰ ਹੋ ਜਾਵਾਂਗੇ।",
+"explainEn": "“Or” can show a choice or warning: do this, or this happens.",
+"explainPa": "“Or” ਚੋਣ/ਚੇਤਾਵਨੀ ਦੱਸਦਾ ਹੈ: ਇਹ ਕਰੋ, ਨਹੀਂ ਤਾਂ ਇਹ ਹੋਵੇਗਾ।",
+"highlight": "or"
+},
+{
+"sentenceEn": "Study, or you will fail.",
+"sentencePa": "ਪੜ੍ਹੋ, ਨਹੀਂ ਤਾਂ ਫੇਲ ਹੋ ਜਾਵੋਗੇ।",
+"explainEn": "This “or” is used for consequences.",
+"explainPa": "ਇੱਥੇ “or” ਨਤੀਜਾ (consequence) ਦੱਸਦਾ ਹੈ।",
+"highlight": "or"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “It was raining, ____ we stayed home.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “It was raining, ____ we stayed home.”",
+"options": ["so", "but", "or", "and"],
+"correct_index": 0,
+"correct_answer": "so",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "It was raining, so we stayed home.",
+"sentencePa": "ਮੀਂਹ ਪੈ ਰਿਹਾ ਸੀ, ਇਸ ਲਈ ਅਸੀਂ ਘਰ ਰਹੇ।",
+"explainEn": "“So” shows result: rain → stay home.",
+"explainPa": "“So” ਨਤੀਜਾ ਦੱਸਦਾ ਹੈ: ਮੀਂਹ → ਘਰ ਰਹਿਣਾ।",
+"highlight": "so"
+},
+{
+"sentenceEn": "I was tired, so I went to bed.",
+"sentencePa": "ਮੈਂ ਥੱਕਿਆ ਸੀ, ਇਸ ਲਈ ਮੈਂ ਸੋਣ ਚਲਾ ਗਿਆ।",
+"explainEn": "Use “so” for cause and result.",
+"explainPa": "ਕਾਰਨ ਅਤੇ ਨਤੀਜੇ ਲਈ “so” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "so"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which sentence uses “and” correctly?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ “and” ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ?",
+"options": ["She bought apples and bananas.", "She bought apples but bananas.", "She bought apples so bananas.", "She bought apples or bananas (meaning both)."],
+"correct_index": 0,
+"correct_answer": "She bought apples and bananas.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She bought apples and bananas.",
+"sentencePa": "ਉਸਨੇ ਸੇਬ ਅਤੇ ਕੇਲੇ ਖਰੀਦੇ।",
+"explainEn": "“And” means both items together.",
+"explainPa": "“And” ਦਾ ਮਤਲਬ ਦੋਵੇਂ ਚੀਜ਼ਾਂ ਇਕੱਠੀਆਂ।",
+"highlight": "and"
+},
+{
+"sentenceEn": "We need bread and milk.",
+"sentencePa": "ਸਾਨੂੰ ਬ੍ਰੈਡ ਅਤੇ ਦੁੱਧ ਚਾਹੀਦਾ ਹੈ।",
+"explainEn": "And joins two nouns in a list.",
+"explainPa": "And ਲਿਸਟ ਵਿੱਚ ਦੋ nouns ਜੋੜਦਾ ਹੈ।",
+"highlight": "and"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “Do you want tea ____ coffee?”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “Do you want tea ____ coffee?”",
+"options": ["or", "and", "so", "because"],
+"correct_index": 0,
+"correct_answer": "or",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Do you want tea or coffee?",
+"sentencePa": "ਤੁਸੀਂ ਚਾਹ ਜਾਂ ਕੌਫੀ ਚਾਹੁੰਦੇ ਹੋ?",
+"explainEn": "“Or” is used for a choice between two options.",
+"explainPa": "ਦੋ ਵਿਕਲਪਾਂ ਵਿਚੋਂ ਚੋਣ ਲਈ “or” ਵਰਤਦੇ ਹਾਂ।",
+"highlight": "or"
+},
+{
+"sentenceEn": "Is it Monday or Tuesday?",
+"sentencePa": "ਕੀ ਸੋਮਵਾਰ ਹੈ ਜਾਂ ਮੰਗਲਵਾਰ?",
+"explainEn": "Or connects alternatives.",
+"explainPa": "Or ਵਿਕਲਪ ਜੋੜਦਾ ਹੈ।",
+"highlight": "or"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “I stayed home ____ I was tired.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “I stayed home ____ I was tired.”",
+"options": ["because", "but", "or", "so"],
+"correct_index": 0,
+"correct_answer": "because",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I stayed home because I was tired.",
+"sentencePa": "ਮੈਂ ਘਰ ਰਿਹਾ ਕਿਉਂਕਿ ਮੈਂ ਥੱਕਿਆ ਸੀ।",
+"explainEn": "“Because” gives the reason.",
+"explainPa": "“Because” ਕਾਰਨ ਦੱਸਦਾ ਹੈ।",
+"highlight": "because"
+},
+{
+"sentenceEn": "She is happy because she passed.",
+"sentencePa": "ਉਹ ਖੁਸ਼ ਹੈ ਕਿਉਂਕਿ ਉਹ ਪਾਸ ਹੋ ਗਈ।",
+"explainEn": "Because answers: why?",
+"explainPa": "Because ਦਾ ਜਵਾਬ: ਕਿਉਂ?",
+"highlight": "because"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best conjunction: “He didn’t come ____ he was busy.”",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ conjunction ਚੁਣੋ: “He didn’t come ____ he was busy.”",
+"options": ["because", "so", "or", "and"],
+"correct_index": 0,
+"correct_answer": "because",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "He didn’t come because he was busy.",
+"sentencePa": "ਉਹ ਨਹੀਂ ਆਇਆ ਕਿਉਂਕਿ ਉਹ ਰੁੱਝਿਆ ਸੀ।",
+"explainEn": "Because explains the reason for not coming.",
+"explainPa": "Because ਨਾ ਆਉਣ ਦਾ ਕਾਰਨ ਦੱਸਦਾ ਹੈ।",
+"highlight": "because"
+},
+{
+"sentenceEn": "I missed the bus because I was late.",
+"sentencePa": "ਮੈਂ ਬਸ ਮਿਸ ਕਰ ਦਿੱਤੀ ਕਿਉਂਕਿ ਮੈਂ ਦੇਰ ਨਾਲ ਸੀ।",
+"explainEn": "Because connects an event to its reason.",
+"explainPa": "Because ਘਟਨਾ ਅਤੇ ਕਾਰਨ ਜੋੜਦਾ ਹੈ।",
+"highlight": "because"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best conjunction: “I studied hard, ____ I passed.”",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ conjunction ਚੁਣੋ: “I studied hard, ____ I passed.”",
+"options": ["so", "because", "but", "or"],
+"correct_index": 0,
+"correct_answer": "so",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I studied hard, so I passed.",
+"sentencePa": "ਮੈਂ ਮਿਹਨਤ ਨਾਲ ਪੜ੍ਹਿਆ, ਇਸ ਲਈ ਮੈਂ ਪਾਸ ਹੋ ਗਿਆ।",
+"explainEn": "“So” shows the result of studying hard.",
+"explainPa": "“So” ਪੜ੍ਹਾਈ ਦੇ ਨਤੀਜੇ ਨੂੰ ਦੱਸਦਾ ਹੈ।",
+"highlight": "so"
+},
+{
+"sentenceEn": "He apologized, so she forgave him.",
+"sentencePa": "ਉਸਨੇ ਮਾਫ਼ੀ ਮੰਗੀ, ਇਸ ਲਈ ਉਸਨੇ ਮਾਫ਼ ਕਰ ਦਿੱਤਾ।",
+"explainEn": "So connects cause → result.",
+"explainPa": "So ਕਾਰਨ → ਨਤੀਜਾ ਜੋੜਦਾ ਹੈ।",
+"highlight": "so"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the best conjunction: “I like tea, ____ I don’t like coffee.”",
+"punjabi_text": "ਸਭ ਤੋਂ ਠੀਕ conjunction ਚੁਣੋ: “I like tea, ____ I don’t like coffee.”",
+"options": ["but", "so", "because", "and"],
+"correct_index": 0,
+"correct_answer": "but",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I like tea, but I don’t like coffee.",
+"sentencePa": "ਮੈਨੂੰ ਚਾਹ ਪਸੰਦ ਹੈ, ਪਰ ਮੈਨੂੰ ਕੌਫੀ ਪਸੰਦ ਨਹੀਂ।",
+"explainEn": "“But” shows contrast between liking tea and not liking coffee.",
+"explainPa": "“But” ਚਾਹ ਪਸੰਦ ਅਤੇ ਕੌਫੀ ਨਾ ਪਸੰਦ ਵਿੱਚ ਵਿਰੋਧ ਦੱਸਦਾ ਹੈ।",
+"highlight": "but"
+},
+{
+"sentenceEn": "He is rich, but he is not happy.",
+"sentencePa": "ਉਹ ਅਮੀਰ ਹੈ, ਪਰ ਉਹ ਖੁਸ਼ ਨਹੀਂ।",
+"explainEn": "But often shows an unexpected second idea.",
+"explainPa": "But ਅਕਸਰ ਦੂਜੇ ਵਿਚਾਰ ਨੂੰ ਅਣਉਮੀਦ/ਉਲਟ ਦੱਸਦਾ ਹੈ।",
+"highlight": "but"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “She can come ____ she can stay home.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “She can come ____ she can stay home.”",
+"options": ["or", "and", "because", "so"],
+"correct_index": 0,
+"correct_answer": "or",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "She can come or she can stay home.",
+"sentencePa": "ਉਹ ਆ ਸਕਦੀ ਹੈ ਜਾਂ ਘਰ ਰਹਿ ਸਕਦੀ ਹੈ।",
+"explainEn": "“Or” shows two choices.",
+"explainPa": "“Or” ਦੋ ਚੋਣਾਂ ਦੱਸਦਾ ਹੈ।",
+"highlight": "or"
+},
+{
+"sentenceEn": "You can call or you can text.",
+"sentencePa": "ਤੁਸੀਂ ਫ਼ੋਨ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਮੈਸੇਜ ਕਰ ਸਕਦੇ ਹੋ।",
+"explainEn": "Or connects alternatives.",
+"explainPa": "Or ਵਿਕਲਪ ਜੋੜਦਾ ਹੈ।",
+"highlight": "or"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “I will go ____ it is raining.” (meaning: even with rain)",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “I will go ____ it is raining.” (ਮਤਲਬ: ਮੀਂਹ ਦੇ ਬਾਵਜੂਦ ਵੀ)",
+"options": ["although", "because", "so", "and"],
+"correct_index": 0,
+"correct_answer": "although",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I will go although it is raining.",
+"sentencePa": "ਮੈਂ ਜਾਵਾਂਗਾ ਭਾਵੇਂ ਮੀਂਹ ਪੈ ਰਿਹਾ ਹੈ।",
+"explainEn": "“Although” means “even though” and shows contrast.",
+"explainPa": "“Although” ਦਾ ਮਤਲਬ “ਭਾਵੇਂ” ਹੁੰਦਾ ਹੈ ਅਤੇ ਵਿਰੋਧ ਦੱਸਦਾ ਹੈ।",
+"highlight": "although"
+},
+{
+"sentenceEn": "Although he is tired, he is working.",
+"sentencePa": "ਭਾਵੇਂ ਉਹ ਥੱਕਿਆ ਹੈ, ਫਿਰ ਵੀ ਉਹ ਕੰਮ ਕਰ ਰਿਹਾ ਹੈ।",
+"explainEn": "Although introduces a contrasting idea.",
+"explainPa": "Although ਵਿਰੋਧ ਵਾਲਾ ਵਿਚਾਰ ਲਿਆਉਂਦਾ ਹੈ।",
+"highlight": "Although"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “I will call you ____ I arrive.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “I will call you ____ I arrive.”",
+"options": ["when", "because", "so", "but"],
+"correct_index": 0,
+"correct_answer": "when",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I will call you when I arrive.",
+"sentencePa": "ਜਦੋਂ ਮੈਂ ਪਹੁੰਚਾਂਗਾ, ਮੈਂ ਤੁਹਾਨੂੰ ਫ਼ੋਨ ਕਰਾਂਗਾ।",
+"explainEn": "“When” connects actions with time.",
+"explainPa": "“When” ਸਮੇਂ ਨਾਲ ਦੋ ਕਿਰਿਆਵਾਂ ਜੋੜਦਾ ਹੈ।",
+"highlight": "when"
+},
+{
+"sentenceEn": "When you finish, tell me.",
+"sentencePa": "ਜਦੋਂ ਤੁਸੀਂ ਮੁਕਾਉ, ਮੈਨੂੰ ਦੱਸੋ।",
+"explainEn": "When introduces a time condition.",
+"explainPa": "When ਸਮੇਂ ਦੀ ਸ਼ਰਤ ਦੱਸਦਾ ਹੈ।",
+"highlight": "When"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct conjunction: “Stay here ____ I come back.”",
+"punjabi_text": "ਸਹੀ conjunction ਚੁਣੋ: “Stay here ____ I come back.”",
+"options": ["until", "because", "so", "or"],
+"correct_index": 0,
+"correct_answer": "until",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Stay here until I come back.",
+"sentencePa": "ਜਦੋਂ ਤੱਕ ਮੈਂ ਵਾਪਸ ਨਾ ਆਵਾਂ, ਇੱਥੇ ਰਹੋ।",
+"explainEn": "“Until” means “up to the time when.”",
+"explainPa": "“Until” ਦਾ ਮਤਲਬ “ਜਦੋਂ ਤੱਕ” ਹੁੰਦਾ ਹੈ।",
+"highlight": "until"
+},
+{
+"sentenceEn": "Wait until the bus comes.",
+"sentencePa": "ਬਸ ਆਉਣ ਤੱਕ ਉਡੀਕ ਕਰੋ।",
+"explainEn": "Until shows the end point of waiting/time.",
+"explainPa": "Until ਉਡੀਕ/ਸਮੇਂ ਦਾ ਅੰਤ ਵਾਲਾ ਬਿੰਦੂ ਦੱਸਦਾ ਹੈ।",
+"highlight": "until"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I stayed home because it was raining.", "I stayed home so it was raining.", "I stayed home but it was raining.", "I stayed home or it was raining."],
+"correct_index": 0,
+"correct_answer": "I stayed home because it was raining.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I stayed home because it was raining.",
+"sentencePa": "ਮੈਂ ਘਰ ਰਿਹਾ ਕਿਉਂਕਿ ਮੀਂਹ ਪੈ ਰਿਹਾ ਸੀ।",
+"explainEn": "Because gives the reason for staying home.",
+"explainPa": "Because ਘਰ ਰਹਿਣ ਦਾ ਕਾਰਨ ਦੱਸਦਾ ਹੈ।",
+"highlight": "because"
+},
+{
+"sentenceEn": "He left early because he was sick.",
+"sentencePa": "ਉਹ ਜਲਦੀ ਚਲਾ ਗਿਆ ਕਿਉਂਕਿ ਉਹ ਬਿਮਾਰ ਸੀ।",
+"explainEn": "Because links a result to its reason.",
+"explainPa": "Because ਨਤੀਜੇ ਨੂੰ ਕਾਰਨ ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+"highlight": "because"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence.",
+"punjabi_text": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["I was tired, so I went to bed.", "I was tired, because I went to bed.", "I was tired, but I went to bed (no contrast).", "I was tired, or I went to bed."],
+"correct_index": 0,
+"correct_answer": "I was tired, so I went to bed.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "I was tired, so I went to bed.",
+"sentencePa": "ਮੈਂ ਥੱਕਿਆ ਸੀ, ਇਸ ਲਈ ਮੈਂ ਸੋਣ ਚਲਾ ਗਿਆ।",
+"explainEn": "So shows the result: tired → went to bed.",
+"explainPa": "So ਨਤੀਜਾ ਦੱਸਦਾ ਹੈ: ਥੱਕਿਆ → ਸੋਣ ਚਲਾ ਗਿਆ।",
+"highlight": "so"
+},
+{
+"sentenceEn": "It was late, so we left.",
+"sentencePa": "ਦੇਰ ਹੋ ਗਈ ਸੀ, ਇਸ ਲਈ ਅਸੀਂ ਚਲੇ ਗਏ।",
+"explainEn": "So connects cause and result.",
+"explainPa": "So ਕਾਰਨ ਅਤੇ ਨਤੀਜਾ ਜੋੜਦਾ ਹੈ।",
+"highlight": "so"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct correlative conjunction pair.",
+"punjabi_text": "ਸਹੀ correlative conjunction ਜੋੜ ਚੁਣੋ।",
+"options": ["either/or", "and/but", "so/because", "when/until"],
+"correct_index": 0,
+"correct_answer": "either/or",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "You can either call me or text me.",
+"sentencePa": "ਤੁਸੀਂ ਜਾਂ ਤਾਂ ਮੈਨੂੰ ਫ਼ੋਨ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਮੈਸੇਜ ਕਰ ਸਕਦੇ ਹੋ।",
+"explainEn": "“Either/or” gives two choices.",
+"explainPa": "“Either/or” ਦੋ ਚੋਣਾਂ ਦਿੰਦਾ ਹੈ।",
+"highlight": "either...or"
+},
+{
+"sentenceEn": "Either we go now, or we miss the bus.",
+"sentencePa": "ਜਾਂ ਤਾਂ ਅਸੀਂ ਹੁਣ ਜਾਵਾਂ, ਜਾਂ ਬਸ ਮਿਸ ਹੋ ਜਾਏਗੀ।",
+"explainEn": "This pair is used to show alternatives.",
+"explainPa": "ਇਹ ਜੋੜ ਵਿਕਲਪ ਦੱਸਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+"highlight": "Either"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence using “either...or”.",
+"punjabi_text": "“either...or” ਨਾਲ ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["Either you study or you fail.", "Either you study and you fail.", "Either you study but you fail.", "Either you study so you fail."],
+"correct_index": 0,
+"correct_answer": "Either you study or you fail.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Either you study or you fail.",
+"sentencePa": "ਜਾਂ ਤਾਂ ਤੁਸੀਂ ਪੜ੍ਹੋ ਜਾਂ ਫੇਲ ਹੋ ਜਾਓ।",
+"explainEn": "Either/or gives two possible outcomes.",
+"explainPa": "Either/or ਦੋ ਸੰਭਾਵਿਤ ਨਤੀਜੇ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Either"
+},
+{
+"sentenceEn": "Either we take the bus or we walk.",
+"sentencePa": "ਜਾਂ ਤਾਂ ਅਸੀਂ ਬਸ ਲਵਾਂ ਜਾਂ ਤੁਰ ਕੇ ਜਾਵਾਂ।",
+"explainEn": "Either/or is used for choices.",
+"explainPa": "Either/or ਚੋਣ ਲਈ ਵਰਤਦੇ ਹਨ।",
+"highlight": "or"
+}
+]
+}
+]
+
+Batch 12 — Interjections: Feelings and Reactions (Wow/Ouch/Oops/Shh/Phew)
+## Batch 12 — Interjections: Feelings and Reactions (20 questions)
+
+[
+{You’re right to flag that. We have **not** produced an **Interjections** batch yet. Here are two ready-to-use batches (with headings) that match your template style.
+
+## Batch 12 — Interjections: Feelings and Reactions (12 questions)
+
+[
+{
+"step_type": "question",
+"english_text": "Which word is an interjection (it shows a sudden feeling)?",
+"punjabi_text": "ਕਿਹੜਾ ਸ਼ਬਦ interjection ਹੈ? (ਜੋ ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਦਾ ਹੈ)",
+"options": ["Wow!", "Run", "Blue", "Under"],
+"correct_index": 0,
+"correct_answer": "Wow!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Wow! That is amazing!",
+"sentencePa": "ਵਾਹ! ਇਹ ਤਾਂ ਕਮਾਲ ਹੈ!",
+"explainEn": "“Wow!” shows surprise or amazement, so it is an interjection.",
+"explainPa": "“Wow!” ਹੈਰਾਨੀ/ਦਾਦ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ interjection ਹੈ।",
+"highlight": "Wow!"
+},
+{
+"sentenceEn": "Wow! You did it!",
+"sentencePa": "ਵਾਹ! ਤੂੰ ਕਰ ਲਿਆ!",
+"explainEn": "Interjections often stand alone with an exclamation mark.",
+"explainPa": "Interjections ਅਕਸਰ ਇਕੱਲੇ ਆਉਂਦੇ ਹਨ ਅਤੇ ! ਨਾਲ ਹੁੰਦੇ ਹਨ।",
+"highlight": "Wow!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the interjection that shows pain.",
+"punjabi_text": "ਦਰਦ ਦੱਸਣ ਵਾਲਾ interjection ਚੁਣੋ।",
+"options": ["Ouch!", "Hooray!", "Hey!", "Well"],
+"correct_index": 0,
+"correct_answer": "Ouch!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Ouch! That hurts!",
+"sentencePa": "ਆਹ! ਇਹ ਦਰਦ ਕਰਦਾ ਹੈ!",
+"explainEn": "“Ouch!” is used when something hurts.",
+"explainPa": "“Ouch!” ਦਰਦ ਹੋਣ ਤੇ ਵਰਤਦੇ ਹਨ।",
+"highlight": "Ouch!"
+},
+{
+"sentenceEn": "Ouch! I hit my hand.",
+"sentencePa": "ਆਹ! ਮੇਰਾ ਹੱਥ ਲੱਗ ਗਿਆ।",
+"explainEn": "Interjections show quick reactions.",
+"explainPa": "Interjections ਤੁਰੰਤ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦੇ ਹਨ।",
+"highlight": "Ouch!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the interjection that shows happiness or celebration.",
+"punjabi_text": "ਖੁਸ਼ੀ/ਜਸ਼ਨ ਦੱਸਣ ਵਾਲਾ interjection ਚੁਣੋ।",
+"options": ["Hooray!", "Oops!", "Umm...", "Shh!"],
+"correct_index": 0,
+"correct_answer": "Hooray!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Hooray! We won!",
+"sentencePa": "ਹੁਰੇ! ਅਸੀਂ ਜਿੱਤ ਗਏ!",
+"explainEn": "“Hooray!” shows celebration.",
+"explainPa": "“Hooray!” ਜਸ਼ਨ/ਖੁਸ਼ੀ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Hooray!"
+},
+{
+"sentenceEn": "Hooray! It’s my birthday!",
+"sentencePa": "ਹੁਰੇ! ਅੱਜ ਮੇਰਾ ਜਨਮਦਿਨ ਹੈ!",
+"explainEn": "It expresses excitement about good news.",
+"explainPa": "ਇਹ ਚੰਗੀ ਖ਼ਬਰ ਤੇ ਉਤਸ਼ਾਹ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Hooray!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the interjection that shows a small mistake.",
+"punjabi_text": "ਛੋਟੀ ਗਲਤੀ ਦੱਸਣ ਵਾਲਾ interjection ਚੁਣੋ।",
+"options": ["Oops!", "Wow!", "Yay!", "Hello!"],
+"correct_index": 0,
+"correct_answer": "Oops!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Oops! I dropped my phone.",
+"sentencePa": "ਓਹੋ! ਮੇਰਾ ਫ਼ੋਨ ਡਿੱਗ ਗਿਆ।",
+"explainEn": "“Oops!” is used when you make a small mistake.",
+"explainPa": "ਛੋਟੀ ਗਲਤੀ ਹੋ ਜਾਏ ਤਾਂ “Oops!” ਵਰਤਦੇ ਹਨ।",
+"highlight": "Oops!"
+},
+{
+"sentenceEn": "Oops! Sorry about that.",
+"sentencePa": "ਓਹੋ! ਇਸ ਲਈ ਮਾਫ਼ ਕਰਨਾ।",
+"explainEn": "It often comes before an apology.",
+"explainPa": "ਇਹ ਅਕਸਰ ਮਾਫ਼ੀ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।",
+"highlight": "Oops!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the interjection used to get someone’s attention.",
+"punjabi_text": "ਕਿਸੇ ਦਾ ਧਿਆਨ ਖਿੱਚਣ ਲਈ interjection ਚੁਣੋ।",
+"options": ["Hey!", "Shh!", "Ouch!", "Yikes!"],
+"correct_index": 0,
+"correct_answer": "Hey!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Hey! Come here!",
+"sentencePa": "ਏ! ਇੱਥੇ ਆਓ!",
+"explainEn": "“Hey!” is used to get attention.",
+"explainPa": "ਧਿਆਨ ਖਿੱਚਣ ਲਈ “Hey!” ਵਰਤਦੇ ਹਨ।",
+"highlight": "Hey!"
+},
+{
+"sentenceEn": "Hey! Are you okay?",
+"sentencePa": "ਏ! ਤੁਸੀਂ ਠੀਕ ਹੋ?",
+"explainEn": "It starts a quick, direct call to someone.",
+"explainPa": "ਇਹ ਕਿਸੇ ਨੂੰ ਤੁਰੰਤ ਬੁਲਾਉਣ/ਗੱਲ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਆਉਂਦਾ ਹੈ।",
+"highlight": "Hey!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the interjection used to ask for silence.",
+"punjabi_text": "ਚੁੱਪ ਲਈ interjection ਚੁਣੋ।",
+"options": ["Shh!", "Hooray!", "Oops!", "Phew!"],
+"correct_index": 0,
+"correct_answer": "Shh!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Shh! The baby is sleeping.",
+"sentencePa": "ਸ਼੍ਹ੍ਹ! ਬੱਚਾ ਸੋ ਰਿਹਾ ਹੈ।",
+"explainEn": "“Shh!” tells someone to be quiet.",
+"explainPa": "“Shh!” ਚੁੱਪ ਰਹਿਣ ਲਈ ਕਹਿੰਦਾ ਹੈ।",
+"highlight": "Shh!"
+},
+{
+"sentenceEn": "Shh! Please listen.",
+"sentencePa": "ਸ਼੍ਹ੍ਹ! ਕਿਰਪਾ ਕਰਕੇ ਸੁਣੋ।",
+"explainEn": "It signals silence quickly.",
+"explainPa": "ਇਹ ਤੁਰੰਤ ਚੁੱਪ ਦਾ ਸੰਕੇਤ ਦਿੰਦਾ ਹੈ।",
+"highlight": "Shh!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which interjection shows fear or worry?",
+"punjabi_text": "ਡਰ/ਚਿੰਤਾ ਦੱਸਣ ਵਾਲਾ interjection ਕਿਹੜਾ ਹੈ?",
+"options": ["Oh no!", "Yay!", "Hello!", "Well"],
+"correct_index": 0,
+"correct_answer": "Oh no!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Oh no! I lost my keys.",
+"sentencePa": "ਓਹ ਨਹੀਂ! ਮੇਰੀਆਂ ਚਾਬੀਆਂ ਗੁੰਮ ਹੋ ਗਈਆਂ।",
+"explainEn": "“Oh no!” shows worry or a problem.",
+"explainPa": "“Oh no!” ਚਿੰਤਾ ਜਾਂ ਸਮੱਸਿਆ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Oh no!"
+},
+{
+"sentenceEn": "Oh no! We are late.",
+"sentencePa": "ਓਹ ਨਹੀਂ! ਅਸੀਂ ਦੇਰ ਹੋ ਗਏ।",
+"explainEn": "It reacts to bad news.",
+"explainPa": "ਇਹ ਮਾੜੀ ਖ਼ਬਰ ਤੇ ਪ੍ਰਤੀਕਿਰਿਆ ਹੈ।",
+"highlight": "Oh no!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which interjection shows relief?",
+"punjabi_text": "ਰਾਹਤ (relief) ਦੱਸਣ ਵਾਲਾ interjection ਕਿਹੜਾ ਹੈ?",
+"options": ["Phew!", "Ouch!", "Hey!", "Yikes!"],
+"correct_index": 0,
+"correct_answer": "Phew!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Phew! That was close.",
+"sentencePa": "ਉੱਫ਼! ਬਸ ਬਚ ਗਏ।",
+"explainEn": "“Phew!” shows relief after danger or stress.",
+"explainPa": "“Phew!” ਖ਼ਤਰੇ/ਤਣਾਅ ਤੋਂ ਬਾਅਦ ਰਾਹਤ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Phew!"
+},
+{
+"sentenceEn": "Phew! I finished the exam.",
+"sentencePa": "ਉੱਫ਼! ਇਮਤਿਹਾਨ ਮੁਕ ਗਿਆ।",
+"explainEn": "It shows you feel relieved after finishing something hard.",
+"explainPa": "ਕੋਈ ਔਖਾ ਕੰਮ ਮੁਕਣ ਤੇ ਰਾਹਤ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Phew!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which interjection shows surprise or shock?",
+"punjabi_text": "ਹੈਰਾਨੀ/ਝਟਕਾ ਦੱਸਣ ਵਾਲਾ interjection ਕਿਹੜਾ ਹੈ?",
+"options": ["Yikes!", "Thanks", "Slow", "Between"],
+"correct_index": 0,
+"correct_answer": "Yikes!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Yikes! That’s scary!",
+"sentencePa": "ਹਾਏ! ਇਹ ਡਰਾਉਣਾ ਹੈ!",
+"explainEn": "“Yikes!” shows shock or fear.",
+"explainPa": "“Yikes!” ਝਟਕਾ/ਡਰ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Yikes!"
+},
+{
+"sentenceEn": "Yikes! I forgot my wallet.",
+"sentencePa": "ਹਾਏ! ਮੈਂ ਬਟੂਆ ਭੁੱਲ ਗਿਆ।",
+"explainEn": "It reacts to a sudden problem.",
+"explainPa": "ਇਹ ਅਚਾਨਕ ਸਮੱਸਿਆ ਤੇ ਪ੍ਰਤੀਕਿਰਿਆ ਹੈ।",
+"highlight": "Yikes!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which interjection is used to agree or approve?",
+"punjabi_text": "ਸਹਿਮਤੀ/ਮਨਜ਼ੂਰੀ ਲਈ ਕਿਹੜਾ interjection ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+"options": ["Yes!", "Ouch!", "Shh!", "Oops!"],
+"correct_index": 0,
+"correct_answer": "Yes!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Yes! That’s correct.",
+"sentencePa": "ਹਾਂ! ਇਹ ਸਹੀ ਹੈ।",
+"explainEn": "“Yes!” shows agreement or approval.",
+"explainPa": "“Yes!” ਸਹਿਮਤੀ/ਮਨਜ਼ੂਰੀ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Yes!"
+},
+{
+"sentenceEn": "Yes! Let’s go!",
+"sentencePa": "ਹਾਂ! ਚਲੋ ਚੱਲੀਏ!",
+"explainEn": "It can show excitement with agreement.",
+"explainPa": "ਇਹ ਸਹਿਮਤੀ ਨਾਲ ਉਤਸ਼ਾਹ ਵੀ ਦਿਖਾ ਸਕਦਾ ਹੈ।",
+"highlight": "Yes!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which interjection is used for greeting?",
+"punjabi_text": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ/ਹੈਲੋ ਵਰਗਾ greeting interjection ਕਿਹੜਾ ਹੈ?",
+"options": ["Hello!", "Hooray!", "Ouch!", "Phew!"],
+"correct_index": 0,
+"correct_answer": "Hello!",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Hello! How are you?",
+"sentencePa": "ਹੈਲੋ! ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ?",
+"explainEn": "“Hello!” is a greeting used to start a conversation.",
+"explainPa": "“Hello!” ਗੱਲਬਾਤ ਸ਼ੁਰੂ ਕਰਨ ਲਈ greeting ਹੈ।",
+"highlight": "Hello!"
+},
+{
+"sentenceEn": "Hello! Nice to meet you.",
+"sentencePa": "ਹੈਲੋ! ਮਿਲ ਕੇ ਚੰਗਾ ਲੱਗਿਆ।",
+"explainEn": "It is a polite opening.",
+"explainPa": "ਇਹ ਨਮ੍ਰ ਸ਼ੁਰੂਆਤ ਹੈ।",
+"highlight": "Hello!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Which interjection is used to show hesitation or thinking?",
+"punjabi_text": "ਹਿਚਕ/ਸੋਚਣ ਲਈ ਕਿਹੜਾ interjection ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+"options": ["Umm...", "Wow!", "Hey!", "Oh no!"],
+"correct_index": 0,
+"correct_answer": "Umm...",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Umm... I’m not sure.",
+"sentencePa": "ਅੰਮ... ਮੈਨੂੰ ਪੱਕਾ ਨਹੀਂ।",
+"explainEn": "“Umm...” shows hesitation while thinking.",
+"explainPa": "“Umm...” ਸੋਚਦੇ ਸਮੇਂ ਹਿਚਕ ਦੱਸਦਾ ਹੈ।",
+"highlight": "Umm..."
+},
+{
+"sentenceEn": "Umm... can you repeat that?",
+"sentencePa": "ਅੰਮ... ਕੀ ਤੁਸੀਂ ਦੁਬਾਰਾ ਕਹਿ ਸਕਦੇ ਹੋ?",
+"explainEn": "It buys time to think before speaking.",
+"explainPa": "ਬੋਲਣ ਤੋਂ ਪਹਿਲਾਂ ਸੋਚਣ ਲਈ ਸਮਾਂ ਲੈਂਦਾ ਹੈ।",
+"highlight": "Umm..."
+}
+]
+}
+]
+
+[
+{
+"step_type": "question",
+"english_text": "Which sentence uses an interjection correctly?",
+"punjabi_text": "ਕਿਹੜਾ ਵਾਕ interjection ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਵਰਤਦਾ ਹੈ?",
+"options": ["Wow! This is great.", "Wow this is great.", "This is wow great.", "This is great wow."],
+"correct_index": 0,
+"correct_answer": "Wow! This is great.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Wow! This is great.",
+"sentencePa": "ਵਾਹ! ਇਹ ਵਧੀਆ ਹੈ।",
+"explainEn": "Interjections often use an exclamation mark and come at the start.",
+"explainPa": "Interjections ਅਕਸਰ ! ਨਾਲ ਹੁੰਦੇ ਹਨ ਅਤੇ ਸ਼ੁਰੂ ਵਿੱਚ ਆਉਂਦੇ ਹਨ।",
+"highlight": "Wow!"
+},
+{
+"sentenceEn": "Oops! I made a mistake.",
+"sentencePa": "ਓਹੋ! ਮੈਥੋਂ ਗਲਤੀ ਹੋ ਗਈ।",
+"explainEn": "The punctuation shows strong feeling.",
+"explainPa": "punctuation ਭਾਵਨਾ ਨੂੰ ਤਗੜਾ ਦਿਖਾਉਂਦੀ ਹੈ।",
+"highlight": "Oops!"
+}
+]
+},
+{
+"step_type": "question",
+"english_text": "Choose the correct sentence for silence.",
+"punjabi_text": "ਚੁੱਪ ਲਈ ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+"options": ["Shh! Please be quiet.", "Shh please be quiet.", "Please be quiet shh.", "Please shh be quiet."],
+"correct_index": 0,
+"correct_answer": "Shh! Please be quiet.",
+"points": 5,
+"examples": [
+{
+"sentenceEn": "Shh! Please be quiet.",
+"sentencePa": "ਸ਼੍ਹ੍ਹ! ਕਿਰਪਾ ਕਰਕੇ ਚੁੱਪ ਰਹੋ।",
+"explainEn": "“Shh!” is usually followed by a pause and then the sentence.",
+"explainPa": "“Shh!” ਤੋਂ ਬਾਅਦ ਅਕਸਰ ਥੋੜ੍ਹਾ ਰੁਕ ਕੇ ਵਾਕ ਆਉਂਦਾ ਹੈ।",
+"highlight": "Shh!"
+},

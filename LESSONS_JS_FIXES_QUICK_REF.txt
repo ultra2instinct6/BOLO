@@ -1,0 +1,104 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                   LESSONS.JS CRITICAL FIXES - QUICK REF                     ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+✅ FIX #1: Removed Duplicate openLessonForQuest()
+   ├─ Deleted legacy version (line 515-551)
+   ├─ Kept: One version using window.DQ_QUEST_CONTEXT only
+   └─ Impact: Daily Quest now uses correct seeding
+
+✅ FIX #2: Fixed hashStringToInt() 
+   ├─ Changed: hash & hash → hash |= 0
+   └─ Impact: Proper 32-bit integer handling
+
+✅ FIX #3: Made getDayKey() Self-Contained
+   ├─ Changed: toISODateLocal(now) → manual YYYY-MM-DD
+   └─ Impact: No external dependencies
+
+✅ FIX #4: Updated validateLessonContent()
+   ├─ Changed: LESSONS[id] → Lessons.getSteps(id)
+   ├─ Added: Support for step.type || step.step_type
+   ├─ Added: Support for correctAnswer || correct_answer
+   └─ Impact: Works with both array and normalized formats
+
+✅ FIX #5: Updated getQuestQuestionStepIndex()
+   ├─ Changed: LESSONS[id] → Lessons.getSteps(id)
+   ├─ Added: Defensive profile seeding
+   │         Checks State.getActiveProfile() exists
+   │         Defaults to "default" if missing
+   └─ Impact: Crash-safe seeded selection
+
+✅ FIX #6: Enhanced handleAnswer() Quest Tracking
+   ├─ Added: questContext.attemptCounted (first click)
+   ├─ Added: questContext.correctCounted (correct answer)
+   ├─ Fixed: questionsAttempted incremented on first click (not just correct)
+   ├─ Fixed: Safe structure initialization for trackXP
+   ├─ Fixed: Button disabling after answer (prevent re-click)
+   └─ Impact: Idempotent, safe XP counting
+
+✅ FIX #7: Removed Legacy Globals
+   ├─ Deleted: window.DQ_QUEST_MODE
+   ├─ Deleted: window.DQ_QUEST_TARGET_STEP
+   ├─ Deleted: window.DQ_CALLBACK
+   └─ Impact: Single consolidated context object
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUEST CONTEXT OBJECT (only global now)
+
+window.DQ_QUEST_CONTEXT = {
+  mode: true,                    // true for lessons
+  lessonId: "L_WORDS_1",         // Which lesson
+  targetStep: 3,                 // Seeded question index
+  callback: function() {},       // Exit callback
+  startedAt: 1702766123456,      // Timestamp
+  answeredCorrect: false,        // Set when answer correct
+  xpAwarded: false,              // Guard for XP
+  attemptCounted: false,         // Guard for attempts (NEW)
+  correctCounted: false          // Guard for corrects (NEW)
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUICK TEST
+
+1. Go to Daily Quest
+2. Start Learn step
+3. See seeded question (not step 0)
+4. Answer question
+5. Buttons should disable
+6. Tap [Next]
+7. Should return to Daily Quest
+8. Check Progress: Track XP incremented
+
+Expected State after quest:
+├─ State.state.progress.trackXP["T_WORDS"].questionsAttempted = 1
+├─ State.state.progress.trackXP["T_WORDS"].questionsCorrect = 1
+├─ State.state.progress.trackXP["T_WORDS"].xp += (step.points || 5)
+└─ window.DQ_QUEST_CONTEXT = null (cleared)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SYNTAX VALIDATION
+
+✅ node -c app/js/lessons.js         PASSED
+✅ node -c app/js/app.js              PASSED
+✅ node -c app/js/reading.js          PASSED
+✅ node -c app/js/dailyQuest.js       PASSED
+✅ node -c app/js/state.js            PASSED
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CHANGES SUMMARY
+
+File Modified:     /Users/deepakdaroach/bolo/app/js/lessons.js
+Total Replacements: 6
+Total Deletions:   1 (legacy openLessonForQuest)
+Lines Changed:     ~150 lines
+Breaking Changes:  NONE (backward compatible)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STATUS: ✅ READY FOR TESTING
+Last Updated: 2025-12-16
+Server: http://localhost:8000 (running)

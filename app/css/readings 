@@ -1,0 +1,447 @@
+Start implementation;;;; here is the conent; LESSONS.L_READING_STORY_01 = {
+metadata: {
+titleEn: “The Park”,
+titlePa: “ਪਾਰਕ”,
+labelEn: “Reading: The Park”,
+labelPa: “ਪੜ੍ਹਨਾ: ਪਾਰਕ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – The Park”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਪਾਰਕ”,
+descEn: “Read a short story about a day at the park. Practice understanding key words and ideas.”,
+descPa: “ਪਾਰਕ ਵਿੱਚ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ਮੁੱਖ ਸ਼ਬਦ ਅਤੇ ਵਿਚਾਰ ਸਮਝਣ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “Today I go to the park with my sister. The park is big and green. I see a tall tree and a small pond. Some kids are playing on the swings. I run to the slide and I laugh. My sister sits on a bench and watches me. A brown dog walks near us, and it wags its tail. Yesterday it rained, so the grass is still wet. I hold my sister’s hand and we walk on the path. We hear birds in the trees. Before we go home, we drink water and say, “This park is fun!””,
+contentPa: “ਅੱਜ ਮੈਂ ਆਪਣੀ ਭੈਣ ਨਾਲ ਪਾਰਕ ਜਾਂਦਾ ਹਾਂ। ਪਾਰਕ ਵੱਡਾ ਅਤੇ ਹਰਾ ਹੈ। ਮੈਂ ਇੱਕ ਉੱਚਾ ਰੁੱਖ ਅਤੇ ਇੱਕ ਛੋਟਾ ਤਲਾਬ ਵੇਖਦਾ ਹਾਂ। ਕੁਝ ਬੱਚੇ ਝੂਲਿਆਂ ਤੇ ਖੇਡ ਰਹੇ ਹਨ। ਮੈਂ ਫਿਸਲਣ ਵਾਲੀ ਪੱਟੀ ਵੱਲ ਦੌੜਦਾ ਹਾਂ ਅਤੇ ਹੱਸਦਾ ਹਾਂ। ਮੇਰੀ ਭੈਣ ਬੈਂਚ ਤੇ ਬੈਠ ਕੇ ਮੈਨੂੰ ਵੇਖਦੀ ਹੈ। ਇੱਕ ਭੂਰਾ ਕੁੱਤਾ ਸਾਡੇ ਨੇੜੇ ਤੁਰਦਾ ਹੈ ਅਤੇ ਆਪਣੀ ਪੁੱਛ ਹਿਲਾਉਂਦਾ ਹੈ। ਕੱਲ੍ਹ ਮੀਂਹ ਪਿਆ ਸੀ, ਇਸ ਲਈ ਘਾਹ ਹਜੇ ਵੀ ਭਿੱਜਾ ਹੈ। ਮੈਂ ਆਪਣੀ ਭੈਣ ਦਾ ਹੱਥ ਫੜਦਾ ਹਾਂ ਅਤੇ ਰਸਤੇ ਤੇ ਤੁਰਦੇ ਹਾਂ। ਅਸੀਂ ਰੁੱਖਾਂ ਵਿੱਚ ਪੰਛੀਆਂ ਦੀਆਂ ਆਵਾਜ਼ਾਂ ਸੁਣਦੇ ਹਾਂ। ਘਰ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਅਸੀਂ ਪਾਣੀ ਪੀਂਦੇ ਹਾਂ ਅਤੇ ਕਹਿੰਦੇ ਹਾਂ, “ਇਹ ਪਾਰਕ ਮਜ਼ੇਦਾਰ ਹੈ!””,
+points: 1
+},
+{
+type: “question”,
+english_text: “Who goes to the park with the child?”,
+punjabi_text: “ਬੱਚੇ ਨਾਲ ਪਾਰਕ ਕੌਣ ਜਾਂਦਾ ਹੈ?”,
+options: [
+“My sister”,
+“My teacher”,
+“ਮੇਰਾ ਭਰਾ”,
+“ਮੇਰੀ ਦਾਦੀ”
+],
+correct_answer: “My sister”,
+points: 5,
+examples: [
+{
+sentenceEn: “Today I go to the park with my sister.”,
+sentencePa: “ਅੱਜ ਮੈਂ ਆਪਣੀ ਭੈਣ ਨਾਲ ਪਾਰਕ ਜਾਂਦਾ ਹਾਂ।”,
+explainEn: “This sentence tells us who is with the child at the park.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਬੱਚੇ ਨਾਲ ਪਾਰਕ ਵਿੱਚ ਕੌਣ ਹੈ।”,
+highlight: “with my sister”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“park”, “tree”, “kids”, “bench”],
+keyExamplesPa: [“ਪਾਰਕ”, “ਰੁੱਖ”, “ਬੱਚੇ”, “ਬੈਂਚ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_02 = {
+metadata: {
+titleEn: “A School Day”,
+titlePa: “ਸਕੂਲ ਦਾ ਦਿਨ”,
+labelEn: “Reading: A School Day”,
+labelPa: “ਪੜ੍ਹਨਾ: ਸਕੂਲ ਦਾ ਦਿਨ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – A School Day”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਸਕੂਲ ਦਾ ਦਿਨ”,
+descEn: “Read a short story about a school routine. Practice understanding daily actions.”,
+descPa: “ਸਕੂਲ ਦੀ ਰੁਟੀਨ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ਰੋਜ਼ਾਨਾ ਕੰਮ ਸਮਝਣ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “I wake up early on Monday. I wash my face and eat breakfast. Then I put my books in my bag. My friend Amir meets me near the corner. We walk to school together. At school, we stand in a line and say good morning. Our teacher writes words on the board. We read, we listen, and we ask questions. At lunch, I open my lunch box and share an apple with Amir. Yesterday we had art class, and I painted a yellow sun. Today we have math, and we count coins. After school, I go home and do my homework.”,
+contentPa: “ਮੈਂ ਸੋਮਵਾਰ ਨੂੰ ਸਵੇਰੇ ਜਲਦੀ ਉੱਠਦਾ ਹਾਂ। ਮੈਂ ਮੂੰਹ ਧੋਂਦਾ ਹਾਂ ਅਤੇ ਨਾਸਤਾ ਕਰਦਾ ਹਾਂ। ਫਿਰ ਮੈਂ ਆਪਣੀਆਂ ਕਿਤਾਬਾਂ ਬੈਗ ਵਿੱਚ ਰੱਖਦਾ ਹਾਂ। ਮੇਰਾ ਦੋਸਤ ਅਮੀਰ ਮੈਨੂੰ ਮੋੜ ਦੇ ਨੇੜੇ ਮਿਲਦਾ ਹੈ। ਅਸੀਂ ਇਕੱਠੇ ਸਕੂਲ ਤੁਰਕੇ ਜਾਂਦੇ ਹਾਂ। ਸਕੂਲ ਵਿੱਚ ਅਸੀਂ ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਦੇ ਹਾਂ ਅਤੇ ਸਤ ਸ੍ਰੀ ਅਕਾਲ ਕਹਿੰਦੇ ਹਾਂ। ਸਾਡੀ ਅਧਿਆਪਕਾ ਬੋਰਡ ਤੇ ਸ਼ਬਦ ਲਿਖਦੀ ਹੈ। ਅਸੀਂ ਪੜ੍ਹਦੇ ਹਾਂ, ਸੁਣਦੇ ਹਾਂ, ਅਤੇ ਸਵਾਲ ਪੁੱਛਦੇ ਹਾਂ। ਦੁਪਹਿਰ ਨੂੰ ਮੈਂ ਆਪਣਾ ਡੱਬਾ ਖੋਲ੍ਹਦਾ ਹਾਂ ਅਤੇ ਅਮੀਰ ਨਾਲ ਇੱਕ ਸੇਬ ਸਾਂਝਾ ਕਰਦਾ ਹਾਂ। ਕੱਲ੍ਹ ਸਾਡੀ ਕਲਾ ਦੀ ਕਲਾਸ ਸੀ, ਅਤੇ ਮੈਂ ਪੀਲਾ ਸੂਰਜ ਬਣਾਇਆ ਸੀ। ਅੱਜ ਗਣਿਤ ਹੈ, ਅਤੇ ਅਸੀਂ ਸਿੱਕੇ ਗਿਣਦੇ ਹਾਂ। ਸਕੂਲ ਤੋਂ ਬਾਅਦ ਮੈਂ ਘਰ ਜਾਂਦਾ ਹਾਂ ਅਤੇ ਘਰ ਦਾ ਕੰਮ ਕਰਦਾ ਹਾਂ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “What does the teacher write on the board?”,
+punjabi_text: “ਅਧਿਆਪਕਾ ਬੋਰਡ ਤੇ ਕੀ ਲਿਖਦੀ ਹੈ?”,
+options: [
+“Words”,
+“Pictures”,
+“ਨੰਬਰ”,
+“ਖੇਡ”
+],
+correct_answer: “Words”,
+points: 5,
+examples: [
+{
+sentenceEn: “Our teacher writes words on the board.”,
+sentencePa: “ਸਾਡੀ ਅਧਿਆਪਕਾ ਬੋਰਡ ਤੇ ਸ਼ਬਦ ਲਿਖਦੀ ਹੈ।”,
+explainEn: “This sentence tells us what the teacher writes.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਅਧਿਆਪਕਾ ਕੀ ਲਿਖਦੀ ਹੈ।”,
+highlight: “writes words”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“school”, “teacher”, “board”, “homework”],
+keyExamplesPa: [“ਸਕੂਲ”, “ਅਧਿਆਪਕਾ”, “ਬੋਰਡ”, “ਘਰ ਦਾ ਕੰਮ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_03 = {
+metadata: {
+titleEn: “What I Did”,
+titlePa: “ਮੈਂ ਕੀ ਕੀਤਾ”,
+labelEn: “Reading: What I Did”,
+labelPa: “ਪੜ੍ਹਨਾ: ਮੈਂ ਕੀ ਕੀਤਾ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – What I Did”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਮੈਂ ਕੀ ਕੀਤਾ”,
+descEn: “Read a short story about past actions. Practice simple past verbs.”,
+descPa: “ਪਿੱਛਲੇ ਕੰਮਾਂ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ਸਧਾਰਣ ਭੂਤਕਾਲ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “Last Saturday I had a busy day. In the morning, I cleaned my room and folded my clothes. Then I helped my dad wash the car. The water was cold, but we laughed. After lunch, I went to my cousin’s house. We played a board game and ate popcorn. My cousin showed me a new book, and I read two pages. In the evening, we walked to the store and bought milk. I carried the bag carefully. When I came home, I felt tired. Today I rest on the sofa and think about my fun Saturday.”,
+contentPa: “ਪਿਛਲੇ ਸ਼ਨੀਵਾਰ ਮੇਰਾ ਦਿਨ ਰੁੱਝਿਆ ਹੋਇਆ ਸੀ। ਸਵੇਰੇ ਮੈਂ ਆਪਣਾ ਕਮਰਾ ਸਾਫ਼ ਕੀਤਾ ਅਤੇ ਕੱਪੜੇ ਮੋੜੇ। ਫਿਰ ਮੈਂ ਪਾਪਾ ਦੀ ਗੱਡੀ ਧੋਣ ਵਿੱਚ ਮਦਦ ਕੀਤੀ। ਪਾਣੀ ਠੰਢਾ ਸੀ, ਪਰ ਅਸੀਂ ਹੱਸਦੇ ਰਹੇ। ਦੁਪਹਿਰ ਦੇ ਖਾਣੇ ਤੋਂ ਬਾਅਦ ਮੈਂ ਆਪਣੇ ਕਜ਼ਨ ਦੇ ਘਰ ਗਿਆ। ਅਸੀਂ ਇੱਕ ਬੋਰਡ ਵਾਲੀ ਖੇਡ ਖੇਡੀ ਅਤੇ ਮੱਕੀ ਦੇ ਦਾਣੇ ਖਾਧੇ। ਮੇਰੇ ਕਜ਼ਨ ਨੇ ਮੈਨੂੰ ਇੱਕ ਨਵੀਂ ਕਿਤਾਬ ਵਿਖਾਈ, ਅਤੇ ਮੈਂ ਦੋ ਪੰਨੇ ਪੜ੍ਹੇ। ਸ਼ਾਮ ਨੂੰ ਅਸੀਂ ਦੁਕਾਨ ਤੁਰਕੇ ਗਏ ਅਤੇ ਦੁੱਧ ਲਿਆ। ਮੈਂ ਥੈਲਾ ਧਿਆਨ ਨਾਲ ਫੜਿਆ। ਜਦੋਂ ਮੈਂ ਘਰ ਆਇਆ, ਮੈਂ ਥੱਕ ਗਿਆ ਸੀ। ਅੱਜ ਮੈਂ ਸੋਫੇ ਤੇ ਆਰਾਮ ਕਰਦਾ ਹਾਂ ਅਤੇ ਆਪਣੇ ਮਜ਼ੇਦਾਰ ਸ਼ਨੀਵਾਰ ਬਾਰੇ ਸੋਚਦਾ ਹਾਂ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “What did the child buy at the store?”,
+punjabi_text: “ਬੱਚੇ ਨੇ ਦੁਕਾਨ ਤੋਂ ਕੀ ਖਰੀਦਿਆ?”,
+options: [
+“Milk”,
+“Bread”,
+“ਚਾਕਲੇਟ”,
+“ਖਿਡੌਣਾ”
+],
+correct_answer: “Milk”,
+points: 5,
+examples: [
+{
+sentenceEn: “In the evening, we walked to the store and bought milk.”,
+sentencePa: “ਸ਼ਾਮ ਨੂੰ ਅਸੀਂ ਦੁਕਾਨ ਤੁਰਕੇ ਗਏ ਅਤੇ ਦੁੱਧ ਲਿਆ।”,
+explainEn: “This sentence tells us what they bought at the store.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹਨਾਂ ਨੇ ਦੁਕਾਨ ਤੋਂ ਕੀ ਲਿਆ।”,
+highlight: “bought milk”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“last Saturday”, “cleaned”, “played”, “bought”],
+keyExamplesPa: [“ਪਿਛਲੇ ਸ਼ਨੀਵਾਰ”, “ਸਾਫ਼ ਕੀਤਾ”, “ਖੇਡੀ”, “ਲਿਆ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_04 = {
+metadata: {
+titleEn: “My Family”,
+titlePa: “ਮੇਰਾ ਪਰਿਵਾਰ”,
+labelEn: “Reading: My Family”,
+labelPa: “ਪੜ੍ਹਨਾ: ਮੇਰਾ ਪਰਿਵਾਰ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – My Family”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਮੇਰਾ ਪਰਿਵਾਰ”,
+descEn: “Read a short story about family members. Practice possessives like my, his, her.”,
+descPa: “ਪਰਿਵਾਰ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ‘ਮੇਰਾ/ਮੇਰੀ’ ਅਤੇ ‘ਉਸਦਾ/ਉਸਦੀ’ ਵਰਗੇ ਸ਼ਬਦਾਂ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “I live with my family in a small home. My mother cooks dinner, and my father tells funny stories. I have one sister and one brother. My sister likes drawing, and her pictures are on the fridge. My brother plays soccer, and his ball is always near the door. Yesterday my grandparents visited us. My grandma gave me a warm hug. My grandpa fixed my toy car. After dinner, we sat together and drank tea. We talked about school and games. Today my family is busy, but we still eat breakfast together.”,
+contentPa: “ਮੈਂ ਆਪਣੇ ਪਰਿਵਾਰ ਨਾਲ ਇੱਕ ਛੋਟੇ ਘਰ ਵਿੱਚ ਰਹਿੰਦਾ ਹਾਂ। ਮੇਰੀ ਮਾਂ ਖਾਣਾ ਬਣਾਉਂਦੀ ਹੈ, ਅਤੇ ਮੇਰੇ ਪਿਤਾ ਮਜ਼ੇਦਾਰ ਕਹਾਣੀਆਂ ਸੁਣਾਉਂਦੇ ਹਨ। ਮੇਰੀ ਇੱਕ ਭੈਣ ਅਤੇ ਇੱਕ ਭਰਾ ਹੈ। ਮੇਰੀ ਭੈਣ ਨੂੰ ਚਿੱਤਰ ਬਣਾਉਣਾ ਪਸੰਦ ਹੈ, ਅਤੇ ਉਸਦੇ ਚਿੱਤਰ ਫ੍ਰਿਜ਼ ਤੇ ਲੱਗੇ ਹਨ। ਮੇਰਾ ਭਰਾ ਫੁਟਬਾਲ ਖੇਡਦਾ ਹੈ, ਅਤੇ ਉਸਦੀ ਗੇਂਦ ਅਕਸਰ ਦਰਵਾਜ਼ੇ ਦੇ ਨੇੜੇ ਹੁੰਦੀ ਹੈ। ਕੱਲ੍ਹ ਮੇਰੇ ਦਾਦਾ-ਦਾਦੀ ਸਾਨੂੰ ਮਿਲਣ ਆਏ। ਮੇਰੀ ਦਾਦੀ ਨੇ ਮੈਨੂੰ ਗਰਮ ਗਲੇ ਲਾਇਆ। ਮੇਰੇ ਦਾਦਾ ਨੇ ਮੇਰੀ ਖਿਡੌਣਾ ਗੱਡੀ ਠੀਕ ਕੀਤੀ। ਖਾਣੇ ਤੋਂ ਬਾਅਦ ਅਸੀਂ ਇਕੱਠੇ ਬੈਠੇ ਅਤੇ ਚਾਹ ਪੀਤੀ। ਅਸੀਂ ਸਕੂਲ ਅਤੇ ਖੇਡਾਂ ਬਾਰੇ ਗੱਲ ਕੀਤੀ। ਅੱਜ ਮੇਰਾ ਪਰਿਵਾਰ ਰੁੱਝਿਆ ਹੈ, ਪਰ ਅਸੀਂ ਫਿਰ ਵੀ ਨਾਸਤਾ ਇਕੱਠੇ ਕਰਦੇ ਹਾਂ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “Where are the sister’s pictures?”,
+punjabi_text: “ਭੈਣ ਦੇ ਚਿੱਤਰ ਕਿੱਥੇ ਹਨ?”,
+options: [
+“On the fridge”,
+“On the wall”,
+“ਮੇਜ਼ ਤੇ”,
+“ਬੈਗ ਵਿੱਚ”
+],
+correct_answer: “On the fridge”,
+points: 5,
+examples: [
+{
+sentenceEn: “My sister likes drawing, and her pictures are on the fridge.”,
+sentencePa: “ਮੇਰੀ ਭੈਣ ਨੂੰ ਚਿੱਤਰ ਬਣਾਉਣਾ ਪਸੰਦ ਹੈ, ਅਤੇ ਉਸਦੇ ਚਿੱਤਰ ਫ੍ਰਿਜ਼ ਤੇ ਲੱਗੇ ਹਨ।”,
+explainEn: “This sentence tells us the place of the pictures.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਚਿੱਤਰ ਕਿੱਥੇ ਹਨ।”,
+highlight: “on the fridge”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“my mother”, “her pictures”, “his ball”, “grandparents”],
+keyExamplesPa: [“ਮੇਰੀ ਮਾਂ”, “ਉਸਦੇ ਚਿੱਤਰ”, “ਉਸਦੀ ਗੇਂਦ”, “ਦਾਦਾ-ਦਾਦੀ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_05 = {
+metadata: {
+titleEn: “Tomorrow’s Plan”,
+titlePa: “ਕੱਲ੍ਹ ਦੀ ਯੋਜਨਾ”,
+labelEn: “Reading: Tomorrow’s Plan”,
+labelPa: “ਪੜ੍ਹਨਾ: ਕੱਲ੍ਹ ਦੀ ਯੋਜਨਾ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – Tomorrow’s Plan”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਕੱਲ੍ਹ ਦੀ ਯੋਜਨਾ”,
+descEn: “Read a short story about plans. Practice will and can in simple sentences.”,
+descPa: “ਯੋਜਨਾ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ‘will’ ਅਤੇ ‘can’ ਦਾ ਸਧਾਰਣ ਵਾਕਾਂ ਵਿੱਚ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “Today I finish my homework early. Tomorrow I will visit my aunt. She lives near a library. I will bring my small backpack and a water bottle. My aunt says we can read new books together. After that, we will go to the bakery. I can choose one cookie. Yesterday I ate a cookie at home, and it was sweet. Tomorrow I will try a different one. In the evening, my aunt will help me make a simple salad. I can wash the tomatoes and cut the cucumber. I feel happy because tomorrow will be a good day.”,
+contentPa: “ਅੱਜ ਮੈਂ ਆਪਣਾ ਘਰ ਦਾ ਕੰਮ ਜਲਦੀ ਮੁਕਾ ਲੈਂਦਾ ਹਾਂ। ਕੱਲ੍ਹ ਮੈਂ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾਵਾਂਗਾ। ਉਹ ਇੱਕ ਪੁਸਤਕਾਲੇ ਦੇ ਨੇੜੇ ਰਹਿੰਦੀ ਹੈ। ਮੈਂ ਆਪਣਾ ਛੋਟਾ ਬੈਗ ਅਤੇ ਪਾਣੀ ਦੀ ਬੋਤਲ ਲੈ ਕੇ ਜਾਵਾਂਗਾ। ਮੇਰੀ ਮਾਸੀ ਕਹਿੰਦੀ ਹੈ ਕਿ ਅਸੀਂ ਇਕੱਠੇ ਨਵੀਆਂ ਕਿਤਾਬਾਂ ਪੜ੍ਹ ਸਕਦੇ ਹਾਂ। ਉਸ ਤੋਂ ਬਾਅਦ ਅਸੀਂ ਬੇਕਰੀ ਜਾਵਾਂਗੇ। ਮੈਂ ਇੱਕ ਬਿਸਕੁਟ ਚੁਣ ਸਕਦਾ ਹਾਂ। ਕੱਲ੍ਹ ਮੈਂ ਘਰ ਇੱਕ ਬਿਸਕੁਟ ਖਾਧਾ ਸੀ, ਅਤੇ ਉਹ ਮਿੱਠਾ ਸੀ। ਕੱਲ੍ਹ ਮੈਂ ਕੋਈ ਹੋਰ ਬਿਸਕੁਟ ਲਵਾਂਗਾ। ਸ਼ਾਮ ਨੂੰ ਮੇਰੀ ਮਾਸੀ ਮੈਨੂੰ ਇੱਕ ਸਧਾਰਣ ਸਲਾਦ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰੇਗੀ। ਮੈਂ ਟਮਾਟਰ ਧੋ ਸਕਦਾ ਹਾਂ ਅਤੇ ਖੀਰਾ ਕੱਟ ਸਕਦਾ ਹਾਂ। ਮੈਂ ਖੁਸ਼ ਹਾਂ ਕਿਉਂਕਿ ਕੱਲ੍ਹ ਚੰਗਾ ਦਿਨ ਹੋਵੇਗਾ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “Where will the child go tomorrow?”,
+punjabi_text: “ਬੱਚਾ ਕੱਲ੍ਹ ਕਿੱਥੇ ਜਾਵੇਗਾ?”,
+options: [
+“To my aunt’s house”,
+“To the zoo”,
+“ਸਕੂਲ ਨੂੰ”,
+“ਮੈਦਾਨ ਨੂੰ”
+],
+correct_answer: “To my aunt’s house”,
+points: 5,
+examples: [
+{
+sentenceEn: “Tomorrow I will visit my aunt.”,
+sentencePa: “ਕੱਲ੍ਹ ਮੈਂ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾਵਾਂਗਾ।”,
+explainEn: “This sentence tells us the plan for tomorrow.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਕੱਲ੍ਹ ਦੀ ਯੋਜਨਾ ਕੀ ਹੈ।”,
+highlight: “will visit my aunt”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“tomorrow”, “will”, “can”, “bakery”],
+keyExamplesPa: [“ਕੱਲ੍ਹ”, “ਕਰੇਗਾ/ਕਰਾਂਗਾ”, “ਸਕਦਾ/ਸਕਦੀ”, “ਬੇਕਰੀ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_06 = {
+metadata: {
+titleEn: “Colors and Things”,
+titlePa: “ਰੰਗ ਅਤੇ ਚੀਜ਼ਾਂ”,
+labelEn: “Reading: Colors and Things”,
+labelPa: “ਪੜ੍ਹਨਾ: ਰੰਗ ਅਤੇ ਚੀਜ਼ਾਂ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – Colors and Things”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਰੰਗ ਅਤੇ ਚੀਜ਼ਾਂ”,
+descEn: “Read a short story about colors and objects. Practice adjectives like big, small, red, blue.”,
+descPa: “ਰੰਗਾਂ ਅਤੇ ਚੀਜ਼ਾਂ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ਵੱਡਾ, ਛੋਟਾ, ਲਾਲ, ਨੀਲਾ ਵਰਗੇ ਸ਼ਬਦਾਂ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “In my room I have many things. I see a big blue pillow on my bed. I also have a small red ball. My pencil is yellow, and my notebook is green. Yesterday I drew a picture with my crayons. I drew a red car and a blue sky. My mom smiled when she saw it. Today I clean my desk. I put my books in a neat stack. I find a purple sticker under a paper. I like colors because they make my room bright. When I finish cleaning, my room looks nice and calm.”,
+contentPa: “ਮੇਰੇ ਕਮਰੇ ਵਿੱਚ ਬਹੁਤ ਸਾਰੀਆਂ ਚੀਜ਼ਾਂ ਹਨ। ਮੈਂ ਆਪਣੇ ਬਿਸਤਰ ਤੇ ਇੱਕ ਵੱਡਾ ਨੀਲਾ ਤਕੀਆ ਵੇਖਦਾ ਹਾਂ। ਮੇਰੇ ਕੋਲ ਇੱਕ ਛੋਟੀ ਲਾਲ ਗੇਂਦ ਵੀ ਹੈ। ਮੇਰੀ ਪੈਂਸਲ ਪੀਲੀ ਹੈ, ਅਤੇ ਮੇਰੀ ਕਾਪੀ ਹਰੀ ਹੈ। ਕੱਲ੍ਹ ਮੈਂ ਆਪਣੇ ਰੰਗਾਂ ਨਾਲ ਇੱਕ ਚਿੱਤਰ ਬਣਾਇਆ ਸੀ। ਮੈਂ ਇੱਕ ਲਾਲ ਕਾਰ ਅਤੇ ਇੱਕ ਨੀਲਾ ਆਕਾਸ਼ ਬਣਾਇਆ ਸੀ। ਮਾਂ ਨੇ ਵੇਖ ਕੇ ਮੁਸਕਰਾਇਆ। ਅੱਜ ਮੈਂ ਆਪਣਾ ਮੇਜ਼ ਸਾਫ਼ ਕਰਦਾ ਹਾਂ। ਮੈਂ ਆਪਣੀਆਂ ਕਿਤਾਬਾਂ ਠੀਕ ਤਰ੍ਹਾਂ ਢੇਰੀ ਬਣਾਕੇ ਰੱਖਦਾ ਹਾਂ। ਮੈਂ ਇੱਕ ਜਾਮਣੀ ਸਟਿਕਰ ਕਾਗਜ਼ ਹੇਠਾਂ ਲੱਭਦਾ ਹਾਂ। ਮੈਨੂੰ ਰੰਗ ਚੰਗੇ ਲੱਗਦੇ ਹਨ ਕਿਉਂਕਿ ਉਹ ਮੇਰਾ ਕਮਰਾ ਚਮਕਦਾਰ ਬਣਾਉਂਦੇ ਹਨ। ਜਦੋਂ ਮੈਂ ਸਾਫ਼ ਕਰ ਲੈਂਦਾ ਹਾਂ, ਮੇਰਾ ਕਮਰਾ ਸੋਹਣਾ ਅਤੇ ਸ਼ਾਂਤ ਲੱਗਦਾ ਹੈ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “What color is the pillow?”,
+punjabi_text: “ਤਕੀਏ ਦਾ ਰੰਗ ਕੀ ਹੈ?”,
+options: [
+“Blue”,
+“Red”,
+“ਪੀਲਾ”,
+“ਹਰਾ”
+],
+correct_answer: “Blue”,
+points: 5,
+examples: [
+{
+sentenceEn: “I see a big blue pillow on my bed.”,
+sentencePa: “ਮੈਂ ਆਪਣੇ ਬਿਸਤਰ ਤੇ ਇੱਕ ਵੱਡਾ ਨੀਲਾ ਤਕੀਆ ਵੇਖਦਾ ਹਾਂ।”,
+explainEn: “This sentence tells us the pillow’s color.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਤਕੀਏ ਦਾ ਰੰਗ ਕੀ ਹੈ।”,
+highlight: “blue pillow”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“big”, “small”, “blue”, “red”],
+keyExamplesPa: [“ਵੱਡਾ”, “ਛੋਟਾ”, “ਨੀਲਾ”, “ਲਾਲ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_07 = {
+metadata: {
+titleEn: “Where Is It?”,
+titlePa: “ਇਹ ਕਿੱਥੇ ਹੈ?”,
+labelEn: “Reading: Where Is It?”,
+labelPa: “ਪੜ੍ਹਨਾ: ਇਹ ਕਿੱਥੇ ਹੈ?”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – Where Is It?”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਇਹ ਕਿੱਥੇ ਹੈ?”,
+descEn: “Read a short story about finding things. Practice prepositions like in, on, under, next to.”,
+descPa: “ਚੀਜ਼ਾਂ ਲੱਭਣ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ‘ਵਿੱਚ, ਉੱਤੇ, ਹੇਠਾਂ, ਨਾਲ’ ਵਰਗੇ ਸ਼ਬਦਾਂ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “This morning I looked for my eraser. I checked my desk, but it was not there. Then I opened my backpack. The eraser was not in the big pocket. I felt worried. Yesterday I used the eraser in class. My mom said, “Look under the book.” I lifted my math book and saw the eraser under it. I smiled and said, “I found it!” Later I put the eraser in my pencil case. My pencil case is in my backpack. Now everything is ready for school. I also put my lunch box next to my water bottle.”,
+contentPa: “ਅੱਜ ਸਵੇਰੇ ਮੈਂ ਆਪਣਾ ਰਬੜ ਲੱਭ ਰਿਹਾ ਸੀ। ਮੈਂ ਆਪਣਾ ਮੇਜ਼ ਵੇਖਿਆ, ਪਰ ਉਹ ਉੱਥੇ ਨਹੀਂ ਸੀ। ਫਿਰ ਮੈਂ ਆਪਣਾ ਬੈਗ ਖੋਲ੍ਹਿਆ। ਵੱਡੀ ਜੇਬ ਵਿੱਚ ਵੀ ਰਬੜ ਨਹੀਂ ਸੀ। ਮੈਂ ਘਬਰਾਇਆ। ਕੱਲ੍ਹ ਮੈਂ ਕਲਾਸ ਵਿੱਚ ਰਬੜ ਵਰਤਿਆ ਸੀ। ਮਾਂ ਨੇ ਕਿਹਾ, “ਕਿਤਾਬ ਦੇ ਹੇਠਾਂ ਵੇਖ।” ਮੈਂ ਆਪਣੀ ਗਣਿਤ ਦੀ ਕਿਤਾਬ ਚੁੱਕੀ ਅਤੇ ਰਬੜ ਉਸ ਦੇ ਹੇਠਾਂ ਵੇਖਿਆ। ਮੈਂ ਮੁਸਕਰਾਇਆ ਅਤੇ ਕਿਹਾ, “ਮਿਲ ਗਿਆ!” ਬਾਅਦ ਵਿੱਚ ਮੈਂ ਰਬੜ ਆਪਣੀ ਪੈਂਸਲ-ਡੱਬੀ ਵਿੱਚ ਰੱਖ ਦਿੱਤਾ। ਮੇਰੀ ਪੈਂਸਲ-ਡੱਬੀ ਮੇਰੇ ਬੈਗ ਵਿੱਚ ਹੈ। ਹੁਣ ਸਭ ਕੁਝ ਸਕੂਲ ਲਈ ਤਿਆਰ ਹੈ। ਮੈਂ ਆਪਣਾ ਡੱਬਾ ਵੀ ਪਾਣੀ ਦੀ ਬੋਤਲ ਦੇ ਨਾਲ ਰੱਖ ਦਿੰਦਾ ਹਾਂ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “Where was the eraser?”,
+punjabi_text: “ਰਬੜ ਕਿੱਥੇ ਸੀ?”,
+options: [
+“Under the math book”,
+“On the chair”,
+“ਬੈਗ ਦੇ ਬਾਹਰ”,
+“ਮੇਜ਼ ਦੇ ਉੱਤੇ”
+],
+correct_answer: “Under the math book”,
+points: 5,
+examples: [
+{
+sentenceEn: “I lifted my math book and saw the eraser under it.”,
+sentencePa: “ਮੈਂ ਆਪਣੀ ਗਣਿਤ ਦੀ ਕਿਤਾਬ ਚੁੱਕੀ ਅਤੇ ਰਬੜ ਉਸ ਦੇ ਹੇਠਾਂ ਵੇਖਿਆ।”,
+explainEn: “This sentence tells us the eraser’s place.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਰਬੜ ਕਿੱਥੇ ਸੀ।”,
+highlight: “under it”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“under”, “in”, “next to”, “backpack”],
+keyExamplesPa: [“ਹੇਠਾਂ”, “ਵਿੱਚ”, “ਨਾਲ”, “ਬੈਗ”],
+points: 0
+}
+]
+};
+
+LESSONS.L_READING_STORY_08 = {
+metadata: {
+titleEn: “My Friend and Me”,
+titlePa: “ਮੇਰਾ ਦੋਸਤ ਅਤੇ ਮੈਂ”,
+labelEn: “Reading: My Friend and Me”,
+labelPa: “ਪੜ੍ਹਨਾ: ਮੇਰਾ ਦੋਸਤ ਅਤੇ ਮੈਂ”,
+trackId: “T_READING”,
+objective: {
+titleEn: “Learn: Reading – My Friend and Me”,
+titlePa: “ਸਿੱਖੋ: ਪੜ੍ਹਨਾ – ਮੇਰਾ ਦੋਸਤ ਅਤੇ ਮੈਂ”,
+descEn: “Read a short story about friends. Practice pronouns like I, you, he, she.”,
+descPa: “ਦੋਸਤੀ ਬਾਰੇ ਇੱਕ ਛੋਟੀ ਕਹਾਣੀ ਪੜ੍ਹੋ। ‘ਮੈਂ, ਤੁਸੀਂ, ਉਹ’ ਵਰਗੇ ਸਰਵਨਾਮਾਂ ਦਾ ਅਭਿਆਸ ਕਰੋ।”,
+pointsAvailable: 35
+},
+difficulty: 1
+},
+steps: [
+{
+type: “passage”,
+titleEn: “Story”,
+titlePa: “ਕਹਾਣੀ”,
+contentEn: “I have a friend named Sara. She is kind and funny. I like to sit next to her in class. When I forget my pencil, she shares hers with me. Yesterday we played a game at recess. I ran fast, but she ran faster. She laughed and said, “You can try again!” After school, I saw her brother. He waved and smiled. Today Sara and I work on a poster. I color the stars, and she writes the words. We help each other. I feel happy because she is my friend, and I am her friend too.”,
+contentPa: “ਮੇਰੀ ਇੱਕ ਦੋਸਤ ਹੈ, ਉਸਦਾ ਨਾਮ ਸਾਰਾ ਹੈ। ਉਹ ਦਿਆਲੂ ਅਤੇ ਹੱਸਮੁੱਖ ਹੈ। ਮੈਨੂੰ ਕਲਾਸ ਵਿੱਚ ਉਸਦੇ ਨਾਲ ਬੈਠਣਾ ਚੰਗਾ ਲੱਗਦਾ ਹੈ। ਜਦੋਂ ਮੈਂ ਆਪਣੀ ਪੈਂਸਲ ਭੁੱਲ ਜਾਂਦਾ ਹਾਂ, ਉਹ ਆਪਣੀ ਪੈਂਸਲ ਮੇਰੇ ਨਾਲ ਸਾਂਝੀ ਕਰਦੀ ਹੈ। ਕੱਲ੍ਹ ਅਸੀਂ ਵਿਰਾਮ ਵਿੱਚ ਇੱਕ ਖੇਡ ਖੇਡੀ। ਮੈਂ ਤੇਜ਼ ਦੌੜਿਆ, ਪਰ ਉਹ ਮੱਥੇ ਤੋਂ ਵੀ ਤੇਜ਼ ਦੌੜੀ। ਉਹ ਹੱਸ ਕੇ ਕਹਿੰਦੀ, “ਤੂੰ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦਾ ਹੈਂ!” ਸਕੂਲ ਤੋਂ ਬਾਅਦ ਮੈਂ ਉਸਦਾ ਭਰਾ ਵੇਖਿਆ। ਉਸ ਨੇ ਹੱਥ ਹਿਲਾਇਆ ਅਤੇ ਮੁਸਕਰਾਇਆ। ਅੱਜ ਸਾਰਾ ਅਤੇ ਮੈਂ ਇੱਕ ਪੋਸਟਰ ਬਣਾਉਂਦੇ ਹਾਂ। ਮੈਂ ਤਾਰੇ ਰੰਗਦਾ ਹਾਂ, ਅਤੇ ਉਹ ਸ਼ਬਦ ਲਿਖਦੀ ਹੈ। ਅਸੀਂ ਇਕ ਦੂਜੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਾਂ। ਮੈਂ ਖੁਸ਼ ਹਾਂ ਕਿਉਂਕਿ ਉਹ ਮੇਰੀ ਦੋਸਤ ਹੈ, ਅਤੇ ਮੈਂ ਵੀ ਉਸਦਾ ਦੋਸਤ ਹਾਂ।”,
+points: 1
+},
+{
+type: “question”,
+english_text: “Who shares a pencil when the child forgets one?”,
+punjabi_text: “ਜਦੋਂ ਬੱਚਾ ਪੈਂਸਲ ਭੁੱਲ ਜਾਵੇ, ਪੈਂਸਲ ਕੌਣ ਸਾਂਝੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?”,
+options: [
+“Sara”,
+“The principal”,
+“ਮਾਂ”,
+“ਦਾਦਾ”
+],
+correct_answer: “Sara”,
+points: 5,
+examples: [
+{
+sentenceEn: “When I forget my pencil, she shares hers with me.”,
+sentencePa: “ਜਦੋਂ ਮੈਂ ਆਪਣੀ ਪੈਂਸਲ ਭੁੱਲ ਜਾਂਦਾ ਹਾਂ, ਉਹ ਆਪਣੀ ਪੈਂਸਲ ਮੇਰੇ ਨਾਲ ਸਾਂਝੀ ਕਰਦੀ ਹੈ।”,
+explainEn: “This sentence tells us who shares the pencil.”,
+explainPa: “ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਪੈਂਸਲ ਕੌਣ ਸਾਂਝੀ ਕਰਦੀ ਹੈ।”,
+highlight: “she shares hers”
+}
+]
+},
+{
+type: “summary”,
+keyExamplesEn: [“I”, “she”, “he”, “you”],
+keyExamplesPa: [“ਮੈਂ”, “ਉਹ (ਲੜਕੀ)”, “ਉਹ (ਲੜਕਾ)”, “ਤੂੰ/ਤੁਸੀਂ”],
+points: 0
+}
+]
+};

@@ -112,24 +112,35 @@
     },
 
     /**
-     * Test Daily Quest seeding (verify determinism)
+     * Report typing weaknesses (top chars + bigrams) for the active profile.
+     * Uses real persisted stats from State.getTypingWeaknessStats().
      */
-    testQuestSeeding: function() {
-      if (!window.DailyQuest) {
-        console.log('❌ DailyQuest module not loaded');
-        return;
+    reportTypingWeaknesses: function() {
+      if (!window.State || typeof State.getTypingWeaknessStats !== 'function') {
+        console.log('❌ Typing weakness stats not available (State.getTypingWeaknessStats missing)');
+        return null;
       }
-      const today = new Date().toISOString().split('T')[0];
-      console.log(`🎲 Quest Seeding Test for date: ${today}`);
-      try {
-        // Test that same profile produces same seed
-        const profile1 = { id: 'test_prof1', name: 'Test1' };
-        const queue1 = DailyQuest.buildQueue ? DailyQuest.buildQueue.call({ currentProfile: profile1 }, today) : null;
-        console.log('Profile test_prof1 quest queue:', queue1?.length || 'N/A');
-        return { date: today, queueSize: queue1?.length };
-      } catch (e) {
-        console.error('❌ Error testing quest seeding:', e.message);
+
+      const st = State.getTypingWeaknessStats();
+      const chars = st && st.chars ? st.chars : {};
+      const bigrams = st && st.bigrams ? st.bigrams : {};
+
+      function topN(map, n) {
+        const arr = Object.keys(map || {}).map(k => ({ k, v: map[k] })).filter(x => typeof x.v === 'number' && isFinite(x.v) && x.v > 0);
+        arr.sort((a, b) => b.v - a.v);
+        return arr.slice(0, n);
       }
+
+      const topChars = topN(chars, 10);
+      const topBigrams = topN(bigrams, 10);
+
+      console.log('⌨️ Typing Weakness Report (active profile)');
+      console.log('Top bigrams:');
+      console.table(topBigrams.map(x => ({ bigram: x.k, misses: x.v })));
+      console.log('Top characters:');
+      console.table(topChars.map(x => ({ char: x.k, misses: x.v })));
+
+      return { topBigrams, topChars, raw: st };
     }
   };
 
@@ -142,6 +153,7 @@
   window.testGames = () => BOLO_DEV.testGamesFlow();
   window.monitorStorage = () => BOLO_DEV.monitorStorage();
   window.resetState = () => BOLO_DEV.reset();
+  window.reportTypingWeaknesses = () => BOLO_DEV.reportTypingWeaknesses();
 
   console.log('✅ BOLO DevTools utilities loaded. Use BOLO_DEV.* or short aliases (testGames, dumpState, etc.)');
 })();

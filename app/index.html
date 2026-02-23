@@ -3,9 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <title>BOLO – English Grammar for Punjabi Learners</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0050a8" />
-  <link rel="stylesheet" href="./css/main.css?v=20251231" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B57D0" />
+  <script>
+    // Single cache-buster for the whole app (JS/data). Update this when deploying.
+    window.APP_VERSION = "20260221k";
+  </script>
+  <link rel="stylesheet" href="./css/main.css?v=20260222a" />
+  <link rel="stylesheet" href="./css/game6.css?v=20260102" />
+
+  <!-- Typing Center / Type & Define: minimal layout helpers (UI-only; no logic) -->
+  <style>
+    /* Type & Define: MCQ choices should be large, full-width stacked tap targets. */
+    #tadChoices.tad-mcq-choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #tadChoices.tad-mcq-choices > button {
+      width: 100%;
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    /* Type & Define: subtle helper line under step indicator. */
+    .tad-phase-helper {
+      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    /* Type & Define: feedback text (Correct/Try again) should not shift layout. */
+    #tadFeedbackText.tad-feedback {
+      margin-top: 6px;
+      min-height: 18px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 120ms ease;
+    }
+    #tadFeedbackText.tad-feedback.is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Type & Define: lightweight audio controls (reserve space; no layout jump). */
+    .tad-audio {
+      margin-top: 6px;
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tad-audio__btn {
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .tad-audio__btn:disabled {
+      opacity: 0.55;
+    }
+    .tad-audio__btn.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Type & Define: developer-only diagnostics overlay (off by default). */
+    #tadDevPanel.tad-dev-panel {
+      display: none;
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      max-width: min(360px, calc(100vw - 24px));
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow-1);
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.25;
+      z-index: var(--z-overlay);
+    }
+    #tadDevPanel.tad-dev-panel.is-visible {
+      display: block;
+    }
+    #tadDevPanel .tad-dev__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 6px;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 11px;
+    }
+    #tadDevPanel .tad-dev__close {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1;
+      padding: 2px 6px;
+      cursor: pointer;
+    }
+    #tadDevPanel .tad-dev__body {
+      white-space: pre-line;
+      word-break: break-word;
+    }
+  </style>
 </head>
 <body>
   <!-- Section Transition Overlay (Phase 1 primitive; hidden by default) -->
@@ -17,357 +127,208 @@
 
   <div class="app-container">
     <!-- Header -->
-    <header>
+    <header class="app-header">
       <div class="header-logo">
+        <button type="button" id="header-back-chevron" class="header-back-chevron is-hidden" aria-label="Go back" aria-hidden="true">←</button>
         <img src="./img/logo.png" alt="BOLO logo" class="logo-img logo-img-header" />
       </div>
-      <div class="header-text-block">
-        <div class="header-top-row">
-          <div class="brand-title">BOLO</div>
-        </div>
-        <div class="header-profile-row">
-          <span><span class="profile-name-label">User:</span> <span id="header-profile-name">Player 1</span></span>
-          <span class="level-pill">Level <span id="header-level">1</span></span>
-          <a href="#" id="link-switch-profile" class="header-switch-link">Switch</a>
-        </div>
-        <div class="xp-bar-container">
-          <div id="xp-bar-fill" class="xp-bar-fill"></div>
-        </div>
-      </div>
+      <nav class="header-text-block header-section-tabs" id="header-section-tabs" aria-label="Section navigation">
+        <button type="button" class="header-section-tab" data-header-section="home" data-target-screen="screen-home">Home</button>
+        <button type="button" class="header-section-tab" data-header-section="learn" data-target-screen="screen-learn">Learn</button>
+        <button type="button" class="header-section-tab" data-header-section="read" data-target-screen="screen-reading">Read</button>
+        <button type="button" class="header-section-tab is-disabled" data-header-section="type" data-target-screen="screen-typing-center" aria-disabled="true">Type</button>
+        <button type="button" class="header-section-tab is-disabled" data-header-section="play" data-target-screen="screen-play-home" aria-disabled="true">Play</button>
+      </nav>
     </header>
 
     <main role="main">
       <!-- HOME SCREEN -->
       <section id="screen-home" class="screen active" aria-label="Home">
         <div class="home">
-          <div class="card home-resume-card" id="home-resume-card" role="region" aria-label="Resume">
-            <div class="home-resume-title" id="home-resume-title">Today</div>
-            <div class="home-resume-subtitle" id="home-resume-subtitle">Pick up where you left off, or start your Daily Quest.</div>
-            <div class="button-row" style="margin-top:10px;">
-              <button class="btn btn-small" id="btn-home-resume-primary">
-                Start Roz Abhyas
-              </button>
-            </div>
-          </div>
-
-          <div class="home-actions" aria-label="Quick actions">
-            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-clear">
-              <span class="btn-label-en">Clear</span>
-              <span class="btn-label-pa" lang="pa">ਸਾਫ਼ ਕਰੋ</span>
-            </button>
-            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-bolo" type="button" aria-label="BOLO / ਬੋਲੋ — Speaking Practice">
-              <span class="btn-label-en">BOLO</span>
-              <span class="btn-label-pa" lang="pa">ਬੋਲੋ</span>
-            </button>
-            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-learn">
-              <span class="btn-label-en">Learn</span>
-              <span class="btn-label-pa" lang="pa">ਸਿੱਖੋ</span>
-            </button>
-            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-reading">
-              <span class="btn-label-en">Reading</span>
-              <span class="btn-label-pa" lang="pa">ਪੜ੍ਹਨਾ</span>
-            </button>
-
-            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-play">
-              <span class="btn-label-en">Play</span>
-              <span class="btn-label-pa" lang="pa">ਖੇਡੋ</span>
-            </button>
-
-            <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-type" type="button" aria-label="Type — Word Type game">
-              <span class="btn-label-en">Type</span>
-              <span class="btn-label-pa" lang="pa">ਟਾਈਪ</span>
-            </button>
-          </div>
-
-          <div class="home-stats" aria-label="Stats">
-            <div class="button-row" aria-label="Home quick toggles">
-              <button class="btn btn-secondary home-nav-tile ink-ripple" id="btn-home-flashcards" aria-label="Flashcards">
-                <span class="btn-label-en">Flashcards</span>
-                <span class="btn-label-pa" lang="pa">ਫਲੈਸ਼ਕਾਰਡ</span>
-              </button>
-            </div>
-
-            <div id="home-streak-section" class="home-streak">
-              <div id="streak-card" class="streak-card streak-card-split" role="group" aria-label="Streak and Roz">
-                <div class="streak-split-left">
-                  <h3>🔥 <span class="streak-label-en">Current Streak</span> <span class="streak-label-pa" lang="pa">ਮੌਜੂਦਾ ਲੜੀ</span></h3>
-                  <p class="streak-number" id="current-streak">0</p>
-                  <p class="streak-subtitle">Do Roz Abhyas daily to keep your streak.</p>
-                  <p class="streak-subtitle-pa" lang="pa">ਲੜੀ ਬਣਾਈ ਰੱਖਣ ਲਈ ਰੋਜ਼ ਅਭਿਆਸ ਕਰੋ।</p>
-                </div>
-
-                <button class="streak-split-right ink-ripple" id="btn-home-roz" type="button" aria-label="Roz Abhyas — Daily Practice. Start today to keep your streak.">
-                  <span class="btn-label-primary">Roz Abhyas</span>
-                  <span class="btn-label-sub">
-                    <span class="btn-label-en">Daily Practice</span>
-                    <span class="btn-sep" aria-hidden="true">•</span>
-                    <span class="btn-label-pa" lang="pa">ਰੋਜ਼ ਅਭਿਆਸ</span>
-                  </span>
-                  <span class="btn-cta roz-cta">Start ›</span>
-                </button>
+          <div id="homeSwipeDeck" aria-label="Quick actions">
+            <div id="deckViewport">
+              <div id="deckTrack">
+                <article class="deck-card module-card deck-card--learn is-active" data-screen="screen-learn" data-action-en="Start Learn" data-action-pa="ਸਿੱਖਣਾ ਸ਼ੁਰੂ ਕਰੋ">
+                  <div class="deck-card-kicker">MODULE</div>
+                  <div class="deck-card-title">Learn | ਸਿੱਖੋ</div>
+                  <div class="deck-card-subtitle" lang="pa">ਸਿੱਖੋ</div>
+                </article>
+                <article class="deck-card module-card deck-card--reading" data-screen="screen-reading" data-action-en="Start Read" data-action-pa="ਪੜ੍ਹਨਾ ਸ਼ੁਰੂ ਕਰੋ">
+                  <div class="deck-card-kicker">MODULE</div>
+                  <div class="deck-card-title">Read | ਪੜ੍ਹਨਾ</div>
+                  <div class="deck-card-subtitle" lang="pa">ਪੜ੍ਹਨਾ</div>
+                </article>
+                <article class="deck-card module-card deck-card--type is-coming-soon" data-screen="screen-typing-center" data-action-en="In the making" data-action-pa="ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ" data-status="comingSoon" aria-disabled="true">
+                  <div class="deck-card-kicker">COMING SOON</div>
+                  <div class="deck-card-title">Type | ਲਿਖੋ</div>
+                  <div class="deck-card-status" lang="pa">ਬਣ ਰਹੀ ਹੈ</div>
+                  <div class="deck-card-subtitle">This module is in the making</div>
+                  <div class="deck-card-subtitle" lang="pa">ਇਹ ਮਾਡਿਊਲ ਬਣ ਰਿਹਾ ਹੈ</div>
+                  <div class="deck-card-helper" lang="pa">ਹੁਣ ਲਈ ਸਿੱਖੋ + ਪੜ੍ਹੋ ਵਰਤੋ</div>
+                </article>
+                <article class="deck-card module-card deck-card--play is-coming-soon" data-screen="screen-play-home" data-action-en="In the making" data-action-pa="ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ" data-status="comingSoon" aria-disabled="true">
+                  <div class="deck-card-kicker">COMING SOON</div>
+                  <div class="deck-card-title">Play | ਖੇਡੋ</div>
+                  <div class="deck-card-status" lang="pa">ਬਣ ਰਹੀ ਹੈ</div>
+                  <div class="deck-card-subtitle">This module is in the making</div>
+                  <div class="deck-card-subtitle" lang="pa">ਇਹ ਮਾਡਿਊਲ ਬਣ ਰਿਹਾ ਹੈ</div>
+                  <div class="deck-card-helper" lang="pa">ਹੁਣ ਲਈ ਸਿੱਖੋ + ਪੜ੍ਹੋ ਵਰਤੋ</div>
+                </article>
               </div>
             </div>
+            <div id="swipeHint" aria-live="polite"></div>
           </div>
 
-          <!-- Home Lane Tabs (Home-only; does not replace module tiles) -->
-          <div id="homeLanePanel" class="home-lane-panel">
-            <div id="homeLaneTabs" class="lane-tabs" role="tablist" aria-label="Home lanes"></div>
+          <div class="home-intro" aria-label="Home introduction">
+            <div class="home-hero-nav" aria-label="Module controls">
+              <div class="home-hero-nav-row">
+                <button class="btn deck-prev-handle" id="btn-home-prev-deck" type="button" aria-label="Previous module">←</button>
+                <button class="btn deck-next-handle" id="btn-home-next-deck" type="button" aria-label="Next module" data-autofocus>→</button>
+              </div>
+              <button class="btn cta-primary" id="btn-home-deck-start" type="button" aria-label="Start selected module">
+                <span class="btn-label-en">Start</span>
+                <span class="btn-label-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+              </button>
+            </div>
+            <div class="section-title home-intro-title">GIAN | ਗਿਆਨ</div>
+            <p class="section-subtitle home-intro-subtitle">
+              Practice. Progress. Confidence.
+            </p>
+            <p class="section-subtitle home-intro-subtitle" lang="pa">
+              ਹਰ ਰੋਜ਼ ਗਿਆਨ। ਅਭਿਆਸ। ਤਰੱਕੀ। ਭਰੋਸਾ।
+            </p>
+            <div class="home-hero-progress" aria-label="Module progress">
+              <div id="deckDots" aria-label="Deck position"></div>
+              <div id="deckProgressText" class="deck-progress-text" aria-live="polite">1/3</div>
+            </div>
+            <p class="home-intro-credit">By Dr. Daroach, MD</p>
           </div>
-        </div>
-      </section>
 
-      <!-- SPEAKING PRACTICE SCREEN (placeholder) -->
-      <section id="screen-speak" class="screen" aria-label="Speaking Practice">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-speak-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
+          <div class="card" id="onboarding-hint" style="display:none; margin-top: 12px;" role="region" data-i18n-aria-label-en="Quick tip" data-i18n-aria-label-pa="ਛੋਟੀ ਸਲਾਹ">
+            <div style="display:flex; gap:12px; align-items:flex-start; justify-content:space-between;">
+              <div style="flex:1;">
+                <div class="onboarding-tip-title" data-i18n-en="Tip" data-i18n-pa="ਸਲਾਹ">Tip</div>
+                <div style="margin-top:6px;" data-i18n-en="Punjabi help is always on. Start with Learn, then try Reading." data-i18n-pa="ਪੰਜਾਬੀ ਮਦਦ ਹਮੇਸ਼ਾਂ ਚਾਲੂ ਹੈ। ਪਹਿਲਾਂ ‘ਸਿੱਖੋ’, ਫਿਰ ‘ਪੜ੍ਹਨਾ’ ਅਜ਼ਮਾਓ।">Punjabi help is always on. Start with Learn, then try Reading.</div>
+              </div>
+              <button class="btn btn-secondary btn-small" id="btn-onboarding-dismiss" type="button" data-i18n-en="OK" data-i18n-pa="ਠੀਕ ਹੈ">OK</button>
+            </div>
+          </div>
 
-          <button id="btn-speak-nav"
-                  class="nav-speak-btn"
-                  type="button"
-                  aria-label="Speak / ਬੋਲੋ — Speaking Practice">
-            <img src="./img/logo.png" class="nav-speak-logo" alt="" aria-hidden="true" />
-            <span class="nav-speak-text">
-              <span class="nav-speak-en">Speak</span>
-              <span class="nav-speak-pa" lang="pa">ਬੋਲੋ</span>
-            </span>
-          </button>
-        </div>
-
-        <div class="card" style="margin-top:8px;">
-          <div class="section-title">Speaking Practice</div>
-          <p class="section-subtitle">Coming soon.</p>
-          <p class="section-subtitle" lang="pa">ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ।</p>
         </div>
       </section>
 
       <!-- LEARN SCREEN -->
       <section id="screen-learn" class="screen" aria-label="Learn">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-learn-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
-        <div style="margin-top:10px;">
-          <div class="section-title">Learn – Skill Tracks</div>
-          <p class="section-subtitle">
-            Short bilingual lessons grouped by skill: words, actions, describing, sentence building, and reading.
-          </p>
-          
+        <div class="module-screen-stack">
           <div id="learn-content">
-            <!-- Continue Card (primary action, above fold) -->
-            <div id="learn-sticky-header">
-              <div id="learn-continue-slot"></div>
+            <div id="learnSwipeDeck" aria-label="Learn lessons">
+              <div id="learnDeckViewport">
+                <div id="learnDeckTrack"></div>
+              </div>
+              <div id="learnSwipeHint" aria-live="polite"></div>
             </div>
-
-            <!-- Progress Summary (compact row) -->
-            <div class="progress-summary">
-              <div class="summary-card">
-                <div class="summary-label">Total</div>
-                <div class="summary-value" id="total-lessons">0</div>
+            <div id="learn-track-sections" style="display:none;"></div>
+          </div>
+          <div class="learn-intro" aria-label="Learn introduction">
+            <div class="learn-hero-nav" aria-label="Lesson controls">
+              <div class="learn-hero-nav-row">
+                <button class="btn deck-prev-handle" id="btn-learn-prev-deck" type="button" aria-label="Previous lesson">←</button>
+                <button class="btn deck-next-handle" id="btn-learn-next-deck" type="button" aria-label="Next lesson">→</button>
               </div>
-              <div class="summary-card">
-                <div class="summary-label">Done</div>
-                <div class="summary-value" id="completed-lessons">0</div>
-              </div>
-              <div class="summary-card">
-                <div class="summary-label">In Progress</div>
-                <div class="summary-value" id="progress-lessons">0</div>
-              </div>
-              <div class="summary-card">
-                <div class="summary-label">XP</div>
-                <div class="summary-value" id="total-xp">0</div>
-              </div>
+              <button class="btn cta-primary" id="btn-learn-deck-start" type="button" aria-label="Start selected lesson">
+                <span class="btn-label-en">Start</span>
+                <span class="btn-label-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+              </button>
             </div>
-
-            <!-- Next Suggestion (slim banner) + Track Accuracy + Streak (inline) -->
-            <div class="progress-highlights" aria-live="polite" aria-label="Learn progress highlights">
-              <div class="highlight-block">
-                <div class="highlight-label">Next</div>
-                <div class="highlight-value" id="learn-next-lesson">–</div>
-                <div class="highlight-sub" id="learn-next-reason">Based on your progress.</div>
-              </div>
-              <div class="highlight-row">
-                <div class="highlight-label">Accuracy</div>
-                <div class="highlight-value" id="learn-accuracy">–</div>
-              </div>
-              <div class="highlight-row">
-                <div class="highlight-label">Streak</div>
-                <div class="highlight-value" id="learn-streak">–</div>
-              </div>
-            </div>
-
-            <!-- Search (always visible) -->
-            <div class="learn-filters" id="learn-controls">
-              <div class="filters-row-top">
-                <div class="search-bar">
-                  <input type="text" id="lesson-search" placeholder="Search lessons..." aria-label="Search lessons" />
-                </div>
-              </div>
-
-              <!-- Filters + QA (collapsed by default) -->
-              <details class="learn-filters-details">
-                <summary class="learn-filters-summary">Filters</summary>
-                <div class="learn-filters-panel">
-                  <div class="filters-actions" style="margin-bottom: 8px;">
-                    <button class="btn btn-secondary btn-small clear-filters-btn" id="btn-clear-filters" aria-label="Clear all filters">Clear Filters</button>
-                  </div>
-
-                  <div class="filter-toggles">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="not-started">Not Started</button>
-                    <button class="filter-btn" data-filter="in-progress">In Progress</button>
-                    <button class="filter-btn" data-filter="done">Completed</button>
-                  </div>
-
-                  <div class="difficulty-filters">
-                    <label class="difficulty-toggle">
-                      <input type="checkbox" class="diff-filter" data-difficulty="1" checked />
-                      <span>★ Easy</span>
-                    </label>
-                    <label class="difficulty-toggle">
-                      <input type="checkbox" class="diff-filter" data-difficulty="2" checked />
-                      <span>★★ Medium</span>
-                    </label>
-                    <label class="difficulty-toggle">
-                      <input type="checkbox" class="diff-filter" data-difficulty="3" checked />
-                      <span>★★★ Hard</span>
-                    </label>
-                  </div>
-
-                  <div class="track-filter-dropdown">
-                    <select id="track-filter" aria-label="Filter by track">
-                      <option value="all">All Tracks</option>
-                      <option value="T_WORDS">Words</option>
-                      <option value="T_ACTIONS">Actions</option>
-                      <option value="T_DESCRIBE">Describe</option>
-                      <option value="T_SENTENCE">Sentences</option>
-                      <option value="T_READING">Reading</option>
-                    </select>
-                  </div>
-
-                  <div class="active-filters" id="active-filters" aria-live="polite"></div>
-
-                  <div id="learn-results-count" class="learn-results-count"></div>
-
-                  <div style="margin-top: 8px; border-top: 1px solid #e0e7ff; padding-top: 8px;">
-                    <label class="qa-toggle" for="learn-qa-toggle">
-                      <input type="checkbox" id="learn-qa-toggle" aria-label="Toggle Learn QA logging" />
-                      <span class="qa-toggle-switch" aria-hidden="true"></span>
-                      <span class="qa-toggle-label">QA Logs</span>
-                    </label>
-                    <div class="qa-toggle-help">Enable console logging for Learn QA mode.</div>
-                  </div>
-                </div>
-              </details>
-
-              <div id="learn-filters-slot"></div>
+            <div class="section-title learn-intro-title">Learn | ਸਿੱਖੋ</div>
+            <p class="section-subtitle learn-intro-subtitle">
+              Choose a lesson. Complete it. Unlock the next.
+            </p>
+            <p class="section-subtitle learn-intro-subtitle" lang="pa">
+              ਪਾਠ ਚੁਣੋ। ਪੂਰਾ ਕਰੋ। ਅਗਲਾ ਖੁੱਲ੍ਹੇਗਾ।
+            </p>
+            <div class="learn-hero-progress" aria-label="Lesson progress">
+              <div id="learnDeckDots" aria-label="Deck position"></div>
+              <div id="learnDeckProgressText" class="deck-progress-text" aria-live="polite">1/1</div>
             </div>
           </div>
-
-          <div id="learn-track-sections"></div>
         </div>
       </section>
 
       <!-- LESSON DETAIL SCREEN -->
       <section id="screen-lesson" class="screen" aria-label="Lesson">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-lesson-back">
-            <span class="btn-label-en">← Learn</span>
-            <span class="btn-label-pa" lang="pa">ਸਿੱਖੋ</span>
-          </button>
-        </div>
-        <div class="lesson-header" style="margin-top:8px;">
-          <h2 id="lesson-title">Lesson</h2>
-          <div class="lesson-title-pa" id="lesson-title-pa" lang="pa"></div>
-          <div class="lesson-step-type">
-            <span id="lesson-step-type">Definition / ਪਰਿਭਾਸ਼ਾ</span>
-            <span class="step-indicator" id="lesson-step-indicator">Step 1 / 1</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="lang-label">ENGLISH</div>
-          <div class="lesson-text-en" id="lesson-text-en"></div>
-          <div class="lang-label" style="margin-top:6px;">ਪੰਜਾਬੀ</div>
-          <div class="lesson-text-pa" id="lesson-text-pa" lang="pa"></div>
+        <div id="lessonSwipeDeck" aria-label="Lesson step deck">
+          <div id="lessonDeckViewport" aria-live="polite" aria-atomic="false">
+            <div id="lessonDeckTrack">
+              <article class="card deck-card lesson-deck-card is-active" id="lessonDeckCard" aria-label="Current lesson step">
+                <div class="lang-label">ENGLISH</div>
+                <div class="lesson-text-en" id="lesson-text-en"></div>
+                <div class="lang-label" style="margin-top:6px;">ਪੰਜਾਬੀ</div>
+                <div class="lesson-text-pa" id="lesson-text-pa" lang="pa"></div>
 
-          <div class="lesson-instruction" id="lesson-instruction" aria-live="polite" aria-atomic="true">
-            <div class="lesson-instruction-en" id="lesson-instruction-en"></div>
-            <div class="lesson-instruction-pa" id="lesson-instruction-pa" lang="pa"></div>
+                <div class="lesson-instruction" id="lesson-instruction" aria-live="polite" aria-atomic="true">
+                  <div class="lesson-instruction-en" id="lesson-instruction-en"></div>
+                  <div class="lesson-instruction-pa" id="lesson-instruction-pa" lang="pa"></div>
+                </div>
+
+                <div class="options" id="lesson-options"></div>
+                <div class="feedback" id="lesson-feedback"></div>
+              </article>
+            </div>
           </div>
 
-          <div class="options" id="lesson-options"></div>
-          <div class="feedback" id="lesson-feedback"></div>
-        </div>
-        <div class="button-row">
-          <button class="btn btn-secondary" id="btn-lesson-prev">
-            <span class="btn-label-en">Previous</span>
-            <span class="btn-label-pa" lang="pa">ਪਿੱਛੇ</span>
-          </button>
-          <button class="btn" id="btn-lesson-next">
-            <span class="btn-label-en">Next</span>
-            <span class="btn-label-pa" lang="pa">ਅੱਗੇ</span>
-          </button>
+          <div class="lesson-swipe-progress" id="lesson-swipe-progress" aria-live="polite" aria-atomic="true">
+            <div class="lesson-swipe-hint" id="lesson-swipe-hint"></div>
+          </div>
+
+          <div class="lesson-header lesson-intro" aria-label="Lesson introduction">
+            <div class="lesson-hero-nav" aria-label="Lesson step controls">
+              <div class="lesson-hero-nav-row">
+                <button class="btn deck-prev-handle" id="btn-lesson-prev" type="button" aria-label="Previous step">
+                  <span class="btn-label-en">Previous</span>
+                  <span class="btn-label-pa" lang="pa">ਪਿੱਛੇ</span>
+                </button>
+                <button class="btn deck-next-handle" id="btn-lesson-next" type="button" aria-label="Next step">
+                  <span class="btn-label-en">Next</span>
+                  <span class="btn-label-pa" lang="pa">ਅੱਗੇ</span>
+                </button>
+              </div>
+              <button class="btn cta-primary lesson-check-btn" id="btn-lesson-check" type="button" aria-label="Start question" hidden aria-hidden="true" disabled>
+                <span class="btn-label-en">Start</span>
+                <span class="btn-label-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+              </button>
+            </div>
+            <h2 id="lesson-title">Lesson</h2>
+            <div class="lesson-title-pa" id="lesson-title-pa" lang="pa"></div>
+            <div class="lesson-step-type">
+              <span id="lesson-step-type">Definition / ਪਰਿਭਾਸ਼ਾ</span>
+              <div class="lesson-step-progress">
+                <div class="lesson-step-dots" id="lesson-step-dots" aria-label="Step position"></div>
+                <span class="step-indicator" id="lesson-step-indicator">1/1</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- GAMES SCREEN -->
-            <!-- DAILY QUEST SCREEN -->
-            <section id="screen-daily-quest" class="screen" aria-label="Daily Quest">
-              <div class="button-row">
-                <button class="btn btn-secondary btn-small" id="btn-daily-quest-back">
-                  <span class="btn-label-en">← Home</span>
-                  <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-                </button>
-              </div>
-              <div class="card" style="margin-top:8px;">
-                <div class="section-title">Daily Quest</div>
-                <div class="section-subtitle">Complete all 3 games to finish your quest for today!</div>
-                <div id="daily-quest-counter" class="quest-counter" style="margin:8px 0;"></div>
-                <ul class="quest-list" style="list-style:none; padding:0;">
-                  <li><span id="quest-check-learn">☐</span> <span class="quest-label"></span></li>
-                  <li><span id="quest-check-reading">☐</span> <span class="quest-label"></span></li>
-                  <li><span id="quest-check-games">☐</span> <span class="quest-label"></span></li>
-                </ul>
-                <div id="daily-quest-complete-badge" class="quest-complete-badge" style="display:none; margin:10px 0; color:green; font-weight:bold;">Quest Complete! 🎉</div>
-                <div class="quest-streak-row" style="margin-top:10px;">
-                  <span>Streak: <span id="daily-quest-streak">0</span> days</span>
-                </div>
-                <div class="button-row" style="margin-top:12px;">
-                  <button class="btn btn-primary" id="btn-daily-quest-start">
-                    <span class="btn-label-en" id="daily-quest-start-en">Start Daily Quest</span>
-                    <span class="btn-label-pa" id="daily-quest-start-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
-                  </button>
-                </div>
-              </div>
-            </section>
       
       <!-- PLAY HOME (Game Home Menu) -->
-      <section id="screen-play-home" class="screen" aria-label="Play">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-playhome-back-home">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
-
-        <div class="card" style="margin-top:8px;">
-          <div class="section-title">Play</div>
-          <div class="section-subtitle" lang="pa">ਖੇਡੋ</div>
-          <div class="info-text">Choose a game, pick difficulty, then start a round.</div>
+      <section id="screen-play-home" class="screen" aria-label="Unavailable">
+        <div class="card">
+          <div class="section-title">Unavailable</div>
+          <div class="section-subtitle" lang="pa">ਉਪਲਬਧ ਨਹੀਂ</div>
+          <div class="info-text">This section is temporarily unavailable.</div>
         </div>
 
         <div class="card">
-          <div class="section-title" style="font-size:15px;">Games</div>
-          <div class="playhome-grid" id="playhome-grid" role="grid" aria-label="Games grid">
+          <div class="section-title" style="font-size:15px;">Unavailable</div>
+          <div class="playhome-grid" id="playhome-grid" role="grid" aria-label="Unavailable grid">
             <button type="button" class="playhome-tile" id="btn-playhome-game1" data-playhome-game="1" role="gridcell">
               <div class="playhome-tile-icon" aria-hidden="true">1</div>
               <div class="playhome-tile-body">
                 <div class="playhome-tile-title">Tap the Word</div>
-                <div class="playhome-tile-desc">10 questions • quick</div>
+                <div class="playhome-tile-desc">quick</div>
                 <div class="playhome-tile-meta" id="playhome-meta-game1"></div>
               </div>
             </button>
@@ -376,7 +337,7 @@
               <div class="playhome-tile-icon" aria-hidden="true">2</div>
               <div class="playhome-tile-body">
                 <div class="playhome-tile-title">Parts of Speech</div>
-                <div class="playhome-tile-desc">10 questions • multiple choice</div>
+                <div class="playhome-tile-desc">multiple choice</div>
                 <div class="playhome-tile-meta" id="playhome-meta-game2"></div>
               </div>
             </button>
@@ -385,7 +346,7 @@
               <div class="playhome-tile-icon" aria-hidden="true">3</div>
               <div class="playhome-tile-body">
                 <div class="playhome-tile-title">Tense Detective</div>
-                <div class="playhome-tile-desc">10 questions • multiple choice</div>
+                <div class="playhome-tile-desc">multiple choice</div>
                 <div class="playhome-tile-meta" id="playhome-meta-game3"></div>
               </div>
             </button>
@@ -394,7 +355,7 @@
               <div class="playhome-tile-icon" aria-hidden="true">4</div>
               <div class="playhome-tile-body">
                 <div class="playhome-tile-title">Sentence Check</div>
-                <div class="playhome-tile-desc">10 questions • pick the best sentence</div>
+                <div class="playhome-tile-desc">pick the best sentence</div>
                 <div class="playhome-tile-meta" id="playhome-meta-game4"></div>
               </div>
             </button>
@@ -403,7 +364,7 @@
               <div class="playhome-tile-icon" aria-hidden="true">5</div>
               <div class="playhome-tile-body">
                 <div class="playhome-tile-title">Conversation Coach</div>
-                <div class="playhome-tile-desc">10 questions • best reply</div>
+                <div class="playhome-tile-desc">best reply</div>
                 <div class="playhome-tile-meta" id="playhome-meta-game5"></div>
               </div>
             </button>
@@ -412,32 +373,35 @@
               <div class="playhome-tile-icon" aria-hidden="true">6</div>
               <div class="playhome-tile-body">
                 <div class="playhome-tile-title">Vocab Vault</div>
-                <div class="playhome-tile-desc">10 questions • translation</div>
+                <div class="playhome-tile-desc">translation</div>
                 <div class="playhome-tile-meta" id="playhome-meta-game6"></div>
               </div>
             </button>
 
-            <button type="button" class="playhome-tile game-tile--disabled" id="btn-playhome-game7" data-playhome-game="7" role="gridcell" aria-disabled="true" data-toast="Coming soon — try Vocab Vault (Game 6) for now.">
-              <div class="playhome-tile-icon" aria-hidden="true">7</div>
+            <button type="button" class="playhome-tile" id="btn-playhome-game8" data-playhome-game="8" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">8</div>
               <div class="playhome-tile-body">
-                <div class="playhome-tile-title">Vocab Vault Jr</div>
-                <div class="playhome-tile-desc">10 questions • translation</div>
-                <div class="playhome-tile-meta" id="playhome-meta-game7">
-                  <span class="badge-coming-soon">Coming Soon</span>
-                  <span class="playhome-lock" aria-hidden="true">🔒</span>
-                </div>
+                <div class="playhome-tile-title">Word Order Surgery</div>
+                <div class="playhome-tile-desc">swap chunks</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game8"></div>
               </div>
             </button>
 
-            <button type="button" class="playhome-tile game-tile--disabled" id="btn-playhome-game8" data-playhome-game="8" role="gridcell" aria-disabled="true" data-toast="Coming soon — try Vocab Vault (Game 6) for now.">
-              <div class="playhome-tile-icon" aria-hidden="true">8</div>
+            <button type="button" class="playhome-tile" id="btn-playhome-game10" data-playhome-game="10" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">10</div>
               <div class="playhome-tile-body">
-                <div class="playhome-tile-title">Vocab Vault Expert</div>
-                <div class="playhome-tile-desc">10 questions • translation</div>
-                <div class="playhome-tile-meta" id="playhome-meta-game8">
-                  <span class="badge-coming-soon">Coming Soon</span>
-                  <span class="playhome-lock" aria-hidden="true">🔒</span>
-                </div>
+                <div class="playhome-tile-title">Beam Training</div>
+                <div class="playhome-tile-desc">Hold the beam under pressure</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game10"></div>
+              </div>
+            </button>
+
+            <button type="button" class="playhome-tile" id="btn-playhome-game11" data-playhome-game="11" role="gridcell">
+              <div class="playhome-tile-icon" aria-hidden="true">11</div>
+              <div class="playhome-tile-body">
+                <div class="playhome-tile-title">Maze Trace</div>
+                <div class="playhome-tile-desc">drag to finish + mini quiz</div>
+                <div class="playhome-tile-meta" id="playhome-meta-game11"></div>
               </div>
             </button>
           </div>
@@ -474,144 +438,110 @@
         </div>
       </section>
 
-      <!-- TYPE HOME (Parts of Speech) -->
-      <section id="screen-type" class="screen" aria-label="Type">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-type-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
+      <!-- =========================
+           TYPING CENTER (Premium)
+           ========================= -->
+      <section id="screen-typing-center" class="screen" aria-label="Typing Center">
+        <div class="module-screen-stack">
+          <div id="typingModeDeck" aria-label="Typing modes">
+            <div id="typingDeckViewport">
+              <div id="typingDeckTrack" role="list" aria-label="Core modes">
+                <!-- Core modes: Practice, Type & Define, Typing Race -->
+                <div class="typing-mode-card tc-card deck-card module-card deck-card--type" id="typingModePractice" role="listitem" aria-label="Practice">
+                  <div class="deck-card-kicker">MODE</div>
+                  <div class="tc-card__header">
+                    <div class="typing-mode-card__row">
+                      <div class="typing-mode-icon" aria-hidden="true">⌨️</div>
+                      <div class="typing-mode-name deck-card-title">Practice</div>
+                    </div>
+                  </div>
+                  <div class="tc-card__desc deck-card-subtitle">Guided typing practice with feedback.</div>
+                  <div class="tc-card__meta">Timer: Off • Focus: Warm-up</div>
+                </div>
 
-        <div class="card" style="margin-top:8px;">
-          <div class="section-title">Type</div>
-          <div class="section-subtitle" lang="pa">ਸ਼ਬਦ ਦਾ ਭਾਗ</div>
-          <p class="info-text">10 questions • pick the word type.</p>
-          <div class="tracks-strip">
-            <div class="track-pill"><span class="dot"></span> Word Types</div>
-            <div class="track-pill"><span class="dot"></span> Parts of Speech</div>
-          </div>
-          <div class="button-row" style="margin-top:10px;">
-            <button class="btn" id="btn-type-start">Start</button>
-          </div>
-        </div>
+                <div class="typing-mode-card tc-card deck-card module-card deck-card--type" id="typingModeTypeDefine" role="listitem" aria-label="Type &amp; Define">
+                  <div class="deck-card-kicker">MODE</div>
+                  <div class="tc-card__header">
+                    <div class="typing-mode-card__row">
+                      <div class="typing-mode-icon" aria-hidden="true">⌨️</div>
+                      <div class="typing-mode-name deck-card-title">Type &amp; Define</div>
+                    </div>
+                  </div>
+                  <div class="tc-card__desc deck-card-subtitle">Type the word, choose the meaning.</div>
+                  <div class="tc-card__meta" id="typingCardMeta_typeDefine" aria-live="polite">Seen: — • Focus: Recall</div>
+                  <div class="tc-card__footer typing-mode-panel typing-mode-panel--typeDefine" id="typingTypeDefinePanel" role="group" aria-label="Type &amp; Define controls">
+                    <button class="btn btn-small typing-tertiary-btn" id="reviewTypeDefineMistakesBtn" type="button" style="margin-top:8px;" aria-disabled="true" disabled>Review mistakes</button>
+                    <div class="tt-duration__hint is-hidden" id="typeDefineReviewMistakesNote" aria-live="polite">No mistakes yet — try a session first.</div>
+                  </div>
+                </div>
 
-        <div class="card" id="type-game-card" style="margin-top:8px; display:none;" aria-hidden="true">
-          <div class="section-title">Word Type Round</div>
-          <div class="section-subtitle" id="type-progress"></div>
-          <div id="type-word" style="margin-top:12px; font-size:1.3em; font-weight:bold; text-align:center;"></div>
-          <div class="options" id="type-options" role="group" style="margin-top:16px;"></div>
-          <div class="feedback" id="type-feedback" style="margin-top:12px; text-align:center; min-height:24px;"></div>
-          <div class="button-row" style="margin-top:12px;">
-            <button class="btn btn-secondary" id="btn-type-next" style="display:none;">Next</button>
-            <button class="btn btn-secondary" id="btn-type-restart">Restart</button>
+                <div class="typing-mode-card tc-card deck-card module-card deck-card--type" id="typingModeRace" role="listitem" aria-label="Typing Race">
+                  <div class="deck-card-kicker">MODE</div>
+                  <div class="tc-card__header">
+                    <div class="typing-mode-card__row">
+                      <div class="typing-mode-icon" aria-hidden="true">⚡</div>
+                      <div class="typing-mode-name deck-card-title">Typing Race</div>
+                    </div>
+                  </div>
+
+                  <div class="tc-card__desc deck-card-subtitle">Race for speed with high accuracy.</div>
+
+                  <div class="tc-card__stats" id="typingRaceStats" aria-label="Typing Race stats">
+                    <div class="tc-card__meta" id="typingLastModeLine" aria-live="polite"></div>
+                    <div class="tc-card__meta" id="typingRaceBestSummary" aria-live="polite">Best: —</div>
+                  </div>
+
+                  <div class="tc-card__controls" id="typingRaceControls" aria-label="Typing Race controls"></div>
+
+                  <div class="tc-card__footer">
+                    <button class="btn typing-tertiary-btn" id="typingRaceStatsBtn" type="button">Review stats</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div id="type-summary" style="margin-top:16px; display:none;">
-            <div id="type-score-line"></div>
-            <div id="type-accuracy-line" style="margin-top:6px;"></div>
+
+          <div class="learn-intro" aria-label="Typing introduction">
+            <div class="typing-hero-nav" aria-label="Typing mode controls">
+              <div class="typing-hero-nav-row">
+                <button class="btn deck-prev-handle" id="typingDeckPrevBtn" type="button" aria-label="Previous typing mode">←</button>
+                <button class="btn deck-next-handle" id="typingDeckNextBtn" type="button" aria-label="Next typing mode">→</button>
+              </div>
+              <button class="btn cta-primary" id="typingCenterStartBtn" type="button" aria-label="Start Typing">
+                <span class="btn-label-en">Start</span>
+                <span class="btn-label-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+              </button>
+            </div>
+            <div class="section-title learn-intro-title">Type | ਲਿਖੋ</div>
+            <p class="section-subtitle learn-intro-subtitle" id="typingCenterSubtitle">
+              Practice. Learn words. Race.
+            </p>
+            <p class="section-subtitle learn-intro-subtitle" id="typingCenterSubtitlePa" lang="pa">
+              ਅਭਿਆਸ ਕਰੋ। ਸ਼ਬਦ ਸਿੱਖੋ। ਰੇਸ ਕਰੋ।
+            </p>
+            <div class="typing-hero-progress" aria-label="Typing mode progress">
+              <div id="typingDeckDots" aria-label="Typing mode position"></div>
+              <div id="typingDeckProgressText" class="deck-progress-text" aria-live="polite">1/3</div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- =========================
-           TYPING CENTER (Premium)
+           PRACTICE MODE (v1.2)
            ========================= -->
-      <section id="screen-typing-center" class="screen" aria-label="Typing Center">
-        <div class="typing-shell">
-          <div class="typing-topbar">
-            <div class="typing-topbar__left">
-              <button class="typing-backbtn" id="typingCenterBackBtn" type="button" aria-label="Back">←</button>
-              <div class="typing-titleblock">
-                <div class="typing-title">Typing Center</div>
-                <div class="typing-subtitle" id="typingCenterSubtitle">Practice, race, and build speed</div>
-              </div>
-            </div>
-
-            <div class="typing-topbar__right">
-              <button class="pill-btn is-locked" id="typingPremiumBtn" type="button" aria-label="Premium">Upgrade</button>
+      <section id="screen-practice" class="screen" aria-label="Practice">
+        <div class="practice-shell">
+          <div class="practice-topbar">
+            <div class="button-row">
+              <button class="btn btn-secondary btn-small" id="btn-practice-back" type="button" aria-label="Back">← Back</button>
             </div>
           </div>
 
-          <div class="typing-hero">
-            <div class="typing-hero__title">Typing</div>
-            <div class="typing-hero__sub">Build speed and accuracy with short, friendly prompts.</div>
-
-            <!-- Prompt-aligned objective line (additive; JS will populate when present) -->
-            <div class="typing-hero__subtitle" id="typingCenterObjective">Focus: Accuracy first</div>
-
-            <div class="typing-hero__cta button-row typing-hero__ctaRow" aria-label="Quick start">
-              <button id="typingHeroPracticeBtn" class="btn" type="button">Start Practice</button>
-              <button id="typingHeroRaceBtn" class="btn btn-secondary" type="button">Typing Race</button>
-            </div>
-
-            <div class="typing-last-row">
-              <span id="typingLastModeLine" class="typing-last-mode" aria-live="polite"></span>
-              <button type="button" class="typing-resume-link" id="typingResumeBtn">Resume</button>
-            </div>
-
-            <div class="typing-chip-row" aria-label="Mode hints">
-              <span class="typing-chip">No timer</span>
-              <span class="typing-chip">Warm-up</span>
-              <span class="typing-chip">Accuracy goal 95%+</span>
-            </div>
-
-            <div class="typing-mode-grid" role="list">
-              <button class="typing-mode-card" id="typingModePractice" type="button" role="listitem">
-                <div class="typing-mode-card__row">
-                  <div class="typing-mode-icon">⌨️</div>
-                  <div class="typing-mode-name">Practice</div>
-                </div>
-                <div class="typing-mode-desc">Warm-up with short prompts. No timer.</div>
-                <div class="typing-mode-chips" aria-hidden="true">
-                  <span class="typing-chip">No timer</span>
-                  <span class="typing-chip">Warm-up</span>
-                </div>
-              </button>
-
-              <button class="typing-mode-card" id="typingModeTime" type="button" role="listitem" aria-disabled="true" data-status="comingSoon" tabindex="-1">
-                <div class="typing-mode-card__row">
-                  <div class="typing-mode-icon">⏱</div>
-                  <div class="typing-mode-name">Time Trial</div>
-                </div>
-                <div class="typing-mode-desc">Type for 30–60 seconds and track WPM.</div>
-                <div class="typing-mode-soon" aria-hidden="true">Coming soon</div>
-                <div class="typing-mode-chips" aria-hidden="true">
-                  <span class="typing-chip">30–60s</span>
-                  <span class="typing-chip">Soon</span>
-                </div>
-              </button>
-
-              <button class="typing-mode-card is-premium" id="typingModeRace" type="button" role="listitem">
-                <div class="typing-mode-card__row">
-                  <div class="typing-mode-icon">⚡</div>
-                  <div class="typing-mode-name">Typing Race</div>
-                </div>
-                <div class="typing-mode-desc">Countdown start, progress bar, clean stats.</div>
-                <div class="typing-mode-chips" aria-hidden="true">
-                  <span class="typing-chip">Countdown</span>
-                  <span class="typing-chip">Best</span>
-                </div>
-              </button>
-
-              <button class="typing-mode-card" id="typingModeLessons" type="button" role="listitem" aria-disabled="true" data-status="comingSoon" tabindex="-1">
-                <div class="typing-mode-card__row">
-                  <div class="typing-mode-icon">📚</div>
-                  <div class="typing-mode-name">Lessons</div>
-                </div>
-                <div class="typing-mode-desc">Letter-by-letter mastery.</div>
-                <div class="typing-mode-soon" aria-hidden="true">Coming soon</div>
-                <div class="typing-mode-chips" aria-hidden="true">
-                  <span class="typing-chip">Soon</span>
-                </div>
-              </button>
-            </div>
-
-            <div class="button-row" style="margin-top:12px;">
-              <button id="btn-typing-center-classic" class="btn btn-secondary" type="button">
-                <span class="btn-label-en">Type Lessons</span>
-                <span class="btn-label-pa" lang="pa">ਟਾਈਪ ਲੈਸਨ</span>
-              </button>
-            </div>
+          <div class="card practice-card">
+            <div class="section-title practice-title">Practice</div>
+            <div id="practice-root" class="practice-root"></div>
           </div>
         </div>
       </section>
@@ -619,14 +549,14 @@
       <!-- =========================
            TYPING RACE (Premium)
            ========================= -->
-      <section id="screen-typing-race" class="screen" aria-label="Typing Race">
+      <section id="screen-typing-race" class="screen" aria-label="Typing">
         <div class="typing-shell">
           <div class="typing-topbar">
             <div class="typing-topbar__left">
               <button class="typing-backbtn" id="typingRaceBackBtn" type="button" aria-label="Back">←</button>
               <div class="typing-titleblock">
-                <div class="typing-title">Typing Race</div>
-                <div class="typing-subtitle" id="raceSubtitle">Beat your best time</div>
+                <div class="typing-title" id="raceTitle">Typing</div>
+                <div class="typing-subtitle" id="raceSubtitle">Build speed and accuracy</div>
                 <div id="raceGoalLine" class="race-goal-line race-goal" aria-live="polite"></div>
               </div>
             </div>
@@ -636,13 +566,50 @@
             </div>
           </div>
 
-          <div class="race-card" aria-label="Typing Race">
+          <div class="race-card" aria-label="Typing">
             <div class="race-card__header">
               <div class="race-metrics" aria-label="Race metrics">
-                <div class="race-metric"><span class="race-metric__label" title="Words per minute">WPM</span><span class="race-metric__value" id="raceWpm">0</span></div>
+                <div class="race-metric" id="raceMetricWpm"><span class="race-metric__label" title="Words per minute">WPM</span><span class="race-metric__value" id="raceWpm">0</span></div>
                 <div class="race-metric"><span class="race-metric__label" title="Accuracy">Acc</span><span class="race-metric__value" id="raceAcc">100%</span></div>
-                <div class="race-metric"><span class="race-metric__label" title="Elapsed time">Time</span><span class="race-metric__value" id="raceTime">0.0s</span></div>
+                <div class="race-metric" id="raceMetricTime"><span class="race-metric__label" title="Elapsed time">Time</span><span class="race-metric__value" id="raceTime">0.0s</span></div>
                 <div class="race-metric"><span class="race-metric__label" title="Total wrong characters">Mistakes</span><span class="race-metric__value" id="raceMistakes">0</span></div>
+                <div class="race-metric"><span class="race-metric__label" title="Consecutive correct characters">Streak</span><span class="race-metric__value" id="raceStreak">0</span></div>
+              </div>
+
+              <!-- Type & Define: minimal HUD (hidden unless this mode is active) -->
+              <div id="tadHud" class="tad-hud is-hidden" aria-hidden="true">
+                <div id="tadBossBadge" class="tad-boss-badge is-hidden" aria-hidden="true">Boss Challenge</div>
+                <div id="tadPhaseIndicator" class="tad-phase" data-phase="type" aria-label="Phase">
+                  <span class="tad-phase__text" data-step="type">Step 1: Type the word ✍️</span>
+                  <span class="tad-phase__text is-hidden" data-step="choose" aria-hidden="true">Step 2: Pick the meaning 🎯</span>
+                </div>
+                <div class="tad-phase-helper" aria-label="Step help">
+                  <span class="tad-phase-helper__text" data-step="type">Type carefully, then move to meaning.</span>
+                  <span class="tad-phase-helper__text is-hidden" data-step="choose" aria-hidden="true">Tap the Punjabi meaning that matches.</span>
+                </div>
+                <div id="tadFeedbackText" class="tad-feedback" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
+
+                <div class="tad-audio" aria-label="Audio">
+                  <div class="tad-audio__label" aria-hidden="true">English Audio</div>
+                  <button id="tadSpeakWordBtn" class="btn btn-secondary btn-small tad-audio__btn is-hidden" type="button" aria-label="Play English word audio" aria-hidden="true" disabled>
+                    🔊 Word (English)
+                  </button>
+                  <button id="tadSpeakMeaningBtn" class="btn btn-secondary btn-small tad-audio__btn is-hidden" type="button" aria-label="Play English definition audio" aria-hidden="true" disabled>
+                    🔊 Definition (English)
+                  </button>
+                </div>
+
+                <div id="tadProgressIndicator" class="tad-progress" aria-label="Progress">Card 0/0</div>
+                <div id="tadDoubleClearStreak" class="tad-streak" aria-label="Double-Clear Streak">Streak 0</div>
+
+                <!-- Dev-only: Type & Define diagnostics overlay (shown only when enabled by URL flag) -->
+                <div id="tadDevPanel" class="tad-dev-panel" aria-hidden="true">
+                  <div class="tad-dev__title">
+                    <span>Type &amp; Define Debug</span>
+                    <button id="tadDevPanelCloseBtn" class="tad-dev__close" type="button" aria-label="Hide diagnostics">×</button>
+                  </div>
+                  <div id="tadDevPanelBody" class="tad-dev__body"></div>
+                </div>
               </div>
             </div>
 
@@ -650,9 +617,16 @@
               <div class="race-progress__fill" id="raceProgressFill"></div>
             </div>
 
+            <!-- Time Trial countdown (shown only in Time Trial mode) -->
+            <div class="race-timebar" id="raceTimeBar" aria-hidden="true" style="display:none;">
+              <div class="race-timebar__fill" id="raceTimeBarFill" style="width:100%"></div>
+            </div>
+
             <div class="race-card__body">
               <div class="type-promptCard" id="racePromptCard" aria-label="Prompt">
-                <div class="race-prompt" id="racePrompt" aria-label="Prompt text"></div>
+                <div class="race-prompt" id="racePrompt" role="img" aria-label="Prompt text"></div>
+
+                <div id="raceIntentLine" class="race-intent" aria-live="polite"></div>
 
                 <input
                   class="race-input"
@@ -664,14 +638,50 @@
                   spellcheck="false"
                   placeholder="Start typing here…"
                   aria-label="Type here"
+                  aria-describedby="raceGoalLine raceIntentLine"
                 />
+
+                <!-- Type & Define: strict-exact guardrail (shown only when strict matching is required) -->
+                <div id="tadExactGuardrail" class="tad-exact-guardrail is-hidden" aria-hidden="true">
+                  Match the word exactly (letters, punctuation, and spacing).
+                </div>
+
+                <!-- Type & Define: MCQ inline question (hidden by default; shown during MCQ phase) -->
+                <div id="tadMcqPanel" class="tad-mcq-panel is-hidden" aria-hidden="true">
+                  <div class="tad-mcq-card" role="group" aria-label="Meaning question">
+                    <div class="tad-mcq-head">
+                      <div class="tad-mcq-prompt">Meaning?</div>
+                      <div id="tadMcqTimer" class="tad-mcq-timer">No timer</div>
+                    </div>
+                    <div id="tadChoices" class="options tad-mcq-choices" role="group" aria-label="Meaning choices">
+                      <button type="button" class="btn btn-secondary" data-tad-choice="0"></button>
+                      <button type="button" class="btn btn-secondary" data-tad-choice="1"></button>
+                      <button type="button" class="btn btn-secondary" data-tad-choice="2"></button>
+                      <button type="button" class="btn btn-secondary" data-tad-choice="3"></button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Type & Define: checkpoint (hidden; shown after every 10 full clears) -->
+                <div id="tadCheckpointPanel" class="tad-checkpoint-panel is-hidden" aria-hidden="true">
+                  <div class="tad-checkpoint-card" role="group" aria-label="Checkpoint">
+                    <div class="tad-checkpoint-head">
+                      <div id="tadCheckpointTitle" class="tad-checkpoint-title">Checkpoint!</div>
+                      <div class="tad-checkpoint-sub">Here are the last 10 words you completed.</div>
+                    </div>
+                    <div id="tadCheckpointList" class="tad-checkpoint-list" aria-label="Last 10 words"></div>
+                    <div class="tad-checkpoint-actions">
+                      <button type="button" class="btn btn-primary" id="tadCheckpointContinueBtn">Continue</button>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="race-dock" aria-label="Race actions">
                 <div class="race-dock__row">
                   <button class="pill-btn is-primary" id="raceStartBtn" type="button">Start</button>
                   <button class="pill-btn" id="raceResetBtn" type="button">Reset</button>
-                  <button type="button" class="pill-btn pill-btn--ghost" id="raceFocusBtn">Focus</button>
+                  <button type="button" class="pill-btn pill-btn--ghost" id="raceFocusBtn" aria-pressed="false" title="Focus mode: hide distractions • type carefully">Focus</button>
                   <button class="pill-btn is-accent" id="raceNextBtn" type="button">Next</button>
                 </div>
               </div>
@@ -680,43 +690,33 @@
         </div>
 
         <!-- Countdown overlay -->
-        <div class="race-countdown" id="raceCountdown" aria-hidden="true">
-          <div class="race-countdown__card" role="dialog" aria-label="Countdown">
+        <div class="race-countdown" id="raceCountdown" aria-hidden="true" role="status" aria-live="polite" aria-atomic="true">
+          <div class="race-countdown__card" role="presentation">
             <div class="race-countdown__num" id="raceCountdownNum">3</div>
             <div class="race-countdown__msg">Get ready…</div>
           </div>
         </div>
       </section>
 
-      <!-- FLASHCARDS SCREEN (placeholder) -->
-      <section id="screen-flashcards" class="screen" aria-label="Flashcards">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-flashcards-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
-
-        <div class="card" style="margin-top:8px;">
-          <div class="section-title">Flashcards</div>
-          <p class="section-subtitle">Coming soon.</p>
-          <p class="section-subtitle" lang="pa">ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ।</p>
-        </div>
-      </section>
-
-      <section id="screen-play" class="screen" aria-label="Games">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-play-back-home">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
+      <section id="screen-play" class="screen" aria-label="Unavailable">
         <div id="playActivePanel" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
           <!-- IN_ROUND: Round in progress (answering questions) -->
           <div id="playRound" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
             <div class="card">
-              <div class="button-row" style="justify-content:space-between; margin-bottom:6px;">
-                <button class="btn btn-secondary btn-small" id="btn-play-back-games">← Games</button>
+              <!-- P0 v2: unified status bar (shared across games) -->
+              <div class="play-status-v2" id="play-status-v2" aria-label="Round status">
+                <button class="btn btn-secondary btn-small" id="btn-play-back-games">← Home</button>
+                <div class="play-status-v2-center" aria-label="Game">
+                  <span id="play-status-title" class="play-status-title">Game</span>
+                  <span id="play-status-tag" class="play-status-tag" style="display:none;" aria-hidden="true"></span>
+                </div>
+                <div class="play-status-v2-right" aria-label="Progress">
+                  <span id="play-status-progress-text" class="play-status-progress-text"></span>
+                  <button class="btn btn-secondary btn-small" id="btn-play-settings" type="button" aria-label="Settings" disabled>⚙︎</button>
+                </div>
+              </div>
+
+              <div class="button-row play-difficulty-row" style="justify-content:flex-end; margin-bottom:6px;">
                 <button class="btn btn-secondary btn-small" id="btn-play-difficulty">Difficulty: Medium</button>
               </div>
               <div class="section-subtitle play-difficulty-note" id="play-difficulty-note">Applies to next round</div>
@@ -724,28 +724,11 @@
               <div class="score-row">
                 <span>Score: <strong id="play-score">0</strong></span>
                 <span>Streak: <strong id="play-streak">0</strong></span>
-                <span>Best (this game): <strong id="play-best">0</strong><span id="play-best-suffix"></span></span>
-              </div>
-              <div class="score-row" style="margin-top:4px;">
-                <span id="play-game-label">Game 1: Tap the Word</span>
-              </div>
-
-              <div class="track-label" id="play-track-label">Track: Words & Names</div>
-              <div class="section-subtitle" id="play-goal-line" style="margin-top:6px;">Goal: —</div>
-              <div class="section-subtitle" id="play-example-line">Example: —</div>
-              <div class="lang-label" style="margin-top:6px;">ENGLISH / ਪੰਜਾਬੀ</div>
-              <div class="lesson-text-en" id="play-question-text" tabindex="-1"></div>
-              <div class="options" id="play-options"></div>
-              <div class="feedback" id="play-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
-
-              <div class="button-row" id="play-next-row" style="margin-top:10px;">
-                <button class="btn" id="btn-play-next" disabled>Next →</button>
               </div>
             </div>
           </div>
-
         </div>
-
+            <!-- Wide card: Typing Race -->
         <!-- COMPLETE: Round ended (summary + next actions) -->
         <div id="playCompletePanel" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
         <div id="playComplete" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
@@ -765,9 +748,6 @@
               <div class="button-row" style="margin-top:8px;">
                 <button class="btn btn-secondary" id="btnChooseAnotherGame" type="button">Choose another game</button>
               </div>
-              <div class="button-row" style="margin-top:8px;">
-                <button class="btn" id="btn-play-continue-quest" style="display:none;">Continue Quest</button>
-              </div>
             </div>
           </div>
         </div>
@@ -775,38 +755,50 @@
         </div>
       </section>
 
-      <!-- Play feedback toast overlay (popup style) -->
-      <div id="play-feedback-overlay" aria-live="polite" aria-atomic="true" aria-hidden="true">
-        <div class="overlay-card" id="play-feedback-overlay-card" role="status" tabindex="-1">
-          <div class="overlay-status" id="play-feedback-overlay-status"></div>
-          <div class="overlay-status-pa" id="play-feedback-overlay-status-pa" lang="pa" style="display:none;"></div>
-          <div class="overlay-body" id="play-feedback-overlay-body"></div>
-        </div>
-      </div>
-
       <!-- READING SCREEN -->
       <section id="screen-reading" class="screen" aria-label="Reading">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-reading-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
-        <div style="margin-top:8px;">
-          <div class="section-title">Reading & Stories</div>
-          <p class="section-subtitle">
-            Short bilingual passages with one simple question each. Great for daily practice.
-          </p>
-          <div class="tracks-strip">
-            <div class="track-pill"><span class="dot"></span> Reading & Stories</div>
-          </div>
+        <div class="module-screen-stack">
           <div id="reading-list-content">
-            <div class="card">
-              <div class="section-title" style="font-size:15px;">Passages</div>
-              <p class="info-text">
-                Choose a passage. Read in English and Punjabi. Then answer the question to earn XP.
-              </p>
-              <ul class="reading-list" id="reading-list"></ul>
+            <div id="readingBundleDeck" aria-label="Books deck">
+              <div id="readingBundleViewport">
+                <div id="readingBundleTrack"></div>
+              </div>
+            </div>
+
+            <div id="readingStorySheet" class="reading-story-sheet" hidden aria-hidden="true">
+              <div class="reading-story-sheet__backdrop" id="readingStorySheetBackdrop"></div>
+              <div class="reading-story-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="readingStorySheetTitle">
+                <div class="reading-story-sheet__header">
+                  <div id="readingStorySheetTitle" class="section-title">Choose a story</div>
+                  <button type="button" class="btn btn-secondary btn-small" id="readingStorySheetClose" aria-label="Close story selector">Close</button>
+                </div>
+                <div id="readingStorySheetList" class="reading-story-sheet__list" aria-label="Story list"></div>
+              </div>
+            </div>
+          </div>
+          <div class="read-intro" aria-label="Read introduction">
+            <div class="read-hero-nav" aria-label="Book controls">
+              <div class="read-hero-nav-row">
+                <button class="btn deck-prev-handle" id="btn-reading-prev-bundle" type="button" aria-label="Previous book">←</button>
+                <button class="btn deck-next-handle bundle-next-handle bundle-next-handle--tertiary" id="btn-reading-next-bundle" type="button" aria-label="Next book">→</button>
+              </div>
+              <div id="reading-books-actions">
+                <button class="btn cta-primary" id="btn-reading-book-start" type="button" aria-label="Start selected story">
+                  <span class="btn-label-en">Start</span>
+                  <span class="btn-label-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+                </button>
+              </div>
+            </div>
+            <div class="section-title read-intro-title">Read | ਪੜ੍ਹੋ</div>
+            <p class="section-subtitle read-intro-subtitle">
+              Pick a book. Choose a story. Read.
+            </p>
+            <p class="section-subtitle read-intro-subtitle" lang="pa">
+              ਕਿਤਾਬ ਚੁਣੋ। ਕਹਾਣੀ ਚੁਣੋ। ਪੜ੍ਹੋ।
+            </p>
+            <div class="read-hero-progress" aria-label="Books progress">
+              <div id="readingBundleDots" aria-label="Books deck position"></div>
+              <div id="readingBundleProgressText" class="deck-progress-text" aria-live="polite">1/5</div>
             </div>
           </div>
         </div>
@@ -814,152 +806,46 @@
 
       <!-- READING DETAIL SCREEN -->
       <section id="screen-reading-detail" class="screen" aria-label="Reading Detail">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-reading-detail-back">
-            <span class="btn-label-en">← Reading</span>
-            <span class="btn-label-pa" lang="pa">ਪੜ੍ਹਨਾ</span>
-          </button>
-        </div>
-        <div class="lesson-header" style="margin-top:8px;">
-          <h2 id="reading-detail-title">Story</h2>
-          <div class="lesson-title-pa" id="reading-detail-title-pa" lang="pa"></div>
-          <div class="lesson-step-type">
-            <span id="reading-detail-meta">Level: Easy · Track: Reading & Stories</span>
+        <div class="module-screen-stack" id="reading-detail-stack">
+          <div id="reading-detail-content">
+            <div id="reading-detail-selection-host"></div>
           </div>
-        </div>
-        <div class="card" id="reading-story-card">
-          <div class="reading-readmode-controls">
-            <div class="reading-controls-row">
-              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-font-dec">A−</button>
-              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-font-inc">A+</button>
-              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-spacing">Spacing: Normal</button>
+          <div class="read-intro reading-detail-intro" aria-label="Story header">
+            <div class="read-hero-nav" id="reading-detail-hero-nav-host" aria-label="Story controls">
+              <div class="reading-detail-hero-nav">
+                <div class="reading-detail-hero-nav-row">
+                  <button class="btn deck-prev-handle" type="button" aria-label="Previous page">←</button>
+                  <button class="btn deck-next-handle" type="button" aria-label="Next page">→</button>
+                </div>
+                <div class="reading-detail-hero-actions">
+                  <button class="btn cta-primary reading-detail-start-btn" type="button" aria-label="Start from first page">
+                    <span class="btn-label-en">Start</span>
+                    <span class="btn-label-pa" lang="pa">ਸ਼ੁਰੂ ਕਰੋ</span>
+                  </button>
+                </div>
+              </div>
             </div>
-            <div class="reading-controls-row">
-              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-lang-both">EN + ਪੰਜਾਬੀ</button>
-              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-lang-en">English</button>
-              <button class="btn btn-secondary btn-small reading-control-btn" id="btn-reading-lang-pa">ਪੰਜਾਬੀ</button>
+            <div class="section-subtitle read-intro-subtitle" id="reading-detail-meta">Book 1 | Story 1</div>
+            <div class="section-title read-intro-title" id="reading-detail-title">Story Name</div>
+            <p class="section-subtitle read-intro-subtitle" id="reading-detail-title-pa"></p>
+            <div class="read-hero-progress" aria-label="Story progress">
+              <div id="readingDetailHeroDots" aria-label="Story deck position"></div>
+              <div id="readingDetailHeroProgressText" class="deck-progress-text" aria-live="polite">1/1</div>
             </div>
-            <div class="reading-vocab-toggle-row">
-              <button type="button" class="btn btn-secondary btn-small" id="toggle-reading-vocab" aria-pressed="false">
-                <span class="btn-label-en">Vocabulary <span class="footer-tab-status" id="reading-vocab-status">Off</span></span>
-                <span class="btn-label-pa" lang="pa">ਸ਼ਬਦਾਵਲੀ</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Passage Media (images) -->
-          <div id="passageMedia" class="passage-media" style="display:none;" aria-label="Passage media">
-            <div id="passageCarousel" class="passage-carousel" role="group" aria-label="Story images">
-              <img id="passageActiveImg" class="passage-active-img" alt="" />
-              <div class="passage-counter" id="passageCounter" aria-live="polite">1/4</div>
-            </div>
-            <div id="passageThumbs" class="passage-thumbs" role="list" aria-label="Image thumbnails"></div>
-          </div>
-
-          <div class="lang-label" id="reading-detail-label-en">ENGLISH</div>
-          <div class="lesson-text-en" id="reading-detail-text-en"></div>
-          <div class="lang-label" id="reading-detail-label-pa" style="margin-top:6px;">ਪੰਜਾਬੀ</div>
-          <div class="lesson-text-pa" id="reading-detail-text-pa" lang="pa"></div>
-        </div>
-
-        <div class="card" id="reading-vocab-card" style="display:none;">
-          <div class="vocab-card-header">
-            <div class="lang-label" style="margin:0;">Vocabulary / ਸ਼ਬਦਾਵਲੀ</div>
-            <button type="button" class="btn btn-secondary btn-small" id="btn-reading-vocab-collapse" aria-expanded="true">
-              <span class="btn-label-en" id="reading-vocab-collapse-en">Hide</span>
-              <span class="btn-label-pa" id="reading-vocab-collapse-pa" lang="pa">ਲੁਕਾਓ</span>
-            </button>
-          </div>
-          <div id="reading-vocab-panel"></div>
-        </div>
-
-        <div class="card">
-          <div class="lang-label">Question / ਪ੍ਰਸ਼ਨ</div>
-          <div class="lesson-step-progress" id="reading-progress-counter">Passage 1 of 10</div>
-          <div class="lesson-text-en" id="reading-detail-question-text"></div>
-          <div class="options" id="reading-detail-options"></div>
-          <div class="feedback" id="reading-detail-feedback"></div>
-          <div class="reading-explanation" id="reading-detail-explanation" style="display:none;"></div>
-          <div class="reading-xp-badge" id="reading-xp-badge" style="display:none;">+10 XP</div>
-
-          <div class="reading-vocab-quiz-card" id="reading-vocab-quiz-card" style="display:none;">
-            <div class="lang-label">Vocab Challenge / ਸ਼ਬਦ ਚੈਲੈਂਜ</div>
-            <div class="reading-vocab-quiz-prompt" id="reading-vocab-quiz-prompt"></div>
-            <div id="reading-vocab-quiz-options"></div>
-            <div class="feedback" id="reading-vocab-quiz-feedback"></div>
-          </div>
-
-          <button class="btn btn-primary" id="reading-next-btn" style="display:none; margin-top:10px;">Next Passage →</button>
-        </div>
-      </section>
-
-      <!-- PROGRESS SCREEN -->
-      <section id="screen-progress" class="screen" aria-label="Progress">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-progress-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
-        <div style="margin-top:8px;">
-          <div class="section-title">Progress & Tracks</div>
-          <p class="section-subtitle">
-            Track learning by skill: Words & Names, Actions & Time, Describing Words, Sentence Building, and Reading.
-          </p>
-          <div class="card">
-            <div class="progress-row-top">
-              <span>Overall Level</span>
-              <span>Level <strong id="progress-level">1</strong></span>
-            </div>
-            <div class="progress-row-sub">
-              XP: <span id="progress-xp">0</span> · To next level: <span id="progress-xp-next">–</span>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-bar-fill" id="progress-xp-bar"></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="section-title" style="font-size:15px;">Tracks Overview</div>
-            <ul class="progress-list" id="progress-tracks-list"></ul>
-          </div>
-          <div class="card">
-            <div class="section-title" style="font-size:15px;">Reading Progress</div>
-            <div class="progress-row-sub" id="progress-reading-summary">–</div>
           </div>
         </div>
       </section>
 
-      <!-- PARENT/TEACHER SCREEN -->
-      <section id="screen-parent" class="screen" aria-label="Parent/Teacher">
-        <div class="button-row">
-          <button class="btn btn-secondary btn-small" id="btn-parent-back">
-            <span class="btn-label-en">← Home</span>
-            <span class="btn-label-pa" lang="pa">ਮੁੱਖ</span>
-          </button>
-        </div>
-        <h2 style="margin-top:12px; margin-left:12px; color:#003f7f;">Parent / Teacher Guide</h2>
-        <div id="parent-screen-body"></div>
-      </section>
     </main>
 
-    <footer class="footer-nav" role="navigation" aria-label="Quick actions">
-      <div class="footer-nav-inner">
-        <div class="footer-tab-container">
-          <button class="footer-tab" id="toggle-punjabi" type="button" aria-label="Toggle Punjabi">
-            <span class="footer-tab-label">Punjabi</span>
-            <span class="footer-tab-status" id="footer-punjabi-status">On</span>
-          </button>
-          <button class="footer-tab" id="toggle-progress" type="button" aria-label="Progress">
-            <span class="footer-tab-label">Progress / ਤਰੱਕੀ</span>
-            <span class="footer-badge" id="footer-progress-badge" aria-hidden="true"></span>
-          </button>
-        </div>
-
-        <button class="footer-tab footer-tab-gear" id="toggle-settings" type="button" aria-label="Settings" title="Settings">
-          <span aria-hidden="true">⚙️</span>
-        </button>
+    <div class="status-shelf" aria-label="Profile status">
+      <div class="status-shelf__identity" aria-label="Active player">
+        <span class="status-avatar" aria-hidden="true"><span id="status-avatar-initial">P</span></span>
+        <span id="header-profile-name" class="status-player-name">Player 1</span>
       </div>
-    </footer>
+      <button type="button" id="status-switch-profile" class="header-switch-link status-shelf__switch" aria-label="Switch Profile">Switch Profile</button>
+    </div>
+
   </div>
 
   <!-- Toast host (generic, lightweight) -->
@@ -967,20 +853,17 @@
 
   <!-- Modals -->
   <div id="modal-profiles" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-profiles-title">
-    <div class="modal-card">
+    <div class="modal-card profile-modal-card">
       <div class="modal-close-row">
-        <button class="modal-close-btn" data-modal-close="modal-profiles">
-          <span class="btn-label-en">Close ✕</span>
-          <span class="btn-label-pa" lang="pa">ਬੰਦ ਕਰੋ ✕</span>
+        <button class="modal-close-btn profile-modal-close" data-modal-close="modal-profiles" aria-label="Close profiles">
+          <span aria-hidden="true">✕</span>
         </button>
       </div>
       <h3 id="modal-profiles-title">
         <span class="modal-title-en">Profiles</span>
         <span class="modal-title-pa" lang="pa">ਪ੍ਰੋਫ਼ਾਈਲ</span>
       </h3>
-      <p style="margin-top:4px;">Up to 3 profiles per device. Use nicknames only.</p>
-      <p style="margin-top:4px;" lang="pa">ਹਰ ਜੰਤਰ 'ਤੇ ਵੱਧ ਤੋਂ ਵੱਧ 3 ਪ੍ਰੋਫ਼ਾਈਲ। ਸਿਰਫ਼ ਨਿੱਕ ਨੇਮ ਵਰਤੋ।</p>
-      <div id="profiles-list" style="margin-top:6px;"></div>
+      <div id="profiles-list" class="profiles-list" style="margin-top:6px;"></div>
     </div>
   </div>
 
@@ -1023,39 +906,60 @@
     </div>
   </div>
 
+  <div id="modal-play-checkpoint" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-play-checkpoint-title">
+    <div class="modal-card">
+      <div class="modal-close-row">
+        <button class="modal-close-btn" data-modal-close="modal-play-checkpoint">
+          <span class="btn-label-en">Close ✕</span>
+          <span class="btn-label-pa" lang="pa">ਬੰਦ ਕਰੋ ✕</span>
+        </button>
+      </div>
+      <h3 id="modal-play-checkpoint-title">
+        <span class="modal-title-en">Keep going?</span>
+        <span class="modal-title-pa" lang="pa">ਅੱਗੇ ਚੱਲੀਏ?</span>
+      </h3>
+      <p id="play-checkpoint-text" style="margin-top:6px;">You’ve done 20 questions.</p>
+      <p style="margin-top:4px;" lang="pa">ਤੁਸੀਂ 20 ਸਵਾਲ ਕਰ ਲਏ ਹਨ।</p>
+      <div class="button-row" style="margin-top:10px;">
+        <button type="button" class="btn btn-secondary" id="btn-play-checkpoint-back">Back to Play</button>
+        <button type="button" class="btn" id="btn-play-checkpoint-continue">Continue</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <!-- Data files must load first -->
-  <script src="./js/utils.js?v=20251231" defer></script>
-  <script src="./data/tracks.js?v=20251231" defer></script>
-  <script src="./data/lessons.js?v=20251231" defer></script>
-  <script src="./data/readings.js?v=20251231" defer></script>
-  <script src="./data/readingVocab.js?v=20251231" defer></script>
-  <script src="./data/games.js?v=20260101" defer></script>
-  <script src="./data/typing.js?v=20260101" defer></script>
-  <script src="./data/parentGuide.js?v=20251231" defer></script>
-  <!-- State management -->
-  <script src="./js/state.js?v=20251231" defer></script>
-  <!-- UI modules -->
-  <script src="./js/ui.js?v=20251231" defer></script>
-  <script src="./js/lessons.js?v=20251231" defer></script>
-  <script src="./js/games.js?v=20251231" defer></script>
-  <script src="./js/type.js?v=20251231" defer></script>
-  <script src="./js/typing.js?v=20260101" defer></script>
-  <script src="./js/reading.js?v=20251231" defer></script>
-  <script src="./js/progress.js?v=20251231" defer></script>
-  <script src="./js/dailyQuest.js?v=20251231" defer></script>
-  <script src="./js/parentGuide.js?v=20251231" defer></script>
-  <!-- App initialization (must load last) -->
-  <script src="./js/app.js?v=20251231" defer></script>
-
-  <!-- DevTools Utilities (development only) -->
-  <script>
-    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      const devScript = document.createElement('script');
-      devScript.src = './js/devtools-utilities.js?v=20251231';
-      devScript.defer = true;
-      document.head.appendChild(devScript);
-    }
-  </script>
+  <script defer src="./js/utils.js"></script>
+  <script defer src="./data/tracks.js"></script>
+  <script defer src="./data/tapYesNoOverrides.js"></script>
+  <script defer src="./data/nonYesNoQuestionOverrides.js"></script>
+  <script defer src="./data/lessons.js"></script>
+  <script defer src="./data/readings.js"></script>
+  <script defer src="./data/readingVocab.js"></script>
+  <script defer src="./data/games.js"></script>
+  <script defer src="./data/typing.js"></script>
+  <script defer src="./data/type-define-vocab.js"></script>
+  <script defer src="./data/usmleFacts.js"></script>
+  <script defer src="./js/state.js"></script>
+  <script defer src="./js/ui.js"></script>
+  <script defer src="./js/lessons.js"></script>
+  <script defer src="./js/games.js"></script>
+  <script defer src="./js/typing/ns.js"></script>
+  <script defer src="./js/typing/platform.js"></script>
+  <script defer src="./js/typing/storage.js"></script>
+  <script defer src="./js/typing/prompts.js"></script>
+  <script defer src="./js/typing/mode_typedefine.js"></script>
+  <script defer src="./js/typing.js"></script>
+  <script defer src="./js/practicePacks.js"></script>
+  <script defer src="./js/practice/timerManager.js"></script>
+  <script defer src="./js/practice/practiceStorage.js"></script>
+  <script defer src="./js/practice/practiceProgress.js"></script>
+  <script defer src="./js/practice/practiceSession.js"></script>
+  <script defer src="./js/practice/modes/typingMode.js"></script>
+  <script defer src="./js/practice/practiceUI.js"></script>
+  <script defer src="./js/practice/practiceMain.js"></script>
+  <script defer src="./js/reading.js"></script>
+  <script defer src="./js/sound.js"></script>
+  <script defer src="./js/app.js"></script>
 </body>
 </html>

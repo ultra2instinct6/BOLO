@@ -1,0 +1,31 @@
+diff --git a/app/js/app.js b/app/js/app.js
+index 949bd17..2492223 100644
+--- a/app/js/app.js
++++ b/app/js/app.js
+@@ -174,9 +174,26 @@ function validateReadingVocabDetail() {
+   }
+ }
+ 
++function registerOfflineSupport() {
++  if (!('serviceWorker' in navigator)) return;
++  if (window.location.protocol !== 'http:' && window.location.protocol !== 'https:') return;
++
++  window.addEventListener('load', function() {
++    navigator.serviceWorker.register('./sw.js')
++      .then(function() {
++        console.log('✅ Offline support enabled');
++      })
++      .catch(function(err) {
++        console.warn('⚠️ Offline support registration failed:', err && err.message ? err.message : err);
++      });
++  }, { once: true });
++}
++
+ // Initialize the app when DOM is ready
+ document.addEventListener("DOMContentLoaded", function() {
+   try {
++    registerOfflineSupport();
++
+     // Startup validation with error handling
+     if (!_startupChecks()) {
+       console.error("❌ Startup checks failed. Module missing.");

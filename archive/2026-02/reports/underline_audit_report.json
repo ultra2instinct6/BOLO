@@ -1,0 +1,533 @@
+{
+  "summary": {
+    "sourcePath": "app/data/templates/core_questions_registry.json",
+    "mode": "registry-json",
+    "total": 198,
+    "withWorked": 72,
+    "withHighlight": 72,
+    "shape": {
+      "string": 72,
+      "array": 0,
+      "object": 0,
+      "none": 126,
+      "other": 0
+    },
+    "candidatesByPrompt": 140,
+    "candidatesMissingHighlight": 68
+  },
+  "highlightedByLesson": {
+    "L_NOUNS_BASICS_01": 2,
+    "L_NOUNS_COMMON_01": 2,
+    "L_NOUNS_PROPER_01": 1,
+    "L_PRONOUNS_BASICS_01": 2,
+    "L_PRONOUNS_PERSONAL_01": 2,
+    "L_SINGULAR_PLURAL_01": 3,
+    "L_NOUNS_PLURALS_POSSESSION_01": 2,
+    "L_POSSESSIVE_NOUNS_01": 1,
+    "L_POSSESSIVE_PRONOUNS_01": 2,
+    "L_VERBS_BASICS_01": 2,
+    "L_ADVERB_BASICS_01": 5,
+    "L_SIMPLE_PRESENT_01": 2,
+    "L_PROGRESSIVE_PRESENT_01": 3,
+    "L_SIMPLE_PAST_01": 2,
+    "L_PROGRESSIVE_PAST_01": 3,
+    "L_SIMPLE_FUTURE_01": 3,
+    "L_MODAL_VERBS_01": 2,
+    "L_ADJECTIVE_BASICS_01": 7,
+    "L_ADJ_VS_ADV_01": 3,
+    "L_COMPARATIVE_ADJECTIVES_01": 4,
+    "L_SUPERLATIVE_ADJECTIVES_01": 2,
+    "L_PREPOSITION_BASICS_01": 2,
+    "L_PREP_PLACE_MOVE_01": 2,
+    "L_PREP_TIME_01": 2,
+    "L_CONJUNCTION_BASICS_01": 2,
+    "L_CONJ_JOINING_01": 3,
+    "L_ARTICLE_BASICS_01": 2,
+    "L_INTERJECTIONS_01": 2,
+    "L_SV_AGREEMENT_01": 2
+  },
+  "highlightedKeys": [
+    "L_NOUNS_BASICS_01::q_l_nouns_basics_01_sentence_edit_choose_the_noun",
+    "L_NOUNS_BASICS_01::q_l_nouns_basics_01_what_type_of_noun_is_india",
+    "L_NOUNS_COMMON_01::q_l_nouns_common_01_choose_common_nouns_only_set",
+    "L_NOUNS_COMMON_01::q_l_nouns_common_01_which_word_is_a_common_noun_2",
+    "L_NOUNS_PROPER_01::q_l_nouns_proper_01_choose_correct_capitalization",
+    "L_PRONOUNS_BASICS_01::q_l_pronouns_basics_01_antecedent_match_riya",
+    "L_PRONOUNS_BASICS_01::q_l_pronouns_basics_01_error_correction_subject_pronoun",
+    "L_PRONOUNS_PERSONAL_01::q_l_pronouns_personal_01_complete_the_sentence_plays_foot",
+    "L_PRONOUNS_PERSONAL_01::q_l_pronouns_personal_01_subject_vs_object_called_me",
+    "L_SINGULAR_PLURAL_01::q_l_singular_plural_01_choose_plural_nouns_only_set",
+    "L_SINGULAR_PLURAL_01::q_l_singular_plural_01_count_the_singular_nouns_cat_dog",
+    "L_SINGULAR_PLURAL_01::q_l_singular_plural_01_form_plural_of_box",
+    "L_NOUNS_PLURALS_POSSESSION_01::q_l_nouns_plurals_possession_01_plural_or_possessive_mix",
+    "L_NOUNS_PLURALS_POSSESSION_01::q_l_nouns_plurals_possession_01_which_is_the_possessive_form",
+    "L_POSSESSIVE_NOUNS_01::q_l_possessive_nouns_01_rewrite_of_phrase_students",
+    "L_POSSESSIVE_PRONOUNS_01::q_l_possessive_pronouns_01_complete_the_sentence_the_red_wa",
+    "L_POSSESSIVE_PRONOUNS_01::q_l_possessive_pronouns_01_their_vs_theirs_complete",
+    "L_VERBS_BASICS_01::q_verbs_basics_be_am",
+    "L_VERBS_BASICS_01::q_verbs_basics_state_verb_is",
+    "L_ADVERB_BASICS_01::q_adverbs_correct_form_sings_beautifully",
+    "L_ADVERB_BASICS_01::q_adverbs_ly_honestly",
+    "L_ADVERB_BASICS_01::q_adverbs_non_ly_fast",
+    "L_ADVERB_BASICS_01::q_adverbs_pick_quickly",
+    "L_ADVERB_BASICS_01::q_adverbs_sentence_loudly",
+    "L_SIMPLE_PRESENT_01::q_present_form_drink",
+    "L_SIMPLE_PRESENT_01::q_simple_present_negative_does_not",
+    "L_PROGRESSIVE_PRESENT_01::q_present_prog_classroom",
+    "L_PROGRESSIVE_PRESENT_01::q_present_prog_correct",
+    "L_PROGRESSIVE_PRESENT_01::q_progressive_present_spelling_running",
+    "L_SIMPLE_PAST_01::q_past_completed_i_ate",
+    "L_SIMPLE_PAST_01::q_simple_past_irregular_go_went",
+    "L_PROGRESSIVE_PAST_01::q_past_prog_correct",
+    "L_PROGRESSIVE_PAST_01::q_past_prog_playground",
+    "L_PROGRESSIVE_PAST_01::q_past_progressive_vs_simple_past_interrupt",
+    "L_SIMPLE_FUTURE_01::q_future_form_will_bake",
+    "L_SIMPLE_FUTURE_01::q_future_not_yet_will_learn",
+    "L_SIMPLE_FUTURE_01::q_simple_future_will_vs_going_to",
+    "L_MODAL_VERBS_01::q_modal_could_polite",
+    "L_MODAL_VERBS_01::q_modal_polite_request_could_you",
+    "L_ADJECTIVE_BASICS_01::q_adj_complete_interesting",
+    "L_ADJECTIVE_BASICS_01::q_adj_is_blue",
+    "L_ADJECTIVE_BASICS_01::q_adj_is_sweet",
+    "L_ADJECTIVE_BASICS_01::q_adj_pick_tall",
+    "L_ADJECTIVE_BASICS_01::q_adj_sentence_smart",
+    "L_ADJECTIVE_BASICS_01::q_l_adjective_basics_01_choose_green",
+    "L_ADJECTIVE_BASICS_01::q_l_adjective_basics_01_complete_old_house",
+    "L_ADJ_VS_ADV_01::q_adj_vs_adv_choose_blue",
+    "L_ADJ_VS_ADV_01::q_l_adj_vs_adv_01_a_fast_car",
+    "L_ADJ_VS_ADV_01::q_l_adj_vs_adv_01_he_speaks",
+    "L_COMPARATIVE_ADJECTIVES_01::q_comp_complete_redder",
+    "L_COMPARATIVE_ADJECTIVES_01::q_comp_correct_faster",
+    "L_COMPARATIVE_ADJECTIVES_01::q_comp_harder_than",
+    "L_COMPARATIVE_ADJECTIVES_01::q_comp_more_careful",
+    "L_SUPERLATIVE_ADJECTIVES_01::q_super_most_interesting_story",
+    "L_SUPERLATIVE_ADJECTIVES_01::q_super_smallest_of_three",
+    "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_walked_into_room",
+    "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_we_meet_friday",
+    "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_dog_through_gate",
+    "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_picture_on_wall",
+    "L_PREP_TIME_01::q_l_prep_time_01_arrive_at_noon",
+    "L_PREP_TIME_01::q_l_prep_time_01_born_in_2010",
+    "L_CONJUNCTION_BASICS_01::q_l_conjunction_basics_01_stayed_home_because",
+    "L_CONJUNCTION_BASICS_01::q_l_conjunction_basics_01_tired_but_finished",
+    "L_CONJ_JOINING_01::q_l_conj_joining_01_hungry_so_ate",
+    "L_CONJ_JOINING_01::q_l_conj_joining_01_i_like_tea_and_coffee",
+    "L_CONJ_JOINING_01::q_l_conj_joining_01_she_was_late_she_ran",
+    "L_ARTICLE_BASICS_01::q_l_article_basics_01_an_umbrella",
+    "L_ARTICLE_BASICS_01::q_l_article_basics_01_close_the_door",
+    "L_INTERJECTIONS_01::q_l_interjections_01_mistake_oops",
+    "L_INTERJECTIONS_01::q_l_interjections_01_which_shows_surprise",
+    "L_SV_AGREEMENT_01::q_l_sv_agreement_01_she_listens_music",
+    "L_SV_AGREEMENT_01::q_l_sv_agreement_01_they_are_ready"
+  ],
+  "missingSample": [
+    {
+      "key": "L_NOUNS_BASICS_01::q_l_nouns_basics_01_in_tap_the_nouns_in_the_sentence",
+      "source": "yesNo",
+      "prompt": "\"The teacher read a story.\" — Is \"teacher\" a noun?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_NOUNS_BASICS_01::q_l_nouns_basics_01_pick_the_noun",
+      "source": "nonYesNo",
+      "prompt": "Pick the noun.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_NOUNS_PROPER_01::q_l_nouns_proper_01_is_riya_the_right_word",
+      "source": "yesNo",
+      "prompt": "Is \"Riya\" a proper noun (a name)?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PRONOUNS_BASICS_01::q_l_pronouns_basics_01_complete_am_happy",
+      "source": "nonYesNo",
+      "prompt": "Complete: ___ am happy.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PRONOUNS_BASICS_01::q_l_pronouns_basics_01_pick_the_pronoun",
+      "source": "nonYesNo",
+      "prompt": "Pick the pronoun.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PRONOUNS_PERSONAL_01::q_l_pronouns_personal_01_complete_the_sentence_like_to_re",
+      "source": "nonYesNo",
+      "prompt": "Complete the sentence: ___ like to read books.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SINGULAR_PLURAL_01::q_l_singular_plural_01_in_tap_the_plural_nouns_is_dogs_",
+      "source": "yesNo",
+      "prompt": "\"I saw three dogs in the park.\" — Is \"dogs\" a plural noun?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_NOUNS_PLURALS_POSSESSION_01::q_l_nouns_plurals_possession_01_is_feet_the_right_word",
+      "source": "yesNo",
+      "prompt": "Is \"feet\" the plural of \"foot\"?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_NOUNS_PLURALS_POSSESSION_01::q_l_nouns_plurals_possession_01_is_mice_the_right_word",
+      "source": "yesNo",
+      "prompt": "In “Two ___ are in the kitchen.”, is “mice” correct?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_POSSESSIVE_NOUNS_01::q_l_possessive_nouns_01_complete_the_toy_is_in_the_corne",
+      "source": "nonYesNo",
+      "prompt": "Complete: The ___ toy is in the corner.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_POSSESSIVE_NOUNS_01::q_l_possessive_nouns_01_in_tap_possessive_nouns_in_the_t",
+      "source": "yesNo",
+      "prompt": "\"Sarah's book is on the table.\" — Is \"Sarah's\" a possessive noun?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_POSSESSIVE_NOUNS_01::q_l_possessive_nouns_01_is_girl_s_bag_the_right_word",
+      "source": "yesNo",
+      "prompt": "Is \"girl's bag\" correct for one girl's bag?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_POSSESSIVE_PRONOUNS_01::q_l_possessive_pronouns_01_complete_this_is_notebook",
+      "source": "nonYesNo",
+      "prompt": "Complete: This is ___ notebook.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_POSSESSIVE_PRONOUNS_01::q_l_possessive_pronouns_01_in_tap_possessive_pronouns_not_a",
+      "source": "yesNo",
+      "prompt": "\"This bag is yours.\" — Is \"yours\" a possessive pronoun?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_POSSESSIVE_PRONOUNS_01::q_l_possessive_pronouns_01_is_mine_the_right_word",
+      "source": "yesNo",
+      "prompt": "Is \"mine\" a possessive pronoun?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_VERBS_BASICS_01::q_verbs_basics_tap_is",
+      "source": "yesNo",
+      "prompt": "\"She is happy.\" — Is \"is\" a verb?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_VERBS_BASICS_01::q_verbs_basics_tap_runs",
+      "source": "yesNo",
+      "prompt": "\"He runs fast.\" — Is \"runs\" a verb?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_ADVERB_BASICS_01::q_adverbs_complete_beautifully",
+      "source": "nonYesNo",
+      "prompt": "Complete: She dances ___.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SIMPLE_PRESENT_01::q_present_complete_runs",
+      "source": "nonYesNo",
+      "prompt": "He ___ every day.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SIMPLE_PRESENT_01::q_present_pick_eats",
+      "source": "nonYesNo",
+      "prompt": "Pick the simple present verb.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PROGRESSIVE_PRESENT_01::q_l_progressive_present_01_in_tap_the_progressive_verb_form",
+      "source": "yesNo",
+      "prompt": "\"She is singing a song.\" — Is \"is singing\" present progressive?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PROGRESSIVE_PRESENT_01::q_present_prog_fill_run",
+      "source": "nonYesNo",
+      "prompt": "Complete: Right now, she ___ (run) in the marathon.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SIMPLE_PAST_01::q_past_complete_ate",
+      "source": "nonYesNo",
+      "prompt": "We ___ pizza last week.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PROGRESSIVE_PAST_01::q_l_progressive_past_01_in_tap_the_past_progressive_form",
+      "source": "yesNo",
+      "prompt": "\"I was watching TV when she called.\" — Is \"was watching\" past progressive?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PROGRESSIVE_PAST_01::q_past_prog_complete_were_eating",
+      "source": "nonYesNo",
+      "prompt": "Complete: They ___ (eat) when I called.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SIMPLE_FUTURE_01::q_future_complete_will_read",
+      "source": "nonYesNo",
+      "prompt": "I ___ a book tomorrow.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SIMPLE_FUTURE_01::q_future_pick_will_go",
+      "source": "nonYesNo",
+      "prompt": "Pick the future tense.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_MODAL_VERBS_01::q_modal_can_drive",
+      "source": "nonYesNo",
+      "prompt": "Complete: She ___ drive a car.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_ADJ_VS_ADV_01::q_l_adj_vs_adv_01_complete_the_dog_is_running",
+      "source": "nonYesNo",
+      "prompt": "Complete: The ___ dog is running.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_ADJ_VS_ADV_01::q_l_adj_vs_adv_01_she_sings",
+      "source": "nonYesNo",
+      "prompt": "She sings ___.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_COMPARATIVE_ADJECTIVES_01::q_comp_playground_taller",
+      "source": "nonYesNo",
+      "prompt": "At the playground, which is correct? 'Ali is ___ than Sam.'",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SUPERLATIVE_ADJECTIVES_01::q_l_superlative_adjectives_01_in_tap_superlative_adjectives_is",
+      "source": "yesNo",
+      "prompt": "\"This is the smallest box.\" — Is \"smallest\" a superlative adjective?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SUPERLATIVE_ADJECTIVES_01::q_super_class_fastest",
+      "source": "nonYesNo",
+      "prompt": "In a race of many students, Rohan is the ___.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SUPERLATIVE_ADJECTIVES_01::q_super_complete_most_delicious",
+      "source": "nonYesNo",
+      "prompt": "This cake is the ___ in the bakery.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_complete_the_cat_is_the_chair",
+      "source": "nonYesNo",
+      "prompt": "Complete: The cat is ___ the box.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_in_tap_the_preposition_in_the_se",
+      "source": "yesNo",
+      "prompt": "\"The cat is under the table.\" — Is \"under\" a preposition?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_in_tap_the_preposition_that_show",
+      "source": "yesNo",
+      "prompt": "\"The book is on the shelf.\" — Is \"on\" a preposition?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_pick_the_preposition",
+      "source": "nonYesNo",
+      "prompt": "Pick the preposition in: “I go ___ school.”",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_pick_the_sentence_with_a_preposi",
+      "source": "nonYesNo",
+      "prompt": "Pick the sentence with a preposition.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREPOSITION_BASICS_01::q_l_preposition_basics_01_the_book_is_the_desk",
+      "source": "nonYesNo",
+      "prompt": "The book is ___ the desk.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_he_walked_the_bridge",
+      "source": "nonYesNo",
+      "prompt": "He walked ____ the bridge.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_in_the_ball_is_under_the_table_i",
+      "source": "yesNo",
+      "prompt": "\"The ball is under the table.\" — Is \"under\" the right preposition?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_is_in_the_right_word",
+      "source": "yesNo",
+      "prompt": "\"The keys are in the bag.\" — Is \"in\" the right preposition?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_she_ran_the_park",
+      "source": "nonYesNo",
+      "prompt": "She ran ____ the park.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_the_book_is_the_shelf",
+      "source": "nonYesNo",
+      "prompt": "The book is ____ the shelf.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_PLACE_MOVE_01::q_l_prep_place_move_01_the_cat_is_the_box",
+      "source": "nonYesNo",
+      "prompt": "The cat is ____ the table.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_TIME_01::q_l_prep_time_01_he_lived_here_2019",
+      "source": "nonYesNo",
+      "prompt": "He has lived here ___ 2019.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_TIME_01::q_l_prep_time_01_in_school_starts_at_8_am_is_at_c",
+      "source": "yesNo",
+      "prompt": "\"School starts at 8 AM.\" — Is \"at\" the correct preposition for a time?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_TIME_01::q_l_prep_time_01_school_starts_8_am",
+      "source": "nonYesNo",
+      "prompt": "School starts ___ 8 AM.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_TIME_01::q_l_prep_time_01_she_s_been_here_monday",
+      "source": "nonYesNo",
+      "prompt": "She's been here ___ Monday.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_TIME_01::q_l_prep_time_01_they_waited_an_hour",
+      "source": "nonYesNo",
+      "prompt": "They waited ___ an hour.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_PREP_TIME_01::q_l_prep_time_01_we_meet_sunday",
+      "source": "nonYesNo",
+      "prompt": "We meet ___ Sunday.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJUNCTION_BASICS_01::q_l_conjunction_basics_01_complete_do_you_want_pizza_burge",
+      "source": "nonYesNo",
+      "prompt": "Complete: Do you want pizza ___ burger?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJUNCTION_BASICS_01::q_l_conjunction_basics_01_conjunctions_connect_together",
+      "source": "nonYesNo",
+      "prompt": "Conjunctions connect ___ together.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJUNCTION_BASICS_01::q_l_conjunction_basics_01_pick_the_conjunction",
+      "source": "nonYesNo",
+      "prompt": "Pick the conjunction.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJUNCTION_BASICS_01::q_l_conjunction_basics_01_this_word_shows_contrast",
+      "source": "nonYesNo",
+      "prompt": "This word shows contrast: ___",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJ_JOINING_01::q_l_conj_joining_01_complete_you_ready",
+      "source": "nonYesNo",
+      "prompt": "Complete: Are you ready ___ not?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJ_JOINING_01::q_l_conj_joining_01_he_was_tired_he_kept_working",
+      "source": "nonYesNo",
+      "prompt": "He was tired, ___ he kept working.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_CONJ_JOINING_01::q_l_conj_joining_01_you_can_come_stay_home",
+      "source": "nonYesNo",
+      "prompt": "You can come ___ stay home.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_ARTICLE_BASICS_01::q_l_article_basics_01_complete_apple",
+      "source": "nonYesNo",
+      "prompt": "Complete: ___ apple.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_ARTICLE_BASICS_01::q_l_article_basics_01_pick_the_article",
+      "source": "nonYesNo",
+      "prompt": "Pick the article.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_INTERJECTIONS_01::q_l_interjections_01_shh_means",
+      "source": "nonYesNo",
+      "prompt": "Shh! means ___.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SV_AGREEMENT_01::q_l_sv_agreement_01_complete_correctly_they_to_schoo",
+      "source": "nonYesNo",
+      "prompt": "Complete correctly: They ___ to school.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SV_AGREEMENT_01::q_l_sv_agreement_01_complete_it_beautiful",
+      "source": "nonYesNo",
+      "prompt": "Complete: It ___ beautiful.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SV_AGREEMENT_01::q_l_sv_agreement_01_i_happy_today",
+      "source": "nonYesNo",
+      "prompt": "I ___ happy today.",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SV_AGREEMENT_01::q_l_sv_agreement_01_in_tap_all_subjects_that_take_th",
+      "source": "yesNo",
+      "prompt": "\"I go to school every day.\" — Does \"I\" take the base verb (no -s)?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SV_AGREEMENT_01::q_l_sv_agreement_01_in_tap_the_correct_verb_for_he_i",
+      "source": "yesNo",
+      "prompt": "\"He goes to school.\" — Is \"goes\" the correct verb for \"He\"?",
+      "hasWorkedExample": false
+    },
+    {
+      "key": "L_SV_AGREEMENT_01::q_l_sv_agreement_01_pick_the_correct_form",
+      "source": "nonYesNo",
+      "prompt": "Pick the correct form.",
+      "hasWorkedExample": false
+    }
+  ]
+}

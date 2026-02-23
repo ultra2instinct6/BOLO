@@ -4,15 +4,11 @@
 
 // Learn screen UI shortening
 var LEARN_PREVIEW_COUNT = 6;
-var LEARN_SHOW_MORE_INCREMENT = 6;
 
 // Learn screen persistence + library (localStorage)
-var BOLO_LEARN_UI_STATE_KEY = 'BOLO_LEARN_UI_STATE_V1';
 var BOLO_RECENT_LESSONS_KEY = 'BOLO_RECENT_LESSONS_V1';
-var BOLO_FAVORITES_KEY = 'BOLO_FAVORITES_V1';
 var LEARN_RECENT_CAP = 5;
-var LEARN_SAVED_PREVIEW_CAP = 6;
-var LEARN_SCROLL_SAVE_THROTTLE_MS = 350;
+var BOLO_LEARN_RETIRE_RESET_KEY = 'BOLO_LEARN_RETIRE_RESET_V1';
 
 var Lessons = {
   _initialized: false,
@@ -23,14 +19,22 @@ var Lessons = {
   currentStepIndex: 0,
   currentExampleIndex: 0,
   inExamplesPhase: false,
+  _yesNoAutoAdvanceTimer: null,
 
   // Review queue (Leitner-lite) storage key
-  REVIEW_STORAGE_KEY: 'boloReviewQueue_v1',
+  REVIEW_STORAGE_KEY: 'boloReviewQueue_v2',
+  REVIEW_STORAGE_KEY_LEGACY: 'boloReviewQueue_v1',
 
   // Session-only runtime store (DO NOT persist)
   runtime: {
     attemptsByStepKey: {},
     activeLessonKey: null
+  },
+  swipeState: {
+    touchStartX: null,
+    touchStartY: null,
+    isBound: false,
+    thresholdPx: 42
   },
   
   // Enable full multi-step rendering for new-format lessons only
@@ -39,25 +43,78 @@ var Lessons = {
     return !!(l && l.metadata && l.steps && Array.isArray(l.steps));
   },
 
-  // Pagination & Filtering
+  // Learn listing state
   lessonsPerPage: LEARN_PREVIEW_COUNT,
   currentPage: 1,
-  expandedTracks: {},
   _learnDelegationBound: false,
-  _learnTrackLimits: {},
-  _learnLastByTrack: {},
-  _savedShowAll: false,
-  _learnQuickFilter: 'all', // all|easy|medium|hard|saved
-  _learnStickyBound: false,
-  _learnScrollBound: false,
-  _learnScrollSaveTimer: null,
-  _learnLastScrollSavedAt: 0,
-  _learnPendingScrollY: null,
-  activeFilters: {
-    search: '',
-    status: 'all',
-    difficulty: [1, 2, 3],
-    track: 'all'
+  learnDeckState: {
+    activeIndex: 0,
+    peekDirection: 1,
+    isBound: false,
+    suppressCardClickUntil: 0,
+    reduceMotion: false,
+    touchStartX: null,
+    touchStartY: null,
+    touchCurrentX: null,
+    touchDragging: false,
+    touchMoved: false,
+    pointerStartX: null,
+    pointerCurrentX: null,
+    pointerDragging: false,
+    pointerId: null,
+    pointerMoved: false,
+    wheelAccumX: 0,
+    wheelLastTs: 0,
+    ordered: [],
+    unlockIndex: 0
+  },
+
+  LESSON_ALIAS_MAP: {},
+
+  resolveCanonicalLessonId: function(lessonId) {
+    return lessonId;
+  },
+
+  isRetiredLessonId: function(lessonId) {
+    return false;
+  },
+
+  isLearnVisibleLessonId: function(lessonId) {
+    if (!lessonId || typeof lessonId !== 'string') return false;
+    if (lessonId.indexOf('L_') !== 0) return false;
+    if (!Array.isArray(LESSON_META)) return false;
+    for (var i = 0; i < LESSON_META.length; i++) {
+      if (LESSON_META[i] && LESSON_META[i].id === lessonId) return true;
+    }
+    return false;
+  },
+
+  normalizeTopicKey: function(text) {
+    if (text === null || text === undefined) return '';
+    return String(text)
+      .toLowerCase()
+      .replace(/\(.*?\)/g, '')
+      .replace(/[^a-z0-9\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  },
+
+  resetRetiredLessonProgressOnce: function() {
+    if (Lessons._loadJson(BOLO_LEARN_RETIRE_RESET_KEY, false) === true) return;
+
+    var recent = Lessons._loadRecentLessons();
+    var filteredRecent = [];
+    for (var i = 0; i < recent.length; i++) {
+      var canonicalRecent = Lessons.resolveCanonicalLessonId(recent[i]);
+      if (!Lessons.isLearnVisibleLessonId(canonicalRecent)) continue;
+      if (filteredRecent.indexOf(canonicalRecent) >= 0) continue;
+      filteredRecent.push(canonicalRecent);
+    }
+    if (filteredRecent.length !== recent.length) {
+      Lessons._saveJson(BOLO_RECENT_LESSONS_KEY, filteredRecent.slice(0, LEARN_RECENT_CAP));
+    }
+
+    Lessons._saveJson(BOLO_LEARN_RETIRE_RESET_KEY, true);
   },
 
   // ===== CATALOG SYNC (LESSONS <-> LESSON_META) =====
@@ -80,9 +137,24 @@ var Lessons = {
     for (var i = 0; i < LESSON_META.length; i++) {
       var m = LESSON_META[i];
       if (!m || !m.id) continue;
-      if (metaById[m.id]) continue;
-      metaById[m.id] = m;
-      deduped.push(m);
+      var canonicalMetaId = Lessons.resolveCanonicalLessonId(m.id);
+      if (!Lessons.isLearnVisibleLessonId(canonicalMetaId)) continue;
+      if (metaById[canonicalMetaId]) continue;
+
+      var outMeta = m;
+      if (canonicalMetaId !== m.id) {
+        outMeta = {
+          id: canonicalMetaId,
+          labelEn: m.labelEn,
+          labelPa: m.labelPa,
+          trackId: m.trackId,
+          difficulty: m.difficulty,
+          order: m.order
+        };
+      }
+
+      metaById[canonicalMetaId] = outMeta;
+      deduped.push(outMeta);
     }
     LESSON_META = deduped;
 
@@ -99,6 +171,7 @@ var Lessons = {
       var id = meta && meta.id;
       if (!id) continue;
       if (id.indexOf('L_') !== 0) continue;
+      if (!Lessons.isLearnVisibleLessonId(id)) continue;
 
       if (!LESSONS[id]) {
         LESSONS[id] = {
@@ -108,13 +181,6 @@ var Lessons = {
             labelEn: meta.labelEn || 'Lesson',
             labelPa: meta.labelPa || 'ਪਾਠ',
             trackId: meta.trackId || 'T_WORDS',
-            objective: {
-              titleEn: 'Start Lesson',
-              titlePa: 'ਪਾਠ ਸ਼ੁਰੂ ਕਰੋ',
-              descEn: 'Content coming soon.',
-              descPa: 'ਸਮੱਗਰੀ ਜਲਦੀ ਆ ਰਹੀ ਹੈ।',
-              pointsAvailable: 0
-            },
             difficulty: meta.difficulty || 1
           },
           steps: [
@@ -163,27 +229,30 @@ var Lessons = {
     // 2) Ensure every L_* lesson in LESSONS exists in LESSON_META
     for (var lessonId in LESSONS) {
       if (!LESSONS.hasOwnProperty(lessonId)) continue;
-      if (lessonId.indexOf('L_') !== 0) continue;
-      if (metaById[lessonId]) continue;
+      var canonicalId = Lessons.resolveCanonicalLessonId(lessonId);
+      if (!Lessons.isLearnVisibleLessonId(canonicalId)) continue;
+      if (metaById[canonicalId]) continue;
+      if (canonicalId !== lessonId) continue;
 
-      var norm = Lessons.normalizeLesson(lessonId);
+      var norm = Lessons.normalizeLesson(canonicalId);
       var md2 = (norm && norm.metadata) ? norm.metadata : {};
 
       var trackId = md2.trackId || 'T_WORDS';
       if (typeof TRACKS === 'object' && TRACKS && trackId && !TRACKS[trackId]) trackId = 'T_WORDS';
 
       var newMeta = {
-        id: lessonId,
-        labelEn: md2.labelEn || md2.titleEn || lessonId,
+        id: canonicalId,
+        labelEn: md2.labelEn || md2.titleEn || canonicalId,
         labelPa: md2.labelPa || md2.titlePa || '',
         trackId: trackId,
-        difficulty: md2.difficulty || 1
+        difficulty: md2.difficulty || 1,
+        order: (typeof md2.order === 'number') ? md2.order : 999
       };
 
       LESSON_META.push(newMeta);
-      metaById[lessonId] = newMeta;
+      metaById[canonicalId] = newMeta;
       addedMeta++;
-      addedMetaIds.push(lessonId);
+      addedMetaIds.push(canonicalId);
     }
 
     // Final de-dupe in case anything changed
@@ -197,6 +266,7 @@ var Lessons = {
       deduped2.push(mm);
     }
     LESSON_META = deduped2;
+    Lessons.resetRetiredLessonProgressOnce();
 
     var qaOn = false;
     try {
@@ -217,20 +287,6 @@ var Lessons = {
       if (stubbedLessonIds.length) report.stubbedLessonIds = stubbedLessonIds.slice(0, 50);
       console.log('🎓 [Learn] Catalog sync:', report);
     }
-  },
-
-  // ===== QUEST CONTEXT HELPERS =====
-
-  getQuestContext: function() {
-    return window.DQ_QUEST_CONTEXT || null;
-  },
-
-  isQuestMode: function() {
-    return window.DQ_QUEST_CONTEXT && window.DQ_QUEST_CONTEXT.mode === true;
-  },
-
-  clearQuestContext: function() {
-    window.DQ_QUEST_CONTEXT = null;
   },
 
   // ===== VALIDATION & SELECTION =====
@@ -289,11 +345,13 @@ var Lessons = {
 
   resetRuntime: function(activeLessonKey) {
     if (!Lessons.runtime || typeof Lessons.runtime !== 'object') {
-      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {} };
+      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
     }
     Lessons.runtime.attemptsByStepKey = {};
     Lessons.runtime.activeLessonKey = activeLessonKey || null;
     Lessons.runtime.seenReviewKeys = {};
+    Lessons.runtime.selectedAnswerByStepKey = {};
+    Lessons.runtime.submittedAnswerByStepKey = {};
   },
 
   // =============================
@@ -309,7 +367,6 @@ var Lessons = {
     if (t === 'guided_practice') return 'tap_word';
     if (t === 'question') return 'mcq';
     if (t === 'summary') return 'summary';
-    if (t === 'objective') return 'objective';
     return 'info';
   },
 
@@ -331,7 +388,6 @@ var Lessons = {
     if (kind === 'tap_word') return { en: 'Tap the correct word.', pa: 'ਸਹੀ ਸ਼ਬਦ ਤੇ ਟੈਪ ਕਰੋ।' };
     if (kind === 'mcq') return { en: 'Choose the best answer.', pa: 'ਸਭ ਤੋਂ ਵਧੀਆ ਜਵਾਬ ਚੁਣੋ।' };
     if (kind === 'summary') return { en: 'Review what you learned.', pa: 'ਸਿੱਖਿਆ ਹੋਇਆ ਦੁਹਰਾਓ।' };
-    if (kind === 'objective') return { en: 'Get ready for this lesson.', pa: 'ਇਸ ਪਾਠ ਲਈ ਤਿਆਰ ਹੋਵੋ।' };
     return { en: '', pa: '' };
   },
 
@@ -357,20 +413,43 @@ var Lessons = {
   // Review Queue (Phase 1: capture misses)
   // =============================
 
-  _reviewLoad: function() {
+  _getReviewStorageKey: function() {
+    var base = Lessons.REVIEW_STORAGE_KEY || 'boloReviewQueue_v2';
     try {
-      var raw = localStorage.getItem(Lessons.REVIEW_STORAGE_KEY);
-      if (!raw) return [];
-      var parsed = JSON.parse(raw);
-      return Array.isArray(parsed) ? parsed : [];
+      if (window.State && typeof State._getProfileScopedStorageKey === 'function') {
+        return State._getProfileScopedStorageKey(base);
+      }
+    } catch (e0) {}
+    return base + '_p1';
+  },
+
+  _reviewLoad: function() {
+    var key = Lessons._getReviewStorageKey();
+    try {
+      var raw = localStorage.getItem(key);
+      if (raw) {
+        var parsed = JSON.parse(raw);
+        return Array.isArray(parsed) ? parsed : [];
+      }
+
+      // One-way migration: old global queue -> active profile queue.
+      var legacyRaw = localStorage.getItem(Lessons.REVIEW_STORAGE_KEY_LEGACY);
+      if (!legacyRaw) return [];
+      var legacyParsed = JSON.parse(legacyRaw);
+      var migrated = Array.isArray(legacyParsed) ? legacyParsed : [];
+      if (migrated.length) {
+        try { localStorage.setItem(key, JSON.stringify(migrated)); } catch (e1) {}
+      }
+      return migrated;
     } catch (e) {
       return [];
     }
   },
 
   _reviewSave: function(items) {
+    var key = Lessons._getReviewStorageKey();
     try {
-      localStorage.setItem(Lessons.REVIEW_STORAGE_KEY, JSON.stringify(items || []));
+      localStorage.setItem(key, JSON.stringify(items || []));
     } catch (e) {
       // no-op
     }
@@ -416,7 +495,7 @@ var Lessons = {
 
       // Avoid repeating a review key within the same lesson session.
       try {
-        if (!Lessons.runtime || typeof Lessons.runtime !== 'object') Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {} };
+        if (!Lessons.runtime || typeof Lessons.runtime !== 'object') Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
         if (!Lessons.runtime.seenReviewKeys) Lessons.runtime.seenReviewKeys = {};
         if (Lessons.runtime.seenReviewKeys[it.reviewKey]) continue;
         Lessons.runtime.seenReviewKeys[it.reviewKey] = true;
@@ -648,39 +727,102 @@ var Lessons = {
     if (kind === 'be_verbs') {
       return { en: "Match the subject: I→am, he/she/it→is, we/you/they→are.", pa: "ਇਸ਼ਾਰਾ: I→am, he/she/it→is, we/you/they→are." };
     }
-    return { en: "Read the sentence and pick the best English form.", pa: "ਵਾਕ ਪੜ੍ਹੋ ਅਤੇ ਸਭ ਤੋਂ ਸਹੀ ਅੰਗਰੇਜ਼ੀ ਰੂਪ ਚੁਣੋ।" };
+    return { en: "Grammar tip: read the full sentence, then pick the form that fits both meaning and grammar.", pa: "ਵਿਆਕਰਨ ਸੁਝਾਅ: ਪੂਰਾ ਵਾਕ ਪੜ੍ਹੋ, ਫਿਰ ਉਹ ਰੂਪ ਚੁਣੋ ਜੋ ਅਰਥ ਅਤੇ ਵਿਆਕਰਨ ਦੋਵਾਂ ਨਾਲ ਮਿਲਦਾ ਹੋਵੇ।" };
   },
 
   _generateExplanation: function(step, correctBool) {
     var kind = Lessons._classifyQuestion(step);
-    if (kind === 'present_progressive') {
-      return { en: "Present progressive uses am/is/are + verb-ing for actions happening now.", pa: "ਵਰਤਮਾਨ ਜਾਰੀ ਵਿੱਚ am/is/are + ਕਿਰਿਆ-ing ਹੁੰਦੀ ਹੈ (ਹੁਣ ਚੱਲ ਰਹੀ ਕਿਰਿਆ)।" };
-    }
-    if (kind === 'past_progressive') {
-      return { en: "Past progressive uses was/were + verb-ing for actions happening in the past.", pa: "ਭੂਤਕਾਲੀ ਜਾਰੀ ਵਿੱਚ was/were + ਕਿਰਿਆ-ing ਹੁੰਦੀ ਹੈ (ਭੂਤਕਾਲ ਦੀ ਚੱਲਦੀ ਕਿਰਿਆ)।" };
-    }
-    if (kind === 'modals') {
-      return { en: "A modal (can/should/must…) is followed by the base verb (no -s, no -ing).", pa: "ਮੋਡਲ ਕਿਰਿਆ ਤੋਂ ਬਾਅਦ ਮੂਲ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ (ਨਾ -s, ਨਾ -ing)।" };
-    }
-    if (kind === 'possessives') {
-      return { en: "Possessives show ownership (my/your/his… or ’s).", pa: "Possessive ਦਾ ਅਰਥ ਹੈ ‘ਕਿਸ ਦਾ’ (my/your/his… ਜਾਂ ’s)।" };
-    }
-    if (kind === 'comparative') {
-      return { en: "Comparatives compare two things (…er / more …).", pa: "Comparative ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਲਈ ਹੁੰਦਾ ਹੈ (…er / more …)।" };
-    }
-    if (kind === 'superlative') {
-      return { en: "Superlatives show the extreme (…est / most …).", pa: "Superlative ‘ਸਭ ਤੋਂ’ ਦੱਸਦਾ ਹੈ (…est / most …)।" };
-    }
-    if (kind === 'have_has') {
-      return { en: "Use have/has based on the subject (he/she/it → has).", pa: "ਕਰਤਾ ਦੇ ਅਨੁਸਾਰ have/has ਵਰਤੋ (he/she/it → has)।" };
-    }
-    if (kind === 'be_verbs') {
-      return { en: "Use am/is/are based on the subject.", pa: "ਕਰਤਾ ਦੇ ਅਨੁਸਾਰ am/is/are ਵਰਤੋ।" };
+    var correct = (step && (step.correctAnswer || step.correct_answer)) ? String(step.correctAnswer || step.correct_answer) : '';
+    var promptEn = (step && (step.englishText || step.english_text || step.promptEn || step.contentEn || ''))
+      ? String(step.englishText || step.english_text || step.promptEn || step.contentEn || '')
+      : '';
+    var promptPa = (step && (step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || ''))
+      ? String(step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || '')
+      : '';
+    var rule = Lessons._generateHint(step);
+    var statePrefixEn = correctBool ? 'Correct choice.' : 'Check this rule.';
+    var statePrefixPa = correctBool ? 'ਇਹ ਸਹੀ ਚੋਣ ਹੈ।' : 'ਇਹ ਨਿਯਮ ਵੇਖੋ।';
+
+    var explainEn = statePrefixEn + ' Use the sentence and answer to verify grammar.';
+    var explainPa = statePrefixPa + ' ਵਾਕ ਅਤੇ ਜਵਾਬ ਨੂੰ ਮਿਲਾ ਕੇ ਵਿਆਕਰਨ ਚੈੱਕ ਕਰੋ।';
+
+    if (promptEn && correct) {
+      explainEn = statePrefixEn + ' In "' + promptEn + '", "' + correct + '" fits this blank. Rule hint: ' + (rule.en || 'Pick the option that fits the sentence.') ;
+    } else if (correct) {
+      explainEn = statePrefixEn + ' "' + correct + '" is the expected answer. Rule hint: ' + (rule.en || 'Pick the option that fits the sentence.') ;
     }
 
-    return correctBool
-      ? { en: "This option matches the correct English pattern.", pa: "ਇਹ ਵਿਕਲਪ ਸਹੀ ਅੰਗਰੇਜ਼ੀ ਨਿਯਮ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ।" }
-      : { en: "This is the correct pattern to remember.", pa: "ਇਹ ਸਹੀ ਨਿਯਮ ਹੈ—ਇਸਨੂੰ ਯਾਦ ਰੱਖੋ।" };
+    if (promptPa && correct) {
+      explainPa = statePrefixPa + ' "' + promptPa + '" ਵਿੱਚ "' + correct + '" ਠੀਕ ਬੈਠਦਾ ਹੈ। ਨਿਯਮ ਸੁਝਾਅ: ' + (rule.pa || 'ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਾਕ ਨਾਲ ਮਿਲੇ।');
+    } else if (correct) {
+      explainPa = statePrefixPa + ' "' + correct + '" ਉਮੀਦ ਕੀਤਾ ਜਵਾਬ ਹੈ। ਨਿਯਮ ਸੁਝਾਅ: ' + (rule.pa || 'ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਾਕ ਨਾਲ ਮਿਲੇ।');
+    }
+
+    return { en: explainEn, pa: explainPa };
+  },
+
+  _generateWrongAnswerExplanation: function(step, chosenAnswer) {
+    if (!step || !chosenAnswer) return null;
+    var correct = (step && (step.correctAnswer || step.correct_answer)) ? String(step.correctAnswer || step.correct_answer) : '';
+    if (!correct) return null;
+
+    var chosen = String(chosenAnswer);
+    if (!chosen || chosen === correct) return null;
+
+    var optionExplanations = (step && step.wrongOptionExplanations && typeof step.wrongOptionExplanations === 'object')
+      ? step.wrongOptionExplanations
+      : null;
+
+    if (optionExplanations) {
+      var matched = null;
+      if (Object.prototype.hasOwnProperty.call(optionExplanations, chosen)) {
+        matched = optionExplanations[chosen];
+      } else {
+        var chosenLower = chosen.toLowerCase();
+        var keys = Object.keys(optionExplanations);
+        for (var i = 0; i < keys.length; i++) {
+          var key = keys[i];
+          if (String(key).toLowerCase() === chosenLower) {
+            matched = optionExplanations[key];
+            break;
+          }
+        }
+      }
+
+      if (matched && typeof matched === 'object') {
+        var matchEn = matched.en ? String(matched.en) : '';
+        var matchPa = matched.pa ? String(matched.pa) : '';
+        var posEn = matched.posEn ? String(matched.posEn) : '';
+        var posPa = matched.posPa ? String(matched.posPa) : '';
+        var posSegmentEn = posEn ? (' Part of speech: ' + posEn + '.') : '';
+        var posSegmentPa = posPa ? (' ਸ਼ਬਦ ਭੇਦ: ' + posPa + '।') : '';
+
+        return {
+          en: '"' + chosen + '" is not correct here. ' + matchEn + posSegmentEn + ' Correct answer: "' + correct + '".',
+          pa: '"' + chosen + '" ਇੱਥੇ ਸਹੀ ਨਹੀਂ ਹੈ। ' + matchPa + posSegmentPa + ' ਸਹੀ ਜਵਾਬ: "' + correct + '".'
+        };
+      }
+    }
+
+    var promptEn = (step && (step.englishText || step.english_text || step.promptEn || step.contentEn || ''))
+      ? String(step.englishText || step.english_text || step.promptEn || step.contentEn || '')
+      : '';
+    var promptPa = (step && (step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || ''))
+      ? String(step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || '')
+      : '';
+    var rule = Lessons._generateHint(step);
+
+    var en = 'Nice try. "' + chosen + '" does not fit this sentence. The better answer is "' + correct + '". Try this tip: ' + (rule.en || 'Use the option that fits grammar and meaning.');
+    var pa = 'ਵਿਆਕਰਨ ਪਾਠ: "' + chosen + '" ਇਸ ਵਾਕ ਵਿੱਚ ਠੀਕ ਨਹੀਂ ਬੈਠਦਾ। "' + correct + '" ਸਹੀ ਹੈ। ਨਿਯਮ ਸੁਝਾਅ: ' + (rule.pa || 'ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਿਆਕਰਨ ਅਤੇ ਅਰਥ ਨਾਲ ਮਿਲੇ।');
+
+    if (promptEn) {
+      en = 'In "' + promptEn + '", "' + chosen + '" is not the best fit. "' + correct + '" completes the sentence. Try this tip: ' + (rule.en || 'Use the option that fits grammar and meaning.');
+    }
+    if (promptPa) {
+      pa = '"' + promptPa + '" ਵਿੱਚ "' + chosen + '" ਠੀਕ ਨਹੀਂ ਬੈਠਦਾ। "' + correct + '" ਨਾਲ ਵਾਕ ਠੀਕ ਪੂਰਾ ਹੁੰਦਾ ਹੈ। ਨਿਯਮ ਸੁਝਾਅ: ' + (rule.pa || 'ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਿਆਕਰਨ ਅਤੇ ਅਰਥ ਨਾਲ ਮਿਲੇ।');
+    }
+
+    return { en: en, pa: pa };
   },
 
   _getHint: function(step) {
@@ -692,34 +834,149 @@ var Lessons = {
 
   _getExplanation: function(step) {
     if (!step) return null;
+    var fallback = Lessons._generateExplanation(step, true);
     var explicit = (
       Lessons._asBilingual(step.explanation) ||
       Lessons._asBilingual({ en: step.explainEn || step.englishExplain, pa: step.explainPa || step.punjabiExplain })
     );
-    if (explicit && (explicit.en || explicit.pa)) return explicit;
+    if (explicit && (explicit.en || explicit.pa)) {
+      return {
+        en: explicit.en || (fallback && fallback.en) || '',
+        pa: explicit.pa || (fallback && fallback.pa) || ''
+      };
+    }
 
     // Prefer examples[0] explanation if present
     var examples = Lessons.normalizeQuestionExamples(step);
     if (examples && examples.length) {
       var ex0 = examples[0] || {};
       var exExpl = Lessons._asBilingual({ en: ex0.explainEn || ex0.noteEn, pa: ex0.explainPa || ex0.notePa });
-      if (exExpl && (exExpl.en || exExpl.pa)) return exExpl;
+      if (exExpl && (exExpl.en || exExpl.pa)) {
+        return {
+          en: exExpl.en || (fallback && fallback.en) || '',
+          pa: exExpl.pa || (fallback && fallback.pa) || ''
+        };
+      }
     }
 
-    return Lessons._generateExplanation(step, true);
+    return fallback;
   },
 
   _getWorkedExample: function(step) {
     if (!step) return null;
 
+    function normalizeHighlightTokens(raw) {
+      if (!raw) return null;
+
+      function toTokenList(value) {
+        if (value === null || value === undefined) return [];
+        var parts = [];
+        if (Array.isArray(value)) {
+          for (var ai = 0; ai < value.length; ai++) {
+            var av = value[ai];
+            if (av === null || av === undefined) continue;
+            var as = String(av).trim();
+            if (as) parts.push(as);
+          }
+          return parts;
+        }
+        if (typeof value === 'string') {
+          var split = value.split(',');
+          for (var si = 0; si < split.length; si++) {
+            var s = String(split[si] || '').trim();
+            if (s) parts.push(s);
+          }
+          if (!parts.length) {
+            var one = String(value).trim();
+            if (one) parts.push(one);
+          }
+          return parts;
+        }
+        var v = String(value).trim();
+        if (v) parts.push(v);
+        return parts;
+      }
+
+      if (typeof raw === 'string' || Array.isArray(raw)) {
+        var list = toTokenList(raw);
+        return list.length ? { en: list, pa: list.slice(0) } : null;
+      }
+
+      if (typeof raw === 'object') {
+        var enList = toTokenList(raw.en);
+        var paList = toTokenList(raw.pa);
+        if (!enList.length && !paList.length) return null;
+        if (!enList.length) enList = paList.slice(0);
+        if (!paList.length) paList = enList.slice(0);
+        return { en: enList, pa: paList };
+      }
+
+      return null;
+    }
+
+    var generatedWorked = undefined;
+    var getGeneratedWorked = function() {
+      if (generatedWorked !== undefined) return generatedWorked;
+
+      // Auto-generate a worked example from prompt + correct answer
+      var correct = step && (step.correctAnswer || step.correct_answer);
+      var promptEn = step && (step.englishText || step.english_text || step.promptEn || step.contentEn || '');
+      var promptPa = step && (step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || '');
+      var hint = Lessons._generateHint(step);
+      if (correct) {
+        var c = String(correct);
+        var tokens = [];
+        var parts = c.split(/\s+/);
+        if (parts.length) tokens.push(parts.slice(0, Math.min(2, parts.length)).join(' '));
+        var solvedEn = '';
+        var solvedPa = '';
+        if (promptEn) {
+          solvedEn = String(promptEn).replace(/[_]{2,}/, c);
+        }
+        if (promptPa) {
+          solvedPa = String(promptPa).replace(/[_]{2,}/, c);
+        }
+        generatedWorked = {
+          en: solvedEn
+            ? 'Try this example: "' + solvedEn + '". Tip: ' + (hint.en || 'Pick the option that fits the sentence.')
+            : 'Try this example: choose "' + c + '" for this prompt. Tip: ' + (hint.en || 'Pick the option that fits the sentence.'),
+          pa: solvedPa
+            ? 'ਵਿਆਕਰਨ ਉਦਾਹਰਨ: "' + solvedPa + '"। ਨਿਯਮ ਸੁਝਾਅ: ' + (hint.pa || 'ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਾਕ ਨਾਲ ਮਿਲੇ।')
+            : 'ਵਿਆਕਰਨ ਉਦਾਹਰਨ: ਇਸ ਪ੍ਰਸ਼ਨ ਲਈ "' + c + '" ਚੁਣੋ। ਨਿਯਮ ਸੁਝਾਅ: ' + (hint.pa || 'ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਾਕ ਨਾਲ ਮਿਲੇ।'),
+          highlight: { en: tokens, pa: ['ਸਹੀ'] }
+        };
+        return generatedWorked;
+      }
+
+      generatedWorked = null;
+      return generatedWorked;
+    };
+
     // New schema
     if (step.workedExample && typeof step.workedExample === 'object') {
+      var normalizedHighlight = normalizeHighlightTokens(step.workedExample.highlight);
       var we = {
         en: typeof step.workedExample.en === 'string' ? step.workedExample.en : '',
         pa: typeof step.workedExample.pa === 'string' ? step.workedExample.pa : '',
-        highlight: step.workedExample.highlight && typeof step.workedExample.highlight === 'object' ? step.workedExample.highlight : null
+        highlight: normalizedHighlight
       };
-      if (we.en || we.pa) return we;
+      if (we.en || we.pa) {
+        if (!we.en || !we.pa) {
+          var weFallback = getGeneratedWorked();
+          if (weFallback) {
+            if (!we.en) we.en = weFallback.en || '';
+            if (!we.pa) we.pa = weFallback.pa || '';
+            if (!we.highlight && weFallback.highlight) we.highlight = weFallback.highlight;
+          }
+        }
+        if (!we.highlight) {
+          var weHighlightFallback = getGeneratedWorked();
+          if (weHighlightFallback && weHighlightFallback.highlight) {
+            we.highlight = weHighlightFallback.highlight;
+          }
+        }
+        return we;
+      }
     }
 
     // Backward compatibility: reuse first examples[0]
@@ -733,24 +990,20 @@ var Lessons = {
       if (typeof h === 'string' && h) {
         highlight = { en: [h], pa: [h] };
       }
-      return { en: en, pa: pa, highlight: highlight };
+      if (en || pa) {
+        if (!en || !pa) {
+          var exFallback = getGeneratedWorked();
+          if (exFallback) {
+            if (!en) en = exFallback.en || '';
+            if (!pa) pa = exFallback.pa || '';
+            if (!highlight && exFallback.highlight) highlight = exFallback.highlight;
+          }
+        }
+        return { en: en, pa: pa, highlight: highlight };
+      }
     }
 
-    // Auto-generate a minimal worked example from the correct answer
-    var correct = step && (step.correctAnswer || step.correct_answer);
-    if (correct) {
-      var c = String(correct);
-      var tokens = [];
-      var parts = c.split(/\s+/);
-      if (parts.length) tokens.push(parts.slice(0, Math.min(2, parts.length)).join(' '));
-      return {
-        en: c,
-        pa: 'ਸਹੀ: ' + c,
-        highlight: { en: tokens, pa: ['ਸਹੀ'] }
-      };
-    }
-
-    return null;
+    return getGeneratedWorked();
   },
 
   applyHighlights: function(rawText, tokens) {
@@ -808,7 +1061,8 @@ var Lessons = {
       var mm = matches[k];
       if (mm.start < cur) continue;
       out += Lessons.escapeHtml(text.slice(cur, mm.start));
-      out += '<mark class="ex-hi">' + Lessons.escapeHtml(text.slice(mm.start, mm.end)) + '</mark>';
+      var cls = (k % 2 === 0) ? 'ex-hi ex-hi--primary' : 'ex-hi ex-hi--secondary';
+      out += '<mark class="' + cls + '">' + Lessons.escapeHtml(text.slice(mm.start, mm.end)) + '</mark>';
       cur = mm.end;
     }
     out += Lessons.escapeHtml(text.slice(cur));
@@ -826,6 +1080,9 @@ var Lessons = {
     var correct = !!(opts && opts.correct);
     var showHint = !!(opts && opts.showHint);
     var canContinue = !!(opts && opts.canContinue);
+    var selectedAnswer = (opts && opts.selectedAnswer !== undefined && opts.selectedAnswer !== null)
+      ? String(opts.selectedAnswer)
+      : '';
 
     var punjabiOn = Lessons.shouldShowPunjabi();
 
@@ -844,11 +1101,21 @@ var Lessons = {
     var explanation = (!showHint) ? Lessons._getExplanation(step) : null;
     var worked = (!showHint) ? Lessons._getWorkedExample(step) : null;
 
-    var explainFallback = correct
-      ? { en: 'Nice work — here is why this is correct.', pa: 'ਵਧੀਆ — ਇਹ ਸਹੀ ਕਿਉਂ ਹੈ, ਵੇਖੋ।' }
-      : { en: 'Let’s learn from this — here is the correct pattern.', pa: 'ਆਓ ਇਸ ਤੋਂ ਸਿੱਖੀਏ — ਸਹੀ ਨਿਯਮ ਵੇਖੋ।' };
+    var explainFallback = Lessons._generateExplanation(step, correct);
+    if (!explainFallback || (!explainFallback.en && !explainFallback.pa)) {
+      explainFallback = correct
+        ? { en: 'Great choice. This word fits the sentence well.', pa: 'ਵਿਆਕਰਨ ਪਾਠ: ਇਹ ਚੋਣ ਵਾਕ ਦੇ ਪ੍ਰਸ਼ਨ ਅਤੇ ਵਿਆਕਰਨ ਨਿਯਮ ਨਾਲ ਮਿਲਦੀ ਹੈ।' }
+        : { en: 'Try again. Pick the option that makes the sentence sound right.', pa: 'ਵਿਆਕਰਨ ਪਾਠ: ਉਹ ਚੋਣ ਕਰੋ ਜੋ ਵਾਕ ਦਾ ਢਾਂਚਾ ਅਤੇ ਅਰਥ ਸਹੀ ਰੱਖੇ।' };
+    }
 
     if (!explanation) explanation = explainFallback;
+
+    if (!correct && !showHint && selectedAnswer) {
+      var wrongExplanation = Lessons._generateWrongAnswerExplanation(step, selectedAnswer);
+      if (wrongExplanation && (wrongExplanation.en || wrongExplanation.pa)) {
+        explanation = wrongExplanation;
+      }
+    }
 
     var we = worked;
     if (!we) {
@@ -859,11 +1126,18 @@ var Lessons = {
     var highlightPa = (we.highlight && Array.isArray(we.highlight.pa)) ? we.highlight.pa : [];
 
     var html = '';
-    html += '<div class="lesson-feedback-panel">';
+    html += '<div class="lesson-feedback-panel ' + (correct ? 'is-correct' : 'is-wrong') + '">';
     html += '  <div class="lesson-feedback-status">';
     html += '    <div class="lesson-feedback-status-en">' + Lessons.escapeHtml(statusEn) + '</div>';
     if (punjabiOn) html += '    <div class="lesson-feedback-status-pa" lang="pa">' + Lessons.escapeHtml(statusPa) + '</div>';
     html += '  </div>';
+
+    if (selectedAnswer.trim()) {
+      html += '  <div class="lesson-feedback-choice">';
+      html += '    <div class="lesson-feedback-choice-en">You chose: ' + Lessons.escapeHtml(selectedAnswer) + '</div>';
+      if (punjabiOn) html += '    <div class="lesson-feedback-choice-pa" lang="pa">ਤੁਸੀਂ ਚੁਣਿਆ: ' + Lessons.escapeHtml(selectedAnswer) + '</div>';
+      html += '  </div>';
+    }
 
     if (hint && (hint.en || hint.pa)) {
       html += '  <div class="lesson-hint">';
@@ -876,7 +1150,7 @@ var Lessons = {
     if (!hint) {
       if (explanation && (explanation.en || explanation.pa)) {
         html += '  <div class="lesson-explain">';
-        html += '    <div class="lesson-explain-title">Why</div>';
+        html += '    <div class="lesson-explain-title">Grammar Lesson</div>';
         if (explanation.en) html += '    <div class="lesson-explain-en">' + Lessons.escapeHtml(explanation.en) + '</div>';
         if (punjabiOn && explanation.pa) html += '    <div class="lesson-explain-pa" lang="pa">' + Lessons.escapeHtml(explanation.pa) + '</div>';
         html += '  </div>';
@@ -884,7 +1158,7 @@ var Lessons = {
 
       if ((we.en || we.pa)) {
         html += '  <div class="lesson-example">';
-        html += '    <div class="lesson-example-title">Worked example</div>';
+        html += '    <div class="lesson-example-title">Grammar Example</div>';
         if (we.en) html += '    <div class="lesson-example-en">' + Lessons.applyHighlights(we.en, highlightEn) + '</div>';
         if (punjabiOn && we.pa) html += '    <div class="lesson-example-pa" lang="pa">' + Lessons.applyHighlights(we.pa, highlightPa) + '</div>';
         html += '  </div>';
@@ -892,23 +1166,14 @@ var Lessons = {
     }
 
     if (canContinue) {
-      html += '  <div class="lesson-continue">Tap Next to continue.</div>';
+      html += '  <div class="lesson-continue"><span class="lesson-continue-pill">Tap Next to continue.</span></div>';
     }
 
     html += '</div>';
 
     el.innerHTML = html;
-    el.className = 'feedback lesson-feedback-panel ' + (correct ? 'correct' : 'wrong');
+    el.className = 'feedback ' + (correct ? 'correct' : 'wrong');
 
-    Lessons.showFeedbackOverlay({
-      statusEn: statusEn,
-      statusPa: punjabiOn ? statusPa : '',
-      hint: hint,
-      explanation: (!hint && explanation) ? explanation : null,
-      worked: (!hint && we) ? we : null,
-      correct: correct,
-      canContinue: canContinue
-    });
   },
 
   escapeRegex: function(str) {
@@ -936,7 +1201,7 @@ var Lessons = {
     return [];
   },
 
-  renderQuestionExample: function(step, applyHighlight) {
+  renderQuestionExample: function(step) {
     var container = document.getElementById("question-examples");
     if (!container) return;
 
@@ -959,13 +1224,60 @@ var Lessons = {
     var explainPaRaw = ex.explainPa || ex.notePa || "";
     var highlight = ex.highlight || step.highlight || step.exampleHighlight || "";
 
-    var safeSentenceEn = Lessons.escapeHtml(sentenceEnRaw);
-    var safeSentencePa = Lessons.escapeHtml(sentencePaRaw);
-
-    if (applyHighlight && highlight && sentenceEnRaw) {
-      var regex = new RegExp("(\\b" + Lessons.escapeRegex(highlight) + "\\b)", "gi");
-      safeSentenceEn = safeSentenceEn.replace(regex, '<span class="inline-highlight">$1</span>');
+    function toTokenList(raw) {
+      if (raw === null || raw === undefined) return [];
+      var out = [];
+      function pushOne(v) {
+        if (v === null || v === undefined) return;
+        var s = String(v).trim();
+        if (!s) return;
+        if (out.indexOf(s) === -1) out.push(s);
+      }
+      if (Array.isArray(raw)) {
+        for (var ai = 0; ai < raw.length; ai++) pushOne(raw[ai]);
+        return out;
+      }
+      if (typeof raw === 'string') {
+        var parts = raw.split(',');
+        for (var si = 0; si < parts.length; si++) pushOne(parts[si]);
+        if (!out.length) pushOne(raw);
+        return out;
+      }
+      if (typeof raw === 'object') {
+        if (raw.en !== undefined) {
+          var enList = toTokenList(raw.en);
+          for (var ei = 0; ei < enList.length; ei++) pushOne(enList[ei]);
+        }
+        if (raw.pa !== undefined) {
+          var paList = toTokenList(raw.pa);
+          for (var pi = 0; pi < paList.length; pi++) pushOne(paList[pi]);
+        }
+        return out;
+      }
+      pushOne(raw);
+      return out;
     }
+
+    function toLangTokenList(raw, langKey) {
+      if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+        var own = toTokenList(raw[langKey]);
+        if (own.length) return own;
+        if (langKey === 'en') {
+          var paFallback = toTokenList(raw.pa);
+          if (paFallback.length) return paFallback;
+        } else {
+          var enFallback = toTokenList(raw.en);
+          if (enFallback.length) return enFallback;
+        }
+      }
+      return toTokenList(raw);
+    }
+
+    var highlightEnTokens = toLangTokenList(highlight, 'en');
+    var highlightPaTokens = toLangTokenList(highlight, 'pa');
+
+    var safeSentenceEn = Lessons.applyHighlights(sentenceEnRaw, highlightEnTokens);
+    var safeSentencePa = Lessons.applyHighlights(sentencePaRaw, highlightPaTokens);
 
     var html = "";
     html += "<div class='question-example-block'>";
@@ -999,71 +1311,6 @@ var Lessons = {
     container.innerHTML = html;
   },
 
-  getQuestQuestionStepIndex: function(lessonId) {
-    var steps = Lessons.getSteps(lessonId);
-    if (!steps || !steps.length) {
-      return 0;
-    }
-
-    var validIndices = [];
-    for (var i = 0; i < steps.length; i++) {
-      var step = steps[i];
-      var stepType = step.type || step.step_type;
-      var correct = step.correctAnswer || step.correct_answer;
-      
-      if (stepType === "question" &&
-          step.options && Array.isArray(step.options) && step.options.length >= 2 &&
-          correct && typeof correct === "string" &&
-          step.options.indexOf(correct) >= 0) {
-        validIndices.push(i);
-      }
-    }
-
-    if (!validIndices.length) {
-      return 0;
-    }
-
-    // Defensive profile seeding: avoid crash if State not ready
-    var profile = (State.getActiveProfile && State.getActiveProfile()) || null;
-    var profileId = (profile && profile.id) ? profile.id : "default";
-    
-    var seedStr = Lessons.getDayKey() + ":" + lessonId + ":" + profileId;
-    var seedInt = Lessons.hashStringToInt(seedStr);
-    var selectedIdx = seedInt % validIndices.length;
-    return validIndices[selectedIdx];
-  },
-
-  // ===== QUEST MODE OPENING =====
-
-  openLessonForQuest: function(lessonId, callback, optStepIndex) {
-    if (!Lessons.validateLessonContent(lessonId)) {
-      alert("Content coming soon.");
-      if (callback) callback();
-      return;
-    }
-
-    var stepsForBounds = Lessons.getSteps(lessonId) || [];
-    var targetStep;
-    if (optStepIndex !== null && optStepIndex !== undefined && 
-        optStepIndex >= 0 && optStepIndex < stepsForBounds.length) {
-      targetStep = optStepIndex;
-    } else {
-      targetStep = Lessons.getQuestQuestionStepIndex(lessonId);
-    }
-
-    window.DQ_QUEST_CONTEXT = {
-      mode: true,
-      lessonId: lessonId,
-      targetStep: targetStep,
-      callback: callback || function() {},
-      startedAt: Date.now(),
-      answeredCorrect: false,
-      xpAwarded: false
-    };
-
-    Lessons.startLesson(lessonId);
-  },
-
   // ===== LESSON NORMALIZATION & STRUCTURE =====
 
   normalizeLesson: function(lessonId) {
@@ -1081,13 +1328,6 @@ var Lessons = {
         metadata: {
           titleEn: "Lesson",
           titlePa: "ਪਾਠ",
-          objective: {
-            titleEn: "Learn",
-            titlePa: "ਸਿੱਖੋ",
-            descEn: "Complete this lesson",
-            descPa: "ਇਹ ਪਾਠ ਮੁਕਤ ਕਰੋ",
-            pointsAvailable: 5
-          },
           difficulty: 1
         },
         steps: lesson
@@ -1102,6 +1342,19 @@ var Lessons = {
     return lesson && lesson.steps ? lesson.steps : [];
   },
 
+  getPlayableSteps: function(lessonId) {
+    var steps = Lessons.getSteps(lessonId);
+    if (!steps || !steps.length) return [];
+    var out = [];
+    for (var i = 0; i < steps.length; i++) {
+      var step = steps[i];
+      var stepType = step ? (step.type || step.step_type) : null;
+      if (stepType === 'objective') continue;
+      out.push(step);
+    }
+    return out;
+  },
+
   initLesson: function(lessonId) {
     if (!State.state.session.lessonProgress) {
       State.state.session.lessonProgress = {};
@@ -1110,9 +1363,193 @@ var Lessons = {
       State.state.session.lessonProgress[lessonId] = {
         stepsCompleted: 0,
         pointsEarned: 0,
-        stepAwarded: {}
+        stepAwarded: {},
+        stepResolved: {},
+        initiallyWrong: {}
       };
+      return;
     }
+
+    var progress = State.state.session.lessonProgress[lessonId];
+    if (!progress.stepAwarded || typeof progress.stepAwarded !== 'object') progress.stepAwarded = {};
+    if (!progress.stepResolved || typeof progress.stepResolved !== 'object') progress.stepResolved = {};
+    if (!progress.initiallyWrong || typeof progress.initiallyWrong !== 'object') progress.initiallyWrong = {};
+  },
+
+  markStepResolved: function(stepIndex, resolved) {
+    var lessonId = Lessons.currentLessonId;
+    if (!lessonId && lessonId !== 0) return;
+    Lessons.initLesson(lessonId);
+    var progress = State.state.session.lessonProgress[lessonId];
+    if (!progress) return;
+    progress.stepResolved[stepIndex] = !!resolved;
+  },
+
+  markInitialWrong: function(stepIndex) {
+    var lessonId = Lessons.currentLessonId;
+    if (!lessonId && lessonId !== 0) return;
+    Lessons.initLesson(lessonId);
+    var progress = State.state.session.lessonProgress[lessonId];
+    if (!progress) return;
+    if (!progress.initiallyWrong[stepIndex]) {
+      progress.initiallyWrong[stepIndex] = true;
+      State.save();
+    }
+  },
+
+  isReviewMode: function() {
+    return false;
+  },
+
+  canNavigateBack: function() {
+    return Lessons.currentStepIndex > 0;
+  },
+
+  canAdvanceFromCurrentStep: function() {
+    var step = Lessons.currentLessonSteps && Lessons.currentLessonSteps[Lessons.currentStepIndex];
+    if (!step) return false;
+
+    var stepType = step.type || step.step_type;
+    if (stepType === 'question' || stepType === 'guided_practice') {
+      Lessons.initLesson(Lessons.currentLessonId);
+      var progress = State.state.session.lessonProgress[Lessons.currentLessonId] || null;
+      return !!(progress && progress.stepResolved && progress.stepResolved[Lessons.currentStepIndex]);
+    }
+    return true;
+  },
+
+  bindLessonSwipeGestures: function() {
+    if (Lessons.swipeState.isBound) return;
+    var card = document.getElementById('lessonDeckCard') || document.querySelector('#screen-lesson .card');
+    if (!card) return;
+
+    Lessons.swipeState.isBound = true;
+
+    card.addEventListener('touchstart', function(e) {
+      if (!e.touches || !e.touches.length) return;
+      Lessons.swipeState.touchStartX = e.touches[0].clientX;
+      Lessons.swipeState.touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    card.addEventListener('touchend', function(e) {
+      if (!e.changedTouches || !e.changedTouches.length) return;
+      if (Lessons.swipeState.touchStartX === null || Lessons.swipeState.touchStartY === null) return;
+
+      var endX = e.changedTouches[0].clientX;
+      var endY = e.changedTouches[0].clientY;
+      var dx = endX - Lessons.swipeState.touchStartX;
+      var dy = endY - Lessons.swipeState.touchStartY;
+
+      Lessons.swipeState.touchStartX = null;
+      Lessons.swipeState.touchStartY = null;
+
+      if (Math.abs(dx) < Lessons.swipeState.thresholdPx) return;
+      if (Math.abs(dx) < Math.abs(dy)) return;
+
+      if (dx > 0) {
+        Lessons.nextStep();
+      } else {
+        Lessons.prevStep();
+      }
+    }, { passive: true });
+  },
+
+  animateLessonCard: function() {
+    var card = document.getElementById('lessonDeckCard') || document.querySelector('#screen-lesson .card');
+    if (!card) return;
+    card.classList.remove('lesson-card-swipe-enter');
+    void card.offsetWidth;
+    card.classList.add('lesson-card-swipe-enter');
+  },
+
+  renderSwipeProgress: function() {
+    var dotsWrap = document.getElementById('lesson-step-dots');
+    var hintEl = document.getElementById('lesson-swipe-hint');
+    var wrap = document.getElementById('lesson-swipe-progress');
+    var lessonHeroProgress = document.querySelector('#screen-lesson .lesson-step-progress');
+    if (!wrap || !hintEl) return;
+
+    if (!Lessons.currentLessonSteps || !Lessons.currentLessonSteps.length) {
+      if (dotsWrap) dotsWrap.innerHTML = '';
+      hintEl.textContent = '';
+      return;
+    }
+
+    var totalSteps = Lessons.currentLessonSteps.length;
+    var isAtStart = Lessons.currentStepIndex <= 0;
+    var isAtEnd = Lessons.currentStepIndex >= (totalSteps - 1);
+    try {
+      wrap.classList.toggle('is-at-start', isAtStart);
+      wrap.classList.toggle('is-at-end', isAtEnd);
+      if (lessonHeroProgress) {
+        lessonHeroProgress.classList.toggle('is-at-start', isAtStart);
+        lessonHeroProgress.classList.toggle('is-at-end', isAtEnd);
+      }
+    } catch (eWrapState) {}
+    if (dotsWrap) {
+      dotsWrap.classList.toggle('is-at-start', isAtStart);
+      dotsWrap.classList.toggle('is-at-end', isAtEnd);
+    }
+    var lessonPrevBtn = document.getElementById('btn-lesson-prev');
+    var lessonNextBtn = document.getElementById('btn-lesson-next');
+    if (lessonPrevBtn) lessonPrevBtn.classList.toggle('is-endpoint-fade', isAtStart);
+    if (lessonNextBtn) lessonNextBtn.classList.toggle('is-endpoint-fade', isAtEnd);
+
+    Lessons.initLesson(Lessons.currentLessonId);
+    var progress = State.state.session.lessonProgress[Lessons.currentLessonId] || {};
+    var resolved = progress.stepResolved || {};
+    var isReview = Lessons.isReviewMode();
+
+    if (dotsWrap) {
+      dotsWrap.innerHTML = '';
+      var maxVisibleDots = 8;
+      var totalDots = Lessons.currentLessonSteps.length;
+      var visibleDots = Math.min(totalDots, maxVisibleDots);
+      var dotStart = 0;
+      if (totalDots > visibleDots) {
+        dotStart = Lessons.currentStepIndex - Math.floor(visibleDots / 2);
+        if (dotStart < 0) dotStart = 0;
+        if (dotStart > (totalDots - visibleDots)) dotStart = totalDots - visibleDots;
+      }
+
+      for (var i = dotStart; i < (dotStart + visibleDots); i++) {
+        var dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'lesson-step-dot';
+        dot.setAttribute('aria-label', 'Step ' + (i + 1));
+        if (i === Lessons.currentStepIndex) dot.classList.add('is-active');
+        if (i < Lessons.currentStepIndex || !!resolved[i]) dot.classList.add('is-done');
+
+        if (isReview && i < Lessons.currentStepIndex) {
+          (function(targetIdx) {
+            dot.addEventListener('click', function() {
+              Lessons.currentStepIndex = targetIdx;
+              State.state.session.currentLessonStep = Lessons.currentStepIndex;
+              State.save();
+              Lessons.renderLessonStep();
+            });
+          })(i);
+        } else {
+          dot.disabled = true;
+        }
+
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    var step = Lessons.currentLessonSteps[Lessons.currentStepIndex] || null;
+    var stepType = step ? (step.type || step.step_type) : '';
+    if (!isReview && (stepType === 'question' || stepType === 'guided_practice') && !Lessons.canAdvanceFromCurrentStep()) {
+      hintEl.textContent = '';
+      return;
+    }
+
+    if (!isReview) {
+      hintEl.textContent = '';
+      return;
+    }
+
+    hintEl.textContent = '';
   },
 
   awardStepPoints: function(stepIndex, step) {
@@ -1134,56 +1571,16 @@ var Lessons = {
 
       // Award to track XP
       var trackId = Lessons.currentLessonTrackId;
-      if (trackId && State.state.progress.trackXP && State.state.progress.trackXP[trackId]) {
+      var savedByAwardXP = false;
+      if (trackId && typeof State !== "undefined" && State && typeof State.awardXP === "function") {
+        State.awardXP(points, { trackId: trackId }, { section: "learn", reason: "lesson_step_points" });
+        savedByAwardXP = true;
+      } else if (trackId && State.state.progress.trackXP && State.state.progress.trackXP[trackId]) {
         State.state.progress.trackXP[trackId].xp = (State.state.progress.trackXP[trackId].xp || 0) + points;
       }
 
-      State.save();
+      if (!savedByAwardXP) State.save();
     }
-  },
-
-  // ===== RENDERING: OBJECTIVE SCREEN =====
-
-  renderObjectiveScreen: function(meta) {
-    var lesson = Lessons.normalizeLesson(Lessons.currentLessonId);
-    if (!lesson || !lesson.metadata) return;
-
-    var obj = lesson.metadata.objective || {};
-    var difficulty = lesson.metadata.difficulty || 1;
-
-    var container = document.getElementById("lesson-options");
-    if (!container) return;
-
-    var html = `
-      <div class="objective-content">
-        <div class="objective-icon">🎯</div>
-        
-        <h2 class="objective-title-en">${obj.titleEn || "Start Lesson"}</h2>
-        <h2 class="objective-title-pa">${obj.titlePa || "ਪਾਠ ਸ਼ੁਰੂ ਕਰੋ"}</h2>
-        
-        <p class="objective-desc-en">${obj.descEn || ""}</p>
-        <p class="objective-desc-pa">${obj.descPa || ""}</p>
-        
-        <div class="objective-points-badge">
-          <span class="badge-label-en">Points available:</span>
-          <span class="badge-label-pa">ਉਪਲਬਧ ਪੁਆਇੰਟ:</span>
-          <span class="badge-value">+${obj.pointsAvailable || 10} XP</span>
-        </div>
-        
-        <div class="objective-difficulty">
-          <span class="difficulty-label-en">Difficulty:</span>
-          <span class="difficulty-label-pa">ਮੁਸ਼ਕਲਤਾ:</span>
-          <div class="difficulty-stars">
-            ${[1,2,3].map(i => `<span class="star ${i <= difficulty ? 'filled' : 'empty'}">★</span>`).join('')}
-          </div>
-        </div>
-      </div>
-    `;
-
-    container.innerHTML = html;
-
-    var nextBtn = document.getElementById("btn-lesson-next");
-    if (nextBtn) nextBtn.disabled = false;
   },
 
   // ===== RENDERING: EXAMPLE STEP (WITH AUTO-HIGHLIGHT) =====
@@ -1291,16 +1688,6 @@ var Lessons = {
       lessonFeedbackEl.className = "feedback correct";
     }
 
-    Lessons.showFeedbackOverlay({
-      statusEn: step.feedbackCorrect || "Correct!",
-      statusPa: step.feedbackCorrectPa || "ਠੀਕ ਹੈ!",
-      hint: null,
-      explanation: null,
-      worked: null,
-      correct: true,
-      canContinue: true
-    });
-
     // Phase 2: highlight the correct words with green to show final confirmation
     if (container && buttons) {
       for (var bi = 0; bi < buttons.length; bi++) {
@@ -1322,12 +1709,8 @@ var Lessons = {
       allBtns[abi].disabled = true;
     }
 
-    var questContext = Lessons.getQuestContext();
-    if (questContext) {
-      questContext.answeredCorrect = true;
-    }
-
     Lessons.awardStepPoints(Lessons.currentStepIndex, step);
+    Lessons.markStepResolved(Lessons.currentStepIndex, true);
 
     var nextBtn = document.getElementById("btn-lesson-next");
     if (nextBtn) nextBtn.disabled = false;
@@ -1372,6 +1755,7 @@ var Lessons = {
 
     var nextBtn = document.getElementById("btn-lesson-next");
     if (nextBtn) nextBtn.disabled = false;
+    Lessons.markStepResolved(Lessons.currentStepIndex, true);
   },
 
   // ===== EXISTING METHODS (MODIFIED) =====
@@ -1396,121 +1780,24 @@ var Lessons = {
       }
     }
 
-    // Bind filter controls
-    var searchInput = document.getElementById("lesson-search");
-    if (searchInput) {
-      if (!searchInput.dataset.lessonSearchBound) {
-        searchInput.dataset.lessonSearchBound = "1";
-        searchInput.addEventListener("input", function() {
-          Lessons.activeFilters.search = this.value;
-          if (LearnQA.enabled()) console.log("🎓 [Learn] Search filter changed to: " + this.value);
-          Lessons.saveFiltersToState();
-          Lessons.renderLearnSections();
+    var btnCheck = document.getElementById("btn-lesson-check");
+    if (btnCheck) {
+      if (!btnCheck.dataset.lessonCheckBound) {
+        btnCheck.dataset.lessonCheckBound = "1";
+        btnCheck.addEventListener("click", function() {
+          var step = Lessons.currentLessonSteps && Lessons.currentLessonSteps[Lessons.currentStepIndex];
+          if (!step) return;
+          var stepType = step.type || step.step_type;
+          if (stepType !== 'question') return;
+          Lessons.submitSelectedQuestionAnswer(Lessons.currentStepIndex, step);
         });
       }
     }
 
-    // Status filter buttons
-    var filterBtns = document.querySelectorAll(".filter-btn");
-    for (var i = 0; i < filterBtns.length; i++) {
-      var fb = filterBtns[i];
-      if (fb && (!fb.dataset || !fb.dataset.filterBtnBound)) {
-        if (fb.dataset) fb.dataset.filterBtnBound = "1";
-        fb.addEventListener("click", function() {
-          // Remove active from all
-          var allBtns = document.querySelectorAll(".filter-btn");
-          for (var j = 0; j < allBtns.length; j++) {
-            allBtns[j].classList.remove("active");
-            allBtns[j].setAttribute("aria-pressed", "false");
-          }
-          // Add active to clicked
-          this.classList.add("active");
-          this.setAttribute("aria-pressed", "true");
-          Lessons.activeFilters.status = this.getAttribute("data-filter");
-          if (LearnQA.enabled()) console.log("🎓 [Learn] Status filter changed to: " + Lessons.activeFilters.status);
-          Lessons.saveFiltersToState();
-          Lessons.renderLearnSections();
-        });
-      }
-    }
-
-    // Difficulty checkboxes
-    var diffCheckboxes = document.querySelectorAll(".diff-filter");
-    for (var k = 0; k < diffCheckboxes.length; k++) {
-      var dc = diffCheckboxes[k];
-      if (dc && (!dc.dataset || !dc.dataset.diffFilterBound)) {
-        if (dc.dataset) dc.dataset.diffFilterBound = "1";
-        dc.addEventListener("change", function() {
-          var diff = parseInt(this.getAttribute("data-difficulty"), 10);
-          if (this.checked) {
-            if (Lessons.activeFilters.difficulty.indexOf(diff) === -1) {
-              Lessons.activeFilters.difficulty.push(diff);
-            }
-          } else {
-            var idx = Lessons.activeFilters.difficulty.indexOf(diff);
-            if (idx !== -1) {
-              Lessons.activeFilters.difficulty.splice(idx, 1);
-            }
-          }
-          // Normalize ordering
-          Lessons.activeFilters.difficulty.sort();
-          if (LearnQA.enabled()) console.log("🎓 [Learn] Difficulty filter changed to: " + Lessons.activeFilters.difficulty.join(","));
-          Lessons.saveFiltersToState();
-          Lessons.renderLearnSections();
-        });
-      }
-    }
-
-    // Track dropdown
-    var trackFilter = document.getElementById("track-filter");
-    if (trackFilter) {
-      if (!trackFilter.dataset.trackFilterBound) {
-        trackFilter.dataset.trackFilterBound = "1";
-        trackFilter.addEventListener("change", function() {
-          Lessons.activeFilters.track = this.value;
-          if (LearnQA.enabled()) console.log("🎓 [Learn] Track filter changed to: " + this.value);
-          Lessons.saveFiltersToState();
-          Lessons.renderLearnSections();
-        });
-      }
-    }
-
-    // Clear filters
-    var btnClearFilters = document.getElementById("btn-clear-filters");
-    if (btnClearFilters) {
-      if (!btnClearFilters.dataset.clearFiltersBound) {
-        btnClearFilters.dataset.clearFiltersBound = "1";
-        btnClearFilters.addEventListener("click", function() { Lessons.clearFilters(); });
-      }
-    }
-
-    // Keyboard: focus search with '/'
-    if (!Lessons._keyboardBound) {
-      Lessons._keyboardBound = true;
-      document.addEventListener("keydown", function(e) {
-        if (e.key === "/") {
-          var learnScreen = document.getElementById("screen-learn");
-          if (learnScreen && learnScreen.classList.contains("active")) {
-            var inp = document.getElementById("lesson-search");
-            if (inp) {
-              e.preventDefault();
-              inp.focus();
-            }
-          }
-        }
-      });
-    }
+    Lessons.bindLessonSwipeGestures();
 
     // Ensure catalog consistency before any filtering/rendering
     Lessons.ensureLessonCatalogSync();
-
-    // Restore saved filters (if any) and sync UI controls
-    Lessons.restoreFiltersFromState();
-    Lessons.syncFilterControls();
-
-    // Wire QA toggle
-    Lessons.bindQAToggle();
-    Lessons.syncQAToggle();
 
     // Render learn sections on startup
     Lessons.renderLearnSections();
@@ -1521,10 +1808,7 @@ var Lessons = {
     Lessons.init();
   },
 
-  syncUI: function() {
-    Lessons.syncFilterControls();
-    Lessons.syncQAToggle();
-  },
+  syncUI: function() {},
 
   renderContent: function() {
     Lessons.renderLearnSections();
@@ -1533,20 +1817,14 @@ var Lessons = {
   mount: function() {
     Lessons.wireOnce();
     Lessons.ensureLessonCatalogSync();
-    Lessons.restoreFiltersFromState();
     Lessons.syncUI();
-
-    // Restore persisted Learn UI (expanded tracks, show-more limits, scroll)
-    Lessons._restoreLearnUiStateForMount();
-
-    Lessons._bindLearnScrollPersistenceOnce();
     Lessons.renderContent();
-    Lessons._restoreLearnScrollAfterNav();
   },
 
   // Render learn screen with lesson cards
 
   _getSafeLessonMetaById: function(lessonId) {
+    lessonId = Lessons.resolveCanonicalLessonId(lessonId);
     if (!lessonId) return null;
     for (var i = 0; i < LESSON_META.length; i++) {
       if (LESSON_META[i] && LESSON_META[i].id === lessonId) return LESSON_META[i];
@@ -1582,120 +1860,6 @@ var Lessons = {
     }
   },
 
-  // ===== Learn UI State (expanded/limits/scroll) =====
-
-  _loadLearnUiState: function() {
-    var d = Lessons._loadJson(BOLO_LEARN_UI_STATE_KEY, null);
-    if (!d || typeof d !== 'object') {
-      return { expandedTrackIds: [], trackLimits: {}, scrollY: 0, updatedAt: 0 };
-    }
-    var expanded = Array.isArray(d.expandedTrackIds) ? d.expandedTrackIds.filter(Boolean) : [];
-    var limits = (d.trackLimits && typeof d.trackLimits === 'object') ? d.trackLimits : {};
-    var cleanedLimits = {};
-    for (var k in limits) {
-      if (!limits.hasOwnProperty(k)) continue;
-      var n = limits[k];
-      if (typeof n === 'number' && isFinite(n) && n > 0) cleanedLimits[k] = Math.round(n);
-    }
-    var y = (typeof d.scrollY === 'number' && isFinite(d.scrollY) && d.scrollY >= 0) ? Math.round(d.scrollY) : 0;
-    var ts = (typeof d.updatedAt === 'number' && isFinite(d.updatedAt) && d.updatedAt > 0) ? Math.round(d.updatedAt) : 0;
-    return { expandedTrackIds: expanded, trackLimits: cleanedLimits, scrollY: y, updatedAt: ts };
-  },
-
-  _saveLearnUiStateNow: function() {
-    var expandedIds = [];
-    for (var tid in Lessons.expandedTracks) {
-      if (!Lessons.expandedTracks.hasOwnProperty(tid)) continue;
-      if (Lessons.expandedTracks[tid]) expandedIds.push(tid);
-    }
-
-    var limitsOut = {};
-    for (var k in Lessons._learnTrackLimits) {
-      if (!Lessons._learnTrackLimits.hasOwnProperty(k)) continue;
-      var n = Lessons._learnTrackLimits[k];
-      if (typeof n === 'number' && isFinite(n) && n > 0) limitsOut[k] = Math.round(n);
-    }
-
-    var y = 0;
-    try { y = window.scrollY || window.pageYOffset || 0; } catch (e) { y = 0; }
-
-    var payload = {
-      expandedTrackIds: expandedIds,
-      trackLimits: limitsOut,
-      scrollY: Math.max(0, Math.round(y)),
-      updatedAt: Date.now()
-    };
-    Lessons._saveJson(BOLO_LEARN_UI_STATE_KEY, payload);
-  },
-
-  _restoreLearnUiStateForMount: function() {
-    var st = Lessons._loadLearnUiState();
-
-    // Restore expand + limits
-    var expandedMap = {};
-    for (var i = 0; i < st.expandedTrackIds.length; i++) {
-      expandedMap[st.expandedTrackIds[i]] = true;
-    }
-    for (var tl in st.trackLimits) {
-      if (st.trackLimits.hasOwnProperty(tl)) expandedMap[tl] = true;
-    }
-    Lessons.expandedTracks = expandedMap;
-    Lessons._learnTrackLimits = st.trackLimits || {};
-
-    // Defer scroll restore until after Learn render and UI.goTo() scroll-to-top
-    Lessons._learnPendingScrollY = (typeof st.scrollY === 'number' && isFinite(st.scrollY) && st.scrollY > 0) ? st.scrollY : null;
-  },
-
-  _restoreLearnScrollAfterNav: function() {
-    if (!Lessons._isLearnScreenActive()) return;
-    var y = Lessons._learnPendingScrollY;
-    if (!(typeof y === 'number' && isFinite(y) && y > 0)) return;
-
-    // Clear pending immediately to avoid repeated jumps.
-    Lessons._learnPendingScrollY = null;
-
-    // Run after UI.goTo() finishes and after DOM height exists.
-    setTimeout(function() {
-      try { window.scrollTo(0, y); } catch (e) {}
-    }, 25);
-  },
-
-  _bindLearnScrollPersistenceOnce: function() {
-    if (Lessons._learnScrollBound) return;
-    Lessons._learnScrollBound = true;
-
-    function scheduleSave() {
-      if (Lessons._learnScrollSaveTimer) return;
-      Lessons._learnScrollSaveTimer = setTimeout(function() {
-        Lessons._learnScrollSaveTimer = null;
-        Lessons._learnLastScrollSavedAt = Date.now();
-        Lessons._saveLearnUiStateNow();
-      }, LEARN_SCROLL_SAVE_THROTTLE_MS);
-    }
-
-    window.addEventListener('scroll', function() {
-      if (!Lessons._isLearnScreenActive()) return;
-
-      // Sticky header polish: add shadow only once the user scrolls
-      try {
-        var sticky = document.getElementById('learn-sticky-header');
-        if (sticky) {
-          var yNow = 0;
-          try { yNow = window.scrollY || window.pageYOffset || 0; } catch (e0) { yNow = 0; }
-          sticky.classList.toggle('is-scrolled', yNow > 0);
-        }
-      } catch (e1) {}
-
-      var now = Date.now();
-      if (!Lessons._learnLastScrollSavedAt || (now - Lessons._learnLastScrollSavedAt) >= LEARN_SCROLL_SAVE_THROTTLE_MS) {
-        Lessons._learnLastScrollSavedAt = now;
-        Lessons._saveLearnUiStateNow();
-        return;
-      }
-      scheduleSave();
-    }, { passive: true });
-  },
-
   // ===== Recent Lessons =====
 
   _loadRecentLessons: function() {
@@ -1703,15 +1867,16 @@ var Lessons = {
     if (!Array.isArray(arr)) return [];
     var out = [];
     for (var i = 0; i < arr.length; i++) {
-      var id = arr[i];
-      if (typeof id === 'string' && id.indexOf('L_') === 0 && out.indexOf(id) === -1) out.push(id);
+      var id = Lessons.resolveCanonicalLessonId(arr[i]);
+      if (Lessons.isLearnVisibleLessonId(id) && out.indexOf(id) === -1) out.push(id);
       if (out.length >= LEARN_RECENT_CAP) break;
     }
     return out;
   },
 
   _pushRecentLesson: function(lessonId) {
-    if (!lessonId || typeof lessonId !== 'string') return;
+    lessonId = Lessons.resolveCanonicalLessonId(lessonId);
+    if (!Lessons.isLearnVisibleLessonId(lessonId)) return;
     var list = Lessons._loadRecentLessons();
     var idx = list.indexOf(lessonId);
     if (idx >= 0) list.splice(idx, 1);
@@ -1720,891 +1885,765 @@ var Lessons = {
     Lessons._saveJson(BOLO_RECENT_LESSONS_KEY, list);
   },
 
-  // ===== Favorites =====
-
-  _loadFavorites: function() {
-    var arr = Lessons._loadJson(BOLO_FAVORITES_KEY, []);
-    if (!Array.isArray(arr)) return [];
-    var out = [];
-    for (var i = 0; i < arr.length; i++) {
-      var id = arr[i];
-      if (typeof id === 'string' && id.indexOf('L_') === 0 && out.indexOf(id) === -1) out.push(id);
-    }
-    return out;
-  },
-
-  _saveFavorites: function(list) {
-    if (!Array.isArray(list)) list = [];
-    Lessons._saveJson(BOLO_FAVORITES_KEY, list);
-  },
-
-  _isFavorite: function(lessonId) {
-    var favs = Lessons._loadFavorites();
-    return favs.indexOf(lessonId) >= 0;
-  },
-
-  _toggleFavorite: function(lessonId) {
-    if (!lessonId || typeof lessonId !== 'string') return;
-    var favs = Lessons._loadFavorites();
-    var idx = favs.indexOf(lessonId);
-    if (idx >= 0) favs.splice(idx, 1);
-    else favs.unshift(lessonId);
-    Lessons._saveFavorites(favs);
-  },
-
-  _renderSavedSection: function(parentEl, filteredById) {
-    if (!parentEl) return;
-    var favIds = Lessons._loadFavorites();
-    if (!favIds.length) return;
-
-    var metas = [];
-    for (var i = 0; i < favIds.length; i++) {
-      var id = favIds[i];
-      if (filteredById && filteredById[id] !== true) continue;
-      var meta = Lessons.findLessonMeta(id);
-      if (meta) metas.push(meta);
-    }
-    if (!metas.length) return;
-
-    var wrap = document.createElement('div');
-    wrap.className = 'card';
-    wrap.style.marginTop = '10px';
-
-    var title = document.createElement('div');
-    title.className = 'learn-section-title';
-    title.textContent = 'Saved';
-    wrap.appendChild(title);
-
-    var strip = document.createElement('div');
-    strip.className = 'tracks-strip';
-
-    var limit = Lessons._savedShowAll ? metas.length : Math.min(LEARN_SAVED_PREVIEW_CAP, metas.length);
-    for (var j = 0; j < limit; j++) {
-      var m = metas[j];
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'track-pill';
-      btn.setAttribute('data-lesson-id', m.id);
-      btn.textContent = (m.labelEn || m.id) + (m.labelPa ? (' — ' + m.labelPa) : '');
-      strip.appendChild(btn);
-    }
-    wrap.appendChild(strip);
-
-    if (metas.length > LEARN_SAVED_PREVIEW_CAP) {
-      var toggle = document.createElement('button');
-      toggle.type = 'button';
-      toggle.className = 'btn btn-secondary btn-small';
-      toggle.setAttribute('data-action', 'saved-toggle');
-      toggle.textContent = Lessons._savedShowAll ? 'Show less' : ('Show all (' + metas.length + ')');
-      wrap.appendChild(toggle);
-    }
-
-    parentEl.appendChild(wrap);
-  },
-
-  _renderRecentSection: function(parentEl, filteredById) {
-    if (!parentEl) return;
-    var ids = Lessons._loadRecentLessons();
-    if (!ids.length) return;
-
-    var metas = [];
-    for (var i = 0; i < ids.length; i++) {
-      var id = ids[i];
-      if (filteredById && filteredById[id] !== true) continue;
-      var meta = Lessons.findLessonMeta(id);
-      if (meta) metas.push(meta);
-    }
-    if (!metas.length) return;
-
-    var wrap = document.createElement('div');
-    wrap.className = 'card';
-    wrap.style.marginTop = '10px';
-
-    var title = document.createElement('div');
-    title.className = 'learn-section-title';
-    title.textContent = 'Recent';
-    wrap.appendChild(title);
-
-    var strip = document.createElement('div');
-    strip.className = 'tracks-strip';
-    for (var j = 0; j < metas.length; j++) {
-      var m = metas[j];
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'track-pill';
-      btn.setAttribute('data-lesson-id', m.id);
-      btn.textContent = (m.labelEn || m.id) + (m.labelPa ? (' — ' + m.labelPa) : '');
-      strip.appendChild(btn);
-    }
-    wrap.appendChild(strip);
-
-    parentEl.appendChild(wrap);
-  },
-
-  _renderContinueCard: function(containerEl) {
-    if (!containerEl) return;
-    containerEl.innerHTML = '';
-
-    var suggestion = Lessons.getAdaptiveSuggestion();
-    var lessonId = suggestion && suggestion.lessonId ? suggestion.lessonId : null;
-
-    if (!lessonId && Array.isArray(LESSON_META) && LESSON_META.length) {
-      lessonId = LESSON_META[0].id;
-    }
-    if (!lessonId) return;
-
-    var meta = Lessons._getSafeLessonMetaById(lessonId) || {};
-    var titleEn = meta.labelEn || (suggestion && suggestion.labelEn) || 'Continue';
-    var titlePa = meta.labelPa || (suggestion && suggestion.labelPa) || '';
-    var trackName = (suggestion && suggestion.trackName) || ((TRACKS[meta.trackId] && (TRACKS[meta.trackId].nameEn || TRACKS[meta.trackId].name)) || '');
-
-    var card = document.createElement('div');
-    card.className = 'card';
-    card.style.marginTop = '10px';
-
-    var t = document.createElement('div');
-    t.className = 'section-title';
-    t.textContent = 'Continue';
-
-    var sub = document.createElement('p');
-    sub.className = 'section-subtitle';
-    sub.textContent = (trackName ? (trackName + ' • ') : '') + titleEn;
-
-    // Compact progress subtext: prefer last opened lesson label when available
-    var sub2 = document.createElement('p');
-    sub2.className = 'section-subtitle';
-    var lastId = null;
-    try {
-      lastId = (State && State.state && State.state.session && State.state.session.currentLessonId) ? State.state.session.currentLessonId : null;
-    } catch (e) {
-      lastId = null;
-    }
-    if (!lastId) {
-      try {
-        var rec = Lessons._loadRecentLessons();
-        lastId = (rec && rec.length) ? rec[0] : null;
-      } catch (e2) {
-        lastId = null;
-      }
-    }
-    if (lastId) {
-      var lm = Lessons.findLessonMeta(lastId);
-      sub2.textContent = lm ? ('Last: ' + (lm.labelEn || lastId)) : 'Pick up where you left off';
-    } else {
-      sub2.textContent = 'Pick up where you left off';
-    }
-
-    var pa = document.createElement('p');
-    pa.className = 'section-subtitle';
-    pa.setAttribute('lang', 'pa');
-    pa.textContent = titlePa || '';
-
-    var row = document.createElement('div');
-    row.className = 'button-row';
-    row.style.marginTop = '10px';
-
-    var btn = document.createElement('button');
-    btn.className = 'btn btn-small';
-    btn.setAttribute('data-action', 'learn-continue');
-    btn.setAttribute('data-lesson-id', lessonId);
-    btn.textContent = 'Continue Lesson';
-
-    row.appendChild(btn);
-    card.appendChild(t);
-    card.appendChild(sub);
-    card.appendChild(sub2);
-    if (pa.textContent) card.appendChild(pa);
-    card.appendChild(row);
-    containerEl.appendChild(card);
-  },
-
-  _renderLearnQuickFilters: function(slotEl) {
-    if (!slotEl) return;
-    slotEl.innerHTML = '';
-
-    var row = document.createElement('div');
-    row.className = 'learn-quick-filters';
-
-    function addChip(key, label) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'learn-chip' + (Lessons._learnQuickFilter === key ? ' is-active' : '');
-      btn.setAttribute('data-action', 'learn-chip');
-      btn.setAttribute('data-chip', key);
-      btn.setAttribute('aria-pressed', Lessons._learnQuickFilter === key ? 'true' : 'false');
-      btn.textContent = label;
-      row.appendChild(btn);
-    }
-
-    addChip('all', 'All');
-    addChip('easy', 'Easy');
-    addChip('medium', 'Medium');
-    addChip('hard', 'Hard');
-    addChip('saved', 'Saved');
-
-    slotEl.appendChild(row);
-  },
-
-  _applyQuickFilterToMetaList: function(list) {
-    var out = Array.isArray(list) ? list.slice() : [];
-    var qf = Lessons._learnQuickFilter || 'all';
-    if (qf === 'all') return out;
-
-    if (qf === 'saved') {
-      var favIds = Lessons._loadFavorites();
-      if (!favIds.length) return [];
-      var favMap = {};
-      for (var i = 0; i < favIds.length; i++) favMap[favIds[i]] = true;
-      return out.filter(function(m) { return m && m.id && favMap[m.id] === true; });
-    }
-
-    var target = (qf === 'easy') ? 1 : (qf === 'medium' ? 2 : (qf === 'hard' ? 3 : null));
-    if (!target) return out;
-    return out.filter(function(m) {
-      if (!m) return false;
-      // If difficulty missing, treat as pass-through (All) per spec
-      if (!m.difficulty) return true;
-      return m.difficulty === target;
-    });
-  },
-
-  _bindLearnStickyDelegationOnce: function() {
-    var header = document.getElementById('learn-sticky-header');
-    if (!header || Lessons._learnStickyBound) return;
-    Lessons._learnStickyBound = true;
-
-    header.addEventListener('click', function(e) {
-      var t = e.target;
-      if (!t) return;
-
-      var chip = t.closest ? t.closest('[data-action="learn-chip"]') : null;
-      if (chip) {
-        var key = chip.getAttribute('data-chip') || 'all';
-        Lessons._learnQuickFilter = key;
-
-        // Map quick difficulty filters into existing checkboxes for consistency
-        if (key === 'easy') Lessons.activeFilters.difficulty = [1];
-        else if (key === 'medium') Lessons.activeFilters.difficulty = [2];
-        else if (key === 'hard') Lessons.activeFilters.difficulty = [3];
-        else if (key === 'all' || key === 'saved') Lessons.activeFilters.difficulty = [1, 2, 3];
-
-        Lessons.syncFilterControls();
-        Lessons.saveFiltersToState();
-        Lessons.renderLearnSections();
-      }
-    });
-  },
-
-  _renderLessonCardForLearn: function(meta, track) {
-    var card = document.createElement('div');
-    card.className = 'lesson-card';
-    card.style.cursor = 'pointer';
-    card.style.position = 'relative';
-    card.setAttribute('role', 'button');
-    card.setAttribute('tabindex', '0');
-    card.setAttribute('data-lesson-id', meta.id);
-    card.setAttribute('data-track-id', meta.trackId);
-
-    var statusLabel = Lessons.getLessonStatus(meta.id);
-    card.setAttribute('aria-label', (meta.labelEn || meta.id) + ' (' + statusLabel + ')');
-
-    var nameEl = document.createElement('div');
-    nameEl.className = 'lesson-name';
-    nameEl.textContent = meta.labelEn || meta.id;
-
-    var paEl = document.createElement('div');
-    paEl.className = 'lesson-pa';
-    paEl.textContent = meta.labelPa || '';
-
-    var tagRow = document.createElement('div');
-    tagRow.className = 'lesson-tag-row';
-
-    if (meta.difficulty) {
-      var diffSpan = document.createElement('span');
-      diffSpan.className = 'lesson-difficulty';
-      var stars = '';
-      for (var s = 0; s < meta.difficulty; s++) stars += '★';
-      diffSpan.textContent = stars;
-      tagRow.appendChild(diffSpan);
-    }
-
-    var trackSpan = document.createElement('span');
-    trackSpan.textContent = (track && track.name) ? track.name : (meta.trackId || '');
-    trackSpan.style.color = '#6b7fa3';
-
-    var statusSpan = document.createElement('span');
-    statusSpan.className = 'lesson-status-pill';
-    statusSpan.textContent = statusLabel;
-
-    tagRow.appendChild(trackSpan);
-    tagRow.appendChild(statusSpan);
-
-    card.appendChild(nameEl);
-    if (paEl.textContent) card.appendChild(paEl);
-    card.appendChild(tagRow);
-
-    // Favorite toggle (Learn screen only)
-    var favBtn = document.createElement('button');
-    favBtn.type = 'button';
-    favBtn.className = 'learn-fav-btn' + (Lessons._isFavorite(meta.id) ? ' is-fav' : '');
-    favBtn.setAttribute('data-action', 'toggle-favorite');
-    favBtn.setAttribute('data-lesson-id', meta.id);
-    favBtn.setAttribute('aria-label', Lessons._isFavorite(meta.id) ? 'Unsave lesson' : 'Save lesson');
-    favBtn.textContent = Lessons._isFavorite(meta.id) ? '★' : '☆';
-    card.appendChild(favBtn);
-
-    LearnQA.logCardRendered(meta.id, meta.labelEn, meta.labelPa);
-    return card;
-  },
-
-  _renderTrackLessonsInto: function(trackId, bodyEl, limit, lessonsSorted, track) {
-    if (!bodyEl) return;
-    bodyEl.style.display = '';
-    bodyEl.innerHTML = '';
-
-    var list = Array.isArray(lessonsSorted) ? lessonsSorted : [];
-    var toShow = Math.min(list.length, Math.max(0, limit || LEARN_PREVIEW_COUNT));
-
-    var grid = document.createElement('div');
-    grid.className = 'parts-grid';
-    grid.setAttribute('data-track', trackId);
-
-    for (var i = 0; i < toShow; i++) {
-      grid.appendChild(Lessons._renderLessonCardForLearn(list[i], track));
-    }
-
-    bodyEl.appendChild(grid);
-
-    if (list.length > toShow) {
-      var remaining = list.length - toShow;
-      var showMoreBtn = document.createElement('button');
-      showMoreBtn.className = 'btn btn-secondary show-more-btn';
-      showMoreBtn.setAttribute('data-action', 'show-more');
-      showMoreBtn.setAttribute('data-track-id', trackId);
-      showMoreBtn.textContent = 'Show More (' + remaining + ' more)';
-      bodyEl.appendChild(showMoreBtn);
-    }
-  },
-
-  _renderTrackSectionShell: function(trackId, track, lessonsSorted, shownInTrack, totalInTrack) {
-    var sectionEl = document.createElement('div');
-    sectionEl.className = 'learn-track-section';
-    sectionEl.setAttribute('data-track-id', trackId);
-
-    var header = document.createElement('div');
-    header.className = 'learn-section-title';
-
-    var left = document.createElement('div');
-    left.textContent = (track.name || track.nameEn || trackId);
-
-    var right = document.createElement('div');
-    right.className = 'learn-track-header-meta';
-
-    // Stats: N lessons + S saved
-    var savedCount = 0;
-    try {
-      var favs = Lessons._loadFavorites();
-      if (favs && favs.length) {
-        var favMap = {};
-        for (var fi = 0; fi < favs.length; fi++) favMap[favs[fi]] = true;
-        for (var li = 0; li < lessonsSorted.length; li++) {
-          if (lessonsSorted[li] && favMap[lessonsSorted[li].id] === true) savedCount++;
-        }
-      }
-    } catch (e) {
-      savedCount = 0;
-    }
-
-    var stats = document.createElement('span');
-    stats.textContent = lessonsSorted.length + ' lessons' + (savedCount ? (' • ' + savedCount + ' saved') : '');
-
-    var toggleBtn = document.createElement('button');
-    toggleBtn.type = 'button';
-    toggleBtn.className = 'btn btn-secondary btn-small';
-    toggleBtn.setAttribute('data-action', 'toggle-track');
-    toggleBtn.setAttribute('data-track-id', trackId);
-    toggleBtn.setAttribute('aria-expanded', Lessons.expandedTracks[trackId] ? 'true' : 'false');
-
-    var chev = document.createElement('span');
-    chev.className = 'learn-chevron' + (Lessons.expandedTracks[trackId] ? ' is-open' : '');
-    chev.textContent = '▾';
-    toggleBtn.textContent = Lessons.expandedTracks[trackId] ? 'Hide ' : 'Show ';
-    toggleBtn.appendChild(chev);
-
-    right.appendChild(stats);
-    right.appendChild(toggleBtn);
-
-    header.appendChild(left);
-    header.appendChild(right);
-
-    // Attach track health indicators (data attributes for CSS)
-    Lessons._attachTrackHealthIndicators(header, trackId);
-
-    var sub = document.createElement('div');
-    sub.className = 'learn-section-sub';
-    sub.textContent = track.descEn || '';
-
-    var body = document.createElement('div');
-    body.className = 'learn-track-body';
-    body.setAttribute('data-track-body', '1');
-    body.setAttribute('data-track-id', trackId);
-
-    sectionEl.appendChild(header);
-    sectionEl.appendChild(sub);
-
-    // Collapsed preview chips (2–3), only when collapsed
-    if (!Lessons.expandedTracks[trackId]) {
-      var preview = document.createElement('div');
-      preview.className = 'tracks-strip';
-      var max = Math.min(3, lessonsSorted.length);
-      for (var pi = 0; pi < max; pi++) {
-        var m = lessonsSorted[pi];
-        if (!m) continue;
-        var chip = document.createElement('button');
-        chip.type = 'button';
-        chip.className = 'track-pill';
-        chip.setAttribute('data-lesson-id', m.id);
-        chip.textContent = (m.labelEn || m.id) + (m.labelPa ? (' — ' + m.labelPa) : '');
-        preview.appendChild(chip);
-      }
-      sectionEl.appendChild(preview);
-    }
-    sectionEl.appendChild(body);
-
-    if (Lessons.expandedTracks[trackId]) {
-      var limit = Lessons._learnTrackLimits[trackId] || LEARN_PREVIEW_COUNT;
-      Lessons._renderTrackLessonsInto(trackId, body, limit, lessonsSorted, track);
-    } else {
-      body.style.display = 'none';
-      body.innerHTML = '';
-    }
-
-    return sectionEl;
-  },
-
-  _bindLearnDelegationOnce: function() {
-    var learnTrackSectionsEl = document.getElementById('learn-track-sections');
-    if (!learnTrackSectionsEl || Lessons._learnDelegationBound) return;
-    Lessons._learnDelegationBound = true;
-
-    learnTrackSectionsEl.addEventListener('click', function(e) {
-      var t = e.target;
-      if (!t) return;
-
-      var actionEl = t.closest ? t.closest('[data-action]') : null;
-      if (actionEl) {
-        var action = actionEl.getAttribute('data-action');
-        var tid = actionEl.getAttribute('data-track-id');
-
-        if (action === 'toggle-favorite') {
-          var fid = actionEl.getAttribute('data-lesson-id');
-          if (fid) {
-            e.preventDefault();
-            try { e.stopPropagation(); } catch (err) {}
-            Lessons._toggleFavorite(fid);
-            Lessons.renderLearnSections();
-          }
-          return;
-        }
-
-        if (action === 'saved-toggle') {
-          e.preventDefault();
-          Lessons._savedShowAll = !Lessons._savedShowAll;
-          Lessons.renderLearnSections();
-          return;
-        }
-
-        if (action === 'toggle-track' && tid) {
-          if (Lessons.expandedTracks[tid]) Lessons.collapseTrack(tid);
-          else Lessons.expandTrack(tid);
-          return;
-        }
-        if (action === 'show-more' && tid) {
-          var cur = Lessons._learnTrackLimits[tid] || LEARN_PREVIEW_COUNT;
-          Lessons._learnTrackLimits[tid] = cur + LEARN_SHOW_MORE_INCREMENT;
-          Lessons._saveLearnUiStateNow();
-          Lessons.renderLearnSections();
-          return;
-        }
-      }
-
-      var cardEl = t.closest ? t.closest('[data-lesson-id]') : null;
-      if (cardEl) {
-        var lessonId = cardEl.getAttribute('data-lesson-id');
-        if (lessonId) Lessons.startLesson(lessonId);
-      }
-    });
-
-    learnTrackSectionsEl.addEventListener('keydown', function(e) {
-      if (!(e.key === 'Enter' || e.key === ' ')) return;
-      var t = e.target;
-
-      // If focused on the favorite control, toggle without opening the lesson
-      var actionEl = t && t.closest ? t.closest('[data-action]') : null;
-      if (actionEl && actionEl.getAttribute('data-action') === 'toggle-favorite') {
-        var fid = actionEl.getAttribute('data-lesson-id');
-        if (fid) {
-          e.preventDefault();
-          Lessons._toggleFavorite(fid);
-          Lessons.renderLearnSections();
-        }
-        return;
-      }
-
-      var cardEl = t && t.closest ? t.closest('[data-lesson-id]') : null;
-      if (!cardEl) return;
-      var lessonId = cardEl.getAttribute('data-lesson-id');
-      if (!lessonId) return;
-      e.preventDefault();
-      Lessons.startLesson(lessonId);
-    });
-
-    var continueSlot = document.getElementById('learn-continue-slot');
-    if (continueSlot && !continueSlot.dataset.bound) {
-      continueSlot.dataset.bound = '1';
-      continueSlot.addEventListener('click', function(e) {
-        var btn = e.target && e.target.closest ? e.target.closest('[data-action="learn-continue"]') : null;
-        if (!btn) return;
-        var lessonId = btn.getAttribute('data-lesson-id');
-        if (lessonId) Lessons.startLesson(lessonId);
-      });
-    }
-  },
-
-  renderLearnSections: function() {
-    Lessons._bindLearnDelegationOnce();
-    Lessons._bindLearnStickyDelegationOnce();
-
-    var continueSlot = document.getElementById('learn-continue-slot');
-    var filtersSlot = document.getElementById('learn-filters-slot');
-    var learnTrackSectionsEl = document.getElementById("learn-track-sections");
-    if (!learnTrackSectionsEl) return;
-    learnTrackSectionsEl.innerHTML = "";
-    if (continueSlot) continueSlot.innerHTML = '';
-    if (filtersSlot) filtersSlot.innerHTML = '';
-    
-    // Update progress summary
-    Lessons.updateProgressSummary();
-
-    if (continueSlot) Lessons._renderContinueCard(continueSlot);
-    if (filtersSlot) Lessons._renderLearnQuickFilters(filtersSlot);
-    
-    // Apply filters to get filtered lessons
-    var filtered = Lessons.applyFilters();
-    filtered = Lessons._applyQuickFilterToMetaList(filtered);
-    LearnQA.logLessonsPerTrack();
-    LearnQA.logFilterState(filtered);
-    
-    Lessons.renderActiveFilters();
-
-    // Display results count
-    Lessons._updateResultsCount(filtered.length);
-
-    // Update filters summary badge
-    Lessons._updateFiltersSummary();
-
-    // Map filtered ids (used to keep Saved/Recent consistent with filters)
-    var filteredById = {};
-    for (var fi = 0; fi < filtered.length; fi++) {
-      if (filtered[fi] && filtered[fi].id) filteredById[filtered[fi].id] = true;
-    }
-
-    // Saved then Recent (above track accordions)
-    Lessons._renderSavedSection(learnTrackSectionsEl, filteredById);
-    Lessons._renderRecentSection(learnTrackSectionsEl, filteredById);
-
-    if (filtered.length === 0) {
-      var noResults = document.createElement("div");
-      noResults.className = "no-results";
-      noResults.innerHTML = "No lessons match your filters." +
-        "<div class='suggestions'><button class='btn btn-secondary btn-small' id='btn-clear-filters-inline'>Clear Filters</button></div>";
-      learnTrackSectionsEl.appendChild(noResults);
-      var inlineClear = document.getElementById("btn-clear-filters-inline");
-      if (inlineClear) inlineClear.addEventListener("click", function() { Lessons.clearFilters(); });
-      return;
-    }
-    
-    // Group by track
-    // Keep known order, but never drop lessons that belong to additional tracks.
-    var order = ["T_WORDS", "T_ACTIONS", "T_DESCRIBE", "T_SENTENCE", "T_READING"];
-    var byTrack = {};
-    for (var i = 0; i < filtered.length; i++) {
-      var meta = filtered[i];
-      if (!byTrack[meta.trackId]) byTrack[meta.trackId] = [];
-      byTrack[meta.trackId].push(meta);
-    }
-
-    // Append any tracks present in results (defensive: prevents silent drops)
-    for (var tid in byTrack) {
-      if (byTrack.hasOwnProperty(tid) && order.indexOf(tid) === -1) {
-        order.push(tid);
-      }
-    }
-    
-    // Render each track section
-    for (var oi = 0; oi < order.length; oi++) {
-      var trackId = order[oi];
-      var lessons = Lessons.sortLessonsAdaptive(byTrack[trackId] || [], trackId);
-      if (!lessons || !lessons.length) continue;
-      
-      var track = TRACKS[trackId] || { name: trackId };
-      
-      var totalInTrack = Lessons.getLessonsByTrack(trackId).length;
-      var shownInTrack = lessons.length;
-
-      Lessons._learnLastByTrack[trackId] = lessons;
-
-      // Default collapsed (unless user already expanded)
-      if (typeof Lessons.expandedTracks[trackId] === 'undefined') {
-        Lessons.expandedTracks[trackId] = false;
-      }
-
-      var sectionEl = Lessons._renderTrackSectionShell(trackId, track, lessons, shownInTrack, totalInTrack);
-      learnTrackSectionsEl.appendChild(sectionEl);
-    }
-
-    // After dynamic render, re-sync local controls (idempotent)
-    try { if (typeof Lessons.syncFilterControls === 'function') Lessons.syncFilterControls(); } catch (e) {}
-    try { if (typeof Lessons.syncQAToggle === 'function') Lessons.syncQAToggle(); } catch (e) {}
-  },
-
-  // Get lessons by track ID
-  
-  // Apply current filters and return filtered lessons
-  applyFilters: function() {
-    var filtered = [];
-    for (var i = 0; i < LESSON_META.length; i++) {
-      var meta = LESSON_META[i];
-      
-      // Search filter
-      if (Lessons.activeFilters.search) {
-        var search = Lessons.activeFilters.search.toLowerCase();
-        var matchEn = meta.labelEn && meta.labelEn.toLowerCase().indexOf(search) !== -1;
-        var matchPa = meta.labelPa && meta.labelPa.toLowerCase().indexOf(search) !== -1;
-        if (!matchEn && !matchPa) continue;
-      }
-      
-      // Status filter
-      var status = Lessons.getLessonStatus(meta.id);
-      if (Lessons.activeFilters.status === 'not-started' && status !== 'Not started') continue;
-      if (Lessons.activeFilters.status === 'done' && status !== 'Done') continue;
-      if (Lessons.activeFilters.status === 'in-progress') {
-        // In progress means started but not done
-        var lpSess = (State.state.session && State.state.session.lessonProgress) ? State.state.session.lessonProgress : {};
-        var p = lpSess[meta.id];
-        var started = !!(p && (p.stepsCompleted > 0 || p.pointsEarned > 0));
-        var done = State.state.progress.lessonDone[meta.id];
-        if (!started || done) continue;
-      }
-      
-      // Difficulty filter
-      if (meta.difficulty && Lessons.activeFilters.difficulty.indexOf(meta.difficulty) === -1) continue;
-      
-      // Track filter
-      if (Lessons.activeFilters.track !== 'all' && meta.trackId !== Lessons.activeFilters.track) continue;
-      
-      filtered.push(meta);
-    }
-    return filtered;
-  },
-
-  // Adaptive sorting helpers
-  computeTrackStats: function(trackId, cache) {
-    var store = cache || {};
-    if (store[trackId]) return store[trackId];
-    var bucket = (State.state.progress && State.state.progress.trackXP && State.state.progress.trackXP[trackId]) ? State.state.progress.trackXP[trackId] : null;
-    var attempts = bucket && bucket.questionsAttempted ? bucket.questionsAttempted : 0;
-    var correct = bucket && bucket.questionsCorrect ? bucket.questionsCorrect : 0;
-    var pct = attempts ? Math.round((correct / attempts) * 100) : null;
-    var stats = { attempts: attempts, correct: correct, accuracyPct: pct };
-    store[trackId] = stats;
-    return stats;
-  },
-
-  getTrackTargetDifficulty: function(trackId, cache) {
-    var stats = Lessons.computeTrackStats(trackId, cache);
-    if (!stats || stats.attempts < 3 || stats.accuracyPct === null) return 2;
-    if (stats.accuracyPct >= 85) return 3;
-    if (stats.accuracyPct >= 60) return 2;
-    return 1;
-  },
-
-  compareLessonsAdaptive: function(a, b, targetDiff) {
-    var statusOrder = { "Not started": 0, "In progress": 1, "Done": 2 };
-    var sa = statusOrder[Lessons.getLessonStatus(a.id)] || 0;
-    var sb = statusOrder[Lessons.getLessonStatus(b.id)] || 0;
-    if (sa !== sb) return sa - sb;
-
-    var da = Math.abs(((a.difficulty || 2) - (targetDiff || 2)));
-    var db = Math.abs(((b.difficulty || 2) - (targetDiff || 2)));
-    if (da !== db) return da - db;
-
-    return (a.order || 0) - (b.order || 0) || (a.labelEn || a.id || '').localeCompare(b.labelEn || b.id || '');
-  },
-
-  sortLessonsAdaptive: function(list, trackId) {
-    var lessons = Array.isArray(list) ? list.slice() : [];
-    var target = Lessons.getTrackTargetDifficulty(trackId);
-    lessons.sort(function(a, b) { return Lessons.compareLessonsAdaptive(a, b, target); });
-    return lessons;
-  },
-
-  getAdaptiveSuggestion: function() {
-    var cache = {};
-    var best = null;
-    var bestScore = Infinity;
-
-    for (var i = 0; i < LESSON_META.length; i++) {
-      var meta = LESSON_META[i];
-      if (!meta) continue;
-
-      var status = Lessons.getLessonStatus(meta.id);
-      var statusPenalty = (status === 'In progress') ? 0 : (status === 'Not started' ? 0.5 : 3);
-      if (status === 'Done') statusPenalty = 3;
-
-      var target = Lessons.getTrackTargetDifficulty(meta.trackId, cache);
-      var diffPenalty = Math.abs(((meta.difficulty || 2) - (target || 2)));
-      var stats = Lessons.computeTrackStats(meta.trackId, cache);
-      var attemptPenalty = (!stats || !stats.attempts) ? 0.25 : 0;
-      var score = statusPenalty + diffPenalty + attemptPenalty;
-
-      if (score < bestScore) {
-        bestScore = score;
-        var trackMeta = (typeof TRACKS === 'object' && TRACKS[meta.trackId]) ? TRACKS[meta.trackId] : null;
-        var trackName = trackMeta ? (trackMeta.nameEn || trackMeta.name || meta.trackId) : meta.trackId;
-        best = {
-          meta: meta,
-          trackName: trackName,
-          stats: stats,
-          target: target
-        };
-      }
-    }
-
-    if (!best) return null;
-
-    var accText;
-    if (!best.stats || best.stats.accuracyPct === null) {
-      accText = "No attempts yet";
-    } else {
-      accText = best.stats.accuracyPct + "% accuracy in " + best.trackName;
-    }
-
-    var reason;
-    if (!best.stats || best.stats.accuracyPct === null) {
-      reason = "No data yet — starting at difficulty " + (best.target || 2) + ".";
-    } else {
-      reason = "Targeting difficulty " + (best.target || 2) + " based on " + best.stats.accuracyPct + "% accuracy.";
-    }
-
+  _bindLearnDelegationOnce: function() {},
+
+  _learnDeckElements: function() {
+    var deck = document.getElementById('learnSwipeDeck');
+    if (!deck) return null;
     return {
-      lessonId: best.meta.id,
-      labelEn: best.meta.labelEn,
-      labelPa: best.meta.labelPa,
-      trackName: best.trackName,
-      accuracyText: accText,
-      reason: reason
+      deck: deck,
+      progressHost: document.querySelector('#screen-learn .learn-hero-progress'),
+      viewport: document.getElementById('learnDeckViewport'),
+      track: document.getElementById('learnDeckTrack'),
+      dots: document.getElementById('learnDeckDots'),
+      progressText: document.getElementById('learnDeckProgressText'),
+      prevBtn: document.getElementById('btn-learn-prev-deck'),
+      nextBtn: document.getElementById('btn-learn-next-deck'),
+      startBtn: document.getElementById('btn-learn-deck-start'),
+      hint: document.getElementById('learnSwipeHint')
     };
   },
 
-  // ===== Feedback Overlay (lightweight, reusable) =====
-  ensureFeedbackOverlay: function() {
-    var overlay = document.getElementById('lesson-feedback-overlay');
-    if (overlay) return overlay;
+  _getLearnDeckCards: function() {
+    var track = document.getElementById('learnDeckTrack');
+    if (!track) return [];
+    return Array.prototype.slice.call(track.querySelectorAll('.deck-card'));
+  },
 
-    overlay = document.createElement('div');
-    overlay.id = 'lesson-feedback-overlay';
-    overlay.setAttribute('role', 'status');
-    overlay.setAttribute('aria-live', 'polite');
-    overlay.innerHTML = "<div class='overlay-card'><div class='overlay-status'></div><div class='overlay-body'></div><div class='overlay-actions'><button type='button' class='btn btn-small overlay-btn' id='overlay-close-btn'>Close</button></div></div>";
-    document.body.appendChild(overlay);
+  _learnWrappedDelta: function(index, current, total) {
+    var delta = index - current;
+    if (total <= 2) return delta;
+    var half = total / 2;
+    if (delta > half) delta -= total;
+    else if (delta < -half) delta += total;
+    return delta;
+  },
 
-    var closeBtn = overlay.querySelector('#overlay-close-btn');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        Lessons.hideFeedbackOverlay();
+  _learnClamp: function(value, min, max) {
+    return Math.max(min, Math.min(max, value));
+  },
+
+  _markLearnDeckHintSeen: function() {
+    var els = Lessons._learnDeckElements();
+    if (!els || !els.hint) return;
+    els.hint.style.display = 'none';
+    try { localStorage.setItem('learnDeckHintSeen_v1', '1'); } catch (e) {}
+  },
+
+  _applyLearnDeckLook: function(progress) {
+    var els = Lessons._learnDeckElements();
+    if (!els || !els.deck) return;
+    var state = Lessons.learnDeckState;
+    var cards = Lessons._getLearnDeckCards();
+    if (!cards.length) return;
+
+    if (state.reduceMotion) {
+      els.deck.classList.toggle('is-swipe-moving', false);
+      for (var r = 0; r < cards.length; r++) {
+        cards[r].style.transform = '';
+        cards[r].style.opacity = '';
+        cards[r].style.filter = '';
+        cards[r].style.zIndex = '';
+      }
+      return;
+    }
+
+    var p = (typeof progress === 'number' && isFinite(progress)) ? Lessons._learnClamp(progress, -1.2, 1.2) : 0;
+    els.deck.classList.toggle('is-swipe-moving', Math.abs(p) > 0.015);
+
+    for (var i = 0; i < cards.length; i++) {
+      var baseDelta = Lessons._learnWrappedDelta(i, state.activeIndex, cards.length);
+      var rel = baseDelta + p;
+      var absRel = Math.abs(rel);
+      var depthFactor = Lessons._learnClamp(absRel, 0, 2.2);
+      var isActiveCard = i === state.activeIndex;
+      var isPeekCard = !isActiveCard && baseDelta === state.peekDirection;
+      var slideX = 0;
+      var scale = 1;
+      var liftY = 0;
+      var rotateY = 0;
+      var opacity = 1;
+      var saturate = 1;
+      var brightness = 1;
+      var z = 620;
+
+      if (isActiveCard) {
+        slideX = Lessons._learnClamp(rel, -1.2, 1.2) * -18;
+        scale = 1 - (Math.min(depthFactor, 1.2) * 0.015);
+        liftY = Math.round(Math.min(depthFactor, 1.0) * 1);
+        rotateY = Lessons._learnClamp(rel * -3, -4, 4);
+      } else if (isPeekCard) {
+        slideX = Lessons._learnClamp(rel, -1.6, 1.6) * -34;
+        scale = 0.97 - (Math.min(depthFactor, 1.7) * 0.02);
+        liftY = 4 + Math.round(Math.min(depthFactor, 1.5) * 2);
+        rotateY = Lessons._learnClamp(rel * -3.4, -5, 5);
+        opacity = 0.74 - (Math.min(depthFactor, 2.0) * 0.08);
+        saturate = 0.9 - (Math.min(depthFactor, 1.8) * 0.06);
+        brightness = 0.98;
+        z = 360 - Math.round(depthFactor * 24);
+      } else {
+        slideX = Lessons._learnClamp(rel, -1.8, 1.8) * -12;
+        scale = 0.92 - (Math.min(depthFactor, 2.0) * 0.02);
+        liftY = 7 + Math.round(Math.min(depthFactor, 1.8) * 3);
+        rotateY = Lessons._learnClamp(rel * -2.4, -4, 4);
+        opacity = 0.34;
+        saturate = 0.74;
+        brightness = 0.94;
+        z = 150;
+      }
+      if (z < 90) z = 90;
+
+      cards[i].style.transform = 'translateX(' + slideX.toFixed(2) + '%) translateY(' + liftY + 'px) scale(' + scale.toFixed(3) + ') rotateY(' + rotateY.toFixed(2) + 'deg)';
+      cards[i].style.opacity = opacity.toFixed(3);
+      cards[i].style.filter = 'saturate(' + saturate.toFixed(3) + ') brightness(' + brightness.toFixed(3) + ')';
+      cards[i].style.zIndex = String(z);
+    }
+  },
+
+  _renderLearnDeckState: function() {
+    var els = Lessons._learnDeckElements();
+    if (!els || !els.track) return;
+    var state = Lessons.learnDeckState;
+    var cards = Lessons._getLearnDeckCards();
+    if (!cards.length) return;
+
+    if (state.activeIndex < 0) state.activeIndex = 0;
+    if (state.activeIndex >= cards.length) state.activeIndex = cards.length - 1;
+
+    var isAtStart = state.activeIndex === 0;
+    var isAtEnd = state.activeIndex === (cards.length - 1);
+    try {
+      els.deck.classList.toggle('is-at-start', isAtStart);
+      els.deck.classList.toggle('is-at-end', isAtEnd);
+      if (els.progressHost) {
+        els.progressHost.classList.toggle('is-at-start', isAtStart);
+        els.progressHost.classList.toggle('is-at-end', isAtEnd);
+      }
+    } catch (eDeckState) {}
+    if (els.prevBtn) els.prevBtn.classList.toggle('is-endpoint-fade', isAtStart);
+    if (els.nextBtn) els.nextBtn.classList.toggle('is-endpoint-fade', isAtEnd);
+
+    els.track.style.transform = 'translateX(-' + (state.activeIndex * 100) + '%)';
+
+    for (var i = 0; i < cards.length; i++) {
+      var isActive = i === state.activeIndex;
+      var delta = Lessons._learnWrappedDelta(i, state.activeIndex, cards.length);
+      cards[i].classList.toggle('is-active', isActive);
+      cards[i].classList.toggle('is-stack-prev', delta === -1);
+      cards[i].classList.toggle('is-stack-next', delta === 1);
+      cards[i].classList.toggle('is-stack-far', Math.abs(delta) >= 2);
+      cards[i].classList.toggle('is-stack-peek', !isActive && delta === state.peekDirection);
+      cards[i].classList.toggle('is-stack-muted', !isActive && delta !== state.peekDirection);
+      cards[i].setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      cards[i].setAttribute('tabindex', isActive ? '0' : '-1');
+    }
+
+    if (els.dots) {
+      var dotNodes = els.dots.querySelectorAll('.deck-dot');
+      for (var d = 0; d < dotNodes.length; d++) {
+        var dotIndex = parseInt(dotNodes[d].getAttribute('data-index'), 10);
+        var isDotActive = isFinite(dotIndex) ? (dotIndex === state.activeIndex) : (d === state.activeIndex);
+        dotNodes[d].classList.toggle('is-active', isDotActive);
+        dotNodes[d].setAttribute('aria-pressed', isDotActive ? 'true' : 'false');
+        if (isDotActive) dotNodes[d].setAttribute('aria-current', 'true');
+        else dotNodes[d].removeAttribute('aria-current');
+      }
+    }
+
+    var activeCard = cards[state.activeIndex];
+    var lessonId = activeCard ? activeCard.getAttribute('data-lesson-id') : null;
+    var isLocked = activeCard && activeCard.getAttribute('data-locked') === '1';
+    var kind = activeCard ? (activeCard.getAttribute('data-kind') || 'lesson') : 'lesson';
+    var isMoreCard = kind === 'more';
+    var status = activeCard ? (activeCard.getAttribute('data-status') || '') : '';
+    var isCurrentCard = !!(activeCard && activeCard.classList && activeCard.classList.contains('learn-deck-card--current'));
+
+    if (els.startBtn) {
+      var enEl = els.startBtn.querySelector('.btn-label-en');
+      var paEl = els.startBtn.querySelector('.btn-label-pa');
+      if (isMoreCard) {
+        if (enEl) enEl.textContent = 'More ahead';
+        if (paEl) paEl.textContent = 'ਹੋਰ ਆ ਰਿਹਾ ਹੈ';
+      } else if (isLocked) {
+        if (enEl) enEl.textContent = 'Locked';
+        if (paEl) paEl.textContent = 'ਲਾਕ';
+      } else if (status === 'Done') {
+        if (enEl) enEl.textContent = 'Review Lesson';
+        if (paEl) paEl.textContent = 'ਪਾਠ ਦੁਹਰਾਓ';
+      } else {
+        if (enEl) enEl.textContent = 'Start Lesson';
+        if (paEl) paEl.textContent = 'ਪਾਠ ਸ਼ੁਰੂ ਕਰੋ';
+      }
+      els.startBtn.disabled = !!isLocked || !lessonId || isMoreCard;
+      els.startBtn.setAttribute('aria-disabled', els.startBtn.disabled ? 'true' : 'false');
+      els.startBtn.classList.toggle('is-current-target', isCurrentCard && !els.startBtn.disabled);
+    }
+
+    if (els.progressText) {
+      var totalLessons = (state.ordered && state.ordered.length) ? state.ordered.length : cards.length;
+      var activeLessonNumber = 1;
+      if (activeCard) {
+        var activeIndexRaw = Number(activeCard.getAttribute('data-index'));
+        if (isFinite(activeIndexRaw)) activeLessonNumber = Math.max(1, Math.min(totalLessons, Math.floor(activeIndexRaw) + 1));
+      }
+      els.progressText.textContent = activeLessonNumber + '/' + totalLessons;
+    }
+
+    Lessons._syncLearnDeckCardHeights();
+
+    try {
+      els.deck.style.setProperty('--active-module-accent-rgb', '33, 125, 255');
+    } catch (e) {}
+
+    Lessons._applyLearnDeckLook(0);
+  },
+
+  _syncLearnDeckCardHeights: function() {
+    var cards = Lessons._getLearnDeckCards();
+    if (!cards || !cards.length) return;
+
+    var maxHeight = 0;
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].style.minHeight = '';
+    }
+
+    for (var j = 0; j < cards.length; j++) {
+      var h = 0;
+      try { h = cards[j].offsetHeight || 0; } catch (eHeight) { h = 0; }
+      if (h > maxHeight) maxHeight = h;
+    }
+
+    if (!(maxHeight > 0)) return;
+    for (var k = 0; k < cards.length; k++) {
+      cards[k].style.minHeight = maxHeight + 'px';
+    }
+  },
+
+  _goToLearnDeckIndex: function(index, interacted, directionHint) {
+    var cards = Lessons._getLearnDeckCards();
+    if (!cards.length) return;
+    var state = Lessons.learnDeckState;
+    var next = index;
+    while (next < 0) next += cards.length;
+    next = next % cards.length;
+
+    var direction = 0;
+    if (typeof directionHint === 'number' && directionHint !== 0) {
+      direction = directionHint > 0 ? 1 : -1;
+      state.peekDirection = direction;
+    } else {
+      var toward = Lessons._learnWrappedDelta(next, state.activeIndex, cards.length);
+      if (toward !== 0) {
+        direction = toward > 0 ? 1 : -1;
+        state.peekDirection = direction;
+      }
+    }
+
+    try {
+      var learnDeck = document.getElementById('learnSwipeDeck');
+      var learnProgressHost = document.querySelector('#screen-learn .learn-hero-progress');
+      var host = learnProgressHost || learnDeck;
+      if (host && direction) {
+        if (typeof nudgeCounterIndicator === 'function') {
+          nudgeCounterIndicator(host, direction);
+        } else {
+          var cls = direction > 0 ? 'indicator-shift-next' : 'indicator-shift-prev';
+          host.classList.remove('indicator-shift-next', 'indicator-shift-prev');
+          void host.offsetWidth;
+          host.classList.add(cls);
+          window.setTimeout(function() {
+            try { host.classList.remove(cls); } catch (eLearnNudgeRemove) {}
+          }, 220);
+        }
+      }
+    } catch (eLearnNudge) {}
+
+    state.activeIndex = next;
+    Lessons._renderLearnDeckState();
+    if (interacted) Lessons._markLearnDeckHintSeen();
+  },
+
+  _goLearnDeckNext: function(interacted) {
+    Lessons._goToLearnDeckIndex(Lessons.learnDeckState.activeIndex + 1, interacted, 1);
+  },
+
+  _isLearnDeckControlTarget: function(evt) {
+    var target = evt && evt.target;
+    if (!target || !target.closest) return false;
+    return !!target.closest('#btn-learn-prev-deck, #btn-learn-next-deck, #btn-learn-deck-start, .deck-dot');
+  },
+
+  _wireLearnDeckOnce: function() {
+    var els = Lessons._learnDeckElements();
+    if (!els || !els.deck || !els.viewport || !els.track) return;
+    var state = Lessons.learnDeckState;
+    if (state.isBound) return;
+
+    try {
+      state.reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    } catch (e) {
+      state.reduceMotion = false;
+    }
+    if (state.reduceMotion) {
+      try { els.track.style.transition = 'none'; } catch (e2) {}
+    }
+
+    if (els.dots) {
+      UI.bindOnce(els.dots, 'learnDeckDotsBound', 'click', function(evt) {
+        var t = evt && evt.target;
+        var dot = t && t.closest ? t.closest('.deck-dot[data-index]') : null;
+        if (!dot) return;
+        var idx = parseInt(dot.getAttribute('data-index'), 10);
+        if (!isFinite(idx)) return;
+        Lessons._goToLearnDeckIndex(idx, true);
       });
     }
 
-    return overlay;
+    UI.bindOnce(els.track, 'learnDeckTrackClickBound', 'click', function(evt) {
+      var t = evt && evt.target;
+      var card = t && t.closest ? t.closest('.deck-card[data-index]') : null;
+      if (!card) return;
+      if (Date.now() < state.suppressCardClickUntil) return;
+      var idx = parseInt(card.getAttribute('data-index'), 10);
+      if (!isFinite(idx)) return;
+      Lessons._goToLearnDeckIndex(idx, true);
+    });
+
+    UI.bindOnce(els.nextBtn, 'learnDeckNextBound', 'click', function() {
+      Lessons._goLearnDeckNext(true);
+    });
+
+    UI.bindOnce(els.prevBtn, 'learnDeckPrevBound', 'click', function() {
+      Lessons._goToLearnDeckIndex(state.activeIndex - 1, true, -1);
+    });
+
+    UI.bindOnce(els.startBtn, 'learnDeckStartBound', 'click', function() {
+      var cards = Lessons._getLearnDeckCards();
+      var active = cards[state.activeIndex];
+      if (!active) return;
+      var locked = active.getAttribute('data-locked') === '1';
+      if (locked) return;
+      var lessonId = active.getAttribute('data-lesson-id');
+      if (lessonId) Lessons.startLesson(lessonId);
+    });
+
+    UI.bindOnce(els.deck, 'learnDeckKeyBound', 'keydown', function(evt) {
+      var key = evt && evt.key;
+      if (key === 'ArrowRight') {
+        evt.preventDefault();
+        Lessons._goLearnDeckNext(true);
+      } else if (key === 'ArrowLeft') {
+        evt.preventDefault();
+        Lessons._goToLearnDeckIndex(state.activeIndex - 1, true, -1);
+      }
+    });
+
+    function stopTouchDrag(commit, fallbackDeltaX) {
+      if (state.touchStartX == null) return;
+      var deltaX = (typeof fallbackDeltaX === 'number' && isFinite(fallbackDeltaX))
+        ? fallbackDeltaX
+        : ((state.touchCurrentX == null || state.touchStartX == null) ? 0 : (state.touchCurrentX - state.touchStartX));
+      var threshold = (typeof getDeckSwipeThresholdPx === 'function')
+        ? getDeckSwipeThresholdPx(els.viewport)
+        : Math.max(36, Math.round(((els.viewport && els.viewport.clientWidth) ? els.viewport.clientWidth : 0) * 0.18));
+
+      state.touchStartX = null;
+      state.touchStartY = null;
+      state.touchCurrentX = null;
+
+      if (!state.touchDragging) return;
+      state.touchDragging = false;
+
+      if (!state.reduceMotion) {
+        try { els.track.style.transition = (typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.swipeSnapTransition) ? BOLO_DECK_UX.swipeSnapTransition : 'transform 200ms cubic-bezier(0.22, 1, 0.36, 1)'; } catch (eTrackTransition) {}
+      }
+
+      if (!commit) {
+        Lessons._renderLearnDeckState();
+        return;
+      }
+
+      if (Math.abs(deltaX) >= threshold) {
+        state.suppressCardClickUntil = Date.now() + ((typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.suppressClickMs) ? BOLO_DECK_UX.suppressClickMs : 260);
+        if (deltaX > 0) Lessons._goLearnDeckNext(true);
+        else Lessons._goToLearnDeckIndex(state.activeIndex - 1, true, -1);
+        return;
+      }
+
+      Lessons._renderLearnDeckState();
+    }
+
+    UI.bindOnce(els.viewport, 'learnDeckTouchStartBound', 'touchstart', function(evt) {
+      if (Lessons._isLearnDeckControlTarget(evt)) {
+        state.touchStartX = null;
+        state.touchStartY = null;
+        state.touchCurrentX = null;
+        state.touchDragging = false;
+        state.touchMoved = false;
+        return;
+      }
+      if (!evt.touches || !evt.touches.length) return;
+      state.touchStartX = evt.touches[0].clientX;
+      state.touchStartY = evt.touches[0].clientY;
+      state.touchCurrentX = state.touchStartX;
+      state.touchDragging = true;
+      state.touchMoved = false;
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckTouchMoveBound', 'touchmove', function(evt) {
+      if (!state.touchDragging || state.touchStartX == null || !evt.touches || !evt.touches.length) return;
+      var touch = evt.touches[0];
+      state.touchCurrentX = touch.clientX;
+      var currentY = touch.clientY;
+      var deltaX = state.touchCurrentX - state.touchStartX;
+      var deltaY = (state.touchStartY == null) ? 0 : (currentY - state.touchStartY);
+
+      if (!state.touchMoved) {
+        var horizontalIntent = (typeof hasDeckHorizontalIntent === 'function')
+          ? hasDeckHorizontalIntent(deltaX, deltaY)
+          : (Math.abs(deltaX) > 8 && Math.abs(deltaX) > Math.abs(deltaY) * 1.1);
+        if (!horizontalIntent) return;
+        state.touchMoved = true;
+        if (!state.reduceMotion) {
+          try { els.track.style.transition = 'none'; } catch (eTouchMoveTransition) {}
+        }
+      }
+
+      var width = els.viewport && els.viewport.clientWidth ? els.viewport.clientWidth : 0;
+      var basePx = state.activeIndex * width;
+      var targetPx = -basePx + deltaX;
+      els.track.style.transform = 'translateX(' + targetPx + 'px)';
+      if (width > 0) {
+        if (deltaX !== 0) state.peekDirection = deltaX > 0 ? 1 : -1;
+        Lessons._applyLearnDeckLook(deltaX / width);
+      }
+      try { evt.preventDefault(); } catch (eTouchPrevent) {}
+    }, { passive: false });
+
+    UI.bindOnce(els.viewport, 'learnDeckTouchEndBound', 'touchend', function(evt) {
+      if (state.touchStartX == null) return;
+      var touch = (evt.changedTouches && evt.changedTouches[0]) ? evt.changedTouches[0] : null;
+      if (!touch) {
+        stopTouchDrag(false, 0);
+        return;
+      }
+      var deltaX = touch.clientX - state.touchStartX;
+      if (state.touchMoved) {
+        stopTouchDrag(true, deltaX);
+        return;
+      }
+
+      state.touchDragging = false;
+      state.touchStartX = null;
+      state.touchStartY = null;
+      state.touchCurrentX = null;
+      if (Math.abs(deltaX) < 36) return;
+      if (deltaX > 0) Lessons._goLearnDeckNext(true);
+      else Lessons._goToLearnDeckIndex(state.activeIndex - 1, true, -1);
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckTouchCancelBound', 'touchcancel', function() {
+      stopTouchDrag(false, 0);
+    });
+
+    function stopPointerDrag(commit) {
+      if (!state.pointerDragging) return;
+      var width = els.viewport && els.viewport.clientWidth ? els.viewport.clientWidth : 0;
+      var deltaX = (state.pointerCurrentX == null || state.pointerStartX == null) ? 0 : (state.pointerCurrentX - state.pointerStartX);
+      var threshold = (typeof getDeckSwipeThresholdPx === 'function')
+        ? getDeckSwipeThresholdPx(els.viewport)
+        : Math.max(36, Math.round(width * 0.18));
+
+      state.pointerDragging = false;
+      state.pointerStartX = null;
+      state.pointerCurrentX = null;
+      state.pointerId = null;
+
+      if (!state.reduceMotion) {
+        try { els.track.style.transition = (typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.pointerSnapTransition) ? BOLO_DECK_UX.pointerSnapTransition : 'transform 200ms cubic-bezier(0.22, 1, 0.36, 1)'; } catch (eTrackTransition2) {}
+      }
+
+      if (!commit) {
+        Lessons._renderLearnDeckState();
+        return;
+      }
+
+      if (Math.abs(deltaX) >= threshold) {
+        state.suppressCardClickUntil = Date.now() + ((typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.suppressClickMs) ? BOLO_DECK_UX.suppressClickMs : 260);
+        if (deltaX > 0) Lessons._goLearnDeckNext(true);
+        else Lessons._goToLearnDeckIndex(state.activeIndex - 1, true, -1);
+        return;
+      }
+
+      Lessons._renderLearnDeckState();
+    }
+
+    UI.bindOnce(els.viewport, 'learnDeckPointerDownBound', 'pointerdown', function(evt) {
+      if (!evt || evt.pointerType === 'touch') return;
+      if (evt.button != null && evt.button !== 0) return;
+      if (Lessons._isLearnDeckControlTarget(evt)) return;
+
+      state.pointerId = evt.pointerId;
+      state.pointerStartX = evt.clientX;
+      state.pointerCurrentX = evt.clientX;
+      state.pointerDragging = true;
+      state.pointerMoved = false;
+
+      try { els.viewport.setPointerCapture(state.pointerId); } catch (eCapture) {}
+      if (!state.reduceMotion) {
+        try { els.track.style.transition = 'none'; } catch (eTrackTransition3) {}
+      }
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckPointerMoveBound', 'pointermove', function(evt) {
+      if (!state.pointerDragging) return;
+      if (state.pointerId != null && evt.pointerId !== state.pointerId) return;
+
+      state.pointerCurrentX = evt.clientX;
+      var deltaX = state.pointerCurrentX - state.pointerStartX;
+      if (Math.abs(deltaX) > 3) state.pointerMoved = true;
+
+      if (state.pointerMoved) {
+        var width = els.viewport && els.viewport.clientWidth ? els.viewport.clientWidth : 0;
+        var basePx = state.activeIndex * width;
+        var targetPx = -basePx + deltaX;
+        els.track.style.transform = 'translateX(' + targetPx + 'px)';
+        if (width > 0) {
+          if (deltaX !== 0) state.peekDirection = deltaX > 0 ? 1 : -1;
+          Lessons._applyLearnDeckLook(deltaX / width);
+        }
+        try { evt.preventDefault(); } catch (ePrevent) {}
+      }
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckPointerUpBound', 'pointerup', function(evt) {
+      if (!state.pointerDragging) return;
+      if (state.pointerId != null && evt.pointerId !== state.pointerId) return;
+      stopPointerDrag(true);
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckPointerCancelBound', 'pointercancel', function(evt) {
+      if (!state.pointerDragging) return;
+      if (state.pointerId != null && evt.pointerId !== state.pointerId) return;
+      stopPointerDrag(false);
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckPointerLeaveBound', 'pointerleave', function() {
+      if (!state.pointerDragging) return;
+      stopPointerDrag(true);
+    });
+
+    UI.bindOnce(els.viewport, 'learnDeckWheelBound', 'wheel', function(evt) {
+      if (!evt || Lessons._isLearnDeckControlTarget(evt)) return;
+
+      var dx = (typeof evt.deltaX === 'number' && isFinite(evt.deltaX)) ? evt.deltaX : 0;
+      var dy = (typeof evt.deltaY === 'number' && isFinite(evt.deltaY)) ? evt.deltaY : 0;
+      if (Math.abs(dx) < 1 && evt.shiftKey) dx = dy;
+
+      var absX = Math.abs(dx);
+      var absY = Math.abs(dy);
+      var horizontalIntent = absX > 6 && absX >= (absY * 0.85);
+      if (!horizontalIntent) return;
+
+      var now = Date.now();
+      if (now - state.wheelLastTs > ((typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.wheelResetMs) ? BOLO_DECK_UX.wheelResetMs : 280)) state.wheelAccumX = 0;
+      state.wheelLastTs = now;
+      state.wheelAccumX += dx;
+
+      try { evt.preventDefault(); } catch (eWheelPrevent) {}
+
+      if (Math.abs(state.wheelAccumX) < ((typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.wheelTriggerPx) ? BOLO_DECK_UX.wheelTriggerPx : 54)) return;
+      state.suppressCardClickUntil = Date.now() + ((typeof BOLO_DECK_UX !== 'undefined' && BOLO_DECK_UX.suppressWheelClickMs) ? BOLO_DECK_UX.suppressWheelClickMs : 180);
+      if (state.wheelAccumX > 0) Lessons._goLearnDeckNext(true);
+      else Lessons._goToLearnDeckIndex(state.activeIndex - 1, true, -1);
+      state.wheelAccumX = 0;
+    });
+
+    if (els.hint) {
+      var seenHint = false;
+      try { seenHint = localStorage.getItem('learnDeckHintSeen_v1') === '1'; } catch (eHint) { seenHint = false; }
+      if (seenHint || state.reduceMotion) els.hint.style.display = 'none';
+    }
+
+    state.isBound = true;
   },
 
-  showFeedbackOverlay: function(payload) {
-    if (!payload || !payload.statusEn) return;
-    var overlay = Lessons.ensureFeedbackOverlay();
-    if (!overlay) return;
+  _getOnePathLessonOrder: function() {
+    var out = [];
+    var seenId = {};
+    var seenTopic = {};
+    var trackRank = {
+      T_WORDS: 1,
+      T_ACTIONS: 2,
+      T_DESCRIBE: 3,
+      T_SENTENCE: 4,
+      T_READING: 5
+    };
 
-    var card = overlay.querySelector('.overlay-card');
-    var statusEl = overlay.querySelector('.overlay-status');
-    var bodyEl = overlay.querySelector('.overlay-body');
-    var closeBtn = overlay.querySelector('#overlay-close-btn');
+    for (var i = 0; i < LESSON_META.length; i++) {
+      var meta = LESSON_META[i];
+      if (!meta || !meta.id) continue;
+      var canonicalId = Lessons.resolveCanonicalLessonId(meta.id);
+      if (!Lessons.isLearnVisibleLessonId(canonicalId)) continue;
+      if (seenId[canonicalId]) continue;
 
-    var parts = [];
-    if (payload.hint && (payload.hint.en || payload.hint.pa)) {
-      parts.push({ label: 'Hint', en: payload.hint.en, pa: payload.hint.pa });
-    }
-    if (payload.explanation && (payload.explanation.en || payload.explanation.pa)) {
-      parts.push({ label: 'Why', en: payload.explanation.en, pa: payload.explanation.pa });
+      var topicKey = Lessons.normalizeTopicKey(meta.labelEn || canonicalId);
+      if (topicKey && seenTopic[topicKey]) continue;
+
+      var item = meta;
+      if (canonicalId !== meta.id) {
+        item = {
+          id: canonicalId,
+          labelEn: meta.labelEn,
+          labelPa: meta.labelPa,
+          trackId: meta.trackId,
+          difficulty: meta.difficulty,
+          order: meta.order
+        };
+      }
+
+      seenId[canonicalId] = true;
+      if (topicKey) seenTopic[topicKey] = true;
+      out.push(item);
     }
 
-    // Worked example (English only for brevity)
-    if (payload.worked && (payload.worked.en || payload.worked.pa)) {
-      parts.push({ label: 'Example', en: payload.worked.en, pa: payload.worked.pa });
+    out.sort(function(a, b) {
+      var aHasOrder = typeof a.order === 'number';
+      var bHasOrder = typeof b.order === 'number';
+      if (aHasOrder && bHasOrder && a.order !== b.order) return a.order - b.order;
+      if (aHasOrder !== bHasOrder) return aHasOrder ? -1 : 1;
+
+      var aTrack = trackRank[a.trackId] || 99;
+      var bTrack = trackRank[b.trackId] || 99;
+      if (aTrack !== bTrack) return aTrack - bTrack;
+
+      var aDiff = (typeof a.difficulty === 'number') ? a.difficulty : 99;
+      var bDiff = (typeof b.difficulty === 'number') ? b.difficulty : 99;
+      if (aDiff !== bDiff) return aDiff - bDiff;
+
+      return (a.labelEn || a.id || '').localeCompare(b.labelEn || b.id || '');
+    });
+
+    return out;
+  },
+
+  _getOnePathUnlockIndex: function(ordered) {
+    var list = Array.isArray(ordered) ? ordered : [];
+    if (!list.length) return 0;
+
+    for (var i = 0; i < list.length; i++) {
+      var item = list[i] || {};
+      var lessonId = item.id;
+      if (Lessons.getLessonStatus(lessonId) !== 'Done') {
+        return i;
+      }
     }
 
-    statusEl.textContent = payload.statusEn;
-    var punjabiOn = Lessons.shouldShowPunjabi();
-    if (payload.statusPa && punjabiOn) {
-      var paLine = document.createElement('div');
-      paLine.className = 'overlay-status-pa';
-      paLine.textContent = payload.statusPa;
-      statusEl.appendChild(paLine);
-    }
+    return list.length - 1;
+  },
+
+  _renderOnePathLearnView: function() {
+    var els = Lessons._learnDeckElements();
+    if (!els || !els.track) return;
+
+    var ordered = Lessons._getOnePathLessonOrder();
+    var unlockIndex = Lessons._getOnePathUnlockIndex(ordered);
+    Lessons.learnDeckState.ordered = ordered;
+    Lessons.learnDeckState.unlockIndex = unlockIndex;
+
+    var futurePreviewCap = 1;
+    var maxLessonCardIndex = Math.min(ordered.length - 1, unlockIndex + futurePreviewCap);
+    var hasMoreBeyondPreview = maxLessonCardIndex < (ordered.length - 1);
 
     var html = '';
-    for (var i = 0; i < parts.length; i++) {
-      var p = parts[i];
-      html += "<div class='overlay-block'><div class='overlay-block-label'>" + Lessons.escapeHtml(p.label) + "</div>";
-      if (p.en) html += "<div class='overlay-line overlay-en'>" + Lessons.escapeHtml(p.en) + "</div>";
-      if (punjabiOn && p.pa) html += "<div class='overlay-line overlay-pa' lang='pa'>" + Lessons.escapeHtml(p.pa) + "</div>";
-      html += "</div>";
-    }
-    if (!html) {
-      html = "<div class='overlay-line overlay-en'>Keep going!</div>";
-    }
-    bodyEl.innerHTML = html;
+    for (var i = 0; i <= maxLessonCardIndex; i++) {
+      var meta = ordered[i];
+      var status = Lessons.getLessonStatus(meta.id);
+      var isUnlocked = i <= unlockIndex;
+      var isLocked = !isUnlocked;
+      var isCurrent = (i === unlockIndex) && !isLocked && status !== 'Done';
+      var isCompleted = status === 'Done';
+      var titleEn = (meta.labelEn || meta.id || 'Lesson');
+      var titlePa = (meta.labelPa || 'ਪਾਠ');
+      var statusText = isLocked ? 'Locked' : status;
+      var statusTextPa = isLocked ? 'ਲਾਕ' : (status === 'Done' ? 'ਮੁਕੰਮਲ' : (status === 'In progress' ? 'ਜਾਰੀ' : 'ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤਾ'));
+      var badgeText = isLocked ? 'Locked' : (isCurrent ? 'Now' : (isCompleted ? 'Done' : 'Now'));
+      var badgeTextPa = isLocked ? 'ਲਾਕ' : (isCurrent ? 'ਹੁਣ' : (isCompleted ? 'ਮੁਕੰਮਲ' : 'ਹੁਣ'));
 
-    if (card) {
-      card.classList.toggle('correct', !!payload.correct);
-      card.classList.toggle('wrong', !payload.correct);
+      var variantClass = 'learn-deck-card--open';
+      if (isLocked) variantClass = 'learn-deck-card--locked';
+      else if (isCurrent) variantClass = 'learn-deck-card--current';
+      else if (isCompleted) variantClass = 'learn-deck-card--completed';
+
+      html += '<article class="deck-card module-card deck-card--learn ' + variantClass + (i === Lessons.learnDeckState.activeIndex ? ' is-active' : '') + (isLocked ? ' is-locked' : '') + '"';
+      html += ' data-kind="lesson" data-status="' + Lessons.escapeHtml(status) + '" data-index="' + i + '" data-lesson-id="' + Lessons.escapeHtml(meta.id) + '" data-locked="' + (isLocked ? '1' : '0') + '"';
+      html += ' aria-label="' + Lessons.escapeHtml((i + 1) + '. ' + titleEn + ' (' + statusText + ')') + '">';
+      html += '  <div class="deck-card-kicker">Lesson ' + (i + 1) + '</div>';
+      html += '  <div class="deck-card-title">' + Lessons.escapeHtml(titleEn) + '</div>';
+      html += '  <div class="deck-card-subtitle" lang="pa">' + Lessons.escapeHtml(titlePa) + '</div>';
+      html += '  <div class="learn-deck-badges">';
+      html += '    <span class="learn-deck-badge">' + Lessons.escapeHtml(badgeText) + '</span>';
+      html += '    <span class="learn-deck-badge learn-deck-badge-pa" lang="pa">' + Lessons.escapeHtml(badgeTextPa) + '</span>';
+      html += '  </div>';
+      html += '  <div class="learn-deck-meta">';
+      html += '    <span class="learn-deck-status">' + Lessons.escapeHtml(statusText) + '</span>';
+      html += '    <span class="learn-deck-status-pa" lang="pa">' + Lessons.escapeHtml(statusTextPa) + '</span>';
+      html += '  </div>';
+      if (isLocked) {
+        html += '  <div class="learn-deck-lock-reason">Complete previous lesson to unlock</div>';
+        html += '  <div class="learn-deck-lock-reason-pa" lang="pa">ਪਿਛਲਾ ਪਾਠ ਮੁਕੰਮਲ ਕਰੋ ਤਾਂ ਖੁੱਲੇਗਾ</div>';
+      }
+      html += '</article>';
     }
 
-    if (closeBtn) {
-      closeBtn.textContent = payload.correct ? 'Great!' : (payload.canContinue ? 'Next' : 'Try again');
+    if (hasMoreBeyondPreview) {
+      var moreIndex = maxLessonCardIndex + 1;
+      var remaining = (ordered.length - 1) - maxLessonCardIndex;
+      html += '<article class="deck-card module-card deck-card--learn learn-deck-card--more" data-kind="more" data-status="More" data-index="' + moreIndex + '" data-locked="1" aria-label="More lessons ahead">';
+      html += '  <div class="deck-card-kicker">More</div>';
+      html += '  <div class="deck-card-title">More Lessons Ahead</div>';
+      html += '  <div class="deck-card-subtitle" lang="pa">ਹੋਰ ਪਾਠ ਅੱਗੇ ਹਨ</div>';
+      html += '  <div class="learn-deck-badges">';
+      html += '    <span class="learn-deck-badge">More</span>';
+      html += '    <span class="learn-deck-badge learn-deck-badge-pa" lang="pa">ਹੋਰ</span>';
+      html += '  </div>';
+      html += '  <div class="learn-deck-meta">';
+      html += '    <span class="learn-deck-status">+' + remaining + ' lessons ahead</span>';
+      html += '    <span class="learn-deck-status-pa" lang="pa">ਮੌਜੂਦਾ ਪਾਠ ਮੁਕੰਮਲ ਕਰੋ</span>';
+      html += '  </div>';
+      html += '</article>';
     }
 
-    overlay.classList.add('active');
+    els.track.innerHTML = html;
+
+    if (els.dots) {
+      var dotsHtml = '';
+      var totalCards = maxLessonCardIndex + 1 + (hasMoreBeyondPreview ? 1 : 0);
+      var maxVisibleDots = 8;
+      var visibleDots = Math.min(totalCards, maxVisibleDots);
+      var dotStart = 0;
+      if (totalCards > visibleDots) {
+        dotStart = Lessons.learnDeckState.activeIndex - Math.floor(visibleDots / 2);
+        if (dotStart < 0) dotStart = 0;
+        if (dotStart > (totalCards - visibleDots)) dotStart = totalCards - visibleDots;
+      }
+      for (var d = 0; d < visibleDots; d++) {
+        var actualIndex = dotStart + d;
+        dotsHtml += '<button type="button" class="deck-dot" data-index="' + actualIndex + '" aria-label="Go to lesson ' + (actualIndex + 1) + '"></button>';
+      }
+      els.dots.innerHTML = dotsHtml;
+    }
+
+    var renderedCards = maxLessonCardIndex + 1 + (hasMoreBeyondPreview ? 1 : 0);
+    if (Lessons.learnDeckState.activeIndex >= renderedCards) Lessons.learnDeckState.activeIndex = Math.max(0, renderedCards - 1);
+    Lessons._wireLearnDeckOnce();
+    Lessons._renderLearnDeckState();
   },
 
-  hideFeedbackOverlay: function() {
-    var overlay = document.getElementById('lesson-feedback-overlay');
-    if (overlay) overlay.classList.remove('active');
+  renderLearnSections: function() {
+    Lessons._renderOnePathLearnView();
   },
-  
-  // Expand a track to show all lessons
-  expandTrack: function(trackId) {
-    Lessons.expandedTracks[trackId] = true;
-    if (!Lessons._learnTrackLimits[trackId]) Lessons._learnTrackLimits[trackId] = LEARN_PREVIEW_COUNT;
-    Lessons._saveLearnUiStateNow();
-    Lessons.renderLearnSections();
-  },
-  collapseTrack: function(trackId) {
-    Lessons.expandedTracks[trackId] = false;
-    delete Lessons._learnTrackLimits[trackId];
-    Lessons._saveLearnUiStateNow();
-    Lessons.renderLearnSections();
-  },
-  
+
   // Update progress summary cards
   updateProgressSummary: function() {
     var totalEl = document.getElementById("total-lessons");
@@ -2614,199 +2653,25 @@ var Lessons = {
     
     if (!totalEl) return;
 
-    if (State && State.ensureTracksInitialized) State.ensureTracksInitialized();
-    
-    var total = LESSON_META.length;
+    var orderedForSummary = Lessons._getOnePathLessonOrder();
+    var total = orderedForSummary.length;
     var completed = 0;
     var inProgress = 0;
-
-    var lpSess = (State.state.session && State.state.session.lessonProgress) ? State.state.session.lessonProgress : {};
-    
-    for (var i = 0; i < LESSON_META.length; i++) {
-      var meta = LESSON_META[i];
-      if (State.state.progress.lessonDone[meta.id]) {
-        completed++;
-      } else {
-        var p = lpSess[meta.id];
-        var started = !!(p && (p.stepsCompleted > 0 || p.pointsEarned > 0));
-        if (started) inProgress++;
-      }
-    }
     
     totalEl.textContent = total;
     completedEl.textContent = completed;
     progressEl.textContent = inProgress;
-    // Prefer computed XP from tracks; fallback to stored totalXP
-    var trackXP = State.state.progress.trackXP || {};
-    var xpSum = 0;
-    for (var k in trackXP) {
-      if (trackXP.hasOwnProperty(k) && typeof trackXP[k].xp === 'number') {
-        xpSum += trackXP[k].xp;
-      }
-    }
-    if (xpEl) xpEl.textContent = xpSum || State.state.progress.totalXP || 0;
-
-    // Adaptive highlights
-    var suggestion = Lessons.getAdaptiveSuggestion();
-    var nextEl = document.getElementById('learn-next-lesson');
-    var reasonEl = document.getElementById('learn-next-reason');
-    var accEl = document.getElementById('learn-accuracy');
-    var streakEl = document.getElementById('learn-streak');
-
-    if (nextEl) {
-      nextEl.textContent = suggestion ? (suggestion.labelEn + ' (' + suggestion.trackName + ')') : 'Pick any lesson to begin';
-    }
-    if (reasonEl) {
-      reasonEl.textContent = suggestion ? suggestion.reason : 'No data yet — explore a track to personalize.';
-    }
-    if (accEl) {
-      accEl.textContent = suggestion && suggestion.accuracyText ? suggestion.accuracyText : 'No attempts yet';
-    }
-    if (streakEl) {
-      var dq = (typeof State !== 'undefined' && State.getDailyQuestProfileContainer) ? State.getDailyQuestProfileContainer() : null;
-      var streak = dq && dq.streakCount ? dq.streakCount : 0;
-      Lessons._updateStreakBadge(streak);
-    }
-  },
-
-  // Active filters chips rendering
-  renderActiveFilters: function() {
-    var container = document.getElementById("active-filters");
-    if (!container) return;
-    container.innerHTML = "";
-
-    var defaults = { search: '', status: 'all', difficulty: [1,2,3], track: 'all' };
-    var f = Lessons.activeFilters;
-    var any = false;
-
-    function addChip(label, onRemove) {
-      any = true;
-      var chip = document.createElement("span");
-      chip.className = "filter-chip";
-      chip.innerHTML = label + " <span class='chip-x' aria-label='Remove' role='button'>✕</span>";
-      chip.querySelector('.chip-x').addEventListener('click', onRemove);
-      container.appendChild(chip);
-    }
-
-    if (f.search && f.search.trim()) {
-      addChip("Search: " + f.search.trim(), function(){ f.search=''; Lessons.syncFilterControls(); Lessons.saveFiltersToState(); Lessons.renderLearnSections(); });
-    }
-    if (f.status !== 'all') {
-      var statusLabel = f.status === 'done' ? 'Completed' : (f.status === 'not-started' ? 'Not Started' : 'In Progress');
-      addChip("Status: " + statusLabel, function(){ f.status='all'; Lessons.syncFilterControls(); Lessons.saveFiltersToState(); Lessons.renderLearnSections(); });
-    }
-    var diffStr = f.difficulty.join('');
-    if (diffStr !== '123') {
-      addChip("Difficulty: " + f.difficulty.map(function(d){ return '★'.repeat(d); }).join(' '), function(){ f.difficulty=[1,2,3]; Lessons.syncFilterControls(); Lessons.saveFiltersToState(); Lessons.renderLearnSections(); });
-    }
-    if (f.track !== 'all') {
-      var tName = (TRACKS[f.track] && TRACKS[f.track].name) || f.track;
-      addChip("Track: " + tName, function(){ f.track='all'; Lessons.syncFilterControls(); Lessons.saveFiltersToState(); Lessons.renderLearnSections(); });
-    }
-
-    // Toggle clear button visibility
-    var clearBtn = document.getElementById('btn-clear-filters');
-    if (clearBtn) clearBtn.style.display = any ? 'inline-block' : 'none';
-  },
-
-  clearFilters: function() {
-    Lessons.activeFilters = { search: '', status: 'all', difficulty: [1,2,3], track: 'all' };
-    Lessons.expandedTracks = {};
-    Lessons._learnTrackLimits = {};
-    Lessons._saveLearnUiStateNow();
-    Lessons.syncFilterControls();
-    Lessons.saveFiltersToState();
-    Lessons.renderLearnSections();
-  },
-
-  syncFilterControls: function() {
-    var f = Lessons.activeFilters;
-    var searchInput = document.getElementById('lesson-search');
-    if (searchInput && searchInput.value !== f.search) searchInput.value = f.search;
-
-    var btns = document.querySelectorAll('.filter-btn');
-    for (var i=0;i<btns.length;i++){
-      btns[i].classList.remove('active');
-      btns[i].setAttribute('aria-pressed','false');
-    }
-    var btn = document.querySelector('.filter-btn[data-filter="'+f.status+'"]');
-    if (btn) {
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed','true');
-    }
-
-    var diffs = document.querySelectorAll('.diff-filter');
-    for (var j=0;j<diffs.length;j++){
-      var d = parseInt(diffs[j].getAttribute('data-difficulty'),10);
-      diffs[j].checked = f.difficulty.indexOf(d) !== -1;
-    }
-
-    var sel = document.getElementById('track-filter');
-    if (sel) sel.value = f.track;
-  },
-
-  bindQAToggle: function() {
-    var qaToggle = document.getElementById('learn-qa-toggle');
-    if (!qaToggle || qaToggle.dataset.bound) return;
-    qaToggle.dataset.bound = 'true';
-
-    qaToggle.addEventListener('change', function() {
-      State.setLearnQAEnabled(!!qaToggle.checked);
-      console.log('🎓 [Learn] QA logging ' + (qaToggle.checked ? 'enabled' : 'disabled') + ' via toggle');
-      Lessons.syncQAToggle();
-      Lessons.renderLearnSections();
-    });
-  },
-
-  syncQAToggle: function() {
-    var qaToggle = document.getElementById('learn-qa-toggle');
-    if (!qaToggle) return;
-    var enabled = (typeof State !== 'undefined' && State.getLearnQAEnabled) ? State.getLearnQAEnabled() : false;
-    qaToggle.checked = enabled;
-    qaToggle.setAttribute('aria-pressed', enabled ? 'true' : 'false');
-  },
-
-  saveFiltersToState: function() {
-    State.state.session = State.state.session || {};
-    State.state.session.learnFilters = Lessons.activeFilters;
-    State.save();
-  },
-
-  restoreFiltersFromState: function() {
-    var sf = State.state && State.state.session && State.state.session.learnFilters;
-    if (sf) {
-      // Defensive normalization
-      var status = sf.status || 'all';
-      if ([ 'all', 'not-started', 'in-progress', 'done' ].indexOf(status) === -1) status = 'all';
-
-      var difficulty = Array.isArray(sf.difficulty) && sf.difficulty.length ? sf.difficulty.slice().sort() : [1,2,3];
-      var cleaned = [];
-      for (var i = 0; i < difficulty.length; i++) {
-        var d = parseInt(difficulty[i], 10);
-        if ((d === 1 || d === 2 || d === 3) && cleaned.indexOf(d) === -1) cleaned.push(d);
-      }
-      if (!cleaned.length) cleaned = [1,2,3];
-
-      var track = sf.track || 'all';
-      if (track !== 'all') {
-        if (typeof TRACKS !== 'object' || !TRACKS || !TRACKS[track]) track = 'all';
-      }
-
-      Lessons.activeFilters = {
-        search: typeof sf.search === 'string' ? sf.search : '',
-        status: status,
-        difficulty: cleaned,
-        track: track
-      };
-    }
   },
 
   // Get lessons by track ID
   getLessonsByTrack: function(trackId) {
     var arr = [];
     for (var i = 0; i < LESSON_META.length; i++) {
-      if (LESSON_META[i].trackId === trackId) {
-        arr.push(LESSON_META[i]);
+      var meta = LESSON_META[i];
+      if (!meta || !meta.id) continue;
+      if (!Lessons.isLearnVisibleLessonId(meta.id)) continue;
+      if (meta.trackId === trackId) {
+        arr.push(meta);
       }
     }
     return arr;
@@ -2814,36 +2679,68 @@ var Lessons = {
 
   // Get lesson status
   getLessonStatus: function(lessonId) {
-    if (State.state.progress.lessonDone[lessonId]) {
-      return "Done";
+    var canonicalId = Lessons.resolveCanonicalLessonId(lessonId);
+    if (!canonicalId) return 'Not started';
+
+    if (typeof State !== 'undefined' && State && typeof State.ensureTracksInitialized === 'function') {
+      State.ensureTracksInitialized();
     }
-    var lpSess = (State.state.session && State.state.session.lessonProgress) ? State.state.session.lessonProgress : {};
-    var p = lpSess[lessonId];
-    var started = !!(p && (p.stepsCompleted > 0 || p.pointsEarned > 0));
-    if (started) return "In progress";
-    return "Not started";
+
+    var progress = (typeof State !== 'undefined' && State && State.state && State.state.progress) ? State.state.progress : null;
+    var session = (typeof State !== 'undefined' && State && State.state && State.state.session) ? State.state.session : null;
+
+    var doneMap = progress && progress.lessonDone && typeof progress.lessonDone === 'object' ? progress.lessonDone : {};
+    if (doneMap[canonicalId] === true) return 'Done';
+
+    var persistentProgressMap = progress && progress.lessonProgress && typeof progress.lessonProgress === 'object'
+      ? progress.lessonProgress
+      : {};
+    var persistentEntry = persistentProgressMap[canonicalId];
+    if (persistentEntry && typeof persistentEntry === 'object') {
+      if ((persistentEntry.stepsCompleted | 0) > 0) return 'In progress';
+      if (persistentEntry.started === true) return 'In progress';
+    }
+
+    var sessionProgressMap = session && session.lessonProgress && typeof session.lessonProgress === 'object'
+      ? session.lessonProgress
+      : {};
+    var sessionEntry = sessionProgressMap[canonicalId];
+    if (sessionEntry && typeof sessionEntry === 'object') {
+      if ((sessionEntry.stepsCompleted | 0) > 0) return 'In progress';
+      if ((sessionEntry.pointsEarned | 0) > 0) return 'In progress';
+      if (sessionEntry.started === true) return 'In progress';
+
+      var resolved = sessionEntry.stepResolved;
+      if (resolved && typeof resolved === 'object') {
+        for (var key in resolved) {
+          if (!Object.prototype.hasOwnProperty.call(resolved, key)) continue;
+          if (resolved[key]) return 'In progress';
+        }
+      }
+    }
+
+    return 'Not started';
   },
 
   // Find lesson metadata by ID
   findLessonMeta: function(lessonId) {
+    lessonId = Lessons.resolveCanonicalLessonId(lessonId);
     for (var i = 0; i < LESSON_META.length; i++) {
       if (LESSON_META[i].id === lessonId) return LESSON_META[i];
     }
     return null;
   },
 
-  // Start a lesson - respects quest context if active
+  // Start a lesson
   startLesson: function(lessonId) {
+    lessonId = Lessons.resolveCanonicalLessonId(lessonId);
     var meta = Lessons.findLessonMeta(lessonId);
     if (!meta) {
       alert("Lesson not found.");
       return;
     }
 
-    // Persist Learn UI state and record recent lesson (applies even when launched from Continue/Recent/Saved)
-    try {
-      if (Lessons._isLearnScreenActive()) Lessons._saveLearnUiStateNow();
-    } catch (e) {}
+    // Record recent lesson
     try {
       Lessons._pushRecentLesson(lessonId);
     } catch (e) {}
@@ -2856,30 +2753,19 @@ var Lessons = {
     Lessons.currentLessonId = lessonId;
     Lessons.currentLessonTrackId = meta.trackId;
     
-    var lesson = Lessons.normalizeLesson(lessonId);
-    var baseSteps = (lesson && lesson.steps) ? lesson.steps : [];
+    var baseSteps = Lessons.getPlayableSteps(lessonId);
 
-    // Inject up to N due review items (non-quest only) while keeping the existing linear flow.
-    // Guardrails:
-    // - Never inject in quest mode
-    // - Preserve objective as the first step if present
+    // Inject up to N due review items while keeping the existing linear flow.
     var injected = [];
     try {
-      if (!Lessons.isQuestMode()) {
-        var due = Lessons.getDueReviewItems(3);
-        injected = Lessons.buildInjectedReviewSteps(due);
-      }
+      var due = Lessons.getDueReviewItems(3);
+      injected = Lessons.buildInjectedReviewSteps(due);
     } catch (e) {
       injected = [];
     }
 
     if (injected.length && baseSteps.length) {
-      var t0 = baseSteps[0] ? (baseSteps[0].type || baseSteps[0].step_type) : null;
-      if (t0 === 'objective') {
-        Lessons.currentLessonSteps = [baseSteps[0]].concat(injected).concat(baseSteps.slice(1));
-      } else {
-        Lessons.currentLessonSteps = injected.concat(baseSteps);
-      }
+      Lessons.currentLessonSteps = injected.concat(baseSteps);
     } else {
       Lessons.currentLessonSteps = baseSteps;
     }
@@ -2889,26 +2775,28 @@ var Lessons = {
       return;
     }
 
-    // Respect quest context target step
-    var questContext = Lessons.getQuestContext();
-    if (questContext && questContext.lessonId === lessonId && questContext.targetStep !== null && questContext.targetStep !== undefined) {
-      Lessons.currentStepIndex = questContext.targetStep;
-      // Skip objective in quest mode
-      Lessons.initLesson(lessonId);
-      Lessons.renderLessonHeader(meta);
-      Lessons.renderLessonStep();
-      UI.goTo("screen-lesson");
-    } else {
-      // Show objective first in normal mode
-      Lessons.initLesson(lessonId);
-      Lessons.renderLessonHeader(meta);
-      Lessons.currentStepIndex = 0;  // Will render objective
-      Lessons.renderLessonStep();
-      UI.goTo("screen-lesson");
-    }
+    // Start directly on first playable lesson step
+    Lessons.initLesson(lessonId);
+    Lessons.renderLessonHeader(meta);
+    Lessons.currentStepIndex = 0;
+    Lessons.renderLessonStep();
+    UI.goTo("screen-lesson");
 
     State.state.session.currentLessonId = lessonId;
     State.state.session.currentLessonStep = Lessons.currentStepIndex;
+
+    if (State.state.progress && typeof State.state.progress === 'object') {
+      if (!State.state.progress.lessonProgress || typeof State.state.progress.lessonProgress !== 'object') {
+        State.state.progress.lessonProgress = {};
+      }
+      var persisted = State.state.progress.lessonProgress[lessonId];
+      if (!persisted || typeof persisted !== 'object') persisted = {};
+      if (typeof persisted.stepsCompleted !== 'number' || !isFinite(persisted.stepsCompleted)) persisted.stepsCompleted = 0;
+      persisted.started = true;
+      persisted.lastStartedAt = Date.now();
+      State.state.progress.lessonProgress[lessonId] = persisted;
+    }
+
     State.save(); // ✅ Persist lesson start position
   },
 
@@ -2917,25 +2805,14 @@ var Lessons = {
     Lessons.startLesson(lessonId);
   },
 
-  // Render lesson header with quest mode signaling
+  // Render lesson header
   renderLessonHeader: function(meta) {
     var lessonTitleEl = document.getElementById("lesson-title");
-    var title = meta.labelEn;
-    
-    // Add Daily Quest prefix if in quest mode
-    if (Lessons.isQuestMode()) {
-      title = "Daily Quest: " + title;
-    }
-    
-    if (lessonTitleEl) lessonTitleEl.textContent = title;
+    if (lessonTitleEl) lessonTitleEl.textContent = meta.labelEn;
     
     var lessonTitlePaEl = document.getElementById("lesson-title-pa");
     if (lessonTitlePaEl) {
-      var titlePa = meta.labelPa;
-      if (Lessons.isQuestMode()) {
-        titlePa = "ਰੋਜ਼ਮਰਾਹ - " + titlePa;
-      }
-      lessonTitlePaEl.textContent = titlePa;
+      lessonTitlePaEl.textContent = "";
     }
   },
 
@@ -2943,7 +2820,6 @@ var Lessons = {
   getStepTypeLabel: function(step) {
     if (step && step.isReview === true) return "Review / ਦੁਹਰਾਈ";
     var type = step.type || step.step_type;
-    if (type === "objective") return "Objective / ਉਦੇਸ਼";
     if (type === "definition") return "Definition / ਪਰਿਭਾਸ਼ਾ";
     if (type === "example") return "Example / ਉਦਾਹਰਨ";
     if (type === "guided_practice") return "Practice / ਅਭਿਆਸ";
@@ -2960,22 +2836,20 @@ var Lessons = {
       Lessons.currentStepIndex = Lessons.currentLessonSteps.length - 1;
     }
 
-    Lessons.hideFeedbackOverlay();
-
     State.state.session.currentLessonStep = Lessons.currentStepIndex;
     var step = Lessons.currentLessonSteps[Lessons.currentStepIndex];
     Lessons.inExamplesPhase = false;
     Lessons.currentExampleIndex = 0;
     
     Lessons.initLesson(Lessons.currentLessonId);
+    var lessonProgress = State.state.session.lessonProgress[Lessons.currentLessonId] || {};
+    var resolvedMap = lessonProgress.stepResolved || {};
 
     var lessonFeedbackEl = document.getElementById("lesson-feedback");
     if (lessonFeedbackEl) {
       lessonFeedbackEl.innerHTML = "";
       lessonFeedbackEl.className = "feedback";
     }
-
-    Lessons.hideFeedbackOverlay();
 
     var lessonOptionsEl = document.getElementById("lesson-options");
     if (lessonOptionsEl) lessonOptionsEl.innerHTML = "";
@@ -2990,23 +2864,43 @@ var Lessons = {
       }
     }
 
-    var stepText = "Step " + (Lessons.currentStepIndex + 1) + " / " + Lessons.currentLessonSteps.length;
+    var stepText = (Lessons.currentStepIndex + 1) + "/" + Lessons.currentLessonSteps.length;
     var lessonStepIndicatorEl = document.getElementById("lesson-step-indicator");
     if (lessonStepIndicatorEl) lessonStepIndicatorEl.textContent = stepText;
 
+    var stepType = step.type || step.step_type;
+    Lessons.syncHeroQuestionAction(Lessons.currentStepIndex, step);
+
     // Instruction line (always, consistent placement)
+    var instructionEnText = '';
+    var instructionPaText = '';
     try {
       var inst = Lessons.getInstructionForStep(step);
       var instEnEl = document.getElementById('lesson-instruction-en');
       var instPaEl = document.getElementById('lesson-instruction-pa');
-      if (instEnEl) instEnEl.textContent = (inst && inst.en) ? String(inst.en) : '';
+      instructionEnText = (inst && inst.en) ? String(inst.en) : '';
+      instructionPaText = (inst && inst.pa) ? String(inst.pa) : '';
+      if (instEnEl) instEnEl.textContent = instructionEnText;
       if (instPaEl) {
-        instPaEl.textContent = (inst && inst.pa) ? String(inst.pa) : '';
+        instPaEl.textContent = instructionPaText;
         var showPa = Lessons.shouldShowPunjabi();
         instPaEl.style.display = showPa ? '' : 'none';
       }
     } catch (e) {
       // no-op
+    }
+
+    var lessonSwipeDeckEl = document.getElementById('lessonSwipeDeck');
+    var lessonInstructionEl = document.getElementById('lesson-instruction');
+    var isQuestionLike = (stepType === 'question' || stepType === 'guided_practice');
+    var isTwoChoiceQuestionStep = (stepType === 'question') && Lessons.isTwoOptionQuestionStep(step);
+    if (lessonSwipeDeckEl) {
+      lessonSwipeDeckEl.classList.toggle('is-question-step', isQuestionLike);
+      lessonSwipeDeckEl.classList.toggle('is-two-choice-question-step', isTwoChoiceQuestionStep);
+    }
+    if (lessonInstructionEl) {
+      lessonInstructionEl.classList.toggle('is-question-step', isQuestionLike);
+      lessonInstructionEl.classList.toggle('is-empty', !instructionEnText.trim() && !instructionPaText.trim());
     }
 
     // Render bilingual content (50/50 equal height)
@@ -3022,7 +2916,6 @@ var Lessons = {
 
       var full = Lessons.isFullLessonEnabled(Lessons.currentLessonId);
       if (Lessons.currentStepIndex === 0 || full) {
-        var stepType = step.type || step.step_type;
         // For questions, show the question prompt in EN/PA boxes only
         // For definitions/examples, show their content
         var en, pa;
@@ -3033,29 +2926,40 @@ var Lessons = {
           en = step.contentEn || step.exampleEn || step.englishText || step.english_text || "";
           pa = step.contentPa || step.examplePa || step.punjabiText || step.punjabi_text || "";
         }
-        lessonTextEnEl.innerHTML = en;
-        lessonTextPaEl.innerHTML = pa;
+
+        var shouldUsePromptCard = (stepType === 'question') && Lessons.isTwoOptionQuestionStep(step);
+        if (shouldUsePromptCard) {
+          lessonTextEnEl.innerHTML = Lessons.buildLessonPromptMarkup(en, pa, {
+            kind: 'question'
+          });
+          lessonTextPaEl.innerHTML = '';
+          lessonTextPaEl.style.display = 'none';
+        } else {
+          lessonTextEnEl.innerHTML = en;
+          lessonTextPaEl.innerHTML = pa;
+          lessonTextPaEl.style.display = '';
+        }
       } else {
         lessonTextEnEl.innerHTML = "Coming Soon!";
         lessonTextPaEl.innerHTML = "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ!";
+        lessonTextPaEl.style.display = '';
       }
     }
 
     var nextBtn = document.getElementById("btn-lesson-next");
     var prevBtn = document.getElementById("btn-lesson-prev");
+
+    if (Lessons._yesNoAutoAdvanceTimer) {
+      clearTimeout(Lessons._yesNoAutoAdvanceTimer);
+      Lessons._yesNoAutoAdvanceTimer = null;
+    }
     
     if (prevBtn) {
-      if (Lessons.isQuestMode()) {
-        prevBtn.style.display = "none";
-      } else {
-        prevBtn.style.display = "block";
-        prevBtn.disabled = (Lessons.currentStepIndex === 0);
-      }
+      prevBtn.style.display = "block";
+      prevBtn.disabled = !Lessons.canNavigateBack();
     }
 
     // Step-specific rendering
-    var stepType = step.type || step.step_type;
-
     // For steps beyond the first, show placeholder only if not enabled
     var fullEnabled = Lessons.isFullLessonEnabled(Lessons.currentLessonId);
     if (Lessons.currentStepIndex > 0 && !fullEnabled) {
@@ -3064,31 +2968,40 @@ var Lessons = {
     }
     
     switch(stepType) {
-      case "objective":
-        Lessons.renderObjectiveScreen(Lessons.findLessonMeta(Lessons.currentLessonId));
-        if (nextBtn) nextBtn.disabled = false;
-        break;
-        
       case "definition":
         // Auto-award completion points
         Lessons.awardStepPoints(Lessons.currentStepIndex, step);
+        Lessons.markStepResolved(Lessons.currentStepIndex, true);
         if (nextBtn) nextBtn.disabled = false;
         break;
         
       case "example":
         // Render example with auto-highlighted words
         Lessons.renderExampleStep(step);
+        Lessons.markStepResolved(Lessons.currentStepIndex, true);
         if (nextBtn) nextBtn.disabled = false;
         break;
         
       case "guided_practice":
         Lessons.renderGuidedPracticeStep(step);
-        if (nextBtn) nextBtn.disabled = true;
+        if (!Lessons.isReviewMode() && !resolvedMap[Lessons.currentStepIndex]) {
+          Lessons.markStepResolved(Lessons.currentStepIndex, false);
+        }
+        if (nextBtn) {
+          if (Lessons.isReviewMode()) nextBtn.disabled = false;
+          else nextBtn.disabled = !!resolvedMap[Lessons.currentStepIndex] ? false : true;
+        }
         break;
         
       case "question":
         Lessons.renderQuestionStep(step);
-        if (nextBtn) nextBtn.disabled = true;
+        if (!Lessons.isReviewMode() && !resolvedMap[Lessons.currentStepIndex]) {
+          Lessons.markStepResolved(Lessons.currentStepIndex, false);
+        }
+        if (nextBtn) {
+          if (Lessons.isReviewMode()) nextBtn.disabled = false;
+          else nextBtn.disabled = !!resolvedMap[Lessons.currentStepIndex] ? false : true;
+        }
         break;
         
       case "summary":
@@ -3100,12 +3013,23 @@ var Lessons = {
         // Fallback for old format
         if (step.options && step.options.length) {
           Lessons.renderQuestionStep(step);
-          if (nextBtn) nextBtn.disabled = true;
+          if (!Lessons.isReviewMode() && !resolvedMap[Lessons.currentStepIndex]) {
+            Lessons.markStepResolved(Lessons.currentStepIndex, false);
+          }
+          if (nextBtn) {
+            if (Lessons.isReviewMode()) nextBtn.disabled = false;
+            else nextBtn.disabled = !!resolvedMap[Lessons.currentStepIndex] ? false : true;
+          }
         } else {
           Lessons.awardStepPoints(Lessons.currentStepIndex, step);
+          Lessons.markStepResolved(Lessons.currentStepIndex, true);
           if (nextBtn) nextBtn.disabled = false;
         }
     }
+
+    Lessons.animateLessonCard();
+    Lessons.renderSwipeProgress();
+    State.save();
   },
 
   // Render question step
@@ -3119,26 +3043,441 @@ var Lessons = {
     }
     var lessonOptionsEl = document.getElementById("lesson-options");
     if (!lessonOptionsEl) return;
+
+    if (!Lessons.runtime || typeof Lessons.runtime !== 'object') {
+      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
+    }
+    if (!Lessons.runtime.selectedAnswerByStepKey || typeof Lessons.runtime.selectedAnswerByStepKey !== 'object') {
+      Lessons.runtime.selectedAnswerByStepKey = {};
+    }
+    if (!Lessons.runtime.submittedAnswerByStepKey || typeof Lessons.runtime.submittedAnswerByStepKey !== 'object') {
+      Lessons.runtime.submittedAnswerByStepKey = {};
+    }
+
+    lessonOptionsEl.innerHTML = '';
     
     Lessons.inExamplesPhase = false;
     Lessons.currentExampleIndex = 0;
-    
+
+    var stepIndex = Lessons.currentStepIndex;
+    var stepKey = Lessons.getStepKey(Lessons.currentLessonId, stepIndex, step);
+    var selectedAnswer = Lessons.runtime.selectedAnswerByStepKey[stepKey] || '';
+    var submittedAnswer = Lessons.runtime.submittedAnswerByStepKey[stepKey] || '';
     var options = step.options || [];
+    var isTwoOptionQuestion = Lessons.isTwoOptionQuestionStep(step);
+    var optionsWrap = document.createElement('div');
+    optionsWrap.className = 'lesson-question-options lesson-question-options--cards';
+    if (isTwoOptionQuestion) {
+      optionsWrap.classList.add('is-two-option-question');
+    }
+
     for (var i = 0; i < options.length; i++) {
-      (function(opt) {
+      (function(opt, optionIndex) {
+        var optionText = Lessons.getQuestionOptionText(opt);
         var btn = document.createElement("button");
-        btn.className = "btn btn-secondary";
-        btn.textContent = opt;
+        btn.className = "btn btn-secondary lesson-option-btn";
+        btn.type = 'button';
+        btn.setAttribute('data-option', optionText.en);
+        btn.setAttribute('data-option-index', String(optionIndex));
+        btn.setAttribute('aria-pressed', 'false');
+
+        var chip = document.createElement('span');
+        chip.className = 'lesson-option-chip';
+        chip.setAttribute('aria-hidden', 'true');
+        chip.textContent = String.fromCharCode(65 + (optionIndex % 26));
+
+        var textWrap = document.createElement('span');
+        textWrap.className = 'lesson-option-text';
+
+        var enLine = document.createElement('span');
+        enLine.className = 'lesson-option-line-en';
+        enLine.textContent = optionText.en;
+        textWrap.appendChild(enLine);
+
+        if (Lessons.shouldShowPunjabi() && optionText.pa) {
+          var paLine = document.createElement('span');
+          paLine.className = 'lesson-option-line-pa';
+          paLine.setAttribute('lang', 'pa');
+          paLine.textContent = optionText.pa;
+          textWrap.appendChild(paLine);
+        }
+
+        btn.appendChild(chip);
+        btn.appendChild(textWrap);
+
+        var stateBadge = document.createElement('span');
+        stateBadge.className = 'lesson-option-state';
+        stateBadge.setAttribute('aria-hidden', 'true');
+        btn.appendChild(stateBadge);
+
         btn.addEventListener("click", function() {
-          var correctAnswer = step.correctAnswer || step.correct_answer;
-          Lessons.handleAnswer(opt, correctAnswer, Lessons.currentStepIndex);
+          Lessons.selectQuestionOption(optionText.en, stepIndex, step);
         });
-        lessonOptionsEl.appendChild(btn);
-      })(options[i]);
+        optionsWrap.appendChild(btn);
+      })(options[i], i);
+    }
+
+    lessonOptionsEl.appendChild(optionsWrap);
+
+    Lessons.applyQuestionSelectionUi(stepIndex, step, selectedAnswer);
+    Lessons.syncHeroQuestionAction(stepIndex, step);
+
+    var correctAnswer = step.correctAnswer || step.correct_answer;
+    if (submittedAnswer) {
+      Lessons.applyQuestionResultUi(submittedAnswer, correctAnswer, false);
     }
   },
 
-  // Handle answer - award XP once on correct (supports both quest and normal modes)
+  selectQuestionOption: function(chosen, stepIndex, step) {
+    if (stepIndex === null || stepIndex === undefined) {
+      stepIndex = Lessons.currentStepIndex;
+    }
+
+    if (!step) {
+      step = Lessons.currentLessonSteps[stepIndex];
+    }
+    if (!step) return;
+
+    if (!Lessons.runtime || typeof Lessons.runtime !== 'object') {
+      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
+    }
+    if (!Lessons.runtime.selectedAnswerByStepKey || typeof Lessons.runtime.selectedAnswerByStepKey !== 'object') {
+      Lessons.runtime.selectedAnswerByStepKey = {};
+    }
+    if (!Lessons.runtime.submittedAnswerByStepKey || typeof Lessons.runtime.submittedAnswerByStepKey !== 'object') {
+      Lessons.runtime.submittedAnswerByStepKey = {};
+    }
+
+    var stepKey = Lessons.getStepKey(Lessons.currentLessonId, stepIndex, step);
+    Lessons.runtime.selectedAnswerByStepKey[stepKey] = chosen;
+
+    var optionsEl = document.getElementById('lesson-options');
+    if (!optionsEl) return;
+
+    var optionBtns = optionsEl.querySelectorAll('.lesson-option-btn');
+    for (var i = 0; i < optionBtns.length; i++) {
+      optionBtns[i].classList.remove('is-correct', 'is-wrong', 'is-neutral');
+      Lessons.updateQuestionOptionBadge(optionBtns[i], '');
+    }
+
+    Lessons.applyQuestionSelectionUi(stepIndex, step, chosen);
+
+  },
+
+  syncHeroQuestionAction: function(stepIndex, step) {
+    var checkBtn = document.getElementById('btn-lesson-check');
+    if (!checkBtn) return;
+    var checkBtnEn = checkBtn.querySelector('.btn-label-en');
+    var checkBtnPa = checkBtn.querySelector('.btn-label-pa');
+
+    if (stepIndex === null || stepIndex === undefined) {
+      stepIndex = Lessons.currentStepIndex;
+    }
+    if (!step) {
+      step = Lessons.currentLessonSteps && Lessons.currentLessonSteps[stepIndex];
+    }
+
+    var stepType = step ? (step.type || step.step_type) : '';
+    var isQuestion = stepType === 'question';
+
+    if (!isQuestion) {
+      checkBtn.hidden = true;
+      checkBtn.setAttribute('aria-hidden', 'true');
+      checkBtn.disabled = true;
+      return;
+    }
+
+    if (!Lessons.runtime || typeof Lessons.runtime !== 'object') {
+      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
+    }
+    if (!Lessons.runtime.selectedAnswerByStepKey || typeof Lessons.runtime.selectedAnswerByStepKey !== 'object') {
+      Lessons.runtime.selectedAnswerByStepKey = {};
+    }
+    if (!Lessons.runtime.submittedAnswerByStepKey || typeof Lessons.runtime.submittedAnswerByStepKey !== 'object') {
+      Lessons.runtime.submittedAnswerByStepKey = {};
+    }
+
+    var stepKey = Lessons.getStepKey(Lessons.currentLessonId, stepIndex, step);
+    var selectedAnswer = Lessons.runtime.selectedAnswerByStepKey[stepKey] || '';
+    var submittedAnswer = Lessons.runtime.submittedAnswerByStepKey[stepKey] || '';
+    var correctAnswer = step.correctAnswer || step.correct_answer;
+    var isCorrectLocked = !!submittedAnswer && submittedAnswer === correctAnswer;
+
+    var labelEn = 'Start';
+    var labelPa = 'ਸ਼ੁਰੂ ਕਰੋ';
+    var ariaLabel = 'Start question';
+
+    if (isCorrectLocked) {
+      labelEn = 'Done';
+      labelPa = 'ਪੂਰਾ';
+      ariaLabel = 'Answer checked';
+    } else if (selectedAnswer) {
+      labelEn = 'Check';
+      labelPa = 'ਚੈੱਕ';
+      ariaLabel = 'Check answer';
+    }
+
+    if (checkBtnEn) checkBtnEn.textContent = labelEn;
+    if (checkBtnPa) checkBtnPa.textContent = labelPa;
+    checkBtn.setAttribute('aria-label', ariaLabel);
+
+    checkBtn.hidden = false;
+    checkBtn.setAttribute('aria-hidden', 'false');
+    checkBtn.disabled = (!selectedAnswer || isCorrectLocked);
+  },
+
+  applyQuestionSelectionUi: function(stepIndex, step, selectedAnswer) {
+    if (stepIndex === null || stepIndex === undefined) {
+      stepIndex = Lessons.currentStepIndex;
+    }
+    if (!step) {
+      step = Lessons.currentLessonSteps[stepIndex];
+    }
+
+    var optionsEl = document.getElementById('lesson-options');
+    if (!optionsEl) return;
+
+    var optionBtns = optionsEl.querySelectorAll('.lesson-option-btn');
+    for (var i = 0; i < optionBtns.length; i++) {
+      var btn = optionBtns[i];
+      var opt = btn.getAttribute('data-option') || '';
+      var isSelected = !!selectedAnswer && opt === selectedAnswer;
+      btn.classList.toggle('is-selected', isSelected);
+      btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+      Lessons.updateQuestionOptionBadge(btn, isSelected ? 'selected' : '');
+    }
+
+    Lessons.syncHeroQuestionAction(stepIndex, step);
+  },
+
+  applyQuestionResultUi: function(chosen, correct, lockOptions) {
+    var optionsEl = document.getElementById('lesson-options');
+    if (!optionsEl) return;
+
+    var optionBtns = optionsEl.querySelectorAll('.lesson-option-btn');
+    for (var i = 0; i < optionBtns.length; i++) {
+      var btn = optionBtns[i];
+      var opt = btn.getAttribute('data-option') || '';
+      btn.classList.remove('is-correct', 'is-wrong', 'is-neutral', 'is-celebrate');
+
+      if (opt === correct) btn.classList.add('is-correct');
+      else if (opt === chosen) btn.classList.add('is-wrong');
+      else btn.classList.add('is-neutral');
+
+      if (opt === correct && chosen === correct) btn.classList.add('is-celebrate');
+
+      var badgeState = '';
+      if (opt === correct) badgeState = 'correct';
+      else if (opt === chosen) badgeState = 'wrong';
+      Lessons.updateQuestionOptionBadge(btn, badgeState);
+
+      if (lockOptions) btn.disabled = true;
+    }
+
+    if (lockOptions) {
+      var checkBtn = document.getElementById('btn-lesson-check');
+      if (checkBtn) checkBtn.disabled = true;
+    }
+  },
+
+  updateQuestionOptionBadge: function(btn, state) {
+    if (!btn || !btn.querySelector) return;
+    var badge = btn.querySelector('.lesson-option-state');
+    if (!badge) return;
+    var usePunjabi = !!(typeof Lessons.shouldShowPunjabi === 'function' && Lessons.shouldShowPunjabi());
+
+    var token = String(state || '').trim();
+    badge.classList.remove('is-selected', 'is-correct', 'is-wrong', 'is-neutral');
+
+    if (!token) {
+      badge.textContent = '';
+      badge.removeAttribute('lang');
+      return;
+    }
+
+    if (token === 'selected') {
+      badge.classList.add('is-selected');
+      badge.textContent = usePunjabi ? 'ਚੁਣਿਆ' : 'Selected';
+      if (usePunjabi) badge.setAttribute('lang', 'pa');
+      else badge.removeAttribute('lang');
+      return;
+    }
+    if (token === 'correct') {
+      badge.classList.add('is-correct');
+      badge.textContent = usePunjabi ? 'ਸਹੀ' : 'Correct';
+      if (usePunjabi) badge.setAttribute('lang', 'pa');
+      else badge.removeAttribute('lang');
+      return;
+    }
+    if (token === 'wrong') {
+      badge.classList.add('is-wrong');
+      badge.textContent = usePunjabi ? 'ਮੁੜ ਕੋਸ਼ਿਸ਼' : 'Try again';
+      if (usePunjabi) badge.setAttribute('lang', 'pa');
+      else badge.removeAttribute('lang');
+      return;
+    }
+
+    badge.classList.add('is-neutral');
+    badge.textContent = '';
+    badge.removeAttribute('lang');
+  },
+
+  splitPunjabiPromptLines: function(contentPa) {
+    var text = (contentPa === null || contentPa === undefined) ? '' : String(contentPa).trim();
+    if (!text) return [];
+
+    var explicitLines = text.split(/\r?\n+/)
+      .map(function(line) { return String(line || '').trim(); })
+      .filter(function(line) { return !!line; });
+    if (explicitLines.length >= 2) {
+      return [explicitLines[0], explicitLines.slice(1).join(' ')];
+    }
+
+    var normalized = text.replace(/\s+/g, ' ').trim();
+    var labeledMatch = normalized.match(/^(.*?)(ਸਵਾਲ\s*[:：].*)$/);
+    if (labeledMatch && labeledMatch[1] && labeledMatch[2]) {
+      return [labeledMatch[1].trim(), labeledMatch[2].trim()];
+    }
+
+    var match = normalized.match(/^(.*?ਵਿੱਚ),?\s*(ਕੀ.*)$/);
+    if (match && match[1] && match[2]) {
+      return [match[1].trim(), match[2].trim()];
+    }
+
+    return [normalized];
+  },
+
+  splitEnglishPromptLines: function(contentEn) {
+    var text = (contentEn === null || contentEn === undefined) ? '' : String(contentEn).trim();
+    if (!text) return [];
+
+    var explicitLines = text.split(/\r?\n+/)
+      .map(function(line) { return String(line || '').trim(); })
+      .filter(function(line) { return !!line; });
+    if (explicitLines.length >= 2) {
+      return [explicitLines[0], explicitLines.slice(1).join(' ')];
+    }
+
+    var normalized = text.replace(/\s+/g, ' ').trim();
+    var labeledMatch = normalized.match(/^(.*?)(((?:Question|Q)\s*[:：].*))$/i);
+    if (labeledMatch && labeledMatch[1] && labeledMatch[2]) {
+      return [labeledMatch[1].trim(), labeledMatch[2].trim()];
+    }
+
+    return [normalized];
+  },
+
+  buildLessonPromptMarkup: function(contentEn, contentPa, opts) {
+    var payloadEn = (contentEn === null || contentEn === undefined) ? '' : String(contentEn);
+    var payloadPa = (contentPa === null || contentPa === undefined) ? '' : String(contentPa);
+    var enLines = Lessons.splitEnglishPromptLines(payloadEn);
+    var paLines = Lessons.splitPunjabiPromptLines(payloadPa);
+
+    var enHtml = '';
+    for (var j = 0; j < enLines.length; j++) {
+      enHtml += '<span class="lesson-prompt-line-en-segment">' + enLines[j] + '</span>';
+    }
+
+    if (!enHtml && payloadEn) {
+      enHtml = '<span class="lesson-prompt-line-en-segment">' + payloadEn + '</span>';
+    }
+
+    var paHtml = '';
+    for (var i = 0; i < paLines.length; i++) {
+      paHtml += '<span class="lesson-prompt-line-pa-segment">' + paLines[i] + '</span>';
+    }
+
+    if (!paHtml && payloadPa) {
+      paHtml = '<span class="lesson-prompt-line-pa-segment">' + payloadPa + '</span>';
+    }
+
+    return [
+      '<div class="lesson-prompt-card lesson-prompt-card--question">',
+        '<div class="lesson-prompt-label">',
+          '<span class="lesson-prompt-label-en">Question</span>',
+        '</div>',
+        '<div class="lesson-prompt-section">',
+          '<div class="lesson-prompt-line-en">' + enHtml + '</div>',
+          '<div class="lesson-prompt-line-pa" lang="pa">' + paHtml + '</div>',
+        '</div>',
+      '</div>'
+    ].join('');
+  },
+
+  getQuestionOptionText: function(opt) {
+    if (opt === null || opt === undefined) return { en: '', pa: '' };
+
+    if (typeof opt === 'string' || typeof opt === 'number' || typeof opt === 'boolean') {
+      return { en: String(opt), pa: '' };
+    }
+
+    if (typeof opt === 'object') {
+      var en = '';
+      var pa = '';
+
+      if (typeof opt.en === 'string') en = opt.en;
+      else if (typeof opt.textEn === 'string') en = opt.textEn;
+      else if (typeof opt.text === 'string') en = opt.text;
+      else if (typeof opt.value === 'string') en = opt.value;
+
+      if (typeof opt.pa === 'string') pa = opt.pa;
+      else if (typeof opt.textPa === 'string') pa = opt.textPa;
+
+      if (!en && pa) en = pa;
+      return { en: String(en || ''), pa: String(pa || '') };
+    }
+
+    return { en: String(opt), pa: '' };
+  },
+
+  isYesNoQuestionStep: function(step) {
+    if (!step || !Array.isArray(step.options) || step.options.length !== 2) return false;
+
+    var labels = [];
+    for (var i = 0; i < step.options.length; i++) {
+      labels.push(Lessons.getQuestionOptionText(step.options[i]).en.trim().toLowerCase());
+    }
+
+    var hasYes = labels.indexOf('yes') >= 0;
+    var hasNo = labels.indexOf('no') >= 0;
+    return hasYes && hasNo;
+  },
+
+  isTwoOptionQuestionStep: function(step) {
+    return !!(step && Array.isArray(step.options) && step.options.length === 2);
+  },
+
+  submitSelectedQuestionAnswer: function(stepIndex, step) {
+    if (stepIndex === null || stepIndex === undefined) {
+      stepIndex = Lessons.currentStepIndex;
+    }
+
+    if (!step) {
+      step = Lessons.currentLessonSteps[stepIndex];
+    }
+    if (!step) return;
+
+    if (!Lessons.runtime || typeof Lessons.runtime !== 'object') {
+      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
+    }
+    if (!Lessons.runtime.selectedAnswerByStepKey || typeof Lessons.runtime.selectedAnswerByStepKey !== 'object') {
+      Lessons.runtime.selectedAnswerByStepKey = {};
+    }
+    if (!Lessons.runtime.submittedAnswerByStepKey || typeof Lessons.runtime.submittedAnswerByStepKey !== 'object') {
+      Lessons.runtime.submittedAnswerByStepKey = {};
+    }
+
+    var stepKey = Lessons.getStepKey(Lessons.currentLessonId, stepIndex, step);
+    var chosen = Lessons.runtime.selectedAnswerByStepKey[stepKey] || '';
+    if (!chosen) return;
+
+    Lessons.runtime.submittedAnswerByStepKey[stepKey] = chosen;
+
+    var correctAnswer = step.correctAnswer || step.correct_answer;
+    Lessons.handleAnswer(chosen, correctAnswer, stepIndex);
+  },
+
+  // Handle answer - award XP once on correct
   handleAnswer: function(chosen, correct, stepIndex) {
     if (stepIndex === null || stepIndex === undefined) {
       stepIndex = Lessons.currentStepIndex;
@@ -3146,27 +3485,30 @@ var Lessons = {
 
     var correctBool = (chosen === correct);
     var nextBtn = document.getElementById("btn-lesson-next");
-    var questContext = Lessons.getQuestContext();
-    var isQuest = !!questContext;
     var step = Lessons.currentLessonSteps[stepIndex];
 
     // Ensure runtime scope is correct
     if (!Lessons.runtime || typeof Lessons.runtime !== 'object') {
-      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null };
+      Lessons.runtime = { attemptsByStepKey: {}, activeLessonKey: null, seenReviewKeys: {}, selectedAnswerByStepKey: {}, submittedAnswerByStepKey: {} };
     }
     if (Lessons.runtime.activeLessonKey !== Lessons.currentLessonId) {
       Lessons.resetRuntime(Lessons.currentLessonId);
     }
+    if (!Lessons.runtime.selectedAnswerByStepKey || typeof Lessons.runtime.selectedAnswerByStepKey !== 'object') {
+      Lessons.runtime.selectedAnswerByStepKey = {};
+    }
+    if (!Lessons.runtime.submittedAnswerByStepKey || typeof Lessons.runtime.submittedAnswerByStepKey !== 'object') {
+      Lessons.runtime.submittedAnswerByStepKey = {};
+    }
 
     var stepKey = Lessons.getStepKey(Lessons.currentLessonId, stepIndex, step);
     var attempts = Lessons.runtime.attemptsByStepKey[stepKey] || 0;
+    Lessons.runtime.selectedAnswerByStepKey[stepKey] = chosen;
+    Lessons.runtime.submittedAnswerByStepKey[stepKey] = chosen;
 
     var optionsEl = document.getElementById("lesson-options");
-    var trackId = Lessons.currentLessonTrackId;
-
-    // Quest mode: do not allow escape hatch; must be correct to proceed
     if (correctBool) {
-      if (questContext) questContext.answeredCorrect = true;
+      Lessons.applyQuestionResultUi(chosen, correct, true);
 
       // If this question exists in the review queue, mark it correct.
       try {
@@ -3176,32 +3518,9 @@ var Lessons = {
         // no-op
       }
 
-      Lessons.renderFeedback({ correct: true, step: step, attempts: attempts, showHint: false, canContinue: true });
+      Lessons.renderFeedback({ correct: true, step: step, attempts: attempts, showHint: false, canContinue: true, selectedAnswer: chosen });
 
-      // Instrumentation (once per resolved question)
-      if (trackId) {
-        State.recordQuestionAttempt(trackId, true);
-      }
-
-      // Award XP once (quest-safe)
-      var xpAmount = (step && typeof step.points === 'number') ? step.points : 0;
-      if (!xpAmount) xpAmount = (State && typeof State.XP_PER_CORRECT === 'number') ? State.XP_PER_CORRECT : 5;
-
-      if (isQuest) {
-        if (!questContext.xpAwarded) {
-          questContext.xpAwarded = true;
-          State.awardXP(xpAmount, { trackId: trackId });
-        }
-      } else {
-        // Use session progress guard to prevent double-award
-        Lessons.initLesson(Lessons.currentLessonId);
-        var prog = State.state.session.lessonProgress[Lessons.currentLessonId];
-        if (prog && !prog.stepAwarded[stepIndex]) {
-          prog.stepAwarded[stepIndex] = true;
-          prog.pointsEarned = (prog.pointsEarned || 0) + xpAmount;
-          State.awardXP(xpAmount, { trackId: trackId });
-        }
-      }
+      Lessons.markStepResolved(stepIndex, true);
 
       // Disable all option buttons to prevent re-clicking
       if (optionsEl) {
@@ -3211,25 +3530,32 @@ var Lessons = {
         }
       }
       if (nextBtn) nextBtn.disabled = false;
+      Lessons.renderSwipeProgress();
+      State.save();
       return;
     }
 
     // Wrong answer
+    Lessons.applyQuestionResultUi(chosen, correct, false);
+
     attempts += 1;
     Lessons.runtime.attemptsByStepKey[stepKey] = attempts;
+    if (attempts === 1) {
+      Lessons.markInitialWrong(stepIndex);
+    }
 
     var hint = Lessons._getHint(step);
     var hasHint = !!(hint && (hint.en || hint.pa));
 
     if (attempts === 1 && hasHint) {
       // Stage 1: gentle hint, retry (no continue)
-      Lessons.renderFeedback({ correct: false, step: step, attempts: attempts, showHint: true, canContinue: false });
+      Lessons.renderFeedback({ correct: false, step: step, attempts: attempts, showHint: true, canContinue: false, selectedAnswer: chosen });
       if (nextBtn) nextBtn.disabled = true;
       return;
     }
 
     // Stage 2: worked example + explanation
-    Lessons.renderFeedback({ correct: false, step: step, attempts: attempts, showHint: false, canContinue: !isQuest });
+  Lessons.renderFeedback({ correct: false, step: step, attempts: attempts, showHint: false, canContinue: true, selectedAnswer: chosen });
 
     // Queue for spaced review once we reach the "worked example" stage.
     try {
@@ -3245,55 +3571,39 @@ var Lessons = {
       // no-op
     }
 
-    if (isQuest) {
-      // Quest safety: must still answer correctly
-      if (nextBtn) nextBtn.disabled = true;
+    if (Lessons.isReviewMode()) {
+      if (nextBtn) nextBtn.disabled = false;
+      Lessons.renderSwipeProgress();
       return;
     }
 
-    // Non-quest: escape hatch enabled after stage 2
-    if (trackId) {
-      State.recordQuestionAttempt(trackId, false);
-    }
-
-    if (optionsEl) {
-      var btns2 = optionsEl.querySelectorAll("button.btn");
-      for (var bj = 0; bj < btns2.length; bj++) {
-        btns2[bj].disabled = true;
-      }
-    }
-    if (nextBtn) nextBtn.disabled = false;
+    // Escape hatch enabled after stage 2
+    Lessons.markStepResolved(stepIndex, false);
+    if (nextBtn) nextBtn.disabled = true;
+    Lessons.renderSwipeProgress();
   },
 
-  // Next step - exits quest mode on quest target step, handles summary completion
+  // Next step - handles summary completion
   nextStep: function() {
     if (!Lessons.currentLessonSteps || !Lessons.currentLessonSteps.length) return;
     
     var step = Lessons.currentLessonSteps[Lessons.currentStepIndex];
+
+    if (!Lessons.canAdvanceFromCurrentStep()) {
+      return;
+    }
 
     // Handle examples phase for question steps before moving on
     if (step && (step.type === "question" || step.step_type === "question") && Lessons.inExamplesPhase) {
       var examples = Lessons.normalizeQuestionExamples(step);
       if (Lessons.currentExampleIndex < examples.length - 1) {
         Lessons.currentExampleIndex++;
-        Lessons.renderQuestionExample(step, true);
+        Lessons.renderQuestionExample(step);
         return;
       } else {
         Lessons.inExamplesPhase = false;
         Lessons.currentExampleIndex = 0;
       }
-    }
-    
-    var questContext = Lessons.getQuestContext();
-    
-    // If in quest mode on target step, only proceed if answered correctly
-    if (questContext && Lessons.currentStepIndex === questContext.targetStep) {
-      if (!questContext.answeredCorrect) {
-        return; // User must answer correctly first
-      }
-      // Answer was correct, finish quest
-      Lessons.finishQuestStep();
-      return;
     }
     
     // If at summary step, complete the lesson
@@ -3304,154 +3614,125 @@ var Lessons = {
     
     // Normal lesson progression
     if (Lessons.currentStepIndex < Lessons.currentLessonSteps.length - 1) {
+      try {
+        var lessonProgress = document.getElementById('lesson-swipe-progress');
+        var lessonHeroProgress = document.querySelector('#screen-lesson .lesson-step-progress');
+        var host = lessonHeroProgress || lessonProgress;
+        if (host) {
+          if (typeof nudgeCounterIndicator === 'function') {
+            nudgeCounterIndicator(host, 1);
+          } else {
+            if (lessonProgress) lessonProgress.classList.remove('indicator-shift-next', 'indicator-shift-prev');
+            if (lessonHeroProgress && lessonHeroProgress !== lessonProgress) {
+              lessonHeroProgress.classList.remove('indicator-shift-next', 'indicator-shift-prev');
+            }
+            void host.offsetWidth;
+            host.classList.add('indicator-shift-next');
+            window.setTimeout(function() {
+              try { host.classList.remove('indicator-shift-next'); } catch (eLessonNextRemove) {}
+            }, 220);
+          }
+        }
+      } catch (eLessonNextNudge) {}
       Lessons.currentStepIndex++;
-      State.save(); // ✅ Persist forward navigation
       State.state.session.currentLessonStep = Lessons.currentStepIndex;
+      State.save(); // ✅ Persist forward navigation
       Lessons.renderLessonStep();
     } else {
       Lessons.completeLesson();
     }
   },
 
-  // Previous step - blocked in quest mode
+  // Previous step
   prevStep: function() {
     if (!Lessons.currentLessonSteps || !Lessons.currentLessonSteps.length) return;
-    
-    // Block backwards navigation in quest mode
-    if (Lessons.isQuestMode()) {
-      return;
-    }
-    
-    if (Lessons.currentStepIndex > 0) {
-      State.save(); // ✅ Persist backward navigation
-      Lessons.currentStepIndex--;
-      State.state.session.currentLessonStep = Lessons.currentStepIndex;
-      Lessons.renderLessonStep();
-    }
-  },
 
-  // Internal: finish quest step and return to callback
-  // Only called when in quest mode and quest step is complete
-  finishQuestStep: function() {
-    var questContext = Lessons.getQuestContext();
-    if (!questContext) return;
-
-    // Capture callback before clearing context
-    var callback = questContext.callback;
-    
-    // Atomically clear quest context
-    Lessons.clearQuestContext();
-
-    // Call the callback
-    if (callback) {
-      callback();
-    }
+    if (!Lessons.canNavigateBack()) return;
+    try {
+      var lessonProgress = document.getElementById('lesson-swipe-progress');
+      var lessonHeroProgress = document.querySelector('#screen-lesson .lesson-step-progress');
+      var host = lessonHeroProgress || lessonProgress;
+      if (host) {
+        if (typeof nudgeCounterIndicator === 'function') {
+          nudgeCounterIndicator(host, -1);
+        } else {
+          if (lessonProgress) lessonProgress.classList.remove('indicator-shift-next', 'indicator-shift-prev');
+          if (lessonHeroProgress && lessonHeroProgress !== lessonProgress) {
+            lessonHeroProgress.classList.remove('indicator-shift-next', 'indicator-shift-prev');
+          }
+          void host.offsetWidth;
+          host.classList.add('indicator-shift-prev');
+          window.setTimeout(function() {
+            try { host.classList.remove('indicator-shift-prev'); } catch (eLessonPrevRemove) {}
+          }, 220);
+        }
+      }
+    } catch (eLessonPrevNudge) {}
+    State.save(); // ✅ Persist backward navigation
+    Lessons.currentStepIndex--;
+    State.state.session.currentLessonStep = Lessons.currentStepIndex;
+    Lessons.renderLessonStep();
   },
 
   // Complete lesson (marks full lesson done, used only in normal flow)
-  // Prevents marking as done during quest mode
   completeLesson: function() {
-    // Don't mark as done if in quest mode - quest completes via dailyQuest
-    if (Lessons.isQuestMode()) {
-      return;
+    var lessonId = Lessons.resolveCanonicalLessonId(Lessons.currentLessonId);
+    if (lessonId && typeof State !== 'undefined' && State && State.state) {
+      if (typeof State.ensureTracksInitialized === 'function') State.ensureTracksInitialized();
+
+      if (!State.state.progress || typeof State.state.progress !== 'object') State.state.progress = {};
+      if (!State.state.progress.lessonDone || typeof State.state.progress.lessonDone !== 'object') {
+        State.state.progress.lessonDone = {};
+      }
+      if (!State.state.progress.lessonProgress || typeof State.state.progress.lessonProgress !== 'object') {
+        State.state.progress.lessonProgress = {};
+      }
+
+      var wasAlreadyDone = State.state.progress.lessonDone[lessonId] === true;
+      State.state.progress.lessonDone[lessonId] = true;
+
+      var persisted = State.state.progress.lessonProgress[lessonId];
+      if (!persisted || typeof persisted !== 'object') persisted = {};
+      var totalSteps = (Lessons.currentLessonSteps && Lessons.currentLessonSteps.length)
+        ? Lessons.currentLessonSteps.length
+        : (Lessons.getPlayableSteps(lessonId).length || 0);
+      var prevCompleted = (typeof persisted.stepsCompleted === 'number' && isFinite(persisted.stepsCompleted))
+        ? persisted.stepsCompleted
+        : 0;
+      persisted.stepsCompleted = Math.max(prevCompleted, totalSteps);
+      persisted.started = true;
+      persisted.completedAt = Date.now();
+      State.state.progress.lessonProgress[lessonId] = persisted;
+
+      if (!wasAlreadyDone && Lessons.currentLessonTrackId) {
+        if (!State.state.progress.trackXP || typeof State.state.progress.trackXP !== 'object') {
+          State.state.progress.trackXP = {};
+        }
+        if (!State.state.progress.trackXP[Lessons.currentLessonTrackId]) {
+          State.state.progress.trackXP[Lessons.currentLessonTrackId] = {
+            xp: 0,
+            lessonsCompleted: 0,
+            questionsAttempted: 0,
+            questionsCorrect: 0
+          };
+        }
+        var bucket = State.state.progress.trackXP[Lessons.currentLessonTrackId];
+        if (typeof bucket.lessonsCompleted !== 'number' || !isFinite(bucket.lessonsCompleted)) bucket.lessonsCompleted = 0;
+        bucket.lessonsCompleted += 1;
+      }
+
+      if (!State.state.session || typeof State.state.session !== 'object') State.state.session = {};
+      State.state.session.currentLessonId = null;
+      State.state.session.currentLessonStep = 0;
+      State.save();
     }
-    
-    State.state.progress.lessonDone[Lessons.currentLessonId] = true;
-    State.save();
     
     Lessons.renderLearnSections();
     alert("Lesson Complete! / ਪਾਠ ਮੁਕਤ ਹੋ ਗਿਆ!");
     UI.goTo("screen-learn");
   },
 
-  // Results count display
-  _updateResultsCount: function(count) {
-    var countDisplay = document.getElementById('learn-results-count');
-    if (countDisplay) {
-      countDisplay.textContent = 'Showing ' + count + ' lesson' + (count === 1 ? '' : 's');
-    }
-  },
-
-  // Count active filters for badge display
-  _countActiveFilters: function() {
-    var f = Lessons.activeFilters;
-    var count = 0;
-    if (f.search && f.search.trim()) count++;
-    if (f.status !== 'all') count++;
-    if (f.difficulty && f.difficulty.join('') !== '123') count++;
-    if (f.track !== 'all') count++;
-    return count;
-  },
-
-  // Update Filters summary label with active count
-  _updateFiltersSummary: function() {
-    var summary = document.querySelector('.learn-filters-summary');
-    if (!summary) return;
-    var activeCount = Lessons._countActiveFilters();
-    var label = 'Filters';
-    if (activeCount > 0) label += ' (' + activeCount + ')';
-    summary.textContent = label;
-  },
-
-  // Streak Badge: Update display with tier styling
-  _updateStreakBadge: function(streakDays) {
-    streakDays = parseInt(streakDays) || 0;
-    var el = document.getElementById('learn-streak');
-    if (!el) return;
-    
-    // Set tier for CSS styling
-    var tier = 'none';
-    if (streakDays >= 30) tier = 'platinum';
-    else if (streakDays >= 7) tier = 'gold';
-    else if (streakDays > 0) tier = 'warm';
-    
-    el.dataset.streakTier = tier;
-    el.className = 'learn-streak-badge';
-    
-    // Set display text
-    if (streakDays === 0) {
-      el.textContent = '0d';
-    } else {
-      el.textContent = '🔥 ' + streakDays + 'd';
-    }
-  },
-
-  // Track Health: Attach completion % and progress bar via data attributes
-  _attachTrackHealthIndicators: function(trackHeaderEl, trackId) {
-    if (!trackHeaderEl || !trackId) return;
-    
-    // Get lessons for this track using existing helper
-    var trackLessons = Lessons.getLessonsByTrack(trackId);
-    if (!trackLessons || trackLessons.length === 0) return;
-    
-    var total = trackLessons.length;
-    var completed = 0;
-    
-    // Count completed lessons
-    try {
-      if (typeof State !== 'undefined' && State && typeof State.getProfileContainer === 'function') {
-        var profile = State.getProfileContainer();
-        if (profile && profile.lessonProgress) {
-          trackLessons.forEach(function(meta) {
-            if (profile.lessonProgress[meta.id] && profile.lessonProgress[meta.id].completed) {
-              completed++;
-            }
-          });
-        }
-      }
-    } catch (e) {
-      // Graceful degradation: no completion stats
-      return;
-    }
-    
-    if (total === 0) return;
-    
-    var pct = Math.round((completed / total) * 100);
-    
-    // Set data attributes for CSS pseudo-element rendering
-    trackHeaderEl.dataset.trackSummary = completed + '/' + total + ' (' + pct + '%)';
-    trackHeaderEl.style.setProperty('--track-pct', pct);
-  }
+  _updateStreakBadge: function() {}
 };
 
 // =====================================
@@ -3499,19 +3780,6 @@ var LearnQA = {
       }
     }
     console.log("🎓 [Learn] Lessons per track:", tracks);
-  },
-
-  // Log filter state and results
-  logFilterState: function(filtered) {
-    if (!this.enabled()) return;
-    
-    console.log("🎓 [Learn] Filters applied:", {
-      search: Lessons.activeFilters.search || "(none)",
-      status: Lessons.activeFilters.status,
-      difficulty: Lessons.activeFilters.difficulty,
-      track: Lessons.activeFilters.track,
-      resultCount: filtered.length
-    });
   },
 
   // Log lesson card render

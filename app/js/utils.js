@@ -3,6 +3,41 @@
 // =====================================
 
 // -----------------------------------------------------
+// Lightweight bilingual UI string helper
+// - Accepts either a string OR { en: "...", pa: "..." }
+// - Defaults to English unless Punjabi mode is enabled
+// -----------------------------------------------------
+
+if (typeof uiIsPunjabiOn !== "function") {
+  function uiIsPunjabiOn() {
+    try {
+      if (typeof State !== "undefined" && State) {
+        if (typeof State.getPunjabiEnabled === "function") return !!State.getPunjabiEnabled();
+        if (State.state && State.state.settings && typeof State.state.settings.punjabiOn === "boolean") {
+          return !!State.state.settings.punjabiOn;
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+}
+
+if (typeof uiText !== "function") {
+  function uiText(value, opts) {
+    var o = opts || {};
+    var preferPa = (o && o.lang === "pa") || (o && o.autoPunjabi === true && uiIsPunjabiOn());
+
+    if (value && typeof value === "object") {
+      var en = (typeof value.en === "string") ? value.en : "";
+      var pa = (typeof value.pa === "string") ? value.pa : "";
+      if (preferPa) return String(pa || en || "");
+      return String(en || pa || "");
+    }
+    return (value == null) ? "" : String(value);
+  }
+}
+
+// -----------------------------------------------------
 // Shared labels/helpers used by Games 2/3 and DQ
 // -----------------------------------------------------
 
@@ -130,65 +165,105 @@ function hashStringToInt(s) {
   return Math.abs(h);
 }
 
-// Pick a game consistently for a given date
-function pickDailyGameId(dateKey) {
-  var games = ["GAME2", "GAME3", "GAME4"];
-  var idx = hashStringToInt(dateKey) % games.length;
-  return games[idx];
-}
-
-// Get today's daily game
-function getTodaysDailyGame() {
-  var today = new Date();
-  var dateKey = toISODateLocal(today);
-  return pickDailyGameId(dateKey);
-}
-
-// Seeded pseudo-random number generator (deterministic)
-function seededRng(seedInt) {
-  var s = seedInt % 2147483647;
-  if (s <= 0) s += 2147483646;
-  return function() {
-    s = (s * 16807) % 2147483647;
-    return (s - 1) / 2147483646;
+if (typeof BOLO_DECK_UX === "undefined") {
+  var BOLO_DECK_UX = {
+    touchIntentPx: 8,
+    touchIntentRatio: 1.1,
+    swipeThresholdRatio: 0.18,
+    swipeThresholdMinPx: 36,
+    swipeSnapTransition: "transform 200ms cubic-bezier(0.22, 1, 0.36, 1)",
+    pointerSnapTransition: "transform 200ms cubic-bezier(0.22, 1, 0.36, 1)",
+    wheelResetMs: 280,
+    wheelTriggerPx: 54,
+    suppressClickMs: 260,
+    suppressWheelClickMs: 180
   };
 }
 
-// Pick N items from array using seeded RNG with Fisher-Yates shuffle
-function pickNSeeded(arr, n, seedInt) {
-  var rng = seededRng(seedInt);
-  var copy = arr.slice();
+if (typeof getDeckSwipeThresholdPx !== "function") {
+  function getDeckSwipeThresholdPx(viewport, opts) {
+    var o = opts || {};
+    var ratio = (typeof o.ratio === "number" && isFinite(o.ratio)) ? o.ratio : BOLO_DECK_UX.swipeThresholdRatio;
+    var minPx = (typeof o.minPx === "number" && isFinite(o.minPx)) ? o.minPx : BOLO_DECK_UX.swipeThresholdMinPx;
 
-  // Fisher-Yates shuffle with seeded RNG
-  for (var i = copy.length - 1; i > 0; i--) {
-    var j = Math.floor(rng() * (i + 1));
-    var temp = copy[i];
-    copy[i] = copy[j];
-    copy[j] = temp;
+    var width = 0;
+    try { width = (viewport && viewport.clientWidth) ? viewport.clientWidth : 0; } catch (e0) { width = 0; }
+    if (!(width > 0)) {
+      try { width = (window && window.innerWidth) ? window.innerWidth : 320; } catch (e1) { width = 320; }
+    }
+
+    var px = Math.round(width * ratio);
+    if (!(px > 0)) px = minPx;
+    if (px < minPx) px = minPx;
+    return px;
   }
-
-  return copy.slice(0, Math.min(n, copy.length));
 }
 
-// Build daily quest payload with 3 questions from today's game
-function buildDailyQuestGamesPayload(now) {
-  if (!now) now = new Date();
-  
-  var dateKey = toISODateLocal(now);
-  var all = buildAllGameQuestions();
+if (typeof hasDeckHorizontalIntent !== "function") {
+  function hasDeckHorizontalIntent(deltaX, deltaY, opts) {
+    var o = opts || {};
+    var minIntentPx = (typeof o.minIntentPx === "number" && isFinite(o.minIntentPx)) ? o.minIntentPx : BOLO_DECK_UX.touchIntentPx;
+    var ratio = (typeof o.ratio === "number" && isFinite(o.ratio)) ? o.ratio : BOLO_DECK_UX.touchIntentRatio;
 
-  var gameId = pickDailyGameId(dateKey);
-  var pool = all.filter(function(q) {
-    return q.gameId === gameId;
-  });
+    var absX = Math.abs(deltaX || 0);
+    var absY = Math.abs(deltaY || 0);
+    return absX > minIntentPx && absX > absY * ratio;
+  }
+}
 
-  // Seed with dateKey so it's stable for the day
-  var seed = hashStringToInt(dateKey + ":" + gameId);
-  var chosen = pickNSeeded(pool, 3, seed);
+if (typeof nudgeCounterIndicator !== "function") {
+  function nudgeCounterIndicator(host, direction, opts) {
+    if (!host || !host.classList) return;
+    var dir = 0;
+    if (typeof direction === "number") dir = direction > 0 ? 1 : (direction < 0 ? -1 : 0);
+    if (!dir) return;
 
-  return {
-    dateKey: dateKey,           // "2025-12-16"
-    gameId: gameId,             // "GAME2" | "GAME3" | "GAME4"
-    gameQuestions: chosen       // array of 3 normalized questions
-  };
+    var reduceMotion = false;
+    try {
+      reduceMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    } catch (e0) {
+      reduceMotion = false;
+    }
+
+    var cls = dir > 0 ? "indicator-shift-next" : "indicator-shift-prev";
+    var durationMs = 220;
+
+    if (opts && typeof opts.durationMs === "number" && isFinite(opts.durationMs) && opts.durationMs > 0) {
+      durationMs = Math.round(opts.durationMs);
+    } else {
+      try {
+        var computed = window.getComputedStyle ? window.getComputedStyle(host) : null;
+        var raw = computed ? String(computed.getPropertyValue("--counter-shift-duration") || "").trim() : "";
+        if (raw) {
+          if (/ms$/i.test(raw)) {
+            var parsedMs = parseFloat(raw);
+            if (isFinite(parsedMs) && parsedMs > 0) durationMs = Math.round(parsedMs);
+          } else if (/s$/i.test(raw)) {
+            var parsedS = parseFloat(raw);
+            if (isFinite(parsedS) && parsedS > 0) durationMs = Math.round(parsedS * 1000);
+          }
+        }
+      } catch (e1) {}
+    }
+
+    try {
+      if (host.__counterNudgeTimer) {
+        window.clearTimeout(host.__counterNudgeTimer);
+        host.__counterNudgeTimer = 0;
+      }
+    } catch (e2) {}
+
+    try { host.classList.remove("indicator-shift-next", "indicator-shift-prev"); } catch (e3) {}
+    if (reduceMotion) return;
+
+    try { void host.offsetWidth; } catch (e4) {}
+    try { host.classList.add(cls); } catch (e5) {}
+
+    try {
+      host.__counterNudgeTimer = window.setTimeout(function() {
+        try { host.classList.remove(cls); } catch (e6) {}
+        try { host.__counterNudgeTimer = 0; } catch (e7) {}
+      }, durationMs);
+    } catch (e8) {}
+  }
 }

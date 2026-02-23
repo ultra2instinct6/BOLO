@@ -1,2794 +1,9832 @@
-// ===== NORMALIZED LESSONS (CANONICAL) =====
-var LESSONS = {};
-
-// -------------------- RAW / LEGACY LESSON CONTENT (SOURCE) --------------------
-// NOTE: This block preserves the original mixed schemas (arrays, L_* objects, tutorials).
-// The canonical LESSONS object is generated from this raw data at the bottom of this file.
-var __RAW_LESSONS = {
-  noun: [
-    { step_type: "definition", english_text: "A noun is a word for a person, place, animal, or thing.", punjabi_text: "ਨਾਮ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਕਿਸੇ ਵਿਅਕਤੀ, ਥਾਂ, ਜਾਨਵਰ ਜਾਂ ਚੀਜ਼ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।" },
-    { step_type: "example", english_text: "The <mark>cat</mark> is on the bed.", punjabi_text: "\"cat\" ਜਾਨਵਰ ਦਾ ਨਾਮ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the noun.", punjabi_text: "ਨਾਮ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["cat", "is", "on"], correct_answer: "cat" },
-    { step_type: "example", english_text: "My <mark>brother</mark> is at school.", punjabi_text: "\"brother\" ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the noun.", punjabi_text: "ਨਾਮ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["brother", "is", "at"], correct_answer: "brother" },
-    { step_type: "example", english_text: "We went to the <mark>park</mark>.", punjabi_text: "\"park\" ਥਾਂ ਦਾ ਨਾਮ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the noun.", punjabi_text: "ਨਾਮ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["We", "went", "park"], correct_answer: "park" }
-  ],
-  pronoun: [
-    { step_type: "definition", english_text: "A pronoun is a word that takes the place of a noun, like he, she, it, we, they.", punjabi_text: "ਸਰਵਨਾਮ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਨਾਮ ਦੀ ਥਾਂ ਲੱਗਦਾ ਹੈ, ਜਿਵੇਂ he, she, it, we, they।" },
-    { step_type: "question",
-      english_text: "Tap the pronoun.",
-      punjabi_text: "ਸਰਵਨਾਮ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।",
-      options: ["friend", "She", "my"],
-      correct_answer: "She",
-      examples: [
-        {
-          sentenceEn: "She is my friend.",
-          sentencePa: "ਉਹ ਮੇਰੀ ਸਹेली ਹੈ।",
-          explainEn: "'She' replaces the girl's name (pronoun).",
-          explainPa: "'She' ਲੜਕੀ ਦਾ ਨਾਮ ਬਦਲਦਾ ਹੈ (ਸਰਵਨਾਮ)।",
-          highlight: "She"
-        },
-        {
-          sentenceEn: "They are playing outside.",
-          sentencePa: "ਉਹ ਬਾਹਰ ਖੇਡ ਰਹੇ ਹਨ।",
-          explainEn: "'They' replaces multiple people (pronoun).",
-          explainPa: "'They' ਕਈ ਲੋਕਾਂ ਦੀ ਥਾਂ ਲੈਂਦਾ ਹੈ (ਸਰਵਨਾਮ)।",
-          highlight: "They"
-        }
-      ]
-    }
-  ],
-  plural_singular: [
-    { step_type: "definition", english_text: "Singular means one. Plural means more than one.", punjabi_text: "ਏਕ ਵਚਨ ਇੱਕ ਚੀਜ਼ ਲਈ, ਬਹੁ ਵਚਨ ਇੱਕ ਤੋਂ ਵੱਧ ਚੀਜ਼ਾਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।" },
-    { step_type: "example", english_text: "One <mark>book</mark>, many <mark>books</mark>.", punjabi_text: "\"book\" ਏਕ ਵਚਨ ਹੈ, \"books\" ਬਹੁ ਵਚਨ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the plural word.", punjabi_text: "ਬਹੁ ਵਚਨ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["book", "books", "a"], correct_answer: "books" },
-    { step_type: "example", english_text: "One <mark>child</mark>, many <mark>children</mark>.", punjabi_text: "\"child\" ਇੱਕ ਬੱਚਾ, \"children\" ਕਈ ਬੱਚੇ।" },
-    { step_type: "question", english_text: "Tap the singular word.", punjabi_text: "ਏਕ ਵਚਨ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["children", "child", "many"], correct_answer: "child" }
-  ],
-  verb: [
-    { step_type: "definition", english_text: "A verb is a word that shows action or a state of being.", punjabi_text: "ਕਿਰਿਆ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਕੰਮ ਜਾਂ ਹਾਲਤ ਦੱਸਦਾ ਹੈ, ਜਿਵੇਂ run, eat, is।" },
-    { step_type: "example", english_text: "The dog <mark>runs</mark> fast.", punjabi_text: "\"runs\" ਦੱਸਦਾ ਹੈ ਕਿ ਕੁੱਤਾ ਕੀ ਕਰ ਰਿਹਾ ਹੈ, ਇਹ ਕਿਰਿਆ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the verb.", punjabi_text: "ਕਿਰਿਆ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["dog", "runs", "fast"], correct_answer: "runs" },
-    { step_type: "example", english_text: "She <mark>is</mark> happy.", punjabi_text: "\"is\" ਹਾਲਤ ਦੱਸਣ ਵਾਲਾ ਕਿਰਿਆ-ਸ਼ਬਦ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the verb.", punjabi_text: "ਕਿਰਿਆ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["She", "is", "happy"], correct_answer: "is" }
-  ],
-  adverb: [
-    { step_type: "definition", english_text: "An adverb tells how, when, or where an action happens, like quickly, yesterday, here.", punjabi_text: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਦੱਸਦਾ ਹੈ ਕੰਮ ਕਿਵੇਂ, ਕਦੋਂ ਜਾਂ ਕਿੱਥੇ ਹੁੰਦਾ ਹੈ।" },
-    { step_type: "example", english_text: "She sings <mark>softly</mark>.", punjabi_text: "\"softly\" ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਗਾਂਦੀ ਹੈ, ਇਹ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the adverb.", punjabi_text: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["She", "sings", "softly"], correct_answer: "softly" },
-    { step_type: "example", english_text: "He came <mark>yesterday</mark>.", punjabi_text: "\"yesterday\" ਦੱਸਦਾ ਹੈ ਕਿ ਕਦੋਂ ਆਇਆ, ਇਹ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the adverb.", punjabi_text: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["He", "came", "yesterday"], correct_answer: "yesterday" }
-  ],
-  tense_present: [
-    { step_type: "definition", english_text: "Simple present tells about actions that happen regularly or are true now.", punjabi_text: "ਸਧਾਰਣ ਵਰਤਮਾਨ ਉਹ ਕੰਮ ਦੱਸਦਾ ਹੈ ਜੋ ਰੋਜ਼ ਹੁੰਦਾ ਹੈ ਜਾਂ ਇਸ ਸਮੇਂ ਸੱਚ ਹੈ।" },
-    { step_type: "example", english_text: "She <mark>walks</mark> to school every day.", punjabi_text: "\"walks\" ਰੋਜ਼ ਹੋਣ ਵਾਲਾ ਕੰਮ ਹੈ, ਸਧਾਰਣ ਵਰਤਮਾਨ।" },
-    { step_type: "question", english_text: "Which verb is in simple present?", punjabi_text: "ਕਿਹੜੀ ਕਿਰਿਆ ਸਧਾਰਣ ਵਰਤਮਾਨ ਵਿੱਚ ਹੈ?", options: ["walks", "walked", "will walk"], correct_answer: "walks" }
-  ],
-  tense_past: [
-    { step_type: "definition", english_text: "Simple past tells about actions that happened before.", punjabi_text: "ਸਧਾਰਣ ਭੂਤਕਾਲ ਉਹ ਕੰਮ ਦੱਸਦਾ ਹੈ ਜੋ ਪਹਿਲਾਂ ਹੋ ਚੁੱਕਿਆ ਹੈ।" },
-    { step_type: "example", english_text: "They <mark>played</mark> football yesterday.", punjabi_text: "\"played\" ਪਿਤਾ ਹੋਏ ਕੰਮ ਨੂੰ ਦੱਸਦਾ ਹੈ, ਭੂਤਕਾਲ।" },
-    { step_type: "question", english_text: "Which verb is in simple past?", punjabi_text: "ਕਿਹੜੀ ਕਿਰਿਆ ਭੂਤਕਾਲ ਹੈ?", options: ["play", "played", "will play"], correct_answer: "played" }
-  ],
-  tense_future: [
-    { step_type: "definition", english_text: "Simple future tells about actions that will happen later.", punjabi_text: "ਸਧਾਰਣ ਭਵਿੱਖ ਉਹ ਕੰਮ ਦੱਸਦਾ ਹੈ ਜੋ ਅੱਗੇ ਹੋਵੇਗਾ।" },
-    { step_type: "example", english_text: "We <mark>will visit</mark> the zoo tomorrow.", punjabi_text: "\"will visit\" ਭਵਿੱਖ ਦਾ ਕੰਮ ਦੱਸਦਾ ਹੈ।" },
-    { step_type: "question", english_text: "Which verb is in simple future?", punjabi_text: "ਕਿਹੜੀ ਕਿਰਿਆ ਭਵਿੱਖ ਦੱਸਦੀ ਹੈ?", options: ["visit", "visited", "will visit"], correct_answer: "will visit" }
-  ],
-  adjective: [
-    { step_type: "definition", english_text: "An adjective is a word that describes a noun, like big, red, happy.", punjabi_text: "ਵਿਸ਼ੇਸ਼ਣ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਨਾਮ ਦੀ ਖਾਸੀਅਤ ਦੱਸਦਾ ਹੈ, ਜਿਵੇਂ ਵੱਡਾ, ਲਾਲ, ਖੁਸ਼।" },
-    { step_type: "example", english_text: "It is a <mark>big</mark> house.", punjabi_text: "\"big\" ਘਰ ਦਾ ਆਕਾਰ ਦੱਸਦਾ ਹੈ, ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the adjective.", punjabi_text: "ਵਿਸ਼ੇਸ਼ਣ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["house", "big", "It"], correct_answer: "big" },
-    { step_type: "example", english_text: "She has a <mark>red</mark> bag.", punjabi_text: "\"red\" ਰੰਗ ਦੱਸਦਾ ਹੈ, ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the adjective.", punjabi_text: "ਵਿਸ਼ੇਸ਼ਣ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["red", "bag", "has"], correct_answer: "red" }
-  ],
-  preposition: [
-    { step_type: "definition", english_text: "A preposition shows the relationship of a noun or pronoun to another word, like in, on, under.", punjabi_text: "ਪੂਰਵ-ਬੋਧਕ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਨਾਮ/ਸਰਵਨਾਮ ਦਾ ਦੂਜੇ ਸ਼ਬਦ ਨਾਲ ਸੰਬੰਧ ਦੱਸਦਾ ਹੈ, ਜਿਵੇਂ in, on, under।" },
-    { step_type: "example", english_text: "The ball is <mark>under</mark> the table.", punjabi_text: "\"under\" ਦੱਸਦਾ ਹੈ ਕਿ ਗੇਂਦ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the preposition.", punjabi_text: "ਪੂਰਵ-ਬੋਧਕ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["ball", "under", "table"], correct_answer: "under" }
-  ],
-  conjunction: [
-    { step_type: "definition", english_text: "A conjunction joins words or sentences, like and, but, or.", punjabi_text: "ਸੰਯੋਜਕ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਦੋ ਸ਼ਬਦਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ, ਜਿਵੇਂ and, but, or।" },
-    { step_type: "example", english_text: "I like apples <mark>and</mark> bananas.", punjabi_text: "\"and\" ਦੋ ਚੀਜ਼ਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ, ਇਹ ਸੰਯੋਜਕ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the conjunction.", punjabi_text: "ਸੰਯੋਜਕ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["apples", "and", "bananas"], correct_answer: "and" }
-  ],
-  interjection: [
-    { step_type: "definition", english_text: "An interjection is a short word that shows strong feeling, like wow, oh no, hooray.", punjabi_text: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਛੋਟਾ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਦਾ ਹੈ, ਜਿਵੇਂ wow, oh no, hooray।" },
-    { step_type: "example", english_text: "<mark>Wow</mark>, this cake is tasty!", punjabi_text: "\"Wow\" ਹੈਰਾਨੀ ਅਤੇ ਖੁਸ਼ੀ ਦੱਸਦਾ ਹੈ, ਇਹ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the interjection.", punjabi_text: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["Wow", "cake", "tasty"], correct_answer: "Wow" }
-  ],
-  article: [
-    { step_type: "definition", english_text: "An article is a small word used before a noun: a, an, or the.", punjabi_text: "ਲੇਖ ਛੋਟਾ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਨਾਮ ਤੋਂ ਪਹਿਲਾਂ ਲਗਦਾ ਹੈ: a, an, the।" },
-    { step_type: "example", english_text: "This is <mark>a</mark> cat.", punjabi_text: "\"a\" ਇੱਕ ਬਿੱਲੀ ਲਈ ਵਰਤਿਆ ਲੇਖ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the article.", punjabi_text: "ਲੇਖ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["cat", "This", "a"], correct_answer: "a" },
-    { step_type: "example", english_text: "Open <mark>the</mark> door, please.", punjabi_text: "\"the\" ਖ਼ਾਸ ਦਰਵਾਜ਼ੇ ਲਈ ਵਰਤਿਆ ਲੇਖ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the article.", punjabi_text: "ਲੇਖ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["Open", "door", "the"], correct_answer: "the" }
-  ],
-  sv_agreement: [
-    { step_type: "definition", english_text: "Subject–verb agreement means the verb must match the subject (one vs many).", punjabi_text: "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ ਦਾ ਮਤਲਬ ਹੈ ਕਿ ਕਰਤਾ ਇੱਕ ਹੋਵੇ ਜਾਂ ਕਈ, ਕਿਰਿਆ ਉਸ ਦੇ ਨਾਲ ਮੇਲ ਖਾਏ।" },
-    { step_type: "example", english_text: "<mark>He runs</mark> fast. (correct)\nHe run fast. (wrong)", punjabi_text: "\"He runs\" ਠੀਕ ਹੈ ਕਿਉਂਕਿ he ਏਕ ਵਚਨ ਹੈ, ਇਸ ਲਈ runs ਆਇਆ ਹੈ।" },
-    { step_type: "question", english_text: "Tap the correct sentence.", punjabi_text: "ਸਹੀ ਵਾਕ 'ਤੇ ਟੈਪ ਕਰੋ।", options: ["They walks to school.", "They walk to school."], correct_answer: "They walk to school." }
-  ],
-  
-  // ===== NEW FORMAT: Example lesson with enhanced pedagogy =====
-  L_EXAMPLE_NEW_FORMAT: {
-    metadata: {
-      titleEn: "Nouns - Example Lesson",
-      titlePa: "ਨਾਮ - ਉਦਾਹਰਨ ਪਾਠ",
-      labelEn: "Nouns (New Format)",
-      labelPa: "ਨਾਮ (ਨਿਆ ਢੰਗ)",
-      trackId: "T_WORDS",
-      objective: {
-        titleEn: "Learn: What Are Nouns?",
-        titlePa: "ਸਿੱਖੋ: ਨਾਮ ਕੀ ਹਨ?",
-        descEn: "Identify nouns in sentences and understand how they work",
-        descPa: "ਵਾਕਾਂ ਵਿੱਚ ਨਾਮ ਨੂੰ ਪਛਾਣ ਕਰੋ ਅਤੇ ਸਮਝੋ ਕਿ ਉਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦੇ ਹਨ",
-        pointsAvailable: 15
+// ===== CANONICAL LESSONS (ONE PATH 1-29) =====
+// Auto-generated by tools/prune_lessons_to_path_1_29.cjs
+var LESSONS = {
+  "L_NOUNS_BASICS_01": {
+    "metadata": {
+      "titleEn": "Noun Basics",
+      "titlePa": "ਨਾਂ ਮੁੱਢ",
+      "labelEn": "Noun Basics",
+      "labelPa": "ਨਾਂ ਮੁੱਢ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Nouns",
+        "titlePa": "ਸਿੱਖੋ: ਨਾਂ",
+        "descEn": "Identify nouns as naming words in sentences.",
+        "descPa": "ਵਾਕਾਂ ਵਿੱਚ ਨਾਂ ਪਛਾਣੋ: ਜੋ ਸ਼ਬਦ ਕਿਸੇ ਵਿਅਕਤੀ, ਥਾਂ, ਜਾਨਵਰ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ।",
+        "pointsAvailable": 41
       },
-      difficulty: 1
+      "difficulty": 1
     },
-    steps: [
+    "steps": [
       {
-        type: "definition",
-        contentEn: "A noun is a word that names a person, place, animal, or thing.",
-        contentPa: "ਨਾਮ ਉਹ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ ਜੋ ਕਿਸੇ ਵਿਅਕਤੀ, ਥਾਂ, ਜਾਨਵਰ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਮ ਹੁੰਦਾ ਹੈ।",
-        points: 1
+        "type": "objective",
+        "points": 0
       },
       {
-        type: "example",
-        exampleEn: "The cat is sleeping on the bed.",
-        examplePa: "ਬਿੱਲੀ ਬਿਸਤਰੇ 'ਤੇ ਸੋ ਰਹੀ ਹੈ।",
-        highlightedWords: ["cat", "bed"],
-        points: 1
+        "type": "definition",
+        "contentEn": "A noun is a word for a person, place, animal, or thing.",
+        "contentPa": "ਨਾਂ ਉਹ ਸ਼ਬਦ ਹੈ ਜੋ ਕਿਸੇ ਵਿਅਕਤੀ, ਥਾਂ, ਜਾਨਵਰ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ।",
+        "points": 1
       },
       {
-        type: "guided_practice",
-        sentenceEn: "The teacher gave a book to the student.",
-        sentencePa: "ਅਧਿਆਪਕ ਨੇ ਵਿਦਿਆਰਥੀ ਨੂੰ ਕਿਤਾਬ ਦਿੱਤੀ।",
-        clickableWords: ["teacher", "book", "student"],
-        correctAnswers: ["teacher", "book", "student"],
-        feedbackCorrect: "Perfect! You found all 3 nouns! / ਸ਼ਾਨਦਾਰ! ਤੁਸੀਂ ਸਾਰੇ 3 ਨਾਮ ਲੱਭ ਗਏ!",
-        points: 3
+        "type": "example",
+        "exampleEn": "Dog, teacher, apple, London",
+        "examplePa": "ਕੁੱਤਾ, ਅਧਿਆਪਕ, ਸੇਬ, ਲੰਡਨ",
+        "points": 1
       },
       {
-        type: "question",
-        englishText: "Which word is a noun?",
-        punjabi_text: "ਕਿਹੜਾ ਸ਼ਬਦ ਨਾਮ ਹੈ?",
-        options: ["run", "quick", "dog", "very"],
-        correctAnswer: "dog",
-        points: 5
+        "type": "question",
+        "id": "q_l_nouns_basics_01_in_tap_the_nouns_in_the_sentence",
+        "englishText": "\"The teacher read a story.\" — Is \"teacher\" a noun?",
+        "punjabiText": "\"ਅਧਿਆਪਕ ਨੇ ਕਹਾਣੀ ਪੜ੍ਹੀ।\" — ਕੀ \"teacher\" ਨਾਂ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Teacher” names a person, so it’s a noun.",
+          "pa": "ਹਾਂ। “teacher” ਇੱਕ ਵਿਅਕਤੀ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਨਾਂ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Yes. “Teacher” names a person, so it’s a noun.",
+          "pa": "ਹਾਂ। “teacher” ਇੱਕ ਵਿਅਕਤੀ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਨਾਂ ਹੈ।"
+        }
       },
       {
-        type: "example",
-        exampleEn: "Sarah visited Paris during her vacation.",
-        examplePa: "ਸਾਰਾਹ ਨੇ ਆਪਣੀ ਛੁੱਟੀ ਦੌਰਾਨ ਪੈਰਿਸ ਦਾ ਦੌਰਾ ਕੀਤਾ।",
-        highlightedWords: ["Sarah", "Paris"],
-        points: 1
+        "type": "question",
+        "id": "q_l_nouns_basics_01_which_is_a_noun",
+        "englishText": "Which is a noun?",
+        "punjabiText": "ਕਿਹੜਾ ਨਾਂ ਹੈ?",
+        "options": [
+          "run",
+          "cat",
+          "quickly"
+        ],
+        "correctAnswer": "cat",
+        "points": 5,
+        "hint": {
+          "en": "Choose the word that names an animal, person, place, or thing.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'cat' is the noun because it names an animal. 'run' is an action and 'quickly' describes how an action happens.",
+          "pa": "ਸਹੀ ਜਵਾਬ \"cat\" ਹੈ। ਪਾਠ ਦਾ ਨਿਯਮ ਯਾਦ ਰੱਖੋ।"
+        },
+        "workedExample": {
+          "en": "A cat is sleeping.",
+          "pa": "ਬਿੱਲੀ ਸੋ ਰਹੀ ਹੈ।",
+          "highlight": "cat"
+        },
+        "wrongOptionExplanations": {
+          "run": {
+            "en": "This shows an action, not a naming word.",
+            "pa": "ਇਹ ਕੰਮ ਦੱਸਦਾ ਹੈ, ਨਾਂ ਵਾਲਾ ਸ਼ਬਦ ਨਹੀਂ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          },
+          "quickly": {
+            "en": "This tells how an action happens, not a person/place/thing name.",
+            "pa": "ਇਹ ਦੱਸਦਾ ਹੈ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ, ਵਿਅਕਤੀ/ਥਾਂ/ਚੀਜ਼ ਦਾ ਨਾਂ ਨਹੀਂ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "A cat is sleeping.",
+            "sentencePa": "ਬਿੱਲੀ ਸੋ ਰਹੀ ਹੈ।",
+            "explainEn": "'cat' is a noun because it names an animal (a naming word).",
+            "explainPa": "'cat' ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਜਾਨਵਰ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "cat"
+          }
+        ]
       },
       {
-        type: "guided_practice",
-        sentenceEn: "The doctor examined the patient in the hospital.",
-        sentencePa: "ਡਾਕਟਰ ਨੇ ਹਸਪਤਾਲ ਵਿੱਚ ਮਰੀਜ਼ ਦੀ ਜਾਂਚ ਕੀਤੀ।",
-        clickableWords: ["doctor", "patient", "hospital"],
-        correctAnswers: ["doctor", "patient", "hospital"],
-        feedbackCorrect: "Excellent! You identified all the nouns correctly! / ਸ਼ਾਨਦਾਰ! ਤੁਸੀਂ ਸਾਰੇ ਨਾਮ ਸਹੀ ਤਰ੍ਹਾਂ ਪਛਾਣ ਲਿਏ!",
-        points: 3
+        "type": "question",
+        "id": "q_l_nouns_basics_01_pick_the_noun",
+        "englishText": "Pick the noun.",
+        "punjabiText": "ਨਾਂ ਚੁਣੋ।",
+        "options": [
+          "happy",
+          "book",
+          "run"
+        ],
+        "correctAnswer": "book",
+        "points": 5,
+        "hint": {
+          "en": "A noun is a naming word. Pick the option that names a thing.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'book' is a noun because it names a thing. 'happy' is an adjective and 'run' is usually a verb here.",
+          "pa": "ਸਹੀ ਜਵਾਬ \"book\" ਹੈ। ਪਾਠ ਦਾ ਨਿਯਮ ਯਾਦ ਰੱਖੋ।"
+        },
+        "workedExample": {
+          "en": "I read a book.",
+          "pa": "ਮੈਂ ਕਿਤਾਬ ਪੜ੍ਹਦਾ ਹਾਂ।",
+          "highlight": "book"
+        },
+        "wrongOptionExplanations": {
+          "happy": {
+            "en": "This describes something, so it is not a naming word.",
+            "pa": "ਇਹ ਕਿਸੇ ਚੀਜ਼ ਦੀ ਗੁਣਵੱਤਾ ਦੱਸਦਾ ਹੈ, ਨਾਮ ਵਾਲਾ ਸ਼ਬਦ ਨਹੀਂ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "run": {
+            "en": "This is an action word, not a noun.",
+            "pa": "ਇਹ ਕੰਮ ਵਾਲਾ ਸ਼ਬਦ ਹੈ, ਨਾਂ ਨਹੀਂ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I read a book.",
+            "sentencePa": "ਮੈਂ ਕਿਤਾਬ ਪੜ੍ਹਦਾ ਹਾਂ।",
+            "explainEn": "'book' is a noun because it names a thing.",
+            "explainPa": "'book' ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੈ।",
+            "highlight": "book"
+          }
+        ]
       },
       {
-        type: "question",
-        englishText: "Tap the sentence with the most nouns.",
-        punjabi_text: "ਸਭ ਤੋਂ ਵੱਧ ਨਾਮਾਂ ਵਾਲਾ ਵਾਕ ਟੈਪ ਕਰੋ।",
-        options: ["Dogs run fast.", "The boy found a book in the library."],
-        correctAnswer: "The boy found a book in the library.",
-        points: 5
+        "type": "question",
+        "id": "q_l_nouns_basics_01_find_the_noun_in_she_played_in_t",
+        "englishText": "Find the noun in: She played in the garden.",
+        "punjabiText": "ਵਾਕ ਵਿੱਚ ਨਾਂ ਲੱਭੋ: ਉਹ ਬਾਗ ਵਿੱਚ ਖੇਡੀ।",
+        "options": [
+          "played",
+          "She",
+          "garden"
+        ],
+        "correctAnswer": "garden",
+        "points": 5,
+        "hint": {
+          "en": "Find the word that names a place in the sentence.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'garden' is the noun because it names a place. 'played' is a verb and 'She' is a pronoun.",
+          "pa": "ਸਹੀ ਜਵਾਬ \"garden\" ਹੈ। ਪਾਠ ਦਾ ਨਿਯਮ ਯਾਦ ਰੱਖੋ।"
+        },
+        "workedExample": {
+          "en": "We went to the garden.",
+          "pa": "ਅਸੀਂ ਬਾਗ ਗਏ।",
+          "highlight": "garden"
+        },
+        "wrongOptionExplanations": {
+          "played": {
+            "en": "This tells what happened (an action), so it is not the noun here.",
+            "pa": "ਇਹ ਦੱਸਦਾ ਹੈ ਕੀ ਕੰਮ ਹੋਇਆ, ਇਸ ਲਈ ਇੱਥੇ ਨਾਂ ਨਹੀਂ ਹੈ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          },
+          "She": {
+            "en": "This replaces a name, so it is a pronoun, not a noun.",
+            "pa": "ਇਹ ਨਾਂ ਦੀ ਥਾਂ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਸਰਵਨਾਮ ਹੈ, ਨਾਂ ਨਹੀਂ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "We went to the garden.",
+            "sentencePa": "ਅਸੀਂ ਬਾਗ ਗਏ।",
+            "explainEn": "'garden' is a noun because it names a place.",
+            "explainPa": "'garden' ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਥਾਂ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "garden"
+          }
+        ]
       },
       {
-        type: "summary",
-        titleEn: "You've Mastered Nouns!",
-        titlePa: "ਤੁਸੀਂ ਨਾਮਾਂ ਨੂੰ ਸਮਝ ਗਏ!",
-        summaryEn: "Nouns are words that name people, places, animals, and things. They are essential building blocks of sentences.",
-        summaryPa: "ਨਾਮ ਉਹ ਸ਼ਬਦ ਹਨ ਜੋ ਲੋਕਾਂ, ਥਾਵਾਂ, ਜਾਨਵਰਾਂ ਅਤੇ ਚੀਜ਼ਾਂ ਦਾ ਨਾਮ ਰੱਖਦੇ ਹਨ। ਉਹ ਵਾਕਾਂ ਦੇ ਬੁਨਿਆਦੀ ਬਲਾਕ ਹਨ।",
-        keyExamplesEn: ["person: teacher, doctor, student", "place: Paris, school, hospital", "animal: cat, dog, bird", "thing: book, table, pen"],
-        keyExamplesPa: ["ਵਿਅਕਤੀ: ਅਧਿਆਪਕ, ਡਾਕਟਰ, ਵਿਦਿਆਰਥੀ", "ਥਾਂ: ਪੈਰਿਸ, ਸਕੂਲ, ਹਸਪਤਾਲ", "ਜਾਨਵਰ: ਬਿੱਲੀ, ਕੁੱਤਾ, ਪੰਛੀ", "ਚੀਜ਼: ਕਿਤਾਬ, ਮੇਜ਼, ਕਲਮ"],
-        totalPoints: 18
+        "type": "question",
+        "id": "q_l_nouns_basics_01_nouns_can_be_people_which_is_a_p",
+        "englishText": "Nouns can be people. Which is a person?",
+        "punjabiText": "ਨਾਂ ਵਿਅਕਤੀ ਵੀ ਹੋ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਵਿਅਕਤੀ ਹੈ?",
+        "options": [
+          "doctor",
+          "beautiful",
+          "quickly"
+        ],
+        "correctAnswer": "doctor",
+        "points": 5,
+        "hint": {
+          "en": "Pick the option that names a person.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'doctor' is a person noun. 'beautiful' describes something and 'quickly' describes an action.",
+          "pa": "ਸਹੀ ਜਵਾਬ \"doctor\" ਹੈ। ਪਾਠ ਦਾ ਨਿਯਮ ਯਾਦ ਰੱਖੋ।"
+        },
+        "workedExample": {
+          "en": "The doctor helped me.",
+          "pa": "ਡਾਕਟਰ ਨੇ ਮੇਰੀ ਮਦਦ ਕੀਤੀ।",
+          "highlight": "doctor"
+        },
+        "wrongOptionExplanations": {
+          "beautiful": {
+            "en": "This describes someone or something, not a person name.",
+            "pa": "ਇਹ ਕਿਸੇ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ, ਵਿਅਕਤੀ ਦਾ ਨਾਂ ਨਹੀਂ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "quickly": {
+            "en": "This tells how an action happens, not who a person is.",
+            "pa": "ਇਹ ਦੱਸਦਾ ਹੈ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ, ਵਿਅਕਤੀ ਕੌਣ ਹੈ ਇਹ ਨਹੀਂ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The doctor helped me.",
+            "sentencePa": "ਡਾਕਟਰ ਨੇ ਮੇਰੀ ਮਦਦ ਕੀਤੀ।",
+            "explainEn": "'doctor' is a noun because it names a person.",
+            "explainPa": "'doctor' ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਵਿਅਕਤੀ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "doctor"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_basics_01_which_word_is_not_a_noun",
+        "englishText": "Which word is NOT a noun?",
+        "punjabiText": "ਕਿਹੜਾ ਸ਼ਬਦ ਨਾਂ ਨਹੀਂ ਹੈ?",
+        "options": [
+          "table",
+          "laugh",
+          "phone"
+        ],
+        "correctAnswer": "laugh",
+        "points": 5,
+        "hint": {
+          "en": "Find the option that is not a naming word.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'laugh' is not a noun in this context; it is an action word (verb). 'table' and 'phone' are nouns.",
+          "pa": "ਸਹੀ ਜਵਾਬ \"laugh\" ਹੈ। ਪਾਠ ਦਾ ਨਿਯਮ ਯਾਦ ਰੱਖੋ।"
+        },
+        "workedExample": {
+          "en": "Don't laugh loudly.",
+          "pa": "ਉੱਚੀ ਆਵਾਜ਼ ਨਾਲ ਨਾ ਹੱਸੋ।",
+          "highlight": "laugh"
+        },
+        "wrongOptionExplanations": {
+          "table": {
+            "en": "This is a naming word for a thing, so it is a noun.",
+            "pa": "ਇਹ ਚੀਜ਼ ਦਾ ਨਾਮ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਨਾਂ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "phone": {
+            "en": "This is also a naming word for a thing, so it is a noun.",
+            "pa": "ਇਹ ਵੀ ਚੀਜ਼ ਦਾ ਨਾਮ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਨਾਂ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Don't laugh loudly.",
+            "sentencePa": "ਉੱਚੀ ਆਵਾਜ਼ ਨਾਲ ਨਾ ਹੱਸੋ।",
+            "explainEn": "'laugh' is a verb here because it shows an action, not a naming word.",
+            "explainPa": "ਇੱਥੇ 'laugh' ਕਿਰਿਆ ਹੈ ਕਿਉਂਕਿ ਇਹ ਕੰਮ ਦੱਸਦਾ ਹੈ, ਨਾਂ ਨਹੀਂ।",
+            "highlight": "laugh"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_basics_01_what_type_of_noun_is_india",
+        "englishText": "What type of noun is 'India'?",
+        "punjabiText": "'India' ਕਿਸ ਤਰ੍ਹਾਂ ਦਾ ਨਾਂ ਹੈ?",
+        "options": [
+          "common noun",
+          "proper noun",
+          "action noun"
+        ],
+        "correctAnswer": "proper noun",
+        "points": 5,
+        "hint": {
+          "en": "Country names are specific names, so they are proper nouns.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "\"India\" is the name of a specific country, so it is a proper noun.",
+          "pa": "\"India\" ਇੱਕ ਖ਼ਾਸ ਦੇਸ਼ ਦਾ ਨਾਮ ਹੈ, ਇਸ ਲਈ ਇਹ ਖ਼ਾਸ ਨਾਂਵ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I live in India.",
+          "pa": "ਮੈਂ ਭਾਰਤ ਵਿੱਚ ਰਹਿੰਦਾ ਹਾਂ।",
+          "highlight": "India"
+        },
+        "wrongOptionExplanations": {
+          "common noun": {
+            "en": "'India' is one exact country name, so it is not a common noun.",
+            "pa": "'India' ਇੱਕ ਖ਼ਾਸ ਦੇਸ਼ ਦਾ ਨਾਂ ਹੈ, ਇਸ ਲਈ ਇਹ common noun ਨਹੀਂ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "action noun": {
+            "en": "'India' names a place, not an action.",
+            "pa": "'India' ਥਾਂ ਦਾ ਨਾਂ ਹੈ, ਕੰਮ ਨਹੀਂ ਦੱਸਦਾ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I live in India.",
+            "sentencePa": "ਮੈਂ ਭਾਰਤ ਵਿੱਚ ਰਹਿੰਦਾ ਹਾਂ।",
+            "explainEn": "India is a proper noun because it names one specific country and starts with a capital letter.",
+            "explainPa": "'India' ਖ਼ਾਸ ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਨਿਰਧਾਰਤ ਦੇਸ਼ ਦਾ ਨਾਂ ਹੈ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਲਿਖਿਆ ਜਾਂਦਾ ਹੈ।",
+            "highlight": "India"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "Sentence edit: The quickly is red. → The apple is red.",
+        "examplePa": "ਵਾਕ ਸੋਧ: 'The quickly is red.' → 'The apple is red.'",
+        "highlightedWords": [
+          "apple"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_basics_01_sentence_edit_choose_the_noun",
+        "englishText": "Choose the noun to fix: The ___ is red.",
+        "punjabiText": "ਵਾਕ ਠੀਕ ਕਰਨ ਲਈ ਨਾਂ ਚੁਣੋ: ___ ਲਾਲ ਹੈ।",
+        "options": [
+          {
+            "en": "quickly",
+            "pa": "ਤੇਜ਼ੀ ਨਾਲ"
+          },
+          {
+            "en": "apple",
+            "pa": "ਸੇਬ"
+          },
+          {
+            "en": "running",
+            "pa": "ਦੌੜਣਾ"
+          }
+        ],
+        "correctAnswer": "apple",
+        "points": 5,
+        "hint": {
+          "en": "A noun names a person, place, animal, or thing.",
+          "pa": "ਨਾਂ ਕਿਸੇ ਵਿਅਕਤੀ, ਥਾਂ, ਜਾਨਵਰ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'apple' is a noun (thing). 'quickly' is an adverb and 'running' is a verb form.",
+          "pa": "'apple' ਨਾਂ ਹੈ (ਚੀਜ਼)। 'quickly' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਅਤੇ 'running' ਕਿਰਿਆ ਰੂਪ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The apple is red.",
+          "pa": "ਸੇਬ ਲਾਲ ਹੈ।",
+          "highlight": "apple"
+        }
       }
     ]
-  }};
-
-// -------------------- PILOT NEW-FORMAT LESSONS (Batch 1,4,5) --------------------
-// L_NOUNS_COMMON_01 — Common nouns basics
-__RAW_LESSONS["L_NOUNS_COMMON_01"] = {
-  metadata: {
-    titleEn: "Nouns: Common Basics",
-    titlePa: "ਨਾਂ: ਸਧਾਰਣ ਮੁੱਢਲਾ",
-    labelEn: "Nouns: Common Basics",
-    labelPa: "ਨਾਂ: ਸਧਾਰਣ ਮੁੱਢਲਾ",
-    trackId: "T_WORDS",
-    objective: {
-      titleEn: "Learn: Common Nouns",
-      titlePa: "ਸਿੱਖੋ: ਸਧਾਰਣ ਨਾਂ",
-      descEn: "Identify common nouns in simple sentences and daily life.",
-      descPa: "ਸਧਾਰਣ ਵਾਕਾਂ ਅਤੇ ਰੋਜ਼ਾਨਾ ਜੀਵਨ ਵਿੱਚ ਸਧਾਰਣ ਨਾਂ ਪਛਾਣੋ।",
-      pointsAvailable: 15
-    },
-    difficulty: 1
   },
-  steps: [
-    { type: "definition", contentEn: "A common noun is a general name for a person, place, or thing (like teacher, city, book).",
-      contentPa: "ਸਧਾਰਣ ਨਾਂ ਇੱਕ ਆਮ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ (ਜਿਵੇਂ ਅਧਿਆਪਕ, ਸ਼ਹਿਰ, ਕਿਤਾਬ)।", points: 1 },
-    { type: "example", exampleEn: "The teacher helps the students.", examplePa: "ਅਧਿਆਪਕ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।", highlightedWords: ["teacher"], points: 1 },
-    { type: "question", english_text: "Which word is a common noun?", punjabi_text: "ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ ਹੈ?",
-      options: ["teacher", "London", "Gurpreet", "Monday"], correctAnswer: "teacher", points: 5,
-      examples: [
-        { sentenceEn: "The teacher helps the students.", sentencePa: "ਅਧਿਆਪਕ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।", explainEn: "\"Teacher\" is a general job word.", explainPa: "\"ਅਧਿਆਪਕ\" ਇੱਕ ਆਮ ਪੇਸ਼ੇ ਦਾ ਨਾਂ ਹੈ।", highlight: "teacher" },
-        { sentenceEn: "A teacher can work in many schools.", sentencePa: "ਇੱਕ ਅਧਿਆਪਕ ਕਈ ਸਕੂਲਾਂ ਵਿੱਚ ਕੰਮ ਕਰ ਸਕਦਾ ਹੈ।", explainEn: "Common nouns are general.", explainPa: "ਸਧਾਰਣ ਨਾਂ ਆਮ ਹੁੰਦੇ ਹਨ।", highlight: "teacher" }
-      ]
-    },
-    { type: "question", english_text: "In the sentence ‘The dog is sleeping.’ which word is the common noun?",
-      punjabi_text: "ਵਾਕ ‘The dog is sleeping.’ ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ ਹੈ?",
-      options: ["dog", "sleeping", "is", "The"], correctAnswer: "dog", points: 5,
-      examples: [
-        { sentenceEn: "The dog is sleeping on the floor.", sentencePa: "ਕੁੱਤਾ ਫਰਸ਼ ਤੇ ਸੋ ਰਿਹਾ ਹੈ।", explainEn: "\"Dog\" is a general animal.", explainPa: "\"ਕੁੱਤਾ\" ਇੱਕ ਆਮ ਜਾਨਵਰ ਹੈ।", highlight: "dog" },
-        { sentenceEn: "That dog is very friendly.", sentencePa: "ਉਹ ਕੁੱਤਾ ਬਹੁਤ ਦੋਸਤਾਨਾ ਹੈ।", explainEn: "Common noun fits many dogs.", explainPa: "ਸਧਾਰਣ ਨਾਂ ਕਈ ਕੁੱਤਿਆਂ ਲਈ।", highlight: "dog" }
-      ]
-    },
-    { type: "question", english_text: "Which word is a common noun?", punjabi_text: "ਕਿਹੜਾ ਸ਼ਬਦ ਸਧਾਰਣ ਨਾਂ ਹੈ?",
-      options: ["city", "Amritsar", "Punjab", "Mr. Khan"], correctAnswer: "city", points: 5,
-      examples: [
-        { sentenceEn: "This city is busy.", sentencePa: "ਇਹ ਸ਼ਹਿਰ ਰੁੱਝਿਆ ਹੋਇਆ ਹੈ।", explainEn: "\"City\" is general place word.", explainPa: "\"ਸ਼ਹਿਰ\" ਆਮ ਥਾਂ ਦਾ ਸ਼ਬਦ।", highlight: "city" }
-      ]
-    }
-  ]
-};
-
-// L_NOUNS_PROPER_01 — Proper nouns basics
-__RAW_LESSONS["L_NOUNS_PROPER_01"] = {
-  metadata: {
-    titleEn: "Nouns: Proper Names",
-    titlePa: "ਨਾਂ: ਖ਼ਾਸ ਨਾਮ",
-    labelEn: "Nouns: Proper Names",
-    labelPa: "ਨਾਂ: ਖ਼ਾਸ ਨਾਮ",
-    trackId: "T_WORDS",
-    objective: {
-      titleEn: "Learn: Proper Nouns",
-      titlePa: "ਸਿੱਖੋ: ਖ਼ਾਸ ਨਾਮ",
-      descEn: "Identify specific names of people and places (capitalized in English).",
-      descPa: "ਵਿਅਕਤੀਆਂ ਅਤੇ ਥਾਵਾਂ ਦੇ ਖ਼ਾਸ ਨਾਮ ਪਛਾਣੋ (ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਵੱਡੇ ਅੱਖਰ ਨਾਲ)।",
-      pointsAvailable: 12
-    },
-    difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "A proper noun is a specific name (like Gurpreet, Amritsar, India).",
-      contentPa: "ਖ਼ਾਸ ਨਾਮ ਕਿਸੇ ਵਿਲੱਖਣ ਵਿਅਕਤੀ ਜਾਂ ਥਾਂ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ (ਜਿਵੇਂ ਗੁਰਪ੍ਰੀਤ, ਅੰਮ੍ਰਿਤਸਰ, ਭਾਰਤ)।", points: 1 },
-    { type: "example", exampleEn: "Gurpreet is my friend.", examplePa: "ਗੁਰਪ੍ਰੀਤ ਮੇਰਾ ਦੋਸਤ ਹੈ।", highlightedWords: ["Gurpreet"], points: 1 },
-    { type: "question", english_text: "Which word is a proper noun?", punjabi_text: "ਖ਼ਾਸ ਨਾਮ ਚੁਣੋ।",
-      options: ["Gurpreet", "girl", "school", "city"], correctAnswer: "Gurpreet", points: 5,
-      examples: [
-        { sentenceEn: "Gurpreet is my friend.", sentencePa: "ਗੁਰਪ੍ਰੀਤ ਮੇਰਾ ਦੋਸਤ ਹੈ।", explainEn: "Specific person’s name.", explainPa: "ਖ਼ਾਸ ਵਿਅਕਤੀ ਦਾ ਨਾਂ।", highlight: "Gurpreet" }
-      ]
-    },
-    { type: "question", english_text: "Choose the proper noun.", punjabi_text: "ਖ਼ਾਸ ਨਾਮ ਚੁਣੋ।",
-      options: ["Amritsar", "temple", "river", "street"], correctAnswer: "Amritsar", points: 5,
-      examples: [
-        { sentenceEn: "Amritsar is a city in Punjab.", sentencePa: "ਅੰਮ੍ਰਿਤਸਰ ਪੰਜਾਬ ਦਾ ਇੱਕ ਸ਼ਹਿਰ ਹੈ।", explainEn: "Name of a specific city.", explainPa: "ਖ਼ਾਸ ਸ਼ਹਿਰ ਦਾ ਨਾਮ।", highlight: "Amritsar" }
-      ]
-    }
-  ]
-};
-
-// L_PRONOUNS_PERSONAL_01 — Personal pronouns basics
-__RAW_LESSONS["L_PRONOUNS_PERSONAL_01"] = {
-  metadata: {
-    titleEn: "Pronouns: Personal",
-    titlePa: "ਸਰਵਨਾਮ: ਵਿਅਕਤੀਵਾਚਕ",
-    labelEn: "Pronouns: Personal",
-    labelPa: "ਸਰਵਨਾਮ: ਵਿਅਕਤੀਵਾਚਕ",
-    trackId: "T_WORDS",
-    objective: {
-      titleEn: "Learn: Personal Pronouns",
-      titlePa: "ਸਿੱਖੋ: ਵਿਅਕਤੀਵਾਚਕ ਸਰਵਨਾਮ",
-      descEn: "Identify I/you/he/she/it/we/they in sentences.",
-      descPa: "ਵਾਕਾਂ ਵਿੱਚ I/you/he/she/it/we/they ਪਛਾਣੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Personal pronouns replace names (he, she, it, we, they).",
-      contentPa: "ਵਿਅਕਤੀਵਾਚਕ ਸਰਵਨਾਮ ਨਾਂ ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ (he, she, it, we, they)।", points: 1 },
-    { type: "example", exampleEn: "They are playing outside.", examplePa: "ਉਹ ਬਾਹਰ ਖੇਡ ਰਹੇ ਹਨ।", highlightedWords: ["They"], points: 1 },
-    { type: "question", english_text: "Tap the pronoun.", punjabi_text: "ਸਰਵਨਾਮ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।",
-      options: ["friend", "She", "my"], correct_answer: "She", points: 5,
-      examples: [
-        { sentenceEn: "She is my friend.", sentencePa: "ਉਹ ਮੇਰੀ ਸਹেली ਹੈ।", explainEn: "'She' replaces a girl's name.", explainPa: "'She' ਲੜਕੀ ਦੇ ਨਾਂ ਦੀ ਥਾਂ।", highlight: "She" },
-        { sentenceEn: "They are playing outside.", sentencePa: "ਉਹ ਬਾਹਰ ਖੇਡ ਰਹੇ ਹਨ।", explainEn: "'They' replaces multiple people.", explainPa: "'They' ਕਈ ਲੋਕਾਂ ਦੀ ਥਾਂ।", highlight: "They" }
-      ]
-    },
-    { type: "question", english_text: "Choose the correct pronoun.", punjabi_text: "ਸਹੀ ਸਰਵਨਾਮ ਚੁਣੋ।",
-      options: ["I", "Me", "Mine"], correct_answer: "I", points: 5,
-      examples: [
-        { sentenceEn: "I like to read books.", sentencePa: "ਮੈਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਪਸੰਦ ਹੈ।", explainEn: "Use 'I' as the subject.", explainPa: "ਮੁਹਾਵਰੇ ਵਿੱਚ 'I' ਵਰਤੋ।", highlight: "I" }
-      ]
-    },
-    { type: "question", english_text: "Which pronoun is correct?", punjabi_text: "ਕਿਹੜਾ ਸਰਵਨਾਮ ਸਹੀ ਹੈ?",
-      options: ["him", "He", "His"], correct_answer: "He", points: 5,
-      examples: [
-        { sentenceEn: "He plays football.", sentencePa: "ਉਹ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।", explainEn: "'He' is the subject pronoun.", explainPa: "'He' ਕਰਤਾ ਸਰਵਨਾਮ ਹੈ।", highlight: "He" }
-      ]
-    }
-  ]
-};
-
-// L_VERBS_BASICS_01 — Verbs basics
-__RAW_LESSONS["L_VERBS_BASICS_01"] = {
-  metadata: {
-    titleEn: "Verbs: Basics",
-    titlePa: "ਕਿਰਿਆ: ਮੁੱਢਲੇ",
-    labelEn: "Verbs: Basics",
-    labelPa: "ਕਿਰਿਆ: ਮੁੱਢਲੇ",
-    trackId: "T_ACTIONS",
-    objective: {
-      titleEn: "Learn: Verbs",
-      titlePa: "ਸਿੱਖੋ: ਕਿਰਿਆ",
-      descEn: "Identify action and 'be' verbs in simple sentences.",
-      descPa: "ਸਧਾਰਣ ਵਾਕਾਂ ਵਿੱਚ ਕੰਮ ਅਤੇ 'is/are' ਕਿਰਿਆ ਪਛਾਣੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "A verb shows an action or a state of being.", contentPa: "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ ਦੱਸਦੀ ਹੈ।", points: 1 },
-    { type: "example", exampleEn: "The dog runs fast.", examplePa: "ਕੁੱਤਾ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ।", highlightedWords: ["runs"], points: 1 },
-    { type: "question", id: "q_verbs_basics_tap_runs", english_text: "Tap the verb.", punjabi_text: "ਕਿਰਿਆ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।",
-      options: ["dog", "runs", "fast"], correct_answer: "runs", points: 5,
-      hint: { en: "Which word shows an action?", pa: "ਕਿਹੜਾ ਸ਼ਬਦ ਕੰਮ/ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ?" },
-      explanation: { en: "A verb is the action word in a sentence.", pa: "ਕਿਰਿਆ = ਕੰਮ ਵਾਲਾ ਸ਼ਬਦ।" },
-      workedExample: { en: "Birds run.", pa: "ਪੰਛੀ ਦੌੜਦੇ ਹਨ।", highlight: { en: ["run"], pa: ["ਦੌੜਦੇ"] } },
-      examples: [
-        { sentenceEn: "The dog runs fast.", sentencePa: "ਕੁੱਤਾ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ।", explainEn: "'runs' shows action.", explainPa: "'runs' ਕੰਮ ਦੱਸਦਾ ਹੈ।", highlight: "runs" }
-      ]
-    },
-    { type: "question", id: "q_verbs_basics_tap_is", english_text: "Tap the verb.", punjabi_text: "ਕਿਰਿਆ ਵਾਲੇ ਸ਼ਬਦ 'ਤੇ ਟੈਪ ਕਰੋ।",
-      options: ["She", "is", "happy"], correct_answer: "is", points: 5,
-      hint: { en: "Look for a “be” word: am/is/are.", pa: "am/is/are ਵਾਲਾ ਸ਼ਬਦ ਵੇਖੋ।" },
-      explanation: { en: "‘is’ is a be-verb. It tells a state, not an action.", pa: "‘is’ ਹਾਲਤ ਦੱਸਦੀ ਕਿਰਿਆ ਹੈ।" },
-      workedExample: { en: "He is tired.", pa: "ਉਹ ਥੱਕਿਆ ਹੈ।", highlight: { en: ["is"], pa: ["ਹੈ"] } },
-      examples: [
-        { sentenceEn: "She is happy.", sentencePa: "ਉਹ ਖੁਸ਼ ਹੈ।", explainEn: "'is' shows a state (be verb).", explainPa: "'is' ਹਾਲਤ ਦੱਸਦਾ ਹੈ।", highlight: "is" }
-      ]
-    },
-    { type: "question", id: "q_verbs_basics_action_eat", english_text: "Find the action verb.", punjabi_text: "ਕਰਮ ਕਿਰਿਆ ਲੱਭੋ।",
-      options: ["eat", "is", "the"], correct_answer: "eat", points: 5,
-      hint: { en: "Which word is something you DO?", pa: "ਕਿਹੜਾ ਸ਼ਬਦ ਕੰਮ ਹੈ ਜੋ ਤੁਸੀਂ ਕਰਦੇ ਹੋ?" },
-      explanation: { en: "Action verbs show doing: eat, run, play.", pa: "ਕਰਮ ਕਿਰਿਆ = ਖਾਣਾ/ਦੌੜਣਾ/ਖੇਡਣਾ।" },
-      workedExample: { en: "I eat mango.", pa: "ਮੈਂ ਆਮ ਖਾਂਦਾ ਹਾਂ।", highlight: { en: ["eat"], pa: ["ਖਾਂਦਾ"] } },
-      examples: [
-        { sentenceEn: "I eat apples every day.", sentencePa: "ਮੈਂ ਹਰ ਦਿਨ ਸੇਬ ਖਾਂਦਾ ਹਾਂ।", explainEn: "'eat' shows action.", explainPa: "'eat' ਕਰਮ ਹੈ।", highlight: "eat" }
-      ]
-    },
-    { type: "question", id: "q_verbs_basics_be_am", english_text: "Which is a be verb?", punjabi_text: "ਕਿਹੜੀ 'be' ਕਿਰਿਆ ਹੈ?",
-      options: ["am", "run", "jump"], correct_answer: "am", points: 5,
-      hint: { en: "With “I”, we use…", pa: "“I/ਮੈਂ” ਨਾਲ ਕੀ ਲੱਗਦਾ?" },
-      explanation: { en: "I + am. (Not is/are.)", pa: "I + am. (is/are ਨਹੀਂ।)" },
-      workedExample: { en: "I am happy.", pa: "ਮੈਂ ਖੁਸ਼ ਹਾਂ।", highlight: { en: ["am"], pa: ["ਹਾਂ"] } },
-      examples: [
-        { sentenceEn: "I am a student.", sentencePa: "ਮੈਂ ਇੱਕ ਵਿਦਿਆਰਥੀ ਹਾਂ।", explainEn: "'am' is a be verb (state of being).", explainPa: "'am' ਹਾਲਤ ਦੀ ਕਿਰਿਆ ਹੈ।", highlight: "am" }
-      ]
-    }
-  ]
-};
-
-// L_NOUNS_PLURALS_POSSESSION_01 — Plurals & Possession
-__RAW_LESSONS["L_NOUNS_PLURALS_POSSESSION_01"] = {
-  metadata: {
-    titleEn: "Nouns: Plurals & Possession",
-    titlePa: "ਨਾਂ: ਬਹੁਵਚਨ ਅਤੇ ਮਾਲਕੀ",
-    labelEn: "Nouns: Plurals & Possession",
-    labelPa: "ਨਾਂ: ਬਹੁਵਚਨ ਅਤੇ ਮਾਲਕੀ",
-    trackId: "T_WORDS",
-    objective: {
-      titleEn: "Learn: Plurals and Possessives",
-      titlePa: "ਸਿੱਖੋ: ਬਹੁਵਚਨ ਅਤੇ ਮਾਲਕੀ",
-      descEn: "Form regular/irregular plurals and show possession (’s, of).",
-      descPa: "ਨਿਯਮਤ/ਅਨਿਯਮਤ ਬਹੁਵਚਨ ਬਣਾਉ ਅਤੇ ਮਾਲਕੀ ਦਿਖਾਉ (’s, of).",
-      pointsAvailable: 12
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Plural means more than one (books, children). Possession shows ownership (Sara’s book).",
-      contentPa: "ਬਹੁਵਚਨ ਇੱਕ ਤੋਂ ਵੱਧ (books, children)। ਮਾਲਕੀ ਦਾ ਮਤਲਬ ਮਾਲਕਾਨਾ (Sara’s book)।", points: 1 },
-    { type: "example", exampleEn: "One child → two children; the boy’s pen.", examplePa: "ਇੱਕ child → ਦੋ children; ਮੁੰਡੇ ਦੀ ਕਲਮ।", highlightedWords: ["children", "boy’s"], points: 1 },
-    { type: "question", english_text: "Choose the correct plural.", punjabi_text: "ਸਹੀ ਬਹੁਵਚਨ ਚੁਣੋ।",
-      options: ["mouses", "mice", "mices"], correct_answer: "mice", points: 5,
-      examples: [
-        { sentenceEn: "We saw two mice.", sentencePa: "ਅਸੀਂ ਦੋ mice ਵੇਖੇ।", explainEn: "Irregular plural of mouse is mice.", explainPa: "mouse ਦਾ ਅਨਿਯਮਤ ਬਹੁਵਚਨ mice ਹੈ।", highlight: "mice" }
-      ]
-    },
-    { type: "question", english_text: "Which shows possession correctly?", punjabi_text: "ਕਿਹੜਾ ਮਾਲਕੀ ਠੀਕ ਹੈ?",
-      options: ["the girls bag", "the girl's bag", "the girls's bag"], correct_answer: "the girl's bag", points: 5,
-      examples: [
-        { sentenceEn: "This is the girl's bag.", sentencePa: "ਇਹ ਕੁੜੀ ਦੀ ਥੈਲੀ ਹੈ।", explainEn: "Use 's for singular possession.", explainPa: "ਇੱਕਵਚਨ ਮਾਲਕੀ ਲਈ 's ਵਰਤੋ।", highlight: "girl's" }
-      ]
-    },
-    { type: "question", english_text: "Form the plural of 'child'.", punjabi_text: "'child' ਦਾ ਬਹੁਵਚਨ ਬਣਾਓ।",
-      options: ["childs", "children", "childses"], correct_answer: "children", points: 5,
-      examples: [
-        { sentenceEn: "The children are playing.", sentencePa: "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।", explainEn: "Irregular plural: child → children.", explainPa: "child ਦਾ ਬਹੁਵਚਨ children ਹੈ।", highlight: "children" }
-      ]
-    },
-    { type: "question", english_text: "Which is the possessive form?", punjabi_text: "ਮਾਲਕਾਨਾ ਰੂਪ ਕਿਹੜਾ ਹੈ?",
-      options: ["books", "book's", "books's"], correct_answer: "book's", points: 5,
-      examples: [
-        { sentenceEn: "The book's cover is red.", sentencePa: "ਕਿਤਾਬ ਦਾ ਕਵਰ ਲਾਲ ਹੈ।", explainEn: "Book's = possession.", explainPa: "Book's = ਮਾਲਕਾਨਾ।", highlight: "book's" }
-      ]
-    },
-    { type: "question", english_text: "Choose the correct plural.", punjabi_text: "ਸਹੀ ਬਹੁਵਚਨ ਚੁਣੋ।",
-      options: ["feet", "foots", "feets"], correct_answer: "feet", points: 5,
-      examples: [
-        { sentenceEn: "She has two feet.", sentencePa: "ਉਸਦੇ ਦੋ ਪੈਰ ਹਨ।", explainEn: "Irregular: foot → feet.", explainPa: "foot ਦਾ ਬਹੁਵਚਨ feet ਹੈ।", highlight: "feet" }
-      ]
-    }
-  ]
-};
-
-// L_VERBS_POWERUPS_01 — Helping verbs, modals, phrasal
-__RAW_LESSONS["L_VERBS_POWERUPS_01"] = {
-  metadata: {
-    titleEn: "Verbs: Power-Ups",
-    titlePa: "ਕਿਰਿਆ: ਸਹਾਇਕ/ਮੋਡਲ",
-    labelEn: "Verbs: Power-Ups",
-    labelPa: "ਕਿਰਿਆ: ਸਹਾਇਕ/ਮੋਡਲ",
-    trackId: "T_ACTIONS",
-    objective: {
-      titleEn: "Learn: Helping & Modal Verbs",
-      titlePa: "ਸਿੱਖੋ: ਸਹਾਇਕ ਅਤੇ ਮੋਡਲ ਕਿਰਿਆ",
-      descEn: "Use helping verbs (is/are/was), modals (can/must), and simple phrasal verbs.",
-      descPa: "ਸਹਾਇਕ ਕਿਰਿਆ (is/are/was), ਮੋਡਲ (can/must) ਅਤੇ ਸਧਾਰਣ phrasal verbs ਵਰਤੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Helping verbs support main verbs (is running). Modals add meaning (can, must).",
-      contentPa: "ਸਹਾਇਕ ਕਿਰਿਆ ਮੁੱਖ ਕਿਰਿਆ ਦੀ ਮਦਦ ਕਰਦੀ ਹੈ (is running)। ਮੋਡਲ ਅਰਥ ਜੋੜਦੇ ਹਨ (can, must)।", points: 1 },
-    { type: "example", exampleEn: "She can swim. They are working.", examplePa: "ਉਹ ਤੈਰ ਸਕਦੀ ਹੈ। ਉਹ ਕੰਮ ਕਰ ਰਹੇ ਹਨ।", highlightedWords: ["can", "are"], points: 1 },
-    { type: "question", id: "q_verbs_powerups_modal_must", english_text: "Choose the sentence with a modal verb.", punjabi_text: "ਮੋਡਲ ਕਿਰਿਆ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
-      options: ["He must finish.", "He finishes now.", "He finished yesterday."], correct_answer: "He must finish.", points: 5,
-      hint: { en: "Modal = can/should/must/may.", pa: "Modal = can/should/must/may।" },
-      explanation: { en: "‘must’ means something is necessary (a rule).", pa: "‘must’ = ਲਾਜ਼ਮੀ (ਨਿਯਮ)।" },
-      workedExample: { en: "You must listen.", pa: "ਤੁਹਾਨੂੰ ਸੁਣਨਾ ਲਾਜ਼ਮੀ ਹੈ।", highlight: { en: ["must"], pa: ["ਲਾਜ਼ਮੀ"] } },
-      examples: [
-        { sentenceEn: "You must wear a helmet.", sentencePa: "ਤੁਹਾਨੂੰ helmet ਪਹਿਨਣਾ ਚਾਹੀਦਾ ਹੈ।", explainEn: "'must' is a modal showing necessity.", explainPa: "'must' ਲਾਜ਼ਮੀ ਹੋਣ ਦੱਸਦਾ ਹੈ।", highlight: "must" }
-      ]
-    },
-    { type: "question", id: "q_verbs_powerups_helping_are", english_text: "Pick the helping verb.", punjabi_text: "ਸਹਾਇਕ ਕਿਰਿਆ ਚੁਣੋ।",
-      options: ["are", "play", "quickly"], correct_answer: "are", points: 5,
-      hint: { en: "Helping verb comes before the main verb.", pa: "ਸਹਾਇਕ ਕਿਰਿਆ ਮੁੱਖ ਕਿਰਿਆ ਤੋਂ ਪਹਿਲਾਂ ਹੁੰਦੀ ਹੈ।" },
-      explanation: { en: "‘are’ helps ‘playing’ to make the tense.", pa: "‘are’ ‘playing’ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।" },
-      workedExample: { en: "We are reading.", pa: "ਅਸੀਂ ਪੜ੍ਹ ਰਹੇ ਹਾਂ।", highlight: { en: ["are"], pa: ["ਹਾਂ"] } },
-      examples: [
-        { sentenceEn: "They are playing.", sentencePa: "ਉਹ ਖੇਡ ਰਹੇ ਹਨ।", explainEn: "'are' helps the main verb.", explainPa: "'are' ਮੁੱਖ ਕਿਰਿਆ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।", highlight: "are" }
-      ]
-    },
-    { type: "question", id: "q_verbs_powerups_modal_can", english_text: "Which modal means ability?", punjabi_text: "ਕਿਹੜਾ ਮੋਡਲ ਸਮਰੱਥਾ ਦੱਸਦਾ ਹੈ?",
-      options: ["can", "should", "may"], correct_answer: "can", points: 5,
-      hint: { en: "Ability = “can”.", pa: "ਸਮਰੱਥਾ = “can”।" },
-      explanation: { en: "‘can’ means you are able to do it.", pa: "‘can’ = ਕਰ ਸਕਦੇ ਹਾਂ।" },
-      workedExample: { en: "I can draw.", pa: "ਮੈਂ ਡਰਾਇੰਗ ਕਰ ਸਕਦਾ ਹਾਂ।", highlight: { en: ["can"], pa: ["ਸਕਦਾ"] } },
-      examples: [
-        { sentenceEn: "She can swim very well.", sentencePa: "ਉਹ ਬਹੁਤ ਚੰਗੀ ਤਰ੍ਹਾਂ ਤੈਰ ਸਕਦੀ ਹੈ।", explainEn: "'can' shows ability.", explainPa: "'can' ਸਮਰੱਥਾ ਦੱਸਦਾ ਹੈ।", highlight: "can" }
-      ]
-    },
-    { type: "question", id: "q_verbs_powerups_form_is_going", english_text: "Choose the correct form.", punjabi_text: "ਸਹੀ ਰੂਪ ਚੁਣੋ।",
-      options: ["He going.", "He is going.", "He go."], correct_answer: "He is going.", points: 5,
-      hint: { en: "Right now = is/are + -ing.", pa: "ਹੁਣ = is/are + -ing।" },
-      explanation: { en: "‘is’ + ‘going’ makes “happening now”.", pa: "‘is’ + ‘going’ = ਹੁਣ ਹੋ ਰਿਹਾ ਹੈ।" },
-      workedExample: { en: "She is eating.", pa: "ਉਹ ਖਾ ਰਹੀ ਹੈ।", highlight: { en: ["is"], pa: ["ਰਹੀ"] } },
-      examples: [
-        { sentenceEn: "He is going to school.", sentencePa: "ਉਹ ਸਕੂਲ ਜਾ ਰਿਹਾ ਹੈ।", explainEn: "'is going' is present continuous (helping + action verb).", explainPa: "'is going' ਮੌਜੂਦਾ ਅਨੁ ਹੈ।", highlight: "is going" }
-      ]
-    }
-  ]
-};
-
-// L_ADJ_COMPARISON_01 — Comparative/superlative
-__RAW_LESSONS["L_ADJ_COMPARISON_01"] = {
-  metadata: {
-    titleEn: "Adjectives: Comparison",
-    titlePa: "ਵਿਸ਼ੇਸ਼ਣ: ਤੁਲਨਾ",
-    labelEn: "Adjectives: Comparison",
-    labelPa: "ਵਿਸ਼ੇਸ਼ਣ: ਤੁਲਨਾ",
-    trackId: "T_DESCRIBE",
-    objective: {
-      titleEn: "Learn: Comparative & Superlative",
-      titlePa: "ਸਿੱਖੋ: ਤੁਲਨਾਤਮਕ/ਸਰਵੋਤਮ",
-      descEn: "Use -er/-est and 'more/most' to compare.",
-      descPa: "-er/-est ਅਤੇ 'more/most' ਨਾਲ ਤੁਲਨਾ ਕਰੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Comparative compares two (taller). Superlative compares three+ (tallest).",
-      contentPa: "ਤੁਲਨਾਤਮਕ ਦੋ ਦੀ ਤੁਲਨਾ (taller)। ਸਰਵੋਤਮ ਕਈ ਦੀ (tallest)।", points: 1 },
-    { type: "example", exampleEn: "Riya is taller than Neha.", examplePa: "ਰੀਆ ਨੇਹਾ ਨਾਲੋਂ ਲੰਮੀ ਹੈ।", highlightedWords: ["taller"], points: 1 },
-    { type: "question", id: "q_adj_comp_super_fastest", english_text: "Choose the superlative form.", punjabi_text: "ਸਰਵੋਤਮ ਰੂਪ ਚੁਣੋ।",
-      options: ["fast", "faster", "fastest"], correct_answer: "fastest", points: 5,
-      hint: { en: "Superlative = the MOST (-est).", pa: "ਸਰਵੋਤਮ = ਸਭ ਤੋਂ (-est)।" },
-      explanation: { en: "fast → fastest means #1 in a group.", pa: "fast → fastest = ਸਮੂਹ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼।" },
-      workedExample: { en: "He is the fastest runner.", pa: "ਉਹ ਸਭ ਤੋਂ ਤੇਜ਼ ਦੌੜਾਕ ਹੈ।", highlight: { en: ["fastest"], pa: ["ਸਭ ਤੋਂ"] } }
-    },
-    { type: "question", id: "q_adj_comp_sentence_taller", english_text: "Pick the sentence with a comparative.", punjabi_text: "ਤੁਲਨਾਤਮਕ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
-      options: ["He is tall.", "He is taller.", "He is the tallest."], correct_answer: "He is taller.", points: 5,
-      hint: { en: "Comparative = comparing two (often -er).", pa: "ਤੁਲਨਾਤਮਕ = ਦੋ ਦੀ ਤੁਲਨਾ (-er)।" },
-      explanation: { en: "tall → taller compares two people/things.", pa: "tall → taller ਦੋ ਦੀ ਤੁਲਨਾ ਕਰਦਾ ਹੈ।" },
-      workedExample: { en: "This bag is bigger.", pa: "ਇਹ ਬੈਗ ਵੱਡਾ ਹੈ।", highlight: { en: ["bigger"], pa: ["ਵੱਡਾ"] } }
-    },
-    { type: "question", english_text: "Which is the comparative of 'good'?", punjabi_text: "'good' ਦਾ ਤੁਲਨਾਤਮਕ ਕੀ ਹੈ?",
-      options: ["gooder", "better", "goodest"], correct_answer: "better", points: 5,
-      examples: [
-        { sentenceEn: "This book is better than that one.", sentencePa: "ਇਹ ਕਿਤਾਬ ਉਸ ਨਾਲੋਂ ਬਿਹਤਰ ਹੈ।", explainEn: "'better' is the comparative of 'good'.", explainPa: "'better' 'good' ਦਾ ਤੁਲਨਾਤਮਕ ਹੈ।", highlight: "better" }
-      ]
-    },
-    { type: "question", english_text: "Complete: My house is ___ than yours.", punjabi_text: "ਪੂਰਾ ਕਰੋ: My house is ___ than yours.",
-      options: ["big", "bigger", "biggest"], correct_answer: "bigger", points: 5,
-      examples: [
-        { sentenceEn: "His car is bigger than mine.", sentencePa: "ਉਸ ਦੀ ਕਾਰ ਮੇਰੀ ਨਾਲੋਂ ਵੱਡੀ ਹੈ।", explainEn: "Use comparative with 'than'.", explainPa: "'than' ਦੇ ਨਾਲ ਤੁਲਨਾਤਮਕ ਵਰਤੋ।", highlight: "bigger" }
-      ]
-    }
-  ]
-};
-
-// L_ADJ_VS_ADV_01 — Adjectives vs Adverbs
-__RAW_LESSONS["L_ADJ_VS_ADV_01"] = {
-  metadata: {
-    titleEn: "Adjectives vs Adverbs",
-    titlePa: "ਵਿਸ਼ੇਸ਼ਣ ਵਸ. ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
-    labelEn: "Adjectives vs Adverbs",
-    labelPa: "ਵਿਸ਼ੇਸ਼ਣ ਵਸ. ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
-    trackId: "T_DESCRIBE",
-    objective: {
-      titleEn: "Learn: Describe Nouns vs Actions",
-      titlePa: "ਸਿੱਖੋ: ਨਾਮ ਵਸ. ਕੰਮ ਦੀ ਵਰਣਨਾ",
-      descEn: "Use adjectives for nouns and adverbs for verbs.",
-      descPa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਮ ਲਈ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕੰਮ ਲਈ ਵਰਤੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Adjectives describe nouns (a red bag). Adverbs describe verbs (runs quickly).",
-      contentPa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਮ ਦੀ ਵਰਣਨਾ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕੰਮ ਦੀ।", points: 1 },
-    { type: "example", exampleEn: "She sings beautifully.", examplePa: "ਉਹ ਸੁੰਦਰਤਾ ਨਾਲ ਗਾਂਦੀ ਹੈ।", highlightedWords: ["beautifully"], points: 1 },
-    { type: "question", id: "q_adj_vs_adv_choose_quickly", english_text: "Choose the adverb.", punjabi_text: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
-      options: ["happy", "quickly", "red"], correct_answer: "quickly", points: 5,
-      hint: { en: "Adverb = tells HOW.", pa: "Adverb = ਕਿਵੇਂ?" },
-      explanation: { en: "‘quickly’ describes an action (a verb).", pa: "‘quickly’ ਕੰਮ/ਕਿਰਿਆ ਨੂੰ ਦੱਸਦਾ ਹੈ।" },
-      workedExample: { en: "He runs quickly.", pa: "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦਾ ਹੈ।", highlight: { en: ["quickly"], pa: ["ਤੇਜ਼ੀ ਨਾਲ"] } }
-    },
-    { type: "question", id: "q_adj_vs_adv_choose_blue", english_text: "Which word is an adjective?", punjabi_text: "ਕਿਹੜਾ ਸ਼ਬਦ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
-      options: ["carefully", "blue", "slowly"], correct_answer: "blue", points: 5,
-      hint: { en: "Adjective = describes a noun (thing).", pa: "ਵਿਸ਼ੇਸ਼ਣ = ਨਾਮ/ਚੀਜ਼ ਨੂੰ ਦੱਸਦਾ ਹੈ।" },
-      explanation: { en: "‘blue’ describes a thing: blue sky/ball.", pa: "‘blue’ ਚੀਜ਼ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।" },
-      workedExample: { en: "a blue bag", pa: "ਨੀਲਾ ਬੈਗ", highlight: { en: ["blue"], pa: ["ਨੀਲਾ"] } }
-    },
-    { type: "question", english_text: "She sings ___.", punjabi_text: "She sings ___.",
-      options: ["beautiful", "beautifully", "beauty"], correct_answer: "beautifully", points: 5,
-      examples: [
-        { sentenceEn: "She sings beautifully.", sentencePa: "ਉਹ ਸੁੰਦਰਤਾ ਨਾਲ ਗਾਂਦੀ ਹੈ।", explainEn: "Adverbs modify verbs (how she sings).", explainPa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ ਨੂੰ ਮੋਡੀਫਾਈ ਕਰਦੇ ਹਨ।", highlight: "beautifully" }
-      ]
-    },
-    { type: "question", english_text: "Complete: The ___ dog is running.", punjabi_text: "ਪੂਰਾ ਕਰੋ: The ___ dog is running.",
-      options: ["quickly", "quick", "quicker"], correct_answer: "quick", points: 5,
-      examples: [
-        { sentenceEn: "The quick dog is running.", sentencePa: "ਤੇਜ਼ ਕੁੱਤਾ ਦੌੜ ਰਿਹਾ ਹੈ।", explainEn: "Adjectives describe nouns (what kind of dog).", explainPa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਮ ਦੀ ਵਰਣਨਾ ਕਰਦੇ ਹਨ।", highlight: "quick" }
-      ]
-    }
-  ]
-};
-
-// L_PREP_PLACE_MOVE_01 — Prepositions (place/movement)
-__RAW_LESSONS["L_PREP_PLACE_MOVE_01"] = {
-  metadata: {
-    titleEn: "Prepositions: Place/Movement",
-    titlePa: "ਪੂਰਵ-ਬੋਧਕ: ਥਾਂ/ਹਿਲਚਲ",
-    labelEn: "Prepositions: Place/Movement",
-    labelPa: "ਪੂਰਵ-ਬੋਧਕ: ਥਾਂ/ਹਿਲਚਲ",
-    trackId: "T_SENTENCE",
-    objective: {
-      titleEn: "Learn: in/on/under/into/across",
-      titlePa: "ਸਿੱਖੋ: in/on/under/into/across",
-      descEn: "Use place & movement prepositions in sentences.",
-      descPa: "ਵਾਕਾਂ ਵਿੱਚ ਥਾਂ ਅਤੇ ਹਿਲਚਲ ਦੇ ਪੂਰਵ-ਬੋਧਕ ਵਰਤੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Prepositions show relationships of place or movement.", contentPa: "ਪੂਰਵ-ਬੋਧਕ ਥਾਂ ਜਾਂ ਹਿਲਚਲ ਦਾ ਸੰਬੰਧ ਦਿਖਾਉਂਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "The ball is under the table.", examplePa: "ਗੇਂਦ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।", highlightedWords: ["under"], points: 1 },
-    { type: "question", english_text: "Choose the correct preposition.", punjabi_text: "ਸਹੀ ਪੂਰਵ-ਬੋਧਕ ਚੁਣੋ।",
-      options: ["in", "quickly", "happy"], correct_answer: "in", points: 5 },
-    { type: "question", english_text: "He walked ____ the bridge.", punjabi_text: "ਉਹ ਪੁਲ ____ ਤੁਰਿਆ।",
-      options: ["across", "blue", "slowly"], correct_answer: "across", points: 5 },
-    { type: "question", english_text: "The book is ____ the shelf.", punjabi_text: "ਕਿਤਾਬ ਸ਼ੈਲਫ ____ ਹੈ।",
-      options: ["on", "under", "into"], correct_answer: "on", points: 5,
-      examples: [
-        { sentenceEn: "The book is on the shelf.", sentencePa: "ਕਿਤਾਬ ਸ਼ੈਲਫ ਉੱਪਰ ਹੈ।", explainEn: "'on' shows position on a surface.", explainPa: "'on' ਸਤ੍ਹਾ ਉੱਪਰ ਦਾ ਸਥਾਨ ਦੱਸਦਾ ਹੈ।", highlight: "on" }
-      ]
-    },
-    { type: "question", english_text: "The cat is ____ the box.", punjabi_text: "ਬਿੱਲੀ ਡੱਬਾ ____ ਹੈ।",
-      options: ["under", "over", "next"], correct_answer: "under", points: 5,
-      examples: [
-        { sentenceEn: "The cat is under the table.", sentencePa: "ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।", explainEn: "'under' means below.", explainPa: "'under' ਮਤਲਬ ਹੇਠਾਂ।", highlight: "under" }
-      ]
-    },
-    { type: "question", english_text: "She ran ____ the park.", punjabi_text: "ਉਹ ਪਾਰਕ ____ ਦੌੜੀ।",
-      options: ["into", "from", "over"], correct_answer: "into", points: 5,
-      examples: [
-        { sentenceEn: "She ran into the park.", sentencePa: "ਉਹ ਪਾਰਕ ਵਿੱਚ ਦੌੜੀ।", explainEn: "'into' shows movement toward a place.", explainPa: "'into' ਥਾਂ ਵੱਲ ਹਿਲਚਲ ਦੱਸਦਾ ਹੈ।", highlight: "into" }
-      ]
-    }
-  ]
-};
-
-// L_PREP_TIME_01 — Prepositions (time)
-__RAW_LESSONS["L_PREP_TIME_01"] = {
-  metadata: {
-    titleEn: "Prepositions: Time",
-    titlePa: "ਪੂਰਵ-ਬੋਧਕ: ਸਮਾਂ",
-    labelEn: "Prepositions: Time",
-    labelPa: "ਪੂਰਵ-ਬੋਧਕ: ਸਮਾਂ",
-    trackId: "T_SENTENCE",
-    objective: {
-      titleEn: "Learn: at/on/in/since/for/by",
-      titlePa: "ਸਿੱਖੋ: at/on/in/since/for/by",
-      descEn: "Use common time prepositions accurately.",
-      descPa: "ਆਮ ਸਮੇਂ ਵਾਲੇ ਪੂਰਵ-ਬੋਧਕ ਠੀਕ ਵਰਤੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Use at (exact time), on (days), in (months/years).",
-      contentPa: "at (ਠੀਕ ਸਮਾਂ), on (ਦਿਨ), in (ਮਹੀਨੇ/ਸਾਲ)।", points: 1 },
-    { type: "example", exampleEn: "School starts at 8 AM on Monday in June.", examplePa: "ਸਕੂਲ 8 ਵਜੇ, ਸੋਮਵਾਰ ਨੂੰ, ਜੂਨ ਵਿੱਚ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।", highlightedWords: ["at", "on", "in"], points: 1 },
-    { type: "question", english_text: "We meet ___ Sunday.", punjabi_text: "ਅਸੀਂ ___ ਐਤਵਾਰ ਨੂੰ ਮਿਲਦੇ ਹਾਂ।",
-      options: ["on", "at", "in"], correct_answer: "on", points: 5 },
-    { type: "question", english_text: "He lived here ___ 2019.", punjabi_text: "ਉਹ ਇੱਥੇ ___ 2019 ਤੋਂ ਰਹਿ ਰਿਹਾ ਹੈ।",
-      options: ["since", "for", "by"], correct_answer: "since", points: 5 },
-    { type: "question", english_text: "School starts ___ 8 AM.", punjabi_text: "ਸਕੂਲ ___ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।",
-      options: ["on", "at", "in"], correct_answer: "at", points: 5,
-      examples: [
-        { sentenceEn: "School starts at 8 AM.", sentencePa: "ਸਕੂਲ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।", explainEn: "Use 'at' for exact times.", explainPa: "'at' ਠੀਕ ਸਮੇਂ ਲਈ।", highlight: "at" }
-      ]
-    },
-    { type: "question", english_text: "They waited ___ an hour.", punjabi_text: "ਉਨ੍ਹਾਂ ___ ਘੰਟੇ ਦੀ ਉਡੀਕ ਕੀਤੀ।",
-      options: ["since", "for", "during"], correct_answer: "for", points: 5,
-      examples: [
-        { sentenceEn: "She waited for two hours.", sentencePa: "ਉਹ ਦੋ ਘੰਟੇ ਉਡੀਕ ਕਰਦੀ ਰਹੀ।", explainEn: "Use 'for' with a duration.", explainPa: "'for' ਸਮਾਨਾਵਧੀ ਨਾਲ।", highlight: "for" }
-      ]
-    },
-    { type: "question", english_text: "She's been here ___ Monday.", punjabi_text: "ਉਹ ___ ਸੋਮਵਾਰ ਨੋਂ ਇੱਥੇ ਹੈ।",
-      options: ["since", "for", "at"], correct_answer: "since", points: 5,
-      examples: [
-        { sentenceEn: "We've been friends since 2020.", sentencePa: "ਅਸੀਂ 2020 ਤੋਂ ਦੋਸਤ ਹਾਂ।", explainEn: "Use 'since' with a start point.", explainPa: "'since' ਬਿਨਾਂ ਦੇ ਨਾਲ।", highlight: "since" }
-      ]
-    }
-  ]
-};
-
-// L_CONJ_JOINING_01 — Conjunctions
-__RAW_LESSONS["L_CONJ_JOINING_01"] = {
-  metadata: {
-    titleEn: "Conjunctions: Joining Ideas",
-    titlePa: "ਸੰਯੋਜਕ: ਖ਼ਿਆਲ ਜੋੜਨਾ",
-    labelEn: "Conjunctions: Joining Ideas",
-    labelPa: "ਸੰਯੋਜਕ: ਖ਼ਿਆਲ ਜੋੜਨਾ",
-    trackId: "T_SENTENCE",
-    objective: {
-      titleEn: "Learn: and/but/or/so/because",
-      titlePa: "ਸਿੱਖੋ: and/but/or/so/because",
-      descEn: "Join words and clauses with common conjunctions.",
-      descPa: "ਆਮ ਸੰਯੋਜਕਾਂ ਨਾਲ ਸ਼ਬਦ ਅਤੇ ਵਾਕ-ਖੰਡ ਜੋੜੋ।",
-      pointsAvailable: 12
-    },
-    difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Conjunctions connect words or clauses (and, but, or).",
-      contentPa: "ਸੰਯੋਜਕ ਸ਼ਬਦਾਂ ਜਾਂ ਵਾਕ-ਖੰਡਾਂ ਨੂੰ ਜੋੜਦੇ ਹਨ (and, but, or)।", points: 1 },
-    { type: "example", exampleEn: "I like apples and bananas.", examplePa: "ਮੈਨੂੰ ਸੇਬ ਅਤੇ ਕੇਲੇ ਪਸੰਦ ਹਨ।", highlightedWords: ["and"], points: 1 },
-    { type: "question", english_text: "Choose the best conjunction.", punjabi_text: "ਸਭ ਤੋਂ ਵਧੀਆ ਸੰਯੋਜਕ ਚੁਣੋ।",
-      options: ["and", "blue", "slowly"], correct_answer: "and", points: 5 },
-    { type: "question", english_text: "He was tired, ___ he kept working.", punjabi_text: "ਉਹ ਥੱਕਿਆ ਹੋਇਆ ਸੀ, ___ ਉਹ ਕੰਮ ਕਰਦਾ ਰਿਹਾ।",
-      options: ["so", "but", "or"], correct_answer: "but", points: 5 },
-    { type: "question", english_text: "Complete: ___ you ready?", punjabi_text: "ਪੂਰਾ ਕਰੋ: ___ you ready?",
-      options: ["and", "but", "or"], correct_answer: "or", points: 5,
-      examples: [
-        { sentenceEn: "Would you like tea or coffee?", sentencePa: "ਤੁਹਾਨੂੰ ਚਾਹ ਜਾਂ ਕਾਫ਼ੀ ਪਸੰਦ ਹੈ?", explainEn: "'or' offers a choice.", explainPa: "'or' ਚੋਣ ਦਿੰਦਾ ਹੈ।", highlight: "or" }
-      ]
-    },
-    { type: "question", english_text: "She was late, ___ she ran.", punjabi_text: "ਉਹ ਦੇਰ ਸੀ, ___ ਉਹ ਭਾਜੀ।",
-      options: ["and", "because", "or"], correct_answer: "because", points: 5,
-      examples: [
-        { sentenceEn: "He didn't go because he was ill.", sentencePa: "ਉਹ ਬਿਮਾਰ ਸੀ ਇਸ ਲਈ ਨਹੀਂ ਗਿਆ।", explainEn: "'because' shows a reason.", explainPa: "'because' ਕਾਰਨ ਦੱਸਦਾ ਹੈ।", highlight: "because" }
-      ]
-    },
-    { type: "question", english_text: "You can come ___ stay home.", punjabi_text: "ਤੁਸੀਂ ਆ ਸਕਦੇ ਹੋ ___ ਘਰ ਰਹ ਸਕਦੇ ਹੋ।",
-      options: ["and", "but", "or"], correct_answer: "or", points: 5 }
-  ]
-};
-
-// L_INTERJECTIONS_01 — Interjections
-__RAW_LESSONS["L_INTERJECTIONS_01"] = {
-  metadata: {
-    titleEn: "Interjections: Feelings",
-    titlePa: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ: ਭਾਵਨਾ",
-    labelEn: "Interjections: Feelings",
-    labelPa: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ: ਭਾਵਨਾ",
-    trackId: "T_SENTENCE",
-    objective: {
-      titleEn: "Learn: Wow/Ouch/Oops/Shh/Phew",
-      titlePa: "ਸਿੱਖੋ: Wow/Ouch/Oops/Shh/Phew",
-      descEn: "Recognize interjections that show sudden feelings.",
-      descPa: "ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਣ ਵਾਲੇ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਪਛਾਣੋ।",
-      pointsAvailable: 10
-    },
-    difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Interjections express sudden emotion (Wow!, Ouch!).",
-      contentPa: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਦੇ ਹਨ (Wow!, Ouch!)।", points: 1 },
-    { type: "example", exampleEn: "Wow, this cake is tasty!", examplePa: "ਵਾਹ, ਇਹ ਕੇਕ ਸੁਆਦਲਾ ਹੈ!", highlightedWords: ["Wow"], points: 1 },
-    { type: "question", english_text: "Tap the interjection.", punjabi_text: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਚੁਣੋ।",
-      options: ["Wow", "cake", "tasty"], correct_answer: "Wow", points: 5 },
-    { type: "question", english_text: "Which shows pain?", punjabi_text: "ਕਿਹੜਾ ਦਰਦ ਦੱਸਦਾ ਹੈ?",
-      options: ["Phew!", "Ouch!", "Shh!"], correct_answer: "Ouch!", points: 3 },
-    { type: "question", english_text: "Choose the interjection.", punjabi_text: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਚੁਣੋ।",
-      options: ["help", "Oops!", "quickly"], correct_answer: "Oops!", points: 5,
-      examples: [
-        { sentenceEn: "Oops! I dropped the cup.", sentencePa: "ਅਰੇ! ਮੈਂ ਕੱਪ ਡੁੱਬਿਆ।", explainEn: "'Oops!' shows a mistake.", explainPa: "'Oops!' ਗਲਤੀ ਦਿਖਾਉਂਦਾ ਹੈ।", highlight: "Oops" }
-      ]
-    },
-    { type: "question", english_text: "Shh! means ___.", punjabi_text: "Shh! ਦਾ ਮਤਲਬ ___ ।",
-      options: ["be quiet", "hello", "goodbye"], correct_answer: "be quiet", points: 5,
-      examples: [
-        { sentenceEn: "Shh! The baby is sleeping.", sentencePa: "ਸਸ਼! ਬੱਚਾ ਸੋ ਰਿਹਾ ਹੈ।", explainEn: "'Shh!' requests silence.", explainPa: "'Shh!' ਖਾਮੋਸ਼ ਰਹਿਣ ਨੂੰ ਕਹਿੰਦਾ ਹੈ।", highlight: "Shh" }
-      ]
-    },
-    { type: "question", english_text: "Which shows relief?", punjabi_text: "ਕਿਹੜਾ ਰਾਹਤ ਦਿਖਾਉਂਦਾ ਹੈ?",
-      options: ["Wow!", "Phew!", "Yay!"], correct_answer: "Phew!", points: 5,
-      examples: [
-        { sentenceEn: "Phew! That was close.", sentencePa: "ਵਾ! ਇਹ ਲਗਭਗ ਸੀ।", explainEn: "'Phew!' shows relief.", explainPa: "'Phew!' ਰਾਹਤ ਦੀ ਭਾਵਨਾ ਦੀ ਨਿਸ਼ਾਨੀ ਹੈ।", highlight: "Phew" }
-      ]
-    }
-  ]
-};
-
-// Stage 1: T_WORDS Lessons
-__RAW_LESSONS["L_NOUNS_BASICS_01"] = {
-  metadata: {
-    titleEn: "Noun Basics", titlePa: "ਨਾਮ ਮੁੱਢ",
-    trackId: "T_WORDS", objective: { titleEn: "Learn: Nouns", titlePa: "ਸਿੱਖੋ: ਨਾਮ",
-    descEn: "Identify what nouns are.", descPa: "ਨਾਮ ਕੀ ਹਨ ਜਾਣੋ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "A noun is a word for a person, place, animal, or thing.",
-      contentPa: "ਨਾਮ ਇੱਕ ਵਿਅਕਤੀ, ਥਾਂ, ਜਾਨਵਰ ਜਾਂ ਚੀਜ਼ ਦਾ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ।", points: 1 },
-    { type: "example", exampleEn: "Dog, teacher, apple, London", examplePa: "ਕੁੱਤਾ, ਅਧਿਆਪਕ, ਸੇਬ, ਲੰਡਨ", points: 1 },
-    { type: "question", english_text: "Which is a noun?", punjabi_text: "ਕਿਹੜਾ ਨਾਮ ਹੈ?",
-      options: ["run", "cat", "quickly"], correct_answer: "cat", points: 5,
-      examples: [{ sentenceEn: "A cat is sleeping.", sentencePa: "ਬਿੱਲੀ ਸੋ ਰਹੀ ਹੈ।", explainEn: "Cat is a noun (an animal).", explainPa: "cat ਨਾਮ ਹੈ।", highlight: "cat" }]
-    },
-    { type: "question", english_text: "Pick the noun.", punjabi_text: "ਨਾਮ ਚੁਣੋ।",
-      options: ["happy", "book", "run"], correct_answer: "book", points: 5,
-      examples: [{ sentenceEn: "I read a book.", sentencePa: "ਮੈਂ ਕਿਤਾਬ ਪੜ੍ਹਦਾ ਹਾਂ।", explainEn: "Book is a noun.", explainPa: "book ਨਾਮ ਹੈ।", highlight: "book" }]
-    },
-    { type: "question", english_text: "Find the noun in: She played in the garden.",
-      punjabi_text: "ਵਾਕ ਵਿਚ ਨਾਮ ਲੱਭੋ: She played in the garden.",
-      options: ["played", "She", "garden"], correct_answer: "garden", points: 5,
-      examples: [{ sentenceEn: "We went to the garden.", sentencePa: "ਅਸੀਂ ਬਾਗ ਗਏ।", explainEn: "Garden is a noun (a place).", explainPa: "garden ਥਾਂ ਦਾ ਨਾਮ ਹੈ।", highlight: "garden" }]
-    },
-    { type: "question", english_text: "Nouns can be people. Which is a person?",
-      punjabi_text: "ਨਾਮ ਵਿਅਕਤੀ ਹੋ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਵਿਅਕਤੀ ਹੈ?",
-      options: ["doctor", "beautiful", "quickly"], correct_answer: "doctor", points: 5,
-      examples: [{ sentenceEn: "The doctor helped me.", sentencePa: "ਡਾਕਟਰ ਨੇ ਮੇਰੀ ਮਦਦ ਕੀਤੀ।", explainEn: "Doctor is a noun (a person).", explainPa: "doctor ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਹੈ।", highlight: "doctor" }]
-    },
-    { type: "question", english_text: "Which word is NOT a noun?",
-      punjabi_text: "ਕਿਹੜਾ ਸ਼ਬਦ ਨਾਮ ਨਹੀਂ ਹੈ?",
-      options: ["table", "laugh", "phone"], correct_answer: "laugh", points: 5,
-      examples: [{ sentenceEn: "Don't laugh loudly.", sentencePa: "ਰੋਵ ਮਤ ਹਾਸੋ।", explainEn: "Laugh is a verb (an action).", explainPa: "laugh ਇੱਕ ਕਿਰਿਆ ਹੈ।", highlight: "laugh" }]
-    },
-    { type: "question", english_text: "What type of noun is 'India'?",
-      punjabi_text: "'India' ਕਿਸ ਤਰ੍ਹਾਂ ਦਾ ਨਾਮ ਹੈ?",
-      options: ["common noun", "proper noun", "action noun"], correct_answer: "proper noun", points: 5,
-      examples: [{ sentenceEn: "I live in India.", sentencePa: "ਮੈਂ ਭਾਰਤ ਵਿੱਚ ਰਹਿੰਦਾ ਹਾਂ।", explainEn: "India is a proper noun (a specific place).", explainPa: "India ਖਾਸ ਥਾਂ ਦਾ ਨਾਮ ਹੈ।", highlight: "India" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_PRONOUNS_BASICS_01"] = {
-  metadata: {
-    titleEn: "Pronoun Basics", titlePa: "ਸਰਵਨਾਮ ਮੁੱਢ",
-    trackId: "T_WORDS", objective: { titleEn: "Learn: Pronouns", titlePa: "ਸਿੱਖੋ: ਸਰਵਨਾਮ",
-    descEn: "Pronouns replace nouns.", descPa: "ਸਰਵਨਾਮ ਨਾਮ ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Pronouns replace nouns (I, you, he, she, it, we, they).",
-      contentPa: "ਸਰਵਨਾਮ ਨਾਮ ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "She plays. They run. It is here.", examplePa: "ਉਹ ਖੇਡਦੀ ਹੈ। ਉਹ ਦੌੜਦੇ ਹਨ।", points: 1 },
-    { type: "question", english_text: "Pick the pronoun.", punjabi_text: "ਸਰਵਨਾਮ ਚੁਣੋ।",
-      options: ["John", "He", "apple"], correct_answer: "He", points: 5,
-      examples: [{ sentenceEn: "He went to school.", sentencePa: "ਉਹ ਸਕੂਲ ਗਿਆ।", explainEn: "He is a pronoun.", explainPa: "He ਸਰਵਨਾਮ ਹੈ।", highlight: "He" }]
-    },
-    { type: "question", english_text: "Which is a pronoun?", punjabi_text: "ਕਿਹੜਾ ਸਰਵਨਾਮ ਹੈ?",
-      options: ["dog", "they", "run"], correct_answer: "they", points: 5,
-      examples: [{ sentenceEn: "They like pizza.", sentencePa: "ਉਹ ਪਿਜ਼ਾ ਪਸੰਦ ਕਰਦੇ ਹਨ।", explainEn: "They replaces a group.", explainPa: "They ਗਰੁੱਪ ਦੀ ਥਾਂ।", highlight: "They" }]
-    },
-    { type: "question", english_text: "Complete: ___ am happy.",
-      punjabi_text: "ਪੂਰਾ ਕਰੋ: ___ am happy.",
-      options: ["We", "I", "You"], correct_answer: "I", points: 5,
-      examples: [{ sentenceEn: "I am happy.", sentencePa: "ਮੈਂ ਖੁਸ਼ ਹਾਂ।", explainEn: "I is used for yourself.", explainPa: "I ਆਪ ਲਈ।", highlight: "I" }]
-    },
-    { type: "question", english_text: "What pronoun replaces 'Mary'?",
-      punjabi_text: "'Mary' ਦੀ ਥਾਂ ਕਿਹੜਾ ਸਰਵਨਾਮ ਆਉਂਦਾ ਹੈ?",
-      options: ["He", "She", "It"], correct_answer: "She", points: 5,
-      examples: [{ sentenceEn: "Mary is smart. She studies hard.", sentencePa: "Mary ਹੋਸ਼ਿਆਰ ਹੈ। ਉਹ ਸਖਤ ਪੜ੍ਹਦੀ ਹੈ।", explainEn: "She replaces Mary (female).", explainPa: "She Mary ਦੀ ਥਾਂ।", highlight: "She" }]
-    },
-    { type: "question", english_text: "Choose the sentence using pronouns correctly.",
-      punjabi_text: "ਸਰਵਨਾਮ ਦੀ ਸਹੀ ਵਰਤੋਂ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
-      options: ["Him goes to school", "He goes to school", "They goes to school"], correct_answer: "He goes to school", points: 5,
-      examples: [{ sentenceEn: "They go to school.", sentencePa: "ਉਹ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।", explainEn: "They (plural) + go (plural verb).", explainPa: "They + go ਸਹੀ ਮੇਲ ਹੈ।", highlight: "They go" }]
-    },
-    { type: "question", english_text: "What does 'we' mean?",
-      punjabi_text: "'we' ਦਾ ਮਤਲਬ ਕੀ ਹੈ?",
-      options: ["just you", "me and others", "just one person"], correct_answer: "me and others", points: 5,
-      examples: [{ sentenceEn: "We play together.", sentencePa: "ਅਸੀਂ ਇਕੱਠੇ ਖੇਡਦੇ ਹਾਂ।", explainEn: "We = me + other people.", explainPa: "We ਮੇरे ਅਤੇ ਹੋਰਾਂ ਨਾਲ।", highlight: "We" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_SINGULAR_PLURAL_01"] = {
-  metadata: {
-    titleEn: "Singular & Plural", titlePa: "ਏਕ ਵਚਨ / ਬਹੁ ਵਚਨ",
-    trackId: "T_WORDS", objective: { titleEn: "Learn: Numbers", titlePa: "ਸਿੱਖੋ: ਸੰਖਿਆ",
-    descEn: "One vs. many.", descPa: "ਇੱਕ ਬਨਾਮ ਕਈ।", pointsAvailable: 32 }, difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Singular = one. Plural = more than one.",
-      contentPa: "ਏਕ = ਇੱਕ। ਬਹੁ = ਇੱਕ ਤੋਂ ਵੱਧ।", points: 1 },
-    { type: "example", exampleEn: "cat (singular) → cats (plural)", examplePa: "cat → cats", points: 1 },
-    { type: "question", english_text: "Which is plural?", punjabi_text: "ਕਿਹੜਾ ਬਹੁਵਚਨ ਹੈ?",
-      options: ["book", "books"], correct_answer: "books", points: 5,
-      examples: [{ sentenceEn: "Many books are here.", sentencePa: "ਕਈ ਕਿਤਾਬਾਂ ਇੱਥੇ ਹਨ।", explainEn: "Books is plural.", explainPa: "books ਬਹੁਵਚਨ ਹੈ।", highlight: "books" }]
-    },
-    { type: "question", english_text: "Form plural of 'dog'.", punjabi_text: "'dog' ਦਾ ਬਹੁਵਚਨ ਬਣਾਓ।",
-      options: ["dog", "dogs", "doges"], correct_answer: "dogs", points: 5,
-      examples: [{ sentenceEn: "Three dogs are playing.", sentencePa: "ਤਿੰਨ ਕੁੱਤੇ ਖੇਡ ਰਹੇ ਹਨ।", explainEn: "Add -s for plural.", explainPa: "-s ਜੋੜ ਕੇ ਬਹੁਵਚਨ ਬਣਾਓ।", highlight: "dogs" }]
-    },
-    { type: "question", english_text: "Which is singular?", punjabi_text: "ਕਿਹੜਾ ਏਕਵਚਨ ਹੈ?",
-      options: ["chairs", "pencil", "apples"], correct_answer: "pencil", points: 5,
-      examples: [{ sentenceEn: "One pencil is red.", sentencePa: "ਇੱਕ ਪੈਨਸਿਲ ਲਾਲ ਹੈ।", explainEn: "Pencil is singular.", explainPa: "pencil ਏਕਵਚਨ ਹੈ।", highlight: "pencil" }]
-    },
-    { type: "question", english_text: "Form plural of 'box'.", punjabi_text: "'box' ਦਾ ਬਹੁਵਚਨ ਬਣਾਓ।",
-      options: ["boxs", "boxes", "box"], correct_answer: "boxes", points: 5,
-      examples: [{ sentenceEn: "I have two boxes.", sentencePa: "ਮੇ ਕੋਲ ਦੋ ਡੱਬੇ ਹਨ।", explainEn: "Words ending in x add -es.", explainPa: "x ਨਾਲ ਖ਼ਤਮ -es ਜੋੜੋ।", highlight: "boxes" }]
-    },
-    { type: "question", english_text: "Which pair is correct (singular/plural)?",
-      punjabi_text: "ਕਿਹੜਾ ਜੋੜਾ ਸਹੀ ਹੈ (ਇੱਕ/ਬਹੁ)?",
-      options: ["child/childs", "child/children", "child/childes"], correct_answer: "child/children", points: 5,
-      examples: [{ sentenceEn: "The children are playing.", sentencePa: "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।", explainEn: "Child is irregular (child → children).", explainPa: "child ਅਨਿਯਮਤ ਹੈ।", highlight: "children" }]
-    },
-    { type: "question", english_text: "Count the singular nouns: cat, dogs, apple, birds",
-      punjabi_text: "ਇੱਕਵਚਨ ਨਾਮਾਂ ਦੀ ਗਣਨਾ ਕਰੋ: cat, dogs, apple, birds",
-      options: ["one", "two", "three"], correct_answer: "two", points: 5,
-      examples: [{ sentenceEn: "I see a cat and an apple.", sentencePa: "ਮੈਂ ਇੱਕ ਬਿੱਲੀ ਅਤੇ ਇੱਕ ਸੇਬ ਵੇਖਦਾ ਹਾਂ।", explainEn: "Cat and apple are singular.", explainPa: "cat ਅਤੇ apple ਇੱਕਵਚਨ ਹਨ।", highlight: "cat, apple" }]
-    }
-  ]
-};
-
-// Stage 2: T_ACTIONS Lessons
-__RAW_LESSONS["L_ADVERB_BASICS_01"] = {
-  metadata: {
-    titleEn: "Adverb Basics", titlePa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਮੁੱਢ",
-    trackId: "T_ACTIONS", objective: { titleEn: "Learn: Adverbs", titlePa: "ਸਿੱਖੋ: ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
-    descEn: "Adverbs tell how actions happen.", descPa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦੇ ਹਨ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Adverbs modify verbs. Many end in -ly (quickly, slowly).",
-      contentPa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਅਕਸਰ -ly ਨਾਲ ਮੁੱਠ ਹੁੰਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "She runs quickly. He speaks softly.", examplePa: "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦੀ ਹੈ।", points: 1 },
-    { type: "question", id: "q_adverbs_pick_quickly", english_text: "Pick the adverb.", punjabi_text: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
-      options: ["happy", "quickly", "dog"], correct_answer: "quickly", points: 5,
-      hint: { en: "Adverb answers: how?", pa: "Adverb = ਕਿਵੇਂ?" },
-      explanation: { en: "Adverbs tell how an action happens.", pa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਦੱਸਦਾ ਹੈ।" },
-      workedExample: { en: "He talks softly.", pa: "ਉਹ ਹੌਲੀ ਬੋਲਦਾ ਹੈ।", highlight: { en: ["softly"], pa: ["ਹੌਲੀ"] } },
-      examples: [{ sentenceEn: "She works quickly.", sentencePa: "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਕੰਮ ਕਰਦੀ ਹੈ।", explainEn: "Quickly tells how she works.", explainPa: "quickly ਦੱਸਦਾ ਹੈ ਕਿਵੇਂ।", highlight: "quickly" }]
-    },
-    { type: "question", id: "q_adverbs_modifies_slowly", english_text: "Which modifies the verb?", punjabi_text: "ਕਿਹੜਾ ਕਿਰਿਆ ਨੂੰ ਮੋਡੀਫਾਈ ਕਰਦਾ ਹੈ?",
-      options: ["slow", "slowly", "slowness"], correct_answer: "slowly", points: 5,
-      hint: { en: "Look for the -ly word.", pa: "-ly ਵਾਲਾ ਸ਼ਬਦ ਲੱਭੋ।" },
-      explanation: { en: "‘slowly’ describes the verb (walk).", pa: "‘slowly’ ਕਿਰਿਆ (ਚਲੋ) ਨੂੰ ਦੱਸਦਾ ਹੈ।" },
-      workedExample: { en: "Run slowly.", pa: "ਹੌਲੀ ਦੌੜੋ।", highlight: { en: ["slowly"], pa: ["ਹੌਲੀ"] } },
-      examples: [{ sentenceEn: "Walk slowly.", sentencePa: "ਹੌਲੀ-ਹੌਲੀ ਚਲੋ।", explainEn: "Slowly is an adverb.", explainPa: "slowly ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।", highlight: "slowly" }]
-    },
-    { type: "question", id: "q_adverbs_complete_beautifully", english_text: "Complete: She dances ___.", punjabi_text: "ਪੂਰਾ ਕਰੋ: She dances ___.",
-      options: ["beautiful", "beautifully", "beauty"], correct_answer: "beautifully", points: 5,
-      hint: { en: "To tell ‘how’, use -ly.", pa: "“ਕਿਵੇਂ” ਲਈ -ly ਵਰਤੋ।" },
-      explanation: { en: "Dances needs an adverb: beautifully.", pa: "dances ਲਈ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ: beautifully।" },
-      workedExample: { en: "She sings loudly.", pa: "ਉਹ ਉੱਚੀ ਆਵਾਜ਼ ਨਾਲ ਗਾਂਦੀ ਹੈ।", highlight: { en: ["loudly"], pa: ["ਉੱਚੀ ਆਵਾਜ਼"] } },
-      examples: [{ sentenceEn: "She dances beautifully.", sentencePa: "ਉਹ ਸੁੰਦਰਤਾ ਨਾਲ ਨੱਚਦੀ ਹੈ।", explainEn: "Beautifully is an adverb.", explainPa: "beautifully ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।", highlight: "beautifully" }]
-    },
-    { type: "question", id: "q_adverbs_ly_honestly", english_text: "Which -ly word is an adverb?",
-      punjabi_text: "ਕਿਹੜਾ -ly ਸ਼ਬਦ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
-      options: ["friendly", "honestly", "lonely"], correct_answer: "honestly", points: 5,
-      hint: { en: "Which word tells HOW he spoke?", pa: "ਉਸਨੇ ਕਿਵੇਂ ਬੋਲਿਆ?" },
-      explanation: { en: "‘honestly’ tells the manner of speaking.", pa: "‘honestly’ ਬੋਲਣ ਦਾ ਤਰੀਕਾ ਦੱਸਦਾ ਹੈ।" },
-      workedExample: { en: "She answered honestly.", pa: "ਉਸਨੇ ਸੱਚ-ਸੱਚ ਜਵਾਬ ਦਿੱਤਾ।", highlight: { en: ["honestly"], pa: ["ਸੱਚ"] } },
-      examples: [{ sentenceEn: "He spoke honestly.", sentencePa: "ਉਸਨੇ ਸੱਚ ਨਾਲ ਬੋਲਿਆ।", explainEn: "Honestly modifies 'spoke' (verb).", explainPa: "honestly ਕਿਰਿਆ ਨੂੰ ਮੋਡੀਫਾਈ ਕਰਦਾ ਹੈ।", highlight: "honestly" }]
-    },
-    { type: "question", id: "q_adverbs_non_ly_fast", english_text: "The boy ran ___. Choose the adverb.",
-      punjabi_text: "ਲੜਕਾ ___ ਦੌੜਿਆ। ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
-      options: ["fast", "fastly", "rapid"], correct_answer: "fast", points: 5,
-      hint: { en: "Some adverbs don’t end in -ly.", pa: "ਕੁਝ adverbs -ly ਨਾਲ ਨਹੀਂ ਹੁੰਦੇ।" },
-      explanation: { en: "‘fast’ can be an adverb: ran fast.", pa: "‘fast’ adverb ਵੀ ਹੁੰਦਾ: ran fast।" },
-      workedExample: { en: "He ran fast.", pa: "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਿਆ।", highlight: { en: ["fast"], pa: ["ਤੇਜ਼ੀ ਨਾਲ"] } },
-      examples: [{ sentenceEn: "The boy ran fast.", sentencePa: "ਲੜਕਾ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਿਆ।", explainEn: "Fast tells how he ran.", explainPa: "fast ਕਿਵੇਂ ਦੌੜਿਆ ਦੱਸਦਾ ਹੈ।", highlight: "fast" }]
-    },
-    { type: "question", id: "q_adverbs_sentence_loudly", english_text: "Pick the sentence with an adverb.",
-      punjabi_text: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
-      options: ["She is happy", "She sings loudly", "She has a book"], correct_answer: "She sings loudly", points: 5,
-      hint: { en: "Find a word telling HOW.", pa: "“ਕਿਵੇਂ” ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ ਲੱਭੋ।" },
-      explanation: { en: "An adverb modifies a verb: sings loudly.", pa: "Adverb ਕਿਰਿਆ ਨੂੰ ਦੱਸਦਾ: sings loudly।" },
-      workedExample: { en: "He runs quickly.", pa: "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦਾ ਹੈ।", highlight: { en: ["quickly"], pa: ["ਤੇਜ਼ੀ ਨਾਲ"] } },
-      examples: [{ sentenceEn: "He played carefully.", sentencePa: "ਉਸਨੇ ਸਾਵਧਾਨੀ ਨਾਲ ਖੇਡਿਆ।", explainEn: "Carefully is an adverb.", explainPa: "carefully ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।", highlight: "carefully" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_SIMPLE_PRESENT_01"] = {
-  metadata: {
-    titleEn: "Simple Present", titlePa: "ਸਧਾਰਣ ਵਰਤਮਾਨ",
-    trackId: "T_ACTIONS", objective: { titleEn: "Learn: Present Tense", titlePa: "ਸਿੱਖੋ: ਵਰਤਮਾਨ",
-    descEn: "Actions happening now or regularly.", descPa: "ਕੰਮ ਹੁਣ ਜਾਂ ਰੋਜ਼ ਹੁੰਦੇ ਹਨ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Simple present: regular actions or current truth.",
-      contentPa: "ਸਧਾਰਣ ਵਰਤਮਾਨ: ਆਮ ਕੰਮ ਜਾਂ ਸਚਾਈ।", points: 1 },
-    { type: "example", exampleEn: "I eat. She runs. They play.", examplePa: "ਮੈਂ ਖਾਂਦਾ ਹਾਂ। ਉਹ ਦੌੜਦੀ ਹੈ।", points: 1 },
-    { type: "question", id: "q_present_is_walks", english_text: "Which is present tense?", punjabi_text: "ਕਿਹੜਾ ਵਰਤਮਾਨ ਕਾਲ ਹੈ?",
-      options: ["walks", "walked", "will walk"], correct_answer: "walks", points: 5,
-      hint: { en: "Present = happens regularly/now.", pa: "Present = ਹੁਣ/ਰੋਜ਼।" },
-      explanation: { en: "Simple present shows habits and routines.", pa: "ਸਧਾਰਣ ਵਰਤਮਾਨ = ਆਦਤਾਂ/ਰੋਜ਼ ਵਾਲੇ ਕੰਮ।" },
-      workedExample: { en: "I play every day.", pa: "ਮੈਂ ਹਰ ਦਿਨ ਖੇਡਦਾ ਹਾਂ।", highlight: { en: ["play"], pa: ["ਹਰ ਦਿਨ"] } },
-      examples: [{ sentenceEn: "She walks to school.", sentencePa: "ਉਹ ਸਕੂਲ ਜਾਂਦੀ ਹੈ।", explainEn: "Walks is simple present.", explainPa: "walks ਵਰਤਮਾਨ ਕਾਲ ਹੈ।", highlight: "walks" }]
-    },
-    { type: "question", id: "q_present_complete_runs", english_text: "Complete: He ___ every day.", punjabi_text: "ਪੂਰਾ ਕਰੋ: He ___ every day.",
-      options: ["runs", "ran", "will run"], correct_answer: "runs", points: 5,
-      hint: { en: "Every day = present habit.", pa: "ਹਰ ਦਿਨ = ਆਦਤ (present)।" },
-      explanation: { en: "With he/she/it, we often add -s: runs.", pa: "he/she/it ਨਾਲ ਅਕਸਰ -s: runs।" },
-      workedExample: { en: "She reads daily.", pa: "ਉਹ ਰੋਜ਼ ਪੜ੍ਹਦੀ ਹੈ।", highlight: { en: ["reads"], pa: ["ਰੋਜ਼"] } },
-      examples: [{ sentenceEn: "He runs every day.", sentencePa: "ਉਹ ਹਰ ਦਿਨ ਦੌੜਦਾ ਹੈ।", explainEn: "Runs is present.", explainPa: "runs ਵਰਤਮਾਨ ਕਾਲ ਹੈ।", highlight: "runs" }]
-    },
-    { type: "question", id: "q_present_pick_eats", english_text: "Pick the simple present.", punjabi_text: "ਸਧਾਰਣ ਵਰਤਮਾਨ ਚੁਣੋ।",
-      options: ["eats", "ate", "will eat"], correct_answer: "eats", points: 5,
-      hint: { en: "Present (she) often ends with -s.", pa: "she ਨਾਲ present ਅਕਸਰ -s ਹੁੰਦਾ।" },
-      explanation: { en: "‘eats’ = simple present for she.", pa: "‘eats’ = she ਲਈ ਵਰਤਮਾਨ।" },
-      workedExample: { en: "He plays.", pa: "ਉਹ ਖੇਡਦਾ ਹੈ।", highlight: { en: ["plays"], pa: ["ਖੇਡਦਾ"] } },
-      examples: [{ sentenceEn: "She eats breakfast.", sentencePa: "ਉਹ ਨਾਸ਼ਤਾ ਕਰਦੀ ਹੈ।", explainEn: "Eats is simple present.", explainPa: "eats ਵਰਤਮਾਨ ਕਾਲ ਹੈ।", highlight: "eats" }]
-    },
-    { type: "question", id: "q_present_doing_studies", english_text: "What is he doing?", punjabi_text: "ਉਹ ਕੀ ਕਰ ਰਿਹਾ ਹੈ?",
-      options: ["studies", "studied", "will study"], correct_answer: "studies", points: 5,
-      hint: { en: "Think: his routine (habit).", pa: "ਇਹ ਆਦਤ/ਰੂਟੀਨ ਵਾਲਾ ਕੰਮ ਹੈ।" },
-      explanation: { en: "Simple present answers “What does he do (usually)?”", pa: "ਸਧਾਰਣ ਵਰਤਮਾਨ = ਉਹ ਆਮ ਤੌਰ ਤੇ ਕੀ ਕਰਦਾ?" },
-      workedExample: { en: "He studies at night.", pa: "ਉਹ ਰਾਤ ਨੂੰ ਪੜ੍ਹਦਾ ਹੈ।", highlight: { en: ["studies"], pa: ["ਪੜ੍ਹਦਾ"] } },
-      examples: [{ sentenceEn: "He studies English.", sentencePa: "ਉਹ ਅੰਗਰੇਜ਼ੀ ਸਿੱਖਦਾ ਹੈ।", explainEn: "Studies (present) describes his habit.", explainPa: "studies ਉਸ ਦੀ ਆਦਤ ਹੈ।", highlight: "studies" }]
-    },
-    { type: "question", english_text: "Which sentence is present tense?",
-      punjabi_text: "ਕਿਹੜਾ ਵਾਕ ਵਰਤਮਾਨ ਕਾਲ ਵਿੱਚ ਹੈ?",
-      options: ["I played football", "I play football", "I will play football"], correct_answer: "I play football", points: 5,
-      examples: [{ sentenceEn: "She works as a teacher.", sentencePa: "ਉਹ ਅਧਿਆਪਕ ਦੇ ਤੌਰ ਤੇ ਕੰਮ ਕਰਦੀ ਹੈ।", explainEn: "Works shows her current job.", explainPa: "works ਉਸ ਦਾ ਮੌਜੂਦਾ ਕੰਮ।", highlight: "works" }]
-    },
-    { type: "question", id: "q_present_form_drink", english_text: "Form present: I ___ water daily.",
-      punjabi_text: "ਵਰਤਮਾਨ ਬਣਾਓ: I ___ water daily.",
-      options: ["drink", "drinks", "drinking"], correct_answer: "drink", points: 5,
-      hint: { en: "With I/we/they/you, use base verb.", pa: "I/we/they/you ਨਾਲ ਮੂਲ ਕਿਰਿਆ।" },
-      explanation: { en: "I + drink (no -s).", pa: "I + drink (-s ਨਹੀਂ)।" },
-      workedExample: { en: "We drink water.", pa: "ਅਸੀਂ ਪਾਣੀ ਪੀਂਦੇ ਹਾਂ।", highlight: { en: ["drink"], pa: ["ਪੀਂਦੇ"] } },
-      examples: [{ sentenceEn: "They drink milk.", sentencePa: "ਉਹ ਦੁੱਧ ਪੀਂਦੇ ਹਨ।", explainEn: "Drink (plural) is present.", explainPa: "drink ਵਰਤਮਾਨ ਕਾਲ ਹੈ।", highlight: "drink" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_SIMPLE_PAST_01"] = {
-  metadata: {
-    titleEn: "Simple Past", titlePa: "ਸਧਾਰਣ ਭੂਤਕਾਲ",
-    trackId: "T_ACTIONS", objective: { titleEn: "Learn: Past Tense", titlePa: "ਸਿੱਖੋ: ਭੂਤਕਾਲ",
-    descEn: "Actions that already happened.", descPa: "ਕੰਮ ਜੋ ਪਹਿਲਾਂ ਹੋ ਚੁੱਕੇ।", pointsAvailable: 32 }, difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Simple past: actions that finished. Most add -ed.",
-      contentPa: "ਸਧਾਰਣ ਭੂਤਕਾਲ: ਖ਼ਤਮ ਹੋ ਚੁੱਕੇ ਕੰਮ। ਆਮ ਤੌਰ ਤੇ -ed ਜੋੜੋ।", points: 1 },
-    { type: "example", exampleEn: "I played. She walked. They ran.", examplePa: "ਮੈਂ ਖੇਡਿਆ। ਉਹ ਚਲੀ।", points: 1 },
-    { type: "question", id: "q_past_is_played", english_text: "Which is past tense?", punjabi_text: "ਕਿਹੜਾ ਭੂਤਕਾਲ ਹੈ?",
-      options: ["plays", "played", "play"], correct_answer: "played", points: 5,
-      hint: { en: "Past = already happened.", pa: "Past = ਪਹਿਲਾਂ ਹੋ ਚੁੱਕਾ।" },
-      explanation: { en: "Many past verbs end in -ed.", pa: "ਕਈ ਭੂਤਕਾਲ ਵਿੱਚ -ed ਆਉਂਦਾ ਹੈ।" },
-      workedExample: { en: "I jumped.", pa: "ਮੈਂ ਛਾਲ ਮਾਰੀ।", highlight: { en: ["jumped"], pa: ["ਮਾਰੀ"] } },
-      examples: [{ sentenceEn: "She played football yesterday.", sentencePa: "ਕਲ ਉਹ ਫੁੱਟਬਾਲ ਖੇਡੀ।", explainEn: "Played is past tense.", explainPa: "played ਭੂਤਕਾਲ ਹੈ।", highlight: "played" }]
-    },
-    { type: "question", id: "q_past_form_walked", english_text: "Form past: 'walk'.", punjabi_text: "ਭੂਤਕਾਲ ਬਣਾਓ: 'walk'.",
-      options: ["walk", "walked", "walks"], correct_answer: "walked", points: 5,
-      hint: { en: "Add -ed.", pa: "ਅਖੀਰ ‘-ed’ ਜੋੜੋ।" },
-      explanation: { en: "walk → walked for past.", pa: "walk → walked (ਭੂਤਕਾਲ)।" },
-      workedExample: { en: "We walked home.", pa: "ਅਸੀਂ ਘਰ ਤੁਰ ਕੇ ਗਏ।", highlight: { en: ["walked"], pa: ["ਗਏ"] } },
-      examples: [{ sentenceEn: "They walked to school.", sentencePa: "ਉਹ ਸਕੂਲ ਚਲੇ ਗਏ।", explainEn: "Walked is past (walk + ed).", explainPa: "walked ਭੂਤਕਾਲ ਹੈ।", highlight: "walked" }]
-    },
-    { type: "question", id: "q_past_complete_ate", english_text: "Complete: We ___ pizza last week.", punjabi_text: "ਪੂਰਾ ਕਰੋ: We ___ pizza last week.",
-      options: ["eat", "ate", "eating"], correct_answer: "ate", points: 5,
-      hint: { en: "Eat has a special past form.", pa: "eat ਦਾ past ਵੱਖਰਾ ਹੁੰਦਾ ਹੈ।" },
-      explanation: { en: "eat → ate (not eated).", pa: "eat → ate (eated ਨਹੀਂ)।" },
-      workedExample: { en: "I ate an apple.", pa: "ਮੈਂ ਸੇਬ ਖਾਧਾ।", highlight: { en: ["ate"], pa: ["ਖਾਧਾ"] } },
-      examples: [{ sentenceEn: "We ate pizza yesterday.", sentencePa: "ਕਲ ਅਸੀਂ ਪਿਜ਼ਾ ਖਾਧਾ।", explainEn: "Ate is past (irregular).", explainPa: "ate ਭੂਤਕਾਲ ਹੈ।", highlight: "ate" }]
-    },
-    { type: "question", id: "q_past_time_yesterday", english_text: "What time word shows past?", punjabi_text: "ਕਿਹੜਾ ਸਮਾਂ ਭੂਤਕਾਲ ਦਿਖਾਉਂਦਾ ਹੈ?",
-      options: ["tomorrow", "yesterday", "next week"], correct_answer: "yesterday", points: 5,
-      hint: { en: "Past time word = yesterday.", pa: "ਭੂਤਕਾਲ ਦਾ ਸ਼ਬਦ = yesterday (ਕੱਲ)।" },
-      explanation: { en: "Yesterday tells it happened before today.", pa: "yesterday = ਅੱਜ ਤੋਂ ਪਹਿਲਾਂ।" },
-      workedExample: { en: "Yesterday I played.", pa: "ਕਲ ਮੈਂ ਖੇਡਿਆ।", highlight: { en: ["Yesterday"], pa: ["ਕਲ"] } },
-      examples: [{ sentenceEn: "I went yesterday.", sentencePa: "ਮੈਂ ਕਲ ਗਿਆ।", explainEn: "Yesterday = past time.", explainPa: "yesterday ਭੂਤਕਾਲ ਦਾ ਸਮਾਂ।", highlight: "yesterday" }]
-    },
-    { type: "question", id: "q_past_form_saw", english_text: "Form past tense: 'see'", punjabi_text: "ਭੂਤਕਾਲ ਬਣਾਓ: 'see'",
-      options: ["see", "seeд", "saw"], correct_answer: "saw", points: 5,
-      hint: { en: "See → ?", pa: "See ਦਾ past ਕੀ?" },
-      explanation: { en: "see → saw (special past form).", pa: "see → saw (ਵੱਖਰਾ ਰੂਪ)।" },
-      workedExample: { en: "I saw a bird.", pa: "ਮੈਂ ਪੰਛੀ ਵੇਖਿਆ।", highlight: { en: ["saw"], pa: ["ਵੇਖਿਆ"] } },
-      examples: [{ sentenceEn: "I saw a movie.", sentencePa: "ਮੈਂ ਇੱਕ ਫਿਲਮ ਵੇਖੀ।", explainEn: "Saw is irregular past.", explainPa: "saw ਅਨਿਯਮਤ ਭੂਤਕਾਲ।", highlight: "saw" }]
-    },
-    { type: "question", id: "q_past_completed_i_ate", english_text: "Which shows a completed action?",
-      punjabi_text: "ਕਿਹੜਾ ਪੂਰਾ ਹੋਇਆ ਕੰਮ ਦਿਖਾਉਂਦਾ ਹੈ?",
-      options: ["I eat", "I ate", "I will eat"], correct_answer: "I ate", points: 5,
-      hint: { en: "Completed = past form.", pa: "ਪੂਰਾ ਹੋਇਆ = past ਰੂਪ।" },
-      explanation: { en: "Past shows the action is already done.", pa: "ਭੂਤਕਾਲ = ਕੰਮ ਹੋ ਚੁੱਕਾ।" },
-      workedExample: { en: "I ate.", pa: "ਮੈਂ ਖਾਧਾ।", highlight: { en: ["ate"], pa: ["ਖਾਧਾ"] } },
-      examples: [{ sentenceEn: "She finished her homework.", sentencePa: "ਉਸਨੇ ਆਪਣਾ ਹੋਮਵਰਕ ਮੁਕਾ ਲਿਆ।", explainEn: "Finished (past) = already done.", explainPa: "finished ਪਹਿਲਾਂ ਜਾਂ ਪੂਰਾ ਹੋਇਆ।", highlight: "finished" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_SIMPLE_FUTURE_01"] = {
-  metadata: {
-    titleEn: "Simple Future", titlePa: "ਸਧਾਰਣ ਭਵਿੱਖ",
-    trackId: "T_ACTIONS", objective: { titleEn: "Learn: Future Tense", titlePa: "ਸਿੱਖੋ: ਭਵਿੱਖ",
-    descEn: "Actions that will happen.", descPa: "ਕੰਮ ਜੋ ਹੋਣਗੇ।", pointsAvailable: 32 }, difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Simple future: will + base verb.",
-      contentPa: "ਸਧਾਰਣ ਭਵਿੱਖ: will + ਮੂਲ ਸ਼ਬਦ।", points: 1 },
-    { type: "example", exampleEn: "I will go. She will run. They will play.", examplePa: "ਮੈਂ ਜਾਵਾਂਗਾ। ਉਹ ਦੌੜੇਗੀ।", points: 1 },
-    { type: "question", id: "q_future_is_will_visit", english_text: "Which is future?", punjabi_text: "ਕਿਹੜਾ ਭਵਿੱਖ ਕਾਲ ਹੈ?",
-      options: ["visits", "visited", "will visit"], correct_answer: "will visit", points: 5,
-      hint: { en: "Future = will + verb.", pa: "Future = will + ਕਿਰਿਆ।" },
-      explanation: { en: "Use ‘will’ for things that will happen later.", pa: "‘will’ ਨਾਲ ਭਵਿੱਖ ਵਾਲਾ ਕੰਮ ਦੱਸਦੇ ਹਾਂ।" },
-      workedExample: { en: "I will play.", pa: "ਮੈਂ ਖੇਡਾਂਗਾ/ਖੇਡਾਂਗੀ।", highlight: { en: ["will"], pa: ["ਗਾ", "ਗੀ"] } },
-      examples: [{ sentenceEn: "We will visit next week.", sentencePa: "ਅਗਲੇ ਹਫ਼ਤੇ ਅਸੀਂ ਜਾਵਾਂਗੇ।", explainEn: "Will visit is future.", explainPa: "will visit ਭਵਿੱਖ ਕਾਲ ਹੈ।", highlight: "will visit" }]
-    },
-    { type: "question", id: "q_future_complete_will_read", english_text: "Complete: I ___ a book tomorrow.", punjabi_text: "ਪੂਰਾ ਕਰੋ: I ___ a book tomorrow.",
-      options: ["read", "reads", "will read"], correct_answer: "will read", points: 5,
-      hint: { en: "Tomorrow = future.", pa: "Tomorrow = ਭਵਿੱਖ।" },
-      explanation: { en: "Tomorrow needs will + read.", pa: "tomorrow ਨਾਲ will + read।" },
-      workedExample: { en: "We will read later.", pa: "ਅਸੀਂ ਬਾਅਦ ਵਿੱਚ ਪੜ੍ਹਾਂਗੇ।", highlight: { en: ["will read"], pa: ["ਪੜ੍ਹਾਂਗੇ"] } },
-      examples: [{ sentenceEn: "She will read tomorrow.", sentencePa: "ਕਲ ਉਹ ਪੜ੍ਹੇਗੀ।", explainEn: "Will read is future.", explainPa: "will read ਭਵਿੱਖ ਕਾਲ ਹੈ।", highlight: "will read" }]
-    },
-    { type: "question", id: "q_future_pick_will_go", english_text: "Pick the future tense.", punjabi_text: "ਭਵਿੱਖ ਕਾਲ ਚੁਣੋ।",
-      options: ["goes", "went", "will go"], correct_answer: "will go", points: 5,
-      hint: { en: "Look for “will”.", pa: "“will” ਲੱਭੋ।" },
-      explanation: { en: "Future tense usually has ‘will’.", pa: "ਭਵਿੱਖ ਕਾਲ ਵਿੱਚ ਅਕਸਰ ‘will’ ਹੁੰਦਾ ਹੈ।" },
-      workedExample: { en: "He will go home.", pa: "ਉਹ ਘਰ ਜਾਵੇਗਾ।", highlight: { en: ["will go"], pa: ["ਜਾਵੇਗਾ"] } },
-      examples: [{ sentenceEn: "They will go next month.", sentencePa: "ਅਗਲੇ ਮਹੀਨੇ ਉਹ ਜਾਵਾਂਗੇ।", explainEn: "Will go is future.", explainPa: "will go ਭਵਿੱਖ ਕਾਲ ਹੈ।", highlight: "will go" }]
-    },
-    { type: "question", id: "q_future_time_tomorrow", english_text: "What time word shows future?", punjabi_text: "ਕਿਹੜਾ ਸਮਾਂ ਭਵਿੱਖ ਦਿਖਾਉਂਦਾ ਹੈ?",
-      options: ["yesterday", "now", "tomorrow"], correct_answer: "tomorrow", points: 5,
-      hint: { en: "Future time word = tomorrow.", pa: "ਭਵਿੱਖ ਦਾ ਸ਼ਬਦ = tomorrow (ਕੱਲ)।" },
-      explanation: { en: "Tomorrow means the next day (later).", pa: "tomorrow = ਅਗਲਾ ਦਿਨ।" },
-      workedExample: { en: "Tomorrow I will come.", pa: "ਕੱਲ ਮੈਂ ਆਵਾਂਗਾ।", highlight: { en: ["Tomorrow"], pa: ["ਕੱਲ"] } },
-      examples: [{ sentenceEn: "I will see you tomorrow.", sentencePa: "ਕਲ ਮੈਂ ਤੁਹਾਨੂੰ ਮਿਲਵਾਂ।", explainEn: "Tomorrow = future time.", explainPa: "tomorrow ਭਵਿੱਖ ਦਾ ਸਮਾਂ।", highlight: "tomorrow" }]
-    },
-    { type: "question", id: "q_future_form_will_bake", english_text: "Form future: I ___ cake next Sunday.",
-      punjabi_text: "ਭਵਿੱਖ ਬਣਾਓ: I ___ cake next Sunday.",
-      options: ["bake", "baked", "will bake"], correct_answer: "will bake", points: 5,
-      hint: { en: "Next Sunday = will + verb.", pa: "ਅਗਲਾ ਐਤਵਾਰ = will + ਕਿਰਿਆ।" },
-      explanation: { en: "Future plan: will bake.", pa: "ਭਵਿੱਖ ਦੀ ਯੋਜਨਾ: will bake।" },
-      workedExample: { en: "I will bake a cake.", pa: "ਮੈਂ ਕੇਕ ਬਨਾਵਾਂਗਾ।", highlight: { en: ["will bake"], pa: ["ਬਨਾਵਾਂ"] } },
-      examples: [{ sentenceEn: "She will bake cookies.", sentencePa: "ਉਹ ਕੂਕੀਜ਼ ਬਨਾਏਗੀ।", explainEn: "Will bake = future action.", explainPa: "will bake ਭਵਿੱਖ ਹੈ।", highlight: "will bake" }]
-    },
-    { type: "question", id: "q_future_not_yet_will_learn", english_text: "Which shows something NOT yet done?",
-      punjabi_text: "ਕਿਹੜਾ ਅਜੇ ਨਾ ਹੋਇਆ ਕੰਮ ਦਿਖਾਉਂਦਾ ਹੈ?",
-      options: ["I learned", "I learn", "I will learn"], correct_answer: "I will learn", points: 5,
-      hint: { en: "Not yet done = will.", pa: "ਅਜੇ ਨਹੀਂ = will।" },
-      explanation: { en: "‘will’ means it will happen later.", pa: "‘will’ = ਬਾਅਦ ਵਿੱਚ ਹੋਵੇਗਾ।" },
-      workedExample: { en: "I will learn tomorrow.", pa: "ਮੈਂ ਕੱਲ ਸਿੱਖਾਂਗਾ।", highlight: { en: ["will learn"], pa: ["ਸਿੱਖਾਂ"] } },
-      examples: [{ sentenceEn: "He will finish soon.", sentencePa: "ਉਹ ਜਲਦੀ ਜਾਂ ਪੂਰਾ ਕਰ ਲੇਵੇਗਾ।", explainEn: "Will finish = not yet done.", explainPa: "will finish ਅਜੇ ਨਹੀਂ ਹੋਇਆ।", highlight: "will finish" }]
-    }
-  ]
-};
-
-// Stage 3: T_DESCRIBE + T_SENTENCE Lessons
-__RAW_LESSONS["L_ADJECTIVE_BASICS_01"] = {
-  metadata: {
-    titleEn: "Adjective Basics", titlePa: "ਵਿਸ਼ੇਸ਼ਣ ਮੁੱਢ",
-    trackId: "T_DESCRIBE", objective: { titleEn: "Learn: Adjectives", titlePa: "ਸਿੱਖੋ: ਵਿਸ਼ੇਸ਼ਣ",
-    descEn: "Words that describe nouns.", descPa: "ਸ਼ਬਦ ਜੋ ਨਾਮ ਦੀ ਵਰਣਨਾ ਕਰਦੇ ਹਨ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Adjectives describe nouns (big, red, happy).",
-      contentPa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਮ ਦੀ ਵਰਣਨਾ ਕਰਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "A red apple. A big house. Happy children.", examplePa: "ਲਾਲ ਸੇਬ। ਵੱਡਾ ਘਰ। ਖੁਸ਼ ਬੱਚੇ।", points: 1 },
-    { type: "question", id: "q_adj_is_blue", english_text: "Which is an adjective?", punjabi_text: "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
-      options: ["blue", "run", "quickly"], correct_answer: "blue", points: 5,
-      hint: { en: "Adjective = describing word.", pa: "ਵਿਸ਼ੇਸ਼ਣ = ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ।" },
-      explanation: { en: "Adjectives tell what kind of noun.", pa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਮ ਬਾਰੇ ਦੱਸਦਾ (ਕਿਹੋ ਜਿਹਾ)।" },
-      workedExample: { en: "a red ball", pa: "ਲਾਲ ਗੇਂਦ", highlight: { en: ["red"], pa: ["ਲਾਲ"] } },
-      examples: [{ sentenceEn: "A blue sky.", sentencePa: "ਨੀਲਾ ਅਸਮਾਨ।", explainEn: "Blue describes the sky.", explainPa: "blue ਆਸਮਾਨ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।", highlight: "blue" }]
-    },
-    { type: "question", id: "q_adj_pick_tall", english_text: "Pick the adjective.", punjabi_text: "ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
-      options: ["tree", "tall", "grows"], correct_answer: "tall", points: 5,
-      hint: { en: "Which word tells size/shape?", pa: "ਕਿਹੜਾ ਸ਼ਬਦ ਆਕਾਰ ਦੱਸਦਾ?" },
-      explanation: { en: "‘tall’ describes the noun ‘tree’.", pa: "‘tall’ ‘tree’ ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ।" },
-      workedExample: { en: "a tall boy", pa: "ਲੰਬਾ ਮੁੰਡਾ", highlight: { en: ["tall"], pa: ["ਲੰਬਾ"] } },
-      examples: [{ sentenceEn: "A tall tree.", sentencePa: "ਲੰਬਾ ਦਰਖ਼ਤ।", explainEn: "Tall describes the tree.", explainPa: "tall ਦਰਖ਼ਤ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।", highlight: "tall" }]
-    },
-    { type: "question", id: "q_adj_complete_interesting", english_text: "Complete: An ___ book.", punjabi_text: "ਪੂਰਾ ਕਰੋ: An ___ book.",
-      options: ["interesting", "read", "quickly"], correct_answer: "interesting", points: 5,
-      hint: { en: "We need a describing word for book.", pa: "ਕਿਤਾਬ ਲਈ ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ ਚਾਹੀਦਾ।" },
-      explanation: { en: "Adjective goes before the noun: interesting book.", pa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਮ ਤੋਂ ਪਹਿਲਾਂ: interesting book।" },
-      workedExample: { en: "an easy game", pa: "ਆਸਾਨ ਖੇਡ", highlight: { en: ["easy"], pa: ["ਆਸਾਨ"] } },
-      examples: [{ sentenceEn: "An interesting book.", sentencePa: "ਦਿਲਚਸਪ ਕਿਤਾਬ।", explainEn: "Interesting describes the book.", explainPa: "interesting ਕਿਤਾਬ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।", highlight: "interesting" }]
-    },
-    { type: "question", id: "q_adj_is_sweet", english_text: "Which word is an adjective?", punjabi_text: "ਕਿਹੜਾ ਸ਼ਬਦ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
-      options: ["sweet", "eat", "walk"], correct_answer: "sweet", points: 5,
-      hint: { en: "Taste word = adjective.", pa: "ਸਵਾਦ ਵਾਲਾ ਸ਼ਬਦ = ਵਿਸ਼ੇਸ਼ਣ।" },
-      explanation: { en: "Sweet tells what kind of candy.", pa: "sweet ਦੱਸਦਾ ਕਿਹੋ ਜਿਹੀ ਮਿਠਾਈ।" },
-      workedExample: { en: "sweet mango", pa: "ਮਿੱਠਾ ਆਮ", highlight: { en: ["sweet"], pa: ["ਮਿੱਠਾ"] } },
-      examples: [{ sentenceEn: "Sweet candy.", sentencePa: "ਮਿੱਠੀ ਮਿਠਾਈ।", explainEn: "Sweet describes the candy.", explainPa: "sweet ਮਿਠਾਈ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।", highlight: "sweet" }]
-    },
-    { type: "question", english_text: "Adjectives can describe size. Which is size?",
-      punjabi_text: "ਵਿਸ਼ੇਸ਼ਣ ਆਕਾਰ ਦਾ ਵਰਣਨ ਕਰ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਆਕਾਰ ਹੈ?",
-      options: ["tiny", "happy", "cold"], correct_answer: "tiny", points: 5,
-      examples: [{ sentenceEn: "A tiny ant.", sentencePa: "ਬਹੁਤ ਛੋਟੀ ਚੀਂਟੀ।", explainEn: "Tiny describes size.", explainPa: "tiny ਆਕਾਰ ਦਾ ਵਰਣਨ ਹੈ।", highlight: "tiny" }]
-    },
-    { type: "question", id: "q_adj_sentence_smart", english_text: "Which sentence has an adjective?",
-      punjabi_text: "ਕਿਹੜੇ ਵਾਕ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
-      options: ["He runs", "She is smart", "I walked"], correct_answer: "She is smart", points: 5,
-      hint: { en: "Find the describing word.", pa: "ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ ਲੱਭੋ।" },
-      explanation: { en: "‘smart’ is an adjective describing a person.", pa: "‘smart’ ਵਿਅਕਤੀ ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ।" },
-      workedExample: { en: "He is brave.", pa: "ਉਹ ਬਹਾਦੁਰ ਹੈ।", highlight: { en: ["brave"], pa: ["ਬਹਾਦੁਰ"] } },
-      examples: [{ sentenceEn: "The smart student answered.", sentencePa: "ਹੋਸ਼ਿਆਰ ਵਿਦਿਆਰਥੀ ਨੇ ਜਵਾਬ ਦਿੱਤਾ।", explainEn: "Smart describes the student.", explainPa: "smart ਵਿਦਿਆਰਥੀ ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ।", highlight: "smart" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_PREPOSITION_BASICS_01"] = {
-  metadata: {
-    titleEn: "Preposition Basics", titlePa: "ਪੂਰਵ-ਬੋਧਕ ਮੁੱਢ",
-    trackId: "T_SENTENCE", objective: { titleEn: "Learn: Prepositions", titlePa: "ਸਿੱਖੋ: ਪੂਰਵ-ਬੋਧਕ",
-    descEn: "Relationship words.", descPa: "ਸੰਬੰਧ ਦੇ ਸ਼ਬਦ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Prepositions show position (in, on, under, between).",
-      contentPa: "ਪੂਰਵ-ਬੋਧਕ ਸਥਾਨ ਦਿਖਾਉਂਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "In the box. On the table. Under the bed.", examplePa: "ਡੱਬੇ ਵਿੱਚ। ਮੇਜ਼ ਉੱਪਰ। ਪਲੰਗ ਦੇ ਹੇਠਾਂ।", points: 1 },
-    { type: "question", english_text: "Pick the preposition.", punjabi_text: "ਪੂਰਵ-ਬੋਧਕ ਚੁਣੋ।",
-      options: ["to", "happy", "run"], correct_answer: "to", points: 5,
-      examples: [{ sentenceEn: "I went to school.", sentencePa: "ਮੈਂ ਸਕੂਲ ਗਿਆ।", explainEn: "To shows direction.", explainPa: "to ਦਿਸ਼ਾ ਦਿਖਾਉਂਦਾ ਹੈ।", highlight: "to" }]
-    },
-    { type: "question", english_text: "Complete: The cat is ___ the chair.", punjabi_text: "ਪੂਰਾ ਕਰੋ: The cat is ___ the chair.",
-      options: ["in", "run", "happy"], correct_answer: "in", points: 5,
-      examples: [{ sentenceEn: "The cat is in the house.", sentencePa: "ਬਿੱਲੀ ਘਰ ਵਿੱਚ ਹੈ।", explainEn: "In shows location.", explainPa: "in ਜਗ੍ਹਾ ਦੀ ਥਾਂ।", highlight: "in" }]
-    },
-    { type: "question", english_text: "Which is a preposition?", punjabi_text: "ਕਿਹੜਾ ਪੂਰਵ-ਬੋਧਕ ਹੈ?",
-      options: ["happy", "between", "walk"], correct_answer: "between", points: 5,
-      examples: [{ sentenceEn: "Between two trees.", sentencePa: "ਦੋ ਦਰਖ਼ਤਾਂ ਦੇ ਵਿਚਲੇ।", explainEn: "Between shows position.", explainPa: "between ਥਾਂ ਨੂੰ ਦਿਖਾਉਂਦਾ ਹੈ।", highlight: "between" }]
-    },
-    { type: "question", english_text: "The book is ___ the desk.", punjabi_text: "ਕਿਤਾਬ ___ ਮੇਜ਼ ਹੈ।",
-      options: ["on", "run", "big"], correct_answer: "on", points: 5,
-      examples: [{ sentenceEn: "The pen is on the table.", sentencePa: "ਪੈਨ ਮੇਜ਼ ਉੱਪਰ ਹੈ।", explainEn: "On shows surface position.", explainPa: "on ਸਤ੍ਹਾ ਤੇ ਜਗ੍ਹਾ।", highlight: "on" }]
-    },
-    { type: "question", english_text: "Which preposition shows time?", punjabi_text: "ਕਿਹੜਾ ਪੂਰਵ-ਬੋਧਕ ਸਮਾਂ ਦਿਖਾਉਂਦਾ ਹੈ?",
-      options: ["in", "at", "through"], correct_answer: "at", points: 5,
-      examples: [{ sentenceEn: "I arrive at 3 PM.", sentencePa: "ਮੈਂ 3 ਵਜੇ ਪਹੁੰਚਦਾ ਹਾਂ।", explainEn: "At shows specific time.", explainPa: "at ਖਾਸ ਸਮਾਂ ਦਿਖਾਉਂਦਾ ਹੈ।", highlight: "at" }]
-    },
-    { type: "question", english_text: "Pick the sentence with a preposition.",
-      punjabi_text: "ਪੂਰਵ-ਬੋਧਕ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
-      options: ["She is happy", "He goes under the bridge", "It is blue"], correct_answer: "He goes under the bridge", points: 5,
-      examples: [{ sentenceEn: "The bridge is over the river.", sentencePa: "ਪੁਲ ਨਦੀ ਉੱਪਰ ਹੈ।", explainEn: "Over is a preposition.", explainPa: "over ਪੂਰਵ-ਬੋਧਕ ਹੈ।", highlight: "over" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_CONJUNCTION_BASICS_01"] = {
-  metadata: {
-    titleEn: "Conjunction Basics", titlePa: "ਸੰਯੋਜਕ ਮੁੱਢ",
-    trackId: "T_SENTENCE", objective: { titleEn: "Learn: Conjunctions", titlePa: "ਸਿੱਖੋ: ਸੰਯੋਜਕ",
-    descEn: "Connecting words.", descPa: "ਜੋੜਨ ਵਾਲੇ ਸ਼ਬਦ।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Conjunctions connect ideas (and, but, or).",
-      contentPa: "ਸੰਯੋਜਕ ਵਿਚਾਰਾਂ ਨੂੰ ਜੋੜਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "Apples and oranges. Big but slow. Tea or coffee.", examplePa: "ਸੇਬ ਅਤੇ ਸੰਤਰੇ। ਵੱਡਾ ਪਰ ਹੌਲੀ।", points: 1 },
-    { type: "question", english_text: "Pick the conjunction.", punjabi_text: "ਸੰਯੋਜਕ ਚੁਣੋ।",
-      options: ["happy", "and", "run"], correct_answer: "and", points: 5,
-      examples: [{ sentenceEn: "Cats and dogs.", sentencePa: "ਬਿੱਲੀਆਂ ਅਤੇ ਕੁੱਤੇ।", explainEn: "And connects two nouns.", explainPa: "and ਦੋ ਨਾਮਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ।", highlight: "and" }]
-    },
-    { type: "question", english_text: "Complete: I like pizza ___ burger.", punjabi_text: "ਪੂਰਾ ਕਰੋ: I like pizza ___ burger.",
-      options: ["or", "and", "but"], correct_answer: "or", points: 5,
-      examples: [{ sentenceEn: "Tea or coffee?", sentencePa: "ਚਾਹ ਜਾਂ ਕਾਫ਼ੀ?", explainEn: "Or offers a choice.", explainPa: "or ਚੋਣ ਦਿੰਦਾ ਹੈ।", highlight: "or" }]
-    },
-    { type: "question", english_text: "Which is a conjunction?", punjabi_text: "ਕਿਹੜਾ ਸੰਯੋਜਕ ਹੈ?",
-      options: ["fast", "because", "blue"], correct_answer: "because", points: 5,
-      examples: [{ sentenceEn: "I am happy because you are here.", sentencePa: "ਮੈਂ ਖੁਸ਼ ਹਾਂ ਕਿਉਂਕਿ ਤੁਸੀਂ ਇੱਥੇ ਹੋ।", explainEn: "Because joins a reason.", explainPa: "because ਕਾਰਨ ਜੋੜਦਾ ਹੈ।", highlight: "because" }]
-    },
-    { type: "question", english_text: "This word shows contrast: ___", punjabi_text: "ਇਹ ਸ਼ਬਦ ਭਿੰਨਤਾ ਦਿਖਾਉਂਦਾ ਹੈ: ___",
-      options: ["and", "but", "or"], correct_answer: "but", points: 5,
-      examples: [{ sentenceEn: "He is tall but shy.", sentencePa: "ਉਹ ਲੰਬਾ ਪਰ ਸ਼ਰਮਾਲਾ ਹੈ।", explainEn: "But shows opposite ideas.", explainPa: "but ਵਿਪਰੀਤ ਵਿਚਾਰ ਜੋੜਦਾ ਹੈ।", highlight: "but" }]
-    },
-    { type: "question", english_text: "Choose the correct use of 'and'.",
-      punjabi_text: "'and' ਦੀ ਸਹੀ ਵਰਤੋਂ ਚੁਣੋ।",
-      options: ["Apples and oranges", "Run and quickly", "Happy and run"], correct_answer: "Apples and oranges", points: 5,
-      examples: [{ sentenceEn: "Pens and pencils.", sentencePa: "ਪੈਨ ਅਤੇ ਪੈਨਸਿਲਾਂ।", explainEn: "And joins similar words.", explainPa: "and ਸਮਾਨ ਸ਼ਬਦ ਜੋੜਦਾ ਹੈ।", highlight: "and" }]
-    },
-    { type: "question", english_text: "Conjunctions connect ___ together.",
-      punjabi_text: "ਸੰਯੋਜਕ ___ ਨੂੰ ਜੋੜਦੇ ਹਨ।",
-      options: ["letters", "words or ideas", "sounds"], correct_answer: "words or ideas", points: 5,
-      examples: [{ sentenceEn: "I like pizza and you like salad.", sentencePa: "ਮੈਂ ਪਿਜ਼ਾ ਪਸੰਦ ਕਰਦਾ ਹਾਂ ਅਤੇ ਤੁਸੀਂ ਸਲਾਦ ਪਸੰਦ ਕਰਦੇ ਹੋ।", explainEn: "And joins two ideas.", explainPa: "and ਦੋ ਵਿਚਾਰ ਜੋੜਦਾ ਹੈ।", highlight: "and" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_ARTICLE_BASICS_01"] = {
-  metadata: {
-    titleEn: "Article Basics", titlePa: "ਲੇਖ ਮੁੱਢ",
-    trackId: "T_SENTENCE", objective: { titleEn: "Learn: Articles", titlePa: "ਸਿੱਖੋ: ਲੇਖ",
-    descEn: "A, An, The.", descPa: "A, An, The।", pointsAvailable: 32 }, difficulty: 1
-  },
-  steps: [
-    { type: "definition", contentEn: "Articles go before nouns: a, an (indefinite), the (definite).",
-      contentPa: "ਲੇਖ ਨਾਮ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦੇ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "A cat. An apple. The sky.", examplePa: "ਇੱਕ ਬਿੱਲੀ। ਇੱਕ ਸੇਬ। ਆਸਮਾਨ।", points: 1 },
-    { type: "question", english_text: "Pick the article.", punjabi_text: "ਲੇਖ ਚੁਣੋ।",
-      options: ["the", "cat", "happy"], correct_answer: "the", points: 5,
-      examples: [{ sentenceEn: "The dog is sleeping.", sentencePa: "ਕੁੱਤਾ ਸੋ ਰਿਹਾ ਹੈ।", explainEn: "The is a definite article.", explainPa: "the ਨਿਸ਼ਚਿਤ ਲੇਖ ਹੈ।", highlight: "the" }]
-    },
-    { type: "question", english_text: "Complete: ___ apple.", punjabi_text: "ਪੂਰਾ ਕਰੋ: ___ apple.",
-      options: ["a", "an", "the"], correct_answer: "an", points: 5,
-      examples: [{ sentenceEn: "An apple a day.", sentencePa: "ਰੋਜ਼ ਇੱਕ ਸੇਬ।", explainEn: "An comes before vowel sounds.", explainPa: "an ਸਵਰ ਤੋਂ ਪਹਿਲਾਂ।", highlight: "an" }]
-    },
-    { type: "question", english_text: "Which is correct?", punjabi_text: "ਕਿਹੜਾ ਸਹੀ ਹੈ?",
-      options: ["a apple", "an apple", "the apple"], correct_answer: "an apple", points: 5,
-      examples: [{ sentenceEn: "I want an orange.", sentencePa: "ਮੈਂ ਸੰਤਰਾ ਚਾਹਦਾ ਹਾਂ।", explainEn: "An before vowel (orange starts with 'o').", explainPa: "an ਸਵਰ ਤੋਂ ਪਹਿਲਾਂ।", highlight: "an" }]
-    },
-    { type: "question", english_text: "When do we use 'the'?", punjabi_text: "ਅਸੀਂ 'the' ਕਦੋਂ ਵਰਤਦੇ ਹਾਂ?",
-      options: ["for any noun", "for specific nouns", "for colors"], correct_answer: "for specific nouns", points: 5,
-      examples: [{ sentenceEn: "The teacher is kind.", sentencePa: "ਅਧਿਆਪਕ ਮਿਹਰਬਾਨ ਹੈ।", explainEn: "The = specific teacher.", explainPa: "the ਖਾਸ ਅਧਿਆਪਕ।", highlight: "the" }]
-    },
-    { type: "question", english_text: "Choose the correct sentence.",
-      punjabi_text: "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
-      options: ["I have a dog", "I have an dog", "I have the dogs"], correct_answer: "I have a dog", points: 5,
-      examples: [{ sentenceEn: "She is a doctor.", sentencePa: "ਉਹ ਇੱਕ ਡਾਕਟਰ ਹੈ।", explainEn: "A before consonant.", explainPa: "a ਵਿਅੰਜਨ ਤੋਂ ਪਹਿਲਾਂ।", highlight: "a" }]
-    },
-    { type: "question", english_text: "What does 'a' mean?", punjabi_text: "'a' ਦਾ ਮਤਲਬ ਕੀ ਹੈ?",
-      options: ["one of many", "something specific", "not important"], correct_answer: "one of many", points: 5,
-      examples: [{ sentenceEn: "I saw a bird.", sentencePa: "ਮੈਂ ਇੱਕ ਪੰਛੀ ਵੇਖਿਆ।", explainEn: "A = any one bird, not specific.", explainPa: "a ਕਿਸੇ ਵੀ ਪੰਛੀ ਬਾਰੇ।", highlight: "a" }]
-    }
-  ]
-};
-
-__RAW_LESSONS["L_SV_AGREEMENT_01"] = {
-  metadata: {
-    titleEn: "Subject–Verb Agreement", titlePa: "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ",
-    trackId: "T_SENTENCE", objective: { titleEn: "Learn: Matching Subjects & Verbs", titlePa: "ਸਿੱਖੋ: ਮੈਲ",
-    descEn: "Verbs must match subjects.", descPa: "ਕਿਰਿਆ ਕਰਤਾ ਨਾਲ ਮੇਲ ਖਾਵੇ।", pointsAvailable: 37 }, difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Singular subjects take singular verbs. Plural take plural.",
-      contentPa: "ਇੱਕਵਚਨ ਕਰਤਾ ਨਾਲ ਇੱਕਵਚਨ ਕਿਰਿਆ।", points: 1 },
-    { type: "example", exampleEn: "She runs (not run). They run (not runs).", examplePa: "She runs। They run।", points: 1 },
-    { type: "question", english_text: "Which sentence is correct?", punjabi_text: "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
-      options: ["He go", "He goes", "He going"], correct_answer: "He goes", points: 5,
-      examples: [{ sentenceEn: "She goes to school.", sentencePa: "ਉਹ ਸਕੂਲ ਜਾਂਦੀ ਹੈ।", explainEn: "Singular subject + singular verb.", explainPa: "She + goes ਸਹੀ ਮੇਲ।", highlight: "goes" }]
-    },
-    { type: "question", english_text: "Complete correctly: They ___ to school.",
-      punjabi_text: "ਸਹੀ ਤਰ੍ਹਾਂ ਪੂਰਾ ਕਰੋ: They ___ to school.",
-      options: ["goes", "go", "going"], correct_answer: "go", points: 5,
-      examples: [{ sentenceEn: "The children go to school.", sentencePa: "ਬੱਚੇ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।", explainEn: "Plural subject + plural verb.", explainPa: "They + go ਸਹੀ ਮੇਲ।", highlight: "go" }]
-    },
-    { type: "question", english_text: "Which is grammatically correct?", punjabi_text: "ਕਿਹੜਾ ਵਿਆਕਰਣ ਸਹੀ ਹੈ?",
-      options: ["Dogs runs", "Dog run", "Dogs run"], correct_answer: "Dogs run", points: 5,
-      examples: [{ sentenceEn: "Dogs run fast.", sentencePa: "ਕੁੱਤੇ ਤੇਜ਼ ਦੌੜਦੇ ਹਨ।", explainEn: "Plural subject + plural verb.", explainPa: "Dogs + run ਸਹੀ।", highlight: "run" }]
-    },
-    { type: "question", english_text: "Pick the correct form.", punjabi_text: "ਸਹੀ ਰੂਪ ਚੁਣੋ।",
-      options: ["She have", "She has", "She haves"], correct_answer: "She has", points: 5,
-      examples: [{ sentenceEn: "She has a book.", sentencePa: "ਉਸ ਕੋਲ ਇੱਕ ਕਿਤਾਬ ਹੈ।", explainEn: "She + has (singular).", explainPa: "has ਸਹੀ ਰੂਪ ਹੈ।", highlight: "has" }]
-    },
-    { type: "question", english_text: "Complete: It ___ beautiful.", punjabi_text: "ਪੂਰਾ ਕਰੋ: It ___ beautiful.",
-      options: ["are", "is", "be"], correct_answer: "is", points: 5,
-      examples: [{ sentenceEn: "It is sunny.", sentencePa: "ਇਹ ਧੁੱਪ ਵਾਲਾ ਹੈ।", explainEn: "It (singular) + is (singular).", explainPa: "It + is ਸਹੀ ਮੇਲ।", highlight: "is" }]
-    },
-    { type: "question", english_text: "Which subject-verb pair is correct?",
-      punjabi_text: "ਕਰਤਾ-ਕਿਰਿਆ ਦਾ ਕਿਹੜਾ ਜੋੜਾ ਸਹੀ ਹੈ?",
-      options: ["Birds flies", "Bird fly", "Birds fly"], correct_answer: "Birds fly", points: 5,
-      examples: [{ sentenceEn: "The birds fly high.", sentencePa: "ਪੰਛੀ ਉੱਚਾ ਉੱਡਦੇ ਹਨ।", explainEn: "Birds (plural) + fly (plural).", explainPa: "Birds + fly ਸਹੀ।", highlight: "fly" }]
-    },
-    { type: "question", english_text: "I ___ happy today.", punjabi_text: "ਮੈਂ ਅੱਜ ___ ਖੁਸ਼ ਹਾਂ।",
-      options: ["am", "are", "is"], correct_answer: "am", points: 5,
-      examples: [{ sentenceEn: "I am excited.", sentencePa: "ਮੈਂ ਉਤਸ਼ਾਹਿਤ ਹਾਂ।", explainEn: "I (singular) + am (singular).", explainPa: "I + am ਸਹੀ ਮੇਲ।", highlight: "am" }]
-    }
-  ]
-},
-
-// ===== INTERMEDIATE LESSONS (Difficulty 2) =====
-
-// L_PROGRESSIVE_PRESENT_01: Present Progressive Tense (is/are + -ing)
-__RAW_LESSONS.L_PROGRESSIVE_PRESENT_01 = {
-  metadata: {
-    titleEn: "Present Progressive Tense",
-    titlePa: "ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ",
-    labelEn: "Present Progressive",
-    labelPa: "ਵਰਤਮਾਨ ਜਾਰੀ",
-    trackId: "T_ACTIONS",
-    objective: {
-      titleEn: "Learn: Present Progressive Tense",
-      titlePa: "ਸਿੱਖੋ: ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ",
-      descEn: "Understand 'is/are + -ing' for actions happening right now",
-      descPa: "ਸਮਝੋ 'is/are + -ing' ਅਜਿਹੀ ਕਿਰਿਆਵਾਂ ਲਈ ਜੋ ਹਾਲੇ ਹੋ ਰਹੀ ਹਨ",
-      pointsAvailable: 35
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Present progressive (is/are + verb-ing) shows an action happening right now, at this moment. Form: subject + is/are + verb-ing", contentPa: "ਵਰਤਮਾਨ ਜਾਰੀ (is/are + verb-ing) ਅਜਿਹੀ ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ ਜੋ ਇਸ ਸਮੇਂ ਹੋ ਰਹੀ ਹੈ।", points: 1 },
-    { type: "example", exampleEn: "I am studying English right now.", examplePa: "ਮੈਂ ਹੁਣ ਅੰਗਰੇਜ਼ੀ ਸਿੱਖ ਰਿਹਾ ਹਾਂ।", highlightedWords: ["am studying"], explainEn: "'am studying' = is/are + -ing form for current action", explainPa: "'am studying' ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ ਹੈ", points: 1 },
-    { type: "example", exampleEn: "They are playing in the park.", examplePa: "ਉਹ ਪਾਰਕ ਵਿੱਚ ਖੇਡ ਰਹੇ ਹਨ।", highlightedWords: ["are playing"], explainEn: "Multiple people = 'are' + verb-ing", explainPa: "ਕਈ ਲੋਕ = 'are' + verb-ing", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap the progressive verb form.", contentPa: "ਜਾਰੀ ਕਿਰਿਆ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["She", "is", "singing", "beautifully"], correctAnswers: ["is singing"], points: 3 },
-    { type: "question", id: "q_present_prog_correct", english_text: "Which sentence uses present progressive correctly?", punjabi_text: "ਕਿਹੜਾ ਵਾਕ ਵਰਤਮਾਨ ਜਾਰੀ ਸਹੀ ਵਰਤਦਾ ਹੈ?", options: ["I studying English.", "I am studying English.", "I studied English."], correct_answer: "I am studying English.", points: 5,
-      hint: { en: "Look for: am/is/are + verb-ing.", pa: "ਇਸ਼ਾਰਾ: am/is/are + ਕਿਰਿਆ-ing (ਜਿਵੇਂ: is playing)." },
-      explanation: { en: "Present progressive needs a helper (am/is/are) + verb-ing.", pa: "ਵਰਤਮਾਨ ਜਾਰੀ ਵਿੱਚ am/is/are + ਕਿਰਿਆ-ing ਲੱਗਦੀ ਹੈ।" },
-      workedExample: {
-        en: "She is writing a letter.",
-        pa: "ਉਹ ਪੱਤਰ ਲਿਖ ਰਹੀ ਹੈ।",
-        highlight: { en: ["is writing"], pa: ["ਲਿਖ ਰਹੀ"] }
+  "L_NOUNS_COMMON_01": {
+    "metadata": {
+      "titleEn": "Nouns: Common Basics",
+      "titlePa": "ਨਾਂ: ਆਮ ਮੁੱਢਲਾ",
+      "labelEn": "Nouns: Common Basics",
+      "labelPa": "ਨਾਂ: ਆਮ ਮੁੱਢਲਾ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Common Nouns",
+        "titlePa": "ਸਿੱਖੋ: ਆਮ ਨਾਂ",
+        "descEn": "Identify common nouns in simple sentences and daily life.",
+        "descPa": "ਸਧਾਰਣ ਵਾਕਾਂ ਅਤੇ ਰੋਜ਼ਾਨਾ ਜੀਵਨ ਵਿੱਚ ਆਮ ਨਾਂ ਪਛਾਣੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ ਖ਼ਾਸ ਨਾਂ ਤੋਂ ਵੱਖ ਕਰੋ।",
+        "pointsAvailable": 24
       },
-      feedback: { correctEn: "Great!", correctPa: "ਵਧੀਆ!", wrongEn: "Not yet.", wrongPa: "ਹਾਲੇ ਨਹੀਂ।" },
-      examples: [{ sentenceEn: "She is writing a letter.", sentencePa: "ਉਹ ਪੱਤਰ ਲਿਖ ਰਹੀ ਹੈ।", explainEn: "is + writing = correct present progressive", explainPa: "is + writing = ਸਹੀ ਜਾਰੀ ਕਾਲ", highlight: "is writing" }]
+      "difficulty": 1
     },
-    { type: "example", exampleEn: "We are waiting for the bus.", examplePa: "ਅਸੀਂ ਬੱਸ ਦੀ ਉਡੀਕ ਕਰ ਰਹੇ ਹਾਂ।", highlightedWords: ["are waiting"], explainEn: "Right now action = progressive tense", explainPa: "ਹੁਣ ਹਾਲਾਂ ਦੀ ਕਿਰਿਆ = ਜਾਰੀ ਕਾਲ", points: 1 },
-    { type: "question", id: "q_present_prog_fill_run", english_text: "Complete: She ___ (run) in the marathon.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: She ___ (run) ਮੈਰਾਥਨ ਵਿੱਚ।", options: ["runs", "is running", "ran"], correct_answer: "is running", points: 5,
-      hint: { en: "Right now? Use is/are + running.", pa: "ਜੇ ਕਿਰਿਆ ਹੁਣ ਚੱਲ ਰਹੀ ਹੈ, is/are + running ਵਰਤੋ।" },
-      explanation: { en: "For an action happening now: she + is + running.", pa: "ਹਾਲ ਦੀ ਕਿਰਿਆ ਲਈ: she + is + running।" },
-      workedExample: {
-        en: "She is running fast.",
-        pa: "ਉਹ ਤੇਜ਼ ਦੌੜ ਰਹੀ ਹੈ।",
-        highlight: { en: ["is running"], pa: ["ਦੌੜ ਰਹੀ"] }
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
       },
-      examples: [{ sentenceEn: "The dog is barking loudly.", sentencePa: "ਕੁੱਤਾ ਜੋਰ ਨਾਲ ਭੌਂਕ ਰਿਹਾ ਹੈ।", explainEn: "is + -ing = present progressive", explainPa: "is + -ing = ਵਰਤਮਾਨ ਜਾਰੀ", highlight: "is barking" }]
-    },
-    { type: "summary", keyExamplesEn: ["is/are + verb-ing", "Right now actions", "They are learning.", "Current moment"], keyExamplesPa: ["is/are + ਕਿਰਿਆ-ing", "ਹਾਲ ਦੀ ਕਿਰਿਆ", "ਉਹ ਸਿੱਖ ਰਹੇ ਹਨ।", "ਮੌਜੂਦਾ ਲਮਹਾ"], points: 0 }
-  ]
-};
-
-// L_PROGRESSIVE_PAST_01: Past Progressive Tense (was/were + -ing)
-__RAW_LESSONS.L_PROGRESSIVE_PAST_01 = {
-  metadata: {
-    titleEn: "Past Progressive Tense",
-    titlePa: "ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ",
-    labelEn: "Past Progressive",
-    labelPa: "ਭੂਤਕਾਲੀ ਜਾਰੀ",
-    trackId: "T_ACTIONS",
-    objective: {
-      titleEn: "Learn: Past Progressive Tense",
-      titlePa: "ਸਿੱਖੋ: ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ",
-      descEn: "Understand 'was/were + -ing' for actions that were happening in the past",
-      descPa: "ਸਮਝੋ 'was/were + -ing' ਅਜਿਹੀ ਕਿਰਿਆਵਾਂ ਲਈ ਜੋ ਭੂਤਕਾਲ ਵਿੱਚ ਹੋ ਰਹੀ ਸੀ",
-      pointsAvailable: 35
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Past progressive (was/were + verb-ing) shows an action that was happening at a specific time in the past. Form: subject + was/were + verb-ing", contentPa: "ਭੂਤਕਾਲੀ ਜਾਰੀ (was/were + verb-ing) ਅਜਿਹੀ ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ ਜੋ ਭੂਤਕਾਲ ਦੇ ਇੱਕ ਖ਼ਾਸ ਸਮੇਂ ਹੋ ਰਹੀ ਸੀ।", points: 1 },
-    { type: "example", exampleEn: "I was sleeping when the phone rang.", examplePa: "ਜਦੋਂ ਫੋਨ ਵੱਜਿਆ ਤਾਂ ਮੈਂ ਸੋ ਰਿਹਾ ਸਾ।", highlightedWords: ["was sleeping"], explainEn: "'was sleeping' = was + -ing, action interrupted by another", explainPa: "'was sleeping' = ਭੂਤਕਾਲ ਵਿੱਚ ਚੱਲਦੀ ਕਿਰਿਆ", points: 1 },
-    { type: "example", exampleEn: "They were playing when it started raining.", examplePa: "ਜਦੋਂ ਮੀਂਹ ਪੈਣਾ ਸ਼ੁਰੂ ਹੋਇਆ ਤਾਂ ਉਹ ਖੇਡ ਰਹੇ ਸੀ।", highlightedWords: ["were playing"], explainEn: "Plural subject = were + -ing", explainPa: "ਕਈ ਲੋਕ = 'were' + verb-ing", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap the past progressive form.", contentPa: "ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਿਰਿਆ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["He", "was", "watching", "TV"], correctAnswers: ["was watching"], points: 3 },
-    { type: "question", id: "q_past_prog_correct", english_text: "Which uses past progressive correctly?", punjabi_text: "ਕਿਹੜਾ ਭੂਤਕਾਲੀ ਜਾਰੀ ਸਹੀ ਵਰਤਦਾ ਹੈ?", options: ["She was cooked dinner.", "She was cooking dinner.", "She were cooking dinner."], correct_answer: "She was cooking dinner.", points: 5,
-      hint: { en: "Past in-progress = was/were + -ing.", pa: "ਭੂਤਕਾਲ ਵਿੱਚ ਚੱਲ ਰਿਹਾ = was/were + -ing।" },
-      explanation: { en: "Past progressive shows something was happening then.", pa: "ਭੂਤਕਾਲੀ ਜਾਰੀ = ਉਸ ਵੇਲੇ ਹੋ ਰਿਹਾ ਸੀ।" },
-      workedExample: { en: "He was sleeping.", pa: "ਉਹ ਸੋ ਰਿਹਾ ਸੀ।", highlight: { en: ["was sleeping"], pa: ["ਰਿਹਾ ਸੀ"] } },
-      examples: [{ sentenceEn: "I was reading a book.", sentencePa: "ਮੈਂ ਕਿਤਾਬ ਪੜ੍ਹ ਰਿਹਾ ਸਾ।", explainEn: "was + -ing = past progressive", explainPa: "was + -ing = ਭੂਤਕਾਲੀ ਜਾਰੀ", highlight: "was reading" }] },
-    { type: "example", exampleEn: "We were studying when you arrived.", examplePa: "ਜਦੋਂ ਤੁਸੀਂ ਆਏ ਤਾਂ ਅਸੀਂ ਪੜ੍ਹ ਰਹੇ ਸਾਂ।", highlightedWords: ["were studying"], explainEn: "Past action in progress at a point in time", explainPa: "ਭੂਤਕਾਲ ਦੀ ਜਾਰੀ ਕਿਰਿਆ", points: 1 },
-    { type: "question", id: "q_past_prog_complete_were_eating", english_text: "Complete: They ___ (eat) when I called.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: They ___ (eat) ਜਦੋਂ ਮੈਂ ਫੋਨ ਕੀਤਾ।", options: ["ate", "were eating", "eat"], correct_answer: "were eating", points: 5,
-      hint: { en: "They (plural) → were + eating.", pa: "They (ਕਈ) → were + eating।" },
-      explanation: { en: "Plural subject uses ‘were’.", pa: "ਕਈ ਲੋਕਾਂ ਨਾਲ ‘were’ ਆਉਂਦਾ ਹੈ।" },
-      workedExample: { en: "They were eating pizza.", pa: "ਉਹ ਪਿਜ਼ਾ ਖਾ ਰਹੇ ਸੀ।", highlight: { en: ["were eating"], pa: ["ਖਾ ਰਹੇ"] } },
-      examples: [{ sentenceEn: "The rain was falling heavily.", sentencePa: "ਮੀਂਹ ਜ਼ੋਰ ਨਾਲ ਪੈ ਰਿਹਾ ਸਾ।", explainEn: "was + -ing = past progressive", explainPa: "was + -ing = ਭੂਤਕਾਲੀ ਜਾਰੀ", highlight: "was falling" }] },
-    { type: "summary", keyExamplesEn: ["was/were + verb-ing", "Actions in past progress", "They were working.", "Interrupted actions"], keyExamplesPa: ["was/were + ਕਿਰਿਆ-ing", "ਭੂਤਕਾਲ ਦੀ ਜਾਰੀ ਕਿਰਿਆ", "ਉਹ ਕੰਮ ਕਰ ਰਹੇ ਸੀ।", "ਵਿੱਚ ਵਿੱਛਾ ਕਿਰਿਆ"], points: 0 }
-  ]
-};
-
-// L_MODAL_VERBS_01: Modal Verbs (can, could, should, must, may)
-__RAW_LESSONS.L_MODAL_VERBS_01 = {
-  metadata: {
-    titleEn: "Modal Verbs",
-    titlePa: "ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ",
-    labelEn: "Modal Verbs",
-    labelPa: "ਮੋਡਲ ਕਿਰਿਆਵਾਂ",
-    trackId: "T_ACTIONS",
-    objective: {
-      titleEn: "Learn: Modal Verbs (can, could, should, must)",
-      titlePa: "ਸਿੱਖੋ: ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ",
-      descEn: "Understand modal verbs that express ability, possibility, and obligation",
-      descPa: "ਸਮਝੋ ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ ਜੋ ਸਮਰੱਥਾ, ਸੰਭਾਵਨਾ, ਅਤੇ ਕਰਤਵ ਦੱਸਦੀ ਹਨ",
-      pointsAvailable: 37
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Modal verbs (can, could, should, must, may) express ability, permission, obligation, or possibility. Form: subject + modal + base verb", contentPa: "ਮੋਡਲ ਕਿਰਿਆਵਾਂ (can, could, should, must, may) ਸਮਰੱਥਾ, ਅਜ਼ਾਦੀ, ਜ਼ਰੂਰਤ ਜਾਂ ਸੰਭਾਵਨਾ ਦੱਸਦੀ ਹਨ।", points: 1 },
-    { type: "example", exampleEn: "I can swim very well.", examplePa: "ਮੈਂ ਬਹੁਤ ਚੰਗੀ ਤਰ੍ਹਾਂ ਤੈਰਾਕੀ ਕਰ ਸਕਦਾ ਹਾਂ।", highlightedWords: ["can"], explainEn: "'can' = ability to do something", explainPa: "'can' = ਕਰਨ ਦੀ ਸਮਰੱਥਾ", points: 1 },
-    { type: "example", exampleEn: "You should eat healthy food.", examplePa: "ਤੁਹਾਨੂੰ ਸਹਿਮਤ ਖਾਣਾ ਖਾਣਾ ਚਾਹੀਦਾ ਹੈ।", highlightedWords: ["should"], explainEn: "'should' = advice or recommendation", explainPa: "'should' = ਸਲਾਹ ਜਾਂ ਸਿਫਾਰਿਸ਼", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap all modal verbs in the sentence.", contentPa: "ਵਾਕ ਵਿੱਚ ਸਾਰੀਆਂ ਮੋਡਲ ਕਿਰਿਆਵਾਂ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["He", "must", "finish", "his", "work"], correctAnswers: ["must"], points: 3 },
-    { type: "question", id: "q_modal_must_necessary", english_text: "Which modal verb means 'it is necessary'?", punjabi_text: "ਕਿਹੜੀ ਮੋਡਲ ਕਿਰਿਆ 'ਜ਼ਰੂਰੀ ਹੈ' ਦਾ ਅਰਥ ਦੇਵੇ?", options: ["can", "must", "could"], correct_answer: "must", points: 5,
-      hint: { en: "Think: a rule you must follow.", pa: "ਇਸ਼ਾਰਾ: ਜਦੋਂ ਕੋਈ ਨਿਯਮ/ਲਾਜ਼ਮੀ ਗੱਲ ਹੋਵੇ।" },
-      explanation: { en: "‘Must’ shows necessity or obligation (a rule).", pa: "‘Must’ ਦਾ ਅਰਥ ਹੈ ਲਾਜ਼ਮੀ/ਕਰਨਾ ਹੀ ਪੈਂਦਾ ਹੈ।" },
-      workedExample: {
-        en: "You must wear a helmet.",
-        pa: "ਤੁਹਾਨੂੰ ਹੈਲਮੈਟ ਪਹਿਨਣਾ ਲਾਜ਼ਮੀ ਹੈ।",
-        highlight: { en: ["must"], pa: ["ਲਾਜ਼ਮੀ"] }
+      {
+        "type": "definition",
+        "contentEn": "A common noun is a general name for a person, place, or thing (like teacher, city, book).",
+        "contentPa": "ਆਮ ਨਾਂ ਕਿਸੇ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਲਈ ਆਮ ਨਾਂ ਹੁੰਦਾ ਹੈ (ਜਿਵੇਂ ਅਧਿਆਪਕ, ਸ਼ਹਿਰ, ਕਿਤਾਬ)।",
+        "points": 1
       },
-      examples: [{ sentenceEn: "You must wear a helmet.", sentencePa: "ਤੁਹਾਨੂੰ ਸਿਰ ਲਾਈਨ ਪਹਿਨਨੀ ਚਾਹੀਦੀ ਹੈ।", explainEn: "must = necessary, obligatory", explainPa: "must = ਜ਼ਰੂਰੀ, ਕਰਤਵ", highlight: "must" }]
-    },
-    { type: "example", exampleEn: "Could you help me please?", examplePa: "ਕੀ ਤੁਸੀਂ ਮੇਰੀ ਮਦਦ ਕਰ ਸਕਦੇ ਓ?", highlightedWords: ["Could"], explainEn: "'could' = polite request or past ability", explainPa: "'could' = ਨਿੱਜੀ ਬੇਨਤੀ ਜਾਂ ਭੂਤਕਾਲ ਦੀ ਸਮਰੱਥਾ", points: 1 },
-    { type: "question", id: "q_modal_can_drive", english_text: "Complete: She ___ drive a car.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: She ___ ਗੱਡੀ ਚਲਾ ਸਕਦੀ ਹੈ।", options: ["can", "cans", "canning"], correct_answer: "can", points: 5,
-      hint: { en: "Ability = can.", pa: "ਸਮਰੱਥਾ = can।" },
-      explanation: { en: "Modal + base verb: can drive.", pa: "can + drive (ਮੂਲ ਕਿਰਿਆ)।" },
-      workedExample: { en: "He can swim.", pa: "ਉਹ ਤੈਰ ਸਕਦਾ ਹੈ।", highlight: { en: ["can"], pa: ["ਸਕਦਾ"] } },
-      examples: [{ sentenceEn: "I may come tomorrow.", sentencePa: "ਮੈਂ ਕੱਲ ਆ ਸਕਦਾ ਹਾਂ।", explainEn: "may = possibility, permission", explainPa: "may = ਸੰਭਾਵਨਾ, ਅਜ਼ਾਦੀ", highlight: "may" }] },
-    { type: "example", exampleEn: "They should study for the exam.", examplePa: "ਉਨ੍ਹਾਂ ਨੂੰ ਪ੍ਰੀਖਿਆ ਲਈ ਪੜ੍ਹਨਾ ਚਾਹੀਦਾ ਹੈ।", highlightedWords: ["should"], explainEn: "'should' = good advice", explainPa: "'should' = ਚੰਗੀ ਸਲਾਹ", points: 1 },
-    { type: "question", id: "q_modal_could_polite", english_text: "Which modal for polite requests?", punjabi_text: "ਕਿਹੜਾ ਮੋਡਲ ਸਜੀਵ ਬੇਨਤੀ ਲਈ?", options: ["can", "could", "must"], correct_answer: "could", points: 5,
-      hint: { en: "Polite asking = could you…?", pa: "ਸੋਹਣੀ ਬੇਨਤੀ = could you…?" },
-      explanation: { en: "‘Could’ sounds more polite than ‘can’.", pa: "‘Could’ ‘can’ ਨਾਲੋਂ ਜ਼ਿਆਦਾ ਨਰਮ ਹੈ।" },
-      workedExample: { en: "Could you help me?", pa: "ਕੀ ਤੁਸੀਂ ਮੇਰੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?", highlight: { en: ["Could"], pa: ["ਕੀ ਤੁਸੀਂ"] } },
-      examples: [{ sentenceEn: "May I sit here?", sentencePa: "ਕੀ ਮੈਂ ਇਥੇ ਬੈਠ ਸਕਦਾ ਹਾਂ?", explainEn: "may = formal permission request", explainPa: "may = ਰਸਮੀ ਅਜ਼ਾਦੀ ਲਈ ਬੇਨਤੀ", highlight: "May" }] },
-    { type: "summary", keyExamplesEn: ["can = ability", "should = advice", "must = necessity", "could = polite/past ability"], keyExamplesPa: ["can = ਸਮਰੱਥਾ", "should = ਸਲਾਹ", "must = ਜ਼ਰੂਰਤ", "could = ਸਜੀਵ/ਭੂਤਕਾਲ"], points: 0 }
-  ]
-};
-
-// L_POSSESSIVE_NOUNS_01: Possessive Nouns (noun's, nouns')
-__RAW_LESSONS.L_POSSESSIVE_NOUNS_01 = {
-  metadata: {
-    titleEn: "Possessive Nouns",
-    titlePa: "ਮਾਲਕਾਨਾ ਨਾਮ",
-    labelEn: "Possessive Nouns",
-    labelPa: "ਮਾਲਕਾਨਾ ਨਾਮ",
-    trackId: "T_WORDS",
-    objective: {
-      titleEn: "Learn: Possessive Nouns ('s and of)",
-      titlePa: "ਸਿੱਖੋ: ਮਾਲਕਾਨਾ ਨਾਮ",
-      descEn: "Show who owns or belongs to something using 's or of phrase",
-      descPa: "ਦਿਖਾਓ ਕਿ ਕਿਸ ਦੀ ਚੀਜ਼ ਹੈ 's ਜਾਂ 'of' ਵਰਤ ਕੇ",
-      pointsAvailable: 35
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Possessive nouns show that something belongs to someone. Add 's to singular nouns, and just ' after plural nouns ending in s. Also use 'of' to show possession.", contentPa: "ਮਾਲਕਾਨਾ ਨਾਮ ਦਿਖਾਉਂਦਾ ਹੈ ਕਿ ਕਿਸ ਕੋਲ ਕੁਝ ਹੈ। ਇੱਕ ਨਾਮ ਤਾਂ 's ਜੋੜੋ, ਕਈ ਤਾਂ ' ਬੇ।", points: 1 },
-    { type: "example", exampleEn: "The boy's book is blue.", examplePa: "ਮੁੰਡੇ ਦੀ ਕਿਤਾਬ ਨੀਲੀ ਹੈ।", highlightedWords: ["boy's"], explainEn: "Singular noun + 's = possession", explainPa: "ਇੱਕ ਨਾਮ + 's = ਮਾਲਕਾਨਾ", points: 1 },
-    { type: "example", exampleEn: "The girls' school has a big playground.", examplePa: "ਲੜਕੀਆਂ ਦਾ ਸਕੂਲ ਵੱਡਾ ਮੈਦਾਨ ਹੈ।", highlightedWords: ["girls'"], explainEn: "Plural noun ending in 's' + just ' = possession", explainPa: "ਕਈ ਨਾਮ + ' = ਮਾਲਕਾਨਾ", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap possessive nouns in the text.", contentPa: "ਮਾਲਕਾਨਾ ਨਾਮ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["Sarah's", "cat", "and", "Mike's", "dog"], correctAnswers: ["Sarah's", "Mike's"], points: 3 },
-    { type: "question", english_text: "Which shows correct possession?", punjabi_text: "ਕਿਹੜਾ ਸਹੀ ਮਾਲਕਾਨਾ ਦੱਸਦਾ ਹੈ?", options: ["the students book", "the students' book", "the student's book"], correct_answer: "the students' book", points: 5, examples: [{ sentenceEn: "The teacher's classroom is clean.", sentencePa: "ਅਧਿਆਪਕ ਦੀ ਕਲਾਸ ਸਾਫ਼ ਹੈ।", explainEn: "Singular teacher's = one teacher", explainPa: "ਇੱਕ ਅਧਿਆਪਕ = teacher's", highlight: "teacher's" }] },
-    { type: "example", exampleEn: "The color of the flower is beautiful.", examplePa: "ਫੁੱਲ ਦਾ ਰੰਗ ਸੁੰਦਰ ਹੈ।", highlightedWords: ["of the flower"], explainEn: "'of phrase' = another way to show possession", explainPa: "'of' = ਮਾਲਕਾਨਾ ਦਿਖਾਉਣ ਦਾ ਹੋਰ ਤਰੀਕਾ", points: 1 },
-    { type: "question", english_text: "Complete: The ___ toy is in the corner.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: The ___ ਖਿਡੌਣਾ ਕੋਨੇ ਵਿੱਚ ਹੈ।", options: ["childs", "child's", "children's"], correct_answer: "child's", points: 5, examples: [{ sentenceEn: "The women's team won the game.", sentencePa: "ਔਰਤਾਂ ਦੀ ਟੀਮ ਨੇ ਖੇਡ ਜਿੱਤੀ।", explainEn: "women + 's = possessive (irregular plural)", explainPa: "women + 's = ਅਸਾਧਾਰਣ ਬਹੁਵਚਨ", highlight: "women's" }] },
-    { type: "example", exampleEn: "My friend's house is next to mine.", examplePa: "ਮੇਰੇ ਦੋਸਤ ਦਾ ਘਰ ਮੇਰੇ ਕੋਲ ਹੈ।", highlightedWords: ["friend's"], explainEn: "Show relationship and ownership together", explainPa: "ਸੰਬੰਧ ਅਤੇ ਮਾਲਕਾਨਾ ਨੂੰ ਦਿਖਾਓ", points: 1 },
-    { type: "summary", keyExamplesEn: ["John's book", "students' school", "color of the flower", "noun's = one, nouns' = many"], keyExamplesPa: ["John's ਕਿਤਾਬ", "ਵਿਦਿਆਰਥੀਆਂ ਦਾ ਸਕੂਲ", "ਫੁੱਲ ਦਾ ਰੰਗ", "'s = ਇੱਕ, ' = ਕਈ"], points: 0 }
-  ]
-},
-
-// L_POSSESSIVE_PRONOUNS_01: Possessive Pronouns (my, mine, his, her, their)
-__RAW_LESSONS.L_POSSESSIVE_PRONOUNS_01 = {
-  metadata: {
-    titleEn: "Possessive Pronouns",
-    titlePa: "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ",
-    labelEn: "Possessive Pronouns",
-    labelPa: "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ",
-    trackId: "T_WORDS",
-    objective: {
-      titleEn: "Learn: Possessive Pronouns (my, mine, his, her, their)",
-      titlePa: "ਸਿੱਖੋ: ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ",
-      descEn: "Use possessive pronouns to show ownership without repeating the noun",
-      descPa: "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਵਰਤੋ ਨਾਮ ਦੁਹਰਾਏ ਬਿਨਾਂ",
-      pointsAvailable: 35
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Possessive pronouns (my, your, his, her, its, our, their, mine, yours, his, hers, ours, theirs) show who owns something. They replace 'possessive noun + noun'.", contentPa: "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ (my, your, his, her) ਦਿਖਾਉਂਦੇ ਹਨ ਕਿ ਕਿਸ ਦੀ ਚੀਜ਼ ਹੈ।", points: 1 },
-    { type: "example", exampleEn: "This is my pencil.", examplePa: "ਇਹ ਮੇਰਾ ਪੇਨਸਿਲ ਹੈ।", highlightedWords: ["my"], explainEn: "'my' = possessive adjective (goes with noun)", explainPa: "'my' = ਮਾਲਕਾਨਾ (ਨਾਮ ਨਾਲ)", points: 1 },
-    { type: "example", exampleEn: "The pencil is mine.", examplePa: "ਪੇਨਸਿਲ ਮੇਰੀ ਹੈ।", highlightedWords: ["mine"], explainEn: "'mine' = possessive pronoun (stands alone)", explainPa: "'mine' = ਸਰਵਨਾਮ (ਅਕੇਲਾ)", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap possessive pronouns (not adjectives).", contentPa: "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["yours", "book", "and", "hers"], correctAnswers: ["yours", "hers"], points: 3 },
-    { type: "question", english_text: "Which is a possessive pronoun?", punjabi_text: "ਕਿਹੜਾ ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਹੈ?", options: ["my", "mine", "her"], correct_answer: "mine", points: 5, examples: [{ sentenceEn: "His dog is bigger than hers.", sentencePa: "ਉਸ ਦਾ ਕੁੱਤਾ ਉਸ ਦੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।", explainEn: "'his' with dog, 'hers' stands alone", explainPa: "'his' ਨਾਮ ਨਾਲ, 'hers' ਅਕੇਲਾ", highlight: "hers" }] },
-    { type: "example", exampleEn: "Their house is big, and ours is small.", examplePa: "ਉਨ੍ਹਾਂ ਦਾ ਘਰ ਵੱਡਾ ਹੈ, ਅਸਾਂ ਦਾ ਛੋਟਾ ਹੈ।", highlightedWords: ["Their", "ours"], explainEn: "'Their' = adjective, 'ours' = pronoun standing alone", explainPa: "'Their' ਨਾਮ ਨਾਲ, 'ours' ਅਕੇਲਾ", points: 1 },
-    { type: "question", english_text: "Complete: This is ___ notebook.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇਹ ___ ਨੋਟਬੁੱਕ ਹੈ।", options: ["her", "hers", "he"], correct_answer: "her", points: 5, examples: [{ sentenceEn: "These books are theirs.", sentencePa: "ਇਹ ਕਿਤਾਬਾਂ ਉਨ੍ਹਾਂ ਦੀਆਂ ਹਨ।", explainEn: "'theirs' = possessive pronoun (stands alone)", explainPa: "'theirs' = ਸਰਵਨਾਮ (ਅਕੇਲਾ)", highlight: "theirs" }] },
-    { type: "example", exampleEn: "Your answer is correct, but mine is wrong.", examplePa: "ਤੁਹਾਡਾ ਜਵਾਬ ਸਹੀ ਹੈ, ਪਰ ਮੇਰਾ ਗਲਤ ਹੈ।", highlightedWords: ["Your", "mine"], explainEn: "'Your' with answer, 'mine' alone", explainPa: "'Your' ਨਾਮ ਨਾਲ, 'mine' ਅਕੇਲਾ", points: 1 },
-    { type: "summary", keyExamplesEn: ["my/mine, your/yours, his, her/hers, their/theirs", "With noun: my book", "Alone: the book is mine", "Possessive pronouns = ownership"], keyExamplesPa: ["my/mine, your/yours, his, her/hers", "ਨਾਮ ਨਾਲ: my book", "ਅਕੇਲਾ: ਕਿਤਾਬ ਮੇਰੀ ਹੈ", "ਮਾਲਕਾਨਾ = ਮਾਲਕੀ"], points: 0 }
-  ]
-};
-
-// L_COMPARATIVE_ADJECTIVES_01: Comparative Adjectives (bigger, more beautiful)
-__RAW_LESSONS.L_COMPARATIVE_ADJECTIVES_01 = {
-  metadata: {
-    titleEn: "Comparative Adjectives",
-    titlePa: "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ",
-    labelEn: "Comparative Adjectives",
-    labelPa: "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ",
-    trackId: "T_DESCRIBE",
-    objective: {
-      titleEn: "Learn: Comparative Adjectives",
-      titlePa: "ਸਿੱਖੋ: ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ",
-      descEn: "Compare two things using adjectives with -er or 'more'",
-      descPa: "ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ -er ਜਾਂ 'more' ਨਾਲ ਕਰੋ",
-      pointsAvailable: 35
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Comparative adjectives compare two things. For short adjectives, add -er. For long adjectives, use 'more + adjective'. Form: adjective-er OR more + adjective + than", contentPa: "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਕਰਦੇ ਹਨ। ਛੋਟੇ ਤੋਂ -er, ਲੰਬੇ ਤੋਂ 'more' ਲਗਾਓ।", points: 1 },
-    { type: "example", exampleEn: "The blue box is bigger than the red box.", examplePa: "ਨੀਲਾ ਬਕਸਾ ਲਾਲ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।", highlightedWords: ["bigger"], explainEn: "big → bigger (short adjective + -er)", explainPa: "big → bigger (ਛੋਟਾ + -er)", points: 1 },
-    { type: "example", exampleEn: "This flower is more beautiful than that one.", examplePa: "ਇਹ ਫੁੱਲ ਉਸ ਨਾਲੋਂ ਵੱਧ ਸੁੰਦਰ ਹੈ।", highlightedWords: ["more beautiful"], explainEn: "beautiful → more beautiful (long adjective + more)", explainPa: "beautiful → more beautiful (ਲੰਬਾ + more)", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap the comparative adjectives.", contentPa: "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["The", "faster", "car", "is", "newer"], correctAnswers: ["faster", "newer"], points: 3 },
-    { type: "question", id: "q_comp_correct_faster", english_text: "Which comparative is correct?", punjabi_text: "ਕਿਹੜਾ ਤੁਲਨਾ ਸਹੀ ਹੈ?", options: ["more fast", "faster", "most fast"], correct_answer: "faster", points: 5,
-      hint: { en: "Two things? Use -er.", pa: "ਦੋ ਚੀਜ਼ਾਂ? -er ਵਰਤੋ।" },
-      explanation: { en: "fast → faster (not more fast).", pa: "fast → faster (more fast ਨਹੀਂ)।" },
-      workedExample: { en: "This bike is faster than that bike.", pa: "ਇਹ ਸਾਈਕਲ ਉਸ ਨਾਲੋਂ ਤੇਜ਼ ਹੈ।", highlight: { en: ["faster", "than"], pa: ["ਨਾਲੋਂ", "ਤੇਜ਼"] } },
-      examples: [{ sentenceEn: "She is smarter than her brother.", sentencePa: "ਉਹ ਆਪਣੇ ਭਰਾ ਨਾਲੋਂ ਹੋਸ਼ਿਆਰ ਹੈ।", explainEn: "smart → smarter (short + -er)", explainPa: "smart → smarter (ਛੋਟਾ + -er)", highlight: "smarter" }] },
-    { type: "example", exampleEn: "This book is more interesting than that magazine.", examplePa: "ਇਹ ਕਿਤਾਬ ਉਸ ਮੈਗਜ਼ੀਨ ਨਾਲੋਂ ਵੱਧ ਦਿਲਚਸਪ ਹੈ।", highlightedWords: ["more interesting"], explainEn: "'more' + long adjective = comparative", explainPa: "'more' + ਲੰਬਾ = ਤੁਲਨਾ", points: 1 },
-    { type: "question", id: "q_comp_complete_redder", english_text: "Complete: This apple is ___ than that one.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇਹ ਸੇਬ ਉਸ ਨਾਲੋਂ ___ ਹੈ।", options: ["red", "redder", "more red"], correct_answer: "redder", points: 5,
-      hint: { en: "Short adjective + -er.", pa: "ਛੋਟਾ ਵਿਸ਼ੇਸ਼ਣ + -er।" },
-      explanation: { en: "red → redder for comparing two apples.", pa: "red → redder (ਦੋ ਸੇਬਾਂ ਦੀ ਤੁਲਨਾ)।" },
-      workedExample: { en: "This ball is bigger than that ball.", pa: "ਇਹ ਗੇਂਦ ਉਸ ਨਾਲੋਂ ਵੱਡੀ ਹੈ।", highlight: { en: ["bigger", "than"], pa: ["ਨਾਲੋਂ", "ਵੱਡੀ"] } },
-      examples: [{ sentenceEn: "My pen is cheaper than yours.", sentencePa: "ਮੇਰੀ ਕਲਮ ਤੁਹਾਡੀ ਨਾਲੋਂ ਸਸਤੀ ਹੈ।", explainEn: "cheap → cheaper (short + -er)", explainPa: "cheap → cheaper (ਛੋਟਾ + -er)", highlight: "cheaper" }] },
-    { type: "example", exampleEn: "The elephant is bigger than the mouse.", examplePa: "ਹਾਥੀ ਚੂਹੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।", highlightedWords: ["bigger"], explainEn: "Comparing size of two animals", explainPa: "ਦੋ ਜਾਨਵਰਾਂ ਦਾ ਅਕਾਰ", points: 1 },
-    { type: "summary", keyExamplesEn: ["Short: bigger, faster, redder", "Long: more beautiful, more interesting", "Always use 'than' to compare", "Comparative = two things"], keyExamplesPa: ["ਛੋਟਾ: bigger, faster", "ਲੰਬਾ: more beautiful", "'than' ਹਮੇਸ਼ਾ", "ਦੋ ਚੀਜ਼ਾਂ"], points: 0 }
-  ]
-};
-
-// L_SUPERLATIVE_ADJECTIVES_01: Superlative Adjectives (biggest, most beautiful)
-__RAW_LESSONS.L_SUPERLATIVE_ADJECTIVES_01 = {
-  metadata: {
-    titleEn: "Superlative Adjectives",
-    titlePa: "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ",
-    labelEn: "Superlative Adjectives",
-    labelPa: "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ",
-    trackId: "T_DESCRIBE",
-    objective: {
-      titleEn: "Learn: Superlative Adjectives",
-      titlePa: "ਸਿੱਖੋ: ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ",
-      descEn: "Describe the most or least using adjectives with -est or 'most'",
-      descPa: "ਸਭ ਤੋਂ ਜ਼ਿਆਦਾ ਜਾਂ ਸਭ ਤੋਂ ਘੱਟ -est ਜਾਂ 'most' ਨਾਲ ਦੱਸੋ",
-      pointsAvailable: 35
-    },
-    difficulty: 2
-  },
-  steps: [
-    { type: "definition", contentEn: "Superlative adjectives describe the most or least of something in a group. For short adjectives, add -est. For long adjectives, use 'most + adjective'. Form: the + adjective-est OR the + most + adjective", contentPa: "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ ਸਭ ਤੋਂ ਜ਼ਿਆਦਾ ਜਾਂ ਸਭ ਤੋਂ ਘੱਟ ਦੱਸਦੇ ਹਨ। ਛੋਟੇ ਤੋਂ -est, ਲੰਬੇ ਤੋਂ 'most' ਲਗਾਓ।", points: 1 },
-    { type: "example", exampleEn: "Mount Everest is the highest mountain in the world.", examplePa: "ਮਾਉਂਟ ਐਵਰੈਸਟ ਦੁਨੀਆ ਦਾ ਸਭ ਤੋਂ ਉੱਚਾ ਪਹਾੜ ਹੈ।", highlightedWords: ["highest"], explainEn: "high → highest (short adjective + -est)", explainPa: "high → highest (ਛੋਟਾ + -est)", points: 1 },
-    { type: "example", exampleEn: "She is the most intelligent student in the class.", examplePa: "ਉਹ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਬੁੱਧੀਮਾਨ ਵਿਦਿਆਰਥੀ ਹੈ।", highlightedWords: ["most intelligent"], explainEn: "intelligent → most intelligent (long adjective + most)", explainPa: "intelligent → most intelligent (ਲੰਬਾ + most)", points: 1 },
-    { type: "guidedPractice", contentEn: "Tap superlative adjectives.", contentPa: "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ 'ਤੇ ਟੈਪ ਕਰੋ।", clickableWords: ["This", "is", "the", "smallest", "box"], correctAnswers: ["smallest"], points: 3 },
-    { type: "question", id: "q_super_fastest", english_text: "Which is superlative for 'fast'?", punjabi_text: "ਕਿਹੜਾ 'fast' ਦਾ ਉੱਚਤਮ ਹੈ?", options: ["more fast", "faster", "fastest"], correct_answer: "fastest", points: 5,
-      hint: { en: "Superlative = -est.", pa: "ਸਰਵੋਤਮ = -est।" },
-      explanation: { en: "fast → fastest means number 1 in a group.", pa: "fast → fastest = ਸਮੂਹ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼।" },
-      workedExample: { en: "He is the fastest in class.", pa: "ਉਹ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼ ਹੈ।", highlight: { en: ["fastest"], pa: ["ਸਭ ਤੋਂ"] } },
-      examples: [{ sentenceEn: "She is the tallest girl in her school.", sentencePa: "ਉਹ ਆਪਣੇ ਸਕੂਲ ਦੀ ਸਭ ਤੋਂ ਲੰਬੀ ਲੜਕੀ ਹੈ।", explainEn: "tall → tallest (short + -est)", explainPa: "tall → tallest (ਛੋਟਾ + -est)", highlight: "tallest" }] },
-    { type: "example", exampleEn: "This is the most beautiful sunset I have ever seen.", examplePa: "ਇਹ ਸਭ ਤੋਂ ਸੁੰਦਰ ਸੂਰਜ ਡੁੱਬ ਹੈ ਜੋ ਮੈਂ ਕਦੇ ਦੇਖਿਆ।", highlightedWords: ["most beautiful"], explainEn: "'most' + long adjective = superlative", explainPa: "'most' + ਲੰਬਾ = ਉੱਚਤਮ", points: 1 },
-    { type: "question", id: "q_super_complete_most_delicious", english_text: "Complete: This cake is the ___ in the bakery.", punjabi_text: "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇਹ ਕੇਕ ਬੇਕਰੀ ਵਿੱਚ ___ ਹੈ।", options: ["delicious", "more delicious", "most delicious"], correct_answer: "most delicious", points: 5,
-      hint: { en: "Long adjective? Use most + word.", pa: "ਲੰਬਾ ਸ਼ਬਦ? most + ਸ਼ਬਦ।" },
-      explanation: { en: "delicious is long, so we say most delicious.", pa: "delicious ਲੰਬਾ ਹੈ, ਇਸ ਲਈ most delicious।" },
-      workedExample: { en: "This is the most beautiful picture.", pa: "ਇਹ ਸਭ ਤੋਂ ਸੁੰਦਰ ਤਸਵੀਰ ਹੈ।", highlight: { en: ["most"], pa: ["ਸਭ ਤੋਂ"] } },
-      examples: [{ sentenceEn: "He got the best marks in the exam.", sentencePa: "ਉਸ ਨੇ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਅੰਕ ਪ੍ਰਾਪਤ ਕੀਤੇ।", explainEn: "good → best (irregular superlative)", explainPa: "good → best (ਅਸਾਧਾਰਣ)", highlight: "best" }] },
-    { type: "example", exampleEn: "This is the cheapest store in town.", examplePa: "ਇਹ ਸ਼ਹਿਰ ਵਿੱਚ ਸਭ ਤੋਂ ਸਸਤੀ ਦੁਕਾਨ ਹੈ।", highlightedWords: ["cheapest"], explainEn: "cheap → cheapest (short + -est)", explainPa: "cheap → cheapest (ਛੋਟਾ + -est)", points: 1 },
-    { type: "summary", keyExamplesEn: ["Short: biggest, fastest, tallest", "Long: most beautiful, most interesting", "Always use 'the' before superlative", "Superlative = group of 3+"], keyExamplesPa: ["ਛੋਟਾ: biggest, fastest", "ਲੰਬਾ: most beautiful", "'the' ਹਮੇਸ਼ਾ", "ਸਮੂਹ ਵਿੱਚ"], points: 0 }
-  ]
-};
-// T01: Make Plurals with -s
-__RAW_LESSONS.T01 = {
-  id: "T01",
-  titleEn: "Make Plurals with -s",
-  titlePa: "ਬਹੁਵਚਨ ਬਣਾਉਣਾ (-s)",
-  objective: {
-    en: "Learn to add -s to make regular nouns plural.",
-    pa: "ਸਧਾਰਣ ਨਾਂਵਾਂ ਨੂੰ ਬਹੁਵਚਨ ਬਣਾਉਣ ਲਈ -s ਜੋੜਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Make this word plural: cat",
-    pa: "ਇਸ ਸ਼ਬਦ ਨੂੰ ਬਹੁਵਚਨ ਬਣਾਓ: ਬਿੱਲੀ"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "One dog, two dogs.",
-      pa: "ਇੱਕ ਕੁੱਤਾ, ਦੋ ਕੁੱਤੇ।"
-    },
-    {
-      label: "Punjabi",
-      en: "One book, many books.",
-      pa: "ਇੱਕ ਕਿਤਾਬ, ਬਹੁਤ ਕਿਤਾਬਾਂ।"
-    }
-  ],
-  answerChoices: [
-    { en: "cats", pa: "ਬਿੱਲੀਆਂ" },
-    { en: "cat", pa: "ਬਿੱਲੀ" },
-    { en: "cates", pa: "ਕੇਟਸ" },
-    { en: "cat's", pa: "ਬਿੱਲੀ ਦਾ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "We add -s to talk about more than one regular noun.",
-    pa: "ਇੱਕ ਤੋਂ ਵੱਧ ਲਈ ਅਸੀਂ ਸਧਾਰਣ ਨਾਂਵਾਂ ਨਾਲ -s ਜੋੜਦੇ ਹਾਂ।"
-  },
-  difficulty: 1,
-  primaryTrackId: "T_SENTENCE"
-};
-
-// T02: Use Some and Any
-__RAW_LESSONS.T02 = {
-  id: "T02",
-  titleEn: "Use Some and Any",
-  titlePa: "Some ਅਤੇ Any ਵਰਤੋ",
-  objective: {
-    en: "Learn to use \"some\" and \"any\" with things you can count or not count.",
-    pa: "ਗਿਣ ਸਕਣ ਵਾਲੀਆਂ ਅਤੇ ਨਾ ਗਿਣ ਸਕਣ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਨਾਲ \"some\" ਅਤੇ \"any\" ਵਰਤਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the best word: I don't have ___ apples.",
-    pa: "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਮੇਰੇ ਕੋਲ ___ ਸੇਬ ਨਹੀਂ ਹਨ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "I have some cookies.",
-      pa: "ਮੇਰੇ ਕੋਲ ਕੁਝ ਬਿਸਕੁਟ ਹਨ।"
-    },
-    {
-      label: "Punjabi",
-      en: "Do you have any water?",
-      pa: "ਕੀ ਤੇਰੇ ਕੋਲ ਕੁਝ ਪਾਣੀ ਹੈ?"
-    }
-  ],
-  answerChoices: [
-    { en: "any", pa: "any" },
-    { en: "some", pa: "some" },
-    { en: "many", pa: "ਬਹੁਤ" },
-    { en: "a", pa: "ਇੱਕ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "In a negative sentence, we usually use \"any.\"",
-    pa: "ਨਕਾਰਾਤਮਕ ਵਾਕ ਵਿੱਚ ਅਸੀਂ ਆਮ ਤੌਰ ਤੇ \"any\" ਵਰਤਦੇ ਹਾਂ।"
-  },
-  difficulty: 2,
-  primaryTrackId: "T_SENTENCE"
-};
-
-// T06: In, On, Under, Next To
-__RAW_LESSONS.T06 = {
-  id: "T06",
-  titleEn: "In, On, Under, Next To",
-  titlePa: "ਜਗ੍ਹਾ ਵਾਲੇ ਸ਼ਬਦ",
-  objective: {
-    en: "Learn prepositions of place: in, on, under, and next to.",
-    pa: "ਜਗ੍ਹਾ ਦੱਸਣ ਵਾਲੇ ਸ਼ਬਦ in, on, under, ਅਤੇ next to ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the best word: The cat is ___ the table.",
-    pa: "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ___ ਹੈ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "The shoes are under the bed.",
-      pa: "ਜੁੱਤੇ ਬਿਸਤਰ ਦੇ ਹੇਠਾਂ ਹਨ।"
-    },
-    {
-      label: "Punjabi",
-      en: "The book is on the chair.",
-      pa: "ਕਿਤਾਬ ਕੁਰਸੀ ਤੇ ਹੈ।"
-    }
-  ],
-  answerChoices: [
-    { en: "under", pa: "ਹੇਠਾਂ" },
-    { en: "on", pa: "ਤੇ" },
-    { en: "in", pa: "ਵਿੱਚ" },
-    { en: "next to", pa: "ਦੇ ਕੋਲ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "If the cat is below the table, we use \"under.\"",
-    pa: "ਜੇ ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ, ਤਾਂ ਅਸੀਂ \"under\" ਵਰਤਦੇ ਹਾਂ।"
-  },
-  difficulty: 1,
-  primaryTrackId: "T_SENTENCE"
-};
-
-// T07: Ask Where with Is/Are
-__RAW_LESSONS.T07 = {
-  id: "T07",
-  titleEn: "Ask Where with Is/Are",
-  titlePa: "Where ਨਾਲ ਸਵਾਲ",
-  objective: {
-    en: "Learn to ask Wh- questions using is/are.",
-    pa: "is/are ਨਾਲ Wh- ਸਵਾਲ ਪੁੱਛਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the correct question.",
-    pa: "ਸਹੀ ਸਵਾਲ ਚੁਣੋ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "Where is the ball?",
-      pa: "ਗੇਂਦ ਕਿੱਥੇ ਹੈ?"
-    },
-    {
-      label: "Punjabi",
-      en: "Where are the books?",
-      pa: "ਕਿਤਾਬਾਂ ਕਿੱਥੇ ਹਨ?"
-    }
-  ],
-  answerChoices: [
-    { en: "Where is the ball?", pa: "ਗੇਂਦ ਕਿੱਥੇ ਹੈ?" },
-    { en: "Where the ball is?", pa: "ਗੇਂਦ ਕਿੱਥੇ ਹੈ?" },
-    { en: "Where are the ball?", pa: "ਗੇਂਦ ਕਿੱਥੇ ਹੈ?" },
-    { en: "Where is ball are?", pa: "ਗੇਂਦ ਕਿੱਥੇ ਹੈ?" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "We start with \"Where,\" then use \"is\" with one thing like \"the ball.\"",
-    pa: "ਅਸੀਂ \"Where\" ਨਾਲ ਸ਼ੁਰੂ ਕਰਦੇ ਹਾਂ, ਫਿਰ ਇੱਕ ਚੀਜ਼ ਲਈ \"is\" ਵਰਤਦੇ ਹਾਂ।"
-  },
-  difficulty: 2,
-  primaryTrackId: "T_SENTENCE"
-};
-
-// T08: Polite Classroom Commands
-__RAW_LESSONS.T08 = {
-  id: "T08",
-  titleEn: "Polite Classroom Commands",
-  titlePa: "ਕਲਾਸ ਦੇ ਨਿਮਰ ਹੁਕਮ",
-  objective: {
-    en: "Learn imperatives for simple, polite classroom requests.",
-    pa: "ਕਲਾਸ ਵਿੱਚ ਸਧਾਰਣ ਅਤੇ ਨਿਮਰ ਹੁਕਮ ਵਾਲੇ ਵਾਕ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the best request: Please ___ your book.",
-    pa: "ਸਹੀ ਬੇਨਤੀ ਚੁਣੋ: ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਕਿਤਾਬ ___."
-  },
-  examples: [
-    {
-      label: "English",
-      en: "Please open your book.",
-      pa: "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਕਿਤਾਬ ਖੋਲ੍ਹੋ।"
-    },
-    {
-      label: "Punjabi",
-      en: "Please sit down.",
-      pa: "ਕਿਰਪਾ ਕਰਕੇ ਬੈਠ ਜਾਓ।"
-    }
-  ],
-  answerChoices: [
-    { en: "open", pa: "ਖੋਲ੍ਹੋ" },
-    { en: "opens", pa: "ਖੋਲ੍ਹਦਾ ਹੈ" },
-    { en: "opening", pa: "ਖੋਲ੍ਹ ਰਹੇ ਹੋ" },
-    { en: "opened", pa: "ਖੋਲ੍ਹਿਆ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "Imperatives use the base verb, so \"open\" is correct.",
-    pa: "ਆਦੇਸ਼ ਵਾਲੇ ਵਾਕ ਵਿੱਚ ਕਿਰਿਆ ਦਾ ਸਧਾਰਣ ਰੂਪ ਹੁੰਦਾ ਹੈ, ਇਸ ਲਈ \"open\" ਸਹੀ ਹੈ।"
-  },
-  difficulty: 1,
-  primaryTrackId: "T_SENTENCE"
-};
-
-// T03: Doing It Now: -ing
-__RAW_LESSONS.T03 = {
-  id: "T03",
-  titleEn: "Doing It Now: -ing",
-  titlePa: "ਹੁਣ ਵਾਲੀ ਕਿਰਿਆ (-ing)",
-  objective: {
-    en: "Learn to use am/is/are + -ing for actions happening right now.",
-    pa: "ਇਸ ਵੇਲੇ ਹੋ ਰਹੀ ਕਿਰਿਆ ਲਈ am/is/are + -ing ਵਰਤਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the correct sentence for right now.",
-    pa: "ਹੁਣ ਲਈ ਸਹੀ ਵਾਕ ਚੁਣੋ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "I am running now.",
-      pa: "ਮੈਂ ਹੁਣ ਦੌੜ ਰਿਹਾ ਹਾਂ।"
-    },
-    {
-      label: "Punjabi",
-      en: "She is eating now.",
-      pa: "ਉਹ ਹੁਣ ਖਾ ਰਹੀ ਹੈ।"
-    }
-  ],
-  answerChoices: [
-    { en: "He is jumping.", pa: "ਉਹ ਛਾਲਾਂ ਮਾਰ ਰਿਹਾ ਹੈ।" },
-    { en: "He jump.", pa: "ਉਹ ਛਾਲ ਮਾਰਦਾ ਹੈ।" },
-    { en: "He jumped.", pa: "ਉਹ ਛਾਲ ਮਾਰਿਆ।" },
-    { en: "He will jump.", pa: "ਉਹ ਛਾਲ ਮਾਰੇਗਾ।" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "For an action happening now, we use \"is\" + the -ing word.",
-    pa: "ਹੁਣ ਹੋ ਰਹੀ ਕਿਰਿਆ ਲਈ ਅਸੀਂ \"is\" + -ing ਵਾਲਾ ਸ਼ਬਦ ਵਰਤਦੇ ਹਾਂ।"
-  },
-  difficulty: 2,
-  primaryTrackId: "T_ACTIONS"
-};
-
-// T05: Compare with -er
-__RAW_LESSONS.T05 = {
-  id: "T05",
-  titleEn: "Compare with -er",
-  titlePa: "ਤੁਲਨਾ ਲਈ -er",
-  objective: {
-    en: "Learn to use comparative adjectives like bigger and smaller.",
-    pa: "bigger ਅਤੇ smaller ਵਰਗੇ ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਵਰਤਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the correct word: The blue ball is ___ than the red ball.",
-    pa: "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਨੀਲੀ ਗੇਂਦ ਲਾਲ ਗੇਂਦ ਨਾਲੋਂ ___ ਹੈ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "This box is bigger than that box.",
-      pa: "ਇਹ ਡੱਬਾ ਉਸ ਡੱਬੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।"
-    },
-    {
-      label: "Punjabi",
-      en: "My pencil is shorter than your pencil.",
-      pa: "ਮੇਰੀ ਪੈਂਸਿਲ ਤੇਰੀ ਪੈਂਸਿਲ ਨਾਲੋਂ ਛੋਟੀ ਹੈ।"
-    }
-  ],
-  answerChoices: [
-    { en: "bigger", pa: "ਵੱਡੀ" },
-    { en: "big", pa: "ਵੱਡੀ" },
-    { en: "biggest", pa: "ਸਭ ਤੋਂ ਵੱਡੀ" },
-    { en: "more big", pa: "ਹੋਰ ਵੱਡੀ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "When we compare two things, we often use the -er form like \"bigger.\"",
-    pa: "ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਕਰਨ ਲਈ ਅਸੀਂ ਅਕਸਰ -er ਵਾਲਾ ਰੂਪ ਵਰਤਦੇ ਹਾਂ, ਜਿਵੇਂ \"bigger।\""
-  },
-  difficulty: 2,
-  primaryTrackId: "T_DESCRIBE"
-};
-
-// T09: Daily Routines with Time
-__RAW_LESSONS.T09 = {
-  id: "T09",
-  titleEn: "Daily Routines with Time",
-  titlePa: "ਰੋਜ਼ ਦੀਆਂ ਆਦਤਾਂ ਅਤੇ ਸਮਾਂ",
-  objective: {
-    en: "Learn to talk about everyday routines using a time like 7 a.m.",
-    pa: "7 a.m. ਵਰਗੇ ਸਮੇਂ ਨਾਲ ਰੋਜ਼ ਦੀਆਂ ਆਦਤਾਂ ਬਾਰੇ ਬੋਲਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the best word: I brush my teeth ___ 7 a.m.",
-    pa: "ਸਹੀ ਸ਼ਬਦ ਚੁਣੋ: ਮੈਂ 7 a.m. ___ ਦੰਦ ਸਾਫ਼ ਕਰਦਾ ਹਾਂ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "I go to school at 9 a.m.",
-      pa: "ਮੈਂ 9 ਵਜੇ ਸਵੇਰੇ ਸਕੂਲ ਜਾਂਦਾ ਹਾਂ।"
-    },
-    {
-      label: "Punjabi",
-      en: "She eats lunch at 1 p.m.",
-      pa: "ਉਹ 1 ਵਜੇ ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ ਖਾਂਦੀ ਹੈ।"
-    }
-  ],
-  answerChoices: [
-    { en: "at", pa: "ਤੇ" },
-    { en: "in", pa: "ਵਿੱਚ" },
-    { en: "on", pa: "ਤੇ (ਦਿਨ ਲਈ)" },
-    { en: "under", pa: "ਹੇਠਾਂ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "We use \"at\" for clock times like 7 a.m.",
-    pa: "7 a.m. ਵਰਗੇ ਘੜੀ ਦੇ ਸਮੇਂ ਲਈ ਅਸੀਂ \"at\" ਵਰਤਦੇ ਹਾਂ।"
-  },
-  difficulty: 2,
-  primaryTrackId: "T_ACTIONS"
-};
-
-// T04: Whose? Use 's
-__RAW_LESSONS.T04 = {
-  id: "T04",
-  titleEn: "Whose? Use 's",
-  titlePa: "ਕਿਸ ਦੀ? 's ਵਰਤੋ",
-  objective: {
-    en: "Learn to use 's to show who owns something.",
-    pa: "ਕਿਸ ਦੀ ਚੀਜ਼ ਹੈ ਦਿਖਾਉਣ ਲਈ 's ਵਰਤਣਾ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the correct sentence: This is ___ pencil.",
-    pa: "ਸਹੀ ਵਾਕ ਚੁਣੋ: ਇਹ ___ ਪੈਂਸਿਲ ਹੈ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "Sara's book is new.",
-      pa: "ਸਾਰਾ ਦੀ ਕਿਤਾਬ ਨਵੀਂ ਹੈ।"
-    },
-    {
-      label: "Punjabi",
-      en: "This is Ali's bag.",
-      pa: "ਇਹ ਅਲੀ ਦਾ ਬੈਗ ਹੈ।"
-    }
-  ],
-  answerChoices: [
-    { en: "Ravi's", pa: "ਰਵੀ ਦਾ" },
-    { en: "Ravis", pa: "ਰਵੀਸ" },
-    { en: "Ravi", pa: "ਰਵੀ" },
-    { en: "Ravi s", pa: "ਰਵੀ ਐੱਸ" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "We add 's after a name to show it belongs to that person.",
-    pa: "ਨਾਮ ਤੋਂ ਬਾਅਦ 's ਲਗਾ ਕੇ ਅਸੀਂ ਮਾਲਕੀ ਦਿਖਾਂਦੇ ਹਾਂ।"
-  },
-  difficulty: 1,
-  primaryTrackId: "T_WORDS"
-};
-
-// T10: Polite Requests: Can or Could
-__RAW_LESSONS.T10 = {
-  id: "T10",
-  titleEn: "Polite Requests: Can or Could",
-  titlePa: "ਨਿਮਰ ਬੇਨਤੀ: Can/Could",
-  objective: {
-    en: "Learn to ask politely using \"can\" or \"could.\"",
-    pa: "\"can\" ਜਾਂ \"could\" ਨਾਲ ਨਿਮਰ ਤਰੀਕੇ ਨਾਲ ਬੇਨਤੀ ਕਰਨੀ ਸਿੱਖੋ।"
-  },
-  prompt: {
-    en: "Choose the most polite request for water.",
-    pa: "ਪਾਣੀ ਲਈ ਸਭ ਤੋਂ ਨਿਮਰ ਬੇਨਤੀ ਚੁਣੋ।"
-  },
-  examples: [
-    {
-      label: "English",
-      en: "Could I have some water, please?",
-      pa: "ਕੀ ਮੈਨੂੰ ਕੁਝ ਪਾਣੀ ਮਿਲ ਸਕਦਾ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ?"
-    },
-    {
-      label: "Punjabi",
-      en: "Can I go outside, please?",
-      pa: "ਕੀ ਮੈਂ ਬਾਹਰ ਜਾ ਸਕਦਾ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ?"
-    }
-  ],
-  answerChoices: [
-    { en: "Could I have water, please?", pa: "ਕੀ ਮੈਨੂੰ ਪਾਣੀ ਮਿਲ ਸਕਦਾ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ?" },
-    { en: "Give me water.", pa: "ਮੈਨੂੰ ਪਾਣੀ ਦੇ।" },
-    { en: "Water now!", pa: "ਹੁਣੇ ਪਾਣੀ!" },
-    { en: "I want water.", pa: "ਮੈਨੂੰ ਪਾਣੀ ਚਾਹੀਦਾ ਹੈ।" }
-  ],
-  correctIndex: 0,
-  explanation: {
-    en: "\"Could I… please?\" is a very polite way to ask.",
-    pa: "\"Could I… ਕਿਰਪਾ ਕਰਕੇ?\" ਪੁੱਛਣ ਦਾ ਬਹੁਤ ਨਿਮਰ ਤਰੀਕਾ ਹੈ।"
-  },
-  difficulty: 2,
-  primaryTrackId: "T_SENTENCE"
-};
-
-// -------------------- NORMALIZATION: RAW -> CANONICAL --------------------
-(function normalizeLessonsToCanonicalSchema() {
-  // Normalizer hardening (data-only; no UX changes)
-  // What changed / why safe:
-  // - Adds small sanitizers (trim/whitespace normalize, <mark> stripping) and points coercion.
-  // - Keeps canonical keys unchanged so the renderer continues working.
-  // - Adds throttled warnings for authoring hygiene; never throws on bad data.
-  // Manual test plan:
-  // 1) Open a legacy lesson with <mark> in examples; confirm example text renders plain and highlight still works.
-  // 2) Open a lesson question authored with english_text/punjabi_text; confirm prompt shows normally.
-  // 3) Complete a lesson; confirm summary Total Points matches objective pointsAvailable.
-  // 4) Try malformed options/correctAnswer; confirm app does not crash.
-
-  var LESSON_WARN_LIMIT = 50;
-  var __warnCount = 0;
-  var __warnedKeys = Object.create(null);
-  function __debugOn() {
-    try { return typeof window !== 'undefined' && window && window.BOLO_DEBUG === true; } catch (e) { return false; }
-  }
-  function warnLessonOnce(type, context) {
-    var key = String(type || 'warn') + ':' + (context && context.lessonId ? String(context.lessonId) : 'unknown');
-    if (__warnedKeys[key] && !__debugOn()) return;
-    if (!__debugOn() && __warnCount >= LESSON_WARN_LIMIT) return;
-    __warnedKeys[key] = true;
-    __warnCount++;
-    try {
-      if (typeof console !== 'undefined' && console && typeof console.warn === 'function') {
-        console.warn('[Lessons][Normalize]', type, context || {});
-      }
-    } catch (e) {
-      // ignore
-    }
-  }
-
-  function cleanText(v) {
-    // Minimal sanitization: coerce to string, trim, collapse internal whitespace.
-    if (v === null || v === undefined) return '';
-    var s = String(v);
-    s = s.replace(/\s+/g, ' ').trim();
-    return s;
-  }
-
-  function stripMarkAndCollect(v) {
-    // Strips <mark ...>...</mark> but keeps inner text.
-    // Collects highlighted words from marked segments (tokens, de-duped, order preserved).
-    var s = (v === null || v === undefined) ? '' : String(v);
-    var highlighted = [];
-    var seen = Object.create(null);
-
-    s = s.replace(/<mark\b[^>]*>([\s\S]*?)<\/mark>/gi, function(_m, inner) {
-      var innerText = (inner === null || inner === undefined) ? '' : String(inner);
-      var tokens = innerText.split(/\s+/);
-      for (var i = 0; i < tokens.length; i++) {
-        var t = tokens[i];
-        if (!t) continue;
-        // Strip surrounding punctuation; keep apostrophes (e.g., boy's)
-        t = t.replace(/^[\s"'“”‘’.,!?;:()\[\]{}]+/, '').replace(/[\s"'“”‘’.,!?;:()\[\]{}]+$/, '');
-        if (!t) continue;
-        if (!seen[t]) {
-          seen[t] = true;
-          highlighted.push(t);
+      {
+        "type": "example",
+        "exampleEn": "The teacher helps the students.",
+        "examplePa": "ਅਧਿਆਪਕ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।",
+        "highlightedWords": [
+          "teacher"
+        ],
+        "points": 1
+      },
+      {
+        "type": "definition",
+        "contentEn": "Quick check: common noun = general name (teacher, city, river). Proper noun = specific name (Ms. Kaur, Lahore, Ravi).",
+        "contentPa": "ਝਟ-ਪਟ ਚੈਕ: ਆਮ ਨਾਂ = ਆਮ ਨਾਂ (teacher, city, river)। ਖ਼ਾਸ ਨਾਂ = ਨਿਰਧਾਰਤ ਨਾਂ (Ms. Kaur, Lahore, Ravi)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_common_01_which_word_is_a_common_noun",
+        "englishText": "Which is a common noun?",
+        "punjabiText": "ਕਿਹੜਾ ਆਮ ਨਾਂ ਹੈ?",
+        "options": [
+          "Lahore",
+          "city",
+          "Ravi"
+        ],
+        "correctAnswer": "city",
+        "points": 5,
+        "hint": {
+          "en": "Choose the general name, not a specific name.",
+          "pa": "ਖ਼ਾਸ ਨਾਂ ਨਹੀਂ, ਆਮ (ਜਨਰਲ) ਨਾਂ ਚੁਣੋ।"
+        },
+        "explanation": {
+          "en": "'city' is a common noun because it is a general place word. 'Lahore' and 'Ravi' are specific names (proper nouns).",
+          "pa": "'city' ਆਮ ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਥਾਂ ਲਈ ਆਮ ਸ਼ਬਦ ਹੈ। 'Lahore' ਅਤੇ 'Ravi' ਖ਼ਾਸ ਨਾਂ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "This city is very busy.",
+          "pa": "ਇਹ ਸ਼ਹਿਰ ਬਹੁਤ ਰੌਣਕ ਵਾਲਾ ਹੈ।",
+          "highlight": "city"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_common_01_in_the_sentence_the_dog_is_sleep",
+        "englishText": "Pick the common noun for a person.",
+        "punjabiText": "ਵਿਅਕਤੀ ਲਈ ਆਮ ਨਾਂ ਚੁਣੋ।",
+        "options": [
+          "teacher",
+          "Aman",
+          "Punjab"
+        ],
+        "correctAnswer": "teacher",
+        "points": 5,
+        "hint": {
+          "en": "A common noun is a general role word.",
+          "pa": "ਆਮ ਨਾਂ ਕਿਸੇ ਭੂਮਿਕਾ ਲਈ ਜਨਰਲ ਸ਼ਬਦ ਹੁੰਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'teacher' is a common noun (general person word). 'Aman' is a proper noun (specific name), and 'Punjab' is a proper place name.",
+          "pa": "'teacher' ਆਮ ਨਾਂ ਹੈ (ਵਿਅਕਤੀ ਲਈ ਆਮ ਸ਼ਬਦ)। 'Aman' ਖ਼ਾਸ ਨਾਂ ਹੈ ਅਤੇ 'Punjab' ਖ਼ਾਸ ਥਾਂ ਦਾ ਨਾਂ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The teacher helps us every day.",
+          "pa": "ਅਧਿਆਪਕ ਸਾਡੀ ਹਰ ਰੋਜ਼ ਮਦਦ ਕਰਦਾ ਹੈ।",
+          "highlight": "teacher"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_common_01_which_word_is_a_common_noun_2",
+        "englishText": "Find the common noun in: The river is wide.",
+        "punjabiText": "ਵਾਕ ਵਿੱਚ ਆਮ ਨਾਂ ਲੱਭੋ: ਨਦੀ ਚੌੜੀ ਹੈ।",
+        "options": [
+          "river",
+          "Ravi",
+          "Monday"
+        ],
+        "correctAnswer": "river",
+        "points": 5,
+        "hint": {
+          "en": "Look for the general name used in the sentence.",
+          "pa": "ਵਾਕ ਵਿੱਚ ਵਰਤਿਆ ਆਮ (ਜਨਰਲ) ਨਾਂ ਲੱਭੋ।"
+        },
+        "explanation": {
+          "en": "'river' is the common noun here because it is a general thing/place word. 'Ravi' is a specific river name (proper noun).",
+          "pa": "ਇੱਥੇ 'river' ਆਮ ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਥਾਂ/ਚੀਜ਼ ਲਈ ਆਮ ਸ਼ਬਦ ਹੈ। 'Ravi' ਖ਼ਾਸ ਨਾਂ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The river flows fast.",
+          "pa": "ਨਦੀ ਤੇਜ਼ੀ ਨਾਲ ਵਗਦੀ ਹੈ।",
+          "highlight": "river"
+        }
+      },
+      {
+        "type": "example",
+        "exampleEn": "Common vs Proper: city (common noun) / Amritsar (proper noun)",
+        "examplePa": "ਆਮ ਵਿਰੁੱਧ ਖ਼ਾਸ: city (ਆਮ ਨਾਂ) / Amritsar (ਖ਼ਾਸ ਨਾਂ)",
+        "highlightedWords": [
+          "city",
+          "Amritsar"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_common_01_choose_common_nouns_only_set",
+        "englishText": "Which set has common nouns only?",
+        "punjabiText": "ਕਿਹੜੇ ਸਮੂਹ ਵਿੱਚ ਸਿਰਫ਼ ਆਮ ਨਾਂ ਹਨ?",
+        "options": [
+          {
+            "en": "teacher, city, river",
+            "pa": "ਅਧਿਆਪਕ, ਸ਼ਹਿਰ, ਨਦੀ"
+          },
+          {
+            "en": "Aman, Punjab, Ravi",
+            "pa": "ਅਮਨ, ਪੰਜਾਬ, ਰਾਵੀ"
+          },
+          {
+            "en": "Monday, Gurpreet, Lahore",
+            "pa": "ਸੋਮਵਾਰ, ਗੁਰਪ੍ਰੀਤ, ਲਾਹੌਰ"
+          }
+        ],
+        "correctAnswer": "teacher, city, river",
+        "points": 5,
+        "hint": {
+          "en": "Common nouns are general names, not specific names.",
+          "pa": "ਆਮ ਨਾਂ ਜਨਰਲ ਹੁੰਦੇ ਹਨ, ਖ਼ਾਸ ਨਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "'teacher, city, river' are all general names, so they are common nouns.",
+          "pa": "'teacher, city, river' ਸਾਰੇ ਜਨਰਲ ਨਾਂ ਹਨ, ਇਸ ਲਈ ਇਹ ਆਮ ਨਾਂ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "A teacher lives in a city near a river.",
+          "pa": "ਇੱਕ ਅਧਿਆਪਕ ਨਦੀ ਨੇੜੇ ਸ਼ਹਿਰ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ।",
+          "highlight": "teacher"
         }
       }
-      return innerText;
-    });
-
-    return { text: s, highlightedWords: highlighted };
-  }
-
-  function expandHighlightsToMatchText(text, highlights) {
-    // Renderer compares tokens from `text.split(/\s+/)` directly against `highlightedWords`.
-    // If punctuation sits outside <mark> (e.g., "bed."), we add the token variant ("bed.")
-    // when it normalizes to a collected highlight ("bed").
-    if (!text || !Array.isArray(highlights) || !highlights.length) return highlights;
-
-    var tokens = String(text).split(/\s+/);
-    var baseSet = Object.create(null);
-    for (var i = 0; i < highlights.length; i++) {
-      var h = highlights[i];
-      if (h) baseSet[String(h)] = true;
-    }
-
-    var out = highlights.slice();
-    var seen = Object.create(null);
-    for (var j = 0; j < out.length; j++) {
-      if (out[j]) seen[String(out[j])] = true;
-    }
-
-    for (var t = 0; t < tokens.length; t++) {
-      var tok = tokens[t];
-      if (!tok) continue;
-      var norm = tok
-        .replace(/^[\s"'“”‘’.,!?;:()\[\]{}]+/, '')
-        .replace(/[\s"'“”‘’.,!?;:()\[\]{}]+$/, '');
-      if (!norm) continue;
-      // Add token variant if it corresponds to an existing base highlight.
-      if (baseSet[norm] && !seen[tok]) {
-        seen[tok] = true;
-        out.push(tok);
-      }
-    }
-
-    return out;
-  }
-
-  function coercePoints(n, fallback) {
-    // Coerce to finite integer >= 0.
-    var v = (n === null || n === undefined || n === '') ? fallback : n;
-    var num = Number(v);
-    if (!isFinite(num)) num = Number(fallback);
-    if (!isFinite(num)) num = 0;
-    num = Math.round(num);
-    if (num < 0) num = 0;
-    return num;
-  }
-
-  var metaById = Object.create(null);
-  if (typeof LESSON_META !== "undefined" && Array.isArray(LESSON_META)) {
-    for (var i = 0; i < LESSON_META.length; i++) {
-      var m = LESSON_META[i];
-      if (m && typeof m.id === "string") metaById[m.id] = m;
-    }
-  }
-
-  var notes = {
-    normalizedKeys: [
-      "step_type -> type",
-      "english_text/englishText -> englishText (questions)",
-      "punjabi_text -> punjabiText (questions)",
-      "correct_answer/correctAnswer -> correctAnswer",
-      "guidedPractice -> guided_practice",
-      "definition/example text fields -> contentEn/contentPa or exampleEn/examplePa"
-    ],
-    generatedQuestionIds: [],
-    correctedOptionMismatches: [],
-    pointsAvailableAdjustments: [],
-    punjabiEdits: []
-  };
-
-  function coerceString(v) {
-    if (v === null || v === undefined) return "";
-    return String(v);
-  }
-
-  function stripHtml(text) {
-    return coerceString(text).replace(/<[^>]*>/g, "");
-  }
-
-  function slugify(text) {
-    var s = stripHtml(text).toLowerCase();
-    s = s.replace(/[^a-z0-9]+/g, "_");
-    s = s.replace(/^_+|_+$/g, "");
-    if (!s) s = "question";
-    return s.slice(0, 32);
-  }
-
-  function ensureStringArray(arr) {
-    if (!Array.isArray(arr)) return [];
-    var out = [];
-    for (var i = 0; i < arr.length; i++) {
-      var v = arr[i];
-      if (typeof v === "string") {
-        out.push(v);
-      } else if (v && typeof v === "object" && typeof v.en === "string") {
-        out.push(v.en);
-      } else {
-        out.push(coerceString(v));
-      }
-    }
-    return out;
-  }
-
-  function normalizeHighlightedWords(value) {
-    if (!value) return undefined;
-    if (Array.isArray(value)) return value;
-    if (typeof value === "string") return [value];
-    return undefined;
-  }
-
-  function normalizeSummaryStep(step) {
-    return {
-      type: "summary",
-      titleEn: coerceString(step.titleEn || "Summary"),
-      titlePa: coerceString(step.titlePa || "ਸਾਰ"),
-      summaryEn: coerceString(step.summaryEn || "Key points and examples."),
-      summaryPa: coerceString(step.summaryPa || "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।"),
-      keyExamplesEn: Array.isArray(step.keyExamplesEn) ? step.keyExamplesEn : undefined,
-      keyExamplesPa: Array.isArray(step.keyExamplesPa) ? step.keyExamplesPa : undefined,
-      totalPoints: typeof step.totalPoints === "number" ? step.totalPoints : undefined,
-      points: 0
-    };
-  }
-
-  function normalizeQuestionStep(step, lessonId, usedIds) {
-    // A) Standardize prompt keys to englishText/punjabiText with minimal sanitization.
-    if (step && (step.english_text !== undefined || step.punjabi_text !== undefined)) {
-      warnLessonOnce('snake_case_prompt_keys', { lessonId: lessonId, hasEnglishSnake: step.english_text !== undefined, hasPunjabiSnake: step.punjabi_text !== undefined });
-    }
-
-    var englishText = cleanText(step.englishText || step.english_text || step.english || step.promptEn || "");
-    var punjabiText = cleanText(step.punjabiText || step.punjabi_text || step.punjabi || step.promptPa || "");
-
-    var options = ensureStringArray(step.options || step.answerChoices);
-
-    var correctAnswer = step.correctAnswer || step.correct_answer;
-    if (correctAnswer === undefined && typeof step.correctIndex === "number" && Array.isArray(step.answerChoices)) {
-      var choice = step.answerChoices[step.correctIndex];
-      if (choice && typeof choice.en === "string") correctAnswer = choice.en;
-    }
-    correctAnswer = coerceString(correctAnswer);
-
-    // Fix a known broken token: Cyrillic 'д' in "seeд" (likely intended ASCII).
-    for (var i = 0; i < options.length; i++) {
-      if (options[i] === "seeд") {
-        options[i] = "seed";
-        notes.correctedOptionMismatches.push({ lessonId: lessonId, detail: "Normalized option 'seeд' -> 'seed'" });
-      }
-    }
-
-    // Ensure correctAnswer matches an option exactly.
-    if (correctAnswer) {
-      var foundExact = false;
-      for (var j = 0; j < options.length; j++) {
-        if (options[j] === correctAnswer) { foundExact = true; break; }
-      }
-      if (!foundExact) {
-        var foundIndex = -1;
-        var caNorm = correctAnswer.trim().toLowerCase();
-        for (var k = 0; k < options.length; k++) {
-          if (options[k].trim().toLowerCase() === caNorm) { foundIndex = k; break; }
-        }
-        if (foundIndex >= 0) {
-          notes.correctedOptionMismatches.push({ lessonId: lessonId, detail: "Adjusted correctAnswer to match option exactly", from: correctAnswer, to: options[foundIndex] });
-          correctAnswer = options[foundIndex];
-        } else {
-          notes.correctedOptionMismatches.push({ lessonId: lessonId, detail: "Added missing correctAnswer to options", correctAnswer: correctAnswer });
-          options.push(correctAnswer);
+    ]
+  },
+  "L_NOUNS_PROPER_01": {
+    "metadata": {
+      "titleEn": "Nouns: Proper Names",
+      "titlePa": "ਨਾਂ: ਖ਼ਾਸ ਨਾਂ",
+      "labelEn": "Nouns: Proper Names",
+      "labelPa": "ਨਾਂ: ਖ਼ਾਸ ਨਾਂ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Proper Nouns",
+        "titlePa": "ਸਿੱਖੋ: ਖ਼ਾਸ ਨਾਂ",
+        "descEn": "Identify specific names of people and places (capitalized in English).",
+        "descPa": "ਵਿਅਕਤੀਆਂ ਅਤੇ ਥਾਵਾਂ ਦੇ ਖ਼ਾਸ ਨਾਂ ਪਛਾਣੋ। ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਇਹ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ।",
+        "pointsAvailable": 18
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "A proper noun is a specific name (like Gurpreet, Amritsar, India).",
+        "contentPa": "ਖ਼ਾਸ ਨਾਂ ਕਿਸੇ ਇਕ ਨਿਰਧਾਰਤ ਵਿਅਕਤੀ ਜਾਂ ਥਾਂ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ (ਜਿਵੇਂ ਗੁਰਪ੍ਰੀਤ, ਅੰਮ੍ਰਿਤਸਰ, ਭਾਰਤ)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "Gurpreet is my friend.",
+        "examplePa": "ਗੁਰਪ੍ਰੀਤ ਮੇਰਾ ਦੋਸਤ ਹੈ।",
+        "highlightedWords": [
+          "Gurpreet"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_proper_01_is_amritsar_the_right_word",
+        "englishText": "Is \"Amritsar\" the right word?",
+        "punjabiText": "ਕੀ \"Amritsar\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Amritsar” is a proper noun (a place name).",
+          "pa": "ਹਾਂ। “Amritsar” ਖ਼ਾਸ ਨਾਂ ਹੈ (ਥਾਂ ਦਾ ਨਾਂ)।"
+        },
+        "workedExample": {
+          "en": "Amritsar is a city in Punjab.",
+          "pa": "ਅੰਮ੍ਰਿਤਸਰ ਪੰਜਾਬ ਦਾ ਇੱਕ ਸ਼ਹਿਰ ਹੈ।",
+          "highlight": "Amritsar"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Amritsar is a city in Punjab.",
+            "sentencePa": "ਅੰਮ੍ਰਿਤਸਰ ਪੰਜਾਬ ਦਾ ਇੱਕ ਸ਼ਹਿਰ ਹੈ।",
+            "explainEn": "'Amritsar' is a proper noun because it is the exact name of one city, not a general place word.",
+            "explainPa": "'ਅੰਮ੍ਰਿਤਸਰ' ਖ਼ਾਸ ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਨਿਰਧਾਰਤ ਸ਼ਹਿਰ ਦਾ ਅਸਲ ਨਾਂ ਹੈ, ਆਮ ਥਾਂ ਦਾ ਸ਼ਬਦ ਨਹੀਂ।",
+            "highlight": "Amritsar"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_proper_01_is_riya_the_right_word",
+        "englishText": "Is \"Riya\" the right word?",
+        "punjabiText": "ਕੀ \"Riya\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Names of people are proper nouns.",
+          "pa": "ਲੋਕਾਂ ਦੇ ਨਾਮ ਖ਼ਾਸ ਨਾਂਵ ਹੁੰਦੇ ਹਨ।"
+        },
+        "explanation": {
+          "en": "\"Riya\" is a person's name, so it is a proper noun.",
+          "pa": "\"Riya\" ਇੱਕ ਵਿਅਕਤੀ ਦਾ ਨਾਮ ਹੈ, ਇਸ ਲਈ ਇਹ ਖ਼ਾਸ ਨਾਂਵ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Riya reads in class.",
+          "pa": "ਰੀਆ ਕਲਾਸ ਵਿੱਚ ਪੜ੍ਹਦੀ ਹੈ।",
+          "highlight": "Riya"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Riya reads in class.",
+            "sentencePa": "ਰੀਆ ਕਲਾਸ ਵਿੱਚ ਪੜ੍ਹਦੀ ਹੈ।",
+            "explainEn": "'Riya' is a proper noun because it names one specific person.",
+            "explainPa": "'ਰੀਆ' ਖ਼ਾਸ ਨਾਂ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਨਿਰਧਾਰਤ ਵਿਅਕਤੀ ਦਾ ਨਾਂ ਹੈ।",
+            "highlight": "Riya"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Proper nouns start with a capital letter in English (Riya, India, Amritsar).",
+        "contentPa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਖ਼ਾਸ ਨਾਂ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਲਿਖੇ ਜਾਂਦੇ ਹਨ (Riya, India, Amritsar)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_proper_01_choose_correct_capitalization",
+        "englishText": "Choose the correctly capitalized proper noun.",
+        "punjabiText": "ਸਹੀ ਵੱਡੇ ਅੱਖਰ ਵਾਲਾ ਖ਼ਾਸ ਨਾਂ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "amritsar",
+            "pa": "ਅੰਮ੍ਰਿਤਸਰ"
+          },
+          {
+            "en": "Amritsar",
+            "pa": "ਅੰਮ੍ਰਿਤਸਰ"
+          },
+          {
+            "en": "amritSar",
+            "pa": "ਅੰਮ੍ਰਿਤਸਰ"
+          }
+        ],
+        "correctAnswer": "Amritsar",
+        "points": 5,
+        "hint": {
+          "en": "Specific names start with a capital letter.",
+          "pa": "ਖ਼ਾਸ ਨਾਂ ਵੱਡੇ ਅੱਖਰ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ।"
+        },
+        "explanation": {
+          "en": "'Amritsar' is correct because proper nouns are capitalized in English.",
+          "pa": "'Amritsar' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਖ਼ਾਸ ਨਾਂ capital letter ਨਾਲ ਲਿਖਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Amritsar is in Punjab.",
+          "pa": "ਅੰਮ੍ਰਿਤਸਰ ਪੰਜਾਬ ਵਿੱਚ ਹੈ।",
+          "highlight": "Amritsar"
         }
       }
-    }
-
-    var points = coercePoints(step.points, 5);
-    var id = coerceString(step.id);
-    if (!id) {
-      var base = "q_" + lessonId.toLowerCase() + "_" + slugify(englishText);
-      id = base;
-      var n = 2;
-      while (usedIds[id]) {
-        id = base + "_" + n;
-        n++;
-      }
-      notes.generatedQuestionIds.push(id);
-    }
-    usedIds[id] = true;
-
-    var hint = undefined;
-    if (step.hint !== undefined) {
-      if (typeof step.hint === "string") {
-        hint = { en: step.hint, pa: "" };
-      } else if (step.hint && typeof step.hint === "object") {
-        hint = { en: coerceString(step.hint.en || ""), pa: coerceString(step.hint.pa || "") };
-      }
-    }
-
-    var explanation = undefined;
-    if (step.explanation !== undefined) {
-      if (typeof step.explanation === "string") {
-        explanation = { en: step.explanation, pa: "" };
-      } else if (step.explanation && typeof step.explanation === "object") {
-        explanation = { en: coerceString(step.explanation.en || ""), pa: coerceString(step.explanation.pa || "") };
-      }
-    }
-
-    // Preserve tutorial choice Punjabi text by appending into explanation when needed.
-    if (Array.isArray(step.answerChoices)) {
-      var paPairs = [];
-      for (var c = 0; c < step.answerChoices.length; c++) {
-        var ch = step.answerChoices[c];
-        if (ch && typeof ch.en === "string" && typeof ch.pa === "string") {
-          paPairs.push(ch.en + " = " + ch.pa);
+    ]
+  },
+  "L_PRONOUNS_BASICS_01": {
+    "metadata": {
+      "titleEn": "Pronoun Basics",
+      "titlePa": "ਸਰਵਨਾਮ ਮੁੱਢ",
+      "labelEn": "Pronoun Basics",
+      "labelPa": "ਸਰਵਨਾਮ ਮੁੱਢ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Pronouns",
+        "titlePa": "ਸਿੱਖੋ: ਸਰਵਨਾਮ",
+        "descEn": "Pronouns replace nouns.",
+        "descPa": "ਸਰਵਨਾਮ ਨਾਂ ਦੀ ਥਾਂ ਆਉਂਦੇ ਹਨ, ਇਸ ਨਾਲ ਵਾਕ ਛੋਟੇ ਤੇ ਸਾਫ਼ ਬਣਦੇ ਹਨ।",
+        "pointsAvailable": 43
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Pronouns replace nouns (I, you, he, she, it, we, they).",
+        "contentPa": "ਸਰਵਨਾਮ ਨਾਂ ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "She plays. They run. It is here.",
+        "examplePa": "ਉਹ ਖੇਡਦੀ ਹੈ। ਉਹ ਦੌੜਦੇ ਹਨ। ਇਹ ਇੱਥੇ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "definition",
+        "contentEn": "Pronoun job: subject pronouns do the action (I/he/she/we/they). Object pronouns receive the action (me/him/her/us/them).",
+        "contentPa": "ਸਰਵਨਾਮ ਦਾ ਕੰਮ: subject pronouns ਕੰਮ ਕਰਦੇ ਹਨ (I/he/she/we/they)। Object pronouns ਕੰਮ ਲੈਂਦੇ ਹਨ (me/him/her/us/them)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_pick_the_pronoun",
+        "englishText": "Pick the pronoun.",
+        "punjabiText": "ਸਰਵਨਾਮ ਚੁਣੋ।",
+        "options": [
+          "John",
+          "He",
+          "apple"
+        ],
+        "correctAnswer": "He",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"He\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"He\". Example: He is my friend.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"He\"। ਉਦਾਹਰਨ: ਉਹ ਮੇਰਾ ਦੋਸਤ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He went to school.",
+          "pa": "ਉਹ ਸਕੂਲ ਗਿਆ।",
+          "highlight": "He"
+        },
+        "wrongOptionExplanations": {
+          "John": {
+            "en": "This is a name (noun), not a pronoun that replaces a name.",
+            "pa": "ਇਹ ਇੱਕ ਨਾਂ ਹੈ, ਨਾਂ ਦੀ ਥਾਂ ਆਉਣ ਵਾਲਾ ਸਰਵਨਾਮ ਨਹੀਂ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "apple": {
+            "en": "This names a thing, so it is a noun, not a pronoun.",
+            "pa": "ਇਹ ਚੀਜ਼ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਨਾਂ ਹੈ, ਸਰਵਨਾਮ ਨਹੀਂ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He went to school.",
+            "sentencePa": "ਉਹ ਸਕੂਲ ਗਿਆ।",
+            "explainEn": "'He' is a pronoun because it replaces a boy's or man's name.",
+            "explainPa": "'He' ਸਰਵਨਾਮ ਹੈ ਕਿਉਂਕਿ ਇਹ ਕਿਸੇ ਲੜਕੇ ਜਾਂ ਮਰਦ ਦੇ ਨਾਂ ਦੀ ਥਾਂ ਆਉਂਦਾ ਹੈ।",
+            "highlight": "He"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_which_is_a_pronoun",
+        "englishText": "Which is a pronoun?",
+        "punjabiText": "ਕਿਹੜਾ ਸਰਵਨਾਮ ਹੈ?",
+        "options": [
+          "dog",
+          "they",
+          "run"
+        ],
+        "correctAnswer": "they",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"they\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"they\". Example: They are coming.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"they\"। ਉਦਾਹਰਨ: ਉਹ ਆ ਰਹੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "They like pizza.",
+          "pa": "ਉਹ ਪਿਜ਼ਾ ਪਸੰਦ ਕਰਦੇ ਹਨ।",
+          "highlight": "They"
+        },
+        "wrongOptionExplanations": {
+          "dog": {
+            "en": "This names an animal, so it is a noun.",
+            "pa": "ਇਹ ਜਾਨਵਰ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਨਾਂ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "run": {
+            "en": "This shows an action, so it is a verb.",
+            "pa": "ਇਹ ਕੰਮ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਕਿਰਿਆ ਹੈ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "They like pizza.",
+            "sentencePa": "ਉਹ ਪਿਜ਼ਾ ਪਸੰਦ ਕਰਦੇ ਹਨ।",
+            "explainEn": "'They' is used for more than one person or thing.",
+            "explainPa": "'They' ਕਈ ਲੋਕਾਂ ਜਾਂ ਚੀਜ਼ਾਂ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+            "highlight": "They"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_complete_am_happy",
+        "englishText": "Complete: ___ am happy.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ___ ਖੁਸ਼ ਹਾਂ।",
+        "options": [
+          "We",
+          "I",
+          "You"
+        ],
+        "correctAnswer": "I",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"I\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"I\". Example: I am happy.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"I\"। ਉਦਾਹਰਨ: ਮੈਂ ਖੁਸ਼ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "I am happy.",
+          "pa": "ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+          "highlight": "I"
+        },
+        "wrongOptionExplanations": {
+          "We": {
+            "en": "'We' means more than one person, but 'am' is used with 'I'.",
+            "pa": "'We' ਇੱਕ ਤੋਂ ਵੱਧ ਲੋਕਾਂ ਲਈ ਹੁੰਦਾ ਹੈ, ਪਰ 'am' 'I' ਨਾਲ ਆਉਂਦਾ ਹੈ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          },
+          "You": {
+            "en": "'You' usually pairs with 'are', not 'am'.",
+            "pa": "'You' ਨਾਲ ਆਮ ਤੌਰ 'ਤੇ 'are' ਆਉਂਦਾ ਹੈ, 'am' ਨਹੀਂ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I am happy.",
+            "sentencePa": "ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+            "explainEn": "Use 'I' when you talk about yourself.",
+            "explainPa": "ਜਦੋਂ ਅਸੀਂ ਆਪਣੇ ਬਾਰੇ ਗੱਲ ਕਰਦੇ ਹਾਂ, ਤਦੋਂ 'I' ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "I"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_what_pronoun_replaces_mary",
+        "englishText": "What pronoun replaces 'Mary'?",
+        "punjabiText": "'Mary' ਦੀ ਥਾਂ ਕਿਹੜਾ ਸਰਵਨਾਮ ਆਉਂਦਾ ਹੈ?",
+        "options": [
+          "He",
+          "She",
+          "It"
+        ],
+        "correctAnswer": "She",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"She\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"She\". Example: Mary is here. She is happy.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"She\"। ਉਦਾਹਰਨ: ਮੇਰੀ ਇੱਥੇ ਹੈ। ਉਹ ਖੁਸ਼ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Mary is smart. She studies hard.",
+          "pa": "Mary ਹੋਸ਼ਿਆਰ ਹੈ। ਉਹ ਧਿਆਨ ਨਾਲ ਪੜ੍ਹਦੀ ਹੈ।",
+          "highlight": "She"
+        },
+        "wrongOptionExplanations": {
+          "He": {
+            "en": "'He' is used for a male person, but Mary is female.",
+            "pa": "'He' ਮੁੰਡੇ/ਮਰਦ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ, ਪਰ Mary ਕੁੜੀ ਹੈ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          },
+          "It": {
+            "en": "'It' is usually for things/animals, not a girl named Mary.",
+            "pa": "'It' ਆਮ ਤੌਰ 'ਤੇ ਚੀਜ਼ਾਂ/ਜਾਨਵਰਾਂ ਲਈ ਹੁੰਦਾ ਹੈ, Mary ਵਰਗੀ ਕੁੜੀ ਲਈ ਨਹੀਂ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Mary is smart. She studies hard.",
+            "sentencePa": "Mary ਹੋਸ਼ਿਆਰ ਹੈ। ਉਹ ਧਿਆਨ ਨਾਲ ਪੜ੍ਹਦੀ ਹੈ।",
+            "explainEn": "'She' correctly replaces the girl's name Mary in the second sentence.",
+            "explainPa": "ਦੂਜੇ ਵਾਕ ਵਿੱਚ 'She' ਕੁੜੀ ਦੇ ਨਾਂ Mary ਦੀ ਥਾਂ ਸਹੀ ਤਰੀਕੇ ਨਾਲ ਆਇਆ ਹੈ।",
+            "highlight": "She"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_is_he_goes_to_school_the_right_w",
+        "englishText": "Is \"He goes to school\" the right word?",
+        "punjabiText": "ਕੀ \"He goes to school\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “He” is a subject pronoun used for a male person.",
+          "pa": "ਹਾਂ। “He” ਕਰਤਾ ਸਰਵਨਾਮ ਹੈ ਜੋ ਪੁਰਸ਼ ਲਈ ਵਰਤਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "They go to school.",
+          "pa": "ਉਹ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।",
+          "highlight": "They go"
+        },
+        "examples": [
+          {
+            "sentenceEn": "They go to school.",
+            "sentencePa": "ਉਹ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।",
+            "explainEn": "Subject pronouns must match the verb form: 'He goes' and 'They go'.",
+            "explainPa": "ਕਰਤਾ ਸਰਵਨਾਮ ਨਾਲ ਕਿਰਿਆ ਦਾ ਮੇਲ ਲਾਜ਼ਮੀ ਹੈ: 'He goes' ਤੇ 'They go' ਸਹੀ ਜੋੜ ਹਨ।",
+            "highlight": "They go"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_what_does_we_mean",
+        "englishText": "What does 'we' mean?",
+        "punjabiText": "'we' ਦਾ ਮਤਲਬ ਕੀ ਹੈ?",
+        "options": [
+          "just you",
+          "me and others",
+          "just one person"
+        ],
+        "correctAnswer": "me and others",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"me and others\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"me and others\". Example: \"We\" means me and others.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"me and others\"। ਉਦਾਹਰਨ: \"we\" ਦਾ ਮਤਲਬ ਹੈ ਮੈਂ ਅਤੇ ਹੋਰ।"
+        },
+        "workedExample": {
+          "en": "We play together.",
+          "pa": "ਅਸੀਂ ਇਕੱਠੇ ਖੇਡਦੇ ਹਾਂ।",
+          "highlight": "We"
+        },
+        "wrongOptionExplanations": {
+          "just you": {
+            "en": "'We' includes the speaker and others, not only one listener.",
+            "pa": "'We' ਵਿੱਚ ਬੋਲਣ ਵਾਲਾ ਅਤੇ ਹੋਰ ਲੋਕ ਸ਼ਾਮਲ ਹੁੰਦੇ ਹਨ, ਕੇਵਲ ਸੁਣਨ ਵਾਲਾ ਨਹੀਂ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          },
+          "just one person": {
+            "en": "'We' is plural, so it is not for one person only.",
+            "pa": "'We' ਬਹੁਵਚਨ ਹੈ, ਇਸ ਲਈ ਕੇਵਲ ਇੱਕ ਵਿਅਕਤੀ ਲਈ ਨਹੀਂ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "We play together.",
+            "sentencePa": "ਅਸੀਂ ਇਕੱਠੇ ਖੇਡਦੇ ਹਾਂ।",
+            "explainEn": "'We' means the speaker plus one or more other people.",
+            "explainPa": "'We' ਦਾ ਮਤਲਬ ਬੋਲਣ ਵਾਲਾ ਅਤੇ ਉਸਦੇ ਨਾਲ ਹੋਰ ਇੱਕ ਜਾਂ ਵੱਧ ਲੋਕ ਹੁੰਦੇ ਹਨ।",
+            "highlight": "We"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_antecedent_match_riya",
+        "englishText": "Riya is late. ___ is tired.",
+        "punjabiText": "Riya ਦੇਰ ਨਾਲ ਆਈ। ___ ਥੱਕੀ ਹੋਈ ਹੈ।",
+        "options": [
+          {
+            "en": "He",
+            "pa": "ਉਹ (ਪੁਰਸ਼)"
+          },
+          {
+            "en": "She",
+            "pa": "ਉਹ (ਇਸਤਰੀ)"
+          },
+          {
+            "en": "They",
+            "pa": "ਉਹ (ਬਹੁਵਚਨ)"
+          }
+        ],
+        "correctAnswer": "She",
+        "points": 5,
+        "hint": {
+          "en": "Use a pronoun that matches the noun (Riya = she).",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'She' correctly replaces the singular female noun 'Riya'.",
+          "pa": "'She' ਇਕਵਚਨ ਇਸਤਰੀ ਨਾਂ 'Riya' ਲਈ ਸਹੀ ਸਰਵਨਾਮ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Riya studies. She works hard.",
+          "pa": "ਰੀਆ ਪੜ੍ਹਦੀ ਹੈ। ਉਹ ਮਿਹਨਤ ਕਰਦੀ ਹੈ।",
+          "highlight": "She"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_basics_01_error_correction_subject_pronoun",
+        "englishText": "Which sentence is correct?",
+        "punjabiText": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+        "options": [
+          {
+            "en": "Him plays football.",
+            "pa": "ਉਸਨੂੰ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।"
+          },
+          {
+            "en": "He plays football.",
+            "pa": "ਉਹ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।"
+          },
+          {
+            "en": "He play football.",
+            "pa": "ਉਹ ਫੁੱਟਬਾਲ ਖੇਡੇ।"
+          }
+        ],
+        "correctAnswer": "He plays football.",
+        "points": 5,
+        "hint": {
+          "en": "Use subject pronoun + correct verb form.",
+          "pa": "ਕਰਤਾ ਸਰਵਨਾਮ ਅਤੇ ਸਹੀ ਕਿਰਿਆ ਰੂਪ ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "'He plays football.' is correct: 'He' is subject form and 'plays' matches third-person singular.",
+          "pa": "'He plays football.' ਸਹੀ ਹੈ: 'He' ਕਰਤਾ ਰੂਪ ਹੈ ਅਤੇ 'plays' ਤੀਜੇ ਪੁਰਖ ਇਕਵਚਨ ਨਾਲ ਮਿਲਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She reads books.",
+          "pa": "ਉਹ ਕਿਤਾਬਾਂ ਪੜ੍ਹਦੀ ਹੈ।",
+          "highlight": "She"
         }
       }
-      if (paPairs.length) {
-        var extraPa = "Options (Punjabi): " + paPairs.join(" | ");
-        var extraEn = "Options (Punjabi): " + paPairs.join(" | ");
-        if (!explanation) explanation = { en: "", pa: "" };
-        explanation.en = (explanation.en ? explanation.en + "\n\n" : "") + extraEn;
-        explanation.pa = (explanation.pa ? explanation.pa + "\n\n" : "") + extraPa;
+    ]
+  },
+  "L_PRONOUNS_PERSONAL_01": {
+    "metadata": {
+      "titleEn": "Pronouns: Personal",
+      "titlePa": "ਸਰਵਨਾਮ: ਵਿਅਕਤੀਵਾਚਕ",
+      "labelEn": "Pronouns: Personal",
+      "labelPa": "ਸਰਵਨਾਮ: ਵਿਅਕਤੀਵਾਚਕ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Personal Pronouns",
+        "titlePa": "ਸਿੱਖੋ: ਵਿਅਕਤੀਵਾਚਕ ਸਰਵਨਾਮ",
+        "descEn": "Identify I/you/he/she/it/we/they in sentences.",
+        "descPa": "ਵਾਕਾਂ ਵਿੱਚ I, you, he, she, it, we, they ਪਛਾਣੋ ਅਤੇ ਸਹੀ ਜਗ੍ਹਾ ਵਰਤੋ।",
+        "pointsAvailable": 23
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Personal pronouns replace names (I, you, he, she, it, we, they).",
+        "contentPa": "ਵਿਅਕਤੀਵਾਚਕ ਸਰਵਨਾਮ ਨਾਂ ਦੀ ਥਾਂ ਲੈਂਦੇ ਹਨ (I, you, he, she, it, we, they)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "They are playing outside.",
+        "examplePa": "ਉਹ ਬਾਹਰ ਖੇਡ ਰਹੇ ਹਨ।",
+        "highlightedWords": [
+          "They"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_personal_01_is_she_the_right_word",
+        "englishText": "Is \"She\" the right word?",
+        "punjabiText": "ਕੀ \"She\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “She” is a personal pronoun used for a female person.",
+          "pa": "ਹਾਂ। “She” ਵਿਅਕਤੀਵਾਚਕ ਸਰਵਨਾਮ ਹੈ ਜੋ ਇਸਤਰੀ ਲਈ ਵਰਤਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "She is my friend.",
+          "pa": "ਉਹ ਮੇਰੀ ਸਹੇਲੀ ਹੈ।",
+          "highlight": "She"
+        },
+        "examples": [
+          {
+            "sentenceEn": "She is my friend.",
+            "sentencePa": "ਉਹ ਮੇਰੀ ਸਹੇਲੀ ਹੈ।",
+            "explainEn": "'She' is a personal pronoun used for one female person and replaces her name.",
+            "explainPa": "'She' ਇੱਕ ਇਸਤਰੀ ਲਈ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਵਿਅਕਤੀਵਾਚਕ ਸਰਵਨਾਮ ਹੈ ਅਤੇ ਨਾਂ ਦੀ ਥਾਂ ਆਉਂਦਾ ਹੈ।",
+            "highlight": "She"
+          },
+          {
+            "sentenceEn": "They are playing outside.",
+            "sentencePa": "ਉਹ ਬਾਹਰ ਖੇਡ ਰਹੇ ਹਨ।",
+            "explainEn": "'They' is used for more than one person or thing.",
+            "explainPa": "'They' ਇੱਕ ਤੋਂ ਵੱਧ ਲੋਕਾਂ ਜਾਂ ਚੀਜ਼ਾਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+            "highlight": "They"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_personal_01_complete_the_sentence_like_to_re",
+        "englishText": "Complete the sentence: ___ like to read books.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ___ ਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਪਸੰਦ ਹੈ।",
+        "options": [
+          "I",
+          "Me",
+          "Mine"
+        ],
+        "correctAnswer": "I",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"I\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"I\". Example: I like to read books.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"I\"। ਉਦਾਹਰਨ: ਮੈਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਪਸੰਦ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I like to read books.",
+          "pa": "ਮੈਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਪਸੰਦ ਹੈ।",
+          "highlight": "I"
+        },
+        "wrongOptionExplanations": {
+          "Me": {
+            "en": "'Me' is usually used as an object, not as the sentence subject here.",
+            "pa": "'Me' ਆਮ ਤੌਰ 'ਤੇ object ਵਜੋਂ ਆਉਂਦਾ ਹੈ, ਇੱਥੇ subject ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          },
+          "Mine": {
+            "en": "'Mine' shows ownership, not the doer of the action.",
+            "pa": "'Mine' ਮਾਲਕੀ ਦੱਸਦਾ ਹੈ, ਕੰਮ ਕਰਨ ਵਾਲਾ ਕਰਤਾ ਨਹੀਂ।",
+            "posEn": "possessive pronoun",
+            "posPa": "ਸੰਬੰਧਕ ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I like to read books.",
+            "sentencePa": "ਮੈਨੂੰ ਕਿਤਾਬਾਂ ਪੜ੍ਹਨਾ ਪਸੰਦ ਹੈ।",
+            "explainEn": "Use 'I' when the speaker is the subject (the doer) of the sentence.",
+            "explainPa": "'I' ਤਦ ਵਰਤਦੇ ਹਾਂ ਜਦੋਂ ਬੋਲਣ ਵਾਲਾ ਵਾਕ ਦਾ ਕਰਤਾ (ਕੰਮ ਕਰਨ ਵਾਲਾ) ਹੋਵੇ।",
+            "highlight": "I"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_personal_01_complete_the_sentence_plays_foot",
+        "englishText": "Complete the sentence: ___ plays football after school.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ___ ਸਕੂਲ ਤੋਂ ਬਾਅਦ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।",
+        "options": [
+          "him",
+          "He",
+          "His"
+        ],
+        "correctAnswer": "He",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"He\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "\"He\" is a subject pronoun, so it fits here.",
+          "pa": "\"He\" subject ਸਰਵਨਾਮ ਹੈ, ਇਸ ਲਈ ਇਹ ਇੱਥੇ ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He plays football.",
+          "pa": "ਉਹ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।",
+          "highlight": "He"
+        },
+        "wrongOptionExplanations": {
+          "him": {
+            "en": "'Him' is object form, but this sentence needs a subject form.",
+            "pa": "'him' object ਰੂਪ ਹੈ, ਪਰ ਇਸ ਵਾਕ ਵਿੱਚ subject ਰੂਪ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          },
+          "His": {
+            "en": "'His' shows possession, not the person doing the action.",
+            "pa": "'His' ਮਾਲਕੀ ਦੱਸਦਾ ਹੈ, ਕੰਮ ਕਰਨ ਵਾਲਾ ਕਰਤਾ ਨਹੀਂ।",
+            "posEn": "possessive pronoun",
+            "posPa": "ਸੰਬੰਧਕ ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He plays football.",
+            "sentencePa": "ਉਹ ਫੁੱਟਬਾਲ ਖੇਡਦਾ ਹੈ।",
+            "explainEn": "'He' is correct because the pronoun before a verb as subject should be in subject form.",
+            "explainPa": "'He' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇੱਥੇ ਕਿਰਿਆ ਤੋਂ ਪਹਿਲਾਂ subject ਰੂਪ ਵਾਲਾ ਸਰਵਨਾਮ ਚਾਹੀਦਾ ਹੈ।",
+            "highlight": "He"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "A: I am ready. B: We are ready too.",
+        "examplePa": "A: ਮੈਂ ਤਿਆਰ ਹਾਂ। B: ਅਸੀਂ ਵੀ ਤਿਆਰ ਹਾਂ।",
+        "highlightedWords": [
+          "I",
+          "We"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_pronouns_personal_01_subject_vs_object_called_me",
+        "englishText": "Choose the correct pronoun: The teacher called ___.",
+        "punjabiText": "ਸਹੀ ਸਰਵਨਾਮ ਚੁਣੋ: The teacher called ___.",
+        "options": [
+          {
+            "en": "I",
+            "pa": "ਮੈਂ"
+          },
+          {
+            "en": "me",
+            "pa": "ਮੈਨੂੰ"
+          },
+          {
+            "en": "mine",
+            "pa": "ਮੇਰਾ"
+          }
+        ],
+        "correctAnswer": "me",
+        "points": 5,
+        "hint": {
+          "en": "After a verb like 'called', we often need object form.",
+          "pa": "'called' ਵਰਗੀ ਕਿਰਿਆ ਤੋਂ ਬਾਅਦ ਆਮ ਤੌਰ 'ਤੇ object ਰੂਪ ਆਉਂਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'me' is correct because it is object form. 'I' is subject form and 'mine' shows possession.",
+          "pa": "'me' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ object ਰੂਪ ਹੈ। 'I' ਕਰਤਾ ਰੂਪ ਹੈ ਅਤੇ 'mine' ਮਾਲਕੀ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The coach praised me.",
+          "pa": "ਕੋਚ ਨੇ ਮੇਰੀ ਤਾਰੀਫ਼ ਕੀਤੀ।",
+          "highlight": "me"
+        }
       }
-    }
-
-    // Preserve non-canonical feedback fields by folding into explanation.
-    if (step.feedback && (step.feedback.correctEn || step.feedback.correctPa || step.feedback.wrongEn || step.feedback.wrongPa)) {
-      if (!explanation) explanation = { en: "", pa: "" };
-      var fEn = [];
-      var fPa = [];
-      if (step.feedback.correctEn) fEn.push("Correct: " + step.feedback.correctEn);
-      if (step.feedback.wrongEn) fEn.push("Wrong: " + step.feedback.wrongEn);
-      if (step.feedback.correctPa) fPa.push("ਸਹੀ: " + step.feedback.correctPa);
-      if (step.feedback.wrongPa) fPa.push("ਗਲਤ: " + step.feedback.wrongPa);
-      if (fEn.length) explanation.en = (explanation.en ? explanation.en + "\n\n" : "") + fEn.join("\n");
-      if (fPa.length) explanation.pa = (explanation.pa ? explanation.pa + "\n\n" : "") + fPa.join("\n");
-    }
-
-    return {
-      type: "question",
-      id: id,
-      englishText: englishText,
-      punjabiText: punjabiText,
-      options: options,
-      correctAnswer: correctAnswer,
-      points: points,
-      hint: hint,
-      explanation: explanation,
-      workedExample: step.workedExample,
-      examples: step.examples
-    };
-  }
-
-  function normalizeGuidedPractice(step) {
-    function stripEdgePunctuation(token) {
-      // Keep internal punctuation (e.g., book's) but drop edge punctuation (e.g., student.).
-      return coerceString(token).replace(/^[\s"'“”‘’()\[\]{}<>.,!?;:]+|[\s"'“”‘’()\[\]{}<>.,!?;:]+$/g, "");
-    }
-
-    function mapWordsToSentenceTokens(sentence, words) {
-      var text = cleanText(sentence);
-      var base = Array.isArray(words) ? words : [];
-      if (!text || !base.length) return base;
-
-      var tokens = text.split(/\s+/).filter(Boolean);
-      if (!tokens.length) return base;
-
-      var out = [];
-      var seenLower = Object.create(null);
-
-      for (var i = 0; i < base.length; i++) {
-        var target = cleanText(base[i]);
-        if (!target) continue;
-        var targetLower = target.toLowerCase();
-        if (seenLower[targetLower]) continue;
-
-        var mapped = target;
-        for (var t = 0; t < tokens.length; t++) {
-          var tok = tokens[t];
-          var stripped = stripEdgePunctuation(tok);
-          if (!stripped) continue;
-          if (stripped.toLowerCase() === targetLower) {
-            mapped = tok;
-            break;
+    ]
+  },
+  "L_SINGULAR_PLURAL_01": {
+    "metadata": {
+      "titleEn": "Singular & Plural",
+      "titlePa": "ਇਕਵਚਨ / ਬਹੁਵਚਨ",
+      "labelEn": "Singular & Plural",
+      "labelPa": "ਇਕਵਚਨ / ਬਹੁਵਚਨ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Numbers",
+        "titlePa": "ਸਿੱਖੋ: ਇਕ ਅਤੇ ਕਈ",
+        "descEn": "One vs. many.",
+        "descPa": "ਇੱਕ ਅਤੇ ਕਈ ਵਿਚ ਫ਼ਰਕ ਪਛਾਣੋ।",
+        "pointsAvailable": 37
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Singular = one. Plural = more than one.",
+        "contentPa": "ਇਕਵਚਨ = ਇੱਕ। ਬਹੁਵਚਨ = ਇੱਕ ਤੋਂ ਵੱਧ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "cat (singular) → cats (plural)",
+        "examplePa": "cat (ਇਕਵਚਨ) → cats (ਬਹੁਵਚਨ)",
+        "points": 1
+      },
+      {
+        "type": "definition",
+        "contentEn": "Plural quick patterns: add -s (cat → cats), add -es after s/x/ch/sh (box → boxes), and change consonant+y to -ies (baby → babies).",
+        "contentPa": "ਬਹੁਵਚਨ ਦੇ ਝਟ-ਪਟ ਨਿਯਮ: -s ਜੋੜੋ (cat → cats), s/x/ch/sh ਤੋਂ ਬਾਅਦ -es (box → boxes), ਅਤੇ ਵਿਅੰਜਨ+y ਨੂੰ -ies ਬਣਾਓ (baby → babies)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_in_tap_the_plural_nouns_is_dogs_",
+        "englishText": "\"I saw three dogs in the park.\" — Is \"dogs\" a plural noun?",
+        "punjabiText": "\"ਮੈਂ ਪਾਰਕ ਵਿੱਚ ਤਿੰਨ ਕੁੱਤੇ ਦੇਖੇ।\" — ਕੀ \"dogs\" ਬਹੁਵਚਨ ਨਾਂ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Dogs” is plural (more than one dog).",
+          "pa": "ਹਾਂ। “dogs” ਬਹੁਵਚਨ ਹੈ (ਇੱਕ ਤੋਂ ਵੱਧ ਕੁੱਤੇ)।"
+        },
+        "workedExample": {
+          "en": "Yes. “Dogs” is plural (more than one dog).",
+          "pa": "ਹਾਂ। “dogs” ਬਹੁਵਚਨ ਹੈ (ਇੱਕ ਤੋਂ ਵੱਧ ਕੁੱਤੇ)।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_form_plural_of_dog",
+        "englishText": "Form plural of 'dog'.",
+        "punjabiText": "'dog' ਦਾ ਬਹੁਵਚਨ ਬਣਾਓ।",
+        "options": [
+          "dog",
+          "dogs",
+          "doges"
+        ],
+        "correctAnswer": "dogs",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"dogs\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"dogs\". Example: There are two dogs.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"dogs\"। ਉਦਾਹਰਨ: ਉੱਥੇ ਦੋ ਕੁੱਤੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Three dogs are playing.",
+          "pa": "ਤਿੰਨ ਕੁੱਤੇ ਖੇਡ ਰਹੇ ਹਨ।",
+          "highlight": "dogs"
+        },
+        "wrongOptionExplanations": {
+          "dog": {
+            "en": "This is singular form. For more than one, add -s: dogs.",
+            "pa": "ਇਹ ਇਕਵਚਨ ਰੂਪ ਹੈ। ਇੱਕ ਤੋਂ ਵੱਧ ਲਈ -s ਜੋੜ ਕੇ dogs ਬਣਦਾ ਹੈ।",
+            "posEn": "singular noun",
+            "posPa": "ਇਕਵਚਨ ਨਾਂ"
+          },
+          "doges": {
+            "en": "'doges' is incorrect spelling. 'dog' takes regular plural 'dogs'.",
+            "pa": "'doges' ਗਲਤ ਲਿਖਤ ਹੈ। 'dog' ਦਾ ਨਿਯਮਤ ਬਹੁਵਚਨ 'dogs' ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Three dogs are playing.",
+            "sentencePa": "ਤਿੰਨ ਕੁੱਤੇ ਖੇਡ ਰਹੇ ਹਨ।",
+            "explainEn": "Add -s for plural.",
+            "explainPa": "-s ਜੋੜ ਕੇ ਬਹੁਵਚਨ ਬਣਾਓ।",
+            "highlight": "dogs"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_which_is_singular",
+        "englishText": "Which is singular?",
+        "punjabiText": "ਕਿਹੜਾ ਇਕਵਚਨ ਹੈ?",
+        "options": [
+          "chairs",
+          "pencil",
+          "apples"
+        ],
+        "correctAnswer": "pencil",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"pencil\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"pencil\". Example: A pencil is on the desk.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"pencil\"। ਉਦਾਹਰਨ: ਮੇਜ਼ ਉੱਤੇ ਇੱਕ ਪੈਂਸਿਲ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "One pencil is red.",
+          "pa": "ਇੱਕ ਪੈਨਸਿਲ ਲਾਲ ਹੈ।",
+          "highlight": "pencil"
+        },
+        "wrongOptionExplanations": {
+          "chairs": {
+            "en": "'chairs' ends with -s and means more than one, so it is plural.",
+            "pa": "'chairs' ਦੇ ਅੰਤ -s ਹੈ ਅਤੇ ਇਹ ਇੱਕ ਤੋਂ ਵੱਧ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਬਹੁਵਚਨ ਹੈ।",
+            "posEn": "plural noun",
+            "posPa": "ਬਹੁਵਚਨ ਨਾਂ"
+          },
+          "apples": {
+            "en": "'apples' is also plural because it means many apples.",
+            "pa": "'apples' ਵੀ ਬਹੁਵਚਨ ਹੈ ਕਿਉਂਕਿ ਇਹ ਕਈ ਸੇਬ ਦੱਸਦਾ ਹੈ।",
+            "posEn": "plural noun",
+            "posPa": "ਬਹੁਵਚਨ ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "One pencil is red.",
+            "sentencePa": "ਇੱਕ ਪੈਨਸਿਲ ਲਾਲ ਹੈ।",
+            "explainEn": "Pencil is singular.",
+            "explainPa": "pencil ਇਕਵਚਨ ਹੈ।",
+            "highlight": "pencil"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_form_plural_of_box",
+        "englishText": "Form plural of 'box'.",
+        "punjabiText": "'box' ਦਾ ਬਹੁਵਚਨ ਬਣਾਓ।",
+        "options": [
+          "boxs",
+          "boxes",
+          "box"
+        ],
+        "correctAnswer": "boxes",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"boxes\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"boxes\". Example: Two boxes are on the table.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"boxes\"। ਉਦਾਹਰਨ: ਮੇਜ਼ ਉੱਤੇ ਦੋ ਡੱਬੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "I have two boxes.",
+          "pa": "ਮੇਰੇ ਕੋਲ ਦੋ ਡੱਬੇ ਹਨ।",
+          "highlight": "boxes"
+        },
+        "wrongOptionExplanations": {
+          "boxs": {
+            "en": "Words ending with x usually add -es, so 'boxs' is incorrect.",
+            "pa": "ਜੋ ਸ਼ਬਦ x ਨਾਲ ਖ਼ਤਮ ਹੁੰਦੇ ਹਨ, ਉਹਨਾਂ ਵਿੱਚ ਆਮ ਤੌਰ 'ਤੇ -es ਲੱਗਦਾ ਹੈ, ਇਸ ਲਈ 'boxs' ਗਲਤ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "box": {
+            "en": "'box' is singular. The plural form is 'boxes'.",
+            "pa": "'box' ਇਕਵਚਨ ਹੈ। ਇਸਦਾ ਬਹੁਵਚਨ 'boxes' ਹੈ।",
+            "posEn": "singular noun",
+            "posPa": "ਇਕਵਚਨ ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I have two boxes.",
+            "sentencePa": "ਮੇਰੇ ਕੋਲ ਦੋ ਡੱਬੇ ਹਨ।",
+            "explainEn": "Words ending in x add -es.",
+            "explainPa": "x ਨਾਲ ਖ਼ਤਮ -es ਜੋੜੋ।",
+            "highlight": "boxes"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_which_pair_is_correct_singular_p",
+        "englishText": "Which pair is correct (singular/plural)?",
+        "punjabiText": "ਕਿਹੜਾ ਜੋੜਾ ਸਹੀ ਹੈ (ਇੱਕ/ਬਹੁ)?",
+        "options": [
+          "child/childs",
+          "child/children",
+          "child/childes"
+        ],
+        "correctAnswer": "child/children",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"child/children\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"child/children\". Example: One child, two children.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"child/children\"। ਉਦਾਹਰਨ: ਇੱਕ ਬੱਚਾ, ਦੋ ਬੱਚੇ।"
+        },
+        "workedExample": {
+          "en": "The children are playing.",
+          "pa": "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।",
+          "highlight": "children"
+        },
+        "wrongOptionExplanations": {
+          "child/childs": {
+            "en": "'childs' is incorrect; the irregular plural is 'children'.",
+            "pa": "'childs' ਗਲਤ ਹੈ; ਇਸਦਾ irregular plural 'children' ਹੈ।",
+            "posEn": "noun pair",
+            "posPa": "ਨਾਂ ਜੋੜਾ"
+          },
+          "child/childes": {
+            "en": "'childes' is not a valid plural form for child.",
+            "pa": "'childes' 'child' ਦਾ ਸਹੀ ਬਹੁਵਚਨ ਰੂਪ ਨਹੀਂ ਹੈ।",
+            "posEn": "noun pair",
+            "posPa": "ਨਾਂ ਜੋੜਾ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The children are playing.",
+            "sentencePa": "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।",
+            "explainEn": "Child is irregular (child → children).",
+            "explainPa": "child ਅਨਿਯਮਤ ਹੈ।",
+            "highlight": "children"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_count_the_singular_nouns_cat_dog",
+        "englishText": "Count the singular nouns: cat, dogs, apple, birds",
+        "punjabiText": "ਇਕਵਚਨ ਨਾਂਵਾਂ ਦੀ ਗਿਣਤੀ ਕਰੋ: cat, dogs, apple, birds",
+        "options": [
+          "one",
+          "two",
+          "three"
+        ],
+        "correctAnswer": "two",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"two\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "\"cat\" and \"apple\" are singular. So the count is two.",
+          "pa": "\"cat\" ਅਤੇ \"apple\" ਇਕਵਚਨ ਹਨ। ਇਸ ਲਈ ਗਿਣਤੀ ਦੋ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I see a cat and an apple.",
+          "pa": "ਮੈਂ ਇੱਕ ਬਿੱਲੀ ਅਤੇ ਇੱਕ ਸੇਬ ਵੇਖਦਾ ਹਾਂ।",
+          "highlight": "cat, apple"
+        },
+        "wrongOptionExplanations": {
+          "one": {
+            "en": "There are two singular nouns here: 'cat' and 'apple'.",
+            "pa": "ਇੱਥੇ ਦੋ ਇਕਵਚਨ ਨਾਂ ਹਨ: 'cat' ਅਤੇ 'apple'।",
+            "posEn": "number",
+            "posPa": "ਗਿਣਤੀ"
+          },
+          "three": {
+            "en": "Only two words are singular; 'dogs' and 'birds' are plural.",
+            "pa": "ਸਿਰਫ਼ ਦੋ ਸ਼ਬਦ ਇਕਵਚਨ ਹਨ; 'dogs' ਅਤੇ 'birds' ਬਹੁਵਚਨ ਹਨ।",
+            "posEn": "number",
+            "posPa": "ਗਿਣਤੀ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I see a cat and an apple.",
+            "sentencePa": "ਮੈਂ ਇੱਕ ਬਿੱਲੀ ਅਤੇ ਇੱਕ ਸੇਬ ਵੇਖਦਾ ਹਾਂ।",
+            "explainEn": "Cat and apple are singular.",
+            "explainPa": "cat ਅਤੇ apple ਇਕਵਚਨ ਹਨ।",
+            "highlight": "cat, apple"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Some plurals are irregular: man → men, woman → women, child → children, foot → feet.",
+        "contentPa": "ਕੁਝ ਬਹੁਵਚਨ ਅਨਿਯਮਤ ਹੁੰਦੇ ਹਨ: man → men, woman → women, child → children, foot → feet।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_singular_plural_01_choose_plural_nouns_only_set",
+        "englishText": "Which list has only plural nouns?",
+        "punjabiText": "ਕਿਹੜੀ ਸੂਚੀ ਵਿੱਚ ਸਿਰਫ਼ ਬਹੁਵਚਨ ਨਾਂ ਹਨ?",
+        "options": [
+          {
+            "en": "cats, books, children",
+            "pa": "ਬਿਲੀਆਂ, ਕਿਤਾਬਾਂ, ਬੱਚੇ"
+          },
+          {
+            "en": "cat, books, child",
+            "pa": "ਬਿੱਲੀ, ਕਿਤਾਬਾਂ, ਬੱਚਾ"
+          },
+          {
+            "en": "apple, children, dog",
+            "pa": "ਸੇਬ, ਬੱਚੇ, ਕੁੱਤਾ"
+          }
+        ],
+        "correctAnswer": "cats, books, children",
+        "points": 5,
+        "hint": {
+          "en": "Plural nouns name more than one.",
+          "pa": "ਬਹੁਵਚਨ ਨਾਂ ਇੱਕ ਤੋਂ ਵੱਧ ਦੱਸਦੇ ਹਨ।"
+        },
+        "explanation": {
+          "en": "'cats, books, children' are all plural forms.",
+          "pa": "'cats, books, children' ਸਾਰੇ ਬਹੁਵਚਨ ਰੂਪ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Many children read books.",
+          "pa": "ਕਈ ਬੱਚੇ ਕਿਤਾਬਾਂ ਪੜ੍ਹਦੇ ਹਨ।",
+          "highlight": "children"
+        }
+      }
+    ]
+  },
+  "L_NOUNS_PLURALS_POSSESSION_01": {
+    "metadata": {
+      "titleEn": "Nouns: Plurals & Possession",
+      "titlePa": "ਨਾਂ: ਬਹੁਵਚਨ ਅਤੇ ਮਾਲਕੀ",
+      "labelEn": "Nouns: Plurals & Possession",
+      "labelPa": "ਨਾਂ: ਬਹੁਵਚਨ ਅਤੇ ਮਾਲਕੀ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Plurals and Possessives",
+        "titlePa": "ਸਿੱਖੋ: ਬਹੁਵਚਨ ਅਤੇ ਮਾਲਕੀ",
+        "descEn": "Form regular/irregular plurals and show possession (’s, of).",
+        "descPa": "ਨਿਯਮਤ/ਅਨਿਯਮਤ ਬਹੁਵਚਨ ਬਣਾਉ ਅਤੇ ਮਾਲਕੀ ਦਿਖਾਓ ('s, of)।",
+        "pointsAvailable": 33
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Plural means more than one (books, children). Possession shows ownership (Sara’s book).",
+        "contentPa": "ਬਹੁਵਚਨ ਦਾ ਮਤਲਬ ਇੱਕ ਤੋਂ ਵੱਧ ਹੁੰਦਾ ਹੈ (ਜਿਵੇਂ books, children)। ਮਾਲਕੀ ਦਿਖਾਉਂਦੀ ਹੈ ਕਿ ਚੀਜ਼ ਕਿਸ ਦੀ ਹੈ (ਜਿਵੇਂ Sara’s book)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "One child → two children; the boy’s pen.",
+        "examplePa": "ਇੱਕ ਬੱਚਾ → ਦੋ ਬੱਚੇ; ਮੁੰਡੇ ਦੀ ਕਲਮ।",
+        "highlightedWords": [
+          "children",
+          "boy’s"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_plurals_possession_01_is_mice_the_right_word",
+        "englishText": "Is \"mice\" the right word?",
+        "punjabiText": "ਕੀ \"mice\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Mice” is the irregular plural of “mouse.”",
+          "pa": "ਹਾਂ। “mice”, “mouse” ਦਾ ਅਨਿਯਮਤ ਬਹੁਵਚਨ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We saw two mice.",
+          "pa": "ਅਸੀਂ ਦੋ ਚੂਹੇ ਵੇਖੇ।",
+          "highlight": "mice"
+        },
+        "examples": [
+          {
+            "sentenceEn": "We saw two mice.",
+            "sentencePa": "ਅਸੀਂ ਦੋ ਚੂਹੇ ਵੇਖੇ।",
+            "explainEn": "Irregular plural of mouse is mice.",
+            "explainPa": "mouse ਦਾ ਅਨਿਯਮਤ ਬਹੁਵਚਨ mice ਹੁੰਦਾ ਹੈ।",
+            "highlight": "mice"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_plurals_possession_01_which_shows_possession_correctly",
+        "englishText": "Which shows possession correctly?",
+        "punjabiText": "ਕਿਹੜਾ ਮਾਲਕੀ ਠੀਕ ਹੈ?",
+        "options": [
+          "the girls bag",
+          "the girl's bag",
+          "the girls's bag"
+        ],
+        "correctAnswer": "the girl's bag",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"the girl's bag\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"the girl's bag\". Example: This is the girl's bag.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"the girl's bag\"। ਉਦਾਹਰਨ: ਇਹ ਕੁੜੀ ਦਾ ਬੈਗ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "This is the girl's bag.",
+          "pa": "ਇਹ ਕੁੜੀ ਦੀ ਥੈਲੀ ਹੈ।",
+          "highlight": "girl's"
+        },
+        "wrongOptionExplanations": {
+          "the girls bag": {
+            "en": "This misses the apostrophe, so possession is not marked.",
+            "pa": "ਇਸ ਵਿੱਚ apostrophe ਨਹੀਂ ਹੈ, ਇਸ ਲਈ ਮਾਲਕੀ ਨਹੀਂ ਦਿਖ ਰਹੀ।",
+            "posEn": "possessive noun phrase",
+            "posPa": "ਮਾਲਕਾਨਾ ਨਾਂ ਵਾਕੰਸ਼"
+          },
+          "the girls's bag": {
+            "en": "For singular 'girl', we use girl's. 'girls's' is incorrect spelling.",
+            "pa": "ਇਕਵਚਨ 'girl' ਲਈ girl's ਲਿਖਦੇ ਹਾਂ। 'girls's' ਗਲਤ ਰੂਪ ਹੈ।",
+            "posEn": "possessive noun phrase",
+            "posPa": "ਮਾਲਕਾਨਾ ਨਾਂ ਵਾਕੰਸ਼"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "This is the girl's bag.",
+            "sentencePa": "ਇਹ ਕੁੜੀ ਦੀ ਥੈਲੀ ਹੈ।",
+            "explainEn": "Use 's for singular possession.",
+            "explainPa": "ਇਕਵਚਨ ਮਾਲਕੀ ਲਈ 's ਵਰਤੋ।",
+            "highlight": "girl's"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_plurals_possession_01_form_the_plural_of_child",
+        "englishText": "Form the plural of 'child'.",
+        "punjabiText": "'child' ਦਾ ਬਹੁਵਚਨ ਬਣਾਓ।",
+        "options": [
+          "childs",
+          "children",
+          "childses"
+        ],
+        "correctAnswer": "children",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"children\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"children\". Example: The children are playing.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"children\"। ਉਦਾਹਰਨ: ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "The children are playing.",
+          "pa": "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।",
+          "highlight": "children"
+        },
+        "wrongOptionExplanations": {
+          "childs": {
+            "en": "'child' is irregular, so adding -s is incorrect.",
+            "pa": "'child' irregular noun ਹੈ, ਇਸ ਲਈ -s ਜੋੜਨਾ ਗਲਤ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "childses": {
+            "en": "'childses' is not a valid plural form in English.",
+            "pa": "'childses' ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਸਹੀ ਬਹੁਵਚਨ ਰੂਪ ਨਹੀਂ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The children are playing.",
+            "sentencePa": "ਬੱਚੇ ਖੇਡ ਰਹੇ ਹਨ।",
+            "explainEn": "Irregular plural: child → children.",
+            "explainPa": "child ਦਾ ਬਹੁਵਚਨ children ਹੈ।",
+            "highlight": "children"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_plurals_possession_01_which_is_the_possessive_form",
+        "englishText": "Which is the possessive form?",
+        "punjabiText": "ਕਿਹੜਾ ਮਾਲਕਾਨਾ ਰੂਪ ਹੈ?",
+        "options": [
+          "books",
+          "book's",
+          "book"
+        ],
+        "correctAnswer": "book's",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"book's\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"book's\". Example: The book's cover is red.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"book's\"। ਉਦਾਹਰਨ: ਕਿਤਾਬ ਦਾ ਕਵਰ ਲਾਲ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The book's cover is red.",
+          "pa": "ਕਿਤਾਬ ਦਾ ਕਵਰ ਲਾਲ ਹੈ।",
+          "highlight": "book's"
+        },
+        "wrongOptionExplanations": {
+          "books": {
+            "en": "'books' is just a plural noun; it does not show ownership.",
+            "pa": "'books' ਸਿਰਫ਼ ਬਹੁਵਚਨ ਨਾਂ ਹੈ; ਇਹ ਮਾਲਕੀ ਨਹੀਂ ਦਿਖਾਉਂਦਾ।",
+            "posEn": "plural noun",
+            "posPa": "ਬਹੁਵਚਨ ਨਾਂ"
+          },
+          "book": {
+            "en": "'book' is singular noun form without possession.",
+            "pa": "'book' ਇਕਵਚਨ ਨਾਂ ਦਾ ਸਧਾਰਣ ਰੂਪ ਹੈ, ਮਾਲਕੀ ਨਹੀਂ।",
+            "posEn": "singular noun",
+            "posPa": "ਇਕਵਚਨ ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The book's cover is red.",
+            "sentencePa": "ਕਿਤਾਬ ਦਾ ਕਵਰ ਲਾਲ ਹੈ।",
+            "explainEn": "Book's = possession.",
+            "explainPa": "Book's = ਮਾਲਕੀ।",
+            "highlight": "book's"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_plurals_possession_01_is_feet_the_right_word",
+        "englishText": "Is \"feet\" the right word?",
+        "punjabiText": "ਕੀ \"feet\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Some plurals are irregular: foot → feet.",
+          "pa": "ਕੁਝ ਬਹੁਵਚਨ irregular ਹੁੰਦੇ ਹਨ: foot → feet।"
+        },
+        "explanation": {
+          "en": "Foot changes to feet in plural.",
+          "pa": "ਬਹੁਵਚਨ ਵਿੱਚ foot → feet ਬਣਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She has two feet.",
+          "pa": "ਉਸਦੇ ਦੋ ਪੈਰ ਹਨ।",
+          "highlight": "feet"
+        },
+        "examples": [
+          {
+            "sentenceEn": "She has two feet.",
+            "sentencePa": "ਉਸਦੇ ਦੋ ਪੈਰ ਹਨ।",
+            "explainEn": "Irregular: foot → feet.",
+            "explainPa": "foot ਦਾ ਬਹੁਵਚਨ feet ਹੈ।",
+            "highlight": "feet"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Apostrophe rule: singular possession uses 's (girl's bag). Plural nouns ending in s use just ' (girls' bags).",
+        "contentPa": "ਅਪੋਸਟਰੋਫ਼ ਨਿਯਮ: ਇਕਵਚਨ ਮਾਲਕੀ ਲਈ 's (girl's bag)। s ਨਾਲ ਖ਼ਤਮ ਬਹੁਵਚਨ ਲਈ ਸਿਰਫ਼ ' (girls' bags)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_nouns_plurals_possession_01_plural_or_possessive_mix",
+        "englishText": "Which sentence uses plural (not possessive)?",
+        "punjabiText": "ਕਿਹੜਾ ਵਾਕ ਬਹੁਵਚਨ ਵਰਤਦਾ ਹੈ (ਮਾਲਕੀ ਨਹੀਂ)?",
+        "options": [
+          {
+            "en": "The girl's shoes are new.",
+            "pa": "ਕੁੜੀ ਦੇ ਜੁੱਤੇ ਨਵੇਂ ਹਨ।"
+          },
+          {
+            "en": "The girls are singing.",
+            "pa": "ਕੁੜੀਆਂ ਗਾ ਰਹੀਆਂ ਹਨ।"
+          },
+          {
+            "en": "The girls' shoes are new.",
+            "pa": "ਕੁੜੀਆਂ ਦੇ ਜੁੱਤੇ ਨਵੇਂ ਹਨ।"
+          }
+        ],
+        "correctAnswer": "The girls are singing.",
+        "points": 5,
+        "hint": {
+          "en": "Plural just means more than one. Possessive shows ownership.",
+          "pa": "ਬਹੁਵਚਨ ਸਿਰਫ਼ ਇੱਕ ਤੋਂ ਵੱਧ ਦੱਸਦਾ ਹੈ। ਮਾਲਕੀ ownership ਦਿਖਾਉਂਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'The girls are singing.' is plural only. The other two sentences show possession.",
+          "pa": "'The girls are singing.' ਸਿਰਫ਼ ਬਹੁਵਚਨ ਹੈ। ਬਾਕੀ ਦੋ ਵਾਕ ਮਾਲਕੀ ਦਿਖਾਉਂਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "The boys are running.",
+          "pa": "ਮੁੰਡੇ ਦੌੜ ਰਹੇ ਹਨ।",
+          "highlight": "boys"
+        }
+      }
+    ]
+  },
+  "L_POSSESSIVE_NOUNS_01": {
+    "metadata": {
+      "titleEn": "Possessive Nouns",
+      "titlePa": "ਮਾਲਕਾਨਾ ਨਾਂ",
+      "labelEn": "Possessive Nouns",
+      "labelPa": "ਮਾਲਕਾਨਾ ਨਾਂ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Possessive Nouns ('s and of)",
+        "titlePa": "ਸਿੱਖੋ: ਮਾਲਕਾਨਾ ਨਾਂ",
+        "descEn": "Show who owns something using 's or an 'of' phrase",
+        "descPa": "'s ਜਾਂ 'of' phrase ਨਾਲ ਦਿਖਾਓ ਕਿ ਚੀਜ਼ ਕਿਸ ਦੀ ਹੈ।",
+        "pointsAvailable": 29
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Possessive nouns show that something belongs to someone. Add 's to singular nouns, and just ' after plural nouns ending in s. Also use 'of' to show possession.",
+        "contentPa": "ਮਾਲਕਾਨਾ ਨਾਂ ਦੱਸਦਾ ਹੈ ਕਿ ਚੀਜ਼ ਕਿਸ ਦੀ ਹੈ। ਇਕਵਚਨ ਨਾਂ ਨਾਲ 's ਲਗਦਾ ਹੈ, ਅਤੇ ਜਿਹੜੇ ਬਹੁਵਚਨ ਨਾਂ s ਨਾਲ ਖ਼ਤਮ ਹੁੰਦੇ ਹਨ, ਉਹਨਾਂ ਨਾਲ ਸਿਰਫ਼ ' ਲੱਗਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "The boy's book is blue.",
+        "examplePa": "ਮੁੰਡੇ ਦੀ ਕਿਤਾਬ ਨੀਲੀ ਹੈ।",
+        "highlightedWords": [
+          "boy's"
+        ],
+        "explainEn": "Singular noun + 's = possession",
+        "explainPa": "ਇਕਵਚਨ ਨਾਂ + 's = ਮਾਲਕੀ",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "The girls' school has a big playground.",
+        "examplePa": "ਲੜਕੀਆਂ ਦੇ ਸਕੂਲ ਵਿੱਚ ਵੱਡਾ ਮੈਦਾਨ ਹੈ।",
+        "highlightedWords": [
+          "girls'"
+        ],
+        "explainEn": "Plural noun ending in 's' + just ' = possession",
+        "explainPa": "ਬਹੁਵਚਨ ਨਾਂ ਦੇ ਅੰਤ 's ਹੋਵੇ ਤਾਂ ਸਿਰਫ਼ ' ਲੱਗਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_nouns_01_in_tap_possessive_nouns_in_the_t",
+        "englishText": "\"Sarah's book is on the table.\" — Is \"Sarah's\" a possessive noun?",
+        "punjabiText": "\"ਸਾਰਾਹ ਦੀ ਕਿਤਾਬ ਮੇਜ਼ 'ਤੇ ਹੈ।\" — ਕੀ \"Sarah's\" ਮਾਲਕਾਨਾ ਨਾਂ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Sarah’s” shows possession (it belongs to Sarah).",
+          "pa": "ਹਾਂ। “Sarah's” ਮਾਲਕੀ ਦਿਖਾਂਦਾ ਹੈ (ਇਹ Sarah ਦੀ ਹੈ)।"
+        },
+        "workedExample": {
+          "en": "Yes. “Sarah’s” shows possession (it belongs to Sarah).",
+          "pa": "ਹਾਂ। “Sarah's” ਮਾਲਕੀ ਦਿਖਾਂਦਾ ਹੈ (ਇਹ Sarah ਦੀ ਹੈ)।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_nouns_01_which_shows_correct_possession",
+        "englishText": "Which shows correct possession?",
+        "punjabiText": "ਕਿਹੜਾ ਸਹੀ ਮਾਲਕਾਨਾ ਦੱਸਦਾ ਹੈ?",
+        "options": [
+          "the students book",
+          "the students' book",
+          "the student's book"
+        ],
+        "correctAnswer": "the students' book",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"the students' book\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"the students' book\". Example: This is the students' book.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"the students' book\"। ਉਦਾਹਰਨ: ਇਹ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਕਿਤਾਬ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The teacher's classroom is clean.",
+          "pa": "ਅਧਿਆਪਕ ਦੀ ਕਲਾਸ ਸਾਫ਼ ਹੈ।",
+          "highlight": "teacher's"
+        },
+        "wrongOptionExplanations": {
+          "the students book": {
+            "en": "This has no apostrophe, so ownership is not shown.",
+            "pa": "ਇਸ ਵਿੱਚ apostrophe ਨਹੀਂ ਹੈ, ਇਸ ਲਈ ਮਾਲਕੀ ਨਹੀਂ ਦਿਖਦੀ।",
+            "posEn": "possessive noun phrase",
+            "posPa": "ਮਾਲਕਾਨਾ ਨਾਂ ਵਾਕੰਸ਼"
+          },
+          "the student's book": {
+            "en": "This means one student's book. The question targets plural students owning one book.",
+            "pa": "ਇਸਦਾ ਮਤਲਬ ਇੱਕ ਵਿਦਿਆਰਥੀ ਦੀ ਕਿਤਾਬ ਹੈ। ਇੱਥੇ ਸਵਾਲ ਕਈ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਮਾਲਕੀ ਬਾਰੇ ਹੈ।",
+            "posEn": "possessive noun phrase",
+            "posPa": "ਮਾਲਕਾਨਾ ਨਾਂ ਵਾਕੰਸ਼"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The teacher's classroom is clean.",
+            "sentencePa": "ਅਧਿਆਪਕ ਦੀ ਕਲਾਸ ਸਾਫ਼ ਹੈ।",
+            "explainEn": "Singular teacher's = one teacher",
+            "explainPa": "ਇੱਕ ਅਧਿਆਪਕ = teacher's",
+            "highlight": "teacher's"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "The color of the flower is beautiful.",
+        "examplePa": "ਫੁੱਲ ਦਾ ਰੰਗ ਸੁੰਦਰ ਹੈ।",
+        "highlightedWords": [
+          "of the flower"
+        ],
+        "explainEn": "An 'of' phrase is another way to show possession.",
+        "explainPa": "'of' phrase ਮਾਲਕੀ ਦਿਖਾਉਣ ਦਾ ਹੋਰ ਤਰੀਕਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_nouns_01_complete_the_toy_is_in_the_corne",
+        "englishText": "Complete: The ___ toy is in the corner.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਕੋਨੇ ਵਿੱਚ ___ ਖਿਡੌਣਾ ਪਿਆ ਹੈ।",
+        "options": [
+          "childs",
+          "child's",
+          "children's"
+        ],
+        "correctAnswer": "child's",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"child's\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"child's\". Example: The child's toy is in the corner.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"child's\"। ਉਦਾਹਰਨ: ਬੱਚੇ ਦਾ ਖਿਡੌਣਾ ਕੋਨੇ ਵਿੱਚ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The women's team won the game.",
+          "pa": "ਔਰਤਾਂ ਦੀ ਟੀਮ ਨੇ ਖੇਡ ਜਿੱਤੀ।",
+          "highlight": "women's"
+        },
+        "wrongOptionExplanations": {
+          "childs": {
+            "en": "'childs' is incorrect form. For one child showing ownership, use 'child's'.",
+            "pa": "'childs' ਗਲਤ ਰੂਪ ਹੈ। ਇੱਕ ਬੱਚੇ ਦੀ ਮਾਲਕੀ ਲਈ 'child's' ਵਰਤੋ।",
+            "posEn": "possessive noun",
+            "posPa": "ਮਾਲਕਾਨਾ ਨਾਂ"
+          },
+          "children's": {
+            "en": "'children's' means the toy belongs to many children, not one child.",
+            "pa": "'children's' ਦਾ ਮਤਲਬ ਕਈ ਬੱਚਿਆਂ ਦੀ ਮਾਲਕੀ ਹੈ, ਇੱਕ ਬੱਚੇ ਦੀ ਨਹੀਂ।",
+            "posEn": "possessive noun",
+            "posPa": "ਮਾਲਕਾਨਾ ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The women's team won the game.",
+            "sentencePa": "ਔਰਤਾਂ ਦੀ ਟੀਮ ਨੇ ਖੇਡ ਜਿੱਤੀ।",
+            "explainEn": "women + 's = possessive (irregular plural)",
+            "explainPa": "women + 's = ਅਨਿਯਮਤ ਬਹੁਵਚਨ ਦਾ ਮਾਲਕਾਨਾ ਰੂਪ",
+            "highlight": "women's"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_nouns_01_is_girl_s_bag_the_right_word",
+        "englishText": "Is \"girl's bag\" the right word?",
+        "punjabiText": "ਕੀ \"girl's bag\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "For one owner, use 's.",
+          "pa": "ਇੱਕ ਮਾਲਕ ਲਈ 's ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "One girl owns the bag, so \"girl's\" is correct.",
+          "pa": "ਇੱਕ ਲੜਕੀ ਦੀ ਮਾਲਕੀ ਹੈ, ਇਸ ਲਈ \"girl's\" ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The girl's bag is on the chair.",
+          "pa": "ਲੜਕੀ ਦਾ ਬੈਗ ਕੁਰਸੀ 'ਤੇ ਹੈ।",
+          "highlight": "girl's"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The girl's bag is on the chair.",
+            "sentencePa": "ਲੜਕੀ ਦਾ ਬੈਗ ਕੁਰਸੀ 'ਤੇ ਹੈ।",
+            "explainEn": "For one girl, use girl's + noun.",
+            "explainPa": "ਇੱਕ ਲੜਕੀ ਲਈ girl's + noun ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "girl's"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "My friend's house is next to mine.",
+        "examplePa": "ਮੇਰੇ ਦੋਸਤ ਦਾ ਘਰ ਮੇਰੇ ਘਰ ਦੇ ਕੋਲ ਹੈ।",
+        "highlightedWords": [
+          "friend's"
+        ],
+        "explainEn": "This shows relationship and ownership together.",
+        "explainPa": "ਇਹ ਵਾਕ ਸੰਬੰਧ ਅਤੇ ਮਾਲਕੀ ਦੋਵੇਂ ਦਿਖਾਉਂਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "definition",
+        "contentEn": "Plural possessive rule: if a plural noun already ends in s, add only an apostrophe (students').",
+        "contentPa": "ਬਹੁਵਚਨ ਮਾਲਕੀ ਨਿਯਮ: ਜੇ ਬਹੁਵਚਨ ਨਾਂ ਪਹਿਲਾਂ ਹੀ s ਨਾਲ ਖ਼ਤਮ ਹੋਵੇ, ਤਾਂ ਸਿਰਫ਼ apostrophe ਲਗਾਓ (students')।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_nouns_01_rewrite_of_phrase_students",
+        "englishText": "Rewrite using possessive: the bag of the students",
+        "punjabiText": "ਮਾਲਕਾਨਾ ਰੂਪ ਵਿੱਚ ਲਿਖੋ: the bag of the students",
+        "options": [
+          {
+            "en": "the students bag",
+            "pa": "ਵਿਦਿਆਰਥੀਆਂ ਬੈਗ"
+          },
+          {
+            "en": "the students' bag",
+            "pa": "ਵਿਦਿਆਰਥੀਆਂ ਦਾ ਬੈਗ"
+          },
+          {
+            "en": "the student's bag",
+            "pa": "ਵਿਦਿਆਰਥੀ ਦਾ ਬੈਗ"
+          }
+        ],
+        "correctAnswer": "the students' bag",
+        "points": 5,
+        "hint": {
+          "en": "For plural nouns ending in s, add only '.",
+          "pa": "s ਨਾਲ ਖ਼ਤਮ ਬਹੁਵਚਨ ਨਾਂ ਲਈ ਸਿਰਫ਼ ' ਲਗਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "For plural 'students', add apostrophe after s: 'the students' bag'.",
+          "pa": "'students' ਬਹੁਵਚਨ ਲਈ apostrophe s ਤੋਂ ਬਾਅਦ ਆਉਂਦੀ ਹੈ: 'the students' bag' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The players' room is ready.",
+          "pa": "ਖਿਡਾਰੀਆਂ ਦਾ ਕਮਰਾ ਤਿਆਰ ਹੈ।",
+          "highlight": "players'"
+        }
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "John's book",
+          "students' school",
+          "color of the flower",
+          "noun's = one, nouns' = many"
+        ],
+        "keyExamplesPa": [
+          "John's ਕਿਤਾਬ",
+          "ਵਿਦਿਆਰਥੀਆਂ ਦਾ ਸਕੂਲ",
+          "ਫੁੱਲ ਦਾ ਰੰਗ",
+          "'s = ਇੱਕ, ' = ਕਈ"
+        ],
+        "totalPoints": 29,
+        "points": 0
+      }
+    ]
+  },
+  "L_POSSESSIVE_PRONOUNS_01": {
+    "metadata": {
+      "titleEn": "Possessive Pronouns",
+      "titlePa": "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ",
+      "labelEn": "Possessive Pronouns",
+      "labelPa": "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ",
+      "trackId": "T_WORDS",
+      "objective": {
+        "titleEn": "Learn: Possessive Pronouns (my, mine, his, her, their)",
+        "titlePa": "ਸਿੱਖੋ: ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ",
+        "descEn": "Use possessive pronouns to show ownership without repeating the noun",
+        "descPa": "ਨਾਂ ਦੁਹਰਾਏ ਬਿਨਾਂ ਮਾਲਕੀ ਦਿਖਾਉਣ ਲਈ ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਵਰਤੋ।",
+        "pointsAvailable": 29
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Possessive pronouns (my, your, his, her, its, our, their, mine, yours, his, hers, ours, theirs) show who owns something. They replace 'possessive noun + noun'.",
+        "contentPa": "ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਦੱਸਦੇ ਹਨ ਕਿ ਚੀਜ਼ ਕਿਸ ਦੀ ਹੈ (my, your, his, her, mine, theirs)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "This is my pencil.",
+        "examplePa": "ਇਹ ਮੇਰੀ ਪੈਨਸਿਲ ਹੈ।",
+        "highlightedWords": [
+          "my"
+        ],
+        "explainEn": "'my' = possessive adjective (goes with noun)",
+        "explainPa": "'my' = ਮਾਲਕਾਨਾ (ਨਾਂ ਨਾਲ)",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "The pencil is mine.",
+        "examplePa": "ਪੇਨਸਿਲ ਮੇਰੀ ਹੈ।",
+        "highlightedWords": [
+          "mine"
+        ],
+        "explainEn": "'mine' = possessive pronoun (stands alone)",
+        "explainPa": "'mine' = ਸਰਵਨਾਮ (ਅਕੇਲਾ)",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_pronouns_01_in_tap_possessive_pronouns_not_a",
+        "englishText": "\"This bag is yours.\" — Is \"yours\" a possessive pronoun?",
+        "punjabiText": "\"ਇਹ ਬੈਗ ਤੁਹਾਡਾ ਹੈ।\" — ਕੀ \"yours\" ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Yours” is a possessive pronoun (it replaces “your + noun”).",
+          "pa": "ਹਾਂ। “yours” ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਹੈ (ਇਹ “your + ਨਾਂ” ਦੀ ਥਾਂ ਲੈਂਦਾ ਹੈ)।"
+        },
+        "workedExample": {
+          "en": "Yes. “Yours” is a possessive pronoun (it replaces “your + noun”).",
+          "pa": "ਹਾਂ। “yours” ਮਾਲਕਾਨਾ ਸਰਵਨਾਮ ਹੈ (ਇਹ “your + ਨਾਂ” ਦੀ ਥਾਂ ਲੈਂਦਾ ਹੈ)।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_pronouns_01_complete_the_sentence_the_red_wa",
+        "englishText": "Complete the sentence: The red water bottle is ___.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਲਾਲ ਪਾਣੀ ਦੀ ਬੋਤਲ ___ ਹੈ।",
+        "options": [
+          "my",
+          "mine",
+          "her"
+        ],
+        "correctAnswer": "mine",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"mine\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"mine\". Example: The red water bottle is mine.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"mine\"। ਉਦਾਹਰਨ: ਲਾਲ ਪਾਣੀ ਦੀ ਬੋਤਲ ਮੇਰੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "His dog is bigger than hers.",
+          "pa": "ਉਸਦਾ ਕੁੱਤਾ ਉਸਦੇ ਕੁੱਤੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।",
+          "highlight": "hers"
+        },
+        "wrongOptionExplanations": {
+          "my": {
+            "en": "'my' is possessive adjective/determiner, so it needs a noun after it (my book).",
+            "pa": "'my' ਤੋਂ ਬਾਅਦ ਨਾਂ ਆਉਂਦਾ ਹੈ (my book), ਇਸ ਲਈ ਇਹ ਅਕੇਲਾ ਸਰਵਨਾਮ ਨਹੀਂ।",
+            "posEn": "possessive determiner",
+            "posPa": "ਸੰਬੰਧਕ ਨਿਰਦੇਸ਼ਕ"
+          },
+          "her": {
+            "en": "'her' here works as possessive determiner before a noun (her bag), not a standalone pronoun.",
+            "pa": "'her' ਇੱਥੇ ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ (her bag), ਅਕੇਲਾ ਸਰਵਨਾਮ ਨਹੀਂ।",
+            "posEn": "possessive determiner",
+            "posPa": "ਸੰਬੰਧਕ ਨਿਰਦੇਸ਼ਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "His dog is bigger than hers.",
+            "sentencePa": "ਉਸਦਾ ਕੁੱਤਾ ਉਸਦੇ ਕੁੱਤੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।",
+            "explainEn": "'his' with dog, 'hers' stands alone",
+            "explainPa": "'his' ਨਾਂ ਨਾਲ ਆਉਂਦਾ ਹੈ, ਜਦਕਿ 'hers' 'her dog' ਦੀ ਥਾਂ ਅਕੇਲਾ ਖੜ੍ਹਦਾ ਹੈ।",
+            "highlight": "hers"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "Their house is big, and ours is small.",
+        "examplePa": "ਉਨ੍ਹਾਂ ਦਾ ਘਰ ਵੱਡਾ ਹੈ, ਤੇ ਸਾਡਾ ਛੋਟਾ ਹੈ।",
+        "highlightedWords": [
+          "Their",
+          "ours"
+        ],
+        "explainEn": "'Their' = adjective, 'ours' = pronoun standing alone",
+        "explainPa": "'Their' ਨਾਂ ਨਾਲ, 'ours' ਅਕੇਲਾ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_pronouns_01_complete_this_is_notebook",
+        "englishText": "Complete: This is ___ notebook.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇਹ ___ ਨੋਟਬੁੱਕ ਹੈ।",
+        "options": [
+          "her",
+          "hers",
+          "he"
+        ],
+        "correctAnswer": "her",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"her\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"her\". Example: This is her notebook.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"her\"। ਉਦਾਹਰਨ: ਇਹ ਉਸਦੀ ਨੋਟਬੁੱਕ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "These books are theirs.",
+          "pa": "ਇਹ ਕਿਤਾਬਾਂ ਉਨ੍ਹਾਂ ਦੀਆਂ ਹਨ।",
+          "highlight": "theirs"
+        },
+        "wrongOptionExplanations": {
+          "hers": {
+            "en": "'hers' is a possessive pronoun that stands alone, so it cannot come before 'notebook'.",
+            "pa": "'hers' ਅਕੇਲਾ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ 'notebook' ਤੋਂ ਪਹਿਲਾਂ ਨਹੀਂ ਆ ਸਕਦਾ।",
+            "posEn": "possessive pronoun",
+            "posPa": "ਸੰਬੰਧਕ ਸਰਵਨਾਮ"
+          },
+          "he": {
+            "en": "'he' is a subject pronoun and does not show ownership.",
+            "pa": "'he' ਕਰਤਾ ਸਰਵਨਾਮ ਹੈ ਅਤੇ ਮਾਲਕੀ ਨਹੀਂ ਦਿਖਾਉਂਦਾ।",
+            "posEn": "pronoun",
+            "posPa": "ਸਰਵਨਾਮ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "These books are theirs.",
+            "sentencePa": "ਇਹ ਕਿਤਾਬਾਂ ਉਨ੍ਹਾਂ ਦੀਆਂ ਹਨ।",
+            "explainEn": "'theirs' = possessive pronoun (stands alone)",
+            "explainPa": "'theirs' ਅਕੇਲਾ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ possessive pronoun ਹੈ।",
+            "highlight": "theirs"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_pronouns_01_is_mine_the_right_word",
+        "englishText": "Is \"mine\" the right word?",
+        "punjabiText": "ਕੀ \"mine\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Possessive pronouns show ownership: mine, yours, his, hers, theirs.",
+          "pa": "ਮਾਲਕੀ ਸਰਵਨਾਮ ਮਾਲਕੀ ਦੱਸਦੇ ਹਨ: mine, yours, his, hers, theirs।"
+        },
+        "explanation": {
+          "en": "\"Mine\" shows something belongs to me.",
+          "pa": "\"mine\" ਦੱਸਦਾ ਹੈ ਕਿ ਚੀਜ਼ ਮੇਰੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "That bag is mine.",
+          "pa": "ਉਹ ਬੈਗ ਮੇਰਾ ਹੈ।",
+          "highlight": "mine"
+        },
+        "examples": [
+          {
+            "sentenceEn": "That bag is mine.",
+            "sentencePa": "ਉਹ ਬੈਗ ਮੇਰਾ ਹੈ।",
+            "explainEn": "Use 'mine' when ownership stands alone.",
+            "explainPa": "ਜਦੋਂ ਮਾਲਕੀ ਅਕੇਲੀ ਆਵੇ ਤਾਂ 'mine' ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "mine"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "Your answer is correct, but mine is wrong.",
+        "examplePa": "ਤੁਹਾਡਾ ਜਵਾਬ ਸਹੀ ਹੈ, ਪਰ ਮੇਰਾ ਗਲਤ ਹੈ।",
+        "highlightedWords": [
+          "Your",
+          "mine"
+        ],
+        "explainEn": "'Your' with answer, 'mine' alone",
+        "explainPa": "'Your' ਨਾਮ ਨਾਲ, 'mine' ਅਕੇਲਾ",
+        "points": 1
+      },
+      {
+        "type": "definition",
+        "contentEn": "Use possessive adjective before a noun (their car). Use possessive pronoun alone (the car is theirs).",
+        "contentPa": "ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ possessive adjective ਵਰਤੋ (their car)। ਅਕੇਲਾ possessive pronoun ਵਰਤੋ (the car is theirs)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_possessive_pronouns_01_their_vs_theirs_complete",
+        "englishText": "Complete: The blue car is ___.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਨੀਲੀ ਕਾਰ ___.",
+        "options": [
+          {
+            "en": "their",
+            "pa": "ਉਹਨਾਂ ਦਾ"
+          },
+          {
+            "en": "theirs",
+            "pa": "ਉਹਨਾਂ ਦੀ"
+          },
+          {
+            "en": "they",
+            "pa": "ਉਹ"
+          }
+        ],
+        "correctAnswer": "theirs",
+        "points": 5,
+        "hint": {
+          "en": "After 'is', choose a standalone ownership word.",
+          "pa": "'is' ਤੋਂ ਬਾਅਦ ਅਕੇਲਾ ਮਾਲਕੀ ਵਾਲਾ ਸ਼ਬਦ ਚੁਣੋ।"
+        },
+        "explanation": {
+          "en": "'theirs' is correct because it stands alone. 'their' must come before a noun.",
+          "pa": "'theirs' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਅਕੇਲਾ ਆਉਂਦਾ ਹੈ। 'their' ਤੋਂ ਬਾਅਦ ਨਾਂ ਲੱਗਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "This house is ours.",
+          "pa": "ਇਹ ਘਰ ਸਾਡਾ ਹੈ।",
+          "highlight": "ours"
+        }
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "my/mine, your/yours, his, her/hers, their/theirs",
+          "With noun: my book",
+          "Alone: the book is mine",
+          "Possessive pronouns = ownership"
+        ],
+        "keyExamplesPa": [
+          "my/mine, your/yours, his, her/hers",
+          "ਨਾਂ ਨਾਲ: my book",
+          "ਅਕੇਲਾ: ਕਿਤਾਬ ਮੇਰੀ ਹੈ",
+          "ਮਾਲਕਾਨਾ = ਮਾਲਕੀ"
+        ],
+        "totalPoints": 29,
+        "points": 0
+      }
+    ]
+  },
+  "L_VERBS_BASICS_01": {
+    "metadata": {
+      "titleEn": "Verbs: Basics",
+      "titlePa": "ਕਿਰਿਆ: ਮੁੱਢਲੇ",
+      "labelEn": "Verbs: Basics",
+      "labelPa": "ਕਿਰਿਆ: ਮੁੱਢਲੇ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Verbs",
+        "titlePa": "ਸਿੱਖੋ: ਕਿਰਿਆ",
+        "descEn": "Identify action and 'be' verbs in simple sentences.",
+        "descPa": "ਸਧਾਰਣ ਵਾਕਾਂ ਵਿੱਚ ਕੰਮ ਵਾਲੀਆਂ ਅਤੇ ਹੋਣ ਵਾਲੀ ਕਿਰਿਆ (am/is/are) ਪਛਾਣੋ।",
+        "pointsAvailable": 28
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "A verb shows an action or a state of being.",
+        "contentPa": "ਕਿਰਿਆ ਦੱਸਦੀ ਹੈ ਕਿ ਕੀ ਕੰਮ ਹੋ ਰਿਹਾ ਹੈ ਜਾਂ ਕੀ ਹਾਲਤ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "The dog runs fast.",
+        "examplePa": "ਕੁੱਤਾ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ।",
+        "highlightedWords": [
+          "runs"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_verbs_basics_tap_runs",
+        "englishText": "Is \"runs\" the right word?",
+        "punjabiText": "ਕੀ \"runs\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Which word shows an action?",
+          "pa": "ਕਿਹੜਾ ਸ਼ਬਦ ਕੰਮ/ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ?"
+        },
+        "explanation": {
+          "en": "A verb tells what someone does (action) or what someone is (state).",
+          "pa": "ਕਿਰਿਆ ਦੱਸਦੀ ਹੈ ਕਿ ਕੋਈ ਕੀ ਕਰਦਾ ਹੈ (ਕੰਮ) ਜਾਂ ਕਿਹੜੀ ਹਾਲਤ ਵਿੱਚ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Birds run.",
+          "pa": "ਪੰਛੀ ਦੌੜਦੇ ਹਨ।",
+          "highlight": {
+            "en": [
+              "run"
+            ],
+            "pa": [
+              "ਦੌੜਦੇ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The dog runs fast.",
+            "sentencePa": "ਕੁੱਤਾ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ।",
+            "explainEn": "'runs' is an action verb because it tells what the dog does.",
+            "explainPa": "'runs' action verb ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੁੱਤਾ ਕੀ ਕਰਦਾ ਹੈ।",
+            "highlight": "runs"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_verbs_basics_tap_is",
+        "englishText": "Is \"is\" the right word?",
+        "punjabiText": "ਕੀ \"is\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Look for a “be” word: am/is/are.",
+          "pa": "am/is/are ਵਾਲਾ ਸ਼ਬਦ ਵੇਖੋ।"
+        },
+        "explanation": {
+          "en": "‘is’ is a be-verb. It tells a state, not an action.",
+          "pa": "am/is/are ਹਾਲਤ ਦੱਸਣ ਵਾਲੀਆਂ ਕਿਰਿਆਵਾਂ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "He is tired.",
+          "pa": "ਉਹ ਥੱਕਿਆ ਹੈ।",
+          "highlight": {
+            "en": [
+              "is"
+            ],
+            "pa": [
+              "ਹੈ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She is happy.",
+            "sentencePa": "ਉਹ ਖੁਸ਼ ਹੈ।",
+            "explainEn": "'is' is a be-verb used for a state/condition, not an action.",
+            "explainPa": "'is' be-verb ਹੈ ਜੋ ਹਾਲਤ ਦੱਸਦਾ ਹੈ, ਕੰਮ ਨਹੀਂ।",
+            "highlight": "is"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_verbs_basics_action_eat",
+        "englishText": "Find the action verb.",
+        "punjabiText": "ਕਰਮ ਕਿਰਿਆ ਲੱਭੋ।",
+        "options": [
+          "eat",
+          "is",
+          "the"
+        ],
+        "correctAnswer": "eat",
+        "points": 5,
+        "hint": {
+          "en": "Which word is something you DO?",
+          "pa": "ਕਿਹੜਾ ਸ਼ਬਦ ਕੰਮ ਦੱਸਦਾ ਹੈ?"
+        },
+        "explanation": {
+          "en": "Action verbs show doing: eat, run, play.",
+          "pa": "ਕਰਮ ਕਿਰਿਆ = ਖਾਣਾ/ਦੌੜਣਾ/ਖੇਡਣਾ।"
+        },
+        "workedExample": {
+          "en": "I eat mango.",
+          "pa": "ਮੈਂ ਆਮ ਖਾਂਦਾ ਹਾਂ।",
+          "highlight": {
+            "en": [
+              "eat"
+            ],
+            "pa": [
+              "ਖਾਂਦਾ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "is": {
+            "en": "'is' is a be-verb (state), but the question asks for an action verb.",
+            "pa": "'is' be-verb ਹੈ (ਹਾਲਤ ਦੱਸਦੀ ਹੈ), ਪਰ ਸਵਾਲ action verb ਮੰਗਦਾ ਹੈ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          },
+          "the": {
+            "en": "'the' is an article used before nouns, not a verb.",
+            "pa": "'the' article ਹੈ ਜੋ ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ, ਕਿਰਿਆ ਨਹੀਂ।",
+            "posEn": "article",
+            "posPa": "ਨਿਰਦੇਸ਼ਕ ਸ਼ਬਦ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I eat apples every day.",
+            "sentencePa": "ਮੈਂ ਹਰ ਦਿਨ ਸੇਬ ਖਾਂਦਾ ਹਾਂ।",
+            "explainEn": "'eat' is an action verb, because it shows the action done by 'I'.",
+            "explainPa": "'eat' action verb ਹੈ ਕਿਉਂਕਿ ਇਹ 'I' ਵੱਲੋਂ ਕੀਤਾ ਕੰਮ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "eat"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_verbs_basics_be_am",
+        "englishText": "Which is a be verb?",
+        "punjabiText": "ਕਿਹੜੀ ਹੋਣ ਵਾਲੀ ਕਿਰਿਆ ਹੈ?",
+        "options": [
+          "am",
+          "run",
+          "jump"
+        ],
+        "correctAnswer": "am",
+        "points": 5,
+        "hint": {
+          "en": "With “I”, we use…",
+          "pa": "“I/ਮੈਂ” ਨਾਲ ਕੀ ਲੱਗਦਾ?"
+        },
+        "explanation": {
+          "en": "With subject 'I', always use 'am' (not 'is/are').",
+          "pa": "'I' ਨਾਲ ਹਮੇਸ਼ਾ 'am' ਆਉਂਦਾ ਹੈ ('is/are' ਨਹੀਂ)।"
+        },
+        "workedExample": {
+          "en": "I am happy.",
+          "pa": "ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+          "highlight": {
+            "en": [
+              "am"
+            ],
+            "pa": [
+              "ਹਾਂ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "run": {
+            "en": "'run' is an action verb. This question asks for a be-verb form.",
+            "pa": "'run' action verb ਹੈ। ਇਸ ਸਵਾਲ ਵਿੱਚ be-verb ਦਾ ਰੂਪ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          },
+          "jump": {
+            "en": "'jump' is also an action verb, not a be-verb like am/is/are.",
+            "pa": "'jump' ਵੀ action verb ਹੈ, am/is/are ਵਰਗੀ be-verb ਨਹੀਂ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I am a student.",
+            "sentencePa": "ਮੈਂ ਇੱਕ ਵਿਦਿਆਰਥੀ ਹਾਂ।",
+            "explainEn": "'am' is a be verb (state of being).",
+            "explainPa": "'am' ਹਾਲਤ ਦੀ ਕਿਰਿਆ ਹੈ।",
+            "highlight": "am"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Action verbs show doing (run, eat, write). Be-verbs show state/being (am, is, are).",
+        "contentPa": "Action verbs ਕੰਮ ਦੱਸਦੀਆਂ ਹਨ (run, eat, write)। Be-verbs ਹਾਲਤ ਦੱਸਦੀਆਂ ਹਨ (am, is, are)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_verbs_basics_state_verb_is",
+        "englishText": "Which is a state (be) verb?",
+        "punjabiText": "ਕਿਹੜੀ ਹਾਲਤ ਦੱਸਣ ਵਾਲੀ be-verb ਹੈ?",
+        "options": [
+          {
+            "en": "is",
+            "pa": "ਹੈ"
+          },
+          {
+            "en": "run",
+            "pa": "ਦੌੜਨਾ"
+          },
+          {
+            "en": "jump",
+            "pa": "ਛਾਲ ਮਾਰਨਾ"
+          }
+        ],
+        "correctAnswer": "is",
+        "points": 5,
+        "hint": {
+          "en": "Be-verbs are forms of am/is/are.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'is' is a be-verb that shows state, not action.",
+          "pa": "'is' be-verb ਹੈ ਜੋ ਹਾਲਤ ਦੱਸਦੀ ਹੈ, ਕੰਮ ਨਹੀਂ।"
+        },
+        "workedExample": {
+          "en": "She is happy.",
+          "pa": "ਉਹ ਖੁਸ਼ ਹੈ।",
+          "highlight": "is"
+        }
+      }
+    ]
+  },
+  "L_ADVERB_BASICS_01": {
+    "metadata": {
+      "titleEn": "Adverb Basics",
+      "titlePa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਮੁੱਢ",
+      "labelEn": "Adverb Basics",
+      "labelPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਮੁੱਢ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Adverbs",
+        "titlePa": "ਸਿੱਖੋ: ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+        "descEn": "Adverbs tell how actions happen.",
+        "descPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦੇ ਹਨ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।",
+        "pointsAvailable": 38
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Adverbs modify verbs. Many end in -ly (quickly, slowly).",
+        "contentPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਕਿਵੇਂ, ਕਦੋਂ ਜਾਂ ਕਿੱਥੇ ਹੁੰਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "She runs quickly. He speaks softly.",
+        "examplePa": "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦੀ ਹੈ। ਉਹ ਹੌਲੀ ਆਵਾਜ਼ ਵਿੱਚ ਬੋਲਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_pick_quickly",
+        "englishText": "Pick the adverb.",
+        "punjabiText": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
+        "options": [
+          "happy",
+          "quickly",
+          "dog"
+        ],
+        "correctAnswer": "quickly",
+        "points": 5,
+        "hint": {
+          "en": "Adverb answers: how?",
+          "pa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ: ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ?"
+        },
+        "explanation": {
+          "en": "An adverb tells how, when, or where an action happens; in this lesson we focus on 'how'.",
+          "pa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਕਿਵੇਂ, ਕਦੋਂ ਜਾਂ ਕਿੱਥੇ ਹੁੰਦਾ ਹੈ; ਇਸ ਪਾਠ ਵਿੱਚ ਅਸੀਂ 'ਕਿਵੇਂ' ਤੇ ਧਿਆਨ ਦੇ ਰਹੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "He talks softly.",
+          "pa": "ਉਹ ਹੌਲੀ ਬੋਲਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "softly"
+            ],
+            "pa": [
+              "ਹੌਲੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "happy": {
+            "en": "'happy' is an adjective (a feeling word). Here we need a word that tells how an action is done, so choose the adverb 'quickly'.",
+            "pa": "'happy' ਵਿਸ਼ੇਸ਼ਣ ਹੈ। ਇੱਥੇ ਕੰਮ ਕਿਵੇਂ ਹੋਇਆ ਦੱਸਣ ਲਈ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ 'quickly' ਸਹੀ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "dog": {
+            "en": "'dog' is a noun (name of an animal), not an adverb. The correct pattern needs a manner word, so 'quickly' fits.",
+            "pa": "'dog' ਨਾਂ ਹੈ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਨਹੀਂ। ਇੱਥੇ ਕਿਰਿਆ ਦੇ ਤਰੀਕੇ ਲਈ ਸ਼ਬਦ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ 'quickly' ਠੀਕ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She works quickly.",
+            "sentencePa": "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਕੰਮ ਕਰਦੀ ਹੈ।",
+            "explainEn": "'quickly' is an adverb because it tells how she works.",
+            "explainPa": "'quickly' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦੀ ਹੈ।",
+            "highlight": "quickly"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_modifies_slowly",
+        "englishText": "Which modifies the verb?",
+        "punjabiText": "ਕਿਹੜਾ ਸ਼ਬਦ ਕਿਰਿਆ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ?",
+        "options": [
+          "slow",
+          "slowly",
+          "slowness"
+        ],
+        "correctAnswer": "slowly",
+        "points": 5,
+        "hint": {
+          "en": "Look for the -ly word.",
+          "pa": "-ly ਵਾਲਾ ਸ਼ਬਦ ਲੱਭੋ।"
+        },
+        "explanation": {
+          "en": "'slowly' is correct because it describes how someone walks.",
+          "pa": "'slowly' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੋਈ ਕਿਵੇਂ ਤੁਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Run slowly.",
+          "pa": "ਹੌਲੀ ਦੌੜੋ।",
+          "highlight": {
+            "en": [
+              "slowly"
+            ],
+            "pa": [
+              "ਹੌਲੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "slow": {
+            "en": "'slow' is usually an adjective (e.g., a slow car). This question asks for a verb modifier, so the adverb form is 'slowly'.",
+            "pa": "'slow' ਆਮ ਤੌਰ 'ਤੇ ਵਿਸ਼ੇਸ਼ਣ ਹੁੰਦਾ ਹੈ। ਇੱਥੇ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ 'slowly' ਸਹੀ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "slowness": {
+            "en": "'slowness' is a noun (the quality), not a word that tells how an action happens. Use 'slowly' to modify the verb.",
+            "pa": "'slowness' ਨਾਂ (ਗੁਣ) ਹੈ; ਇਹ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ ਨਹੀਂ ਦੱਸਦਾ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Walk slowly.",
+            "sentencePa": "ਹੌਲੀ-ਹੌਲੀ ਚਲੋ।",
+            "explainEn": "'slowly' is an adverb because it tells how to walk.",
+            "explainPa": "'slowly' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕਿਵੇਂ ਤੁਰਨਾ ਹੈ।",
+            "highlight": "slowly"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_complete_beautifully",
+        "englishText": "Complete: She dances ___.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਉਹ ___ ਨੱਚਦੀ ਹੈ।",
+        "options": [
+          "beautiful",
+          "beautifully",
+          "beauty"
+        ],
+        "correctAnswer": "beautifully",
+        "points": 5,
+        "hint": {
+          "en": "To tell ‘how’, use -ly.",
+          "pa": "“ਕਿਵੇਂ” ਲਈ -ly ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "After the verb 'dances', we need an adverb that tells how she dances, so 'beautifully' fits.",
+          "pa": "ਕਿਰਿਆ 'dances' ਤੋਂ ਬਾਅਦ ਅਸੀਂ ਐਸਾ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ ਜੋ ਦੱਸੇ ਕਿ ਉਹ ਕਿਵੇਂ ਨੱਚਦੀ ਹੈ, ਇਸ ਲਈ 'beautifully' ਠੀਕ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She sings loudly.",
+          "pa": "ਉਹ ਉੱਚੀ ਆਵਾਜ਼ ਨਾਲ ਗਾਂਦੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "loudly"
+            ],
+            "pa": [
+              "ਉੱਚੀ ਆਵਾਜ਼"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "beautiful": {
+            "en": "'beautiful' is an adjective used to describe a noun. After 'dances' we need an adverb that tells how she dances: 'beautifully'.",
+            "pa": "'beautiful' ਵਿਸ਼ੇਸ਼ਣ ਹੈ। 'dances' ਤੋਂ ਬਾਅਦ ਕਿਰਿਆ ਦਾ ਤਰੀਕਾ ਦੱਸਣ ਲਈ 'beautifully' ਆਵੇਗਾ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "beauty": {
+            "en": "'beauty' is a noun (thing/idea), not a verb modifier. The sentence needs an adverb form, so use 'beautifully'.",
+            "pa": "'beauty' ਨਾਂ ਹੈ, ਕਿਰਿਆ ਨੂੰ ਨਹੀਂ ਦੱਸਦਾ। ਇੱਥੇ 'beautifully' ਸਹੀ ਰੂਪ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She dances beautifully.",
+            "sentencePa": "ਉਹ ਸੁੰਦਰ ਢੰਗ ਨਾਲ ਨੱਚਦੀ ਹੈ।",
+            "explainEn": "'beautifully' is an adverb because it tells how she dances.",
+            "explainPa": "'beautifully' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਨੱਚਦੀ ਹੈ।",
+            "highlight": "beautifully"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_ly_honestly",
+        "englishText": "Which -ly word is an adverb?",
+        "punjabiText": "ਕਿਹੜਾ -ly ਸ਼ਬਦ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          "friendly",
+          "honestly",
+          "lonely"
+        ],
+        "correctAnswer": "honestly",
+        "points": 5,
+        "hint": {
+          "en": "Which word tells HOW he spoke?",
+          "pa": "ਉਸਨੇ ਕਿਵੇਂ ਬੋਲਿਆ?"
+        },
+        "explanation": {
+          "en": "'honestly' is the adverb because it explains the manner of speaking.",
+          "pa": "'honestly' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਬੋਲਣ ਦਾ ਤਰੀਕਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She answered honestly.",
+          "pa": "ਉਸਨੇ ਸੱਚ-ਸੱਚ ਜਵਾਬ ਦਿੱਤਾ।",
+          "highlight": {
+            "en": [
+              "honestly"
+            ],
+            "pa": [
+              "ਸੱਚ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "friendly": {
+            "en": "'friendly' ends with -ly but is usually an adjective (a friendly person). It does not usually work as the manner adverb here; 'honestly' does.",
+            "pa": "'friendly' ਦੇ ਅੰਤ '-ly' ਹੈ ਪਰ ਇਹ ਆਮ ਤੌਰ 'ਤੇ ਵਿਸ਼ੇਸ਼ਣ ਹੈ। ਇੱਥੇ ਬੋਲਣ ਦਾ ਤਰੀਕਾ ਦੱਸਣ ਲਈ 'honestly' ਠੀਕ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "lonely": {
+            "en": "'lonely' is an adjective describing feeling/state, not how someone speaks. We need a speaking-manner adverb, which is 'honestly'.",
+            "pa": "'lonely' ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਹਾਲਤ/ਭਾਵਨਾ ਦੱਸਦਾ ਹੈ, ਬੋਲਣ ਦਾ ਤਰੀਕਾ ਨਹੀਂ। ਇੱਥੇ 'honestly' ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He spoke honestly.",
+            "sentencePa": "ਉਸਨੇ ਇਮਾਨਦਾਰੀ ਨਾਲ ਬੋਲਿਆ।",
+            "explainEn": "'honestly' modifies the verb 'spoke' and tells how he spoke.",
+            "explainPa": "'honestly' ਕਿਰਿਆ 'spoke' ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ ਅਤੇ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਬੋਲਿਆ।",
+            "highlight": "honestly"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_non_ly_fast",
+        "englishText": "The boy ran ___. Choose the adverb.",
+        "punjabiText": "ਲੜਕਾ ___ ਦੌੜਿਆ। ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
+        "options": [
+          "fast",
+          "fastly",
+          "rapid"
+        ],
+        "correctAnswer": "fast",
+        "points": 5,
+        "hint": {
+          "en": "Some adverbs don’t end in -ly.",
+          "pa": "ਕੁਝ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ -ly ਨਾਲ ਨਹੀਂ ਬਣਦੇ।"
+        },
+        "explanation": {
+          "en": "'fast' can act as an adverb without -ly, and here it tells how he ran.",
+          "pa": "'fast' -ly ਤੋਂ ਬਿਨਾਂ ਵੀ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਂਗ ਆ ਸਕਦਾ ਹੈ, ਅਤੇ ਇੱਥੇ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਦੌੜਿਆ।"
+        },
+        "workedExample": {
+          "en": "He ran fast.",
+          "pa": "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਿਆ।",
+          "highlight": {
+            "en": [
+              "fast"
+            ],
+            "pa": [
+              "ਤੇਜ਼ੀ ਨਾਲ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "fastly": {
+            "en": "English does not use 'fastly' here; 'fast' itself works as an adverb. So the correct pattern is 'ran fast'.",
+            "pa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਇੱਥੇ 'fastly' ਨਹੀਂ ਵਰਤਦੇ; 'fast' ਖੁਦ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਂਗ ਕੰਮ ਕਰਦਾ ਹੈ। ਇਸ ਲਈ ਸਹੀ ਬਣਤਰ 'ran fast' ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "rapid": {
+            "en": "'rapid' is usually an adjective (rapid growth). The sentence needs an adverb after 'ran', and here that adverb is 'fast'.",
+            "pa": "'rapid' ਆਮ ਤੌਰ 'ਤੇ ਵਿਸ਼ੇਸ਼ਣ ਹੈ। 'ran' ਤੋਂ ਬਾਅਦ ਇੱਥੇ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ, ਅਤੇ ਉਹ 'fast' ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The boy ran fast.",
+            "sentencePa": "ਲੜਕਾ ਤੇਜ਼ ਦੌੜਿਆ।",
+            "explainEn": "'fast' is the adverb because it tells how he ran.",
+            "explainPa": "'fast' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਦੌੜਿਆ।",
+            "highlight": "fast"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_sentence_loudly",
+        "englishText": "Pick the sentence with an adverb.",
+        "punjabiText": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
+        "options": [
+          "She is happy",
+          "She sings loudly",
+          "She has a book"
+        ],
+        "correctAnswer": "She sings loudly",
+        "points": 5,
+        "hint": {
+          "en": "Find a word telling HOW.",
+          "pa": "“ਕਿਵੇਂ” ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ ਲੱਭੋ।"
+        },
+        "explanation": {
+          "en": "In 'She sings loudly', 'loudly' modifies the verb 'sings', so this sentence has an adverb.",
+          "pa": "ਵਾਕ 'She sings loudly' ਵਿੱਚ 'loudly' ਕਿਰਿਆ 'sings' ਨੂੰ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਸ ਵਾਕ ਵਿੱਚ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He runs quickly.",
+          "pa": "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "quickly"
+            ],
+            "pa": [
+              "ਤੇਜ਼ੀ ਨਾਲ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "She is happy": {
+            "en": "This sentence has an adjective ('happy') after 'is', not an adverb modifying an action verb. 'She sings loudly' includes the adverb 'loudly'.",
+            "pa": "ਇਸ ਵਾਕ ਵਿੱਚ 'happy' ਵਿਸ਼ੇਸ਼ਣ ਹੈ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਨਹੀਂ। 'She sings loudly' ਵਿੱਚ 'loudly' ਸਹੀ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "She has a book": {
+            "en": "This is a plain possession sentence and does not contain a manner adverb. The target asks for a sentence with an adverb like 'loudly'.",
+            "pa": "ਇਹ ਸਿਰਫ਼ ਮਾਲਕੀ (has) ਵਾਲਾ ਸਾਦਾ ਵਾਕ ਹੈ। ਇਸ ਵਿੱਚ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਨਹੀਂ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He played carefully.",
+            "sentencePa": "ਉਸਨੇ ਧਿਆਨ ਨਾਲ ਖੇਡਿਆ।",
+            "explainEn": "'carefully' is an adverb because it tells how he played.",
+            "explainPa": "'carefully' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਉਸਨੇ ਕਿਵੇਂ ਖੇਡਿਆ।",
+            "highlight": "carefully"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Adverbs can appear before or after verbs (She quickly ran / She ran quickly).",
+        "contentPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ ਤੋਂ ਪਹਿਲਾਂ ਜਾਂ ਬਾਅਦ ਆ ਸਕਦੇ ਹਨ (She quickly ran / She ran quickly)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_adverbs_correct_form_sings_beautifully",
+        "englishText": "Choose the correct sentence.",
+        "punjabiText": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "She sings beautiful.",
+            "pa": "ਉਹ ਸੋਹਣਾ ਗਾਂਦੀ ਹੈ।"
+          },
+          {
+            "en": "She sings beautifully.",
+            "pa": "ਉਹ ਸੁੰਦਰ ਢੰਗ ਨਾਲ ਗਾਂਦੀ ਹੈ।"
+          },
+          {
+            "en": "She beautiful sings.",
+            "pa": "ਉਹ ਸੋਹਣੀ ਗਾਂਦੀ ਹੈ।"
+          }
+        ],
+        "correctAnswer": "She sings beautifully.",
+        "points": 5,
+        "hint": {
+          "en": "Use an adverb to describe a verb.",
+          "pa": "ਕਿਰਿਆ ਦੀ ਵਰਣਨਾ ਲਈ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "'beautifully' is the adverb that correctly describes 'sings'.",
+          "pa": "'beautifully' ਉਹ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ 'sings' ਦੀ ਸਹੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He speaks softly.",
+          "pa": "ਉਹ ਹੌਲੀ ਬੋਲਦਾ ਹੈ।",
+          "highlight": "softly"
+        }
+      }
+    ]
+  },
+  "L_SIMPLE_PRESENT_01": {
+    "metadata": {
+      "titleEn": "Simple Present",
+      "titlePa": "ਸਧਾਰਣ ਵਰਤਮਾਨ",
+      "labelEn": "Simple Present",
+      "labelPa": "ਸਧਾਰਣ ਵਰਤਮਾਨ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Present Tense",
+        "titlePa": "ਸਿੱਖੋ: ਵਰਤਮਾਨ",
+        "descEn": "Actions happening now or regularly.",
+        "descPa": "ਕੰਮ ਹੁਣ ਜਾਂ ਰੋਜ਼ ਹੁੰਦੇ ਹਨ।",
+        "pointsAvailable": 38
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Simple present: regular actions or current truth.",
+        "contentPa": "ਸਧਾਰਣ ਵਰਤਮਾਨ: ਆਮ ਕੰਮ ਜਾਂ ਸੱਚਾਈ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I eat. She runs. They play.",
+        "examplePa": "ਮੈਂ ਖਾਂਦਾ ਹਾਂ। ਉਹ ਦੌੜਦੀ ਹੈ। ਉਹ ਖੇਡਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_present_is_walks",
+        "englishText": "Which is present tense?",
+        "punjabiText": "ਕਿਹੜਾ ਵਰਤਮਾਨ ਕਾਲ ਹੈ?",
+        "options": [
+          "walks",
+          "walked",
+          "will walk"
+        ],
+        "correctAnswer": "walks",
+        "points": 5,
+        "hint": {
+          "en": "Present = happens regularly/now.",
+          "pa": "ਵਰਤਮਾਨ ਕਾਲ = ਹੁਣ/ਰੋਜ਼।"
+        },
+        "explanation": {
+          "en": "Simple present is used for routines, habits, and general truths.",
+          "pa": "ਸਧਾਰਣ ਵਰਤਮਾਨ ਰੋਜ਼ਾਨਾ ਆਦਤਾਂ, ਰੁਟੀਨ ਅਤੇ ਆਮ ਸੱਚਾਈਆਂ ਲਈ ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "I play every day.",
+          "pa": "ਮੈਂ ਹਰ ਦਿਨ ਖੇਡਦਾ ਹਾਂ।",
+          "highlight": {
+            "en": [
+              "play"
+            ],
+            "pa": [
+              "ਹਰ ਦਿਨ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "walked": {
+            "en": "'walked' is simple past (already happened). This question asks for simple present, so 'walks' is the correct present form.",
+            "pa": "'walked' ਸਧਾਰਣ ਭੂਤਕਾਲ ਹੈ (ਪਹਿਲਾਂ ਹੋਇਆ ਕੰਮ)। ਇੱਥੇ ਸਧਾਰਣ ਵਰਤਮਾਨ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ 'walks' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "will walk": {
+            "en": "'will walk' is future tense (later action). For present routine/general truth, use simple present 'walks'.",
+            "pa": "'will walk' ਭਵਿੱਖ ਕਾਲ ਹੈ (ਬਾਅਦ ਵਿੱਚ ਹੋਵੇਗਾ)। ਰੋਜ਼ਾਨਾ/ਵਰਤਮਾਨ ਆਦਤ ਲਈ ਸਧਾਰਣ ਵਰਤਮਾਨ 'walks' ਵਰਤਦੇ ਹਾਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She walks to school.",
+            "sentencePa": "ਉਹ ਸਕੂਲ ਤੁਰ ਕੇ ਜਾਂਦੀ ਹੈ।",
+            "explainEn": "'walks' is simple present and shows her regular routine.",
+            "explainPa": "'walks' ਸਧਾਰਣ ਵਰਤਮਾਨ ਕਾਲ ਹੈ ਅਤੇ ਉਸਦੀ ਰੋਜ਼ਾਨਾ ਰੁਟੀਨ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "walks"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_present_complete_runs",
+        "englishText": "Complete: He ___ every day.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਉਹ ਹਰ ਰੋਜ਼ ___.",
+        "options": [
+          "runs",
+          "ran",
+          "will run"
+        ],
+        "correctAnswer": "runs",
+        "points": 5,
+        "hint": {
+          "en": "Every day = present habit.",
+          "pa": "ਹਰ ਦਿਨ = ਆਦਤ (present)।"
+        },
+        "explanation": {
+          "en": "With he/she/it in simple present, we usually add -s to the base verb, so 'runs' is correct.",
+          "pa": "ਸਧਾਰਣ ਵਰਤਮਾਨ ਵਿੱਚ ਇਕਵਚਨ ਕਰਤਾ (he/she/it) ਨਾਲ ਅਕਸਰ ਮੂਲ ਕਿਰਿਆ ਨਾਲ -s ਜੋੜਦੇ ਹਾਂ, ਇਸ ਲਈ 'runs' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She reads daily.",
+          "pa": "ਉਹ ਰੋਜ਼ ਪੜ੍ਹਦੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "reads"
+            ],
+            "pa": [
+              "ਰੋਜ਼"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "ran": {
+            "en": "'ran' is simple past, but 'every day' signals a repeated present habit. With 'he', the present form is 'runs'.",
+            "pa": "'ran' ਭੂਤਕਾਲ ਹੈ, ਪਰ 'every day' ਰੋਜ਼ਾਨਾ ਵਰਤਮਾਨ ਆਦਤ ਦੱਸਦਾ ਹੈ। 'he' ਨਾਲ present ਰੂਪ 'runs' ਹੁੰਦਾ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "will run": {
+            "en": "'will run' is future tense. The time clue 'every day' points to a regular present habit, so use 'runs'.",
+            "pa": "'will run' ਭਵਿੱਖ ਕਾਲ ਹੈ। 'every day' ਵਾਲਾ ਸੰਕੇਤ ਨਿਯਮਿਤ ਵਰਤਮਾਨ ਆਦਤ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ 'runs' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He runs every day.",
+            "sentencePa": "ਉਹ ਹਰ ਦਿਨ ਦੌੜਦਾ ਹੈ।",
+            "explainEn": "'runs' is simple present, used for daily habits.",
+            "explainPa": "'runs' ਸਧਾਰਣ ਵਰਤਮਾਨ ਹੈ ਜੋ ਰੋਜ਼ਾਨਾ ਆਦਤ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+            "highlight": "runs"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_present_pick_eats",
+        "englishText": "Pick the simple present.",
+        "punjabiText": "ਸਧਾਰਣ ਵਰਤਮਾਨ ਚੁਣੋ।",
+        "options": [
+          "eats",
+          "ate",
+          "will eat"
+        ],
+        "correctAnswer": "eats",
+        "points": 5,
+        "hint": {
+          "en": "Present (she) often ends with -s.",
+          "pa": "she ਨਾਲ present ਅਕਸਰ -s ਹੁੰਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'eats' is simple present for 'she' because third-person singular usually takes -s.",
+          "pa": "'eats' 'she' ਲਈ ਸਧਾਰਣ ਵਰਤਮਾਨ ਹੈ ਕਿਉਂਕਿ ਇਕਵਚਨ ਕਰਤਾ ਨਾਲ ਆਮ ਤੌਰ 'ਤੇ -s ਆਉਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He plays.",
+          "pa": "ਉਹ ਖੇਡਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "plays"
+            ],
+            "pa": [
+              "ਖੇਡਦਾ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "ate": {
+            "en": "'ate' is simple past. The prompt asks for simple present with 'she', so we need the third-person present form 'eats'.",
+            "pa": "'ate' ਸਧਾਰਣ ਭੂਤਕਾਲ ਹੈ। ਪ੍ਰਸ਼ਨ 'she' ਨਾਲ ਸਧਾਰਣ ਵਰਤਮਾਨ ਮੰਗਦਾ ਹੈ, ਇਸ ਲਈ ਤੀਜੇ ਪੁਰਖ ਇਕਵਚਨ ਰੂਪ 'eats' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "will eat": {
+            "en": "'will eat' is future tense. Here we need present tense for a regular/current action, so choose 'eats'.",
+            "pa": "'will eat' ਭਵਿੱਖ ਕਾਲ ਹੈ। ਇੱਥੇ ਨਿਯਮਿਤ/ਵਰਤਮਾਨ ਕੰਮ ਲਈ ਵਰਤਮਾਨ ਕਾਲ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ 'eats' ਚੁਣੋ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She eats breakfast.",
+            "sentencePa": "ਉਹ ਹਰ ਸਵੇਰ ਨਾਸ਼ਤਾ ਕਰਦੀ ਹੈ।",
+            "explainEn": "'eats' is simple present and describes a regular action.",
+            "explainPa": "'eats' ਸਧਾਰਣ ਵਰਤਮਾਨ ਹੈ ਅਤੇ ਰੋਜ਼ ਹੋਣ ਵਾਲਾ ਕੰਮ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "eats"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_present_doing_studies",
+        "englishText": "What is he doing?",
+        "punjabiText": "ਉਹ ਕੀ ਕਰ ਰਿਹਾ ਹੈ?",
+        "options": [
+          "studies",
+          "studied",
+          "will study"
+        ],
+        "correctAnswer": "studies",
+        "points": 5,
+        "hint": {
+          "en": "Think: his routine (habit).",
+          "pa": "ਇਹ ਆਦਤ/ਰੂਟੀਨ ਵਾਲਾ ਕੰਮ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Simple present answers “What does he do (usually)?”",
+          "pa": "ਸਧਾਰਣ ਵਰਤਮਾਨ = ਉਹ ਆਮ ਤੌਰ ਤੇ ਕੀ ਕਰਦਾ ਹੈ?"
+        },
+        "workedExample": {
+          "en": "He studies at night.",
+          "pa": "ਉਹ ਰਾਤ ਨੂੰ ਪੜ੍ਹਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "studies"
+            ],
+            "pa": [
+              "ਪੜ੍ਹਦਾ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "studied": {
+            "en": "'studied' is past tense (already completed). This item asks for what he does as a routine, so simple present 'studies' is correct.",
+            "pa": "'studied' ਭੂਤਕਾਲ ਹੈ (ਮੁੱਕਿਆ ਹੋਇਆ ਕੰਮ)। ਇੱਥੇ ਉਹ ਆਮ ਤੌਰ 'ਤੇ ਕੀ ਕਰਦਾ ਹੈ ਪੁੱਛਿਆ ਗਿਆ ਹੈ, ਇਸ ਲਈ ਸਧਾਰਣ ਵਰਤਮਾਨ 'studies' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "will study": {
+            "en": "'will study' is future. For usual behavior/habit, use simple present: 'studies'.",
+            "pa": "'will study' ਭਵਿੱਖ ਕਾਲ ਹੈ। ਆਮ ਆਦਤ/ਰੂਟੀਨ ਲਈ ਸਧਾਰਣ ਵਰਤਮਾਨ 'studies' ਵਰਤਦੇ ਹਾਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He studies English.",
+            "sentencePa": "ਉਹ ਨਿਯਮਿਤ ਤੌਰ ਤੇ ਅੰਗਰੇਜ਼ੀ ਪੜ੍ਹਦਾ ਹੈ।",
+            "explainEn": "'studies' in simple present describes a usual habit.",
+            "explainPa": "ਸਧਾਰਣ ਵਰਤਮਾਨ ਵਿੱਚ 'studies' ਰੋਜ਼ਾਨਾ ਆਦਤ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "studies"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_simple_present_01_which_sentence_is_present_tense",
+        "englishText": "Which sentence is present tense?",
+        "punjabiText": "ਕਿਹੜਾ ਵਾਕ ਵਰਤਮਾਨ ਕਾਲ ਵਿੱਚ ਹੈ?",
+        "options": [
+          "I played football",
+          "I play football",
+          "I will play football"
+        ],
+        "correctAnswer": "I play football",
+        "points": 5,
+        "hint": {
+          "en": "Use the sentence that talks about a regular habit in present time.",
+          "pa": "ਉਹ ਵਾਕ ਚੁਣੋ ਜੋ ਵਰਤਮਾਨ ਸਮੇਂ ਦੀ ਆਦਤ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Simple present is used for routines, facts, and regular actions.",
+          "pa": "ਸਧਾਰਣ ਵਰਤਮਾਨ ਕਾਲ ਨਿਯਮਿਤ ਕੰਮ, ਆਦਤ ਅਤੇ ਆਮ ਸੱਚਾਈ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She goes to school every day. Here, \"goes\" shows a regular habit, so it is present tense.",
+          "pa": "ਉਹ ਹਰ ਰੋਜ਼ ਸਕੂਲ ਜਾਂਦੀ ਹੈ। ਇੱਥੇ \"goes\" ਨਿਯਮਿਤ ਆਦਤ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਰਤਮਾਨ ਕਾਲ ਹੈ।"
+        },
+        "wrongOptionExplanations": {
+          "I played football": {
+            "en": "'played' shows past time, not present. The question asks for present tense, so 'I play football' is the right pattern.",
+            "pa": "'played' ਭੂਤਕਾਲ ਦੱਸਦਾ ਹੈ, ਵਰਤਮਾਨ ਨਹੀਂ। ਪ੍ਰਸ਼ਨ ਵਿੱਚ present tense ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ 'I play football' ਸਹੀ ਬਣਤਰ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "I will play football": {
+            "en": "'will play' is future tense. For a present routine/general statement, use base present form: 'I play football'.",
+            "pa": "'will play' ਭਵਿੱਖ ਕਾਲ ਹੈ। ਵਰਤਮਾਨ ਆਦਤ/ਆਮ ਕਥਨ ਲਈ present ਰੂਪ 'I play football' ਵਰਤਦੇ ਹਾਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She works as a teacher.",
+            "sentencePa": "ਉਹ ਅਧਿਆਪਕ ਵਜੋਂ ਕੰਮ ਕਰਦੀ ਹੈ।",
+            "explainEn": "'works' is simple present and states her regular profession.",
+            "explainPa": "'works' ਸਧਾਰਣ ਵਰਤਮਾਨ ਹੈ ਅਤੇ ਉਸਦਾ ਨਿਯਮਿਤ ਪੇਸ਼ਾ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "works"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_present_form_drink",
+        "englishText": "Form present: I ___ water daily.",
+        "punjabiText": "ਵਰਤਮਾਨ ਬਣਾਓ: ਮੈਂ ਹਰ ਰੋਜ਼ ਪਾਣੀ ___.",
+        "options": [
+          "drink",
+          "drinks",
+          "drinking"
+        ],
+        "correctAnswer": "drink",
+        "points": 5,
+        "hint": {
+          "en": "With I/we/they/you, use base verb.",
+          "pa": "I/we/they/you ਨਾਲ ਮੂਲ ਕਿਰਿਆ।"
+        },
+        "explanation": {
+          "en": "I + drink (no -s).",
+          "pa": "I ਨਾਲ ਮੂਲ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ: I drink।"
+        },
+        "workedExample": {
+          "en": "We drink water.",
+          "pa": "ਅਸੀਂ ਪਾਣੀ ਪੀਂਦੇ ਹਾਂ।",
+          "highlight": {
+            "en": [
+              "drink"
+            ],
+            "pa": [
+              "ਪੀਂਦੇ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "drinks": {
+            "en": "'drinks' is used with he/she/it in simple present. With subject 'I', use the base verb: 'drink'.",
+            "pa": "'drinks' he/she/it ਨਾਲ ਵਰਤਦੇ ਹਨ। ਕਰਤਾ 'I' ਨਾਲ ਮੂਲ ਕਿਰਿਆ 'drink' ਆਉਂਦੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "drinking": {
+            "en": "'drinking' is an -ing form and needs a helper verb (am/is/are). This sentence is simple present with 'I', so use 'drink'.",
+            "pa": "'drinking' -ing ਰੂਪ ਹੈ ਅਤੇ ਇਸ ਨਾਲ ਸਹਾਇਕ ਕਿਰਿਆ (am/is/are) ਚਾਹੀਦੀ ਹੈ। ਇਹ ਸਧਾਰਣ ਵਰਤਮਾਨ ਕਾਲ ਦਾ ਵਾਕ ਹੈ, ਇਸ ਲਈ 'drink' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "They drink milk.",
+            "sentencePa": "ਉਹ ਦੁੱਧ ਪੀਂਦੇ ਹਨ।",
+            "explainEn": "With plural subject 'they', we use base verb 'drink' in simple present.",
+            "explainPa": "ਬਹੁਵਚਨ ਕਰਤਾ 'they' ਨਾਲ ਸਧਾਰਣ ਵਰਤਮਾਨ ਵਿੱਚ ਮੂਲ ਕਿਰਿਆ 'drink' ਵਰਤੀ ਜਾਂਦੀ ਹੈ।",
+            "highlight": "drink"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "Habit words: I always wake up early. She often reads at night.",
+        "examplePa": "ਆਦਤ ਵਾਲੇ ਸ਼ਬਦ: I always wake up early. She often reads at night.",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_simple_present_negative_does_not",
+        "englishText": "Choose the correct negative sentence.",
+        "punjabiText": "ਸਹੀ negative ਵਾਕ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "She don't play cricket.",
+            "pa": "ਉਹ ਕ੍ਰਿਕਟ ਨਹੀਂ ਖੇਡਦੀ।"
+          },
+          {
+            "en": "She doesn't play cricket.",
+            "pa": "ਉਹ ਕ੍ਰਿਕਟ ਨਹੀਂ ਖੇਡਦੀ।"
+          },
+          {
+            "en": "She not play cricket.",
+            "pa": "ਉਹ ਕ੍ਰਿਕਟ ਨਾ ਖੇਡਦੀ।"
+          }
+        ],
+        "correctAnswer": "She doesn't play cricket.",
+        "points": 5,
+        "hint": {
+          "en": "For he/she/it negative, use does not + base verb.",
+          "pa": "he/she/it ਦੇ negative ਲਈ does not + ਮੂਲ ਕਿਰਿਆ ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "'She doesn't play cricket.' is correct simple present negative form.",
+          "pa": "'She doesn't play cricket.' ਸਧਾਰਣ ਵਰਤਮਾਨ ਦਾ ਸਹੀ negative ਰੂਪ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He doesn't drink tea.",
+          "pa": "ਉਹ ਚਾਹ ਨਹੀਂ ਪੀਂਦਾ।",
+          "highlight": "doesn't"
+        }
+      }
+    ]
+  },
+  "L_PROGRESSIVE_PRESENT_01": {
+    "metadata": {
+      "titleEn": "Present Progressive Tense",
+      "titlePa": "ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ",
+      "labelEn": "Present Progressive",
+      "labelPa": "ਵਰਤਮਾਨ ਜਾਰੀ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Present Progressive Tense",
+        "titlePa": "ਸਿੱਖੋ: ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ",
+        "descEn": "Understand 'is/are + -ing' for actions happening right now",
+        "descPa": "ਸਮਝੋ: am/is/are ਵਾਲੀ ਸਹਾਇਕ ਕਿਰਿਆ + ਕਿਰਿਆ-ing",
+        "pointsAvailable": 28
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Present progressive (is/are + verb-ing) shows an action happening right now, at this moment. Form: subject + is/are + verb-ing",
+        "contentPa": "ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ ਉਹ ਕੰਮ ਦੱਸਦਾ ਹੈ ਜੋ ਹੁਣ ਚੱਲ ਰਿਹਾ ਹੈ (am/is/are + ਕਿਰਿਆ-ing)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I am studying English right now.",
+        "examplePa": "ਮੈਂ ਹੁਣ ਅੰਗਰੇਜ਼ੀ ਸਿੱਖ ਰਿਹਾ ਹਾਂ।",
+        "highlightedWords": [
+          "am studying"
+        ],
+        "explainEn": "'am studying' = is/are + -ing form for current action",
+        "explainPa": "'am studying' ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ ਹੈ",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "They are playing in the park.",
+        "examplePa": "ਉਹ ਪਾਰਕ ਵਿੱਚ ਖੇਡ ਰਹੇ ਹਨ।",
+        "highlightedWords": [
+          "are playing"
+        ],
+        "explainEn": "Multiple people = 'are' + verb-ing",
+        "explainPa": "ਕਈ ਲੋਕ = 'are' + verb-ing",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_progressive_present_01_in_tap_the_progressive_verb_form",
+        "englishText": "\"She is singing a song.\" — Is \"is singing\" present progressive?",
+        "punjabiText": "\"ਉਹ ਗਾਣਾ ਗਾ ਰਹੀ ਹੈ।\" — ਕੀ \"is singing\" ਵਰਤਮਾਨ ਜਾਰੀ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Is singing” is present progressive: am/is/are + verb-ing.",
+          "pa": "ਹਾਂ। “is singing” ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ ਹੈ: am/is/are + ਕਿਰਿਆ-ing।"
+        },
+        "workedExample": {
+          "en": "Yes. “Is singing” is present progressive: am/is/are + verb-ing.",
+          "pa": "ਹਾਂ। “is singing” ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ ਹੈ: am/is/are + ਕਿਰਿਆ-ing।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_present_prog_correct",
+        "englishText": "Which sentence uses present progressive correctly?",
+        "punjabiText": "ਕਿਹੜਾ ਵਾਕ ਵਰਤਮਾਨ ਜਾਰੀ ਸਹੀ ਵਰਤਦਾ ਹੈ?",
+        "options": [
+          "I studying English.",
+          "I am studying English.",
+          "I studied English."
+        ],
+        "correctAnswer": "I am studying English.",
+        "points": 5,
+        "hint": {
+          "en": "Look for: am/is/are + verb-ing.",
+          "pa": "ਇਸ਼ਾਰਾ: am/is/are + ਕਿਰਿਆ-ing (ਜਿਵੇਂ: is playing)."
+        },
+        "explanation": {
+          "en": "Present progressive needs a helper (am/is/are) + verb-ing.\n\nCorrect: Great!\nWrong: Not yet.",
+          "pa": "ਵਰਤਮਾਨ ਜਾਰੀ ਵਿੱਚ am/is/are + ਕਿਰਿਆ-ing ਲੱਗਦੀ ਹੈ।\n\nਸਹੀ: ਵਧੀਆ!\nਗਲਤ: ਹਾਲੇ ਨਹੀਂ।"
+        },
+        "workedExample": {
+          "en": "She is writing a letter.",
+          "pa": "ਉਹ ਪੱਤਰ ਲਿਖ ਰਹੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "is writing"
+            ],
+            "pa": [
+              "ਲਿਖ ਰਹੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "I studying English.": {
+            "en": "This is missing the helper verb 'am'. Present progressive must be am/is/are + verb-ing, so 'I am studying English.' is correct.",
+            "pa": "ਇਸ ਵਿੱਚ ਸਹਾਇਕ ਕਿਰਿਆ 'am' ਨਹੀਂ ਹੈ। ਵਰਤਮਾਨ ਜਾਰੀ ਲਈ am/is/are + ਕਿਰਿਆ-ing ਲਾਜ਼ਮੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "I studied English.": {
+            "en": "'studied' is simple past, not an action happening now. To show current ongoing action, use 'am studying'.",
+            "pa": "'studied' ਸਧਾਰਣ ਭੂਤਕਾਲ ਹੈ, ਇਸ ਵੇਲੇ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਨਹੀਂ। ਹੁਣ ਹੋ ਰਹੀ ਕਿਰਿਆ ਦੱਸਣ ਲਈ 'am studying' ਵਰਤੋ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She is writing a letter.",
+            "sentencePa": "ਉਹ ਪੱਤਰ ਲਿਖ ਰਹੀ ਹੈ।",
+            "explainEn": "is + writing = correct present progressive",
+            "explainPa": "is + writing = ਸਹੀ ਜਾਰੀ ਕਾਲ",
+            "highlight": "is writing"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "We are waiting for the bus.",
+        "examplePa": "ਅਸੀਂ ਬੱਸ ਦੀ ਉਡੀਕ ਕਰ ਰਹੇ ਹਾਂ।",
+        "highlightedWords": [
+          "are waiting"
+        ],
+        "explainEn": "Right now action = progressive tense",
+        "explainPa": "ਹੁਣ ਹੋ ਰਹੀ ਕਿਰਿਆ = ਜਾਰੀ ਕਾਲ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_present_prog_fill_run",
+        "englishText": "Complete: She ___ (run) in the marathon.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਉਹ ਮੈਰਾਥਨ ਵਿੱਚ ___।",
+        "options": [
+          "runs",
+          "is running",
+          "ran"
+        ],
+        "correctAnswer": "is running",
+        "points": 5,
+        "hint": {
+          "en": "Right now? Use is/are + running.",
+          "pa": "ਜੇ ਕਿਰਿਆ ਹੁਣ ਚੱਲ ਰਹੀ ਹੈ, is/are + running ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "For an action happening now: she + is + running.",
+          "pa": "ਹਾਲ ਦੀ ਕਿਰਿਆ ਲਈ: she + is + running।"
+        },
+        "workedExample": {
+          "en": "She is running fast.",
+          "pa": "ਉਹ ਤੇਜ਼ ਦੌੜ ਰਹੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "is running"
+            ],
+            "pa": [
+              "ਦੌੜ ਰਹੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "runs": {
+            "en": "'runs' is simple present, but this item asks for present progressive form of run. With 'she', the correct pattern is 'is running'.",
+            "pa": "'runs' ਸਧਾਰਣ ਵਰਤਮਾਨ ਹੈ, ਪਰ ਇੱਥੇ run ਦਾ ਵਰਤਮਾਨ ਜਾਰੀ ਰੂਪ ਚਾਹੀਦਾ ਹੈ। 'she' ਨਾਲ ਸਹੀ ਬਣਤਰ 'is running' ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "ran": {
+            "en": "'ran' is simple past. For an action happening now, use present progressive: 'is running'.",
+            "pa": "'ran' ਸਧਾਰਣ ਭੂਤਕਾਲ ਹੈ। ਇਸ ਵੇਲੇ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਲਈ ਵਰਤਮਾਨ ਜਾਰੀ ਕਾਲ 'is running' ਵਰਤਦੇ ਹਾਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The dog is barking loudly.",
+            "sentencePa": "ਕੁੱਤਾ ਜ਼ੋਰ ਨਾਲ ਭੌਂਕ ਰਿਹਾ ਹੈ।",
+            "explainEn": "is + -ing = present progressive",
+            "explainPa": "is + -ing = ਵਰਤਮਾਨ ਜਾਰੀ",
+            "highlight": "is barking"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_present_prog_classroom",
+        "englishText": "Right now in class, we ___ to the teacher.",
+        "punjabiText": "ਇਸ ਵੇਲੇ ਕਲਾਸ ਵਿੱਚ, ਅਸੀਂ ਅਧਿਆਪਕ ਨੂੰ ___।",
+        "options": [
+          "listen",
+          "are listening",
+          "listened"
+        ],
+        "correctAnswer": "are listening",
+        "points": 5,
+        "hint": {
+          "en": "Right now action = are + verb-ing with 'we'.",
+          "pa": "ਹੁਣ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਲਈ 'we' ਨਾਲ are + ਕਿਰਿਆ-ing ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "'are listening' shows the action happening now.",
+          "pa": "'are listening' ਇਸ ਵੇਲੇ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We are learning English now.",
+          "pa": "ਅਸੀਂ ਹੁਣ ਅੰਗਰੇਜ਼ੀ ਸਿੱਖ ਰਹੇ ਹਾਂ।",
+          "highlight": {
+            "en": [
+              "are learning"
+            ],
+            "pa": [
+              "ਸਿੱਖ ਰਹੇ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "listen": {
+            "en": "'listen' is base form. For right now with 'we', use 'are listening'.",
+            "pa": "'listen' ਮੂਲ ਰੂਪ ਹੈ। 'we' ਨਾਲ ਇਸ ਵੇਲੇ ਲਈ 'are listening' ਵਰਤਦੇ ਹਾਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "listened": {
+            "en": "'listened' is past tense, not something happening now.",
+            "pa": "'listened' ਭੂਤਕਾਲ ਹੈ, ਇਸ ਵੇਲੇ ਹੋ ਰਹੀ ਕਿਰਿਆ ਨਹੀਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
           }
         }
-
-        seenLower[targetLower] = true;
-        out.push(mapped);
+      },
+      {
+        "type": "definition",
+        "contentEn": "Use simple present for routine (She studies daily) and present progressive for now (She is studying now).",
+        "contentPa": "ਰੁਟੀਨ ਲਈ simple present ਵਰਤੋ (She studies daily) ਅਤੇ ਹੁਣ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਲਈ present progressive (She is studying now)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_progressive_present_spelling_running",
+        "englishText": "Choose the correct -ing form.",
+        "punjabiText": "ਸਹੀ -ing ਰੂਪ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "runing",
+            "pa": "ਰਨਿੰਗ (ਗਲਤ)"
+          },
+          {
+            "en": "running",
+            "pa": "ਦੌੜ ਰਹੀ"
+          },
+          {
+            "en": "runingg",
+            "pa": "ਰਨਿੰਗਗ (ਗਲਤ)"
+          }
+        ],
+        "correctAnswer": "running",
+        "points": 5,
+        "hint": {
+          "en": "For short verb 'run', double n before -ing.",
+          "pa": "'run' ਵਰਗੇ ਛੋਟੇ ਸ਼ਬਦ ਵਿੱਚ -ing ਤੋਂ ਪਹਿਲਾਂ n ਦੁੱਗਣਾ ਹੁੰਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "The correct spelling is 'running' (run + n + ing).",
+          "pa": "ਸਹੀ ਲਿਖਤ 'running' ਹੈ (run + n + ing)।"
+        },
+        "workedExample": {
+          "en": "He is running fast.",
+          "pa": "ਉਹ ਤੇਜ਼ ਦੌੜ ਰਿਹਾ ਹੈ।",
+          "highlight": "running"
+        }
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "is/are + verb-ing",
+          "Right now actions",
+          "They are learning.",
+          "Current moment"
+        ],
+        "keyExamplesPa": [
+          "am/is/are + ਕਿਰਿਆ-ing",
+          "ਹੁਣ ਚੱਲ ਰਿਹਾ ਕੰਮ",
+          "ਉਹ ਸਿੱਖ ਰਹੇ ਹਨ।",
+          "ਮੌਜੂਦਾ ਪਲ"
+        ],
+        "totalPoints": 28,
+        "points": 0
       }
-
-      return out;
-    }
-
-    var sentenceEn = cleanText(step.sentenceEn || step.contentEn || step.english_text || step.englishText || "");
-    var sentencePa = cleanText(step.sentencePa || step.contentPa || step.punjabi_text || step.punjabiText || "");
-    var clickableWords = ensureStringArray(step.clickableWords).map(cleanText).filter(Boolean);
-    var correctAnswers = ensureStringArray(step.correctAnswers).map(cleanText).filter(Boolean);
-    var points = coercePoints(step.points, 3);
-
-    var feedbackCorrect = undefined;
-    var feedbackCorrectPa = undefined;
-    // C) Preserve renderer contract: feedbackCorrect stays a string.
-    if (typeof step.feedbackCorrect === "string") feedbackCorrect = cleanText(step.feedbackCorrect);
-    else if (step.feedbackCorrect && typeof step.feedbackCorrect === 'object') {
-      // Accept bilingual object and keep english in feedbackCorrect while preserving Punjabi separately.
-      if (typeof step.feedbackCorrect.en === 'string') feedbackCorrect = cleanText(step.feedbackCorrect.en);
-      else if (typeof step.feedbackCorrect.pa === 'string') feedbackCorrect = cleanText(step.feedbackCorrect.pa);
-      if (typeof step.feedbackCorrect.pa === 'string') feedbackCorrectPa = cleanText(step.feedbackCorrect.pa);
-    }
-
-    if (typeof step.feedbackCorrectPa === 'string') feedbackCorrectPa = cleanText(step.feedbackCorrectPa);
-
-    // If feedbackCorrect contains both languages in one string, split into EN/PA.
-    if (typeof feedbackCorrect === 'string' && feedbackCorrect && !feedbackCorrectPa) {
-      // Common delimiter pattern used in the dataset: "EN ... / PA ..."
-      var parts = feedbackCorrect.split(/\s\/\s/);
-      if (parts.length >= 2) {
-        var maybePa = parts.slice(1).join(" / ").trim();
-        if (/[\u0A00-\u0A7F]/.test(maybePa)) {
-          feedbackCorrect = parts[0].trim();
-          feedbackCorrectPa = maybePa;
+    ]
+  },
+  "L_SIMPLE_PAST_01": {
+    "metadata": {
+      "titleEn": "Simple Past",
+      "titlePa": "ਸਧਾਰਣ ਭੂਤਕਾਲ",
+      "labelEn": "Simple Past",
+      "labelPa": "ਸਧਾਰਣ ਭੂਤਕਾਲ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Past Tense",
+        "titlePa": "ਸਿੱਖੋ: ਭੂਤਕਾਲ",
+        "descEn": "Actions that already happened.",
+        "descPa": "ਕੰਮ ਜੋ ਪਹਿਲਾਂ ਹੋ ਚੁੱਕੇ।",
+        "pointsAvailable": 38
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Simple past: actions that finished. Most add -ed.",
+        "contentPa": "ਸਧਾਰਣ ਭੂਤਕਾਲ: ਖ਼ਤਮ ਹੋ ਚੁੱਕੇ ਕੰਮ। ਆਮ ਤੌਰ ਤੇ -ed ਜੋੜੋ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I played. She walked. They ran.",
+        "examplePa": "ਮੈਂ ਖੇਡਿਆ। ਉਹ ਤੁਰੀ। ਉਹ ਦੌੜੇ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_past_is_played",
+        "englishText": "Which is past tense?",
+        "punjabiText": "ਕਿਹੜਾ ਭੂਤਕਾਲ ਹੈ?",
+        "options": [
+          "plays",
+          "played",
+          "play"
+        ],
+        "correctAnswer": "played",
+        "points": 5,
+        "hint": {
+          "en": "Past = already happened.",
+          "pa": "ਭੂਤਕਾਲ = ਜੋ ਕੰਮ ਪਹਿਲਾਂ ਹੋ ਗਿਆ।"
+        },
+        "explanation": {
+          "en": "Simple past is used for completed actions in the past; many regular verbs add -ed.",
+          "pa": "ਸਧਾਰਣ ਭੂਤਕਾਲ ਉਹ ਕੰਮ ਦੱਸਦਾ ਹੈ ਜੋ ਭੂਤਕਾਲ ਵਿੱਚ ਪੂਰੇ ਹੋ ਚੁੱਕੇ ਹਨ; ਕਈ ਆਮ ਕਿਰਿਆਵਾਂ ਨਾਲ -ed ਲੱਗਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I jumped.",
+          "pa": "ਮੈਂ ਛਾਲ ਮਾਰੀ।",
+          "highlight": {
+            "en": [
+              "jumped"
+            ],
+            "pa": [
+              "ਮਾਰੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "plays": {
+            "en": "'plays' is simple present (habit/current), not simple past. For a completed past action, use 'played'.",
+            "pa": "'plays' ਸਧਾਰਣ ਵਰਤਮਾਨ ਹੈ (ਆਦਤ/ਹੁਣ), ਭੂਤਕਾਲ ਨਹੀਂ। ਪੂਰਾ ਹੋਇਆ ਭੂਤਕਾਲੀ ਕੰਮ ਦੱਸਣ ਲਈ 'played' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "play": {
+            "en": "'play' is the base form, not the past form in this context. The past of this regular verb is 'played'.",
+            "pa": "'play' ਮੂਲ ਕਿਰਿਆ ਰੂਪ ਹੈ, ਇੱਥੇ ਭੂਤਕਾਲ ਨਹੀਂ। ਇਸ ਨਿਯਮਤ ਕਿਰਿਆ ਦਾ ਭੂਤਕਾਲ 'played' ਹੁੰਦਾ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She played football yesterday.",
+            "sentencePa": "ਉਸਨੇ ਕੱਲ੍ਹ ਫੁੱਟਬਾਲ ਖੇਡੀ।",
+            "explainEn": "'played' is simple past because the action happened yesterday and is finished.",
+            "explainPa": "'played' simple past ਹੈ ਕਿਉਂਕਿ ਕੰਮ ਕੱਲ੍ਹ ਹੋਇਆ ਅਤੇ ਮੁਕ ਗਿਆ।",
+            "highlight": "played"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_past_form_walked",
+        "englishText": "Form past: 'walk'.",
+        "punjabiText": "ਭੂਤਕਾਲ ਬਣਾਓ: 'walk'.",
+        "options": [
+          "walk",
+          "walked",
+          "walks"
+        ],
+        "correctAnswer": "walked",
+        "points": 5,
+        "hint": {
+          "en": "Add -ed.",
+          "pa": "ਅਖੀਰ ‘-ed’ ਜੋੜੋ।"
+        },
+        "explanation": {
+          "en": "For regular verbs like 'walk', we add -ed to make the past form: walk → walked.",
+          "pa": "'walk' ਵਰਗੀਆਂ ਨਿਯਮਤ ਕਿਰਿਆਵਾਂ ਦਾ ਭੂਤਕਾਲ ਬਣਾਉਣ ਲਈ -ed ਜੋੜਦੇ ਹਾਂ: walk → walked।"
+        },
+        "workedExample": {
+          "en": "We walked home.",
+          "pa": "ਅਸੀਂ ਘਰ ਤੁਰ ਕੇ ਗਏ।",
+          "highlight": {
+            "en": [
+              "walked"
+            ],
+            "pa": [
+              "ਗਏ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "walk": {
+            "en": "'walk' is base/present form. The question asks for past form, and for regular verbs we add -ed: 'walked'.",
+            "pa": "'walk' ਮੂਲ/ਵਰਤਮਾਨ ਰੂਪ ਹੈ। ਪ੍ਰਸ਼ਨ ਭੂਤਕਾਲ ਮੰਗਦਾ ਹੈ, ਅਤੇ ਨਿਯਮਤ ਕਿਰਿਆ ਲਈ -ed ਜੋੜਕੇ 'walked' ਬਣਦਾ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "walks": {
+            "en": "'walks' is present tense for third-person singular. Here we need past tense, so the correct form is 'walked'.",
+            "pa": "'walks' ਤੀਜੇ ਪੁਰਖ ਇਕਵਚਨ ਦਾ ਵਰਤਮਾਨ ਰੂਪ ਹੈ। ਇੱਥੇ ਭੂਤਕਾਲ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ ਸਹੀ ਰੂਪ 'walked' ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "They walked to school.",
+            "sentencePa": "ਉਹ ਤੁਰ ਕੇ ਸਕੂਲ ਗਏ।",
+            "explainEn": "'walked' is past form (walk + ed), so it shows a completed action.",
+            "explainPa": "'walked' ਭੂਤਕਾਲ ਦਾ ਰੂਪ ਹੈ (walk + ed), ਇਸ ਲਈ ਇਹ ਪੂਰਾ ਹੋਇਆ ਕੰਮ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "walked"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_past_complete_ate",
+        "englishText": "Complete: We ___ pizza last week.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਪਿਛਲੇ ਹਫ਼ਤੇ ਅਸੀਂ ਪੀਜ਼ਾ ___.",
+        "options": [
+          "eat",
+          "ate",
+          "eating"
+        ],
+        "correctAnswer": "ate",
+        "points": 5,
+        "hint": {
+          "en": "Eat has a special past form.",
+          "pa": "eat ਦਾ past ਵੱਖਰਾ ਹੁੰਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'eat' is irregular in past tense, so the correct form is 'ate' (not 'eated').",
+          "pa": "'eat' ਅਨਿਯਮਤ ਕਿਰਿਆ ਹੈ, ਇਸ ਲਈ ਇਸਦਾ ਭੂਤਕਾਲ 'ate' ਹੁੰਦਾ ਹੈ ('eated' ਨਹੀਂ)।"
+        },
+        "workedExample": {
+          "en": "I ate an apple.",
+          "pa": "ਮੈਂ ਸੇਬ ਖਾਧਾ।",
+          "highlight": {
+            "en": [
+              "ate"
+            ],
+            "pa": [
+              "ਖਾਧਾ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "eat": {
+            "en": "'eat' is base/present form. The sentence has 'last week', so it needs past tense; for this irregular verb, the past is 'ate'.",
+            "pa": "'eat' ਮੂਲ/ਵਰਤਮਾਨ ਰੂਪ ਹੈ। ਵਾਕ ਵਿੱਚ 'last week' ਹੈ, ਇਸ ਲਈ ਭੂਤਕਾਲ ਚਾਹੀਦਾ ਹੈ; ਇਸ ਅਨਿਯਮਤ ਕਿਰਿਆ ਦਾ ਭੂਤਕਾਲ 'ate' ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "eating": {
+            "en": "'eating' is an -ing form and needs a helper verb. This sentence requires simple past for a finished time, so use 'ate'.",
+            "pa": "'eating' -ing ਰੂਪ ਹੈ ਅਤੇ ਇਸ ਨਾਲ ਸਹਾਇਕ ਕਿਰਿਆ ਚਾਹੀਦੀ ਹੈ। ਇਹ ਵਾਕ ਮੁੱਕੇ ਭੂਤਕਾਲ ਲਈ ਹੈ, ਇਸ ਲਈ 'ate' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "We ate pizza yesterday.",
+            "sentencePa": "ਅਸੀਂ ਕੱਲ੍ਹ ਪਿਜ਼ਾ ਖਾਧਾ।",
+            "explainEn": "'ate' is the irregular past form of 'eat', so it fits a finished past action.",
+            "explainPa": "'ate' 'eat' ਦਾ ਅਨਿਯਮਤ ਭੂਤਕਾਲ ਹੈ, ਇਸ ਲਈ ਇਹ ਮੁੱਕਿਆ ਹੋਇਆ ਭੂਤਕਾਲੀ ਕੰਮ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "ate"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_past_time_yesterday",
+        "englishText": "What time word shows past?",
+        "punjabiText": "ਕਿਹੜਾ ਸਮਾਂ ਭੂਤਕਾਲ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          "tomorrow",
+          "yesterday",
+          "next week"
+        ],
+        "correctAnswer": "yesterday",
+        "points": 5,
+        "hint": {
+          "en": "Past time word = yesterday.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'yesterday' is a past-time marker, so it signals that the action happened before today.",
+          "pa": "'yesterday' ਭੂਤਕਾਲ ਦਾ ਸਮੇਂ ਵਾਲਾ ਸੰਕੇਤ ਹੈ, ਇਸ ਲਈ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਅੱਜ ਤੋਂ ਪਹਿਲਾਂ ਹੋਇਆ।"
+        },
+        "workedExample": {
+          "en": "Yesterday I played.",
+          "pa": "ਕੱਲ੍ਹ ਮੈਂ ਖੇਡਿਆ।",
+          "highlight": {
+            "en": [
+              "Yesterday"
+            ],
+            "pa": [
+              "ਕੱਲ੍ਹ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "tomorrow": {
+            "en": "'tomorrow' points to future time, not past. The question asks for a past-time marker, so 'yesterday' is correct.",
+            "pa": "'tomorrow' ਭਵਿੱਖ ਦਾ ਸਮਾਂ ਦੱਸਦਾ ਹੈ, ਭੂਤਕਾਲ ਨਹੀਂ। ਪ੍ਰਸ਼ਨ ਭੂਤਕਾਲੀ ਸਮੇਂ ਦਾ ਸੰਕੇਤ ਮੰਗਦਾ ਹੈ, ਇਸ ਲਈ 'yesterday' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "next week": {
+            "en": "'next week' also refers to future time. For past reference (already happened), choose 'yesterday'.",
+            "pa": "'next week' ਵੀ ਭਵਿੱਖ ਦਾ ਸਮਾਂ ਦੱਸਦਾ ਹੈ। ਜੋ ਕੰਮ ਪਹਿਲਾਂ ਹੋਇਆ ਹੋਵੇ (past) ਉਸ ਲਈ 'yesterday' ਚੁਣੋ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I went yesterday.",
+            "sentencePa": "ਮੈਂ ਕੱਲ੍ਹ ਗਿਆ ਸੀ।",
+            "explainEn": "'yesterday' clearly marks this sentence as past time.",
+            "explainPa": "'yesterday' ਸਪਸ਼ਟ ਤੌਰ ਤੇ ਦੱਸਦਾ ਹੈ ਕਿ ਇਹ ਭੂਤਕਾਲ ਦਾ ਵਾਕ ਹੈ।",
+            "highlight": "yesterday"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_past_form_saw",
+        "englishText": "Form past tense: 'see'",
+        "punjabiText": "ਭੂਤਕਾਲ ਬਣਾਓ: 'see'",
+        "options": [
+          "see",
+          "seed",
+          "saw"
+        ],
+        "correctAnswer": "saw",
+        "points": 5,
+        "hint": {
+          "en": "See → ?",
+          "pa": "See ਦਾ ਭੂਤਕਾਲ ਕੀ ਹੈ?"
+        },
+        "explanation": {
+          "en": "'see' is irregular, so its past form changes to 'saw' instead of adding -ed.",
+          "pa": "'see' ਅਨਿਯਮਤ ਕਿਰਿਆ ਹੈ, ਇਸ ਲਈ -ed ਜੋੜਨ ਦੀ ਬਜਾਏ ਇਸਦਾ ਭੂਤਕਾਲ 'saw' ਬਣਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I saw a bird.",
+          "pa": "ਮੈਂ ਪੰਛੀ ਵੇਖਿਆ।",
+          "highlight": {
+            "en": [
+              "saw"
+            ],
+            "pa": [
+              "ਵੇਖਿਆ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "see": {
+            "en": "'see' is the base/present form. The past tense of this irregular verb changes to 'saw', not 'see'.",
+            "pa": "'see' ਮੂਲ/ਵਰਤਮਾਨ ਰੂਪ ਹੈ। ਇਸ ਅਨਿਯਮਤ ਕਿਰਿਆ ਦਾ ਭੂਤਕਾਲ 'saw' ਬਣਦਾ ਹੈ, 'see' ਨਹੀਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "seed": {
+            "en": "This is not the correct English past form. For irregular verb 'see', the proper past tense is 'saw'.",
+            "pa": "ਇਹ ਸਹੀ ਅੰਗਰੇਜ਼ੀ ਭੂਤਕਾਲੀ ਰੂਪ ਨਹੀਂ ਹੈ। ਅਨਿਯਮਤ ਕਿਰਿਆ 'see' ਦਾ ਠੀਕ ਭੂਤਕਾਲ 'saw' ਹੁੰਦਾ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I saw a movie.",
+            "sentencePa": "ਮੈਂ ਇੱਕ ਫਿਲਮ ਵੇਖੀ।",
+            "explainEn": "'saw' is the irregular past form of 'see'.",
+            "explainPa": "'saw' 'see' ਦਾ ਅਨਿਯਮਤ ਭੂਤਕਾਲੀ ਰੂਪ ਹੈ।",
+            "highlight": "saw"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_past_completed_i_ate",
+        "englishText": "Which shows a completed action?",
+        "punjabiText": "ਕਿਹੜਾ ਪੂਰਾ ਹੋਇਆ ਕੰਮ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          "I eat",
+          "I ate",
+          "I will eat"
+        ],
+        "correctAnswer": "I ate",
+        "points": 5,
+        "hint": {
+          "en": "Completed = past form.",
+          "pa": "ਪੂਰਾ ਹੋਇਆ = past ਰੂਪ।"
+        },
+        "explanation": {
+          "en": "Past tense shows the action is already completed, so 'I ate' is correct.",
+          "pa": "Past tense ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਪਹਿਲਾਂ ਹੀ ਪੂਰਾ ਹੋ ਗਿਆ, ਇਸ ਲਈ 'I ate' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I ate.",
+          "pa": "ਮੈਂ ਖਾਧਾ।",
+          "highlight": {
+            "en": [
+              "ate"
+            ],
+            "pa": [
+              "ਖਾਧਾ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "I eat": {
+            "en": "'I eat' is present tense (habit/current), not completed past action. The completed form is 'I ate'.",
+            "pa": "'I eat' ਵਰਤਮਾਨ ਕਾਲ ਹੈ (ਆਦਤ/ਹੁਣ), ਪੂਰਾ ਹੋਇਆ ਭੂਤਕਾਲ ਨਹੀਂ। ਮੁੱਕੇ ਕੰਮ ਲਈ 'I ate' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "I will eat": {
+            "en": "'I will eat' is future tense. The question asks for completed action, so use past tense: 'I ate'.",
+            "pa": "'I will eat' ਭਵਿੱਖ ਕਾਲ ਹੈ। ਪ੍ਰਸ਼ਨ ਪੂਰਾ ਹੋਇਆ ਕੰਮ ਮੰਗਦਾ ਹੈ, ਇਸ ਲਈ ਭੂਤਕਾਲ 'I ate' ਵਰਤੋ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She finished her homework.",
+            "sentencePa": "ਉਸਨੇ ਆਪਣਾ ਹੋਮਵਰਕ ਮੁਕਾ ਲਿਆ।",
+            "explainEn": "'finished' is simple past, so it describes a completed action.",
+            "explainPa": "'finished' simple past ਹੈ, ਇਸ ਲਈ ਇਹ ਪੂਰਾ ਹੋਇਆ ਕੰਮ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "finished"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Irregular past forms change completely: go → went, see → saw, eat → ate.",
+        "contentPa": "ਅਨਿਯਮਤ ਭੂਤਕਾਲ ਰੂਪ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦੇ ਹਨ: go → went, see → saw, eat → ate।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_simple_past_irregular_go_went",
+        "englishText": "What is the past form of 'go'?",
+        "punjabiText": "'go' ਦਾ ਭੂਤਕਾਲ ਕੀ ਹੈ?",
+        "options": [
+          {
+            "en": "goed",
+            "pa": "ਗੋਏਡ (ਗਲਤ)"
+          },
+          {
+            "en": "went",
+            "pa": "ਗਿਆ"
+          },
+          {
+            "en": "goes",
+            "pa": "ਜਾਂਦਾ ਹੈ"
+          }
+        ],
+        "correctAnswer": "went",
+        "points": 5,
+        "hint": {
+          "en": "'go' is irregular.",
+          "pa": "'go' ਅਨਿਯਮਤ ਕਿਰਿਆ ਹੈ।"
+        },
+        "explanation": {
+          "en": "The correct irregular past of 'go' is 'went'.",
+          "pa": "'go' ਦਾ ਸਹੀ ਅਨਿਯਮਤ ਭੂਤਕਾਲ 'went' ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I went to market yesterday.",
+          "pa": "ਮੈਂ ਕੱਲ੍ਹ ਬਾਜ਼ਾਰ ਗਿਆ ਸੀ।",
+          "highlight": "went"
         }
       }
-    }
-
-    // Map word lists to the renderer's exact tokenization (e.g., student -> student.).
-    clickableWords = mapWordsToSentenceTokens(sentenceEn, clickableWords);
-    correctAnswers = mapWordsToSentenceTokens(sentenceEn, correctAnswers);
-    if ((!clickableWords || !clickableWords.length) && correctAnswers && correctAnswers.length) clickableWords = correctAnswers.slice();
-
-    return {
-      type: "guided_practice",
-      sentenceEn: sentenceEn,
-      sentencePa: sentencePa,
-      clickableWords: clickableWords,
-      correctAnswers: correctAnswers,
-      feedbackCorrect: feedbackCorrect,
-      feedbackCorrectPa: typeof feedbackCorrectPa === 'string' ? feedbackCorrectPa : undefined,
-      points: points
-    };
-  }
-
-  function normalizeStep(step, lessonId, usedQuestionIds) {
-    if (!step || typeof step !== "object") return null;
-    var type = step.type || step.step_type;
-    if (type === "guidedPractice") type = "guided_practice";
-    if (type === "guided_practice") return normalizeGuidedPractice(step);
-    if (type === "definition") {
-      return {
-        type: "definition",
-        contentEn: coerceString(step.contentEn || step.english_text || step.englishText || ""),
-        contentPa: coerceString(step.contentPa || step.punjabi_text || step.punjabiText || ""),
-        points: coercePoints(step.points, 1)
-      };
-    }
-    if (type === "example") {
-      // B) Strip <mark> and derive highlightedWords when absent.
-      var rawEn = coerceString(step.exampleEn || step.english_text || step.englishText || "");
-      var rawPa = coerceString(step.examplePa || step.punjabi_text || step.punjabiText || "");
-      var enInfo = stripMarkAndCollect(rawEn);
-      var paInfo = stripMarkAndCollect(rawPa);
-
-      var existingHighlights = normalizeHighlightedWords(step.highlightedWords);
-      var derived = [];
-      var seen2 = Object.create(null);
-      function pushAll(list) {
-        for (var i = 0; i < list.length; i++) {
-          var w = list[i];
-          if (!w || seen2[w]) continue;
-          seen2[w] = true;
-          derived.push(w);
+    ]
+  },
+  "L_PROGRESSIVE_PAST_01": {
+    "metadata": {
+      "titleEn": "Past Progressive Tense",
+      "titlePa": "ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ",
+      "labelEn": "Past Progressive",
+      "labelPa": "ਭੂਤਕਾਲੀ ਜਾਰੀ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Past Progressive Tense",
+        "titlePa": "ਸਿੱਖੋ: ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ",
+        "descEn": "Understand 'was/were + -ing' for actions that were happening in the past",
+        "descPa": "ਸਮਝੋ: was/were ਵਾਲੀ ਸਹਾਇਕ ਕਿਰਿਆ + ਕਿਰਿਆ-ing",
+        "pointsAvailable": 28
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Past progressive (was/were + verb-ing) shows an action that was happening at a specific time in the past. Form: subject + was/were + verb-ing",
+        "contentPa": "ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਭੂਤਕਾਲ ਦੇ ਕਿਸੇ ਵੇਲੇ ਚੱਲ ਰਿਹਾ ਕੰਮ ਦੱਸਦਾ ਹੈ (was/were + ਕਿਰਿਆ-ing)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I was sleeping when the phone rang.",
+        "examplePa": "ਜਦੋਂ ਫੋਨ ਵੱਜਿਆ, ਮੈਂ ਸੋ ਰਿਹਾ ਸੀ।",
+        "highlightedWords": [
+          "was sleeping"
+        ],
+        "explainEn": "'was sleeping' = was + -ing, action interrupted by another",
+        "explainPa": "'was sleeping' = ਭੂਤਕਾਲ ਵਿੱਚ ਚੱਲ ਰਹੀ ਕਿਰਿਆ",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "They were playing when it started raining.",
+        "examplePa": "ਜਦੋਂ ਮੀਂਹ ਪੈਣਾ ਸ਼ੁਰੂ ਹੋਇਆ, ਉਹ ਖੇਡ ਰਹੇ ਸਨ।",
+        "highlightedWords": [
+          "were playing"
+        ],
+        "explainEn": "Plural subject = were + -ing",
+        "explainPa": "ਕਈ ਲੋਕਾਂ ਨਾਲ 'were' + verb-ing ਵਰਤਦੇ ਹਾਂ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_progressive_past_01_in_tap_the_past_progressive_form",
+        "englishText": "\"I was watching TV when she called.\" — Is \"was watching\" past progressive?",
+        "punjabiText": "\"ਜਦੋਂ ਉਸ ਨੇ ਫ਼ੋਨ ਕੀਤਾ ਮੈਂ ਟੀਵੀ ਦੇਖ ਰਿਹਾ ਸੀ।\" — ਕੀ \"was watching\" ਭੂਤਕਾਲੀ ਜਾਰੀ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Was watching” is past progressive: was/were + verb-ing.",
+          "pa": "ਹਾਂ। “was watching” ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਹੈ: was/were + ਕਿਰਿਆ-ing।"
+        },
+        "workedExample": {
+          "en": "Yes. “Was watching” is past progressive: was/were + verb-ing.",
+          "pa": "ਹਾਂ। “was watching” ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਹੈ: was/were + ਕਿਰਿਆ-ing।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_past_prog_correct",
+        "englishText": "Which uses past progressive correctly?",
+        "punjabiText": "ਕਿਹੜਾ ਭੂਤਕਾਲੀ ਜਾਰੀ ਸਹੀ ਵਰਤਦਾ ਹੈ?",
+        "options": [
+          "She was cooked dinner.",
+          "She was cooking dinner.",
+          "She were cooking dinner."
+        ],
+        "correctAnswer": "She was cooking dinner.",
+        "points": 5,
+        "hint": {
+          "en": "Past in-progress = was/were + -ing.",
+          "pa": "ਭੂਤਕਾਲ ਵਿੱਚ ਚੱਲ ਰਿਹਾ = was/were + -ing।"
+        },
+        "explanation": {
+          "en": "Past progressive shows something was happening then.",
+          "pa": "ਭੂਤਕਾਲੀ ਜਾਰੀ = ਉਸ ਵੇਲੇ ਹੋ ਰਿਹਾ ਸੀ।"
+        },
+        "workedExample": {
+          "en": "He was sleeping.",
+          "pa": "ਉਹ ਸੋ ਰਿਹਾ ਸੀ।",
+          "highlight": {
+            "en": [
+              "was sleeping"
+            ],
+            "pa": [
+              "ਰਿਹਾ ਸੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "She was cooked dinner.": {
+            "en": "This mixes 'was' with past participle 'cooked' and misses the -ing pattern. Past progressive needs was/were + verb-ing: 'was cooking'.",
+            "pa": "ਇਸ ਵਿੱਚ 'was' ਨਾਲ 'cooked' (past participle) ਆ ਗਿਆ ਹੈ, ਪਰ -ing ਰੂਪ ਨਹੀਂ। ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਲਈ was/were + verb-ing ਲੋੜੀਂਦਾ ਹੈ: 'was cooking'।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "She were cooking dinner.": {
+            "en": "'were' does not agree with singular subject 'She'. Use singular helper 'was': 'She was cooking dinner.'",
+            "pa": "ਇਕਵਚਨ ਕਰਤਾ 'She' ਨਾਲ 'were' ਨਹੀਂ ਆਉਂਦਾ। ਸਹੀ ਸਹਾਇਕ ਕਿਰਿਆ 'was' ਹੈ: 'She was cooking dinner.'",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I was reading a book.",
+            "sentencePa": "ਮੈਂ ਕਿਤਾਬ ਪੜ੍ਹ ਰਿਹਾ ਸੀ।",
+            "explainEn": "was + -ing = past progressive",
+            "explainPa": "was + -ing = ਭੂਤਕਾਲੀ ਜਾਰੀ",
+            "highlight": "was reading"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "We were studying when you arrived.",
+        "examplePa": "ਜਦੋਂ ਤੁਸੀਂ ਆਏ ਤਾਂ ਅਸੀਂ ਪੜ੍ਹ ਰਹੇ ਸਾਂ।",
+        "highlightedWords": [
+          "were studying"
+        ],
+        "explainEn": "Past action in progress at a point in time",
+        "explainPa": "ਭੂਤਕਾਲ ਦੀ ਜਾਰੀ ਕਿਰਿਆ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_past_prog_complete_were_eating",
+        "englishText": "Complete: They ___ (eat) when I called.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਜਦੋਂ ਮੈਂ ਫੋਨ ਕੀਤਾ, ਉਹ ___.",
+        "options": [
+          "ate",
+          "were eating",
+          "eat"
+        ],
+        "correctAnswer": "were eating",
+        "points": 5,
+        "hint": {
+          "en": "They (plural) → were + eating.",
+          "pa": "They (ਕਈ) → were + eating।"
+        },
+        "explanation": {
+          "en": "Plural subject uses ‘were’.",
+          "pa": "ਬਹੁਵਚਨ ਕਰਤਾ ਨਾਲ 'were' ਆਉਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "They were eating pizza.",
+          "pa": "ਉਹ ਪਿਜ਼ਾ ਖਾ ਰਹੇ ਸਨ।",
+          "highlight": {
+            "en": [
+              "were eating"
+            ],
+            "pa": [
+              "ਖਾ ਰਹੇ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "ate": {
+            "en": "'ate' is simple past (finished action), but 'when I called' suggests an ongoing background action. So use past progressive 'were eating'.",
+            "pa": "'ate' ਸਧਾਰਣ ਭੂਤਕਾਲ ਹੈ (ਮੁੱਕਿਆ ਕੰਮ), ਪਰ 'when I called' ਚੱਲ ਰਹੀ ਪਿਛੋਕੜ ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ। ਇਸ ਲਈ ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ 'were eating' ਸਹੀ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "eat": {
+            "en": "'eat' is base form and does not show past ongoing action. With plural 'They', use 'were + eating' to form past progressive.",
+            "pa": "'eat' ਮੂਲ ਰੂਪ ਹੈ ਅਤੇ ਭੂਤਕਾਲ ਵਿੱਚ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਨਹੀਂ ਦੱਸਦਾ। ਬਹੁਵਚਨ 'They' ਨਾਲ ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਲਈ 'were + eating' ਵਰਤਦੇ ਹਾਂ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The rain was falling heavily.",
+            "sentencePa": "ਮੀਂਹ ਜ਼ੋਰ ਨਾਲ ਪੈ ਰਿਹਾ ਸੀ।",
+            "explainEn": "was + -ing = past progressive",
+            "explainPa": "was + -ing = ਭੂਤਕਾਲੀ ਜਾਰੀ",
+            "highlight": "was falling"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_past_prog_playground",
+        "englishText": "Yesterday at 5 PM, the children ___ in the playground.",
+        "punjabiText": "ਕੱਲ੍ਹ 5 ਵਜੇ, ਬੱਚੇ ਮੈਦਾਨ ਵਿੱਚ ___।",
+        "options": [
+          "played",
+          "were playing",
+          "play"
+        ],
+        "correctAnswer": "were playing",
+        "points": 5,
+        "hint": {
+          "en": "Past action in progress = were + verb-ing.",
+          "pa": "ਭੂਤਕਾਲ ਵਿੱਚ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਲਈ were + ਕਿਰਿਆ-ing ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "'were playing' shows the action was going on at that time.",
+          "pa": "'were playing' ਦੱਸਦਾ ਹੈ ਕਿ ਉਸ ਵੇਲੇ ਕਿਰਿਆ ਚੱਲ ਰਹੀ ਸੀ।"
+        },
+        "workedExample": {
+          "en": "They were playing football at 5 PM.",
+          "pa": "ਉਹ 5 ਵਜੇ ਫੁੱਟਬਾਲ ਖੇਡ ਰਹੇ ਸਨ।",
+          "highlight": {
+            "en": [
+              "were playing"
+            ],
+            "pa": [
+              "ਖੇਡ ਰਹੇ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "played": {
+            "en": "'played' is simple past and does not show ongoing action at a specific time.",
+            "pa": "'played' ਸਧਾਰਣ ਭੂਤਕਾਲ ਹੈ ਅਤੇ ਕਿਸੇ ਖ਼ਾਸ ਸਮੇਂ ਚੱਲ ਰਹੀ ਕਿਰਿਆ ਨਹੀਂ ਦੱਸਦਾ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          },
+          "play": {
+            "en": "'play' is base form. Here we need past progressive with 'were'.",
+            "pa": "'play' ਮੂਲ ਰੂਪ ਹੈ। ਇੱਥੇ 'were' ਨਾਲ ਭੂਤਕਾਲੀ ਜਾਰੀ ਰੂਪ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "verb tense",
+            "posPa": "ਕਿਰਿਆ ਦਾ ਕਾਲ"
+          }
+        }
+      },
+      {
+        "type": "example",
+        "exampleEn": "I was cooking when she arrived.",
+        "examplePa": "ਜਦੋਂ ਉਹ ਆਈ, ਮੈਂ ਖਾਣਾ ਬਣਾ ਰਿਹਾ ਸੀ।",
+        "highlightedWords": [
+          "was cooking",
+          "arrived"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_past_progressive_vs_simple_past_interrupt",
+        "englishText": "Choose the correct sentence.",
+        "punjabiText": "ਸਹੀ ਵਾਕ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "I was cooked when she arrived.",
+            "pa": "ਜਦੋਂ ਉਹ ਆਈ ਮੈਂ ਪਕਾਇਆ ਸੀ।"
+          },
+          {
+            "en": "I was cooking when she arrived.",
+            "pa": "ਜਦੋਂ ਉਹ ਆਈ ਮੈਂ ਖਾਣਾ ਬਣਾ ਰਿਹਾ ਸੀ।"
+          },
+          {
+            "en": "I cooking when she arrived.",
+            "pa": "ਜਦੋਂ ਉਹ ਆਈ ਮੈਂ ਪਕਾਉਣਾ।"
+          }
+        ],
+        "correctAnswer": "I was cooking when she arrived.",
+        "points": 5,
+        "hint": {
+          "en": "Background action = was/were + ing; interrupting action = simple past.",
+          "pa": "ਚੱਲ ਰਹੀ ਪਿਛੋਕੜ ਕਿਰਿਆ = was/were + ing; ਵਿਚਕਾਰ ਆਈ ਕਿਰਿਆ = simple past।"
+        },
+        "explanation": {
+          "en": "'was cooking' (ongoing) + 'arrived' (interruption) is the correct pattern.",
+          "pa": "'was cooking' (ਚੱਲ ਰਹੀ ਕਿਰਿਆ) + 'arrived' (ਵਿਚਕਾਰ ਆਈ ਕਿਰਿਆ) ਸਹੀ ਬਣਤਰ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "They were studying when the bell rang.",
+          "pa": "ਜਦੋਂ ਘੰਟੀ ਵੱਜੀ, ਉਹ ਪੜ੍ਹ ਰਹੇ ਸਨ।",
+          "highlight": "were studying"
+        }
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "was/were + verb-ing",
+          "Actions in past progress",
+          "They were working.",
+          "Interrupted actions"
+        ],
+        "keyExamplesPa": [
+          "was/were + ਕਿਰਿਆ-ing",
+          "ਭੂਤਕਾਲ ਦੀ ਜਾਰੀ ਕਿਰਿਆ",
+          "ਉਹ ਕੰਮ ਕਰ ਰਹੇ ਸਨ।",
+          "ਵਿਚਕਾਰ ਰੁਕੀ ਕਿਰਿਆ"
+        ],
+        "totalPoints": 28,
+        "points": 0
+      }
+    ]
+  },
+  "L_SIMPLE_FUTURE_01": {
+    "metadata": {
+      "titleEn": "Simple Future",
+      "titlePa": "ਸਧਾਰਣ ਭਵਿੱਖ",
+      "labelEn": "Simple Future",
+      "labelPa": "ਸਧਾਰਣ ਭਵਿੱਖ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Future Tense",
+        "titlePa": "ਸਿੱਖੋ: ਭਵਿੱਖ",
+        "descEn": "Actions that will happen.",
+        "descPa": "ਕੰਮ ਜੋ ਹੋਣਗੇ।",
+        "pointsAvailable": 38
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Simple future: will + base verb.",
+        "contentPa": "ਸਧਾਰਣ ਭਵਿੱਖ: will + ਕਿਰਿਆ ਦਾ ਮੂਲ ਰੂਪ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I will go. She will run. They will play.",
+        "examplePa": "ਮੈਂ ਜਾਵਾਂਗਾ/ਜਾਵਾਂਗੀ। ਉਹ ਦੌੜੇਗੀ। ਉਹ ਖੇਡਣਗੇ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_future_is_will_visit",
+        "englishText": "Which is future?",
+        "punjabiText": "ਕਿਹੜਾ ਭਵਿੱਖ ਕਾਲ ਹੈ?",
+        "options": [
+          "visits",
+          "visited",
+          "will visit"
+        ],
+        "correctAnswer": "will visit",
+        "points": 5,
+        "hint": {
+          "en": "Future = will + verb.",
+          "pa": "Future = will + ਕਿਰਿਆ।"
+        },
+        "explanation": {
+          "en": "Use ‘will’ for things that will happen later.",
+          "pa": "‘will’ ਨਾਲ ਭਵਿੱਖ ਵਾਲਾ ਕੰਮ ਦੱਸਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "I will play.",
+          "pa": "ਮੈਂ ਖੇਡਾਂਗਾ/ਖੇਡਾਂਗੀ।",
+          "highlight": {
+            "en": [
+              "will"
+            ],
+            "pa": [
+              "ਗਾ",
+              "ਗੀ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "We will visit next week.",
+            "sentencePa": "ਅਗਲੇ ਹਫ਼ਤੇ ਅਸੀਂ ਜਾਵਾਂਗੇ।",
+            "explainEn": "'will visit' is future tense because the action happens later, not now.",
+            "explainPa": "'will visit' ਭਵਿੱਖ ਕਾਲ ਹੈ ਕਿਉਂਕਿ ਇਹ ਕੰਮ ਹੁਣ ਨਹੀਂ, ਬਾਅਦ ਵਿੱਚ ਹੋਵੇਗਾ।",
+            "highlight": "will visit"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_future_complete_will_read",
+        "englishText": "Complete: I ___ a book tomorrow.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਕੱਲ੍ਹ ਮੈਂ ਕਿਤਾਬ ___.",
+        "options": [
+          "read",
+          "reads",
+          "will read"
+        ],
+        "correctAnswer": "will read",
+        "points": 5,
+        "hint": {
+          "en": "Tomorrow = future.",
+          "pa": "Tomorrow ਭਵਿੱਖ ਦਾ ਸੰਕੇਤ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Tomorrow needs will + read.",
+          "pa": "‘tomorrow’ ਨਾਲ ਭਵਿੱਖ ਕਾਲ ਲਈ ‘will read’ ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "We will read later.",
+          "pa": "ਅਸੀਂ ਬਾਅਦ ਵਿੱਚ ਪੜ੍ਹਾਂਗੇ।",
+          "highlight": {
+            "en": [
+              "will read"
+            ],
+            "pa": [
+              "ਪੜ੍ਹਾਂਗੇ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She will read tomorrow.",
+            "sentencePa": "ਕੱਲ੍ਹ ਉਹ ਪੜ੍ਹੇਗੀ।",
+            "explainEn": "'will read' is future tense and pairs naturally with 'tomorrow'.",
+            "explainPa": "'will read' ਭਵਿੱਖ ਕਾਲ ਹੈ ਅਤੇ 'tomorrow' ਨਾਲ ਠੀਕ ਜੋੜ ਬਣਾਉਂਦਾ ਹੈ।",
+            "highlight": "will read"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_future_pick_will_go",
+        "englishText": "Pick the future tense.",
+        "punjabiText": "ਭਵਿੱਖ ਕਾਲ ਚੁਣੋ।",
+        "options": [
+          "goes",
+          "went",
+          "will go"
+        ],
+        "correctAnswer": "will go",
+        "points": 5,
+        "hint": {
+          "en": "Look for “will”.",
+          "pa": "“will” ਲੱਭੋ।"
+        },
+        "explanation": {
+          "en": "Future tense usually has ‘will’.",
+          "pa": "ਭਵਿੱਖ ਕਾਲ ਵਿੱਚ ਅਕਸਰ ‘will’ ਹੁੰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He will go home.",
+          "pa": "ਉਹ ਘਰ ਜਾਵੇਗਾ।",
+          "highlight": {
+            "en": [
+              "will go"
+            ],
+            "pa": [
+              "ਜਾਵੇਗਾ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "They will go next month.",
+            "sentencePa": "ਅਗਲੇ ਮਹੀਨੇ ਉਹ ਜਾਵਾਂਗੇ।",
+            "explainEn": "'will go' shows a planned future action.",
+            "explainPa": "'will go' ਯੋਜਿਤ ਭਵਿੱਖ ਵਾਲਾ ਕੰਮ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "will go"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_future_time_tomorrow",
+        "englishText": "What time word shows future?",
+        "punjabiText": "ਕਿਹੜਾ ਸਮਾਂ ਭਵਿੱਖ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          "yesterday",
+          "now",
+          "tomorrow"
+        ],
+        "correctAnswer": "tomorrow",
+        "points": 5,
+        "hint": {
+          "en": "Future time word = tomorrow.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Tomorrow means the next day (later).",
+          "pa": "tomorrow = ਅਗਲਾ ਦਿਨ, ਇਸ ਲਈ ਭਵਿੱਖ।"
+        },
+        "workedExample": {
+          "en": "Tomorrow I will come.",
+          "pa": "ਕੱਲ੍ਹ ਮੈਂ ਆਵਾਂਗਾ/ਆਵਾਂਗੀ।",
+          "highlight": {
+            "en": [
+              "Tomorrow"
+            ],
+            "pa": [
+              "ਕੱਲ੍ਹ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I will see you tomorrow.",
+            "sentencePa": "ਕੱਲ੍ਹ ਮੈਂ ਤੁਹਾਨੂੰ ਮਿਲਾਂਗਾ/ਮਿਲਾਂਗੀ।",
+            "explainEn": "Tomorrow = future time.",
+            "explainPa": "tomorrow ਭਵਿੱਖ ਦਾ ਸਮਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "tomorrow"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_future_form_will_bake",
+        "englishText": "Form future: I ___ cake next Sunday.",
+        "punjabiText": "ਭਵਿੱਖ ਬਣਾਓ: ਅਗਲੇ ਐਤਵਾਰ ਮੈਂ ਕੇਕ ___.",
+        "options": [
+          "bake",
+          "baked",
+          "will bake"
+        ],
+        "correctAnswer": "will bake",
+        "points": 5,
+        "hint": {
+          "en": "Next Sunday = will + verb.",
+          "pa": "ਅਗਲਾ ਐਤਵਾਰ = will + ਕਿਰਿਆ।"
+        },
+        "explanation": {
+          "en": "Future plan: will bake.",
+          "pa": "ਭਵਿੱਖ ਦੀ ਯੋਜਨਾ ਲਈ ‘will bake’ ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "I will bake a cake.",
+          "pa": "ਮੈਂ ਕੇਕ ਬਣਾਵਾਂਗਾ/ਬਣਾਵਾਂਗੀ।",
+          "highlight": {
+            "en": [
+              "will bake"
+            ],
+            "pa": [
+              "ਬਣਾਵਾਂ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She will bake cookies.",
+            "sentencePa": "ਉਹ ਕੂਕੀਜ਼ ਬਣਾਏਗੀ।",
+            "explainEn": "Will bake = future action.",
+            "explainPa": "‘will bake’ ਭਵਿੱਖ ਦੀ ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "will bake"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_future_not_yet_will_learn",
+        "englishText": "Which shows something NOT yet done?",
+        "punjabiText": "ਕਿਹੜਾ ਅਜੇ ਨਾ ਹੋਇਆ ਕੰਮ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          "I learned",
+          "I learn",
+          "I will learn"
+        ],
+        "correctAnswer": "I will learn",
+        "points": 5,
+        "hint": {
+          "en": "Not yet done = will.",
+          "pa": "ਅਜੇ ਨਹੀਂ = will।"
+        },
+        "explanation": {
+          "en": "‘will’ means it will happen later.",
+          "pa": "‘will’ = ਬਾਅਦ ਵਿੱਚ ਹੋਵੇਗਾ।"
+        },
+        "workedExample": {
+          "en": "I will learn tomorrow.",
+          "pa": "ਮੈਂ ਕੱਲ੍ਹ ਸਿੱਖਾਂਗਾ/ਸਿੱਖਾਂਗੀ।",
+          "highlight": {
+            "en": [
+              "will learn"
+            ],
+            "pa": [
+              "ਸਿੱਖਾਂ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He will finish soon.",
+            "sentencePa": "ਉਹ ਜਲਦੀ ਇਹ ਕੰਮ ਪੂਰਾ ਕਰ ਲਵੇਗਾ।",
+            "explainEn": "Will finish = not yet done.",
+            "explainPa": "will finish ਦਾ ਮਤਲਬ ਕੰਮ ਅਜੇ ਬਾਕੀ ਹੈ ਪਰ ਹੋਵੇਗਾ।",
+            "highlight": "will finish"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "Future negative/question: I will not be late. Will you join us?",
+        "examplePa": "ਭਵਿੱਖ ਦਾ negative/question: I will not be late. Will you join us?",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_simple_future_will_vs_going_to",
+        "englishText": "Choose the best sentence for a planned future action.",
+        "punjabiText": "ਯੋਜਿਤ ਭਵਿੱਖ ਕਿਰਿਆ ਲਈ ਸਭ ਤੋਂ ਠੀਕ ਵਾਕ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "I am going to visit my aunt tomorrow.",
+            "pa": "ਮੈਂ ਕੱਲ੍ਹ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾਣਾ ਹੈ।"
+          },
+          {
+            "en": "I goes to visit my aunt tomorrow.",
+            "pa": "ਮੈਂ ਕੱਲ੍ਹ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾਂਦਾ ਹੈ।"
+          },
+          {
+            "en": "I visited my aunt tomorrow.",
+            "pa": "ਮੈਂ ਕੱਲ੍ਹ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਿਆ।"
+          }
+        ],
+        "correctAnswer": "I am going to visit my aunt tomorrow.",
+        "points": 5,
+        "hint": {
+          "en": "Use a correct future form (will / going to).",
+          "pa": "ਸਹੀ ਭਵਿੱਖ ਰੂਪ ਵਰਤੋ (will / going to)।"
+        },
+        "explanation": {
+          "en": "'am going to visit' correctly expresses a planned future action.",
+          "pa": "'am going to visit' ਯੋਜਿਤ ਭਵਿੱਖ ਕਿਰਿਆ ਸਹੀ ਤਰ੍ਹਾਂ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I will call you tonight.",
+          "pa": "ਮੈਂ ਅੱਜ ਰਾਤ ਤੁਹਾਨੂੰ ਕਾਲ ਕਰਾਂਗਾ/ਕਰਾਂਗੀ।",
+          "highlight": "will call"
         }
       }
-      pushAll(enInfo.highlightedWords);
-      pushAll(paInfo.highlightedWords);
-
-      if ((!existingHighlights || !existingHighlights.length) && derived.length) {
-        derived = expandHighlightsToMatchText(enInfo.text, derived);
-        derived = expandHighlightsToMatchText(paInfo.text, derived);
+    ]
+  },
+  "L_MODAL_VERBS_01": {
+    "metadata": {
+      "titleEn": "Modal Verbs",
+      "titlePa": "ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ",
+      "labelEn": "Modal Verbs",
+      "labelPa": "ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ",
+      "trackId": "T_ACTIONS",
+      "objective": {
+        "titleEn": "Learn: Modal Verbs (can, could, should, must)",
+        "titlePa": "ਸਿੱਖੋ: ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ",
+        "descEn": "Understand modal verbs that express ability, possibility, and obligation",
+        "descPa": "ਸਮਝੋ ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ ਜੋ ਸਮਰੱਥਾ, ਇਜਾਜ਼ਤ, ਸਲਾਹ ਜਾਂ ਲਾਜ਼ਮੀਪਨ ਦੱਸਦੀਆਂ ਹਨ",
+        "pointsAvailable": 29
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Modal verbs (can, could, should, must, may) express ability, permission, obligation, or possibility. Form: subject + modal + base verb",
+        "contentPa": "ਸਹਾਇਕ ਕਿਰਿਆਵਾਂ (can, could, should, must, may) ਸਮਰੱਥਾ, ਇਜਾਜ਼ਤ, ਸਲਾਹ ਜਾਂ ਲਾਜ਼ਮੀਪਨ ਦੱਸਦੀਆਂ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I can swim very well.",
+        "examplePa": "ਮੈਂ ਬਹੁਤ ਚੰਗੀ ਤਰ੍ਹਾਂ ਤੈਰਾਕੀ ਕਰ ਸਕਦਾ ਹਾਂ।",
+        "highlightedWords": [
+          "can"
+        ],
+        "explainEn": "'can' = ability to do something",
+        "explainPa": "'can' = ਕਰਨ ਦੀ ਸਮਰੱਥਾ",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "You should eat healthy food.",
+        "examplePa": "ਤੁਹਾਨੂੰ ਸਿਹਤਮੰਦ ਖਾਣਾ ਖਾਣਾ ਚਾਹੀਦਾ ਹੈ।",
+        "highlightedWords": [
+          "should"
+        ],
+        "explainEn": "'should' = advice or recommendation",
+        "explainPa": "'should' = ਸਲਾਹ ਜਾਂ ਸਿਫਾਰਿਸ਼",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_modal_verbs_01_in_tap_all_modal_verbs_in_the_se",
+        "englishText": "\"You must finish your homework.\" — Is \"must\" a modal verb?",
+        "punjabiText": "\"ਤੁਹਾਨੂੰ ਆਪਣਾ ਹੋਮਵਰਕ ਪੂਰਾ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।\" — ਕੀ \"must\" ਸਹਾਇਕ ਕਿਰਿਆ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Must” is a modal verb showing necessity (something is required).",
+          "pa": "ਹਾਂ। “must” ਸਹਾਇਕ ਕਿਰਿਆ ਹੈ ਜੋ ਲੋੜ/ਜ਼ਰੂਰਤ (ਲਾਜ਼ਮੀ ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Yes. “Must” is a modal verb showing necessity (something is required).",
+          "pa": "ਹਾਂ। “must” ਸਹਾਇਕ ਕਿਰਿਆ ਹੈ ਜੋ ਲੋੜ/ਜ਼ਰੂਰਤ (ਲਾਜ਼ਮੀ ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_modal_must_necessary",
+        "englishText": "Which modal verb means 'it is necessary'?",
+        "punjabiText": "ਕਿਹੜੀ ਸਹਾਇਕ ਕਿਰਿਆ 'ਲਾਜ਼ਮੀ ਹੈ' ਦੱਸਦੀ ਹੈ?",
+        "options": [
+          "can",
+          "must",
+          "could"
+        ],
+        "correctAnswer": "must",
+        "points": 5,
+        "hint": {
+          "en": "Think: a rule you must follow.",
+          "pa": "ਇਸ਼ਾਰਾ: ਜਦੋਂ ਕੋਈ ਨਿਯਮ/ਲਾਜ਼ਮੀ ਗੱਲ ਹੋਵੇ।"
+        },
+        "explanation": {
+          "en": "‘Must’ shows necessity or obligation (a rule).",
+          "pa": "‘Must’ ਦਾ ਅਰਥ ਹੈ ਲਾਜ਼ਮੀ/ਕਰਨਾ ਹੀ ਪੈਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "You must wear a helmet.",
+          "pa": "ਤੁਹਾਨੂੰ ਹੈਲਮੈਟ ਪਹਿਨਣਾ ਲਾਜ਼ਮੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "must"
+            ],
+            "pa": [
+              "ਲਾਜ਼ਮੀ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "You must wear a helmet.",
+            "sentencePa": "ਤੁਹਾਨੂੰ ਹੈਲਮੈਟ ਪਹਿਨਣਾ ਲਾਜ਼ਮੀ ਹੈ।",
+            "explainEn": "'must' is used when something is required by rule or duty.",
+            "explainPa": "'must' ਉਸ ਵੇਲੇ ਵਰਤਦੇ ਹਾਂ ਜਦੋਂ ਕੰਮ ਨਿਯਮ ਜਾਂ ਜ਼ਿੰਮੇਵਾਰੀ ਕਰਕੇ ਲਾਜ਼ਮੀ ਹੋਵੇ।",
+            "highlight": "must"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "Could you help me please?",
+        "examplePa": "ਕੀ ਤੁਸੀਂ ਮੇਰੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?",
+        "highlightedWords": [
+          "Could"
+        ],
+        "explainEn": "'could' = polite request or past ability",
+        "explainPa": "'could' = ਨਰਮ ਬੇਨਤੀ ਜਾਂ ਭੂਤਕਾਲ ਦੀ ਸਮਰੱਥਾ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_modal_can_drive",
+        "englishText": "Complete: She ___ drive a car.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਉਹ ___ ਗੱਡੀ ਚਲਾ ਸਕਦੀ ਹੈ।",
+        "options": [
+          "can",
+          "cans",
+          "canning"
+        ],
+        "correctAnswer": "can",
+        "points": 5,
+        "hint": {
+          "en": "Ability = can.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "After a modal, use the base verb: can drive (not can drives).",
+          "pa": "ਸਹਾਇਕ ਕਿਰਿਆ ਤੋਂ ਬਾਅਦ ਮੂਲ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ: can drive (can drives ਨਹੀਂ)।"
+        },
+        "workedExample": {
+          "en": "He can swim.",
+          "pa": "ਉਹ ਤੈਰ ਸਕਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "can"
+            ],
+            "pa": [
+              "ਸਕਦਾ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I may come tomorrow.",
+            "sentencePa": "ਮੈਂ ਕੱਲ੍ਹ ਆ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ।",
+            "explainEn": "'may' can show possibility or formal permission.",
+            "explainPa": "'may' ਸੰਭਾਵਨਾ ਜਾਂ ਨਮ੍ਰਤਾ ਨਾਲ ਇਜਾਜ਼ਤ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "may"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "They should study for the exam.",
+        "examplePa": "ਉਨ੍ਹਾਂ ਨੂੰ ਪ੍ਰੀਖਿਆ ਲਈ ਪੜ੍ਹਨਾ ਚਾਹੀਦਾ ਹੈ।",
+        "highlightedWords": [
+          "should"
+        ],
+        "explainEn": "'should' = good advice",
+        "explainPa": "'should' = ਚੰਗੀ ਸਲਾਹ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_modal_could_polite",
+        "englishText": "Which modal for polite requests?",
+        "punjabiText": "ਨਰਮ ਬੇਨਤੀ ਲਈ ਕਿਹੜੀ ਸਹਾਇਕ ਕਿਰਿਆ ਵਰਤਦੇ ਹਾਂ?",
+        "options": [
+          "can",
+          "could",
+          "must"
+        ],
+        "correctAnswer": "could",
+        "points": 5,
+        "hint": {
+          "en": "Polite asking = could you…?",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "‘Could’ sounds more polite than ‘can’.",
+          "pa": "‘Could’ ‘can’ ਨਾਲੋਂ ਜ਼ਿਆਦਾ ਨਰਮ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Could you help me?",
+          "pa": "ਕੀ ਤੁਸੀਂ ਮੇਰੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?",
+          "highlight": {
+            "en": [
+              "Could"
+            ],
+            "pa": [
+              "ਕੀ ਤੁਸੀਂ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "May I sit here?",
+            "sentencePa": "ਕੀ ਮੈਂ ਇੱਥੇ ਬੈਠ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+            "explainEn": "'may' is commonly used for formal permission requests.",
+            "explainPa": "'may' ਆਮ ਤੌਰ 'ਤੇ ਨਮ੍ਰਤਾ ਨਾਲ ਇਜਾਜ਼ਤ ਮੰਗਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+            "highlight": "May"
+          }
+        ]
+      },
+      {
+        "type": "definition",
+        "contentEn": "Modal map: can = ability, may = permission/possibility, should = advice, must = obligation.",
+        "contentPa": "Modal map: can = ਸਮਰੱਥਾ, may = ਇਜਾਜ਼ਤ/ਸੰਭਾਵਨਾ, should = ਸਲਾਹ, must = ਲਾਜ਼ਮੀਪਨ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_modal_polite_request_could_you",
+        "englishText": "___ you help me, please? (most polite)",
+        "punjabiText": "___ you help me, please? (ਸਭ ਤੋਂ ਨਮ੍ਰ)",
+        "options": [
+          {
+            "en": "Could",
+            "pa": "ਕੀ ਤੁਸੀਂ ਕਰ ਸਕਦੇ ਹੋ"
+          },
+          {
+            "en": "Can",
+            "pa": "ਕੀ ਕਰ ਸਕਦੇ ਹੋ"
+          },
+          {
+            "en": "Must",
+            "pa": "ਲਾਜ਼ਮੀ"
+          }
+        ],
+        "correctAnswer": "Could",
+        "points": 5,
+        "hint": {
+          "en": "For polite requests, 'could' is preferred.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'Could you...?' is generally more polite than 'Can you...?'.",
+          "pa": "'Could you...?' ਆਮ ਤੌਰ 'ਤੇ 'Can you...?' ਨਾਲੋਂ ਜ਼ਿਆਦਾ ਨਮ੍ਰ ਹੁੰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Could you open the window, please?",
+          "pa": "ਕੀ ਤੁਸੀਂ ਕਿਰਪਾ ਕਰਕੇ ਖਿੜਕੀ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ?",
+          "highlight": "Could"
+        }
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "can = ability",
+          "should = advice",
+          "must = necessity",
+          "could = polite/past ability"
+        ],
+        "keyExamplesPa": [
+          "can = ਸਮਰੱਥਾ",
+          "should = ਸਲਾਹ",
+          "must = ਲਾਜ਼ਮੀਪਨ",
+          "could = ਨਰਮ ਬੇਨਤੀ/ਭੂਤਕਾਲੀ ਸਮਰੱਥਾ"
+        ],
+        "totalPoints": 29,
+        "points": 0
       }
-
-      return {
-        type: "example",
-        exampleEn: enInfo.text,
-        examplePa: paInfo.text,
-        highlightedWords: (existingHighlights && existingHighlights.length) ? existingHighlights : (derived.length ? derived : undefined),
-        explainEn: typeof step.explainEn === "string" ? step.explainEn : undefined,
-        explainPa: typeof step.explainPa === "string" ? step.explainPa : undefined,
-        points: coercePoints(step.points, 1)
-      };
-    }
-    if (type === "summary") return normalizeSummaryStep(step);
-    if (type === "question") return normalizeQuestionStep(step, lessonId, usedQuestionIds);
-
-    // Fallback: treat unknown step types as definition to avoid data loss.
-    return {
-      type: "definition",
-      contentEn: coerceString(step.contentEn || step.english_text || step.englishText || ""),
-      contentPa: coerceString(step.contentPa || step.punjabi_text || step.punjabiText || ""),
-      points: coercePoints(step.points, 1)
-    };
-  }
-
-  function computePointsAvailable(steps) {
-    var sum = 0;
-    for (var i = 0; i < steps.length; i++) {
-      var st = steps[i];
-      if (!st || st.type === "summary") continue;
-      sum += typeof st.points === "number" ? st.points : 0;
-    }
-    return sum;
-  }
-
-  var legacyCategoryConfig = {
-    noun: { id: "L_LEGACY_NOUN_01", titleEn: "Noun (Legacy)", titlePa: "ਨਾਮ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_WORDS", difficulty: 1 },
-    pronoun: { id: "L_LEGACY_PRONOUN_01", titleEn: "Pronoun (Legacy)", titlePa: "ਸਰਵਨਾਮ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_WORDS", difficulty: 1 },
-    plural_singular: { id: "L_LEGACY_SINGULAR_PLURAL_01", titleEn: "Singular & Plural (Legacy)", titlePa: "ਏਕ/ਬਹੁ ਵਚਨ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_WORDS", difficulty: 2 },
-    verb: { id: "L_LEGACY_VERB_01", titleEn: "Verb (Legacy)", titlePa: "ਕਿਰਿਆ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_ACTIONS", difficulty: 1 },
-    adverb: { id: "L_LEGACY_ADVERB_01", titleEn: "Adverb (Legacy)", titlePa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_ACTIONS", difficulty: 1 },
-    tense_present: { id: "L_LEGACY_SIMPLE_PRESENT_01", titleEn: "Simple Present (Legacy)", titlePa: "ਸਧਾਰਣ ਵਰਤਮਾਨ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_ACTIONS", difficulty: 1 },
-    tense_past: { id: "L_LEGACY_SIMPLE_PAST_01", titleEn: "Simple Past (Legacy)", titlePa: "ਸਧਾਰਣ ਭੂਤਕਾਲ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_ACTIONS", difficulty: 2 },
-    tense_future: { id: "L_LEGACY_SIMPLE_FUTURE_01", titleEn: "Simple Future (Legacy)", titlePa: "ਸਧਾਰਣ ਭਵਿੱਖ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_ACTIONS", difficulty: 2 },
-    adjective: { id: "L_LEGACY_ADJECTIVE_01", titleEn: "Adjective (Legacy)", titlePa: "ਵਿਸ਼ੇਸ਼ਣ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_DESCRIBE", difficulty: 1 },
-    preposition: { id: "L_LEGACY_PREPOSITION_01", titleEn: "Preposition (Legacy)", titlePa: "ਪੂਰਵ-ਬੋਧਕ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_SENTENCE", difficulty: 1 },
-    conjunction: { id: "L_LEGACY_CONJUNCTION_01", titleEn: "Conjunction (Legacy)", titlePa: "ਸੰਯੋਜਕ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_SENTENCE", difficulty: 1 },
-    interjection: { id: "L_LEGACY_INTERJECTION_01", titleEn: "Interjection (Legacy)", titlePa: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_SENTENCE", difficulty: 1 },
-    article: { id: "L_LEGACY_ARTICLE_01", titleEn: "Article (Legacy)", titlePa: "ਲੇਖ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_SENTENCE", difficulty: 1 },
-    sv_agreement: { id: "L_LEGACY_SV_AGREEMENT_01", titleEn: "Subject–Verb Agreement (Legacy)", titlePa: "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ (ਪੁਰਾਣਾ ਪਾਠ)", trackId: "T_SENTENCE", difficulty: 2 }
-  };
-
-  function buildMetadata(lessonId, raw) {
-    var catalog = metaById[lessonId] || {};
-    var rawMeta = raw && raw.metadata ? raw.metadata : {};
-
-    var titleEn = coerceString(rawMeta.titleEn || raw.titleEn || catalog.labelEn || catalog.id || lessonId);
-    var titlePa = coerceString(rawMeta.titlePa || raw.titlePa || catalog.labelPa || titleEn);
-
-    var labelEn = coerceString(rawMeta.labelEn || catalog.labelEn || titleEn);
-    var labelPa = coerceString(rawMeta.labelPa || catalog.labelPa || titlePa);
-
-    var trackId = coerceString(rawMeta.trackId || raw.primaryTrackId || catalog.trackId || "T_SENTENCE");
-    var difficulty = typeof rawMeta.difficulty === "number" ? rawMeta.difficulty : (typeof raw.difficulty === "number" ? raw.difficulty : (typeof catalog.difficulty === "number" ? catalog.difficulty : 1));
-
-    var rawObj = rawMeta.objective || raw.objective || {};
-    var objective = {
-      titleEn: coerceString(rawObj.titleEn || (rawObj.en ? "Objective" : ("Learn: " + labelEn))),
-      titlePa: coerceString(rawObj.titlePa || (rawObj.pa ? "ਉਦੇਸ਼" : ("ਸਿੱਖੋ: " + labelPa))),
-      descEn: coerceString(rawObj.descEn || rawObj.en || ""),
-      descPa: coerceString(rawObj.descPa || rawObj.pa || ""),
-      pointsAvailable: typeof rawObj.pointsAvailable === "number" ? rawObj.pointsAvailable : 0
-    };
-
-    return {
-      titleEn: titleEn,
-      titlePa: titlePa,
-      labelEn: labelEn,
-      labelPa: labelPa,
-      trackId: trackId,
-      objective: objective,
-      difficulty: Math.max(1, Math.min(3, difficulty))
-    };
-  }
-
-  function normalizeLesson(lessonId, rawLesson) {
-    var usedQuestionIds = Object.create(null);
-    var stepsRaw = [];
-
-    if (Array.isArray(rawLesson)) {
-      stepsRaw = rawLesson;
-      rawLesson = { metadata: {}, steps: rawLesson };
-    } else if (rawLesson && Array.isArray(rawLesson.steps)) {
-      stepsRaw = rawLesson.steps;
-    } else if (rawLesson && rawLesson.prompt && rawLesson.answerChoices) {
-      // Tutorial schema → canonical lesson steps
-      stepsRaw = [
-        { type: "definition", contentEn: rawLesson.objective && rawLesson.objective.en, contentPa: rawLesson.objective && rawLesson.objective.pa },
-        // examples → example steps (preserve labels as explainEn/explainPa)
-      ];
-      if (Array.isArray(rawLesson.examples)) {
-        for (var i = 0; i < rawLesson.examples.length; i++) {
-          var ex = rawLesson.examples[i];
-          stepsRaw.push({
-            type: "example",
-            exampleEn: ex && ex.en,
-            examplePa: ex && ex.pa,
-            explainEn: ex && ex.label ? String(ex.label) : undefined,
-            explainPa: ex && ex.label ? String(ex.label) : undefined
-          });
+    ]
+  },
+  "L_ADJECTIVE_BASICS_01": {
+    "metadata": {
+      "titleEn": "Adjective Basics",
+      "titlePa": "ਵਿਸ਼ੇਸ਼ਣ ਮੁੱਢ",
+      "labelEn": "Adjective Basics",
+      "labelPa": "ਵਿਸ਼ੇਸ਼ਣ ਮੁੱਢ",
+      "trackId": "T_DESCRIBE",
+      "objective": {
+        "titleEn": "Learn: Adjectives",
+        "titlePa": "ਸਿੱਖੋ: ਵਿਸ਼ੇਸ਼ਣ",
+        "descEn": "Words that describe nouns.",
+        "descPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂ ਦੀ ਖਾਸੀਅਤ ਦੱਸਦੇ ਹਨ।",
+        "pointsAvailable": 43
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Adjectives describe nouns (big, red, happy).",
+        "contentPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂ ਦੀ ਵਰਣਨਾ ਕਰਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "A red apple. A big house. Happy children.",
+        "examplePa": "ਲਾਲ ਸੇਬ। ਵੱਡਾ ਘਰ। ਖੁਸ਼ ਬੱਚੇ।",
+        "points": 1
+      },
+      {
+        "type": "definition",
+        "contentEn": "Adjective test: ask ‘what kind? which one? how many?’ If the word answers one of these for a noun, it is likely an adjective.",
+        "contentPa": "ਵਿਸ਼ੇਸ਼ਣ ਟੈਸਟ: ਪੁੱਛੋ ‘ਕਿਹੋ ਜਿਹਾ? ਕਿਹੜਾ? ਕਿੰਨੇ?’ ਜੇ ਸ਼ਬਦ ਨਾਂ ਲਈ ਇਹਨਾਂ ਦਾ ਜਵਾਬ ਦੇਵੇ, ਉਹ ਅਕਸਰ ਵਿਸ਼ੇਸ਼ਣ ਹੁੰਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_adj_is_blue",
+        "englishText": "Which is an adjective?",
+        "punjabiText": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          "blue",
+          "run",
+          "quickly"
+        ],
+        "correctAnswer": "blue",
+        "points": 5,
+        "hint": {
+          "en": "Adjective = describing word.",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ = ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ।"
+        },
+        "explanation": {
+          "en": "An adjective describes a noun by telling what kind, which one, or how many.",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ ਅਤੇ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਹੋ ਜਿਹਾ, ਕਿਹੜਾ ਜਾਂ ਕਿੰਨੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "a red ball",
+          "pa": "ਲਾਲ ਗੇਂਦ",
+          "highlight": {
+            "en": [
+              "red"
+            ],
+            "pa": [
+              "ਲਾਲ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "A blue sky.",
+            "sentencePa": "ਨੀਲਾ ਅਸਮਾਨ।",
+            "explainEn": "Blue describes the sky.",
+            "explainPa": "‘blue’ (ਨੀਲਾ) ਆਸਮਾਨ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।",
+            "highlight": "blue"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adj_pick_tall",
+        "englishText": "Pick the adjective.",
+        "punjabiText": "ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
+        "options": [
+          "tree",
+          "tall",
+          "grows"
+        ],
+        "correctAnswer": "tall",
+        "points": 5,
+        "hint": {
+          "en": "Which word tells size/shape?",
+          "pa": "ਕਿਹੜਾ ਸ਼ਬਦ ਆਕਾਰ ਦੱਸਦਾ ਹੈ?"
+        },
+        "explanation": {
+          "en": "'tall' is correct because it describes the noun 'tree' (its height).",
+          "pa": "'tall' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਨਾਂ 'tree' ਦੀ ਉਚਾਈ ਬਾਰੇ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "a tall boy",
+          "pa": "ਲੰਬਾ ਮੁੰਡਾ",
+          "highlight": {
+            "en": [
+              "tall"
+            ],
+            "pa": [
+              "ਲੰਬਾ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "A tall tree.",
+            "sentencePa": "ਲੰਬਾ ਦਰਖ਼ਤ।",
+            "explainEn": "Tall describes the tree.",
+            "explainPa": "tall ਦਰਖ਼ਤ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।",
+            "highlight": "tall"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adj_complete_interesting",
+        "englishText": "Complete: An ___ book.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਇੱਕ ___ ਕਿਤਾਬ।",
+        "options": [
+          "interesting",
+          "read",
+          "quickly"
+        ],
+        "correctAnswer": "interesting",
+        "points": 5,
+        "hint": {
+          "en": "We need a describing word for book.",
+          "pa": "ਕਿਤਾਬ ਲਈ ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ ਚਾਹੀਦਾ।"
+        },
+        "explanation": {
+          "en": "In English, adjectives usually come before nouns, so 'interesting book' is correct.",
+          "pa": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਣ ਆਮ ਤੌਰ 'ਤੇ ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ, ਇਸ ਲਈ 'interesting book' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "an easy game",
+          "pa": "ਆਸਾਨ ਖੇਡ",
+          "highlight": {
+            "en": [
+              "easy"
+            ],
+            "pa": [
+              "ਆਸਾਨ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "An interesting book.",
+            "sentencePa": "ਦਿਲਚਸਪ ਕਿਤਾਬ।",
+            "explainEn": "Interesting describes the book.",
+            "explainPa": "interesting ਕਿਤਾਬ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।",
+            "highlight": "interesting"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adj_is_sweet",
+        "englishText": "Which word is an adjective?",
+        "punjabiText": "ਕਿਹੜਾ ਸ਼ਬਦ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          "sweet",
+          "eat",
+          "walk"
+        ],
+        "correctAnswer": "sweet",
+        "points": 5,
+        "hint": {
+          "en": "Taste word = adjective.",
+          "pa": "ਸਵਾਦ ਵਾਲਾ ਸ਼ਬਦ = ਵਿਸ਼ੇਸ਼ਣ।"
+        },
+        "explanation": {
+          "en": "'sweet' is an adjective because it tells what kind of candy it is.",
+          "pa": "'sweet' ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਮਿਠਾਈ ਕਿਹੋ ਜਿਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "sweet mango",
+          "pa": "ਮਿੱਠਾ ਆਮ",
+          "highlight": {
+            "en": [
+              "sweet"
+            ],
+            "pa": [
+              "ਮਿੱਠਾ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Sweet candy.",
+            "sentencePa": "ਮਿੱਠੀ ਮਿਠਾਈ।",
+            "explainEn": "Sweet describes the candy.",
+            "explainPa": "sweet ਮਿਠਾਈ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।",
+            "highlight": "sweet"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_adjective_basics_01_adjectives_can_describe_size_whi",
+        "englishText": "Adjectives can describe size. Which is size?",
+        "punjabiText": "ਵਿਸ਼ੇਸ਼ਣ ਆਕਾਰ ਦਾ ਵਰਣਨ ਕਰ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਆਕਾਰ ਹੈ?",
+        "options": [
+          "tiny",
+          "happy",
+          "cold"
+        ],
+        "correctAnswer": "tiny",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"tiny\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"tiny\". Example: I have a tiny bag.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"tiny\"। ਉਦਾਹਰਨ: ਮੇਰੇ ਕੋਲ ਇੱਕ ਨਿੱਕਾ ਜਿਹਾ ਬੈਗ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "A tiny ant.",
+          "pa": "ਇੱਕ ਬਹੁਤ ਛੋਟੀ ਚੀਂਟੀ।",
+          "highlight": "tiny"
+        },
+        "examples": [
+          {
+            "sentenceEn": "A tiny ant.",
+            "sentencePa": "ਇੱਕ ਬਹੁਤ ਛੋਟੀ ਚੀਂਟੀ।",
+            "explainEn": "'tiny' is an adjective that describes size.",
+            "explainPa": "'tiny' ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਆਕਾਰ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।",
+            "highlight": "tiny"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_adj_sentence_smart",
+        "englishText": "Which sentence has an adjective?",
+        "punjabiText": "ਕਿਹੜੇ ਵਾਕ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          "He runs",
+          "She is smart",
+          "I walked"
+        ],
+        "correctAnswer": "She is smart",
+        "points": 5,
+        "hint": {
+          "en": "Find the describing word.",
+          "pa": "ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ ਲੱਭੋ।"
+        },
+        "explanation": {
+          "en": "‘smart’ is an adjective describing a person.",
+          "pa": "‘smart’ ਵਿਅਕਤੀ ਦਾ ਵਰਣਨ ਕਰਨ ਵਾਲਾ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He is brave.",
+          "pa": "ਉਹ ਬਹਾਦੁਰ ਹੈ।",
+          "highlight": {
+            "en": [
+              "brave"
+            ],
+            "pa": [
+              "ਬਹਾਦੁਰ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The smart student answered.",
+            "sentencePa": "ਹੋਸ਼ਿਆਰ ਵਿਦਿਆਰਥੀ ਨੇ ਜਵਾਬ ਦਿੱਤਾ।",
+            "explainEn": "Smart describes the student.",
+            "explainPa": "smart ਵਿਦਿਆਰਥੀ ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ।",
+            "highlight": "smart"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_adjective_basics_01_choose_green",
+        "englishText": "Choose the adjective.",
+        "punjabiText": "ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
+        "options": [
+          {
+            "en": "green",
+            "pa": "ਹਰਾ"
+          },
+          {
+            "en": "run",
+            "pa": "ਦੌੜਨਾ"
+          },
+          {
+            "en": "quickly",
+            "pa": "ਤੇਜ਼ੀ ਨਾਲ"
+          }
+        ],
+        "correctAnswer": "green",
+        "points": 5,
+        "hint": {
+          "en": "Look for the word that describes a noun.",
+          "pa": "ਉਹ ਸ਼ਬਦ ਲੱਭੋ ਜੋ ਨਾਂ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'green' is an adjective because it describes color.",
+          "pa": "'green' ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਰੰਗ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "a green shirt",
+          "pa": "ਹਰਾ ਕਮੀਜ਼",
+          "highlight": "green"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_adjective_basics_01_complete_old_house",
+        "englishText": "Complete: The ___ house is quiet.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ___ ਘਰ ਚੁੱਪ ਹੈ।",
+        "options": [
+          {
+            "en": "old",
+            "pa": "ਪੁਰਾਣਾ"
+          },
+          {
+            "en": "quietly",
+            "pa": "ਹੌਲੇ ਨਾਲ"
+          },
+          {
+            "en": "walk",
+            "pa": "ਤੁਰਨਾ"
+          }
+        ],
+        "correctAnswer": "old",
+        "points": 5,
+        "hint": {
+          "en": "The blank comes before a noun, so we need an adjective.",
+          "pa": "ਖਾਲੀ ਥਾਂ ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ ਹੈ, ਇਸ ਲਈ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'old' correctly describes the noun 'house'.",
+          "pa": "'old' ਨਾਂ 'house' ਦੀ ਠੀਕ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "an old house",
+          "pa": "ਪੁਰਾਣਾ ਘਰ",
+          "highlight": "old"
         }
       }
-      stepsRaw.push({
-        type: "question",
-        englishText: rawLesson.prompt.en,
-        punjabiText: rawLesson.prompt.pa,
-        answerChoices: rawLesson.answerChoices,
-        correctIndex: rawLesson.correctIndex,
-        explanation: rawLesson.explanation ? { en: rawLesson.explanation.en || "", pa: rawLesson.explanation.pa || "" } : undefined
-      });
-    }
-
-    var meta = buildMetadata(lessonId, rawLesson || {});
-    var steps = [];
-    for (var s = 0; s < stepsRaw.length; s++) {
-      var normalized = normalizeStep(stepsRaw[s], lessonId, usedQuestionIds);
-      if (normalized) steps.push(normalized);
-    }
-
-    // Insert an objective step first when missing.
-    // This aligns with the enhanced flow without changing renderer logic.
-    if (!steps.length || steps[0].type !== 'objective') {
-      steps.unshift({ type: 'objective', points: 0 });
-    }
-
-    // Ensure every step has points (defaults)
-    for (var p = 0; p < steps.length; p++) {
-      var st = steps[p];
-      if (!st || typeof st !== 'object') continue;
-      if (st.type === 'summary') {
-        // E) Summary points must always be 0
-        st.points = 0;
-      } else if (typeof st.points !== "number") {
-        // E) Default by type (existing behavior), then coerce
-        if (st.type === "guided_practice") st.points = 3;
-        else if (st.type === "question") st.points = 5;
-        else st.points = 1;
-        st.points = coercePoints(st.points, 0);
-      } else {
-        st.points = coercePoints(st.points, 0);
+    ]
+  },
+  "L_ADJ_VS_ADV_01": {
+    "metadata": {
+      "titleEn": "Adjectives vs Adverbs",
+      "titlePa": "ਵਿਸ਼ੇਸ਼ਣ ਬਨਾਮ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+      "labelEn": "Adjectives vs Adverbs",
+      "labelPa": "ਵਿਸ਼ੇਸ਼ਣ ਬਨਾਮ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+      "trackId": "T_DESCRIBE",
+      "objective": {
+        "titleEn": "Learn: Describe Nouns vs Actions",
+        "titlePa": "ਸਿੱਖੋ: ਨਾਂ ਵਸ. ਕੰਮ ਦੀ ਵਰਣਨਾ",
+        "descEn": "Use adjectives for nouns and adverbs for verbs.",
+        "descPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ ਦੀ।",
+        "pointsAvailable": 35
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Adjectives describe nouns (a red bag). Adverbs describe verbs (runs quickly).",
+        "contentPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂ ਦੀ ਵਰਣਨਾ ਕਰਦੇ ਹਨ, ਤੇ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦੇ ਹਨ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "She sings beautifully.",
+        "examplePa": "ਉਹ ਸੁੰਦਰ ਢੰਗ ਨਾਲ ਗਾਂਦੀ ਹੈ।",
+        "highlightedWords": [
+          "beautifully"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_adj_vs_adv_01_in_she_sings_beautifully_is_beau",
+        "englishText": "\"She sings beautifully.\" — Is \"beautifully\" an adverb?",
+        "punjabiText": "\"ਉਹ ਸੁੰਦਰ ਢੰਗ ਨਾਲ ਗਾਂਦੀ ਹੈ।\" — ਕੀ \"beautifully\" ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Correct: Great!",
+          "pa": "ਸਹੀ: ਵਧੀਆ!"
+        },
+        "workedExample": {
+          "en": "Yes. “Beautifully” is an adverb that describes how she sings.",
+          "pa": "ਹਾਂ। “beautifully” ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਗਾਂਦੀ ਹੈ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_adj_vs_adv_choose_quickly",
+        "englishText": "Is \"quickly\" the right word?",
+        "punjabiText": "ਕੀ \"quickly\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Adverb = tells HOW.",
+          "pa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦਾ ਹੈ ਕਿ ਕਿਰਿਆ ਕਿਵੇਂ ਹੁੰਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "‘quickly’ describes an action (a verb).",
+          "pa": "‘quickly’ ਦੱਸਦਾ ਹੈ ਕਿ ਕਿਰਿਆ ਕਿਵੇਂ ਹੁੰਦੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He runs quickly.",
+          "pa": "ਉਹ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "quickly"
+            ],
+            "pa": [
+              "ਤੇਜ਼ੀ ਨਾਲ"
+            ]
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_adj_vs_adv_choose_blue",
+        "englishText": "Which word is an adjective?",
+        "punjabiText": "ਕਿਹੜਾ ਸ਼ਬਦ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          "carefully",
+          "blue",
+          "slowly"
+        ],
+        "correctAnswer": "blue",
+        "points": 5,
+        "hint": {
+          "en": "Adjective = describes a noun (thing).",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ = ਨਾਂ/ਚੀਜ਼ ਨੂੰ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "‘blue’ describes a thing: blue sky/ball.",
+          "pa": "‘blue’ ਚੀਜ਼ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "a blue bag",
+          "pa": "ਨੀਲਾ ਬੈਗ",
+          "highlight": {
+            "en": [
+              "blue"
+            ],
+            "pa": [
+              "ਨੀਲਾ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "carefully": {
+            "en": "'carefully' tells how an action happens. This question asks for an adjective that describes a thing.",
+            "pa": "'carefully' ਦੱਸਦਾ ਹੈ ਕਿ ਕਿਰਿਆ ਕਿਵੇਂ ਹੁੰਦੀ ਹੈ। ਇਸ ਪ੍ਰਸ਼ਨ ਵਿੱਚ ਚੀਜ਼ ਦੀ ਵਰਣਨਾ ਕਰਨ ਵਾਲਾ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "slowly": {
+            "en": "'slowly' is an adverb for actions, not an adjective for nouns.",
+            "pa": "'slowly' ਕਿਰਿਆ ਲਈ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ, ਨਾਂ ਲਈ ਵਿਸ਼ੇਸ਼ਣ ਨਹੀਂ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_adj_vs_adv_01_she_sings",
+        "englishText": "She sings ___.",
+        "punjabiText": "ਉਹ ___ ਗਾਂਦੀ ਹੈ।",
+        "options": [
+          "beautiful",
+          "beautifully",
+          "beauty"
+        ],
+        "correctAnswer": "beautifully",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"beautifully\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"beautifully\". Example: She sings beautifully.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"beautifully\"। ਉਦਾਹਰਨ: ਉਹ ਸੁੰਦਰ ਤਰੀਕੇ ਨਾਲ ਗਾਂਦੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She sings beautifully.",
+          "pa": "ਉਹ ਸੁੰਦਰ ਢੰਗ ਨਾਲ ਗਾਂਦੀ ਹੈ।",
+          "highlight": "beautifully"
+        },
+        "wrongOptionExplanations": {
+          "beautiful": {
+            "en": "'beautiful' is an adjective. After 'sings' we need an adverb: 'beautifully'.",
+            "pa": "'beautiful' ਵਿਸ਼ੇਸ਼ਣ ਹੈ। 'sings' ਤੋਂ ਬਾਅਦ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ: 'beautifully'।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "beauty": {
+            "en": "'beauty' is a noun (a thing), but this blank needs a word describing how she sings.",
+            "pa": "'beauty' ਨਾਂ ਹੈ (ਇੱਕ ਚੀਜ਼)। ਇੱਥੇ ਉਹ ਸ਼ਬਦ ਚਾਹੀਦਾ ਹੈ ਜੋ ਦੱਸੇ ਕਿ ਉਹ ਕਿਵੇਂ ਗਾਂਦੀ ਹੈ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She sings beautifully.",
+            "sentencePa": "ਉਹ ਸੁੰਦਰ ਢੰਗ ਨਾਲ ਗਾਂਦੀ ਹੈ।",
+            "explainEn": "'beautifully' is an adverb because it tells how she sings.",
+            "explainPa": "'beautifully' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਗਾਂਦੀ ਹੈ।",
+            "highlight": "beautifully"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_adj_vs_adv_01_complete_the_dog_is_running",
+        "englishText": "Complete: The ___ dog is running.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ___ ਕੁੱਤਾ ਦੌੜ ਰਿਹਾ ਹੈ।",
+        "options": [
+          "quickly",
+          "quick",
+          "quicker"
+        ],
+        "correctAnswer": "quick",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"quick\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"quick\". Example: The quick dog is running.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"quick\"। ਉਦਾਹਰਨ: ਤੇਜ਼ ਕੁੱਤਾ ਦੌੜ ਰਿਹਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The quick dog is running.",
+          "pa": "ਤੇਜ਼ ਕੁੱਤਾ ਦੌੜ ਰਿਹਾ ਹੈ।",
+          "highlight": "quick"
+        },
+        "wrongOptionExplanations": {
+          "quickly": {
+            "en": "'quickly' describes running, but the blank is before 'dog', so we need an adjective for the noun.",
+            "pa": "'quickly' ਦੌੜਨ ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ, ਪਰ ਖਾਲੀ ਥਾਂ 'dog' ਤੋਂ ਪਹਿਲਾਂ ਹੈ, ਇਸ ਲਈ ਨਾਂ ਲਈ ਵਿਸ਼ੇਸ਼ਣ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "quicker": {
+            "en": "'quicker' is a comparison form. Here we just describe one dog, so use 'quick'.",
+            "pa": "'quicker' ਤੁਲਨਾਤਮਕ ਰੂਪ ਹੈ। ਇੱਥੇ ਅਸੀਂ ਸਿਰਫ਼ ਇੱਕ ਕੁੱਤੇ ਦੀ ਵਰਣਨਾ ਕਰ ਰਹੇ ਹਾਂ, ਇਸ ਲਈ 'quick' ਵਰਤੋ।",
+            "posEn": "comparative adjective",
+            "posPa": "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The quick dog is running.",
+            "sentencePa": "ਤੇਜ਼ ਕੁੱਤਾ ਦੌੜ ਰਿਹਾ ਹੈ।",
+            "explainEn": "Adjectives describe nouns (what kind of dog).",
+            "explainPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂ ਦੀ ਵਰਣਨਾ ਕਰਦੇ ਹਨ।",
+            "highlight": "quick"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_adj_vs_adv_01_he_speaks",
+        "englishText": "He speaks ___.",
+        "punjabiText": "ਉਹ ___ ਬੋਲਦਾ ਹੈ।",
+        "options": [
+          {
+            "en": "polite",
+            "pa": "ਨਿਮਰ"
+          },
+          {
+            "en": "politely",
+            "pa": "ਨਿਮਰਤਾ ਨਾਲ"
+          },
+          {
+            "en": "politeness",
+            "pa": "ਨਿਮਰਤਾ"
+          }
+        ],
+        "correctAnswer": "politely",
+        "points": 5,
+        "hint": {
+          "en": "After a verb, choose the adverb that tells how.",
+          "pa": "ਕਿਰਿਆ ਤੋਂ ਬਾਅਦ ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਦੱਸੇ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'politely' is an adverb and correctly describes how he speaks.",
+          "pa": "'politely' ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਅਤੇ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਬੋਲਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She answered politely.",
+          "pa": "ਉਸਨੇ ਨਿਮਰਤਾ ਨਾਲ ਜਵਾਬ ਦਿੱਤਾ।",
+          "highlight": "politely"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_adj_vs_adv_01_a_fast_car",
+        "englishText": "Complete: a ___ car",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਇੱਕ ___ ਕਾਰ",
+        "options": [
+          {
+            "en": "fast",
+            "pa": "ਤੇਜ਼"
+          },
+          {
+            "en": "fastly",
+            "pa": "ਫਾਸਟਲੀ (ਗਲਤ)"
+          },
+          {
+            "en": "quickly",
+            "pa": "ਤੇਜ਼ੀ ਨਾਲ"
+          }
+        ],
+        "correctAnswer": "fast",
+        "points": 5,
+        "hint": {
+          "en": "Before a noun, we usually need an adjective.",
+          "pa": "ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ ਆਮ ਤੌਰ 'ਤੇ ਵਿਸ਼ੇਸ਼ਣ ਆਉਂਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'fast' is an adjective describing the noun 'car'.",
+          "pa": "'fast' ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਨਾਂ 'car' ਦੀ ਵਰਣਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "a fast train",
+          "pa": "ਤੇਜ਼ ਰੇਲਗੱਡੀ",
+          "highlight": "fast"
+        }
       }
-    }
-
-    var pointsAvailable = computePointsAvailable(steps);
-    var prev = meta.objective.pointsAvailable;
-    meta.objective.pointsAvailable = pointsAvailable;
-    if (typeof prev === "number" && prev !== pointsAvailable) {
-      notes.pointsAvailableAdjustments.push({ lessonId: lessonId, from: prev, to: pointsAvailable });
-    }
-
-    // D) Ensure summary totalPoints is accurate when missing.
-    for (var si = 0; si < steps.length; si++) {
-      var st2 = steps[si];
-      if (!st2 || st2.type !== 'summary') continue;
-      if (typeof st2.totalPoints !== 'number') {
-        st2.totalPoints = pointsAvailable;
+    ]
+  },
+  "L_COMPARATIVE_ADJECTIVES_01": {
+    "metadata": {
+      "titleEn": "Comparative Adjectives",
+      "titlePa": "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ",
+      "labelEn": "Comparative Adjectives",
+      "labelPa": "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ",
+      "trackId": "T_DESCRIBE",
+      "objective": {
+        "titleEn": "Learn: Comparative Adjectives",
+        "titlePa": "ਸਿੱਖੋ: ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ",
+        "descEn": "Compare two things using adjectives with -er or 'more'",
+        "descPa": "ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ -er ਜਾਂ ਵੱਧ ਨਾਲ ਕਰੋ",
+        "pointsAvailable": 33
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Comparative adjectives compare two things. For short adjectives, add -er. For long adjectives, use 'more + adjective'. Form: adjective-er OR more + adjective + than",
+        "contentPa": "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਕਰਦੇ ਹਨ। ਛੋਟੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ -er ਲਗਾਓ, ਅਤੇ ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ ਵੱਧ ਵਰਤੋ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "The blue box is bigger than the red box.",
+        "examplePa": "ਨੀਲਾ ਬਕਸਾ ਲਾਲ ਬਕਸੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।",
+        "highlightedWords": [
+          "bigger"
+        ],
+        "explainEn": "big → bigger (short adjective + -er)",
+        "explainPa": "big → bigger (ਛੋਟਾ ਵਿਸ਼ੇਸ਼ਣ + -er)",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "This flower is more beautiful than that one.",
+        "examplePa": "ਇਹ ਫੁੱਲ ਉਸ ਫੁੱਲ ਨਾਲੋਂ ਵੱਧ ਸੁੰਦਰ ਹੈ।",
+        "highlightedWords": [
+          "more beautiful"
+        ],
+        "explainEn": "beautiful → more beautiful (long adjective + more)",
+        "explainPa": "beautiful → more beautiful (ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ ਵੱਧ)",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_comparative_adjectives_01_in_tap_the_comparative_adjective",
+        "englishText": "\"A car is faster than a bike.\" — Is \"faster\" a comparative adjective?",
+        "punjabiText": "\"ਕਾਰ ਸਾਈਕਲ ਨਾਲੋਂ ਤੇਜ਼ ਹੈ।\" — ਕੀ \"faster\" ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Faster” is a comparative adjective used to compare two things.",
+          "pa": "ਹਾਂ। “faster” ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Yes. “Faster” is a comparative adjective used to compare two things.",
+          "pa": "ਹਾਂ। “faster” ਤੁਲਨਾਤਮਕ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_comp_correct_faster",
+        "englishText": "Which comparative is correct?",
+        "punjabiText": "ਕਿਹੜਾ ਤੁਲਨਾਤਮਕ ਰੂਪ ਸਹੀ ਹੈ?",
+        "options": [
+          "more fast",
+          "faster",
+          "most fast"
+        ],
+        "correctAnswer": "faster",
+        "points": 5,
+        "hint": {
+          "en": "Two things? Use -er.",
+          "pa": "ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਵਿੱਚ ਛੋਟੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ -er ਲਗਾਉ।"
+        },
+        "explanation": {
+          "en": "fast → faster (not more fast).",
+          "pa": "fast → faster ('more fast' ਨਹੀਂ)।"
+        },
+        "workedExample": {
+          "en": "This bike is faster than that bike.",
+          "pa": "ਇਹ ਸਾਈਕਲ ਉਸ ਨਾਲੋਂ ਤੇਜ਼ ਹੈ।",
+          "highlight": {
+            "en": [
+              "faster",
+              "than"
+            ],
+            "pa": [
+              "ਨਾਲੋਂ",
+              "ਤੇਜ਼"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She is smarter than her brother.",
+            "sentencePa": "ਉਹ ਆਪਣੇ ਭਰਾ ਨਾਲੋਂ ਹੋਸ਼ਿਆਰ ਹੈ।",
+            "explainEn": "smart → smarter (short + -er)",
+            "explainPa": "smart → smarter (ਛੋਟਾ + -er)",
+            "highlight": "smarter"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "This book is more interesting than that magazine.",
+        "examplePa": "ਇਹ ਕਿਤਾਬ ਉਸ ਮੈਗਜ਼ੀਨ ਨਾਲੋਂ ਵੱਧ ਦਿਲਚਸਪ ਹੈ।",
+        "highlightedWords": [
+          "more interesting"
+        ],
+        "explainEn": "'more' + long adjective = comparative",
+        "explainPa": "ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣ ਤੋਂ ਪਹਿਲਾਂ 'more' ਲਗਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_comp_complete_redder",
+        "englishText": "Complete: This apple is ___ than that one.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇਹ ਸੇਬ ਉਸ ਨਾਲੋਂ ___ ਹੈ।",
+        "options": [
+          "red",
+          "redder",
+          "more red"
+        ],
+        "correctAnswer": "redder",
+        "points": 5,
+        "hint": {
+          "en": "Short adjective + -er.",
+          "pa": "ਛੋਟਾ ਵਿਸ਼ੇਸ਼ਣ + -er।"
+        },
+        "explanation": {
+          "en": "red → redder for comparing two apples.",
+          "pa": "red → redder (ਦੋ ਸੇਬਾਂ ਦੀ ਤੁਲਨਾ)।"
+        },
+        "workedExample": {
+          "en": "This ball is bigger than that ball.",
+          "pa": "ਇਹ ਗੇਂਦ ਉਸ ਨਾਲੋਂ ਵੱਡੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "bigger",
+              "than"
+            ],
+            "pa": [
+              "ਨਾਲੋਂ",
+              "ਵੱਡੀ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "My pen is cheaper than yours.",
+            "sentencePa": "ਮੇਰੀ ਕਲਮ ਤੁਹਾਡੀ ਨਾਲੋਂ ਸਸਤੀ ਹੈ।",
+            "explainEn": "cheap → cheaper (short + -er)",
+            "explainPa": "cheap → cheaper (ਛੋਟਾ + -er)",
+            "highlight": "cheaper"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_comp_playground_taller",
+        "englishText": "At the playground, which is correct? 'Ali is ___ than Sam.'",
+        "punjabiText": "ਖੇਡ ਮੈਦਾਨ ਵਿੱਚ ਕਿਹੜਾ ਸਹੀ ਹੈ? 'Ali, Sam ਨਾਲੋਂ ___ ਹੈ।'",
+        "options": [
+          "tall",
+          "taller",
+          "most tall"
+        ],
+        "correctAnswer": "taller",
+        "points": 5,
+        "hint": {
+          "en": "Two kids are compared, so use -er.",
+          "pa": "ਦੋ ਬੱਚਿਆਂ ਦੀ ਤੁਲਨਾ ਹੈ, ਇਸ ਲਈ -er ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "For two people, use comparative form: taller.",
+          "pa": "ਦੋ ਲੋਕਾਂ ਦੀ ਤੁਲਨਾ ਲਈ comparative ਰੂਪ 'taller' ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "Mina is taller than Riya.",
+          "pa": "ਮੀਨਾ ਰੀਆ ਨਾਲੋਂ ਲੰਬੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "taller",
+              "than"
+            ],
+            "pa": [
+              "ਨਾਲੋਂ",
+              "ਲੰਬੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "tall": {
+            "en": "'tall' is base adjective. With 'than', we need comparative form.",
+            "pa": "'tall' ਮੂਲ ਵਿਸ਼ੇਸ਼ਣ ਹੈ। 'than' ਨਾਲ ਤੁਲਨਾਤਮਕ ਰੂਪ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "most tall": {
+            "en": "'most' is used for superlative in a group, not for comparing two people.",
+            "pa": "'most' ਸਮੂਹ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਲਈ ਆਉਂਦਾ ਹੈ, ਦੋ ਲੋਕਾਂ ਦੀ ਤੁਲਨਾ ਲਈ ਨਹੀਂ।",
+            "posEn": "superlative form",
+            "posPa": "ਉੱਚਤਮ ਰੂਪ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_comp_more_careful",
+        "englishText": "This road is ___ than that one.",
+        "punjabiText": "ਇਹ ਸੜਕ ਉਸ ਨਾਲੋਂ ___ ਹੈ।",
+        "options": [
+          {
+            "en": "careful",
+            "pa": "ਸਾਵਧਾਨ"
+          },
+          {
+            "en": "more careful",
+            "pa": "ਹੋਰ ਸਾਵਧਾਨ"
+          },
+          {
+            "en": "most careful",
+            "pa": "ਸਭ ਤੋਂ ਸਾਵਧਾਨ"
+          }
+        ],
+        "correctAnswer": "more careful",
+        "points": 5,
+        "hint": {
+          "en": "For many long adjectives, use 'more + adjective' with 'than'.",
+          "pa": "ਕਈ ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣਾਂ ਨਾਲ 'than' ਦੇ ਨਾਲ 'more + adjective' ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "'more careful' is the correct comparative form here.",
+          "pa": "ਇੱਥੇ 'more careful' ਸਹੀ ਤੁਲਨਾਤਮਕ ਰੂਪ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She is more careful than me.",
+          "pa": "ਉਹ ਮੇਰੇ ਨਾਲੋਂ ਵੱਧ ਸਾਵਧਾਨ ਹੈ।",
+          "highlight": "more careful"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_comp_harder_than",
+        "englishText": "Math is ___ than art today.",
+        "punjabiText": "ਅੱਜ ਗਣਿਤ ਕਲਾ ਨਾਲੋਂ ___ ਹੈ।",
+        "options": [
+          {
+            "en": "hard",
+            "pa": "ਔਖਾ"
+          },
+          {
+            "en": "harder",
+            "pa": "ਹੋਰ ਔਖਾ"
+          },
+          {
+            "en": "hardest",
+            "pa": "ਸਭ ਤੋਂ ਔਖਾ"
+          }
+        ],
+        "correctAnswer": "harder",
+        "points": 5,
+        "hint": {
+          "en": "Two things are compared, so use comparative (-er).",
+          "pa": "ਦੋ ਚੀਜ਼ਾਂ ਦੀ ਤੁਲਨਾ ਹੈ, ਇਸ ਲਈ comparative (-er) ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "'harder' correctly compares math with art.",
+          "pa": "'harder' ਗਣਿਤ ਨੂੰ ਕਲਾ ਨਾਲ ਸਹੀ ਤਰ੍ਹਾਂ ਤੁਲਨਾ ਕਰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "This bag is lighter than that bag.",
+          "pa": "ਇਹ ਬੈਗ ਉਸ ਬੈਗ ਨਾਲੋਂ ਹਲਕਾ ਹੈ।",
+          "highlight": "lighter"
+        }
+      },
+      {
+        "type": "example",
+        "exampleEn": "The elephant is bigger than the mouse.",
+        "examplePa": "ਹਾਥੀ ਚੂਹੇ ਨਾਲੋਂ ਵੱਡਾ ਹੈ।",
+        "highlightedWords": [
+          "bigger"
+        ],
+        "explainEn": "Comparing size of two animals",
+        "explainPa": "ਦੋ ਜਾਨਵਰਾਂ ਦਾ ਅਕਾਰ",
+        "points": 1
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "Short: bigger, faster, redder",
+          "Long: more beautiful, more interesting",
+          "Always use 'than' to compare",
+          "Comparative = two things"
+        ],
+        "keyExamplesPa": [
+          "ਛੋਟਾ: bigger, faster",
+          "ਲੰਮਾ: more beautiful",
+          "ਤੁਲਨਾ ਲਈ 'than' (ਨਾਲੋਂ) ਵਰਤਦੇ ਹਾਂ",
+          "ਤੁਲਨਾ ਹਮੇਸ਼ਾਂ ਦੋ ਚੀਜ਼ਾਂ ਵਿੱਚ ਹੁੰਦੀ ਹੈ"
+        ],
+        "totalPoints": 33,
+        "points": 0
       }
-      st2.points = 0;
-    }
-
-    return { metadata: meta, steps: steps };
+    ]
+  },
+  "L_SUPERLATIVE_ADJECTIVES_01": {
+    "metadata": {
+      "titleEn": "Superlative Adjectives",
+      "titlePa": "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ",
+      "labelEn": "Superlative Adjectives",
+      "labelPa": "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ",
+      "trackId": "T_DESCRIBE",
+      "objective": {
+        "titleEn": "Learn: Superlative Adjectives",
+        "titlePa": "ਸਿੱਖੋ: ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ",
+        "descEn": "Describe the most or least using adjectives with -est or 'most'",
+        "descPa": "ਸਭ ਤੋਂ ਜ਼ਿਆਦਾ ਜਾਂ ਸਭ ਤੋਂ ਘੱਟ -est ਜਾਂ 'ਸਭ ਤੋਂ' ਨਾਲ ਦੱਸੋ",
+        "pointsAvailable": 33
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Superlative adjectives describe the most or least of something in a group. For short adjectives, add -est. For long adjectives, use 'most + adjective'. Form: the + adjective-est OR the + most + adjective",
+        "contentPa": "ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ ਸਮੂਹ ਵਿੱਚ ਸਭ ਤੋਂ ਜ਼ਿਆਦਾ ਜਾਂ ਸਭ ਤੋਂ ਘੱਟ ਦੱਸਦੇ ਹਨ। ਛੋਟੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ -est ਅਤੇ ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ 'ਸਭ ਤੋਂ' ਵਰਤਦੇ ਹਾਂ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "Mount Everest is the highest mountain in the world.",
+        "examplePa": "ਮਾਉਂਟ ਐਵਰੈਸਟ ਦੁਨੀਆ ਦਾ ਸਭ ਤੋਂ ਉੱਚਾ ਪਹਾੜ ਹੈ।",
+        "highlightedWords": [
+          "highest"
+        ],
+        "explainEn": "high → highest (short adjective + -est)",
+        "explainPa": "high → highest (ਛੋਟਾ + -est)",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "She is the most intelligent student in the class.",
+        "examplePa": "ਉਹ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਬੁੱਧੀਮਾਨ ਵਿਦਿਆਰਥੀ ਹੈ।",
+        "highlightedWords": [
+          "most intelligent"
+        ],
+        "explainEn": "intelligent → most intelligent (long adjective + most)",
+        "explainPa": "intelligent → most intelligent (ਲੰਬਾ + ਸਭ ਤੋਂ)",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_superlative_adjectives_01_in_tap_superlative_adjectives_is",
+        "englishText": "\"This is the smallest box.\" — Is \"smallest\" a superlative adjective?",
+        "punjabiText": "\"ਇਹ ਸਭ ਤੋਂ ਛੋਟਾ ਡੱਬਾ ਹੈ।\" — ਕੀ \"smallest\" ਉੱਚਤਮ ਵਿਸ਼ੇਸ਼ਣ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Smallest” means “the most small.”",
+          "pa": "ਹਾਂ। “smallest” ਦਾ ਅਰਥ ਹੈ “ਸਭ ਤੋਂ ਛੋਟਾ।”"
+        },
+        "workedExample": {
+          "en": "Yes. “Smallest” means “the most small.”",
+          "pa": "ਹਾਂ। “smallest” ਦਾ ਅਰਥ ਹੈ “ਸਭ ਤੋਂ ਛੋਟਾ।”"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_super_fastest",
+        "englishText": "Which is superlative for 'fast'?",
+        "punjabiText": "ਕਿਹੜਾ 'ਤੇਜ਼' ਦਾ ਉੱਚਤਮ ਰੂਪ ਹੈ?",
+        "options": [
+          "more fast",
+          "faster",
+          "fastest"
+        ],
+        "correctAnswer": "fastest",
+        "points": 5,
+        "hint": {
+          "en": "Superlative = -est.",
+          "pa": "ਸਰਵੋਤਮ = -est।"
+        },
+        "explanation": {
+          "en": "fast → fastest means number 1 in a group.",
+          "pa": "fast → fastest = ਸਮੂਹ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼।"
+        },
+        "workedExample": {
+          "en": "He is the fastest in class.",
+          "pa": "ਉਹ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼ ਹੈ।",
+          "highlight": {
+            "en": [
+              "fastest"
+            ],
+            "pa": [
+              "ਸਭ ਤੋਂ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She is the tallest girl in her school.",
+            "sentencePa": "ਉਹ ਆਪਣੇ ਸਕੂਲ ਦੀ ਸਭ ਤੋਂ ਲੰਬੀ ਲੜਕੀ ਹੈ।",
+            "explainEn": "tall → tallest (short + -est)",
+            "explainPa": "tall → tallest (ਛੋਟਾ + -est)",
+            "highlight": "tallest"
+          }
+        ]
+      },
+      {
+        "type": "example",
+        "exampleEn": "This is the most beautiful sunset I have ever seen.",
+        "examplePa": "ਇਹ ਸਭ ਤੋਂ ਸੁੰਦਰ ਸੂਰਜ ਡੁੱਬਣਾ ਹੈ ਜੋ ਮੈਂ ਕਦੇ ਦੇਖਿਆ ਹੈ।",
+        "highlightedWords": [
+          "most beautiful"
+        ],
+        "explainEn": "'most' + long adjective = superlative",
+        "explainPa": "'most' + ਲੰਬਾ = ਉੱਚਤਮ ਰੂਪ",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_super_complete_most_delicious",
+        "englishText": "Complete: This cake is the ___ in the bakery.",
+        "punjabiText": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇਹ ਕੇਕ ਬੇਕਰੀ ਵਿੱਚ ___ ਹੈ।",
+        "options": [
+          "delicious",
+          "more delicious",
+          "most delicious"
+        ],
+        "correctAnswer": "most delicious",
+        "points": 5,
+        "hint": {
+          "en": "Long adjective? Use most + word.",
+          "pa": "ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣ ਨਾਲ 'ਸਭ ਤੋਂ' ਵਾਲਾ ਰੂਪ ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "delicious is long, so we say most delicious.",
+          "pa": "ਇਹ ਲੰਬਾ ਵਿਸ਼ੇਸ਼ਣ ਹੈ, ਇਸ ਲਈ 'most delicious' ਰੂਪ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "This is the most beautiful picture.",
+          "pa": "ਇਹ ਸਭ ਤੋਂ ਸੁੰਦਰ ਤਸਵੀਰ ਹੈ।",
+          "highlight": {
+            "en": [
+              "most"
+            ],
+            "pa": [
+              "ਸਭ ਤੋਂ"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He got the best marks in the exam.",
+            "sentencePa": "ਉਸ ਨੇ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਅੰਕ ਪ੍ਰਾਪਤ ਕੀਤੇ।",
+            "explainEn": "good → best (irregular superlative)",
+            "explainPa": "good → best (ਅਸਾਧਾਰਣ)",
+            "highlight": "best"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_super_class_fastest",
+        "englishText": "In a race of many students, Rohan is the ___.",
+        "punjabiText": "ਕਈ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਦੌੜ ਵਿੱਚ, ਰੋਹਨ ਸਭ ਤੋਂ ___ ਹੈ।",
+        "options": [
+          "faster",
+          "fastest",
+          "fast"
+        ],
+        "correctAnswer": "fastest",
+        "points": 5,
+        "hint": {
+          "en": "Group winner = superlative form (-est).",
+          "pa": "ਸਮੂਹ ਵਿੱਚ ਨੰਬਰ 1 ਲਈ ਉੱਚਤਮ ਰੂਪ (-est) ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "Because we compare many students, use 'the fastest'.",
+          "pa": "ਕਿਉਂਕਿ ਇੱਥੇ ਕਈ ਵਿਦਿਆਰਥੀਆਂ ਦੀ ਤੁਲਨਾ ਹੈ, ਇਸ ਲਈ 'the fastest' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Aman is the tallest in our class.",
+          "pa": "ਅਮਨ ਸਾਡੀ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਲੰਬਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "tallest"
+            ],
+            "pa": [
+              "ਸਭ ਤੋਂ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "faster": {
+            "en": "'faster' compares two. Here we need the top one in a group.",
+            "pa": "'faster' ਦੋ ਦੀ ਤੁਲਨਾ ਲਈ ਹੈ। ਇੱਥੇ ਸਮੂਹ ਵਿੱਚ ਸਭ ਤੋਂ ਅੱਗੇ ਵਾਲਾ ਰੂਪ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "comparative form",
+            "posPa": "ਤੁਲਨਾਤਮਕ ਰੂਪ"
+          },
+          "fast": {
+            "en": "'fast' is base form. Superlative needs -est here.",
+            "pa": "'fast' ਮੂਲ ਰੂਪ ਹੈ। ਇੱਥੇ ਉੱਚਤਮ ਲਈ -est ਰੂਪ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_super_most_interesting_story",
+        "englishText": "This is the ___ story in the book.",
+        "punjabiText": "ਇਹ ਕਿਤਾਬ ਵਿੱਚ ਸਭ ਤੋਂ ___ ਕਹਾਣੀ ਹੈ।",
+        "options": [
+          {
+            "en": "interesting",
+            "pa": "ਦਿਲਚਸਪ"
+          },
+          {
+            "en": "more interesting",
+            "pa": "ਹੋਰ ਦਿਲਚਸਪ"
+          },
+          {
+            "en": "most interesting",
+            "pa": "ਸਭ ਤੋਂ ਦਿਲਚਸਪ"
+          }
+        ],
+        "correctAnswer": "most interesting",
+        "points": 5,
+        "hint": {
+          "en": "For a long adjective in a group, use 'most + adjective'.",
+          "pa": "ਸਮੂਹ ਵਿੱਚ ਲੰਬੇ ਵਿਸ਼ੇਸ਼ਣ ਲਈ 'most + adjective' ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "'most interesting' is the correct superlative form.",
+          "pa": "'most interesting' ਸਹੀ ਉੱਚਤਮ ਰੂਪ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She is the most helpful student.",
+          "pa": "ਉਹ ਸਭ ਤੋਂ ਮਦਦਗਾਰ ਵਿਦਿਆਰਥਣ ਹੈ।",
+          "highlight": "most helpful"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_super_smallest_of_three",
+        "englishText": "Of the three cups, this is the ___.",
+        "punjabiText": "ਤਿੰਨ ਕੱਪਾਂ ਵਿਚੋਂ, ਇਹ ਸਭ ਤੋਂ ___ ਹੈ।",
+        "options": [
+          {
+            "en": "small",
+            "pa": "ਛੋਟਾ"
+          },
+          {
+            "en": "smaller",
+            "pa": "ਹੋਰ ਛੋਟਾ"
+          },
+          {
+            "en": "smallest",
+            "pa": "ਸਭ ਤੋਂ ਛੋਟਾ"
+          }
+        ],
+        "correctAnswer": "smallest",
+        "points": 5,
+        "hint": {
+          "en": "In a group of three or more, use superlative (-est).",
+          "pa": "ਤਿੰਨ ਜਾਂ ਵੱਧ ਦੇ ਸਮੂਹ ਲਈ superlative (-est) ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "'smallest' is correct because we choose one from a group of three.",
+          "pa": "'smallest' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਅਸੀਂ ਤਿੰਨ ਦੇ ਸਮੂਹ ਵਿੱਚੋਂ ਇੱਕ ਚੁਣ ਰਹੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "He is the tallest in class.",
+          "pa": "ਉਹ ਕਲਾਸ ਵਿੱਚ ਸਭ ਤੋਂ ਲੰਮਾ ਹੈ।",
+          "highlight": "tallest"
+        }
+      },
+      {
+        "type": "example",
+        "exampleEn": "This is the cheapest store in town.",
+        "examplePa": "ਇਹ ਸ਼ਹਿਰ ਵਿੱਚ ਸਭ ਤੋਂ ਸਸਤੀ ਦੁਕਾਨ ਹੈ।",
+        "highlightedWords": [
+          "cheapest"
+        ],
+        "explainEn": "cheap → cheapest (short + -est)",
+        "explainPa": "cheap → cheapest (ਛੋਟਾ + -est)",
+        "points": 1
+      },
+      {
+        "type": "summary",
+        "titleEn": "Summary",
+        "titlePa": "ਸਾਰ",
+        "summaryEn": "Key points and examples.",
+        "summaryPa": "ਮੁੱਖ ਬਿੰਦੂ ਅਤੇ ਉਦਾਹਰਨਾਂ।",
+        "keyExamplesEn": [
+          "Short: biggest, fastest, tallest",
+          "Long: most beautiful, most interesting",
+          "Always use 'the' before superlative",
+          "Superlative = group of 3+"
+        ],
+        "keyExamplesPa": [
+          "ਛੋਟਾ: biggest, fastest",
+          "ਲੰਬਾ: most beautiful",
+          "ਉੱਚਤਮ ਤੋਂ ਪਹਿਲਾਂ 'the' ਲੱਗਦਾ ਹੈ",
+          "ਇਹ 3 ਜਾਂ ਵੱਧ ਚੀਜ਼ਾਂ ਦੇ ਸਮੂਹ ਲਈ ਵਰਤਦੇ ਹਾਂ"
+        ],
+        "totalPoints": 33,
+        "points": 0
+      }
+    ]
+  },
+  "L_PREPOSITION_BASICS_01": {
+    "metadata": {
+      "titleEn": "Preposition Basics",
+      "titlePa": "ਪੂਰਵ-ਬੋਧਕ ਮੁੱਢ",
+      "labelEn": "Preposition Basics",
+      "labelPa": "ਪੂਰਵ-ਬੋਧਕ ਮੁੱਢ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: Prepositions",
+        "titlePa": "ਸਿੱਖੋ: ਪੂਰਵ-ਬੋਧਕ",
+        "descEn": "Use prepositions to show place, time, and direction relationships.",
+        "descPa": "ਥਾਂ, ਸਮਾਂ ਅਤੇ ਦਿਸ਼ਾ ਦਾ ਸੰਬੰਧ ਦਿਖਾਉਣ ਲਈ ਪੂਰਵ-ਬੋਧਕ ਵਰਤੋ।",
+        "pointsAvailable": 49
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Prepositions link nouns/pronouns to other words and show place, time, or direction.",
+        "contentPa": "ਪੂਰਵ-ਬੋਧਕ ਨਾਂ/ਸਰਵਨਾਮ ਦਾ ਹੋਰ ਸ਼ਬਦਾਂ ਨਾਲ ਸੰਬੰਧ ਜੋੜਦੇ ਹਨ ਅਤੇ ਥਾਂ, ਸਮਾਂ ਜਾਂ ਦਿਸ਼ਾ ਦੱਸਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "In the box. On the table. Under the bed.",
+        "examplePa": "ਡੱਬੇ ਵਿੱਚ। ਮੇਜ਼ ਉੱਪਰ। ਪਲੰਗ ਦੇ ਹੇਠਾਂ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_in_tap_the_preposition_in_the_se",
+        "englishText": "\"The cat is under the table.\" — Is \"under\" a preposition?",
+        "punjabiText": "\"ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।\" — ਕੀ \"under\" ਪੂਰਵ-ਬੋਧਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Under” is a preposition that shows position (below something).",
+          "pa": "ਹਾਂ। “under” ਪੂਰਵ-ਬੋਧਕ ਹੈ ਜੋ ਸਥਾਨ ਦੱਸਦਾ ਹੈ (ਕਿਸੇ ਦੇ ਹੇਠਾਂ)।"
+        },
+        "workedExample": {
+          "en": "Yes. “Under” is a preposition that shows position (below something).",
+          "pa": "ਹਾਂ। “under” ਪੂਰਵ-ਬੋਧਕ ਹੈ ਜੋ ਸਥਾਨ ਦੱਸਦਾ ਹੈ (ਕਿਸੇ ਦੇ ਹੇਠਾਂ)।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_in_tap_the_preposition_that_show",
+        "englishText": "\"The book is on the shelf.\" — Is \"on\" a preposition?",
+        "punjabiText": "\"ਕਿਤਾਬ ਸ਼ੈਲਫ਼ 'ਤੇ ਹੈ।\" — ਕੀ \"on\" ਪੂਰਵ-ਬੋਧਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “On” is a place preposition meaning “on top of.”",
+          "pa": "ਹਾਂ। “on” ਥਾਂ ਦੱਸਣ ਵਾਲਾ ਪੂਰਵ-ਬੋਧਕ ਹੈ (ਉੱਪਰ/ਉੱਤੇ)।"
+        },
+        "workedExample": {
+          "en": "Yes. “On” is a place preposition meaning “on top of.”",
+          "pa": "ਹਾਂ। “on” ਥਾਂ ਦੱਸਣ ਵਾਲਾ ਪੂਰਵ-ਬੋਧਕ ਹੈ (ਉੱਪਰ/ਉੱਤੇ)।"
+        }
+      },
+      {
+        "type": "definition",
+        "contentEn": "Preposition map: Place (in/on/under), Time (at 3 PM, on Monday, in July), Direction (to/into/through). Ask: Where? When? Which way?",
+        "contentPa": "ਪੂਰਵ-ਬੋਧਕ ਨਕਸ਼ਾ: ਥਾਂ (ਵਿੱਚ/ਉੱਤੇ/ਹੇਠਾਂ), ਸਮਾਂ (3 ਵਜੇ, ਸੋਮਵਾਰ ਨੂੰ, ਜੁਲਾਈ ਵਿੱਚ), ਦਿਸ਼ਾ (ਵੱਲ/ਅੰਦਰ/ਰਾਹੀਂ)। ਆਪਣੇ ਆਪ ਤੋਂ ਪੁੱਛੋ: ਕਿੱਥੇ? ਕਦੋਂ? ਕਿਹੜੀ ਦਿਸ਼ਾ?",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_pick_the_preposition",
+        "englishText": "Pick the preposition.",
+        "punjabiText": "ਪੂਰਵ-ਬੋਧਕ ਚੁਣੋ।",
+        "options": [
+          "to",
+          "happy",
+          "run"
+        ],
+        "correctAnswer": "to",
+        "points": 5,
+        "hint": {
+          "en": "A preposition often shows relation like direction/place.",
+          "pa": "ਪੂਰਵ-ਬੋਧਕ ਅਕਸਰ ਦਿਸ਼ਾ/ਥਾਂ ਦਾ ਸੰਬੰਧ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'to' is a preposition because it links movement toward a destination.",
+          "pa": "'to' ਪੂਰਵ-ਬੋਧਕ ਹੈ ਕਿਉਂਕਿ ਇਹ ਕਿਸੇ ਥਾਂ ਵੱਲ ਜਾਣ ਦਾ ਸੰਬੰਧ ਜੋੜਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We walked to the market.",
+          "pa": "ਅਸੀਂ ਬਾਜ਼ਾਰ ਵੱਲ ਤੁਰੇ।",
+          "highlight": {
+            "en": [
+              "to"
+            ],
+            "pa": [
+              "ਵੱਲ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "happy": {
+            "en": "'happy' describes feeling/quality, so it is an adjective, not a preposition.",
+            "pa": "'happy' ਭਾਵਨਾ/ਗੁਣ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ, ਪੂਰਵ-ਬੋਧਕ ਨਹੀਂ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "run": {
+            "en": "'run' is an action word (verb), not a linking preposition.",
+            "pa": "'run' ਕੰਮ ਵਾਲਾ ਸ਼ਬਦ (ਕਿਰਿਆ) ਹੈ, ਪੂਰਵ-ਬੋਧਕ ਨਹੀਂ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "I went to school.",
+            "sentencePa": "ਮੈਂ ਸਕੂਲ ਗਿਆ।",
+            "explainEn": "To shows direction.",
+            "explainPa": "to ਦਿਸ਼ਾ ਦਿਖਾਉਂਦਾ ਹੈ।",
+            "highlight": "to"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_complete_the_cat_is_the_chair",
+        "englishText": "Complete: The cat is ___ the chair.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਬਿੱਲੀ ਕੁਰਸੀ ਦੇ ___ ਹੈ।",
+        "options": [
+          "in",
+          "run",
+          "happy"
+        ],
+        "correctAnswer": "in",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"in\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"in\". Example: The cat is in the box.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"in\"। ਉਦਾਹਰਨ: ਬਿੱਲੀ ਡੱਬੇ ਵਿੱਚ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The cat is in the house.",
+          "pa": "ਬਿੱਲੀ ਘਰ ਵਿੱਚ ਹੈ।",
+          "highlight": "in"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The cat is in the house.",
+            "sentencePa": "ਬਿੱਲੀ ਘਰ ਵਿੱਚ ਹੈ।",
+            "explainEn": "'in' means inside a space or boundary.",
+            "explainPa": "'in' ਦਾ ਅਰਥ ਕਿਸੇ ਹੱਦ ਦੇ ਅੰਦਰ ਹੁੰਦਾ ਹੈ।",
+            "highlight": "in"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_which_is_a_preposition",
+        "englishText": "Which is a preposition?",
+        "punjabiText": "ਕਿਹੜਾ ਪੂਰਵ-ਬੋਧਕ ਹੈ?",
+        "options": [
+          "happy",
+          "between",
+          "walk"
+        ],
+        "correctAnswer": "between",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"between\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"between\". Example: The ball is between the chairs.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"between\"। ਉਦਾਹਰਨ: ਗੇਂਦ ਕੁਰਸੀਆਂ ਦੇ ਵਿਚਕਾਰ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Between two trees.",
+          "pa": "ਦੋ ਦਰਖ਼ਤਾਂ ਦੇ ਵਿਚਕਾਰ।",
+          "highlight": "between"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Between two trees.",
+            "sentencePa": "ਦੋ ਦਰਖ਼ਤਾਂ ਦੇ ਵਿਚਕਾਰ।",
+            "explainEn": "'between' shows position in the middle of two things.",
+            "explainPa": "'between' ਦੋ ਚੀਜ਼ਾਂ ਦੇ ਵਿਚਕਾਰ ਵਾਲੀ ਥਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "between"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_the_book_is_the_desk",
+        "englishText": "The book is ___ the desk.",
+        "punjabiText": "ਕਿਤਾਬ ਮੇਜ਼ ਦੇ ___ ਹੈ।",
+        "options": [
+          "on",
+          "run",
+          "big"
+        ],
+        "correctAnswer": "on",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"on\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"on\". Example: The book is on the desk.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"on\"। ਉਦਾਹਰਨ: ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The pen is on the table.",
+          "pa": "ਪੈਨ ਮੇਜ਼ ਉੱਤੇ ਹੈ।",
+          "highlight": "on"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The pen is on the table.",
+            "sentencePa": "ਪੈਨ ਮੇਜ਼ ਉੱਤੇ ਹੈ।",
+            "explainEn": "'on' shows position on a surface.",
+            "explainPa": "'on' ਕਿਸੇ ਸਤ੍ਹਾ ਉੱਤੇ ਹੋਣ ਦੀ ਥਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "on"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_which_preposition_shows_time",
+        "englishText": "Which preposition shows time?",
+        "punjabiText": "ਕਿਹੜਾ ਪੂਰਵ-ਬੋਧਕ ਸਮਾਂ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          "in",
+          "at",
+          "through"
+        ],
+        "correctAnswer": "at",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"at\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"at\". Example: We meet at 5 o'clock.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"at\"। ਉਦਾਹਰਨ: ਅਸੀਂ 5 ਵਜੇ ਮਿਲਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "I arrive at 3 PM.",
+          "pa": "ਮੈਂ 3 ਵਜੇ ਪਹੁੰਚਦਾ ਹਾਂ।",
+          "highlight": "at"
+        },
+        "examples": [
+          {
+            "sentenceEn": "I arrive at 3 PM.",
+            "sentencePa": "ਮੈਂ 3 ਵਜੇ ਪਹੁੰਚਦਾ ਹਾਂ।",
+            "explainEn": "'at' is used for exact clock times (e.g., at 3 PM).",
+            "explainPa": "'at' ਖ਼ਾਸ ਘੜੀ ਵਾਲੇ ਸਮੇਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਜਿਵੇਂ at 3 PM)।",
+            "highlight": "at"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_pick_the_sentence_with_a_preposi",
+        "englishText": "Pick the sentence with a preposition.",
+        "punjabiText": "ਪੂਰਵ-ਬੋਧਕ ਵਾਲਾ ਵਾਕ ਚੁਣੋ।",
+        "options": [
+          "She is happy",
+          "He goes under the bridge",
+          "It is blue"
+        ],
+        "correctAnswer": "He goes under the bridge",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"He goes under the bridge\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"He goes under the bridge\". Example: He goes under the bridge.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"He goes under the bridge\"। ਉਦਾਹਰਨ: ਉਹ ਪੁਲ ਦੇ ਹੇਠਾਂ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The bridge is over the river.",
+          "pa": "ਪੁਲ ਨਦੀ ਉੱਪਰ ਹੈ।",
+          "highlight": "over"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The bridge is over the river.",
+            "sentencePa": "ਪੁਲ ਨਦੀ ਉੱਪਰ ਹੈ।",
+            "explainEn": "'over' shows position above something, often without touching.",
+            "explainPa": "'over' ਉੱਪਰ ਵਾਲਾ ਸੰਬੰਧ ਦੱਸਦਾ ਹੈ, ਆਮ ਤੌਰ ਤੇ ਬਿਨਾਂ ਛੂਹੇ।",
+            "highlight": "over"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_we_meet_friday",
+        "englishText": "We meet ___ Friday evening.",
+        "punjabiText": "ਅਸੀਂ ਸ਼ੁੱਕਰਵਾਰ ਦੀ ਸ਼ਾਮ ___ ਮਿਲਦੇ ਹਾਂ।",
+        "options": [
+          {
+            "en": "on",
+            "pa": "ਨੂੰ"
+          },
+          {
+            "en": "at",
+            "pa": "ਤੇ"
+          },
+          {
+            "en": "in",
+            "pa": "ਵਿੱਚ"
+          }
+        ],
+        "correctAnswer": "on",
+        "points": 5,
+        "hint": {
+          "en": "Use 'on' with days and dates.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'on' is correct for specific days like Friday.",
+          "pa": "Friday ਵਰਗੇ ਖ਼ਾਸ ਦਿਨਾਂ ਲਈ 'on' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We study on Tuesday.",
+          "pa": "ਅਸੀਂ ਮੰਗਲਵਾਰ ਨੂੰ ਪੜ੍ਹਦੇ ਹਾਂ।",
+          "highlight": "on"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_preposition_basics_01_walked_into_room",
+        "englishText": "She walked ___ the room.",
+        "punjabiText": "ਉਹ ਕਮਰੇ ___ ਤੁਰ ਕੇ ਗਈ।",
+        "options": [
+          {
+            "en": "into",
+            "pa": "ਦੇ ਅੰਦਰ"
+          },
+          {
+            "en": "slowly",
+            "pa": "ਹੌਲੇ-ਹੌਲੇ"
+          },
+          {
+            "en": "happy",
+            "pa": "ਖੁਸ਼"
+          }
+        ],
+        "correctAnswer": "into",
+        "points": 5,
+        "hint": {
+          "en": "Choose the preposition that shows movement to inside.",
+          "pa": "ਉਹ ਪੂਰਵ-ਬੋਧਕ ਚੁਣੋ ਜੋ ਅੰਦਰ ਵੱਲ ਹਿਲਚਲ ਦੱਸੇ।"
+        },
+        "explanation": {
+          "en": "'into' shows movement from outside to inside.",
+          "pa": "'into' ਬਾਹਰੋਂ ਅੰਦਰ ਵੱਲ ਹਿਲਚਲ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "He jumped into the pool.",
+          "pa": "ਉਹ ਤਲਾਬ ਵਿੱਚ ਛਾਲ ਮਾਰ ਗਿਆ।",
+          "highlight": "into"
+        }
+      }
+    ]
+  },
+  "L_PREP_PLACE_MOVE_01": {
+    "metadata": {
+      "titleEn": "Prepositions: Place/Movement",
+      "titlePa": "ਪੂਰਵ-ਬੋਧਕ: ਥਾਂ/ਹਿਲਚਲ",
+      "labelEn": "Prepositions: Place/Movement",
+      "labelPa": "ਪੂਰਵ-ਬੋਧਕ: ਥਾਂ/ਹਿਲਚਲ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: in/on/under/into/across",
+        "titlePa": "ਸਿੱਖੋ: ਵਿੱਚ/ਉੱਤੇ/ਹੇਠਾਂ/ਅੰਦਰ/ਆਰ-ਪਾਰ",
+        "descEn": "Use place & movement prepositions in sentences.",
+        "descPa": "ਵਾਕਾਂ ਵਿੱਚ ਥਾਂ ਅਤੇ ਹਿਲਚਲ ਦੇ ਪੂਰਵ-ਬੋਧਕ ਵਰਤੋ।",
+        "pointsAvailable": 40
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Prepositions show relationships of place or movement.",
+        "contentPa": "ਪੂਰਵ-ਬੋਧਕ ਥਾਂ ਜਾਂ ਹਿਲਚਲ ਦਾ ਸੰਬੰਧ ਦਿਖਾਉਂਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "The ball is under the table.",
+        "examplePa": "ਗੇਂਦ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।",
+        "highlightedWords": [
+          "under"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_in_the_ball_is_under_the_table_i",
+        "englishText": "\"The ball is under the table.\" — Is \"under\" the right preposition?",
+        "punjabiText": "\"ਗੇਂਦ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।\" — ਕੀ \"under\" ਸਹੀ ਪੂਰਵ-ਬੋਧਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Correct: Nice!",
+          "pa": "ਸਹੀ: ਸ਼ਾਬਾਸ਼!"
+        },
+        "workedExample": {
+          "en": "Yes. “Under” correctly shows the ball’s position (below the table).",
+          "pa": "ਹਾਂ। “under” ਗੇਂਦ ਦੀ ਥਾਂ ਠੀਕ ਦੱਸਦਾ ਹੈ (ਮੇਜ਼ ਦੇ ਹੇਠਾਂ)।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_is_in_the_right_word",
+        "englishText": "Is \"in\" the right word?",
+        "punjabiText": "ਕੀ \"in\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Pick the word that shows place or relation in the sentence.",
+          "pa": "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਵਾਕ ਵਿੱਚ ਥਾਂ ਜਾਂ ਸੰਬੰਧ ਦੱਸੇ।"
+        },
+        "explanation": {
+          "en": "'in' is the preposition choice here.",
+          "pa": "ਇੱਥੇ 'in' ਪੂਰਵ-ਬੋਧਕ ਦੀ ਸਹੀ ਚੋਣ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The keys are in the bag.",
+          "pa": "ਚਾਬੀਆਂ ਬੈਗ ਵਿੱਚ ਹਨ।",
+          "highlight": {
+            "en": [
+              "in"
+            ],
+            "pa": [
+              "ਵਿੱਚ"
+            ]
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_he_walked_the_bridge",
+        "englishText": "He walked ____ the bridge.",
+        "punjabiText": "ਉਹ ____ ਪੁਲ ਪਾਰ ਤੁਰਿਆ।",
+        "options": [
+          "across",
+          "blue",
+          "slowly"
+        ],
+        "correctAnswer": "across",
+        "points": 5,
+        "hint": {
+          "en": "Use the word that shows movement relation.",
+          "pa": "ਉਹ ਸ਼ਬਦ ਵਰਤੋ ਜੋ ਹਿਲਚਲ ਦਾ ਸੰਬੰਧ ਦੱਸੇ।"
+        },
+        "explanation": {
+          "en": "'across' correctly shows movement from one side to the other.",
+          "pa": "'across' ਇੱਕ ਪਾਸੇ ਤੋਂ ਦੂਜੇ ਪਾਸੇ ਦੀ ਹਿਲਚਲ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We walked across the road.",
+          "pa": "ਅਸੀਂ ਸੜਕ ਪਾਰ ਤੁਰੇ।",
+          "highlight": {
+            "en": [
+              "across"
+            ],
+            "pa": [
+              "ਪਾਰ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "blue": {
+            "en": "'blue' is a describing word. This blank needs a movement preposition.",
+            "pa": "'blue' ਵਰਣਨ ਵਾਲਾ ਸ਼ਬਦ ਹੈ। ਇਸ ਖਾਲੀ ਥਾਂ ਵਿੱਚ ਹਿਲਚਲ ਦੱਸਣ ਵਾਲਾ ਪੂਰਵ-ਬੋਧਕ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "slowly": {
+            "en": "'slowly' tells how he walked, but this sentence asks where he walked.",
+            "pa": "'slowly' ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਤੁਰਿਆ, ਪਰ ਵਾਕ ਪੁੱਛਦਾ ਹੈ ਕਿ ਉਹ ਕਿੱਥੇ ਤੁਰਿਆ।",
+            "posEn": "adverb",
+            "posPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_the_book_is_the_shelf",
+        "englishText": "The book is ____ the shelf.",
+        "punjabiText": "ਕਿਤਾਬ ਸ਼ੈਲਫ ____ ਹੈ।",
+        "options": [
+          "on",
+          "under",
+          "into"
+        ],
+        "correctAnswer": "on",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"on\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"on\". Example: The book is on the shelf.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"on\"। ਉਦਾਹਰਨ: ਕਿਤਾਬ ਸ਼ੈਲਫ ਉੱਤੇ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The book is on the shelf.",
+          "pa": "ਕਿਤਾਬ ਸ਼ੈਲਫ ਉੱਪਰ ਹੈ।",
+          "highlight": "on"
+        },
+        "wrongOptionExplanations": {
+          "under": {
+            "en": "'under' means below. The sentence says the book is resting on top of the shelf.",
+            "pa": "'under' ਦਾ ਅਰਥ ਹੇਠਾਂ ਹੈ। ਇਸ ਵਾਕ ਵਿੱਚ ਕਿਤਾਬ ਸ਼ੈਲਫ ਦੇ ਉੱਪਰ ਟਿਕੀ ਹੋਈ ਹੈ।",
+            "posEn": "preposition",
+            "posPa": "ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "into": {
+            "en": "'into' shows movement. Here the book is already in a fixed position.",
+            "pa": "'into' ਹਿਲਚਲ ਦੱਸਦਾ ਹੈ। ਇੱਥੇ ਕਿਤਾਬ ਪਹਿਲਾਂ ਹੀ ਇੱਕ ਥਾਂ 'ਤੇ ਟਿਕੀ ਹੋਈ ਹੈ।",
+            "posEn": "preposition",
+            "posPa": "ਪੂਰਵ-ਬੋਧਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The book is on the shelf.",
+            "sentencePa": "ਕਿਤਾਬ ਸ਼ੈਲਫ ਉੱਪਰ ਹੈ।",
+            "explainEn": "'on' shows position on a surface.",
+            "explainPa": "'on' ਸਤ੍ਹਾ ਉੱਪਰ ਦਾ ਸਥਾਨ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "on"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_the_cat_is_the_box",
+        "englishText": "The cat is ____ the box.",
+        "punjabiText": "ਬਿੱਲੀ ਡੱਬੇ ____ ਹੈ।",
+        "options": [
+          "under",
+          "over",
+          "next"
+        ],
+        "correctAnswer": "under",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"under\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"under\". Example: The cat is under the box.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"under\"। ਉਦਾਹਰਨ: ਬਿੱਲੀ ਡੱਬੇ ਹੇਠਾਂ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The cat is under the table.",
+          "pa": "ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।",
+          "highlight": "under"
+        },
+        "wrongOptionExplanations": {
+          "over": {
+            "en": "'over' means above. The picture shows the cat below the box, so 'under' fits.",
+            "pa": "'over' ਦਾ ਮਤਲਬ ਉੱਪਰ ਹੈ। ਇੱਥੇ ਬਿੱਲੀ ਡੱਬੇ ਦੇ ਹੇਠਾਂ ਹੈ, ਇਸ ਲਈ 'under' ਠੀਕ ਹੈ।",
+            "posEn": "preposition",
+            "posPa": "ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "next": {
+            "en": "'next' is incomplete here. We usually say 'next to' for side position.",
+            "pa": "'next' ਇੱਥੇ ਅਧੂਰਾ ਹੈ। ਪਾਸੇ ਦੀ ਥਾਂ ਲਈ ਅਸੀਂ ਆਮ ਤੌਰ 'ਤੇ 'next to' ਕਹਿੰਦੇ ਹਾਂ।",
+            "posEn": "preposition phrase",
+            "posPa": "ਪੂਰਵ-ਬੋਧਕ ਵਾਕ-ਭਾਗ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The cat is under the table.",
+            "sentencePa": "ਬਿੱਲੀ ਮੇਜ਼ ਦੇ ਹੇਠਾਂ ਹੈ।",
+            "explainEn": "'under' is a preposition that shows position below something.",
+            "explainPa": "'under' ਪੂਰਵ-ਬੋਧਕ ਹੈ ਜੋ ਕਿਸੇ ਚੀਜ਼ ਦੇ ਹੇਠਾਂ ਵਾਲੀ ਥਾਂ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "under"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_she_ran_the_park",
+        "englishText": "She ran ____ the park.",
+        "punjabiText": "ਉਹ ____ ਪਾਰਕ ਵਿੱਚ ਦੌੜੀ।",
+        "options": [
+          "into",
+          "from",
+          "over"
+        ],
+        "correctAnswer": "into",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"into\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"into\". Example: She ran into the park.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"into\"। ਉਦਾਹਰਨ: ਉਹ ਪਾਰਕ ਵਿੱਚ ਦੌੜੀ।"
+        },
+        "workedExample": {
+          "en": "She ran into the park.",
+          "pa": "ਉਹ ਪਾਰਕ ਵਿੱਚ ਦੌੜੀ।",
+          "highlight": "into"
+        },
+        "wrongOptionExplanations": {
+          "from": {
+            "en": "'from' means starting point. Here she is moving into the park.",
+            "pa": "'from' ਦਾ ਅਰਥ ਸ਼ੁਰੂ ਵਾਲੀ ਥਾਂ ਹੈ। ਇੱਥੇ ਉਹ ਪਾਰਕ ਦੇ ਅੰਦਰ ਜਾ ਰਹੀ ਹੈ।",
+            "posEn": "preposition",
+            "posPa": "ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "over": {
+            "en": "'over' means above/across something. This sentence needs movement toward inside a place.",
+            "pa": "'over' ਦਾ ਅਰਥ ਉੱਪਰ/ਪਾਰ ਹੈ। ਇਸ ਵਾਕ ਵਿੱਚ ਥਾਂ ਦੇ ਅੰਦਰ ਜਾਣ ਵਾਲੀ ਹਿਲਚਲ ਚਾਹੀਦੀ ਹੈ।",
+            "posEn": "preposition",
+            "posPa": "ਪੂਰਵ-ਬੋਧਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She ran into the park.",
+            "sentencePa": "ਉਹ ਪਾਰਕ ਵਿੱਚ ਦੌੜੀ।",
+            "explainEn": "'into' shows movement toward a place.",
+            "explainPa": "'into' ਥਾਂ ਵੱਲ ਹਿਲਚਲ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "into"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_picture_on_wall",
+        "englishText": "The picture is ___ the wall.",
+        "punjabiText": "ਤਸਵੀਰ ਦੀਵਾਰ ___ ਹੈ।",
+        "options": [
+          {
+            "en": "on",
+            "pa": "ਉੱਤੇ"
+          },
+          {
+            "en": "in",
+            "pa": "ਵਿੱਚ"
+          },
+          {
+            "en": "across",
+            "pa": "ਪਾਰ"
+          }
+        ],
+        "correctAnswer": "on",
+        "points": 5,
+        "hint": {
+          "en": "For position on a surface, use 'on'.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'on' correctly shows the picture touching the wall surface.",
+          "pa": "'on' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਤਸਵੀਰ ਦੀਵਾਰ ਦੀ ਸਤ੍ਹਾ ਉੱਤੇ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The clock is on the wall.",
+          "pa": "ਘੜੀ ਦੀਵਾਰ ਉੱਤੇ ਹੈ।",
+          "highlight": "on"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_place_move_01_dog_through_gate",
+        "englishText": "The dog ran ___ the gate.",
+        "punjabiText": "ਕੁੱਤਾ ਫਾਟਕ ___ ਦੌੜਿਆ।",
+        "options": [
+          {
+            "en": "through",
+            "pa": "ਵਿਚੋਂ"
+          },
+          {
+            "en": "under",
+            "pa": "ਹੇਠਾਂ"
+          },
+          {
+            "en": "blue",
+            "pa": "ਨੀਲਾ"
+          }
+        ],
+        "correctAnswer": "through",
+        "points": 5,
+        "hint": {
+          "en": "Use the preposition meaning 'from one side to the other inside'.",
+          "pa": "ਉਹ ਪੂਰਵ-ਬੋਧਕ ਵਰਤੋ ਜਿਸਦਾ ਅਰਥ ਅੰਦਰੋਂ ਇੱਕ ਪਾਸੇ ਤੋਂ ਦੂਜੇ ਪਾਸੇ ਹੋਵੇ।"
+        },
+        "explanation": {
+          "en": "'through' correctly shows movement passing inside the gate opening.",
+          "pa": "'through' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਫਾਟਕ ਦੇ ਰਾਹੀਂ ਲੰਘਣ ਦੀ ਹਿਲਚਲ ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We walked through the tunnel.",
+          "pa": "ਅਸੀਂ ਸੁੰਗਰ੍ਹੇ ਵਿਚੋਂ ਲੰਘੇ।",
+          "highlight": "through"
+        }
+      }
+    ]
+  },
+  "L_PREP_TIME_01": {
+    "metadata": {
+      "titleEn": "Prepositions: Time",
+      "titlePa": "ਪੂਰਵ-ਬੋਧਕ: ਸਮਾਂ",
+      "labelEn": "Prepositions: Time",
+      "labelPa": "ਪੂਰਵ-ਬੋਧਕ: ਸਮਾਂ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: at/on/in/since/for/by",
+        "titlePa": "ਸਿੱਖੋ: ਤੇ/ਨੂੰ/ਵਿੱਚ/ਤੋਂ/ਲਈ/ਤੱਕ",
+        "descEn": "Use common time prepositions accurately.",
+        "descPa": "ਆਮ ਸਮੇਂ ਵਾਲੇ ਪੂਰਵ-ਬੋਧਕ ਠੀਕ ਵਰਤੋ।",
+        "pointsAvailable": 40
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Use at (exact time), on (days), in (months/years).",
+        "contentPa": "‘ਤੇ’ (ਠੀਕ ਸਮਾਂ), ‘ਨੂੰ’ (ਦਿਨ), ‘ਵਿੱਚ’ (ਮਹੀਨੇ/ਸਾਲ)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "School starts at 8 AM on Monday in June.",
+        "examplePa": "ਸਕੂਲ 8 ਵਜੇ, ਸੋਮਵਾਰ ਨੂੰ, ਜੂਨ ਵਿੱਚ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।",
+        "highlightedWords": [
+          "at",
+          "on",
+          "in"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_in_school_starts_at_8_am_is_at_c",
+        "englishText": "\"School starts at 8 AM.\" — Is \"at\" the correct preposition for a time?",
+        "punjabiText": "\"ਸਕੂਲ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।\" — ਕੀ ਸਮੇਂ ਲਈ \"at\" ਸਹੀ ਪੂਰਵ-ਬੋਧਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Correct: Correct!",
+          "pa": "ਸਹੀ: ਸਹੀ!"
+        },
+        "workedExample": {
+          "en": "Yes. Use “at” for specific clock times.",
+          "pa": "ਹਾਂ। ਖ਼ਾਸ ਘੜੀ ਦੇ ਸਮੇਂ ਲਈ “at” ਵਰਤਦੇ ਹਨ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_we_meet_sunday",
+        "englishText": "We meet ___ Sunday.",
+        "punjabiText": "ਅਸੀਂ ___ ਐਤਵਾਰ ਨੂੰ ਮਿਲਦੇ ਹਾਂ।",
+        "options": [
+          "on",
+          "at",
+          "in"
+        ],
+        "correctAnswer": "on",
+        "points": 5,
+        "hint": {
+          "en": "Use the preposition for days of the week.",
+          "pa": "ਹਫ਼ਤੇ ਦੇ ਦਿਨਾਂ ਲਈ ਠੀਕ ਪੂਰਵ-ਬੋਧਕ ਵਰਤੋ।"
+        },
+        "explanation": {
+          "en": "'on' is used with days like Sunday.",
+          "pa": "Sunday ਵਰਗੇ ਦਿਨਾਂ ਨਾਲ 'on' ਵਰਤਦੇ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "We study on Monday.",
+          "pa": "ਅਸੀਂ ਸੋਮਵਾਰ ਨੂੰ ਪੜ੍ਹਦੇ ਹਾਂ।",
+          "highlight": {
+            "en": [
+              "on"
+            ],
+            "pa": [
+              "ਨੂੰ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "at": {
+            "en": "'at' is used for exact clock times, not days like Sunday.",
+            "pa": "'at' ਠੀਕ ਘੜੀ ਵਾਲੇ ਸਮੇਂ ਲਈ ਵਰਤਦੇ ਹਾਂ, Sunday ਵਰਗੇ ਦਿਨ ਲਈ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "in": {
+            "en": "'in' is used with months and years, not specific days.",
+            "pa": "'in' ਮਹੀਨਿਆਂ ਅਤੇ ਸਾਲਾਂ ਨਾਲ ਆਉਂਦਾ ਹੈ, ਖ਼ਾਸ ਦਿਨਾਂ ਨਾਲ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_he_lived_here_2019",
+        "englishText": "He lived here ___ 2019.",
+        "punjabiText": "ਉਹ ਇੱਥੇ ___ 2019 ਰਹਿ ਰਿਹਾ ਹੈ।",
+        "options": [
+          "since",
+          "for",
+          "by"
+        ],
+        "correctAnswer": "since",
+        "points": 5,
+        "hint": {
+          "en": "Use 'since' with a starting point in time.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "2019 is a start point, so 'since' is correct.",
+          "pa": "2019 ਸ਼ੁਰੂਆਤੀ ਸਮਾਂ ਹੈ, ਇਸ ਲਈ 'since' ਠੀਕ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She has lived here since 2020.",
+          "pa": "ਉਹ 2020 ਤੋਂ ਇੱਥੇ ਰਹਿ ਰਹੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "since"
+            ],
+            "pa": [
+              "ਤੋਂ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "for": {
+            "en": "'for' tells duration (like for two years), but '2019' is a start point.",
+            "pa": "'for' ਸਮੇਂ ਦੀ ਮਿਆਦ ਦੱਸਦਾ ਹੈ (ਜਿਵੇਂ two years), ਪਰ '2019' ਸ਼ੁਰੂਆਤੀ ਸਮਾਂ ਹੈ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "by": {
+            "en": "'by' means before a deadline, not from a starting year.",
+            "pa": "'by' ਦਾ ਅਰਥ ਕਿਸੇ deadline ਤੋਂ ਪਹਿਲਾਂ ਹੈ, ਸ਼ੁਰੂਆਤੀ ਸਾਲ ਤੋਂ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_school_starts_8_am",
+        "englishText": "School starts ___ 8 AM.",
+        "punjabiText": "ਸਕੂਲ ___ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।",
+        "options": [
+          "on",
+          "at",
+          "in"
+        ],
+        "correctAnswer": "at",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"at\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"at\". Example: School starts at 8 AM.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"at\"। ਉਦਾਹਰਨ: ਸਕੂਲ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "School starts at 8 AM.",
+          "pa": "ਸਕੂਲ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।",
+          "highlight": "at"
+        },
+        "wrongOptionExplanations": {
+          "on": {
+            "en": "'on' is for days or dates, not exact times like 8 AM.",
+            "pa": "'on' ਦਿਨ ਜਾਂ ਤਾਰੀਖ ਲਈ ਆਉਂਦਾ ਹੈ, 8 AM ਵਰਗੇ ਠੀਕ ਸਮੇਂ ਲਈ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "in": {
+            "en": "'in' is for months, years, or long periods, not exact clock time.",
+            "pa": "'in' ਮਹੀਨੇ, ਸਾਲ ਜਾਂ ਲੰਬੇ ਸਮੇਂ ਨਾਲ ਵਰਤਦੇ ਹਾਂ, ਠੀਕ ਘੜੀ ਦੇ ਸਮੇਂ ਨਾਲ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "School starts at 8 AM.",
+            "sentencePa": "ਸਕੂਲ 8 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।",
+            "explainEn": "Use 'at' for exact times.",
+            "explainPa": "'at' ਠੀਕ ਸਮੇਂ ਲਈ।",
+            "highlight": "at"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_they_waited_an_hour",
+        "englishText": "They waited ___ an hour.",
+        "punjabiText": "ਉਨ੍ਹਾਂ ___ ਇੱਕ ਘੰਟਾ ਉਡੀਕ ਕੀਤੀ।",
+        "options": [
+          "since",
+          "for",
+          "during"
+        ],
+        "correctAnswer": "for",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"for\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"for\". Example: They waited for an hour.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"for\"। ਉਦਾਹਰਨ: ਉਨ੍ਹਾਂ ਨੇ ਇੱਕ ਘੰਟਾ ਉਡੀਕ ਕੀਤੀ।"
+        },
+        "workedExample": {
+          "en": "She waited for two hours.",
+          "pa": "ਉਸਨੇ ਦੋ ਘੰਟੇ ਉਡੀਕ ਕੀਤੀ।",
+          "highlight": "for"
+        },
+        "wrongOptionExplanations": {
+          "since": {
+            "en": "'since' needs a start point (like since Monday), not a duration phrase.",
+            "pa": "'since' ਨਾਲ ਸ਼ੁਰੂਆਤੀ ਸਮਾਂ ਆਉਂਦਾ ਹੈ (ਜਿਵੇਂ since Monday), ਮਿਆਦ ਵਾਲਾ ਵਾਕ-ਭਾਗ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "during": {
+            "en": "'during' is used with an event/time period, but here we need a duration amount.",
+            "pa": "'during' ਕਿਸੇ ਘਟਨਾ/ਸਮੇਂ ਦੇ ਦੌਰ ਨਾਲ ਆਉਂਦਾ ਹੈ, ਇੱਥੇ ਸਾਨੂੰ ਮਿਆਦ ਦੀ ਮਾਤਰਾ ਚਾਹੀਦੀ ਹੈ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She waited for two hours.",
+            "sentencePa": "ਉਸਨੇ ਦੋ ਘੰਟੇ ਉਡੀਕ ਕੀਤੀ।",
+            "explainEn": "Use 'for' with a duration.",
+            "explainPa": "'for' ਸਮੇਂ ਦੀ ਮਿਆਦ ਨਾਲ ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "for"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_she_s_been_here_monday",
+        "englishText": "She's been here ___ Monday.",
+        "punjabiText": "ਉਹ ___ ਸੋਮਵਾਰ ਇੱਥੇ ਹੈ।",
+        "options": [
+          "since",
+          "for",
+          "at"
+        ],
+        "correctAnswer": "since",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"since\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"since\". Example: She's been here since Monday.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"since\"। ਉਦਾਹਰਨ: ਉਹ ਸੋਮਵਾਰ ਤੋਂ ਇੱਥੇ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "We've been friends since 2020.",
+          "pa": "ਅਸੀਂ 2020 ਤੋਂ ਦੋਸਤ ਹਾਂ।",
+          "highlight": "since"
+        },
+        "wrongOptionExplanations": {
+          "for": {
+            "en": "'for' shows duration (for two days), but Monday is a start point.",
+            "pa": "'for' ਮਿਆਦ ਦੱਸਦਾ ਹੈ (for two days), ਪਰ Monday ਸ਼ੁਰੂਆਤੀ ਸਮਾਂ ਹੈ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          },
+          "at": {
+            "en": "'at' is used for clock times, not start days like Monday.",
+            "pa": "'at' ਘੜੀ ਦੇ ਸਮੇਂ ਲਈ ਵਰਤਦੇ ਹਾਂ, Monday ਵਰਗੇ ਸ਼ੁਰੂਆਤੀ ਦਿਨ ਲਈ ਨਹੀਂ।",
+            "posEn": "time preposition",
+            "posPa": "ਸਮੇਂ ਦਾ ਪੂਰਵ-ਬੋਧਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "We've been friends since 2020.",
+            "sentencePa": "ਅਸੀਂ 2020 ਤੋਂ ਦੋਸਤ ਹਾਂ।",
+            "explainEn": "Use 'since' with a start point.",
+            "explainPa": "'since' ਸ਼ੁਰੂਆਤੀ ਸਮੇਂ ਨਾਲ ਵਰਤਦੇ ਹਨ।",
+            "highlight": "since"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_born_in_2010",
+        "englishText": "I was born ___ 2010.",
+        "punjabiText": "ਮੇਰਾ ਜਨਮ ___ 2010 ਵਿੱਚ ਹੋਇਆ।",
+        "options": [
+          {
+            "en": "in",
+            "pa": "ਵਿੱਚ"
+          },
+          {
+            "en": "on",
+            "pa": "ਨੂੰ"
+          },
+          {
+            "en": "at",
+            "pa": "ਤੇ"
+          }
+        ],
+        "correctAnswer": "in",
+        "points": 5,
+        "hint": {
+          "en": "Use 'in' for years.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'in' is correct with years like 2010.",
+          "pa": "2010 ਵਰਗੇ ਸਾਲਾਂ ਨਾਲ 'in' ਸਹੀ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She moved here in 2021.",
+          "pa": "ਉਹ 2021 ਵਿੱਚ ਇੱਥੇ ਆਈ।",
+          "highlight": "in"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_prep_time_01_arrive_at_noon",
+        "englishText": "The train will arrive ___ noon.",
+        "punjabiText": "ਰੇਲਗੱਡੀ ਦੁਪਹਿਰ ___ ਪਹੁੰਚੇਗੀ।",
+        "options": [
+          {
+            "en": "at",
+            "pa": "ਤੇ"
+          },
+          {
+            "en": "in",
+            "pa": "ਵਿੱਚ"
+          },
+          {
+            "en": "on",
+            "pa": "ਨੂੰ"
+          }
+        ],
+        "correctAnswer": "at",
+        "points": 5,
+        "hint": {
+          "en": "Use 'at' for exact times.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'at noon' is the correct fixed-time expression.",
+          "pa": "'at noon' ਠੀਕ ਸਮੇਂ ਲਈ ਸਹੀ ਪ੍ਰਗਟਾਵਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Class starts at 9 AM.",
+          "pa": "ਕਲਾਸ 9 ਵਜੇ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ।",
+          "highlight": "at"
+        }
+      }
+    ]
+  },
+  "L_CONJUNCTION_BASICS_01": {
+    "metadata": {
+      "titleEn": "Conjunction Basics",
+      "titlePa": "ਸੰਯੋਜਕ ਮੁੱਢ",
+      "labelEn": "Conjunction Basics",
+      "labelPa": "ਸੰਯੋਜਕ ਮੁੱਢ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: Conjunctions",
+        "titlePa": "ਸਿੱਖੋ: ਸੰਯੋਜਕ",
+        "descEn": "Use connecting words to join ideas clearly.",
+        "descPa": "ਵਿਚਾਰਾਂ ਨੂੰ ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ ਜੋੜਨ ਲਈ ਸੰਯੋਜਕ ਸ਼ਬਦ ਵਰਤੋ।",
+        "pointsAvailable": 49
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Conjunctions connect ideas (and, but, or).",
+        "contentPa": "ਸੰਯੋਜਕ ਵਿਚਾਰਾਂ ਨੂੰ ਜੋੜਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "Apples and oranges. Big but slow. Tea or coffee.",
+        "examplePa": "ਸੇਬ ਅਤੇ ਸੰਤਰੇ। ਵੱਡਾ ਪਰ ਹੌਲਾ। ਚਾਹ ਜਾਂ ਕਾਫੀ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_in_tap_the_conjunction_in_the_se",
+        "englishText": "\"I like apples and oranges.\" — Is \"and\" a conjunction?",
+        "punjabiText": "\"ਮੈਨੂੰ ਸੇਬ ਅਤੇ ਸੰਤਰੇ ਪਸੰਦ ਹਨ।\" — ਕੀ \"and\" ਸੰਯੋਜਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “And” joins two words or ideas.",
+          "pa": "ਹਾਂ। “and” ਦੋ ਸ਼ਬਦ ਜਾਂ ਖ਼ਿਆਲ ਜੋੜਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Yes. “And” joins two words or ideas.",
+          "pa": "ਹਾਂ। “and” ਦੋ ਸ਼ਬਦ ਜਾਂ ਖ਼ਿਆਲ ਜੋੜਦਾ ਹੈ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_in_tap_the_conjunction_that_give",
+        "englishText": "\"Do you want tea or coffee?\" — Is \"or\" a conjunction?",
+        "punjabiText": "\"ਤੁਸੀਂ ਚਾਹ ਚਾਹੁੰਦੇ ਹੋ ਜਾਂ ਕਾਫੀ?\" — ਕੀ \"or\" ਸੰਯੋਜਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Or” shows a choice between options.",
+          "pa": "ਹਾਂ। “or” ਚੋਣ (ਇੱਕ ਜਾਂ ਦੂਜਾ) ਦੱਸਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Yes. “Or” shows a choice between options.",
+          "pa": "ਹਾਂ। “or” ਚੋਣ (ਇੱਕ ਜਾਂ ਦੂਜਾ) ਦੱਸਦਾ ਹੈ।"
+        }
+      },
+      {
+        "type": "definition",
+        "contentEn": "Connector meaning map: and = add, but = contrast, or = choice, because = reason.",
+        "contentPa": "ਜੋੜਕ ਅਰਥ-ਨਕਸ਼ਾ: ਅਤੇ = ਜੋੜਨਾ, ਪਰ = ਵਿਰੋਧ, ਜਾਂ = ਚੋਣ, ਕਿਉਂਕਿ = ਕਾਰਨ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_pick_the_conjunction",
+        "englishText": "Pick the conjunction.",
+        "punjabiText": "ਸੰਯੋਜਕ ਚੁਣੋ।",
+        "options": [
+          "happy",
+          "and",
+          "run"
+        ],
+        "correctAnswer": "and",
+        "points": 5,
+        "hint": {
+          "en": "Conjunction joins two words or ideas.",
+          "pa": "ਸੰਯੋਜਕ ਦੋ ਸ਼ਬਦ ਜਾਂ ਵਿਚਾਰ ਜੋੜਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'and' is a conjunction because it joins items of similar type.",
+          "pa": "'and' ਸੰਯੋਜਕ ਹੈ ਕਿਉਂਕਿ ਇਹ ਸਮਾਨ ਚੀਜ਼ਾਂ/ਵਿਚਾਰਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Milk and bread",
+          "pa": "ਦੁੱਧ ਅਤੇ ਰੋਟੀ",
+          "highlight": {
+            "en": [
+              "and"
+            ],
+            "pa": [
+              "ਅਤੇ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "happy": {
+            "en": "'happy' is an adjective that describes feeling/quality, not a connector.",
+            "pa": "'happy' ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਗੁਣ/ਭਾਵਨਾ ਦੱਸਦਾ ਹੈ, ਜੋੜਨ ਵਾਲਾ ਸ਼ਬਦ ਨਹੀਂ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          },
+          "run": {
+            "en": "'run' is a verb (action), not a conjunction.",
+            "pa": "'run' ਕਿਰਿਆ ਹੈ (ਕੰਮ ਦੱਸਦਾ ਹੈ), ਸੰਯੋਜਕ ਨਹੀਂ।",
+            "posEn": "verb",
+            "posPa": "ਕਿਰਿਆ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Cats and dogs.",
+            "sentencePa": "ਬਿੱਲੀਆਂ ਅਤੇ ਕੁੱਤੇ।",
+            "explainEn": "And connects two nouns.",
+            "explainPa": "'and' ਦੋ ਨਾਂ ਜੋੜਦਾ ਹੈ।",
+            "highlight": "and"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_complete_do_you_want_pizza_burge",
+        "englishText": "Complete: Do you want pizza ___ burger?",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਕੀ ਤੁਹਾਨੂੰ ਪੀਜ਼ਾ ___ ਬਰਗਰ ਚਾਹੀਦਾ ਹੈ?",
+        "options": [
+          "or",
+          "and",
+          "but"
+        ],
+        "correctAnswer": "or",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"or\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"or\". Example: Do you want tea or coffee?",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"or\"। ਉਦਾਹਰਨ: ਕੀ ਤੁਹਾਨੂੰ ਚਾਹ ਜਾਂ ਕੌਫੀ ਚਾਹੀਦੀ ਹੈ?"
+        },
+        "workedExample": {
+          "en": "Tea or coffee?",
+          "pa": "ਚਾਹ ਜਾਂ ਕਾਫ਼ੀ?",
+          "highlight": "or"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Tea or coffee?",
+            "sentencePa": "ਚਾਹ ਜਾਂ ਕਾਫ਼ੀ?",
+            "explainEn": "Or offers a choice.",
+            "explainPa": "or ਚੋਣ ਦਿੰਦਾ ਹੈ।",
+            "highlight": "or"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_which_is_a_conjunction",
+        "englishText": "Which is a conjunction?",
+        "punjabiText": "ਕਿਹੜਾ ਸੰਯੋਜਕ ਹੈ?",
+        "options": [
+          "fast",
+          "because",
+          "blue"
+        ],
+        "correctAnswer": "because",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"because\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"because\". Example: I stayed home because I was sick.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"because\"। ਉਦਾਹਰਨ: ਮੈਂ ਘਰ ਰਿਹਾ ਕਿਉਂਕਿ ਮੈਂ ਬੀਮਾਰ ਸੀ।"
+        },
+        "workedExample": {
+          "en": "I am happy because you are here.",
+          "pa": "ਮੈਂ ਖੁਸ਼ ਹਾਂ ਕਿਉਂਕਿ ਤੁਸੀਂ ਇੱਥੇ ਹੋ।",
+          "highlight": "because"
+        },
+        "examples": [
+          {
+            "sentenceEn": "I am happy because you are here.",
+            "sentencePa": "ਮੈਂ ਖੁਸ਼ ਹਾਂ ਕਿਉਂਕਿ ਤੁਸੀਂ ਇੱਥੇ ਹੋ।",
+            "explainEn": "'because' joins the main idea with its reason.",
+            "explainPa": "'because' ਮੁੱਖ ਵਿਚਾਰ ਨੂੰ ਉਸਦੇ ਕਾਰਨ ਨਾਲ ਜੋੜਦਾ ਹੈ।",
+            "highlight": "because"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_this_word_shows_contrast",
+        "englishText": "This word shows contrast: ___",
+        "punjabiText": "ਇਹ ਸ਼ਬਦ ਭਿੰਨਤਾ ਦਿਖਾਉਂਦਾ ਹੈ: ___",
+        "options": [
+          "and",
+          "but",
+          "or"
+        ],
+        "correctAnswer": "but",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"but\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"but\". Example: I am tired, but I will work.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"but\"। ਉਦਾਹਰਨ: ਮੈਂ ਥੱਕਿਆ ਹਾਂ, ਪਰ ਮੈਂ ਕੰਮ ਕਰਾਂਗਾ।"
+        },
+        "workedExample": {
+          "en": "He is tall but shy.",
+          "pa": "ਉਹ ਲੰਬਾ ਪਰ ਸ਼ਰਮਾਲਾ ਹੈ।",
+          "highlight": "but"
+        },
+        "examples": [
+          {
+            "sentenceEn": "He is tall but shy.",
+            "sentencePa": "ਉਹ ਲੰਬਾ ਪਰ ਸ਼ਰਮਾਲਾ ਹੈ।",
+            "explainEn": "But shows opposite ideas.",
+            "explainPa": "but ਵਿਪਰੀਤ ਵਿਚਾਰ ਜੋੜਦਾ ਹੈ।",
+            "highlight": "but"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_is_apples_and_oranges_the_right_",
+        "englishText": "Is \"Apples and oranges\" the right word?",
+        "punjabiText": "ਕੀ \"Apples and oranges\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “And” joins the two nouns: apples + oranges.",
+          "pa": "ਹਾਂ। “and” ਦੋ ਨਾਂ ਜੋੜਦਾ ਹੈ: apples + oranges।"
+        },
+        "workedExample": {
+          "en": "Pens and pencils.",
+          "pa": "ਪੈਨ ਅਤੇ ਪੈਨਸਿਲਾਂ।",
+          "highlight": "and"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Pens and pencils.",
+            "sentencePa": "ਪੈਨ ਅਤੇ ਪੈਨਸਿਲਾਂ।",
+            "explainEn": "And joins similar words.",
+            "explainPa": "and ਸਮਾਨ ਸ਼ਬਦ ਜੋੜਦਾ ਹੈ।",
+            "highlight": "and"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_conjunctions_connect_together",
+        "englishText": "Conjunctions connect ___ together.",
+        "punjabiText": "ਸੰਯੋਜਕ ___ ਨੂੰ ਜੋੜਦੇ ਹਨ।",
+        "options": [
+          "letters",
+          "words or ideas",
+          "sounds"
+        ],
+        "correctAnswer": "words or ideas",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"words or ideas\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"words or ideas\". Example: \"And\" connects words.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"words or ideas\"। ਉਦਾਹਰਨ: \"and\" ਸ਼ਬਦਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I like pizza and you like salad.",
+          "pa": "ਮੈਂ ਪਿਜ਼ਾ ਪਸੰਦ ਕਰਦਾ ਹਾਂ ਅਤੇ ਤੁਸੀਂ ਸਲਾਦ ਪਸੰਦ ਕਰਦੇ ਹੋ।",
+          "highlight": "and"
+        },
+        "examples": [
+          {
+            "sentenceEn": "I like pizza and you like salad.",
+            "sentencePa": "ਮੈਂ ਪਿਜ਼ਾ ਪਸੰਦ ਕਰਦਾ ਹਾਂ ਅਤੇ ਤੁਸੀਂ ਸਲਾਦ ਪਸੰਦ ਕਰਦੇ ਹੋ।",
+            "explainEn": "And joins two ideas.",
+            "explainPa": "and ਦੋ ਵਿਚਾਰ ਜੋੜਦਾ ਹੈ।",
+            "highlight": "and"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_tired_but_finished",
+        "englishText": "I was tired, ___ I finished my homework.",
+        "punjabiText": "ਮੈਂ ਥੱਕਿਆ ਸੀ, ___ ਮੈਂ ਹੋਮਵਰਕ ਮੁਕਾਇਆ।",
+        "options": [
+          {
+            "en": "but",
+            "pa": "ਪਰ"
+          },
+          {
+            "en": "or",
+            "pa": "ਜਾਂ"
+          },
+          {
+            "en": "and",
+            "pa": "ਅਤੇ"
+          }
+        ],
+        "correctAnswer": "but",
+        "points": 5,
+        "hint": {
+          "en": "Choose the conjunction that shows contrast.",
+          "pa": "ਉਹ ਸੰਯੋਜਕ ਚੁਣੋ ਜੋ ਵਿਰੋਧ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'but' is correct because the two ideas contrast each other.",
+          "pa": "'but' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਦੋਵੇਂ ਵਿਚਾਰ ਇੱਕ ਦੂਜੇ ਦੇ ਵਿਰੁੱਧ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "It was cold, but we played.",
+          "pa": "ਠੰਢ ਸੀ, ਪਰ ਅਸੀਂ ਖੇਡੇ।",
+          "highlight": "but"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conjunction_basics_01_stayed_home_because",
+        "englishText": "We stayed home ___ it was raining.",
+        "punjabiText": "ਅਸੀਂ ਘਰ ਰਹੇ ___ ਮੀਂਹ ਪੈ ਰਿਹਾ ਸੀ।",
+        "options": [
+          {
+            "en": "because",
+            "pa": "ਕਿਉਂਕਿ"
+          },
+          {
+            "en": "and",
+            "pa": "ਅਤੇ"
+          },
+          {
+            "en": "or",
+            "pa": "ਜਾਂ"
+          }
+        ],
+        "correctAnswer": "because",
+        "points": 5,
+        "hint": {
+          "en": "Pick the conjunction that introduces a reason.",
+          "pa": "ਉਹ ਸੰਯੋਜਕ ਚੁਣੋ ਜੋ ਕਾਰਨ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'because' correctly links the action with its reason.",
+          "pa": "'because' ਕਿਰਿਆ ਨੂੰ ਉਸਦੇ ਕਾਰਨ ਨਾਲ ਠੀਕ ਤਰ੍ਹਾਂ ਜੋੜਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She smiled because she was happy.",
+          "pa": "ਉਹ ਮੁਸਕਰਾਈ ਕਿਉਂਕਿ ਉਹ ਖੁਸ਼ ਸੀ।",
+          "highlight": "because"
+        }
+      }
+    ]
+  },
+  "L_CONJ_JOINING_01": {
+    "metadata": {
+      "titleEn": "Conjunctions: Joining Ideas",
+      "titlePa": "ਸੰਯੋਜਕ: ਖ਼ਿਆਲ ਜੋੜਨਾ",
+      "labelEn": "Conjunctions: Joining Ideas",
+      "labelPa": "ਸੰਯੋਜਕ: ਖ਼ਿਆਲ ਜੋੜਨਾ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: and/but/or/so/because",
+        "titlePa": "ਸਿੱਖੋ: ਅਤੇ/ਪਰ/ਜਾਂ/ਇਸ ਲਈ/ਕਿਉਂਕਿ",
+        "descEn": "Join words and clauses with common conjunctions.",
+        "descPa": "ਆਮ ਸੰਯੋਜਕਾਂ ਨਾਲ ਸ਼ਬਦ ਅਤੇ ਵਾਕ-ਖੰਡ ਜੋੜੋ।",
+        "pointsAvailable": 40
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Conjunctions connect words or clauses (and, but, or).",
+        "contentPa": "ਸੰਯੋਜਕ ਸ਼ਬਦਾਂ ਜਾਂ ਵਾਕ-ਖੰਡਾਂ ਨੂੰ ਜੋੜਦੇ ਹਨ (ਅਤੇ, ਪਰ, ਜਾਂ)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "I like apples and bananas.",
+        "examplePa": "ਮੈਨੂੰ ਸੇਬ ਅਤੇ ਕੇਲੇ ਪਸੰਦ ਹਨ।",
+        "highlightedWords": [
+          "and"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_in_i_like_tea_and_coffee_is_and_",
+        "englishText": "\"I like tea and coffee.\" — Is \"and\" the joining word?",
+        "punjabiText": "\"ਮੈਨੂੰ ਚਾਹ ਅਤੇ ਕਾਫੀ ਪਸੰਦ ਹਨ।\" — ਕੀ \"and\" ਜੋੜਨ ਵਾਲਾ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Correct: Great!",
+          "pa": "ਸਹੀ: ਵਧੀਆ!"
+        },
+        "workedExample": {
+          "en": "Yes. “And” connects two items: tea + coffee.",
+          "pa": "ਹਾਂ। “and” ਦੋ ਚੀਜ਼ਾਂ ਜੋੜਦਾ ਹੈ: ਚਾਹ + ਕਾਫੀ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_is_and_the_right_word",
+        "englishText": "Is \"and\" the right word?",
+        "punjabiText": "ਕੀ \"and\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Choose the joining word, not a describing/action word.",
+          "pa": "ਜੋੜਣ ਵਾਲਾ ਸ਼ਬਦ ਚੁਣੋ, ਵਰਣਨਾ/ਕਿਰਿਆ ਵਾਲਾ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "'and' joins words or ideas, so it is the conjunction here.",
+          "pa": "'and' ਸ਼ਬਦ ਜਾਂ ਖ਼ਿਆਲ ਜੋੜਦਾ ਹੈ, ਇਸ ਲਈ ਇੱਥੇ ਸੰਯੋਜਕ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Ravi and Simran are friends.",
+          "pa": "ਰਵੀ ਅਤੇ ਸਿਮਰਨ ਦੋਸਤ ਹਨ।",
+          "highlight": {
+            "en": [
+              "and"
+            ],
+            "pa": [
+              "ਅਤੇ"
+            ]
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_he_was_tired_he_kept_working",
+        "englishText": "He was tired, ___ he kept working.",
+        "punjabiText": "ਉਹ ਥੱਕਿਆ ਹੋਇਆ ਸੀ, ___ ਉਹ ਕੰਮ ਕਰਦਾ ਰਿਹਾ।",
+        "options": [
+          {
+            "en": "so",
+            "pa": "ਇਸ ਲਈ"
+          },
+          {
+            "en": "but",
+            "pa": "ਪਰ"
+          },
+          {
+            "en": "or",
+            "pa": "ਜਾਂ"
+          }
+        ],
+        "correctAnswer": "but",
+        "points": 5,
+        "hint": {
+          "en": "Look for contrast between the two parts of the sentence.",
+          "pa": "ਵਾਕ ਦੇ ਦੋ ਹਿੱਸਿਆਂ ਵਿਚਲਾ ਵਿਰੋਧ ਦੇਖੋ।"
+        },
+        "explanation": {
+          "en": "'but' shows contrast, which fits this sentence.",
+          "pa": "'but' ਵਿਰੋਧ ਦਿਖਾਉਂਦਾ ਹੈ, ਜੋ ਇਸ ਵਾਕ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "It was raining, but we played.",
+          "pa": "ਬਰਸਾਤ ਸੀ, ਪਰ ਅਸੀਂ ਖੇਡੇ।",
+          "highlight": {
+            "en": [
+              "but"
+            ],
+            "pa": [
+              "ਪਰ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "so": {
+            "en": "'so' shows a result, but this sentence needs contrast between tired and kept working.",
+            "pa": "'so' ਨਤੀਜਾ ਦੱਸਦਾ ਹੈ, ਪਰ ਇਸ ਵਾਕ ਵਿੱਚ ਥੱਕਿਆ ਹੋਣ ਅਤੇ ਫਿਰ ਵੀ ਕੰਮ ਕਰਨ ਦਾ ਵਿਰੋਧ ਹੈ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          },
+          "or": {
+            "en": "'or' gives a choice, but this sentence is not offering two choices.",
+            "pa": "'or' ਚੋਣ ਦਿੰਦਾ ਹੈ, ਪਰ ਇਸ ਵਾਕ ਵਿੱਚ ਦੋ ਚੋਣਾਂ ਨਹੀਂ ਦਿੱਤੀਆਂ ਜਾ ਰਹੀਆਂ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_complete_you_ready",
+        "englishText": "Complete: ___ you ready?",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ___ ਤੁਸੀਂ ਤਿਆਰ ਹੋ?",
+        "options": [
+          "and",
+          "but",
+          "or"
+        ],
+        "correctAnswer": "or",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"or\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"or\". Example: Ready or not, here I come!",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"or\"। ਉਦਾਹਰਨ: ਤਿਆਰ ਹੋਵੋ ਜਾਂ ਨਾ, ਮੈਂ ਆ ਗਿਆ!"
+        },
+        "workedExample": {
+          "en": "Would you like tea or coffee?",
+          "pa": "ਤੁਸੀਂ ਚਾਹ ਜਾਂ ਕਾਫ਼ੀ ਲੈਣਾ ਚਾਹੋਗੇ/ਚਾਹੋਗੀਆਂ?",
+          "highlight": "or"
+        },
+        "wrongOptionExplanations": {
+          "and": {
+            "en": "'and' joins both ideas together, but this sentence asks for a choice question.",
+            "pa": "'and' ਦੋਵੇਂ ਵਿਚਾਰ ਇਕੱਠੇ ਜੋੜਦਾ ਹੈ, ਪਰ ਇਹ ਵਾਕ ਚੋਣ ਵਾਲਾ ਪ੍ਰਸ਼ਨ ਹੈ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          },
+          "but": {
+            "en": "'but' shows contrast. Here we need a choice between two possibilities.",
+            "pa": "'but' ਵਿਰੋਧ ਦੱਸਦਾ ਹੈ। ਇੱਥੇ ਸਾਨੂੰ ਦੋ ਸੰਭਾਵਨਾਵਾਂ ਵਿਚੋਂ ਚੋਣ ਦਿਖਾਉਣੀ ਹੈ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Would you like tea or coffee?",
+            "sentencePa": "ਤੁਸੀਂ ਚਾਹ ਜਾਂ ਕਾਫ਼ੀ ਲੈਣਾ ਚਾਹੋਗੇ/ਚਾਹੋਗੀਆਂ?",
+            "explainEn": "'or' offers a choice.",
+            "explainPa": "'or' ਚੋਣ ਦਿੰਦਾ ਹੈ।",
+            "highlight": "or"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_she_was_late_she_ran",
+        "englishText": "She was late, ___ she ran.",
+        "punjabiText": "ਉਹ ਦੇਰ ਨਾਲ ਸੀ, ___ ਉਹ ਦੌੜੀ।",
+        "options": [
+          "and",
+          "because",
+          "or"
+        ],
+        "correctAnswer": "because",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"because\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"because\". Example: She ran because she was late.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"because\"। ਉਦਾਹਰਨ: ਉਹ ਦੌੜੀ ਕਿਉਂਕਿ ਉਹ ਦੇਰ ਨਾਲ ਸੀ।"
+        },
+        "workedExample": {
+          "en": "He didn't go because he was ill.",
+          "pa": "ਉਹ ਬਿਮਾਰ ਸੀ ਇਸ ਲਈ ਨਹੀਂ ਗਿਆ।",
+          "highlight": "because"
+        },
+        "wrongOptionExplanations": {
+          "and": {
+            "en": "'and' just adds another idea. This sentence needs a reason word.",
+            "pa": "'and' ਸਿਰਫ਼ ਇਕ ਹੋਰ ਵਿਚਾਰ ਜੋੜਦਾ ਹੈ। ਇਸ ਵਾਕ ਵਿੱਚ ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ ਚਾਹੀਦਾ ਹੈ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          },
+          "or": {
+            "en": "'or' gives a choice, but this sentence explains why she ran.",
+            "pa": "'or' ਚੋਣ ਦਿੰਦਾ ਹੈ, ਪਰ ਇਹ ਵਾਕ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਉਂ ਦੌੜੀ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "He didn't go because he was ill.",
+            "sentencePa": "ਉਹ ਬਿਮਾਰ ਸੀ ਇਸ ਲਈ ਨਹੀਂ ਗਿਆ।",
+            "explainEn": "'because' shows a reason.",
+            "explainPa": "'because' ਕਾਰਨ ਦੱਸਦਾ ਹੈ।",
+            "highlight": "because"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_you_can_come_stay_home",
+        "englishText": "You can come ___ stay home.",
+        "punjabiText": "ਤੁਸੀਂ ਆ ਸਕਦੇ ਹੋ ___ ਘਰ ਰਹ ਸਕਦੇ ਹੋ।",
+        "options": [
+          "and",
+          "but",
+          "or"
+        ],
+        "correctAnswer": "or",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"or\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"or\". Example: You can come or stay home.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"or\"। ਉਦਾਹਰਨ: ਤੁਸੀਂ ਆ ਸਕਦੇ ਹੋ ਜਾਂ ਘਰ ਰਹ ਸਕਦੇ ਹੋ।"
+        },
+        "workedExample": {
+          "en": "Correct answer: \"or\". Example: You can come or stay home.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"or\"। ਉਦਾਹਰਨ: ਤੁਸੀਂ ਆ ਸਕਦੇ ਹੋ ਜਾਂ ਘਰ ਰਹ ਸਕਦੇ ਹੋ।"
+        },
+        "wrongOptionExplanations": {
+          "and": {
+            "en": "'and' means both actions happen. Here you choose one option: come or stay home.",
+            "pa": "'and' ਦਾ ਮਤਲਬ ਦੋਵੇਂ ਕੰਮ ਹੋਣ। ਇੱਥੇ ਇੱਕ ਚੋਣ ਹੈ: ਆਓ ਜਾਂ ਘਰ ਰਹੋ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          },
+          "but": {
+            "en": "'but' shows contrast, but this sentence gives an either-or choice.",
+            "pa": "'but' ਵਿਰੋਧ ਦਿਖਾਉਂਦਾ ਹੈ, ਪਰ ਇਸ ਵਾਕ ਵਿੱਚ either-or ਚੋਣ ਹੈ।",
+            "posEn": "conjunction",
+            "posPa": "ਸੰਯੋਜਕ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_hungry_so_ate",
+        "englishText": "He was hungry, ___ he ate.",
+        "punjabiText": "ਉਹ ਭੁੱਖਾ ਸੀ, ___ ਉਸਨੇ ਖਾਧਾ।",
+        "options": [
+          "so",
+          "but",
+          "or"
+        ],
+        "correctAnswer": "so",
+        "points": 5,
+        "hint": {
+          "en": "Choose the conjunction that shows result.",
+          "pa": "ਉਹ ਸੰਯੋਜਕ ਚੁਣੋ ਜੋ ਨਤੀਜਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'so' is correct because eating is the result of being hungry.",
+          "pa": "'so' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਭੁੱਖ ਦਾ ਨਤੀਜਾ ਖਾਣਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "It was late, so we left.",
+          "pa": "ਦੇਰ ਹੋ ਗਈ ਸੀ, ਇਸ ਲਈ ਅਸੀਂ ਚਲੇ ਗਏ।",
+          "highlight": "so"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_conj_joining_01_i_like_tea_and_coffee",
+        "englishText": "I like tea ___ coffee.",
+        "punjabiText": "ਮੈਨੂੰ ਚਾਹ ___ ਕਾਫੀ ਪਸੰਦ ਹੈ।",
+        "options": [
+          {
+            "en": "and",
+            "pa": "ਅਤੇ"
+          },
+          {
+            "en": "because",
+            "pa": "ਕਿਉਂਕਿ"
+          },
+          {
+            "en": "so",
+            "pa": "ਇਸ ਲਈ"
+          }
+        ],
+        "correctAnswer": "and",
+        "points": 5,
+        "hint": {
+          "en": "Use the conjunction that adds one item to another.",
+          "pa": "ਉਹ ਸੰਯੋਜਕ ਵਰਤੋ ਜੋ ਇੱਕ ਚੀਜ਼ ਨੂੰ ਦੂਜੀ ਨਾਲ ਜੋੜੇ।"
+        },
+        "explanation": {
+          "en": "'and' is correct because it joins two liked items.",
+          "pa": "'and' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਦੋ ਪਸੰਦੀਦਾ ਚੀਜ਼ਾਂ ਜੋੜਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Rice and dal",
+          "pa": "ਚੌਲ ਅਤੇ ਦਾਲ",
+          "highlight": "and"
+        }
+      }
+    ]
+  },
+  "L_ARTICLE_BASICS_01": {
+    "metadata": {
+      "titleEn": "Article Basics",
+      "titlePa": "ਲੇਖ ਮੁੱਢ",
+      "labelEn": "Article Basics",
+      "labelPa": "ਲੇਖ ਮੁੱਢ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: Articles",
+        "titlePa": "ਸਿੱਖੋ: ਲੇਖ",
+        "descEn": "A, An, The.",
+        "descPa": "a, an, the ਦੀ ਸਹੀ ਵਰਤੋਂ ਸਿੱਖੋ।",
+        "pointsAvailable": 49
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Articles go before nouns: a, an (indefinite), the (definite).",
+        "contentPa": "ਲੇਖ ਨਾਮ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦੇ ਹਨ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "A cat. An apple. The sky.",
+        "examplePa": "ਇੱਕ ਬਿੱਲੀ। ਇੱਕ ਸੇਬ। ਆਸਮਾਨ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_in_tap_the_correct_article_is_an",
+        "englishText": "\"She ate an apple.\" — Is \"an\" the correct article here?",
+        "punjabiText": "\"ਉਸ ਨੇ ਇੱਕ ਸੇਬ ਖਾਧਾ।\" — ਕੀ ਇੱਥੇ \"an\" ਸਹੀ ਲੇਖ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. Use “an” before a vowel-sound word (like “apple”).",
+          "pa": "ਹਾਂ। ਸਵਰ-ਧੁਨੀ ਵਾਲੇ ਸ਼ਬਦ (ਜਿਵੇਂ “apple”) ਤੋਂ ਪਹਿਲਾਂ “an” ਵਰਤਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Yes. Use “an” before a vowel-sound word (like “apple”).",
+          "pa": "ਹਾਂ। ਸਵਰ-ਧੁਨੀ ਵਾਲੇ ਸ਼ਬਦ (ਜਿਵੇਂ “apple”) ਤੋਂ ਪਹਿਲਾਂ “an” ਵਰਤਦੇ ਹਨ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_in_tap_the_correct_article_befor",
+        "englishText": "\"I ate a banana.\" — Is \"a\" the correct article here?",
+        "punjabiText": "\"ਮੈਂ ਇੱਕ ਕੇਲਾ ਖਾਧਾ।\" — ਕੀ ਇੱਥੇ \"a\" ਸਹੀ ਲੇਖ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. Use “a” before a consonant-sound word (like “banana”).",
+          "pa": "ਹਾਂ। ਵਿਅੰਜਨ-ਧੁਨੀ ਵਾਲੇ ਸ਼ਬਦ (ਜਿਵੇਂ “banana”) ਤੋਂ ਪਹਿਲਾਂ “a” ਵਰਤਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Yes. Use “a” before a consonant-sound word (like “banana”).",
+          "pa": "ਹਾਂ। ਵਿਅੰਜਨ-ਧੁਨੀ ਵਾਲੇ ਸ਼ਬਦ (ਜਿਵੇਂ “banana”) ਤੋਂ ਪਹਿਲਾਂ “a” ਵਰਤਦੇ ਹਨ।"
+        }
+      },
+      {
+        "type": "definition",
+        "contentEn": "Use sound, not just first letter: use 'an' before vowel sounds (an apple, an hour) and 'a' before consonant sounds (a banana, a university).",
+        "contentPa": "ਸਿਰਫ਼ ਪਹਿਲਾ ਅੱਖਰ ਨਾ ਦੇਖੋ, ਧੁਨੀ ਸੁਣੋ: ਸਵਰ ਧੁਨੀ ਤੋਂ ਪਹਿਲਾਂ 'an' ਅਤੇ ਵਿਅੰਜਨ ਧੁਨੀ ਤੋਂ ਪਹਿਲਾਂ 'a' ਵਰਤੋ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_pick_the_article",
+        "englishText": "Pick the article.",
+        "punjabiText": "ਲੇਖ ਚੁਣੋ।",
+        "options": [
+          "the",
+          "cat",
+          "happy"
+        ],
+        "correctAnswer": "the",
+        "points": 5,
+        "hint": {
+          "en": "Article appears before a noun.",
+          "pa": "ਲੇਖ ਨਾਂ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'the' is an article used for a specific noun.",
+          "pa": "'the' ਲੇਖ ਹੈ ਜੋ ਖ਼ਾਸ ਨਾਂ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "the teacher",
+          "pa": "ਉਹ ਖ਼ਾਸ ਅਧਿਆਪਕ",
+          "highlight": {
+            "en": [
+              "the"
+            ],
+            "pa": [
+              "ਖ਼ਾਸ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "cat": {
+            "en": "'cat' is a noun (name), not an article.",
+            "pa": "'cat' ਨਾਂ ਹੈ, ਲੇਖ ਨਹੀਂ।",
+            "posEn": "noun",
+            "posPa": "ਨਾਂ"
+          },
+          "happy": {
+            "en": "'happy' is an adjective, not an article.",
+            "pa": "'happy' ਵਿਸ਼ੇਸ਼ਣ ਹੈ, ਲੇਖ ਨਹੀਂ।",
+            "posEn": "adjective",
+            "posPa": "ਵਿਸ਼ੇਸ਼ਣ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "The dog is sleeping.",
+            "sentencePa": "ਕੁੱਤਾ ਸੋ ਰਿਹਾ ਹੈ।",
+            "explainEn": "The is a definite article.",
+            "explainPa": "'the' ਨਿਸ਼ਚਿਤ ਲੇਖ ਹੈ।",
+            "highlight": "the"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_complete_apple",
+        "englishText": "Complete: ___ apple.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ___ apple.",
+        "options": [
+          "a",
+          "an",
+          "the"
+        ],
+        "correctAnswer": "an",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"an\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"an\". Example: I ate an apple.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"an\"। ਉਦਾਹਰਨ: ਮੈਂ ਇੱਕ ਸੇਬ ਖਾਧਾ।"
+        },
+        "workedExample": {
+          "en": "An apple a day.",
+          "pa": "ਰੋਜ਼ ਇੱਕ ਸੇਬ।",
+          "highlight": "an"
+        },
+        "examples": [
+          {
+            "sentenceEn": "An apple a day.",
+            "sentencePa": "ਰੋਜ਼ ਇੱਕ ਸੇਬ।",
+            "explainEn": "An comes before vowel sounds.",
+            "explainPa": "'an' ਸਵਰ ਧੁਨੀ ਤੋਂ ਪਹਿਲਾਂ ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "an"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_which_phrase_correctly_uses_an_a",
+        "englishText": "Which phrase correctly uses an article before 'apple'?",
+        "punjabiText": "'apple' ਤੋਂ ਪਹਿਲਾਂ ਕਿਹੜਾ ਲੇਖ ਸਹੀ ਲੱਗਦਾ ਹੈ?",
+        "options": [
+          "a apple",
+          "an apple",
+          "a banana"
+        ],
+        "correctAnswer": "an apple",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"an apple\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"an apple\". Example: She has an apple.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"an apple\"। ਉਦਾਹਰਨ: ਉਸ ਕੋਲ ਇੱਕ ਸੇਬ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "I want an orange.",
+          "pa": "ਮੈਂ ਸੰਤਰਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।",
+          "highlight": "an"
+        },
+        "examples": [
+          {
+            "sentenceEn": "I want an orange.",
+            "sentencePa": "ਮੈਂ ਸੰਤਰਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।",
+            "explainEn": "An before vowel (orange starts with 'o').",
+            "explainPa": "an ਸਵਰ ਤੋਂ ਪਹਿਲਾਂ।",
+            "highlight": "an"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_when_do_we_use_the",
+        "englishText": "When do we use 'the'?",
+        "punjabiText": "ਅਸੀਂ 'the' ਕਦੋਂ ਵਰਤਦੇ ਹਾਂ?",
+        "options": [
+          "for any noun",
+          "for specific nouns",
+          "for colors"
+        ],
+        "correctAnswer": "for specific nouns",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"for specific nouns\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"for specific nouns\". Example: The sun is bright.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"for specific nouns\"। ਉਦਾਹਰਨ: ਸੂਰਜ ਚਮਕਦਾਰ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "The teacher is kind.",
+          "pa": "ਅਧਿਆਪਕ ਮਿਹਰਬਾਨ ਹੈ।",
+          "highlight": "the"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The teacher is kind.",
+            "sentencePa": "ਅਧਿਆਪਕ ਮਿਹਰਬਾਨ ਹੈ।",
+            "explainEn": "The = specific teacher.",
+            "explainPa": "'the' ਖਾਸ ਅਧਿਆਪਕ ਲਈ ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "the"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_is_i_have_a_dog_the_right_word",
+        "englishText": "Is \"I have a dog\" the right word?",
+        "punjabiText": "ਕੀ \"I have a dog\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “A” is correct before “dog” (a consonant sound).",
+          "pa": "ਹਾਂ। “dog” (ਵਿਅੰਜਨ-ਧੁਨੀ) ਤੋਂ ਪਹਿਲਾਂ “a” ਸਹੀ ਲੇਖ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She is a doctor.",
+          "pa": "ਉਹ ਇੱਕ ਡਾਕਟਰ ਹੈ।",
+          "highlight": "a"
+        },
+        "examples": [
+          {
+            "sentenceEn": "She is a doctor.",
+            "sentencePa": "ਉਹ ਇੱਕ ਡਾਕਟਰ ਹੈ।",
+            "explainEn": "A before consonant.",
+            "explainPa": "'a' ਵਿਅੰਜਨ ਧੁਨੀ ਤੋਂ ਪਹਿਲਾਂ ਵਰਤਦੇ ਹਾਂ।",
+            "highlight": "a"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_what_does_a_mean",
+        "englishText": "What does 'a' mean?",
+        "punjabiText": "'a' ਦਾ ਮਤਲਬ ਕੀ ਹੈ?",
+        "options": [
+          "one of many",
+          "something specific",
+          "not important"
+        ],
+        "correctAnswer": "one of many",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"one of many\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"one of many\". Example: I saw a dog.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"one of many\"। ਉਦਾਹਰਨ: ਮੈਂ ਇੱਕ ਕੁੱਤਾ ਵੇਖਿਆ।"
+        },
+        "workedExample": {
+          "en": "I saw a bird.",
+          "pa": "ਮੈਂ ਇੱਕ ਪੰਛੀ ਵੇਖਿਆ।",
+          "highlight": "a"
+        },
+        "examples": [
+          {
+            "sentenceEn": "I saw a bird.",
+            "sentencePa": "ਮੈਂ ਇੱਕ ਪੰਛੀ ਵੇਖਿਆ।",
+            "explainEn": "A = any one bird, not specific.",
+            "explainPa": "'a' ਕਿਸੇ ਇੱਕ ਅਨਿਰਧਾਰਤ ਚੀਜ਼/ਵਿਅਕਤੀ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।",
+            "highlight": "a"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_an_umbrella",
+        "englishText": "Complete: ___ umbrella is in the car.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ___ umbrella ਕਾਰ ਵਿੱਚ ਹੈ।",
+        "options": [
+          {
+            "en": "A",
+            "pa": "ਏ"
+          },
+          {
+            "en": "An",
+            "pa": "ਐਨ"
+          },
+          {
+            "en": "The",
+            "pa": "ਦ"
+          }
+        ],
+        "correctAnswer": "An",
+        "points": 5,
+        "hint": {
+          "en": "Use 'an' before vowel sounds.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'An' is correct because 'umbrella' starts with a vowel sound.",
+          "pa": "'An' ਸਹੀ ਹੈ ਕਿਉਂਕਿ 'umbrella' ਸਵਰ ਧੁਨੀ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "an orange",
+          "pa": "ਇੱਕ ਸੰਤਰਾ",
+          "highlight": "an"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_article_basics_01_close_the_door",
+        "englishText": "Please close ___ door.",
+        "punjabiText": "ਕਿਰਪਾ ਕਰਕੇ ___ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰੋ।",
+        "options": [
+          {
+            "en": "a",
+            "pa": "ਏ"
+          },
+          {
+            "en": "an",
+            "pa": "ਐਨ"
+          },
+          {
+            "en": "the",
+            "pa": "ਦ"
+          }
+        ],
+        "correctAnswer": "the",
+        "points": 5,
+        "hint": {
+          "en": "Use 'the' when both speaker and listener know the noun.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'the door' is correct because it refers to a specific door.",
+          "pa": "'the door' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਖ਼ਾਸ ਦਰਵਾਜ਼ੇ ਲਈ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Please open the window.",
+          "pa": "ਕਿਰਪਾ ਕਰਕੇ ਖਿੜਕੀ ਖੋਲ੍ਹੋ।",
+          "highlight": "the"
+        }
+      }
+    ]
+  },
+  "L_INTERJECTIONS_01": {
+    "metadata": {
+      "titleEn": "Interjections: Feelings",
+      "titlePa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ: ਭਾਵਨਾ",
+      "labelEn": "Interjections: Feelings",
+      "labelPa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ: ਭਾਵਨਾ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: Wow/Ouch/Oops/Shh/Phew",
+        "titlePa": "ਸਿੱਖੋ: ਵਾਹ/ਹਾਏ/ਓਹੋ/ਚੁੱਪ/ਹੁੱਸ਼",
+        "descEn": "Recognize interjections that show sudden feelings.",
+        "descPa": "ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਣ ਵਾਲੇ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਪਛਾਣੋ।",
+        "pointsAvailable": 38
+      },
+      "difficulty": 1
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Interjections express sudden emotion (Wow!, Ouch!).",
+        "contentPa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਦੇ ਹਨ (ਵਾਹ!, ਹਾਏ!)।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "Wow, this cake is tasty!",
+        "examplePa": "ਵਾਹ, ਇਹ ਕੇਕ ਸੁਆਦਲਾ ਹੈ!",
+        "highlightedWords": [
+          "Wow"
+        ],
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_in_wow_this_cake_is_tasty_is_wow",
+        "englishText": "\"Wow! This cake is tasty.\" — Is \"Wow!\" an interjection?",
+        "punjabiText": "\"ਵਾਹ! ਇਹ ਕੇਕ ਸੁਆਦਲਾ ਹੈ।\" — ਕੀ \"Wow!\" ਵਿਸਮਿਕ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Correct: Excellent!",
+          "pa": "ਸਹੀ: ਬਹੁਤ ਵਧੀਆ!"
+        },
+        "workedExample": {
+          "en": "Yes. “Wow!” is an interjection that shows a sudden feeling.",
+          "pa": "ਹਾਂ। “Wow!” ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਹੈ ਜੋ ਅਚਾਨਕ ਭਾਵਨਾ ਦਿਖਾਂਦਾ ਹੈ।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_is_wow_the_right_word",
+        "englishText": "Is \"Wow\" the right word?",
+        "punjabiText": "ਕੀ \"Wow\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Choose the word that shows sudden feeling.",
+          "pa": "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਅਚਾਨਕ ਭਾਵਨਾ ਦਿਖਾਏ।"
+        },
+        "explanation": {
+          "en": "'Wow' expresses sudden feeling, so it is an interjection.",
+          "pa": "'Wow' ਅਚਾਨਕ ਭਾਵਨਾ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Wow! That was amazing.",
+          "pa": "ਵਾਹ! ਇਹ ਕਮਾਲ ਸੀ।",
+          "highlight": {
+            "en": [
+              "Wow!"
+            ],
+            "pa": [
+              "ਵਾਹ!"
+            ]
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_which_shows_pain",
+        "englishText": "Which shows pain?",
+        "punjabiText": "ਕਿਹੜਾ ਦਰਦ ਦੱਸਦਾ ਹੈ?",
+        "options": [
+          "Phew!",
+          "Ouch!",
+          "Shh!"
+        ],
+        "correctAnswer": "Ouch!",
+        "points": 3,
+        "hint": {
+          "en": "Pick the interjection used when someone gets hurt.",
+          "pa": "ਉਹ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਚੁਣੋ ਜੋ ਚੋਟ ਲੱਗਣ ਤੇ ਕਹਿੰਦੇ ਹਨ।"
+        },
+        "explanation": {
+          "en": "'Ouch!' is used to show pain.",
+          "pa": "'Ouch!' ਦਰਦ ਦਿਖਾਉਣ ਲਈ ਵਰਤਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Ouch! My hand hurts.",
+          "pa": "ਓਹ! ਮੇਰਾ ਹੱਥ ਦਰਦ ਕਰਦਾ ਹੈ।",
+          "highlight": {
+            "en": [
+              "Ouch!"
+            ],
+            "pa": [
+              "ਓਹ!"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "Phew!": {
+            "en": "'Phew!' shows relief after tension, not pain.",
+            "pa": "'Phew!' ਤਣਾਅ ਮਗਰੋਂ ਰਾਹਤ ਦੱਸਦਾ ਹੈ, ਦਰਦ ਨਹੀਂ।",
+            "posEn": "interjection",
+            "posPa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ"
+          },
+          "Shh!": {
+            "en": "'Shh!' asks for silence. It does not show getting hurt.",
+            "pa": "'Shh!' ਚੁੱਪ ਰਹਿਣ ਲਈ ਕਹਿੰਦਾ ਹੈ। ਇਹ ਚੋਟ ਲੱਗਣ ਦੀ ਭਾਵਨਾ ਨਹੀਂ ਦੱਸਦਾ।",
+            "posEn": "interjection",
+            "posPa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ"
+          }
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_is_oops_the_right_word",
+        "englishText": "Is \"Oops!\" the right word?",
+        "punjabiText": "ਕੀ \"Oops!\" ਠੀਕ ਸ਼ਬਦ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 5,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. “Oops!” is an interjection used for a small mistake or accident.",
+          "pa": "ਹਾਂ। “Oops!” ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਹੈ ਜੋ ਛੋਟੀ ਗ਼ਲਤੀ/ਹਾਦਸਾ ਹੋਣ 'ਤੇ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Oops! I dropped the cup.",
+          "pa": "ਅਰੇ! ਮੈਂ ਕੱਪ ਡਿੱਗਾ ਦਿੱਤਾ।",
+          "highlight": "Oops"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Oops! I dropped the cup.",
+            "sentencePa": "ਅਰੇ! ਮੈਂ ਕੱਪ ਡਿੱਗਾ ਦਿੱਤਾ।",
+            "explainEn": "'Oops!' shows a mistake.",
+            "explainPa": "'Oops!' ਗਲਤੀ ਦਿਖਾਉਂਦਾ ਹੈ।",
+            "highlight": "Oops"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_shh_means",
+        "englishText": "Shh! means ___.",
+        "punjabiText": "'Shh!' ਦਾ ਮਤਲਬ ___ ਹੈ।",
+        "options": [
+          "be quiet",
+          "hello",
+          "goodbye"
+        ],
+        "correctAnswer": "be quiet",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"be quiet\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"be quiet\". Example: Shh! The baby is sleeping.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"be quiet\"। ਉਦਾਹਰਨ: ਚੁੱਪ! ਬੱਚਾ ਸੋ ਰਿਹਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Shh! The baby is sleeping.",
+          "pa": "ਸ਼੍ਸ਼੍! ਬੱਚਾ ਸੋ ਰਿਹਾ ਹੈ।",
+          "highlight": "Shh"
+        },
+        "wrongOptionExplanations": {
+          "hello": {
+            "en": "'hello' is a greeting. 'Shh!' means please stay quiet.",
+            "pa": "'hello' ਸਲਾਮ ਕਰਨ ਲਈ ਵਰਤਦੇ ਹਨ। 'Shh!' ਦਾ ਅਰਥ ਹੈ ਕਿਰਪਾ ਕਰਕੇ ਚੁੱਪ ਰਹੋ।",
+            "posEn": "greeting",
+            "posPa": "ਸਤਿਕਾਰਕ ਸ਼ਬਦ"
+          },
+          "goodbye": {
+            "en": "'goodbye' is for leaving, not for asking silence.",
+            "pa": "'goodbye' ਵਿਦਾਈ ਲਈ ਵਰਤਦੇ ਹਨ, ਚੁੱਪ ਕਰਵਾਉਣ ਲਈ ਨਹੀਂ।",
+            "posEn": "farewell",
+            "posPa": "ਵਿਦਾਈ ਸ਼ਬਦ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Shh! The baby is sleeping.",
+            "sentencePa": "ਸ਼੍ਸ਼੍! ਬੱਚਾ ਸੋ ਰਿਹਾ ਹੈ।",
+            "explainEn": "'Shh!' requests silence.",
+            "explainPa": "'Shh!' ਖਾਮੋਸ਼ ਰਹਿਣ ਨੂੰ ਕਹਿੰਦਾ ਹੈ।",
+            "highlight": "Shh"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_which_shows_relief",
+        "englishText": "Which shows relief?",
+        "punjabiText": "ਕਿਹੜਾ ਰਾਹਤ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          "Wow!",
+          "Phew!",
+          "Yay!"
+        ],
+        "correctAnswer": "Phew!",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"Phew!\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"Phew!\". Example: Phew! That was close.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"Phew!\"। ਉਦਾਹਰਨ: ਸ਼ੁਕਰ ਹੈ! ਬਚ ਗਏ।"
+        },
+        "workedExample": {
+          "en": "Phew! That was close.",
+          "pa": "ਉਫ਼! ਬਚ ਗਏ।",
+          "highlight": "Phew"
+        },
+        "wrongOptionExplanations": {
+          "Wow!": {
+            "en": "'Wow!' usually shows surprise or admiration, not relief after worry.",
+            "pa": "'Wow!' ਅਕਸਰ ਹੈਰਾਨੀ ਜਾਂ ਪ੍ਰਸ਼ੰਸਾ ਦੱਸਦਾ ਹੈ, ਚਿੰਤਾ ਤੋਂ ਬਾਅਦ ਦੀ ਰਾਹਤ ਨਹੀਂ।",
+            "posEn": "interjection",
+            "posPa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ"
+          },
+          "Yay!": {
+            "en": "'Yay!' shows celebration. Relief after danger is usually 'Phew!'.",
+            "pa": "'Yay!' ਖੁਸ਼ੀ ਵਾਲਾ ਜਸ਼ਨ ਦੱਸਦਾ ਹੈ। ਖਤਰੇ ਤੋਂ ਬਾਅਦ ਰਾਹਤ ਲਈ ਆਮ ਤੌਰ 'ਤੇ 'Phew!' ਕਹਿੰਦੇ ਹਨ।",
+            "posEn": "interjection",
+            "posPa": "ਵਿਸਮਿਆਦਿ ਬੋਧਕ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "Phew! That was close.",
+            "sentencePa": "ਉਫ਼! ਬਚ ਗਏ।",
+            "explainEn": "'Phew!' shows relief.",
+            "explainPa": "'Phew!' ਰਾਹਤ ਦੀ ਭਾਵਨਾ ਦੀ ਨਿਸ਼ਾਨੀ ਹੈ।",
+            "highlight": "Phew"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_which_shows_surprise",
+        "englishText": "Which interjection shows surprise?",
+        "punjabiText": "ਕਿਹੜਾ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਹੈਰਾਨੀ ਦਿਖਾਉਂਦਾ ਹੈ?",
+        "options": [
+          {
+            "en": "Wow!",
+            "pa": "ਵਾਹ!"
+          },
+          {
+            "en": "Shh!",
+            "pa": "ਸ਼ਸ਼!"
+          },
+          {
+            "en": "Ouch!",
+            "pa": "ਹਾਏ!"
+          }
+        ],
+        "correctAnswer": "Wow!",
+        "points": 5,
+        "hint": {
+          "en": "Pick the word used when we are amazed.",
+          "pa": "ਉਹ ਸ਼ਬਦ ਚੁਣੋ ਜੋ ਅਸੀਂ ਹੈਰਾਨ ਹੋਣ 'ਤੇ ਕਹਿੰਦੇ ਹਾਂ।"
+        },
+        "explanation": {
+          "en": "'Wow!' is commonly used to express surprise or admiration.",
+          "pa": "'Wow!' ਆਮ ਤੌਰ 'ਤੇ ਹੈਰਾਨੀ ਜਾਂ ਪ੍ਰਸ਼ੰਸਾ ਦਿਖਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "Wow! That's beautiful.",
+          "pa": "ਵਾਹ! ਇਹ ਸੁੰਦਰ ਹੈ।",
+          "highlight": "Wow!"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_interjections_01_mistake_oops",
+        "englishText": "You made a mistake and say ___.",
+        "punjabiText": "ਤੁਸੀਂ ਗਲਤੀ ਕਰ ਦਿੱਤੀ ਅਤੇ ਕਹਿੰਦੇ ਹੋ ___।",
+        "options": [
+          {
+            "en": "Oops!",
+            "pa": "ਓਹੋ!"
+          },
+          {
+            "en": "Phew!",
+            "pa": "ਉਫ਼!"
+          },
+          {
+            "en": "Hello!",
+            "pa": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ!"
+          }
+        ],
+        "correctAnswer": "Oops!",
+        "points": 5,
+        "hint": {
+          "en": "Choose the interjection for a small mistake.",
+          "pa": "ਛੋਟੀ ਗਲਤੀ ਲਈ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਵਿਸਮਿਆਦਿ ਬੋਧਕ ਚੁਣੋ।"
+        },
+        "explanation": {
+          "en": "'Oops!' is used when we make a small mistake.",
+          "pa": "'Oops!' ਛੋਟੀ ਗਲਤੀ ਹੋਣ 'ਤੇ ਕਹਿੰਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Oops! I dropped it.",
+          "pa": "ਓਹੋ! ਮੇਰੇ ਤੋਂ ਇਹ ਡਿੱਗ ਗਿਆ।",
+          "highlight": "Oops!"
+        }
+      }
+    ]
+  },
+  "L_SV_AGREEMENT_01": {
+    "metadata": {
+      "titleEn": "Subject–Verb Agreement",
+      "titlePa": "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ",
+      "labelEn": "Subject–Verb Agreement",
+      "labelPa": "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ",
+      "trackId": "T_SENTENCE",
+      "objective": {
+        "titleEn": "Learn: Matching Subjects & Verbs",
+        "titlePa": "ਸਿੱਖੋ: ਮੇਲ",
+        "descEn": "Verbs must match subjects.",
+        "descPa": "ਕਿਰਿਆ ਕਰਤਾ ਨਾਲ ਮੇਲ ਖਾਏ।",
+        "pointsAvailable": 54
+      },
+      "difficulty": 2
+    },
+    "steps": [
+      {
+        "type": "objective",
+        "points": 0
+      },
+      {
+        "type": "definition",
+        "contentEn": "Singular subjects take singular verbs. Plural take plural.",
+        "contentPa": "ਇੱਕਵਚਨ ਕਰਤਾ ਨਾਲ ਇੱਕਵਚਨ ਕਿਰਿਆ ਅਤੇ ਬਹੁਵਚਨ ਕਰਤਾ ਨਾਲ ਬਹੁਵਚਨ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "example",
+        "exampleEn": "She runs (not run). They run (not runs).",
+        "examplePa": "ਉਹ ਦੌੜਦੀ ਹੈ (run ਨਹੀਂ)। ਉਹ ਦੌੜਦੇ ਹਨ (runs ਨਹੀਂ)।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_in_tap_the_correct_verb_for_he_i",
+        "englishText": "\"He goes to school.\" — Is \"goes\" the correct verb for \"He\"?",
+        "punjabiText": "\"ਉਹ ਸਕੂਲ ਜਾਂਦਾ ਹੈ।\" — ਕੀ \"He\" ਲਈ \"goes\" ਸਹੀ ਕਿਰਿਆ ਹੈ?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. For “he/she/it,” add -s: go → goes.",
+          "pa": "ਹਾਂ। “he/she/it” ਨਾਲ -s ਲੱਗਦਾ ਹੈ: go → goes।"
+        },
+        "workedExample": {
+          "en": "Yes. For “he/she/it,” add -s: go → goes.",
+          "pa": "ਹਾਂ। “he/she/it” ਨਾਲ -s ਲੱਗਦਾ ਹੈ: go → goes।"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_in_tap_all_subjects_that_take_th",
+        "englishText": "\"I go to school every day.\" — Does \"I\" take the base verb (no -s)?",
+        "punjabiText": "\"ਮੈਂ ਹਰ ਰੋਜ਼ ਸਕੂਲ ਜਾਂਦਾ ਹਾਂ।\" — ਕੀ \"I\" ਨਾਲ ਮੂਲ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ (-s ਨਹੀਂ)?",
+        "options": [
+          {
+            "en": "Yes",
+            "pa": "ਹਾਂ"
+          },
+          {
+            "en": "No",
+            "pa": "ਨਹੀਂ"
+          }
+        ],
+        "correctAnswer": "Yes",
+        "points": 3,
+        "hint": {
+          "en": "Check if the highlighted word is grammatically correct in this sentence.",
+          "pa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।"
+        },
+        "explanation": {
+          "en": "Yes. With “I,” use the base verb (go), not “goes.”",
+          "pa": "ਹਾਂ। “I” ਨਾਲ ਮੂਲ ਕਿਰਿਆ (go) ਆਉਂਦੀ ਹੈ, “goes” ਨਹੀਂ।"
+        },
+        "workedExample": {
+          "en": "Yes. With “I,” use the base verb (go), not “goes.”",
+          "pa": "ਹਾਂ। “I” ਨਾਲ ਮੂਲ ਕਿਰਿਆ (go) ਆਉਂਦੀ ਹੈ, “goes” ਨਹੀਂ।"
+        }
+      },
+      {
+        "type": "definition",
+        "contentEn": "Quick rule: I/you/we/they + base verb (go, run). He/she/it + -s verb (goes, runs). Also: I am, he/she/it is, we/you/they are.",
+        "contentPa": "ਝਟ-ਪਟ ਨਿਯਮ: ਮੈਂ/ਤੂੰ/ਅਸੀਂ/ਉਹ (ਬਹੁਵਚਨ) ਨਾਲ ਮੂਲ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ। ਉਹ (ਇਕਵਚਨ) ਨਾਲ -s ਵਾਲੀ ਕਿਰਿਆ ਆਉਂਦੀ ਹੈ। 'am/is/are' ਦਾ ਰੂਪ ਕਰਤਾ ਅਨੁਸਾਰ ਲਗਦਾ ਹੈ।",
+        "points": 1
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_which_sentence_is_correct",
+        "englishText": "Which sentence is correct?",
+        "punjabiText": "ਕਿਹੜਾ ਵਾਕ ਸਹੀ ਹੈ?",
+        "options": [
+          "He go",
+          "He goes",
+          "He going"
+        ],
+        "correctAnswer": "He goes",
+        "points": 5,
+        "hint": {
+          "en": "He/She/It usually takes verb + s in simple present.",
+          "pa": "ਤੀਜੇ ਪੁਰਖ ਇਕਵਚਨ ਕਰਤਾ ਨਾਲ ਸਧਾਰਣ ਵਰਤਮਾਨ ਵਿੱਚ ਅਕਸਰ ਕਿਰਿਆ ਨਾਲ -s ਲੱਗਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'He goes' is correct because singular subject 'He' needs singular verb form in present tense.",
+          "pa": "ਇਹ ਰੂਪ ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਕਵਚਨ ਕਰਤਾ ਨਾਲ ਵਰਤਮਾਨ ਕਾਲ ਵਿੱਚ ਇਕਵਚਨ ਕਿਰਿਆ ਰੂਪ ਆਉਂਦਾ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She reads daily.",
+          "pa": "ਉਹ ਰੋਜ਼ ਪੜ੍ਹਦੀ ਹੈ।",
+          "highlight": {
+            "en": [
+              "reads"
+            ],
+            "pa": [
+              "ਪੜ੍ਹਦੀ"
+            ]
+          }
+        },
+        "wrongOptionExplanations": {
+          "He go": {
+            "en": "'go' is base form. With singular 'He', use 'goes' in simple present.",
+            "pa": "'go' ਮੂਲ ਰੂਪ ਹੈ। ਇਕਵਚਨ ਕਰਤਾ ਨਾਲ ਸਧਾਰਣ ਵਰਤਮਾਨ ਵਿੱਚ 'goes' ਆਉਂਦਾ ਹੈ।",
+            "posEn": "verb agreement",
+            "posPa": "ਕਿਰਿਆ ਮੇਲ"
+          },
+          "He going": {
+            "en": "This is incomplete; progressive form needs helper verb: 'He is going'.",
+            "pa": "ਇਹ ਅਧੂਰਾ ਰੂਪ ਹੈ; ਜਾਰੀ ਰੂਪ ਲਈ ਸਹਾਇਕ ਕਿਰਿਆ ਲੋੜੀਂਦੀ ਹੈ: 'ਉਹ ਜਾ ਰਿਹਾ ਹੈ'।",
+            "posEn": "verb agreement",
+            "posPa": "ਕਿਰਿਆ ਮੇਲ"
+          }
+        },
+        "examples": [
+          {
+            "sentenceEn": "She goes to school.",
+            "sentencePa": "ਉਹ ਸਕੂਲ ਜਾਂਦੀ ਹੈ।",
+            "explainEn": "Singular subject + singular verb.",
+            "explainPa": "ਇਕਵਚਨ ਕਰਤਾ + ਇਕਵਚਨ ਕਿਰਿਆ ਸਹੀ ਮੇਲ ਹੈ।",
+            "highlight": "goes"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_complete_correctly_they_to_schoo",
+        "englishText": "Complete correctly: They ___ to school.",
+        "punjabiText": "ਸਹੀ ਤਰ੍ਹਾਂ ਪੂਰਾ ਕਰੋ: ਉਹ ਸਕੂਲ ___.",
+        "options": [
+          "goes",
+          "go",
+          "going"
+        ],
+        "correctAnswer": "go",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"go\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"go\". Example: They go to school.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"go\"। ਉਦਾਹਰਨ: ਉਹ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "The children go to school.",
+          "pa": "ਬੱਚੇ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।",
+          "highlight": "go"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The children go to school.",
+            "sentencePa": "ਬੱਚੇ ਸਕੂਲ ਜਾਂਦੇ ਹਨ।",
+            "explainEn": "Plural subject + plural verb.",
+            "explainPa": "They + go ਸਹੀ ਮੇਲ।",
+            "highlight": "go"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_which_is_grammatically_correct",
+        "englishText": "Which is grammatically correct?",
+        "punjabiText": "ਕਿਹੜਾ ਵਿਆਕਰਣ ਸਹੀ ਹੈ?",
+        "options": [
+          "Dogs runs",
+          "Dog run",
+          "Dogs run"
+        ],
+        "correctAnswer": "Dogs run",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"Dogs run\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"Dogs run\". Example: Dogs run fast.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"Dogs run\"। ਉਦਾਹਰਨ: ਕੁੱਤੇ ਤੇਜ਼ੀ ਨਾਲ ਦੌੜਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "Dogs run fast.",
+          "pa": "ਕੁੱਤੇ ਤੇਜ਼ ਦੌੜਦੇ ਹਨ।",
+          "highlight": "run"
+        },
+        "examples": [
+          {
+            "sentenceEn": "Dogs run fast.",
+            "sentencePa": "ਕੁੱਤੇ ਤੇਜ਼ ਦੌੜਦੇ ਹਨ।",
+            "explainEn": "Plural subject + plural verb.",
+            "explainPa": "Dogs + run ਸਹੀ।",
+            "highlight": "run"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_pick_the_correct_form",
+        "englishText": "Pick the correct form.",
+        "punjabiText": "ਸਹੀ ਰੂਪ ਚੁਣੋ।",
+        "options": [
+          "She have",
+          "She has",
+          "She haves"
+        ],
+        "correctAnswer": "She has",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"She has\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"She has\". Example: She has a book.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"She has\"। ਉਦਾਹਰਨ: ਉਸ ਕੋਲ ਇੱਕ ਕਿਤਾਬ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "She has a book.",
+          "pa": "ਉਸ ਕੋਲ ਇੱਕ ਕਿਤਾਬ ਹੈ।",
+          "highlight": "has"
+        },
+        "examples": [
+          {
+            "sentenceEn": "She has a book.",
+            "sentencePa": "ਉਸ ਕੋਲ ਇੱਕ ਕਿਤਾਬ ਹੈ।",
+            "explainEn": "She + has (singular).",
+            "explainPa": "has ਸਹੀ ਰੂਪ ਹੈ।",
+            "highlight": "has"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_complete_it_beautiful",
+        "englishText": "Complete: It ___ beautiful.",
+        "punjabiText": "ਪੂਰਾ ਕਰੋ: ਇਹ ਸੁੰਦਰ ___.",
+        "options": [
+          "are",
+          "is",
+          "be"
+        ],
+        "correctAnswer": "is",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"is\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"is\". Example: It is beautiful.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"is\"। ਉਦਾਹਰਨ: ਇਹ ਸੁੰਦਰ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "It is sunny.",
+          "pa": "ਇਹ ਧੁੱਪ ਵਾਲਾ ਹੈ।",
+          "highlight": "is"
+        },
+        "examples": [
+          {
+            "sentenceEn": "It is sunny.",
+            "sentencePa": "ਇਹ ਧੁੱਪ ਵਾਲਾ ਹੈ।",
+            "explainEn": "It (singular) + is (singular).",
+            "explainPa": "It + is ਸਹੀ ਮੇਲ।",
+            "highlight": "is"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_which_subject_verb_pair_is_corre",
+        "englishText": "Which subject-verb pair is correct?",
+        "punjabiText": "ਕਰਤਾ-ਕਿਰਿਆ ਦਾ ਕਿਹੜਾ ਜੋੜਾ ਸਹੀ ਹੈ?",
+        "options": [
+          "Birds flies",
+          "Bird fly",
+          "Birds fly"
+        ],
+        "correctAnswer": "Birds fly",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"Birds fly\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"Birds fly\". Example: Birds fly in the sky.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"Birds fly\"। ਉਦਾਹਰਨ: ਪੰਛੀ ਅਸਮਾਨ ਵਿੱਚ ਉੱਡਦੇ ਹਨ।"
+        },
+        "workedExample": {
+          "en": "The birds fly high.",
+          "pa": "ਪੰਛੀ ਉੱਚੇ ਉੱਡਦੇ ਹਨ।",
+          "highlight": "fly"
+        },
+        "examples": [
+          {
+            "sentenceEn": "The birds fly high.",
+            "sentencePa": "ਪੰਛੀ ਉੱਚੇ ਉੱਡਦੇ ਹਨ।",
+            "explainEn": "Birds (plural) + fly (plural).",
+            "explainPa": "Birds + fly ਸਹੀ।",
+            "highlight": "fly"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_i_happy_today",
+        "englishText": "I ___ happy today.",
+        "punjabiText": "ਮੈਂ ਅੱਜ ___ ਖੁਸ਼ ਹਾਂ।",
+        "options": [
+          "am",
+          "are",
+          "is"
+        ],
+        "correctAnswer": "am",
+        "points": 5,
+        "hint": {
+          "en": "Grammar tip: find the word that completes the sentence correctly. Check if \"am\" matches both grammar and meaning.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "Correct answer: \"am\". Example: I am happy today.",
+          "pa": "ਸਹੀ ਜਵਾਬ: \"am\"। ਉਦਾਹਰਨ: ਮੈਂ ਅੱਜ ਖੁਸ਼ ਹਾਂ।"
+        },
+        "workedExample": {
+          "en": "I am excited.",
+          "pa": "ਮੈਂ ਉਤਸ਼ਾਹਿਤ ਹਾਂ।",
+          "highlight": "am"
+        },
+        "examples": [
+          {
+            "sentenceEn": "I am excited.",
+            "sentencePa": "ਮੈਂ ਉਤਸ਼ਾਹਿਤ ਹਾਂ।",
+            "explainEn": "I (singular) + am (singular).",
+            "explainPa": "I + am ਸਹੀ ਮੇਲ।",
+            "highlight": "am"
+          }
+        ]
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_she_listens_music",
+        "englishText": "She ___ to music every night.",
+        "punjabiText": "ਉਹ ਹਰ ਰਾਤ ਸੰਗੀਤ ___ ਹੈ।",
+        "options": [
+          "listen",
+          "listens",
+          "listening"
+        ],
+        "correctAnswer": "listens",
+        "points": 5,
+        "hint": {
+          "en": "For 'she' in simple present, use verb + s.",
+          "pa": "simple present ਵਿੱਚ 'she' ਨਾਲ ਕਿਰਿਆ ਦਾ +s ਰੂਪ ਆਉਂਦਾ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'listens' is correct because the subject is singular (she).",
+          "pa": "'listens' ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਕਰਤਾ ਇਕਵਚਨ ਹੈ (she)।"
+        },
+        "workedExample": {
+          "en": "He reads daily.",
+          "pa": "ਉਹ ਰੋਜ਼ ਪੜ੍ਹਦਾ ਹੈ।",
+          "highlight": "reads"
+        }
+      },
+      {
+        "type": "question",
+        "id": "q_l_sv_agreement_01_they_are_ready",
+        "englishText": "They ___ ready for class.",
+        "punjabiText": "ਉਹ ਕਲਾਸ ਲਈ ___ ਤਿਆਰ ਹਨ।",
+        "options": [
+          "is",
+          "are",
+          "am"
+        ],
+        "correctAnswer": "are",
+        "points": 5,
+        "hint": {
+          "en": "Use 'are' with plural subject 'they'.",
+          "pa": "ਪਾਠ ਦਾ ਨਿਯਮ ਵਰਤੋ ਅਤੇ ਉਹ ਚੋਣ ਚੁਣੋ ਜੋ ਵਾਕ ਨਾਲ ਸਭ ਤੋਂ ਚੰਗੀ ਮਿਲਦੀ ਹੈ।"
+        },
+        "explanation": {
+          "en": "'are' is the correct be-verb form for 'they'.",
+          "pa": "'are' 'they' ਲਈ be-verb ਦਾ ਸਹੀ ਰੂਪ ਹੈ।"
+        },
+        "workedExample": {
+          "en": "They are happy.",
+          "pa": "ਉਹ ਖੁਸ਼ ਹਨ।",
+          "highlight": "are"
+        }
+      }
+    ]
   }
-
-  // Build canonical lessons.
-  for (var key in __RAW_LESSONS) {
-    if (!Object.prototype.hasOwnProperty.call(__RAW_LESSONS, key)) continue;
-    var raw = __RAW_LESSONS[key];
-
-    // Legacy category arrays
-    if (Array.isArray(raw) && legacyCategoryConfig[key]) {
-      var cfg = legacyCategoryConfig[key];
-      var legacyLesson = { metadata: { titleEn: cfg.titleEn, titlePa: cfg.titlePa, labelEn: cfg.titleEn, labelPa: cfg.titlePa, trackId: cfg.trackId, difficulty: cfg.difficulty, objective: { titleEn: "Learn: " + cfg.titleEn, titlePa: "ਸਿੱਖੋ: " + cfg.titlePa, descEn: "", descPa: "" } }, steps: raw };
-      LESSONS[cfg.id] = normalizeLesson(cfg.id, legacyLesson);
-      continue;
-    }
-
-    // Tutorial objects (T01..)
-    if (/^T\d+$/.test(key) && raw && typeof raw === "object") {
-      var tutId = "L_TUTORIAL_" + key;
-      var tutRaw = Object.assign({}, raw);
-      tutRaw.metadata = { titleEn: raw.titleEn, titlePa: raw.titlePa, labelEn: raw.titleEn, labelPa: raw.titlePa, trackId: raw.primaryTrackId, difficulty: raw.difficulty, objective: { en: raw.objective && raw.objective.en ? raw.objective.en : "", pa: raw.objective && raw.objective.pa ? raw.objective.pa : "" } };
-      LESSONS[tutId] = normalizeLesson(tutId, tutRaw);
-      continue;
-    }
-
-    // Canonical lesson IDs
-    if (typeof key === "string" && key.indexOf("L_") === 0 && raw && typeof raw === "object") {
-      LESSONS[key] = normalizeLesson(key, raw);
-      continue;
-    }
-  }
-
-  // Expose notes for debugging/verification.
-  if (typeof window !== "undefined") {
-    window.__LESSONS_MIGRATION_NOTES__ = notes;
-  }
-})();
-
-// ===== MIGRATION NOTES =====
-/*
-ORIGINAL KEYS NORMALIZED
-- step_type -> type
-- english_text/englishText -> englishText (questions)
-- punjabi_text -> punjabiText (questions)
-- correct_answer/correctAnswer -> correctAnswer
-- guidedPractice -> guided_practice
-- definition/example text fields -> contentEn/contentPa or exampleEn/examplePa
-
-GENERATED QUESTION IDS (missing ids were generated)
-- q_l_legacy_noun_01_tap_the_noun
-- q_l_legacy_noun_01_tap_the_noun_2
-- q_l_legacy_noun_01_tap_the_noun_3
-- q_l_legacy_pronoun_01_tap_the_pronoun
-- q_l_legacy_singular_plural_01_tap_the_plural_word
-- q_l_legacy_singular_plural_01_tap_the_singular_word
-- q_l_legacy_verb_01_tap_the_verb
-- q_l_legacy_verb_01_tap_the_verb_2
-- q_l_legacy_adverb_01_tap_the_adverb
-- q_l_legacy_adverb_01_tap_the_adverb_2
-- q_l_legacy_simple_present_01_which_verb_is_in_simple_present
-- q_l_legacy_simple_past_01_which_verb_is_in_simple_past
-- q_l_legacy_simple_future_01_which_verb_is_in_simple_future
-- q_l_legacy_adjective_01_tap_the_adjective
-- q_l_legacy_adjective_01_tap_the_adjective_2
-- q_l_legacy_preposition_01_tap_the_preposition
-- q_l_legacy_conjunction_01_tap_the_conjunction
-- q_l_legacy_interjection_01_tap_the_interjection
-- q_l_legacy_article_01_tap_the_article
-- q_l_legacy_article_01_tap_the_article_2
-- q_l_legacy_sv_agreement_01_tap_the_correct_sentence
-- q_l_example_new_format_which_word_is_a_noun
-- q_l_example_new_format_tap_the_sentence_with_the_most_n
-- q_l_nouns_common_01_which_word_is_a_common_noun
-- q_l_nouns_common_01_in_the_sentence_the_dog_is_sleep
-- q_l_nouns_common_01_which_word_is_a_common_noun_2
-- q_l_nouns_proper_01_which_word_is_a_proper_noun
-- q_l_nouns_proper_01_choose_the_proper_noun
-- q_l_pronouns_personal_01_tap_the_pronoun
-- q_l_pronouns_personal_01_choose_the_correct_pronoun
-- q_l_pronouns_personal_01_which_pronoun_is_correct
-- q_l_nouns_plurals_possession_01_choose_the_correct_plural
-- q_l_nouns_plurals_possession_01_which_shows_possession_correctly
-- q_l_nouns_plurals_possession_01_form_the_plural_of_child
-- q_l_nouns_plurals_possession_01_which_is_the_possessive_form
-- q_l_nouns_plurals_possession_01_choose_the_correct_plural_2
-- q_l_adj_comparison_01_which_is_the_comparative_of_good
-- q_l_adj_comparison_01_complete_my_house_is_than_yours
-- q_l_adj_vs_adv_01_she_sings
-- q_l_adj_vs_adv_01_complete_the_dog_is_running
-- q_l_prep_place_move_01_choose_the_correct_preposition
-- q_l_prep_place_move_01_he_walked_the_bridge
-- q_l_prep_place_move_01_the_book_is_the_shelf
-- q_l_prep_place_move_01_the_cat_is_the_box
-- q_l_prep_place_move_01_she_ran_the_park
-- q_l_prep_time_01_we_meet_sunday
-- q_l_prep_time_01_he_lived_here_2019
-- q_l_prep_time_01_school_starts_8_am
-- q_l_prep_time_01_they_waited_an_hour
-- q_l_prep_time_01_she_s_been_here_monday
-- q_l_conj_joining_01_choose_the_best_conjunction
-- q_l_conj_joining_01_he_was_tired_he_kept_working
-- q_l_conj_joining_01_complete_you_ready
-- q_l_conj_joining_01_she_was_late_she_ran
-- q_l_conj_joining_01_you_can_come_stay_home
-- q_l_interjections_01_tap_the_interjection
-- q_l_interjections_01_which_shows_pain
-- q_l_interjections_01_choose_the_interjection
-- q_l_interjections_01_shh_means
-- q_l_interjections_01_which_shows_relief
-- q_l_nouns_basics_01_which_is_a_noun
-- q_l_nouns_basics_01_pick_the_noun
-- q_l_nouns_basics_01_find_the_noun_in_she_played_in_t
-- q_l_nouns_basics_01_nouns_can_be_people_which_is_a_p
-- q_l_nouns_basics_01_which_word_is_not_a_noun
-- q_l_nouns_basics_01_what_type_of_noun_is_india
-- q_l_pronouns_basics_01_pick_the_pronoun
-- q_l_pronouns_basics_01_which_is_a_pronoun
-- q_l_pronouns_basics_01_complete_am_happy
-- q_l_pronouns_basics_01_what_pronoun_replaces_mary
-- q_l_pronouns_basics_01_choose_the_sentence_using_pronou
-- q_l_pronouns_basics_01_what_does_we_mean
-- q_l_singular_plural_01_which_is_plural
-- q_l_singular_plural_01_form_plural_of_dog
-- q_l_singular_plural_01_which_is_singular
-- q_l_singular_plural_01_form_plural_of_box
-- q_l_singular_plural_01_which_pair_is_correct_singular_p
-- q_l_singular_plural_01_count_the_singular_nouns_cat_dog
-- q_l_simple_present_01_which_sentence_is_present_tense
-- q_l_adjective_basics_01_adjectives_can_describe_size_whi
-- q_l_preposition_basics_01_pick_the_preposition
-- q_l_preposition_basics_01_complete_the_cat_is_the_chair
-- q_l_preposition_basics_01_which_is_a_preposition
-- q_l_preposition_basics_01_the_book_is_the_desk
-- q_l_preposition_basics_01_which_preposition_shows_time
-- q_l_preposition_basics_01_pick_the_sentence_with_a_preposi
-- q_l_conjunction_basics_01_pick_the_conjunction
-- q_l_conjunction_basics_01_complete_i_like_pizza_burger
-- q_l_conjunction_basics_01_which_is_a_conjunction
-- q_l_conjunction_basics_01_this_word_shows_contrast
-- q_l_conjunction_basics_01_choose_the_correct_use_of_and
-- q_l_conjunction_basics_01_conjunctions_connect_together
-- q_l_article_basics_01_pick_the_article
-- q_l_article_basics_01_complete_apple
-- q_l_article_basics_01_which_is_correct
-- q_l_article_basics_01_when_do_we_use_the
-- q_l_article_basics_01_choose_the_correct_sentence
-- q_l_article_basics_01_what_does_a_mean
-- q_l_sv_agreement_01_which_sentence_is_correct
-- q_l_sv_agreement_01_complete_correctly_they_to_schoo
-- q_l_sv_agreement_01_which_is_grammatically_correct
-- q_l_sv_agreement_01_pick_the_correct_form
-- q_l_sv_agreement_01_complete_it_beautiful
-- q_l_sv_agreement_01_which_subject_verb_pair_is_corre
-- q_l_sv_agreement_01_i_happy_today
-- q_l_possessive_nouns_01_which_shows_correct_possession
-- q_l_possessive_nouns_01_complete_the_toy_is_in_the_corne
-- q_l_possessive_pronouns_01_which_is_a_possessive_pronoun
-- q_l_possessive_pronouns_01_complete_this_is_notebook
-- q_l_tutorial_t01_make_this_word_plural_cat
-- q_l_tutorial_t02_choose_the_best_word_i_don_t_hav
-- q_l_tutorial_t06_choose_the_best_word_the_cat_is_
-- q_l_tutorial_t07_choose_the_correct_question
-- q_l_tutorial_t08_choose_the_best_request_please_y
-- q_l_tutorial_t03_choose_the_correct_sentence_for_
-- q_l_tutorial_t05_choose_the_correct_word_the_blue
-- q_l_tutorial_t09_choose_the_best_word_i_brush_my_
-- q_l_tutorial_t04_choose_the_correct_sentence_this
-- q_l_tutorial_t10_choose_the_most_polite_request_f
-
-CORRECTED OPTIONS/CORRECTANSWER MISMATCHES
-- L_SIMPLE_PAST_01: normalized option "seeд" -> "seed" (Cyrillic 'д' to ASCII)
-
-PUNJABI EDITS
-- none
-
-NOTE
-- Full generated notes are also written to tools/lessons_migration_notes.json by tools/extract_lessons_migration_notes.js
-*/
+};

@@ -88,7 +88,14 @@ function _startupChecks() {
   if (missing.length > 0) {
     var msg = "BOLO startup failed: Missing modules [" + missing.join(", ") + "]";
     console.error("❌ " + msg);
-    alert(msg + "\n\nPlease reload the page. If this persists, check console for details.");
+    if (typeof UI !== "undefined" && UI && typeof UI.showAlertDialog === "function") {
+      UI.showAlertDialog(msg + "\n\nPlease reload the page. If this persists, check console for details.", {
+        title: "Startup failed",
+        confirmText: "OK"
+      });
+    } else {
+      alert(msg + "\n\nPlease reload the page. If this persists, check console for details.");
+    }
     return false;
   }
   
@@ -430,6 +437,8 @@ function initHomeSwipeDeck() {
       cards[i].classList.toggle("is-stack-muted", !isActive && delta !== peekDirection);
       cards[i].setAttribute("aria-hidden", isActive ? "false" : "true");
       cards[i].setAttribute("tabindex", isActive ? "0" : "-1");
+      cards[i].setAttribute("role", "button");
+      cards[i].setAttribute("aria-pressed", isActive ? "true" : "false");
     }
 
     if (dots) {
@@ -565,8 +574,23 @@ function initHomeSwipeDeck() {
 
   for (var c = 0; c < cards.length; c++) {
     (function(index) {
-      UI.bindOnce(cards[index], "deckCardBound" + index, "click", function() {
+      var cardEl = cards[index];
+      UI.bindOnce(cardEl, "deckCardBound" + index, "click", function() {
         if (Date.now() < suppressCardClickUntil) return;
+        goTo(index, true);
+      });
+      UI.bindOnce(cardEl, "deckCardKeyBound" + index, "keydown", function(evt) {
+        var key = evt && evt.key;
+        if (key !== "Enter" && key !== " " && key !== "Spacebar") return;
+        try { if (evt && evt.preventDefault) evt.preventDefault(); } catch (eDeckKey0) {}
+        if (Date.now() < suppressCardClickUntil) return;
+
+        var isCardActive = index === activeIndex;
+        if (isCardActive && startBtn && typeof startBtn.click === "function") {
+          startBtn.click();
+          return;
+        }
+
         goTo(index, true);
       });
     })(c);
@@ -923,6 +947,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   } catch (e) {
     console.error("❌ Failed to initialize BOLO:", e.message, e.stack);
-    alert("BOLO failed to initialize: " + e.message + "\n\nCheck console for details.");
+    if (typeof UI !== "undefined" && UI && typeof UI.showAlertDialog === "function") {
+      UI.showAlertDialog("BOLO failed to initialize: " + e.message + "\n\nCheck console for details.", {
+        title: "Initialization failed",
+        confirmText: "OK"
+      });
+    } else {
+      alert("BOLO failed to initialize: " + e.message + "\n\nCheck console for details.");
+    }
   }
 });

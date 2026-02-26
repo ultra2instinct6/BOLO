@@ -104,6 +104,20 @@
      */
     reset: function(confirmMsg) {
       const msg = confirmMsg || 'Reset all state and profiles? This cannot be undone.';
+      if (window.UI && typeof UI.showConfirmDialog === 'function') {
+        UI.showConfirmDialog(msg, {
+          title: 'Reset state',
+          confirmText: 'Reset',
+          cancelText: 'Cancel',
+          allowCancel: true
+        }).then(function(ok) {
+          if (!ok) return;
+          localStorage.removeItem('boloAppState_v1');
+          console.log('🔄 State cleared. Reloading...');
+          location.reload();
+        });
+        return;
+      }
       if (confirm(msg)) {
         localStorage.removeItem('boloAppState_v1');
         console.log('🔄 State cleared. Reloading...');

@@ -25,9 +25,57 @@ if (!lessons || typeof lessons !== 'object') {
 const errors = [];
 const lessonIds = Object.keys(lessons).filter((k) => k.startsWith('L_'));
 
+const VALID_TRACK_IDS = ['T_WORDS', 'T_ACTIONS', 'T_DESCRIBE', 'T_SENTENCE'];
+
+function pushError(message) {
+  errors.push(message);
+}
+
+function norm(text) {
+  return String(text || '').trim().toLowerCase();
+}
+
+function getStepType(step) {
+  if (!step || typeof step !== 'object') return '';
+  return typeof step.type === 'string'
+    ? step.type
+    : (typeof step.step_type === 'string' ? step.step_type : '');
+}
+
+function isSummaryType(type) {
+  return type === 'summary' || type === 'summary_bullets';
+}
+
+function optionToKey(option) {
+  if (typeof option === 'string') return option;
+  if (option && typeof option === 'object' && typeof option.en === 'string') return option.en;
+  return '';
+}
+
+function isBilingualOption(option) {
+  return !!option && typeof option === 'object' && typeof option.en === 'string' && typeof option.pa === 'string';
+}
+
+function resolveCorrectIndex(step, optionKeys) {
+  const byIndex = Number.isInteger(step.correctOptionIndex) ? step.correctOptionIndex : -1;
+  if (byIndex >= 0 && byIndex < optionKeys.length) return byIndex;
+
+  const correctAnswerRaw = step.correctAnswer || step.correct_answer;
+  if (typeof correctAnswerRaw !== 'string' || !correctAnswerRaw.trim()) return -1;
+
+  const target = norm(correctAnswerRaw);
+  const matches = [];
+  for (let index = 0; index < optionKeys.length; index++) {
+    if (norm(optionKeys[index]) === target) matches.push(index);
+  }
+  if (matches.length !== 1) return -1;
+  return matches[0];
+}
+
 function sumPoints(steps) {
   return steps.reduce((acc, s) => {
-    if (!s || s.type === 'summary') return acc;
+    const type = getStepType(s);
+    if (!s || isSummaryType(type)) return acc;
     return acc + (typeof s.points === 'number' ? s.points : 0);
   }, 0);
 }
@@ -35,35 +83,35 @@ function sumPoints(steps) {
 for (const id of lessonIds) {
   const lesson = lessons[id];
   if (!lesson || typeof lesson !== 'object') {
-    errors.push(`${id}: not an object`);
+    pushError(`${id}: not an object`);
     continue;
   }
-  if (!lesson.metadata || typeof lesson.metadata !== 'object') errors.push(`${id}: missing metadata`);
-  if (!Array.isArray(lesson.steps)) errors.push(`${id}: missing steps array`);
+  if (!lesson.metadata || typeof lesson.metadata !== 'object') pushError(`${id}: missing metadata`);
+  if (!Array.isArray(lesson.steps)) pushError(`${id}: missing steps array`);
 
   const m = lesson.metadata || {};
   const requiredMeta = ['titleEn', 'titlePa', 'labelEn', 'labelPa', 'trackId', 'objective', 'difficulty'];
   for (const key of requiredMeta) {
-    if (m[key] === undefined || m[key] === '') errors.push(`${id}: metadata.${key} missing/empty`);
+    if (m[key] === undefined || m[key] === '') pushError(`${id}: metadata.${key} missing/empty`);
   }
-  if (m.trackId && !['T_WORDS', 'T_ACTIONS', 'T_DESCRIBE', 'T_SENTENCE'].includes(m.trackId)) {
-    errors.push(`${id}: metadata.trackId invalid: ${m.trackId}`);
+  if (m.trackId && !VALID_TRACK_IDS.includes(m.trackId)) {
+    pushError(`${id}: metadata.trackId invalid: ${m.trackId}`);
   }
   if (typeof m.difficulty !== 'number' || m.difficulty < 1 || m.difficulty > 3) {
-    errors.push(`${id}: metadata.difficulty invalid: ${m.difficulty}`);
+    pushError(`${id}: metadata.difficulty invalid: ${m.difficulty}`);
   }
   if (!m.objective || typeof m.objective !== 'object') {
-    errors.push(`${id}: metadata.objective missing`);
+    pushError(`${id}: metadata.objective missing`);
   } else {
     const o = m.objective;
     const reqObj = ['titleEn', 'titlePa', 'descEn', 'descPa', 'pointsAvailable'];
     for (const key of reqObj) {
-      if (o[key] === undefined) errors.push(`${id}: metadata.objective.${key} missing`);
+      if (o[key] === undefined) pushError(`${id}: metadata.objective.${key} missing`);
     }
-    if (typeof o.pointsAvailable !== 'number') errors.push(`${id}: objective.pointsAvailable not number`);
+    if (typeof o.pointsAvailable !== 'number') pushError(`${id}: objective.pointsAvailable not number`);
     if (Array.isArray(lesson.steps)) {
       const expected = sumPoints(lesson.steps);
-      if (o.pointsAvailable !== expected) errors.push(`${id}: pointsAvailable mismatch ${o.pointsAvailable} != ${expected}`);
+      if (o.pointsAvailable !== expected) pushError(`${id}: pointsAvailable mismatch ${o.pointsAvailable} != ${expected}`);
     }
   }
 
@@ -71,43 +119,84 @@ for (const id of lessonIds) {
     const seenQ = new Set();
     for (const step of lesson.steps) {
       if (!step || typeof step !== 'object') {
-        errors.push(`${id}: step not object`);
+        pushError(`${id}: step not object`);
         continue;
       }
-      if (!step.type) errors.push(`${id}: step missing type`);
-      if (typeof step.points !== 'number') errors.push(`${id}: step(${step.type}) missing points`);
+      const type = getStepType(step);
+      if (!type) pushError(`${id}: step missing type`);
+      if (typeof step.points !== 'number') pushError(`${id}: step(${type || 'unknown'}) missing points`);
 
-      if (step.type === 'question') {
-        if (!step.id) errors.push(`${id}: question missing id`);
+      const questionId = step.id || `step_index_${lesson.steps.indexOf(step)}`;
+
+      if (type === 'question') {
+        if (!step.id) pushError(`${id}:${questionId}: question missing id`);
         else {
-          if (seenQ.has(step.id)) errors.push(`${id}: duplicate question id: ${step.id}`);
+          if (seenQ.has(step.id)) pushError(`${id}:${questionId}: duplicate question id: ${step.id}`);
           seenQ.add(step.id);
         }
-        if (!Array.isArray(step.options) || step.options.some((x) => typeof x !== 'string')) errors.push(`${id}: question options not string[]`);
-        if (typeof step.correctAnswer !== 'string') errors.push(`${id}: question correctAnswer not string`);
-        else if (Array.isArray(step.options) && !step.options.includes(step.correctAnswer)) errors.push(`${id}: correctAnswer not in options`);
-      }
 
-      if (step.type === 'guided_practice') {
-        if (!Array.isArray(step.clickableWords)) errors.push(`${id}: guided_practice missing clickableWords[]`);
-        if (!Array.isArray(step.correctAnswers)) errors.push(`${id}: guided_practice missing correctAnswers[]`);
-      }
-
-      if (step.type === 'summary') {
-        const req = ['titleEn', 'titlePa', 'summaryEn', 'summaryPa'];
-        for (const k of req) {
-          if (!step[k]) errors.push(`${id}: summary missing ${k}`);
+        const options = Array.isArray(step.options) ? step.options : [];
+        if (options.length < 2) {
+          pushError(`${id}:${questionId}: question must have at least 2 options`);
+          continue;
         }
-        if (step.points !== 0) errors.push(`${id}: summary points must be 0`);
+
+        const allStrings = options.every((x) => typeof x === 'string');
+        const allBilingual = options.every((x) => isBilingualOption(x));
+        if (!allStrings && !allBilingual) {
+          pushError(`${id}:${questionId}: question options must be string[] or bilingual object[]`);
+          continue;
+        }
+
+        const keys = options.map(optionToKey);
+        if (keys.some((k) => !k)) {
+          pushError(`${id}:${questionId}: question option key resolution failed`);
+          continue;
+        }
+
+        if (Number.isInteger(step.correctOptionIndex) && (step.correctOptionIndex < 0 || step.correctOptionIndex >= keys.length)) {
+          pushError(`${id}:${questionId}: correctOptionIndex out of range`);
+        }
+
+        const resolved = resolveCorrectIndex(step, keys);
+        if (resolved < 0) {
+          pushError(`${id}:${questionId}: unable to resolve correct answer (index/text)`);
+        }
+      }
+
+      if (type === 'guided_practice') {
+        // clickableWords is optional — renderer auto-generates from sentenceEn
+        if (!Array.isArray(step.correctAnswers)) pushError(`${id}: guided_practice missing correctAnswers[]`);
+      }
+
+      if (isSummaryType(type)) {
+        if (type === 'summary') {
+          const req = ['titleEn', 'titlePa', 'summaryEn', 'summaryPa'];
+          for (const k of req) {
+            if (!step[k]) pushError(`${id}: ${type} missing ${k}`);
+          }
+        }
+        if (type === 'summary_bullets') {
+          const req = ['titleEn', 'titlePa'];
+          for (const k of req) {
+            if (!step[k]) pushError(`${id}: ${type} missing ${k}`);
+          }
+          if (!Array.isArray(step.bullets) || step.bullets.length === 0) {
+            pushError(`${id}: ${type} missing bullets[]`);
+          }
+        }
+        if (step.points !== 0) pushError(`${id}: ${type} points must be 0`);
       }
     }
   }
 }
 
-if (errors.length) {
-  console.error(`Found ${errors.length} issues:`);
-  for (const e of errors.slice(0, 200)) console.error(' -', e);
-  if (errors.length > 200) console.error(`...and ${errors.length - 200} more`);
+const uniqueErrors = [...new Set(errors)];
+
+if (uniqueErrors.length) {
+  console.error(`Found ${uniqueErrors.length} issues:`);
+  for (const e of uniqueErrors.slice(0, 200)) console.error(' -', e);
+  if (uniqueErrors.length > 200) console.error(`...and ${uniqueErrors.length - 200} more`);
   process.exit(1);
 }
 

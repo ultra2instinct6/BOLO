@@ -1985,6 +1985,73 @@ section.screen.active {
   min-width: 128px;
 }
 
+/* Bilingual label spans used throughout the Reading module */
+#screen-reading .btn-label-en,
+#screen-reading .btn-label-pa,
+#screen-reading-detail .btn-label-en,
+#screen-reading-detail .btn-label-pa,
+#reading-detail-selection-host .btn-label-en,
+#reading-detail-selection-host .btn-label-pa {
+  display: block;
+}
+#screen-reading .btn-label-pa,
+#screen-reading-detail .btn-label-pa,
+#reading-detail-selection-host .btn-label-pa {
+  margin-top: 2px;
+  font-size: 0.82em;
+  font-weight: 600;
+  opacity: 0.78;
+  font-family: "Noto Sans Punjabi", Arial, sans-serif;
+  letter-spacing: 0;
+}
+/* In buttons, keep inline-block so EN & PA stay on one line */
+#screen-reading .btn .btn-label-en,
+#screen-reading .btn .btn-label-pa,
+#screen-reading-detail .btn .btn-label-en,
+#screen-reading-detail .btn .btn-label-pa {
+  display: inline;
+}
+#screen-reading .btn .btn-label-pa,
+#screen-reading-detail .btn .btn-label-pa {
+  margin-top: 0;
+  margin-left: 4px;
+}
+/* Reading deck kicker: keep small uppercase PA inline */
+.deck-card-kicker .btn-label-en,
+.deck-card-kicker .btn-label-pa {
+  display: inline;
+}
+.deck-card-kicker .btn-label-pa {
+  margin-left: 4px;
+  font-size: 0.9em;
+  opacity: 0.72;
+}
+/* Quiz feedback: single-line bilingual  */
+.feedback .btn-label-en,
+.feedback .btn-label-pa {
+  display: inline;
+}
+.feedback .btn-label-pa {
+  margin-left: 6px;
+}
+/* Study block summary: keep PA subtitle inline */
+.reading-study-block > summary .btn-label-en,
+.reading-study-block > summary .btn-label-pa {
+  display: inline;
+}
+.reading-study-block > summary .btn-label-pa {
+  margin-left: 6px;
+  font-size: 0.88em;
+}
+/* Kid-flow helper text: PA on new line below EN */
+.reading-kid-helper .btn-label-en,
+.reading-kid-helper .btn-label-pa {
+  display: block;
+}
+.reading-kid-helper .btn-label-pa {
+  margin-top: 4px;
+}
+
 #reading-detail-selection-host .reading-study-kit {
   width: 100%;
   margin-top: 10px;
@@ -3908,6 +3975,73 @@ section.screen.active {
   margin-top: 10px;
 }
 
+/* Review-only summary UI refinements */
+.lesson-review-summary {
+  padding: 24px;
+}
+
+.lesson-review-summary .review-summary-header {
+  margin-bottom: 10px;
+}
+
+.lesson-review-summary .summary-title-en,
+.lesson-review-summary .summary-title-pa {
+  margin: 0;
+}
+
+.lesson-review-summary .summary-title-en {
+  margin-bottom: 6px;
+}
+
+.lesson-review-summary .summary-title-pa {
+  margin-bottom: 12px;
+}
+
+.lesson-review-summary .review-summary-divider {
+  height: 1px;
+  background: #e7edf5;
+  margin: 0 0 14px;
+}
+
+.lesson-review-summary .summary-examples {
+  margin: 0;
+  padding: 10px 0 0;
+  background: transparent;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.lesson-review-summary .examples-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lesson-review-summary .review-bullet-row {
+  display: block;
+  border: 1px solid #e8edf3;
+  border-radius: 10px;
+  background: #fff;
+  padding: 14px 16px;
+}
+
+.lesson-review-summary .review-bullet-row .en {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2f2f2f;
+}
+
+.lesson-review-summary .review-bullet-row .pa {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #555;
+}
+
 /* Feedback styles (enhanced) */
 .feedback {
   padding: 12px;
@@ -4041,6 +4175,138 @@ section.screen.active {
   color: var(--primary-700);
   font-size: 14px;
   font-weight: 800;
+}
+
+/* ═══════════════════════════════════════════════════════
+   GIAN KNOWLEDGE CHECK — unique blue + orange theme
+   ═══════════════════════════════════════════════════════ */
+
+/* Card top stripe → blue-to-orange gradient, thicker */
+#lessonSwipeDeck.is-gian-check #lessonDeckCard::before {
+  height: 5px;
+  background: linear-gradient(90deg, #0050a8 0%, #f97316 100%);
+}
+
+/* Card border accent */
+#lessonSwipeDeck.is-gian-check #lessonDeckCard {
+  border-color: rgba(0, 80, 168, 0.28);
+}
+
+/* Step-type label styling for gian_check */
+#lessonSwipeDeck.is-gian-check #lesson-step-type {
+  color: var(--primary-700);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* ── Correct-answer option: blue instead of green ── */
+#lessonSwipeDeck.is-gian-check .lesson-option-btn.is-correct {
+  border-color: var(--primary);
+  background: var(--primary-50);
+}
+
+#lessonSwipeDeck.is-gian-check .lesson-option-btn.is-correct .lesson-option-chip {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--surface);
+}
+
+#lessonSwipeDeck.is-gian-check .lesson-option-state.is-correct {
+  background: var(--primary-100);
+  border-color: var(--primary);
+}
+
+/* Celebrate glow → orange instead of green */
+@keyframes gianOptionCelebrateSoft {
+  0%   { transform: scale(1);    box-shadow: var(--shadow-1); }
+  45%  { transform: scale(1.01); box-shadow: 0 10px 18px rgba(249, 115, 22, 0.25); }
+  100% { transform: scale(1);    box-shadow: var(--shadow-1); }
+}
+
+#lessonSwipeDeck.is-gian-check .lesson-option-btn.is-celebrate {
+  animation: gianOptionCelebrateSoft 360ms ease-out;
+}
+
+/* ── Feedback panel: gian-themed ── */
+
+/* Gian feedback banner (inside the panel) */
+.gian-feedback-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -12px -12px 12px -12px;
+  padding: 10px 14px;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(135deg, #0050a8 0%, #003a7a 100%);
+  color: #fff;
+  border-bottom: 3px solid var(--accent);
+}
+
+.gian-feedback-banner-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.gian-feedback-banner-en {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.gian-feedback-banner-pa {
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.85;
+  margin-left: auto;
+}
+
+/* Correct feedback panel → blue/orange gradient bg */
+.lesson-feedback-panel.is-gian-check.is-correct {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--accent-50) 100%);
+}
+
+.lesson-feedback-panel.is-gian-check.is-correct .lesson-feedback-status-en {
+  color: var(--primary-700);
+}
+
+.lesson-feedback-panel.is-gian-check.is-correct .lesson-feedback-status-pa {
+  color: var(--primary);
+}
+
+/* Wrong feedback panel — keep red but with the gian banner */
+.lesson-feedback-panel.is-gian-check.is-wrong {
+  border-color: var(--danger);
+  background: var(--danger-100);
+}
+
+.lesson-feedback-panel.is-gian-check.is-wrong .gian-feedback-banner {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+  border-bottom-color: var(--danger);
+}
+
+/* Continue pill inside gian → accent orange */
+.lesson-feedback-panel.is-gian-check .lesson-continue-pill {
+  border-color: var(--accent);
+  background: var(--accent-50);
+  color: #7c2d12;
+}
+
+/* Outer feedback wrapper — kill green when gian */
+.feedback.correct.is-gian-check {
+  background-color: transparent;
+  color: inherit;
+  border-left-color: var(--accent);
+}
+
+/* Correct option state badge text — blue not green */
+#lessonSwipeDeck.is-gian-check .lesson-option-state.is-correct {
+  color: var(--primary-700);
+}
+
+/* Correct option btn selected-ring — blue not green */
+#lessonSwipeDeck.is-gian-check .lesson-option-btn.is-correct {
+  box-shadow: 0 0 0 2px rgba(0, 80, 168, 0.22), var(--shadow-1);
 }
 
 mark.ex-hi {
@@ -12888,5 +13154,87 @@ main {
   .modal-close-btn:hover {
     background: var(--surface-2);
     color: var(--text);
+  }
+}
+
+/* ========================================
+   RELEASE PASS: TOUCH TARGET GUARDRAILS
+   ======================================== */
+
+.reading-card__collapseBtn,
+.media-modal-btn,
+.header-switch-link,
+.profile-btn-primary,
+.profile-btn-secondary,
+#screen-typing-center .typing-tertiary-btn {
+  min-height: 44px !important;
+}
+
+@media (max-width: 389px) {
+  .bundle-card__button {
+    min-height: 44px !important;
+  }
+}
+
+#screen-typing-center #typingModeDeck .deck-prev-handle,
+#screen-typing-center #typingModeDeck .deck-next-handle {
+  min-height: 44px !important;
+}
+
+#screen-home .home-hero-nav #btn-home-deck-start,
+#screen-learn .learn-hero-nav #btn-learn-deck-start,
+#screen-reading .read-hero-nav #btn-reading-book-start,
+#screen-typing-center .typing-hero-nav #typingCenterStartBtn,
+#screen-lesson #lessonSwipeDeck .lesson-hero-nav #btn-lesson-check.lesson-check-btn,
+#screen-reading-detail #reading-detail-hero-nav-host .reading-detail-start-btn {
+  height: 44px !important;
+  min-height: 44px !important;
+}
+
+#screen-home .home-hero-nav .deck-prev-handle,
+#screen-home .home-hero-nav .deck-next-handle,
+#screen-learn .learn-hero-nav .deck-prev-handle,
+#screen-learn .learn-hero-nav .deck-next-handle,
+#screen-reading .read-hero-nav .deck-prev-handle,
+#screen-reading .read-hero-nav .deck-next-handle,
+#screen-typing-center .typing-hero-nav .deck-prev-handle,
+#screen-typing-center .typing-hero-nav .deck-next-handle,
+#screen-lesson #lessonSwipeDeck .lesson-hero-nav .deck-prev-handle,
+#screen-lesson #lessonSwipeDeck .lesson-hero-nav .deck-next-handle,
+#screen-reading-detail #reading-detail-hero-nav-host .reading-detail-hero-nav .deck-prev-handle,
+#screen-reading-detail #reading-detail-hero-nav-host .reading-detail-hero-nav .deck-next-handle {
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+}
+
+@media (max-width: 520px) {
+  #screen-home .home-hero-nav #btn-home-deck-start,
+  #screen-learn .learn-hero-nav #btn-learn-deck-start,
+  #screen-reading .read-hero-nav #btn-reading-book-start,
+  #screen-typing-center .typing-hero-nav #typingCenterStartBtn,
+  #screen-lesson #lessonSwipeDeck .lesson-hero-nav #btn-lesson-check.lesson-check-btn,
+  #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-start-btn {
+    width: 90px !important;
+    min-width: 90px !important;
+    max-width: 90px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #screen-home .home-hero-nav #btn-home-deck-start,
+  #screen-learn .learn-hero-nav #btn-learn-deck-start,
+  #screen-reading .read-hero-nav #btn-reading-book-start,
+  #screen-typing-center .typing-hero-nav #typingCenterStartBtn,
+  #screen-lesson #lessonSwipeDeck .lesson-hero-nav #btn-lesson-check.lesson-check-btn,
+  #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-start-btn {
+    width: 86px !important;
+    min-width: 86px !important;
+    max-width: 86px !important;
+    height: 44px !important;
+    min-height: 44px !important;
   }
 }

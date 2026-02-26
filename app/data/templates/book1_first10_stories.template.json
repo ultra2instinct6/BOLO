@@ -1,0 +1,2910 @@
+[
+  {
+    "storyId": "B1_S01",
+    "bundleId": 1,
+    "orderInBundle": 1,
+    "titleEn": "Book 1 · Story 1: My Big House",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 1: ਮੇਰਾ ਵੱਡਾ ਘਰ",
+    "englishStory": "Panel 1 (Intro): I am at home.\nPanel 2 (Body): Mom and dad open the door.\nPanel 3 (Body): Sister and brother stand by the window.\nPanel 4 (Body): Grandma and grandpa help the baby.\nPanel 5 (Conclusion): My house is big. My room is small.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮਾਂ ਅਤੇ ਪਿਉ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੇ ਹਨ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਭੈਣ ਅਤੇ ਭਰਾ ਖਿੜਕੀ ਦੇ ਕੋਲ ਖੜ੍ਹੇ ਹਨ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੇਰਾ ਘਰ ਵੱਡਾ ਹੈ। ਮੇਰਾ ਕਮਰਾ ਛੋਟਾ ਹੈ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "home",
+          "school",
+          "park"
+        ],
+        "choicesPa": [
+          "ਘਰ",
+          "ਸਕੂਲ",
+          "ਪਾਰਕ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says, “I am at home.”",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।”"
+      },
+      {
+        "question": "Who opens the door?",
+        "questionPa": "ਦਰਵਾਜ਼ਾ ਕੌਣ ਖੋਲ੍ਹਦਾ ਹੈ?",
+        "choices": [
+          "mom and dad",
+          "sister and brother",
+          "the baby"
+        ],
+        "choicesPa": [
+          "ਮਾਂ ਅਤੇ ਪਿਉ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ",
+          "ਬੱਚਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “Mom and dad open the door.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮਾਂ ਅਤੇ ਪਿਉ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੇ ਹਨ।”"
+      },
+      {
+        "question": "Where do sister and brother stand?",
+        "questionPa": "ਭੈਣ ਅਤੇ ਭਰਾ ਕਿੱਥੇ ਖੜ੍ਹੇ ਹਨ?",
+        "choices": [
+          "by the window",
+          "on the bed",
+          "in the bathroom"
+        ],
+        "choicesPa": [
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ",
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says they stand by the window.",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਉਹ ਖਿੜਕੀ ਦੇ ਕੋਲ ਖੜ੍ਹੇ ਹਨ।"
+      },
+      {
+        "question": "Who helps the baby?",
+        "questionPa": "ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "grandma and grandpa",
+          "mom and dad",
+          "sister and brother"
+        ],
+        "choicesPa": [
+          "ਦਾਦੀ ਅਤੇ ਦਾਦਾ",
+          "ਮਾਂ ਅਤੇ ਪਿਉ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “Grandma and grandpa help the baby.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।”"
+      },
+      {
+        "question": "Is the house big or small?",
+        "questionPa": "ਘਰ ਵੱਡਾ ਹੈ ਜਾਂ ਛੋਟਾ?",
+        "choices": [
+          "big",
+          "small",
+          "cold"
+        ],
+        "choicesPa": [
+          "ਵੱਡਾ",
+          "ਛੋਟਾ",
+          "ਠੰਢਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “My house is big.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੇਰਾ ਘਰ ਵੱਡਾ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "family",
+        "meaningEn": "people in my home",
+        "meaningPa": "ਪਰਿਵਾਰ"
+      },
+      {
+        "word": "house",
+        "meaningEn": "a place where people live",
+        "meaningPa": "ਘਰ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Home",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "Door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "Sister",
+          "pa": "ਭੈਣ"
+        },
+        {
+          "en": "Brother",
+          "pa": "ਭਰਾ"
+        },
+        {
+          "en": "Window",
+          "pa": "ਖਿੜਕੀ"
+        },
+        {
+          "en": "Grandma",
+          "pa": "ਦਾਦੀ"
+        },
+        {
+          "en": "Grandpa",
+          "pa": "ਦਾਦਾ"
+        },
+        {
+          "en": "Baby",
+          "pa": "ਬੱਚਾ"
+        },
+        {
+          "en": "House",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "Room",
+          "pa": "ਕਮਰਾ"
+        },
+        {
+          "en": "Family",
+          "pa": "ਪਰਿਵਾਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "Stand",
+          "pa": "ਖੜ੍ਹਾ ਹੋਣਾ"
+        },
+        {
+          "en": "Help",
+          "pa": "ਮਦਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਹੈ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Big",
+          "pa": "ਵੱਡਾ"
+        },
+        {
+          "en": "Small",
+          "pa": "ਛੋਟਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "By",
+          "pa": "ਦੇ ਕੋਲ"
+        },
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S02",
+    "bundleId": 1,
+    "orderInBundle": 2,
+    "titleEn": "Book 1 · Story 2: In My Bedroom",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 2: ਮੇਰੇ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ",
+    "englishStory": "Panel 1 (Intro): I am in the bedroom.\nPanel 2 (Body): I sit on the bed with my book.\nPanel 3 (Body): My toy is in my bag.\nPanel 4 (Body): My shoes are by the chair. I open the door.\nPanel 5 (Conclusion): I close the door.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਬਿਸਤਰ ਉੱਤੇ ਬੈਠਦਾ ਹਾਂ ਅਤੇ ਮੇਰੀ ਕਿਤਾਬ ਮੇਰੇ ਨਾਲ ਹੈ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੇਰਾ ਖਿਡੌਣਾ ਮੇਰੇ ਬੈਗ ਵਿੱਚ ਹੈ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੇਰੇ ਜੁੱਤੇ ਕੁਰਸੀ ਦੇ ਕੋਲ ਹਨ। ਮੈਂ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹਾਂ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "bedroom",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says, “I am in the bedroom.”",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।”"
+      },
+      {
+        "question": "Where does the child sit?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਬੈਠਦਾ ਹੈ?",
+        "choices": [
+          "on the bed",
+          "on the table",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਮੇਜ਼ ਉੱਤੇ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says the child sits on the bed.",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਬਿਸਤਰ ਉੱਤੇ ਬੈਠਦਾ ਹੈ।"
+      },
+      {
+        "question": "Where is the toy?",
+        "questionPa": "ਖਿਡੌਣਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "in the bag",
+          "in the cup",
+          "in the bathroom"
+        ],
+        "choicesPa": [
+          "ਬੈਗ ਵਿੱਚ",
+          "ਕੱਪ ਵਿੱਚ",
+          "ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “My toy is in my bag.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੇਰਾ ਖਿਡੌਣਾ ਮੇਰੇ ਬੈਗ ਵਿੱਚ ਹੈ।”"
+      },
+      {
+        "question": "What is by the chair?",
+        "questionPa": "ਕੁਰਸੀ ਦੇ ਕੋਲ ਕੀ ਹੈ?",
+        "choices": [
+          "shoes",
+          "milk",
+          "apple"
+        ],
+        "choicesPa": [
+          "ਜੁੱਤੇ",
+          "ਦੁੱਧ",
+          "ਸੇਬ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “My shoes are by the chair.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੇਰੇ ਜੁੱਤੇ ਕੁਰਸੀ ਦੇ ਕੋਲ ਹਨ।”"
+      },
+      {
+        "question": "What does the child do at the end?",
+        "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "close the door",
+          "wash the door",
+          "eat the door"
+        ],
+        "choicesPa": [
+          "ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਧੋਂਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਖਾਂਦਾ ਹੈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “I close the door.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "bedroom",
+        "meaningEn": "a room for sleeping",
+        "meaningPa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+      },
+      {
+        "word": "bag",
+        "meaningEn": "a container to carry things",
+        "meaningPa": "ਬੈਗ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Bedroom",
+          "pa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਬਿਸਤਰ"
+        },
+        {
+          "en": "Book",
+          "pa": "ਕਿਤਾਬ"
+        },
+        {
+          "en": "Toy",
+          "pa": "ਖਿਡੌਣਾ"
+        },
+        {
+          "en": "Bag",
+          "pa": "ਬੈਗ"
+        },
+        {
+          "en": "Shoes",
+          "pa": "ਜੁੱਤੇ"
+        },
+        {
+          "en": "Chair",
+          "pa": "ਕੁਰਸੀ"
+        },
+        {
+          "en": "Door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "Open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Is/are",
+          "pa": "ਹੈ/ਹਨ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "By",
+          "pa": "ਦੇ ਕੋਲ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S03",
+    "bundleId": 1,
+    "orderInBundle": 3,
+    "titleEn": "Book 1 · Story 3: Kitchen Lunch",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 3: ਰਸੋਈ ਵਿੱਚ ਖਾਣਾ",
+    "englishStory": "Panel 1 (Intro): I am in the kitchen.\nPanel 2 (Body): I eat bread and rice on a plate.\nPanel 3 (Body): I drink milk in a cup.\nPanel 4 (Body): I eat an apple and a banana.\nPanel 5 (Conclusion): The bread is hot. The milk is cold.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਰਸੋਈ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਪਲੇਟ ਉੱਤੇ ਰੋਟੀ ਅਤੇ ਚਾਵਲ ਖਾਂਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਕੱਪ ਵਿੱਚ ਦੁੱਧ ਪੀਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੈਂ ਸੇਬ ਅਤੇ ਕੇਲਾ ਖਾਂਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਰੋਟੀ ਗਰਮ ਹੈ। ਦੁੱਧ ਠੰਢਾ ਹੈ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child is in the kitchen.",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਰਸੋਈ ਵਿੱਚ ਹੈ।"
+      },
+      {
+        "question": "What does the child eat on a plate?",
+        "questionPa": "ਬੱਚਾ ਪਲੇਟ ਉੱਤੇ ਕੀ ਖਾਂਦਾ ਹੈ?",
+        "choices": [
+          "bread and rice",
+          "milk and water",
+          "shoes and hat"
+        ],
+        "choicesPa": [
+          "ਰੋਟੀ ਅਤੇ ਚਾਵਲ",
+          "ਦੁੱਧ ਅਤੇ ਪਾਣੀ",
+          "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “I eat bread and rice on a plate.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਲੇਟ ਉੱਤੇ ਰੋਟੀ ਅਤੇ ਚਾਵਲ ਖਾਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child drink?",
+        "questionPa": "ਬੱਚਾ ਕੀ ਪੀਦਾ ਹੈ?",
+        "choices": [
+          "milk",
+          "rice",
+          "banana"
+        ],
+        "choicesPa": [
+          "ਦੁੱਧ",
+          "ਚਾਵਲ",
+          "ਕੇਲਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “I drink milk in a cup.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਕੱਪ ਵਿੱਚ ਦੁੱਧ ਪੀਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "Which fruit is in the story?",
+        "questionPa": "ਕਹਾਣੀ ਵਿੱਚ ਕਿਹੜਾ ਫਲ ਹੈ?",
+        "choices": [
+          "banana",
+          "chair",
+          "door"
+        ],
+        "choicesPa": [
+          "ਕੇਲਾ",
+          "ਕੁਰਸੀ",
+          "ਦਰਵਾਜ਼ਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “I eat an apple and a banana.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਸੇਬ ਅਤੇ ਕੇਲਾ ਖਾਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "Is the bread hot or cold?",
+        "questionPa": "ਰੋਟੀ ਗਰਮ ਹੈ ਜਾਂ ਠੰਢੀ?",
+        "choices": [
+          "hot",
+          "cold",
+          "small"
+        ],
+        "choicesPa": [
+          "ਗਰਮ",
+          "ਠੰਢੀ",
+          "ਛੋਟੀ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “The bread is hot.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਰੋਟੀ ਗਰਮ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "plate",
+        "meaningEn": "a flat dish for food",
+        "meaningPa": "ਪਲੇਟ"
+      },
+      {
+        "word": "milk",
+        "meaningEn": "a white drink from animals like cows",
+        "meaningPa": "ਦੁੱਧ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Kitchen",
+          "pa": "ਰਸੋਈ"
+        },
+        {
+          "en": "Bread",
+          "pa": "ਰੋਟੀ"
+        },
+        {
+          "en": "Rice",
+          "pa": "ਚਾਵਲ"
+        },
+        {
+          "en": "Plate",
+          "pa": "ਪਲੇਟ"
+        },
+        {
+          "en": "Milk",
+          "pa": "ਦੁੱਧ"
+        },
+        {
+          "en": "Cup",
+          "pa": "ਕੱਪ"
+        },
+        {
+          "en": "Apple",
+          "pa": "ਸੇਬ"
+        },
+        {
+          "en": "Banana",
+          "pa": "ਕੇਲਾ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hot",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Eat",
+          "pa": "ਖਾਣਾ"
+        },
+        {
+          "en": "Drink",
+          "pa": "ਪੀਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਹੈ"
+        },
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Hot",
+          "pa": "ਗਰਮ"
+        },
+        {
+          "en": "Cold",
+          "pa": "ਠੰਢਾ"
+        },
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "an",
+          "pa": "ਇੱਕ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S04",
+    "bundleId": 1,
+    "orderInBundle": 4,
+    "titleEn": "Book 1 · Story 4: Wash Time",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 4: ਧੋਣ ਦਾ ਸਮਾਂ",
+    "englishStory": "Panel 1 (Intro): I am in the bathroom.\nPanel 2 (Body): I wash with water.\nPanel 3 (Body): I wash my shirt.\nPanel 4 (Body): I wash my shoes and my hat.\nPanel 5 (Conclusion): You help me. I am happy.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਬਾਥਰੂਮ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਪਾਣੀ ਨਾਲ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਆਪਣੀ ਕਮੀਜ਼ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੈਂ ਆਪਣੇ ਜੁੱਤੇ ਅਤੇ ਆਪਣੀ ਟੋਪੀ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਤੂੰ ਮੇਰੀ ਮਦਦ ਕਰਦਾ ਹੈਂ। ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "bathroom",
+          "kitchen",
+          "bedroom"
+        ],
+        "choicesPa": [
+          "ਬਾਥਰੂਮ",
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child is in the bathroom.",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਬਾਥਰੂਮ ਵਿੱਚ ਹੈ।"
+      },
+      {
+        "question": "What does the child wash with?",
+        "questionPa": "ਬੱਚਾ ਕਿਸ ਨਾਲ ਧੋਂਦਾ ਹੈ?",
+        "choices": [
+          "water",
+          "milk",
+          "bread"
+        ],
+        "choicesPa": [
+          "ਪਾਣੀ",
+          "ਦੁੱਧ",
+          "ਰੋਟੀ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “I wash with water.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਾਣੀ ਨਾਲ ਧੋਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child wash?",
+        "questionPa": "ਬੱਚਾ ਕੀ ਧੋਂਦਾ ਹੈ?",
+        "choices": [
+          "shirt",
+          "book",
+          "banana"
+        ],
+        "choicesPa": [
+          "ਕਮੀਜ਼",
+          "ਕਿਤਾਬ",
+          "ਕੇਲਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “I wash my shirt.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੀ ਕਮੀਜ਼ ਧੋਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "What else does the child wash?",
+        "questionPa": "ਬੱਚਾ ਹੋਰ ਕੀ ਧੋਂਦਾ ਹੈ?",
+        "choices": [
+          "shoes and hat",
+          "door and window",
+          "bed and chair"
+        ],
+        "choicesPa": [
+          "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ",
+          "ਦਰਵਾਜ਼ਾ ਅਤੇ ਖਿੜਕੀ",
+          "ਬਿਸਤਰ ਅਤੇ ਕੁਰਸੀ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “I wash my shoes and my hat.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਜੁੱਤੇ ਅਤੇ ਆਪਣੀ ਟੋਪੀ ਧੋਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "How does the child feel at the end?",
+        "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "happy",
+          "cold",
+          "hot"
+        ],
+        "choicesPa": [
+          "ਖੁਸ਼",
+          "ਠੰਢਾ",
+          "ਗਰਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “I am happy.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖੁਸ਼ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "bathroom",
+        "meaningEn": "a room for washing",
+        "meaningPa": "ਬਾਥਰੂਮ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "a clear liquid we drink and use for washing",
+        "meaningPa": "ਪਾਣੀ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Bathroom",
+          "pa": "ਬਾਥਰੂਮ"
+        },
+        {
+          "en": "Water",
+          "pa": "ਪਾਣੀ"
+        },
+        {
+          "en": "Shirt",
+          "pa": "ਕਮੀਜ਼"
+        },
+        {
+          "en": "Shoes",
+          "pa": "ਜੁੱਤੇ"
+        },
+        {
+          "en": "Hat",
+          "pa": "ਟੋਪੀ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Wash",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "With",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "You",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Help",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Be",
+          "pa": "ਹੋਣਾ"
+        },
+        {
+          "en": "Wash",
+          "pa": "ਧੋਣਾ"
+        },
+        {
+          "en": "Help",
+          "pa": "ਮਦਦ ਕਰਨਾ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Happy",
+          "pa": "ਖੁਸ਼"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S05",
+    "bundleId": 1,
+    "orderInBundle": 5,
+    "titleEn": "Book 1 · Story 5: Play Time",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 5: ਖੇਡ ਦਾ ਸਮਾਂ",
+    "englishStory": "Panel 1 (Intro): I am in my room.\nPanel 2 (Body): I play with my toy.\nPanel 3 (Body): Mom sits on the chair.\nPanel 4 (Body): Dad sits at the table. My book is on the table.\nPanel 5 (Conclusion): I am happy.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਆਪਣੇ ਖਿਡੌਣੇ ਨਾਲ ਖੇਡਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮਾਂ ਕੁਰਸੀ ਉੱਤੇ ਬੈਠਦੀ ਹੈ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਪਿਉ ਮੇਜ਼ ਤੇ ਬੈਠਦਾ ਹੈ। ਮੇਰੀ ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "room",
+          "bathroom",
+          "kitchen"
+        ],
+        "choicesPa": [
+          "ਕਮਰਾ",
+          "ਬਾਥਰੂਮ",
+          "ਰਸੋਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says, “I am in my room.”",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child play with?",
+        "questionPa": "ਬੱਚਾ ਕਿਸ ਨਾਲ ਖੇਡਦਾ ਹੈ?",
+        "choices": [
+          "toy",
+          "spoon",
+          "shoes"
+        ],
+        "choicesPa": [
+          "ਖਿਡੌਣਾ",
+          "ਚਮਚਾ",
+          "ਜੁੱਤੇ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “I play with my toy.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਖਿਡੌਣੇ ਨਾਲ ਖੇਡਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "Who sits on the chair?",
+        "questionPa": "ਕੁਰਸੀ ਉੱਤੇ ਕੌਣ ਬੈਠਦਾ ਹੈ?",
+        "choices": [
+          "mom",
+          "baby",
+          "grandpa"
+        ],
+        "choicesPa": [
+          "ਮਾਂ",
+          "ਬੱਚਾ",
+          "ਦਾਦਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “Mom sits on the chair.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮਾਂ ਕੁਰਸੀ ਉੱਤੇ ਬੈਠਦੀ ਹੈ।”"
+      },
+      {
+        "question": "Where does dad sit?",
+        "questionPa": "ਪਿਉ ਕਿੱਥੇ ਬੈਠਦਾ ਹੈ?",
+        "choices": [
+          "at the table",
+          "on the bed",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਮੇਜ਼ ਤੇ",
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says dad sits at the table.",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਪਿਉ ਮੇਜ਼ ਤੇ ਬੈਠਦਾ ਹੈ।"
+      },
+      {
+        "question": "How does the child feel at the end?",
+        "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਹੈ?",
+        "choices": [
+          "happy",
+          "cold",
+          "hot"
+        ],
+        "choicesPa": [
+          "ਖੁਸ਼",
+          "ਠੰਢਾ",
+          "ਗਰਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “I am happy.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖੁਸ਼ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "play",
+        "meaningEn": "have fun with toys or games",
+        "meaningPa": "ਖੇਡਣਾ"
+      },
+      {
+        "word": "table",
+        "meaningEn": "a piece of furniture with a flat top",
+        "meaningPa": "ਮੇਜ਼"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Room",
+          "pa": "ਕਮਰਾ"
+        },
+        {
+          "en": "Toy",
+          "pa": "ਖਿਡੌਣਾ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "Chair",
+          "pa": "ਕੁਰਸੀ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "Table",
+          "pa": "ਮੇਜ਼"
+        },
+        {
+          "en": "Book",
+          "pa": "ਕਿਤਾਬ"
+        },
+        {
+          "en": "Play",
+          "pa": "ਖੇਡਣਾ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "With",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Sits",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Play",
+          "pa": "ਖੇਡਣਾ"
+        },
+        {
+          "en": "Sit(s)",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਹੈ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Happy",
+          "pa": "ਖੁਸ਼"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S06",
+    "bundleId": 1,
+    "orderInBundle": 6,
+    "titleEn": "Book 1 · Story 6: Baby Sleeps",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 6: ਬੱਚਾ ਸੌਂਦਾ ਹੈ",
+    "englishStory": "Panel 1 (Intro): The baby is in the bedroom.\nPanel 2 (Body): Grandma opens the door.\nPanel 3 (Body): Grandpa closes the door.\nPanel 4 (Body): Mom and dad help the baby.\nPanel 5 (Conclusion): The baby sleeps on the bed.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਬੱਚਾ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹੈ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਦਾਦੀ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੀ ਹੈ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਦਾਦਾ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹੈ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮਾਂ ਅਤੇ ਪਿਉ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।\nਪੈਨਲ 5 (ਅੰਤ): ਬੱਚਾ ਬਿਸਤਰ ਉੱਤੇ ਸੌਂਦਾ ਹੈ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the baby?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "bedroom",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the baby is in the bedroom.",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹੈ।"
+      },
+      {
+        "question": "Who opens the door?",
+        "questionPa": "ਦਰਵਾਜ਼ਾ ਕੌਣ ਖੋਲ੍ਹਦਾ ਹੈ?",
+        "choices": [
+          "grandma",
+          "dad",
+          "sister"
+        ],
+        "choicesPa": [
+          "ਦਾਦੀ",
+          "ਪਿਉ",
+          "ਭੈਣ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “Grandma opens the door.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦੀ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੀ ਹੈ।”"
+      },
+      {
+        "question": "Who closes the door?",
+        "questionPa": "ਦਰਵਾਜ਼ਾ ਕੌਣ ਬੰਦ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "grandpa",
+          "mom",
+          "brother"
+        ],
+        "choicesPa": [
+          "ਦਾਦਾ",
+          "ਮਾਂ",
+          "ਭਰਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “Grandpa closes the door.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦਾ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹੈ।”"
+      },
+      {
+        "question": "Who helps the baby?",
+        "questionPa": "ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "mom and dad",
+          "sister and brother",
+          "you"
+        ],
+        "choicesPa": [
+          "ਮਾਂ ਅਤੇ ਪਿਉ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ",
+          "ਤੂੰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “Mom and dad help the baby.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮਾਂ ਅਤੇ ਪਿਉ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।”"
+      },
+      {
+        "question": "Where does the baby sleep?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਸੌਂਦਾ ਹੈ?",
+        "choices": [
+          "on the bed",
+          "on the table",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਮੇਜ਼ ਉੱਤੇ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “The baby sleeps on the bed.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਬੱਚਾ ਬਿਸਤਰ ਉੱਤੇ ਸੌਂਦਾ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "grandma",
+        "meaningEn": "your father's or mother's mother",
+        "meaningPa": "ਦਾਦੀ/ਨਾਨੀ"
+      },
+      {
+        "word": "baby",
+        "meaningEn": "a very young child",
+        "meaningPa": "ਬੱਚਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Baby",
+          "pa": "ਬੱਚਾ"
+        },
+        {
+          "en": "Bedroom",
+          "pa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        },
+        {
+          "en": "Grandma",
+          "pa": "ਦਾਦੀ"
+        },
+        {
+          "en": "Grandpa",
+          "pa": "ਦਾਦਾ"
+        },
+        {
+          "en": "Door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਬਿਸਤਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Sleeps",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Opens",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Open(s)",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "Close(s)",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Help",
+          "pa": "ਮਦਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Sleep(s)",
+          "pa": "ਸੋਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਹੈ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S07",
+    "bundleId": 1,
+    "orderInBundle": 7,
+    "titleEn": "Book 1 · Story 7: Wash the Dishes",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 7: ਬਰਤਨ ਧੋਣਾ",
+    "englishStory": "Panel 1 (Intro): I am in the kitchen.\nPanel 2 (Body): I wash a cup and a spoon with water.\nPanel 3 (Body): I wash a plate.\nPanel 4 (Body): I drink water.\nPanel 5 (Conclusion): The water is cold.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਰਸੋਈ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਪਾਣੀ ਨਾਲ ਕੱਪ ਅਤੇ ਚਮਚਾ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਪਲੇਟ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੈਂ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਪਾਣੀ ਠੰਢਾ ਹੈ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child is in the kitchen.",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਰਸੋਈ ਵਿੱਚ ਹੈ।"
+      },
+      {
+        "question": "What does the child wash first?",
+        "questionPa": "ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਧੋਂਦਾ ਹੈ?",
+        "choices": [
+          "cup and spoon",
+          "shoes and hat",
+          "bread and rice"
+        ],
+        "choicesPa": [
+          "ਕੱਪ ਅਤੇ ਚਮਚਾ",
+          "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ",
+          "ਰੋਟੀ ਅਤੇ ਚਾਵਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “I wash a cup and a spoon with water.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਾਣੀ ਨਾਲ ਕੱਪ ਅਤੇ ਚਮਚਾ ਧੋਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child wash next?",
+        "questionPa": "ਬੱਚਾ ਅਗਲਾ ਕੀ ਧੋਂਦਾ ਹੈ?",
+        "choices": [
+          "plate",
+          "book",
+          "window"
+        ],
+        "choicesPa": [
+          "ਪਲੇਟ",
+          "ਕਿਤਾਬ",
+          "ਖਿੜਕੀ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “I wash a plate.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਲੇਟ ਧੋਂਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child drink?",
+        "questionPa": "ਬੱਚਾ ਕੀ ਪੀਦਾ ਹੈ?",
+        "choices": [
+          "water",
+          "milk",
+          "rice"
+        ],
+        "choicesPa": [
+          "ਪਾਣੀ",
+          "ਦੁੱਧ",
+          "ਚਾਵਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “I drink water.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "Is the water hot or cold?",
+        "questionPa": "ਪਾਣੀ ਗਰਮ ਹੈ ਜਾਂ ਠੰਢਾ?",
+        "choices": [
+          "cold",
+          "hot",
+          "big"
+        ],
+        "choicesPa": [
+          "ਠੰਢਾ",
+          "ਗਰਮ",
+          "ਵੱਡਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “The water is cold.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਪਾਣੀ ਠੰਢਾ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "kitchen",
+        "meaningEn": "the room where food is made",
+        "meaningPa": "ਰਸੋਈ"
+      },
+      {
+        "word": "spoon",
+        "meaningEn": "a tool used for eating or stirring",
+        "meaningPa": "ਚਮਚਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Kitchen",
+          "pa": "ਰਸੋਈ"
+        },
+        {
+          "en": "Cup",
+          "pa": "ਕੱਪ"
+        },
+        {
+          "en": "Spoon",
+          "pa": "ਚਮਚਾ"
+        },
+        {
+          "en": "Plate",
+          "pa": "ਪਲੇਟ"
+        },
+        {
+          "en": "Water",
+          "pa": "ਪਾਣੀ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Wash",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "With",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Drink",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Cold",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Wash",
+          "pa": "ਧੋਣਾ"
+        },
+        {
+          "en": "Drink",
+          "pa": "ਪੀਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਹੈ"
+        },
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Cold",
+          "pa": "ਠੰਢਾ"
+        },
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S08",
+    "bundleId": 1,
+    "orderInBundle": 8,
+    "titleEn": "Book 1 · Story 8: Shirt, Shoes, Hat",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 8: ਕਮੀਜ਼, ਜੁੱਤੇ, ਟੋਪੀ",
+    "englishStory": "Panel 1 (Intro): I am at home.\nPanel 2 (Body): My shirt is on the bed.\nPanel 3 (Body): My shoes are by the door.\nPanel 4 (Body): My hat is on the table.\nPanel 5 (Conclusion): I open the door.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੇਰੀ ਕਮੀਜ਼ ਬਿਸਤਰ ਉੱਤੇ ਹੈ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੇਰੇ ਜੁੱਤੇ ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ ਹਨ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੇਰੀ ਟੋਪੀ ਮੇਜ਼ ਉੱਤੇ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹਾਂ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "home",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਘਰ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says, “I am at home.”",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।”"
+      },
+      {
+        "question": "Where is the shirt?",
+        "questionPa": "ਕਮੀਜ਼ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "on the bed",
+          "in the cup",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਕੱਪ ਵਿੱਚ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says the shirt is on the bed.",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਕਮੀਜ਼ ਬਿਸਤਰ ਉੱਤੇ ਹੈ।"
+      },
+      {
+        "question": "Where are the shoes?",
+        "questionPa": "ਜੁੱਤੇ ਕਿੱਥੇ ਹਨ?",
+        "choices": [
+          "by the door",
+          "on the plate",
+          "in the bathroom"
+        ],
+        "choicesPa": [
+          "ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ",
+          "ਪਲੇਟ ਉੱਤੇ",
+          "ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says the shoes are by the door.",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਜੁੱਤੇ ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ ਹਨ।"
+      },
+      {
+        "question": "Where is the hat?",
+        "questionPa": "ਟੋਪੀ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "on the table",
+          "on the bed",
+          "in the bag"
+        ],
+        "choicesPa": [
+          "ਮੇਜ਼ ਉੱਤੇ",
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਬੈਗ ਵਿੱਚ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says the hat is on the table.",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਟੋਪੀ ਮੇਜ਼ ਉੱਤੇ ਹੈ।"
+      },
+      {
+        "question": "What does the child do at the end?",
+        "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "open the door",
+          "wash the door",
+          "drink the door"
+        ],
+        "choicesPa": [
+          "ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਧੋਂਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਪੀਂਦਾ ਹੈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “I open the door.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "shirt",
+        "meaningEn": "clothes worn on the upper body",
+        "meaningPa": "ਕਮੀਜ਼"
+      },
+      {
+        "word": "hat",
+        "meaningEn": "something worn on the head",
+        "meaningPa": "ਟੋਪੀ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Home",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "Shirt",
+          "pa": "ਕਮੀਜ਼"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਬਿਸਤਰ"
+        },
+        {
+          "en": "Shoes",
+          "pa": "ਜੁੱਤੇ"
+        },
+        {
+          "en": "Door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "Hat",
+          "pa": "ਟੋਪੀ"
+        },
+        {
+          "en": "Table",
+          "pa": "ਮੇਜ਼"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Open",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "Is/are",
+          "pa": "ਹੈ/ਹਨ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "By",
+          "pa": "ਦੇ ਕੋਲ"
+        },
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S09",
+    "bundleId": 1,
+    "orderInBundle": 9,
+    "titleEn": "Book 1 · Story 9: Family Lunch",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 9: ਪਰਿਵਾਰ ਦਾ ਖਾਣਾ",
+    "englishStory": "Panel 1 (Intro): Mom and dad are in the kitchen.\nPanel 2 (Body): Grandma and grandpa sit at the table.\nPanel 3 (Body): Sister and brother eat rice.\nPanel 4 (Body): The baby drinks milk.\nPanel 5 (Conclusion): I drink water in my cup.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮਾਂ ਅਤੇ ਪਿਉ ਰਸੋਈ ਵਿੱਚ ਹਨ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਮੇਜ਼ ਤੇ ਬੈਠਦੇ ਹਨ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਭੈਣ ਅਤੇ ਭਰਾ ਚਾਵਲ ਖਾਂਦੇ ਹਨ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਬੱਚਾ ਦੁੱਧ ਪੀਂਦਾ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where are mom and dad?",
+        "questionPa": "ਮਾਂ ਅਤੇ ਪਿਉ ਕਿੱਥੇ ਹਨ?",
+        "choices": [
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says mom and dad are in the kitchen.",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਮਾਂ ਅਤੇ ਪਿਉ ਰਸੋਈ ਵਿੱਚ ਹਨ।"
+      },
+      {
+        "question": "Who sits at the table?",
+        "questionPa": "ਮੇਜ਼ ਤੇ ਕੌਣ ਬੈਠਦਾ ਹੈ?",
+        "choices": [
+          "grandma and grandpa",
+          "sister and brother",
+          "mom and dad"
+        ],
+        "choicesPa": [
+          "ਦਾਦੀ ਅਤੇ ਦਾਦਾ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ",
+          "ਮਾਂ ਅਤੇ ਪਿਉ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “Grandma and grandpa sit at the table.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਮੇਜ਼ ਤੇ ਬੈਠਦੇ ਹਨ।”"
+      },
+      {
+        "question": "What do sister and brother eat?",
+        "questionPa": "ਭੈਣ ਅਤੇ ਭਰਾ ਕੀ ਖਾਂਦੇ ਹਨ?",
+        "choices": [
+          "rice",
+          "bread",
+          "banana"
+        ],
+        "choicesPa": [
+          "ਚਾਵਲ",
+          "ਰੋਟੀ",
+          "ਕੇਲਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “Sister and brother eat rice.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਭੈਣ ਅਤੇ ਭਰਾ ਚਾਵਲ ਖਾਂਦੇ ਹਨ।”"
+      },
+      {
+        "question": "What does the baby drink?",
+        "questionPa": "ਬੱਚਾ ਕੀ ਪੀਂਦਾ ਹੈ?",
+        "choices": [
+          "milk",
+          "water",
+          "rice"
+        ],
+        "choicesPa": [
+          "ਦੁੱਧ",
+          "ਪਾਣੀ",
+          "ਚਾਵਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says, “The baby drinks milk.”",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਬੱਚਾ ਦੁੱਧ ਪੀਂਦਾ ਹੈ।”"
+      },
+      {
+        "question": "What does the child drink at the end?",
+        "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਪੀਂਦਾ ਹੈ?",
+        "choices": [
+          "water",
+          "milk",
+          "apple"
+        ],
+        "choicesPa": [
+          "ਪਾਣੀ",
+          "ਦੁੱਧ",
+          "ਸੇਬ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “I drink water in my cup.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "family",
+        "meaningEn": "people in your home like mom, dad, and children",
+        "meaningPa": "ਪਰਿਵਾਰ"
+      },
+      {
+        "word": "rice",
+        "meaningEn": "small white grains used as food",
+        "meaningPa": "ਚਾਵਲ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "Kitchen",
+          "pa": "ਰਸੋਈ"
+        },
+        {
+          "en": "Grandma",
+          "pa": "ਦਾਦੀ"
+        },
+        {
+          "en": "Grandpa",
+          "pa": "ਦਾਦਾ"
+        },
+        {
+          "en": "Table",
+          "pa": "ਮੇਜ਼"
+        },
+        {
+          "en": "Sister",
+          "pa": "ਭੈਣ"
+        },
+        {
+          "en": "Brother",
+          "pa": "ਭਰਾ"
+        },
+        {
+          "en": "Rice",
+          "pa": "ਚਾਵਲ"
+        },
+        {
+          "en": "Baby",
+          "pa": "ਬੱਚਾ"
+        },
+        {
+          "en": "Milk",
+          "pa": "ਦੁੱਧ"
+        },
+        {
+          "en": "Water",
+          "pa": "ਪਾਣੀ"
+        },
+        {
+          "en": "Cup",
+          "pa": "ਕੱਪ"
+        },
+        {
+          "en": "Family",
+          "pa": "ਪਰਿਵਾਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Are",
+          "pa": "ਹਨ"
+        },
+        {
+          "en": "Sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "Eat",
+          "pa": "ਖਾਣਾ"
+        },
+        {
+          "en": "Drink(s)",
+          "pa": "ਪੀਣਾ"
+        },
+        {
+          "en": "Drink",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B1_S10",
+    "bundleId": 1,
+    "orderInBundle": 10,
+    "titleEn": "Book 1 · Story 10: Open and Close",
+    "titlePa": "ਕਿਤਾਬ 1 · ਕਹਾਣੀ 10: ਖੋਲ੍ਹੋ ਅਤੇ ਬੰਦ ਕਰੋ",
+    "englishStory": "Panel 1 (Intro): I am in my room.\nPanel 2 (Body): I open the window.\nPanel 3 (Body): I close the window.\nPanel 4 (Body): My book and my toy are on the bed.\nPanel 5 (Conclusion): My room is small. I am happy.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਖਿੜਕੀ ਖੋਲ੍ਹਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਖਿੜਕੀ ਬੰਦ ਕਰਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੇਰੀ ਕਿਤਾਬ ਅਤੇ ਮੇਰਾ ਖਿਡੌਣਾ ਬਿਸਤਰ ਉੱਤੇ ਹਨ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੇਰਾ ਕਮਰਾ ਛੋਟਾ ਹੈ। ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child?",
+        "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "room",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਕਮਰਾ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says, “I am in my room.”",
+        "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child open?",
+        "questionPa": "ਬੱਚਾ ਕੀ ਖੋਲ੍ਹਦਾ ਹੈ?",
+        "choices": [
+          "window",
+          "door",
+          "cup"
+        ],
+        "choicesPa": [
+          "ਖਿੜਕੀ",
+          "ਦਰਵਾਜ਼ਾ",
+          "ਕੱਪ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says, “I open the window.”",
+        "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖਿੜਕੀ ਖੋਲ੍ਹਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "What does the child close?",
+        "questionPa": "ਬੱਚਾ ਕੀ ਬੰਦ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "window",
+          "plate",
+          "hat"
+        ],
+        "choicesPa": [
+          "ਖਿੜਕੀ",
+          "ਪਲੇਟ",
+          "ਟੋਪੀ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says, “I close the window.”",
+        "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖਿੜਕੀ ਬੰਦ ਕਰਦਾ ਹਾਂ।”"
+      },
+      {
+        "question": "Where are the book and toy?",
+        "questionPa": "ਕਿਤਾਬ ਅਤੇ ਖਿਡੌਣਾ ਕਿੱਥੇ ਹਨ?",
+        "choices": [
+          "on the bed",
+          "in the bag",
+          "by the door"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਬੈਗ ਵਿੱਚ",
+          "ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says they are on the bed.",
+        "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਉਹ ਬਿਸਤਰ ਉੱਤੇ ਹਨ।"
+      },
+      {
+        "question": "How does the child feel at the end?",
+        "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਹੈ?",
+        "choices": [
+          "happy",
+          "cold",
+          "hot"
+        ],
+        "choicesPa": [
+          "ਖੁਸ਼",
+          "ਠੰਢਾ",
+          "ਗਰਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says, “I am happy.”",
+        "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖੁਸ਼ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "window",
+        "meaningEn": "an opening in a wall for light and air",
+        "meaningPa": "ਖਿੜਕੀ"
+      },
+      {
+        "word": "room",
+        "meaningEn": "a part of a house with walls",
+        "meaningPa": "ਕਮਰਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Room",
+          "pa": "ਕਮਰਾ"
+        },
+        {
+          "en": "Window",
+          "pa": "ਖਿੜਕੀ"
+        },
+        {
+          "en": "Book",
+          "pa": "ਕਿਤਾਬ"
+        },
+        {
+          "en": "Toy",
+          "pa": "ਖਿਡੌਣਾ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਬਿਸਤਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Open",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "Open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Is/are",
+          "pa": "ਹੈ/ਹਨ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Bed",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Small",
+          "pa": "ਛੋਟਾ"
+        },
+        {
+          "en": "Happy",
+          "pa": "ਖੁਸ਼"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  }
+]

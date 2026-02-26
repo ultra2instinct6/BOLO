@@ -1,0 +1,48 @@
+{
+  "ok": false,
+  "generatedAt": "2026-02-26T01:46:43.097Z",
+  "checks": [
+    {
+      "command": "node tools/fix_normalized_lessons_batch1.cjs --check",
+      "exitCode": 1
+    },
+    {
+      "command": "node tools/validate_normalized_lessons.js",
+      "exitCode": 1
+    },
+    {
+      "command": "node tools/validate_wrong_option_explanations.cjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node tools/generate_lessons_content_report.js",
+      "exitCode": 0
+    }
+  ],
+  "details": [
+    {
+      "command": "node tools/fix_normalized_lessons_batch1.cjs --check",
+      "exitCode": 1,
+      "stdout": "{\n  \"ok\": true,\n  \"mode\": \"check\",\n  \"stats\": {\n    \"lessonsVisited\": 32,\n    \"metadataPatched\": 0,\n    \"objectivePatched\": 0,\n    \"questionIdsPatched\": 0,\n    \"questionOptionsPatched\": 0,\n    \"correctnessPatched\": 0,\n    \"summaryPointsPatched\": 0,\n    \"pointsAvailablePatched\": 9,\n    \"lessonsTargeted\": 32\n  },\n  \"totalChanges\": 9,\n  \"changed\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node tools/validate_normalized_lessons.js",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "Found 9 issues:\n - L_NOUNS_BASICS_01: pointsAvailable mismatch 63 != 61\n - L_VERBS_BASICS_01: pointsAvailable mismatch 50 != 48\n - L_ADVERB_BASICS_01: pointsAvailable mismatch 60 != 58\n - L_ADJECTIVE_BASICS_01: pointsAvailable mismatch 65 != 63\n - L_PREPOSITION_BASICS_01: pointsAvailable mismatch 71 != 69\n - L_ARTICLE_BASICS_01: pointsAvailable mismatch 71 != 69\n - L_IRREGULAR_VERBS_01: pointsAvailable mismatch 51 != 49\n - L_QUESTION_FORMATION_01: pointsAvailable mismatch 51 != 49\n - L_NEGATIVE_SENTENCES_01: pointsAvailable mismatch 51 != 49\n"
+    },
+    {
+      "command": "node tools/validate_wrong_option_explanations.cjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"remainingMissingCount\": 0,\n  \"countMismatchCount\": 0,\n  \"skippedEdgeCases\": 0,\n  \"missingCases\": [],\n  \"countMismatchCases\": [],\n  \"skipped\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node tools/generate_lessons_content_report.js",
+      "exitCode": 0,
+      "stdout": "Generated lesson content report for 32 lessons: /Users/deepakdaroach/bolo/LESSONS_CONTENT_TYPE_REPORT.md\n",
+      "stderr": ""
+    }
+  ]
+}

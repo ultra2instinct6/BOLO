@@ -1,0 +1,2902 @@
+[
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S01",
+    "titleEn": "Book 1 · Story 1: My Big House",
+    "counts": {
+      "partsOfSpeechTotal": 34,
+      "partsOfSpeechBreakdown": {
+        "nouns": 19,
+        "verbs": 5,
+        "pronouns": 2,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S02",
+    "titleEn": "Book 1 · Story 2: In My Bedroom",
+    "counts": {
+      "partsOfSpeechTotal": 32,
+      "partsOfSpeechBreakdown": {
+        "nouns": 13,
+        "verbs": 8,
+        "pronouns": 2,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 4,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S03",
+    "titleEn": "Book 1 · Story 3: Kitchen Lunch",
+    "counts": {
+      "partsOfSpeechTotal": 32,
+      "partsOfSpeechBreakdown": {
+        "nouns": 15,
+        "verbs": 5,
+        "pronouns": 1,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 3,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S04",
+    "titleEn": "Book 1 · Story 4: Wash Time",
+    "counts": {
+      "partsOfSpeechTotal": 30,
+      "partsOfSpeechBreakdown": {
+        "nouns": 15,
+        "verbs": 4,
+        "pronouns": 4,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S05",
+    "titleEn": "Book 1 · Story 5: Play Time",
+    "counts": {
+      "partsOfSpeechTotal": 30,
+      "partsOfSpeechBreakdown": {
+        "nouns": 15,
+        "verbs": 4,
+        "pronouns": 2,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 4,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S06",
+    "titleEn": "Book 1 · Story 6: Baby Sleeps",
+    "counts": {
+      "partsOfSpeechTotal": 30,
+      "partsOfSpeechBreakdown": {
+        "nouns": 16,
+        "verbs": 6,
+        "pronouns": 1,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S07",
+    "titleEn": "Book 1 · Story 7: Wash the Dishes",
+    "counts": {
+      "partsOfSpeechTotal": 30,
+      "partsOfSpeechBreakdown": {
+        "nouns": 15,
+        "verbs": 5,
+        "pronouns": 1,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S08",
+    "titleEn": "Book 1 · Story 8: Shirt, Shoes, Hat",
+    "counts": {
+      "partsOfSpeechTotal": 30,
+      "partsOfSpeechBreakdown": {
+        "nouns": 14,
+        "verbs": 6,
+        "pronouns": 2,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 3,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S09",
+    "titleEn": "Book 1 · Story 9: Family Lunch",
+    "counts": {
+      "partsOfSpeechTotal": 34,
+      "partsOfSpeechBreakdown": {
+        "nouns": 20,
+        "verbs": 5,
+        "pronouns": 2,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book1_first10_stories.template.json",
+    "storyId": "B1_S10",
+    "titleEn": "Book 1 · Story 10: Open and Close",
+    "counts": {
+      "partsOfSpeechTotal": 30,
+      "partsOfSpeechBreakdown": {
+        "nouns": 13,
+        "verbs": 7,
+        "pronouns": 2,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 2,
+        "conjunctions": 1,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 2,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S01",
+    "titleEn": "Book 2 · Story 1: Good Morning, School!",
+    "counts": {
+      "partsOfSpeechTotal": 65,
+      "partsOfSpeechBreakdown": {
+        "nouns": 33,
+        "verbs": 13,
+        "pronouns": 4,
+        "adjectives": 1,
+        "adverbs": 5,
+        "prepositions": 4,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S02",
+    "titleEn": "Book 2 · Story 2: My Bag and My Desk",
+    "counts": {
+      "partsOfSpeechTotal": 51,
+      "partsOfSpeechBreakdown": {
+        "nouns": 27,
+        "verbs": 7,
+        "pronouns": 3,
+        "adjectives": 2,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S03",
+    "titleEn": "Book 2 · Story 3: Reading Time Together",
+    "counts": {
+      "partsOfSpeechTotal": 60,
+      "partsOfSpeechBreakdown": {
+        "nouns": 28,
+        "verbs": 12,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 5,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S04",
+    "titleEn": "Book 2 · Story 4: Writing Time",
+    "counts": {
+      "partsOfSpeechTotal": 57,
+      "partsOfSpeechBreakdown": {
+        "nouns": 30,
+        "verbs": 8,
+        "pronouns": 4,
+        "adjectives": 2,
+        "adverbs": 4,
+        "prepositions": 3,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S05",
+    "titleEn": "Book 2 · Story 5: Math on the Board",
+    "counts": {
+      "partsOfSpeechTotal": 57,
+      "partsOfSpeechBreakdown": {
+        "nouns": 29,
+        "verbs": 9,
+        "pronouns": 4,
+        "adjectives": 2,
+        "adverbs": 4,
+        "prepositions": 4,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S06",
+    "titleEn": "Book 2 · Story 6: Science Helpers",
+    "counts": {
+      "partsOfSpeechTotal": 56,
+      "partsOfSpeechBreakdown": {
+        "nouns": 27,
+        "verbs": 12,
+        "pronouns": 4,
+        "adjectives": 3,
+        "adverbs": 3,
+        "prepositions": 2,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S07",
+    "titleEn": "Book 2 · Story 7: Art Time Sharing",
+    "counts": {
+      "partsOfSpeechTotal": 55,
+      "partsOfSpeechBreakdown": {
+        "nouns": 30,
+        "verbs": 7,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 2,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S08",
+    "titleEn": "Book 2 · Story 8: Bathroom Break",
+    "counts": {
+      "partsOfSpeechTotal": 56,
+      "partsOfSpeechBreakdown": {
+        "nouns": 28,
+        "verbs": 11,
+        "pronouns": 2,
+        "adjectives": 1,
+        "adverbs": 4,
+        "prepositions": 5,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S09",
+    "titleEn": "Book 2 · Story 9: PE Run and Stop",
+    "counts": {
+      "partsOfSpeechTotal": 55,
+      "partsOfSpeechBreakdown": {
+        "nouns": 26,
+        "verbs": 9,
+        "pronouns": 2,
+        "adjectives": 2,
+        "adverbs": 4,
+        "prepositions": 6,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book2_first10_stories.template.json",
+    "storyId": "B2_S10",
+    "titleEn": "Book 2 · Story 10: Before We Go Home",
+    "counts": {
+      "partsOfSpeechTotal": 63,
+      "partsOfSpeechBreakdown": {
+        "nouns": 36,
+        "verbs": 8,
+        "pronouns": 5,
+        "adjectives": 1,
+        "adverbs": 3,
+        "prepositions": 5,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S01",
+    "titleEn": "Book 3 · Story 1: Turn Left to the Park",
+    "counts": {
+      "partsOfSpeechTotal": 65,
+      "partsOfSpeechBreakdown": {
+        "nouns": 30,
+        "verbs": 12,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 8,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S02",
+    "titleEn": "Book 3 · Story 2: Bus Stop to School",
+    "counts": {
+      "partsOfSpeechTotal": 72,
+      "partsOfSpeechBreakdown": {
+        "nouns": 40,
+        "verbs": 10,
+        "pronouns": 5,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 10,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S03",
+    "titleEn": "Book 3 · Story 3: Market Map",
+    "counts": {
+      "partsOfSpeechTotal": 68,
+      "partsOfSpeechBreakdown": {
+        "nouns": 36,
+        "verbs": 10,
+        "pronouns": 4,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 7,
+        "conjunctions": 4,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S04",
+    "titleEn": "Book 3 · Story 4: Library Day",
+    "counts": {
+      "partsOfSpeechTotal": 71,
+      "partsOfSpeechBreakdown": {
+        "nouns": 40,
+        "verbs": 9,
+        "pronouns": 2,
+        "adjectives": 3,
+        "adverbs": 3,
+        "prepositions": 8,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S05",
+    "titleEn": "Book 3 · Story 5: Hospital Help",
+    "counts": {
+      "partsOfSpeechTotal": 68,
+      "partsOfSpeechBreakdown": {
+        "nouns": 34,
+        "verbs": 13,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S06",
+    "titleEn": "Book 3 · Story 6: Firefighter Safety",
+    "counts": {
+      "partsOfSpeechTotal": 69,
+      "partsOfSpeechBreakdown": {
+        "nouns": 35,
+        "verbs": 10,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 8,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S07",
+    "titleEn": "Book 3 · Story 7: Treasure Walk",
+    "counts": {
+      "partsOfSpeechTotal": 67,
+      "partsOfSpeechBreakdown": {
+        "nouns": 37,
+        "verbs": 7,
+        "pronouns": 2,
+        "adjectives": 3,
+        "adverbs": 5,
+        "prepositions": 7,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S08",
+    "titleEn": "Book 3 · Story 8: Lost Near the Store",
+    "counts": {
+      "partsOfSpeechTotal": 69,
+      "partsOfSpeechBreakdown": {
+        "nouns": 34,
+        "verbs": 13,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 7,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S09",
+    "titleEn": "Book 3 · Story 9: Clean Park Team",
+    "counts": {
+      "partsOfSpeechTotal": 64,
+      "partsOfSpeechBreakdown": {
+        "nouns": 36,
+        "verbs": 7,
+        "pronouns": 3,
+        "adjectives": 3,
+        "adverbs": 3,
+        "prepositions": 6,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book3_first10_stories.template.json",
+    "storyId": "B3_S10",
+    "titleEn": "Book 3 · Story 10: Festival Walk",
+    "counts": {
+      "partsOfSpeechTotal": 78,
+      "partsOfSpeechBreakdown": {
+        "nouns": 43,
+        "verbs": 12,
+        "pronouns": 3,
+        "adjectives": 3,
+        "adverbs": 3,
+        "prepositions": 8,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 5,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S01",
+    "titleEn": "Book 4 · Story 1: Lost Teddy at the Park",
+    "counts": {
+      "partsOfSpeechTotal": 91,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 15,
+        "pronouns": 6,
+        "adjectives": 2,
+        "adverbs": 5,
+        "prepositions": 9,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S02",
+    "titleEn": "Book 4 · Story 2: My Pencil Is Missing",
+    "counts": {
+      "partsOfSpeechTotal": 81,
+      "partsOfSpeechBreakdown": {
+        "nouns": 40,
+        "verbs": 14,
+        "pronouns": 6,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 8,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S03",
+    "titleEn": "Book 4 · Story 3: One Toy, Two Kids",
+    "counts": {
+      "partsOfSpeechTotal": 79,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 12,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 4,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S04",
+    "titleEn": "Book 4 · Story 4: The Crayon Broke",
+    "counts": {
+      "partsOfSpeechTotal": 86,
+      "partsOfSpeechBreakdown": {
+        "nouns": 49,
+        "verbs": 11,
+        "pronouns": 6,
+        "adjectives": 5,
+        "adverbs": 1,
+        "prepositions": 7,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S05",
+    "titleEn": "Book 4 · Story 5: Spilled Water",
+    "counts": {
+      "partsOfSpeechTotal": 89,
+      "partsOfSpeechBreakdown": {
+        "nouns": 48,
+        "verbs": 15,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 4,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S06",
+    "titleEn": "Book 4 · Story 6: Snack Mix-Up",
+    "counts": {
+      "partsOfSpeechTotal": 91,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 20,
+        "pronouns": 6,
+        "adjectives": 5,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S07",
+    "titleEn": "Book 4 · Story 7: Waiting for the Slide",
+    "counts": {
+      "partsOfSpeechTotal": 89,
+      "partsOfSpeechBreakdown": {
+        "nouns": 51,
+        "verbs": 13,
+        "pronouns": 6,
+        "adjectives": 2,
+        "adverbs": 4,
+        "prepositions": 5,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S08",
+    "titleEn": "Book 4 · Story 8: Quiet Voice Choice",
+    "counts": {
+      "partsOfSpeechTotal": 97,
+      "partsOfSpeechBreakdown": {
+        "nouns": 55,
+        "verbs": 16,
+        "pronouns": 5,
+        "adjectives": 5,
+        "adverbs": 2,
+        "prepositions": 7,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S09",
+    "titleEn": "Book 4 · Story 9: Helping a Scared Friend",
+    "counts": {
+      "partsOfSpeechTotal": 95,
+      "partsOfSpeechBreakdown": {
+        "nouns": 51,
+        "verbs": 16,
+        "pronouns": 5,
+        "adjectives": 4,
+        "adverbs": 5,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book4_first10_stories.template.json",
+    "storyId": "B4_S10",
+    "titleEn": "Book 4 · Story 10: Telling the Truth",
+    "counts": {
+      "partsOfSpeechTotal": 89,
+      "partsOfSpeechBreakdown": {
+        "nouns": 48,
+        "verbs": 15,
+        "pronouns": 5,
+        "adjectives": 4,
+        "adverbs": 3,
+        "prepositions": 7,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S01",
+    "titleEn": "Book 5 · Story 1: I Want to Be a Doctor",
+    "counts": {
+      "partsOfSpeechTotal": 82,
+      "partsOfSpeechBreakdown": {
+        "nouns": 40,
+        "verbs": 18,
+        "pronouns": 4,
+        "adjectives": 5,
+        "adverbs": 3,
+        "prepositions": 6,
+        "conjunctions": 3,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S02",
+    "titleEn": "Book 5 · Story 2: My Soccer Goal Plan",
+    "counts": {
+      "partsOfSpeechTotal": 84,
+      "partsOfSpeechBreakdown": {
+        "nouns": 48,
+        "verbs": 13,
+        "pronouns": 3,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 7,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S03",
+    "titleEn": "Book 5 · Story 3: The Science Fair Poster",
+    "counts": {
+      "partsOfSpeechTotal": 92,
+      "partsOfSpeechBreakdown": {
+        "nouns": 52,
+        "verbs": 12,
+        "pronouns": 6,
+        "adjectives": 7,
+        "adverbs": 3,
+        "prepositions": 5,
+        "conjunctions": 5,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S04",
+    "titleEn": "Book 5 · Story 4: My First Library Card",
+    "counts": {
+      "partsOfSpeechTotal": 87,
+      "partsOfSpeechBreakdown": {
+        "nouns": 50,
+        "verbs": 11,
+        "pronouns": 6,
+        "adjectives": 3,
+        "adverbs": 3,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S05",
+    "titleEn": "Book 5 · Story 5: The Festival Lanterns",
+    "counts": {
+      "partsOfSpeechTotal": 89,
+      "partsOfSpeechBreakdown": {
+        "nouns": 49,
+        "verbs": 12,
+        "pronouns": 7,
+        "adjectives": 4,
+        "adverbs": 3,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S06",
+    "titleEn": "Book 5 · Story 6: A Family Cooking Day",
+    "counts": {
+      "partsOfSpeechTotal": 93,
+      "partsOfSpeechBreakdown": {
+        "nouns": 55,
+        "verbs": 11,
+        "pronouns": 6,
+        "adjectives": 3,
+        "adverbs": 5,
+        "prepositions": 5,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S07",
+    "titleEn": "Book 5 · Story 7: Planting a Small Garden",
+    "counts": {
+      "partsOfSpeechTotal": 91,
+      "partsOfSpeechBreakdown": {
+        "nouns": 51,
+        "verbs": 16,
+        "pronouns": 5,
+        "adjectives": 4,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S08",
+    "titleEn": "Book 5 · Story 8: Saving Money for a Bike",
+    "counts": {
+      "partsOfSpeechTotal": 88,
+      "partsOfSpeechBreakdown": {
+        "nouns": 48,
+        "verbs": 16,
+        "pronouns": 5,
+        "adjectives": 4,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S09",
+    "titleEn": "Book 5 · Story 9: Helping at the Food Drive",
+    "counts": {
+      "partsOfSpeechTotal": 99,
+      "partsOfSpeechBreakdown": {
+        "nouns": 56,
+        "verbs": 11,
+        "pronouns": 7,
+        "adjectives": 5,
+        "adverbs": 4,
+        "prepositions": 8,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book5_first10_stories.template.json",
+    "storyId": "B5_S10",
+    "titleEn": "Book 5 · Story 10: My Role Model Promise",
+    "counts": {
+      "partsOfSpeechTotal": 88,
+      "partsOfSpeechBreakdown": {
+        "nouns": 53,
+        "verbs": 13,
+        "pronouns": 4,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S01",
+    "titleEn": "Book 6 · Story 1: Safe Street Crossing",
+    "counts": {
+      "partsOfSpeechTotal": 90,
+      "partsOfSpeechBreakdown": {
+        "nouns": 51,
+        "verbs": 13,
+        "pronouns": 4,
+        "adjectives": 2,
+        "adverbs": 5,
+        "prepositions": 7,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S02",
+    "titleEn": "Book 6 · Story 2: Packing My Backpack",
+    "counts": {
+      "partsOfSpeechTotal": 81,
+      "partsOfSpeechBreakdown": {
+        "nouns": 47,
+        "verbs": 12,
+        "pronouns": 2,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 7,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S03",
+    "titleEn": "Book 6 · Story 3: My Bus Ride Plan",
+    "counts": {
+      "partsOfSpeechTotal": 78,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 9,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S04",
+    "titleEn": "Book 6 · Story 4: Helmet Rules",
+    "counts": {
+      "partsOfSpeechTotal": 82,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 9,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 9,
+        "conjunctions": 7,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S05",
+    "titleEn": "Book 6 · Story 5: Sink or Float",
+    "counts": {
+      "partsOfSpeechTotal": 76,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 8,
+        "pronouns": 5,
+        "adjectives": 4,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S06",
+    "titleEn": "Book 6 · Story 6: Recycling Day",
+    "counts": {
+      "partsOfSpeechTotal": 85,
+      "partsOfSpeechBreakdown": {
+        "nouns": 49,
+        "verbs": 11,
+        "pronouns": 5,
+        "adjectives": 4,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S07",
+    "titleEn": "Book 6 · Story 7: I Am a Reading Helper",
+    "counts": {
+      "partsOfSpeechTotal": 78,
+      "partsOfSpeechBreakdown": {
+        "nouns": 42,
+        "verbs": 12,
+        "pronouns": 4,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 6,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S08",
+    "titleEn": "Book 6 · Story 8: A Water-Saving Habit",
+    "counts": {
+      "partsOfSpeechTotal": 88,
+      "partsOfSpeechBreakdown": {
+        "nouns": 50,
+        "verbs": 11,
+        "pronouns": 6,
+        "adjectives": 6,
+        "adverbs": 3,
+        "prepositions": 4,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S09",
+    "titleEn": "Book 6 · Story 9: My Homework Schedule",
+    "counts": {
+      "partsOfSpeechTotal": 85,
+      "partsOfSpeechBreakdown": {
+        "nouns": 47,
+        "verbs": 12,
+        "pronouns": 4,
+        "adjectives": 1,
+        "adverbs": 4,
+        "prepositions": 8,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book6_first10_stories.template.json",
+    "storyId": "B6_S10",
+    "titleEn": "Book 6 · Story 10: My Class Presentation",
+    "counts": {
+      "partsOfSpeechTotal": 79,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 10,
+        "pronouns": 3,
+        "adjectives": 4,
+        "adverbs": 2,
+        "prepositions": 7,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S01",
+    "titleEn": "Book 7 · Story 1: Can You Say That Again?",
+    "counts": {
+      "partsOfSpeechTotal": 83,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 13,
+        "pronouns": 4,
+        "adjectives": 4,
+        "adverbs": 5,
+        "prepositions": 3,
+        "conjunctions": 4,
+        "articles": 3,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S02",
+    "titleEn": "Book 7 · Story 2: Which One Do You Prefer?",
+    "counts": {
+      "partsOfSpeechTotal": 79,
+      "partsOfSpeechBreakdown": {
+        "nouns": 47,
+        "verbs": 11,
+        "pronouns": 5,
+        "adjectives": 1,
+        "adverbs": 3,
+        "prepositions": 4,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S03",
+    "titleEn": "Book 7 · Story 3: Planning a Playdate",
+    "counts": {
+      "partsOfSpeechTotal": 77,
+      "partsOfSpeechBreakdown": {
+        "nouns": 41,
+        "verbs": 13,
+        "pronouns": 6,
+        "adjectives": 1,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 4,
+        "articles": 3,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S04",
+    "titleEn": "Book 7 · Story 4: Same and Different",
+    "counts": {
+      "partsOfSpeechTotal": 84,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 14,
+        "pronouns": 8,
+        "adjectives": 1,
+        "adverbs": 3,
+        "prepositions": 4,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S05",
+    "titleEn": "Book 7 · Story 5: How to Make a Sandwich",
+    "counts": {
+      "partsOfSpeechTotal": 78,
+      "partsOfSpeechBreakdown": {
+        "nouns": 48,
+        "verbs": 10,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 5,
+        "conjunctions": 2,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S06",
+    "titleEn": "Book 7 · Story 6: I Disagree Kindly",
+    "counts": {
+      "partsOfSpeechTotal": 80,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 12,
+        "pronouns": 8,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 3,
+        "conjunctions": 5,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S07",
+    "titleEn": "Book 7 · Story 7: My Mini Report: Tigers",
+    "counts": {
+      "partsOfSpeechTotal": 86,
+      "partsOfSpeechBreakdown": {
+        "nouns": 49,
+        "verbs": 13,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S08",
+    "titleEn": "Book 7 · Story 8: The Best Playground Game",
+    "counts": {
+      "partsOfSpeechTotal": 82,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 15,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 2,
+        "prepositions": 4,
+        "conjunctions": 4,
+        "articles": 3,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S09",
+    "titleEn": "Book 7 · Story 9: Explaining My Drawing",
+    "counts": {
+      "partsOfSpeechTotal": 77,
+      "partsOfSpeechBreakdown": {
+        "nouns": 44,
+        "verbs": 13,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 4,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book7_first10_stories.template.json",
+    "storyId": "B7_S10",
+    "titleEn": "Book 7 · Story 10: Helping a New Student",
+    "counts": {
+      "partsOfSpeechTotal": 84,
+      "partsOfSpeechBreakdown": {
+        "nouns": 39,
+        "verbs": 20,
+        "pronouns": 8,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S01",
+    "titleEn": "Book 8 · Story 1: Rain or No Rain?",
+    "counts": {
+      "partsOfSpeechTotal": 73,
+      "partsOfSpeechBreakdown": {
+        "nouns": 36,
+        "verbs": 13,
+        "pronouns": 3,
+        "adjectives": 5,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S02",
+    "titleEn": "Book 8 · Story 2: Warm Sun, Cool Shade",
+    "counts": {
+      "partsOfSpeechTotal": 72,
+      "partsOfSpeechBreakdown": {
+        "nouns": 41,
+        "verbs": 10,
+        "pronouns": 3,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S03",
+    "titleEn": "Book 8 · Story 3: Wind Test with Paper",
+    "counts": {
+      "partsOfSpeechTotal": 73,
+      "partsOfSpeechBreakdown": {
+        "nouns": 44,
+        "verbs": 9,
+        "pronouns": 4,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 4,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S04",
+    "titleEn": "Book 8 · Story 4: Shadow Changes",
+    "counts": {
+      "partsOfSpeechTotal": 70,
+      "partsOfSpeechBreakdown": {
+        "nouns": 34,
+        "verbs": 13,
+        "pronouns": 3,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 6,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S05",
+    "titleEn": "Book 8 · Story 5: Seed in a Cup",
+    "counts": {
+      "partsOfSpeechTotal": 78,
+      "partsOfSpeechBreakdown": {
+        "nouns": 42,
+        "verbs": 16,
+        "pronouns": 2,
+        "adjectives": 4,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S06",
+    "titleEn": "Book 8 · Story 6: What Plants Need",
+    "counts": {
+      "partsOfSpeechTotal": 89,
+      "partsOfSpeechBreakdown": {
+        "nouns": 49,
+        "verbs": 14,
+        "pronouns": 5,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 8,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S07",
+    "titleEn": "Book 8 · Story 7: Sink or Float Again",
+    "counts": {
+      "partsOfSpeechTotal": 73,
+      "partsOfSpeechBreakdown": {
+        "nouns": 39,
+        "verbs": 12,
+        "pronouns": 3,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S08",
+    "titleEn": "Book 8 · Story 8: Melting Ice Experiment",
+    "counts": {
+      "partsOfSpeechTotal": 81,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 11,
+        "pronouns": 4,
+        "adjectives": 4,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 3,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S09",
+    "titleEn": "Book 8 · Story 9: Sorting Science",
+    "counts": {
+      "partsOfSpeechTotal": 80,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 13,
+        "pronouns": 6,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book8_first10_stories.template.json",
+    "storyId": "B8_S10",
+    "titleEn": "Book 8 · Story 10: Our Mini Science Fair",
+    "counts": {
+      "partsOfSpeechTotal": 80,
+      "partsOfSpeechBreakdown": {
+        "nouns": 51,
+        "verbs": 12,
+        "pronouns": 4,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 3,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S01",
+    "titleEn": "Book 9 · Story 1: Bazaar Mission: Find the Fruit Seller",
+    "counts": {
+      "partsOfSpeechTotal": 77,
+      "partsOfSpeechBreakdown": {
+        "nouns": 42,
+        "verbs": 13,
+        "pronouns": 5,
+        "adjectives": 2,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 2
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S02",
+    "titleEn": "Book 9 · Story 2: Auto-Rickshaw Ride: Saying the Address",
+    "counts": {
+      "partsOfSpeechTotal": 82,
+      "partsOfSpeechBreakdown": {
+        "nouns": 44,
+        "verbs": 15,
+        "pronouns": 6,
+        "adjectives": 1,
+        "adverbs": 1,
+        "prepositions": 6,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 2
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S03",
+    "titleEn": "Book 9 · Story 3: Gurdwara Visit: Langar Line Rules",
+    "counts": {
+      "partsOfSpeechTotal": 75,
+      "partsOfSpeechBreakdown": {
+        "nouns": 43,
+        "verbs": 12,
+        "pronouns": 6,
+        "adjectives": 4,
+        "adverbs": 1,
+        "prepositions": 4,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S04",
+    "titleEn": "Book 9 · Story 4: Bus Stop: Which Bus Is Ours?",
+    "counts": {
+      "partsOfSpeechTotal": 85,
+      "partsOfSpeechBreakdown": {
+        "nouns": 46,
+        "verbs": 17,
+        "pronouns": 6,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 5,
+        "conjunctions": 4,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S05",
+    "titleEn": "Book 9 · Story 5: Railway Station: Finding the Platform",
+    "counts": {
+      "partsOfSpeechTotal": 76,
+      "partsOfSpeechBreakdown": {
+        "nouns": 38,
+        "verbs": 14,
+        "pronouns": 8,
+        "adjectives": 2,
+        "adverbs": 2,
+        "prepositions": 4,
+        "conjunctions": 5,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S06",
+    "titleEn": "Book 9 · Story 6: Clinic Visit: Simple Symptoms",
+    "counts": {
+      "partsOfSpeechTotal": 70,
+      "partsOfSpeechBreakdown": {
+        "nouns": 36,
+        "verbs": 10,
+        "pronouns": 7,
+        "adjectives": 4,
+        "adverbs": 1,
+        "prepositions": 5,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S07",
+    "titleEn": "Book 9 · Story 7: Chemist Shop: Bandage and ORS",
+    "counts": {
+      "partsOfSpeechTotal": 70,
+      "partsOfSpeechBreakdown": {
+        "nouns": 37,
+        "verbs": 11,
+        "pronouns": 7,
+        "adjectives": 3,
+        "adverbs": 2,
+        "prepositions": 3,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S08",
+    "titleEn": "Book 9 · Story 8: Library: Finding a Book",
+    "counts": {
+      "partsOfSpeechTotal": 81,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 13,
+        "pronouns": 7,
+        "adjectives": 2,
+        "adverbs": 1,
+        "prepositions": 5,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 2
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S09",
+    "titleEn": "Book 9 · Story 9: Society Gate: Talking to the Guard",
+    "counts": {
+      "partsOfSpeechTotal": 70,
+      "partsOfSpeechBreakdown": {
+        "nouns": 38,
+        "verbs": 13,
+        "pronouns": 7,
+        "adjectives": 1,
+        "adverbs": 2,
+        "prepositions": 4,
+        "conjunctions": 3,
+        "articles": 1,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book9_first10_stories.template.json",
+    "storyId": "B9_S10",
+    "titleEn": "Book 9 · Story 10: Lost in a Crowd: Find a Safe Helper",
+    "counts": {
+      "partsOfSpeechTotal": 85,
+      "partsOfSpeechBreakdown": {
+        "nouns": 45,
+        "verbs": 15,
+        "pronouns": 7,
+        "adjectives": 3,
+        "adverbs": 4,
+        "prepositions": 4,
+        "conjunctions": 4,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S01",
+    "titleEn": "Book 10 · Story 1: The Soil Is Alive",
+    "counts": {
+      "partsOfSpeechTotal": 166,
+      "partsOfSpeechBreakdown": {
+        "nouns": 112,
+        "verbs": 17,
+        "pronouns": 7,
+        "adjectives": 5,
+        "adverbs": 6,
+        "prepositions": 9,
+        "conjunctions": 7,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S02",
+    "titleEn": "Book 10 · Story 2: Seed to Sprout",
+    "counts": {
+      "partsOfSpeechTotal": 159,
+      "partsOfSpeechBreakdown": {
+        "nouns": 99,
+        "verbs": 25,
+        "pronouns": 8,
+        "adjectives": 5,
+        "adverbs": 3,
+        "prepositions": 10,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S03",
+    "titleEn": "Book 10 · Story 3: Water Choices on a Hot Day",
+    "counts": {
+      "partsOfSpeechTotal": 163,
+      "partsOfSpeechBreakdown": {
+        "nouns": 105,
+        "verbs": 22,
+        "pronouns": 8,
+        "adjectives": 4,
+        "adverbs": 6,
+        "prepositions": 7,
+        "conjunctions": 8,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S04",
+    "titleEn": "Book 10 · Story 4: Sunlight Makes a Difference",
+    "counts": {
+      "partsOfSpeechTotal": 147,
+      "partsOfSpeechBreakdown": {
+        "nouns": 101,
+        "verbs": 17,
+        "pronouns": 8,
+        "adjectives": 2,
+        "adverbs": 3,
+        "prepositions": 6,
+        "conjunctions": 7,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S05",
+    "titleEn": "Book 10 · Story 5: Tools That Help Farmers",
+    "counts": {
+      "partsOfSpeechTotal": 167,
+      "partsOfSpeechBreakdown": {
+        "nouns": 108,
+        "verbs": 19,
+        "pronouns": 8,
+        "adjectives": 9,
+        "adverbs": 3,
+        "prepositions": 11,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S06",
+    "titleEn": "Book 10 · Story 6: Weeds and Plant Care",
+    "counts": {
+      "partsOfSpeechTotal": 151,
+      "partsOfSpeechBreakdown": {
+        "nouns": 97,
+        "verbs": 21,
+        "pronouns": 6,
+        "adjectives": 3,
+        "adverbs": 4,
+        "prepositions": 11,
+        "conjunctions": 6,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S07",
+    "titleEn": "Book 10 · Story 7: Bugs on the Leaves",
+    "counts": {
+      "partsOfSpeechTotal": 146,
+      "partsOfSpeechBreakdown": {
+        "nouns": 89,
+        "verbs": 23,
+        "pronouns": 9,
+        "adjectives": 3,
+        "adverbs": 1,
+        "prepositions": 10,
+        "conjunctions": 7,
+        "articles": 3,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S08",
+    "titleEn": "Book 10 · Story 8: Harvest Day",
+    "counts": {
+      "partsOfSpeechTotal": 159,
+      "partsOfSpeechBreakdown": {
+        "nouns": 105,
+        "verbs": 18,
+        "pronouns": 7,
+        "adjectives": 5,
+        "adverbs": 4,
+        "prepositions": 10,
+        "conjunctions": 7,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S09",
+    "titleEn": "Book 10 · Story 9: From Milk to Home",
+    "counts": {
+      "partsOfSpeechTotal": 157,
+      "partsOfSpeechBreakdown": {
+        "nouns": 101,
+        "verbs": 21,
+        "pronouns": 6,
+        "adjectives": 4,
+        "adverbs": 5,
+        "prepositions": 9,
+        "conjunctions": 8,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  {
+    "file": "book10_first10_stories.template.json",
+    "storyId": "B10_S10",
+    "titleEn": "Book 10 · Story 10: Mandi Day: Fair Price",
+    "counts": {
+      "partsOfSpeechTotal": 152,
+      "partsOfSpeechBreakdown": {
+        "nouns": 102,
+        "verbs": 17,
+        "pronouns": 7,
+        "adjectives": 3,
+        "adverbs": 4,
+        "prepositions": 9,
+        "conjunctions": 7,
+        "articles": 2,
+        "interjections": 1
+      },
+      "vocabularyWords": 10,
+      "multipleChoiceQuestions": 5,
+      "multipleChoiceOptionsTotal": 15,
+      "multipleChoiceOptionsPerQuestion": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  }
+]

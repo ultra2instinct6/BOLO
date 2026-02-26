@@ -3779,6 +3779,17 @@ var Games = {
 
           if (key === "Escape") {
             ev.preventDefault();
+            if (typeof UI !== "undefined" && UI && typeof UI.showConfirmDialog === "function") {
+              UI.showConfirmDialog("Exit this round?", {
+                title: "Exit round",
+                confirmText: "Exit",
+                cancelText: "Stay",
+                allowCancel: true
+              }).then(function(ok) {
+                if (ok) Games.backToPlayMenu();
+              });
+              return;
+            }
             var ok = true;
             try { ok = window.confirm("Exit this round?"); } catch (e1) { ok = true; }
             if (ok) Games.backToPlayMenu();

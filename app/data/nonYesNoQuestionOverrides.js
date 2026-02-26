@@ -41,7 +41,7 @@
     "lessonId": "L_ADJ_VS_ADV_01",
     "stepId": "q_l_adj_vs_adv_01_she_sings",
     "prompt": {
-      "en": "She sings ___.",
+      "en": "Complete the sentence: She sings ___.",
       "pa": "ਉਹ ___ ਗਾਂਦੀ ਹੈ।"
     },
     "options": [
@@ -252,7 +252,7 @@
     "stepId": "q_l_adjective_basics_01_adjectives_can_describe_size_whi",
     "prompt": {
       "en": "Adjectives can describe size. Which is size?",
-      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਆਕਾਰ ਦਾ ਵਰਣਨ ਕਰ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਆਕਾਰ ਹੈ?"
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਆਕਾਰ ਦਾ ਵਰਣਨ ਕਰ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਸ਼ਬਦ ਆਕਾਰ ਦੱਸਦਾ ਹੈ?"
     },
     "options": [
       {
@@ -2786,15 +2786,15 @@
     "options": [
       {
         "en": "I learned",
-        "pa": "I learned (ਹੋ ਚੁੱਕਾ)"
+        "pa": "ਮੈਂ ਸਿੱਖ ਲਿਆ (ਹੋ ਚੁੱਕਾ)"
       },
       {
         "en": "I learn",
-        "pa": "I learn (ਆਦਤ)"
+        "pa": "ਮੈਂ ਸਿੱਖਦਾ/ਸਿੱਖਦੀ ਹਾਂ (ਆਦਤ/ਵਰਤਮਾਨ)"
       },
       {
         "en": "I will learn",
-        "pa": "I will learn (ਅਜੇ ਹੋਵੇਗਾ)"
+        "pa": "ਮੈਂ ਸਿੱਖਾਂਗਾ/ਸਿੱਖਾਂਗੀ (ਅੱਗੇ ਹੋਵੇਗਾ)"
       }
     ],
     "correctOptionIndex": 2,
@@ -4331,20 +4331,20 @@
     "stepId": "q_simple_future_will_vs_going_to",
     "prompt": {
       "en": "Choose the best sentence for a planned future action.",
-      "pa": "ਯੋਜਿਤ (planned) ਭਵਿੱਖ ਕਿਰਿਆ ਲਈ ਸਭ ਤੋਂ ਠੀਕ ਵਾਕ ਚੁਣੋ।"
+      "pa": "ਯੋਜਿਤ ਭਵਿੱਖ ਕਿਰਿਆ ਲਈ ਸਭ ਤੋਂ ਠੀਕ ਵਾਕ ਚੁਣੋ।"
     },
     "options": [
       {
         "en": "I am going to visit my aunt tomorrow.",
-        "pa": "I am going to visit my aunt tomorrow. (ਸਹੀ)"
+        "pa": "ਮੈਂ ਕੱਲ੍ਹ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾਣ ਲੱਗਾ/ਲੱਗੀ ਹਾਂ। (ਸਹੀ)"
       },
       {
         "en": "I goes to visit my aunt tomorrow.",
-        "pa": "I goes to visit my aunt tomorrow. (ਗਲਤ)"
+        "pa": "ਮੈਂ ਕੱਲ੍ਹ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ। (ਗਲਤ)"
       },
       {
         "en": "I visited my aunt tomorrow.",
-        "pa": "I visited my aunt tomorrow. (ਗਲਤ)"
+        "pa": "ਮੈਂ ਕੱਲ੍ਹ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਿਆ/ਮਿਲੀ। (ਗਲਤ)"
       }
     ],
     "correctOptionIndex": 0,
@@ -4442,7 +4442,7 @@
     "stepId": "q_l_adjective_basics_01_complete_old_house",
     "prompt": {
       "en": "Complete: The ___ house is quiet.",
-      "pa": "ਵਾਕ ਪੂਰਾ ਕਰੋ: The ___ house is quiet."
+      "pa": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ___ ਘਰ ਚੁੱਪ ਹੈ।"
     },
     "options": [
       {
@@ -4478,7 +4478,7 @@
     "lessonId": "L_ADJ_VS_ADV_01",
     "stepId": "q_l_adj_vs_adv_01_he_speaks",
     "prompt": {
-      "en": "He speaks ___ .",
+      "en": "Complete the sentence: He speaks ___.",
       "pa": "ਉਹ ___ ਬੋਲਦਾ ਹੈ।"
     },
     "options": [
@@ -4516,7 +4516,7 @@
     "stepId": "q_l_adj_vs_adv_01_a_fast_car",
     "prompt": {
       "en": "Complete: a ___ car",
-      "pa": "ਪੂਰਾ ਕਰੋ: a ___ car"
+      "pa": "ਪੂਰਾ ਕਰੋ: ਇੱਕ ___ ਕਾਰ"
     },
     "options": [
       {

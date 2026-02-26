@@ -1,0 +1,13 @@
+{
+  "phase1Rows": [],
+  "skipped": [],
+  "totals": {
+    "totalQuestionsMissingWrongOptionExplanations": 0,
+    "byOptionFormat": {
+      "string[]": 0,
+      "bilingual object[]": 0,
+      "mixed": 0
+    },
+    "top5Lessons": []
+  }
+}

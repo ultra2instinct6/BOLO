@@ -1,0 +1,1071 @@
+[
+  {
+    "key": "L_SIMPLE_PAST_01::q_past_time_yesterday",
+    "lessonId": "L_SIMPLE_PAST_01",
+    "stepId": "q_past_time_yesterday",
+    "lessonOrder": 14,
+    "lessonLabelEn": "Simple Past",
+    "prompt": {
+      "en": "Which time word shows the past?",
+      "pa": "ਕਿਹੜਾ ਸਮਾਂ-ਸ਼ਬਦ ਭੂਤਕਾਲ (ਪਿੱਛੇ ਵਾਲਾ ਸਮਾਂ) ਦਿਖਾਉਂਦਾ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "tomorrow",
+        "pa": "ਭਲਕੇ / ਕੱਲ੍ਹ (ਆਉਣ ਵਾਲਾ ਦਿਨ)"
+      },
+      {
+        "en": "yesterday",
+        "pa": "ਕੱਲ੍ਹ (ਬੀਤਿਆ ਦਿਨ)"
+      },
+      {
+        "en": "next week",
+        "pa": "ਅਗਲਾ ਹਫ਼ਤਾ"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "yesterday",
+    "hint": {
+      "en": "“Yesterday” means the day before today.",
+      "pa": "“Yesterday” ਦਾ ਮਤਲਬ ਹੈ ਅੱਜ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲਾ ਦਿਨ।"
+    },
+    "explanation": {
+      "en": "“Yesterday” is a past time word. “Tomorrow/next week” talk about the future.",
+      "pa": "“Yesterday” ਭੂਤਕਾਲ ਦਾ ਸਮਾਂ-ਸ਼ਬਦ ਹੈ। “Tomorrow/next week” ਭਵਿੱਖ ਦੀ ਗੱਲ ਕਰਦੇ ਹਨ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_SIMPLE_PAST_01::q_simple_past_irregular_go_went",
+    "lessonId": "L_SIMPLE_PAST_01",
+    "stepId": "q_simple_past_irregular_go_went",
+    "lessonOrder": 14,
+    "lessonLabelEn": "Simple Past",
+    "prompt": {
+      "en": "What is the past form of \"go\"?",
+      "pa": "“Go” ਦਾ ਭੂਤਕਾਲ (past) ਕੀ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "goed",
+        "pa": "goed (ਗਲਤ)"
+      },
+      {
+        "en": "went",
+        "pa": "went (ਸਹੀ)"
+      },
+      {
+        "en": "goes",
+        "pa": "goes (ਵਰਤਮਾਨ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "went",
+    "hint": {
+      "en": "“Go” is irregular: go → went.",
+      "pa": "“Go” ਅਨਿਯਮਤ ਹੈ: go → went।"
+    },
+    "explanation": {
+      "en": "The correct past tense of “go” is “went”.",
+      "pa": "“Go” ਦਾ ਸਹੀ ਭੂਤਕਾਲ “went” ਹੈ।"
+    },
+    "workedExample": {
+      "en": "Yesterday, I went to school.",
+      "pa": "ਕੱਲ੍ਹ ਮੈਂ ਸਕੂਲ ਗਿਆ/ਗਈ ਸੀ।",
+      "highlight": "went"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_PROGRESSIVE_PAST_01::q_l_progressive_past_01_in_tap_the_past_progressive_form",
+    "lessonId": "L_PROGRESSIVE_PAST_01",
+    "stepId": "q_l_progressive_past_01_in_tap_the_past_progressive_form",
+    "lessonOrder": 15,
+    "lessonLabelEn": "Past Progressive",
+    "prompt": {
+      "en": "\"I was watching TV when she called.\" — Is \"was watching\" past progressive?",
+      "pa": "“ਜਦੋਂ ਉਸ ਨੇ ਫ਼ੋਨ ਕੀਤਾ, ਮੈਂ ਟੀਵੀ ਦੇਖ ਰਿਹਾ/ਰਹੀ ਸੀ।” — ਕੀ “was watching” ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "Yes",
+        "pa": "ਹਾਂ"
+      },
+      {
+        "en": "No",
+        "pa": "ਨਹੀਂ"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "Yes",
+    "hint": {
+      "en": "Past progressive uses: was/were + verb-ing.",
+      "pa": "ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ: was/were + verb-ing।"
+    },
+    "explanation": {
+      "en": "Yes. “Was watching” is past progressive: was + watching (verb-ing).",
+      "pa": "ਹਾਂ। “Was watching” ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਹੈ: was + watching (verb-ing)।"
+    },
+    "source": "yesNo"
+  },
+  {
+    "key": "L_PROGRESSIVE_PAST_01::q_past_prog_complete_were_eating",
+    "lessonId": "L_PROGRESSIVE_PAST_01",
+    "stepId": "q_past_prog_complete_were_eating",
+    "lessonOrder": 15,
+    "lessonLabelEn": "Past Progressive",
+    "prompt": {
+      "en": "Complete: They ___ (eat) when I called.",
+      "pa": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਜਦੋਂ ਮੈਂ ਫ਼ੋਨ ਕੀਤਾ, ਉਹ ___ (eat)।"
+    },
+    "options": [
+      {
+        "en": "ate",
+        "pa": "ਖਾਧਾ (ਸਧਾਰਨ ਭੂਤਕਾਲ)"
+      },
+      {
+        "en": "were eating",
+        "pa": "ਖਾ ਰਹੇ ਸਨ (ਭੂਤਕਾਲੀ ਜਾਰੀ)"
+      },
+      {
+        "en": "eat",
+        "pa": "ਖਾਣਾ (ਵਰਤਮਾਨ/ਮੂਲ ਰੂਪ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "were eating",
+    "hint": {
+      "en": "When something was happening and another event happened, use were + eating.",
+      "pa": "ਜਦੋਂ ਕੰਮ ਚਲ ਰਿਹਾ ਸੀ ਅਤੇ ਵਿਚਕਾਰ ਹੋਰ ਘਟਨਾ ਹੋਈ, ਤਾਂ were + eating ਵਰਤੋ।"
+    },
+    "explanation": {
+      "en": "The eating was in progress when the call happened, so “were eating” is correct.",
+      "pa": "ਫ਼ੋਨ ਆਉਣ ਵੇਲੇ ਉਹ ਖਾਣਾ ਖਾ ਰਹੇ ਸਨ (ਕੰਮ ਚਲ ਰਿਹਾ ਸੀ), ਇਸ ਲਈ “were eating” ਸਹੀ ਹੈ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_PROGRESSIVE_PAST_01::q_past_prog_correct",
+    "lessonId": "L_PROGRESSIVE_PAST_01",
+    "stepId": "q_past_prog_correct",
+    "lessonOrder": 15,
+    "lessonLabelEn": "Past Progressive",
+    "prompt": {
+      "en": "Which uses past progressive correctly?",
+      "pa": "ਕਿਹੜਾ ਵਾਕ ਭੂਤਕਾਲੀ ਜਾਰੀ ਕਾਲ ਸਹੀ ਤਰ੍ਹਾਂ ਵਰਤਦਾ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "She was cooked dinner.",
+        "pa": "She was cooked dinner. (ਗਲਤ)"
+      },
+      {
+        "en": "She was cooking dinner.",
+        "pa": "She was cooking dinner. (ਸਹੀ)"
+      },
+      {
+        "en": "She were cooking dinner.",
+        "pa": "She were cooking dinner. (ਗਲਤ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "She was cooking dinner.",
+    "hint": {
+      "en": "Use: was/were + verb-ing (was cooking).",
+      "pa": "ਵਰਤੋਂ: was/were + verb-ing (was cooking)।"
+    },
+    "explanation": {
+      "en": "“She was cooking” is correct because it shows an action in progress in the past.",
+      "pa": "“She was cooking” ਸਹੀ ਹੈ ਕਿਉਂਕਿ ਇਹ ਭੂਤਕਾਲ ਵਿੱਚ ਚਲ ਰਹੀ ਕਿਰਿਆ ਦੱਸਦਾ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "She was cooking when I came home.",
+      "pa": "ਜਦੋਂ ਮੈਂ ਘਰ ਆਇਆ/ਆਈ, ਉਹ ਖਾਣਾ ਪਕਾ ਰਹੀ ਸੀ।",
+      "highlight": "was cooking"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_PROGRESSIVE_PAST_01::q_past_prog_playground",
+    "lessonId": "L_PROGRESSIVE_PAST_01",
+    "stepId": "q_past_prog_playground",
+    "lessonOrder": 15,
+    "lessonLabelEn": "Past Progressive",
+    "prompt": {
+      "en": "Yesterday at 5 PM, the children ___ in the playground.",
+      "pa": "ਕੱਲ੍ਹ 5 ਵਜੇ, ਬੱਚੇ ਮੈਦਾਨ ਵਿੱਚ ___।"
+    },
+    "options": [
+      {
+        "en": "played",
+        "pa": "played (ਸਧਾਰਨ ਭੂਤਕਾਲ)"
+      },
+      {
+        "en": "were playing",
+        "pa": "were playing (ਭੂਤਕਾਲੀ ਜਾਰੀ)"
+      },
+      {
+        "en": "play",
+        "pa": "play (ਵਰਤਮਾਨ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "were playing",
+    "hint": {
+      "en": "At a specific time in the past (5 PM), use were + playing.",
+      "pa": "ਭੂਤਕਾਲ ਦੇ ਖਾਸ ਸਮੇਂ (5 ਵਜੇ) ਲਈ were + playing ਵਰਤਦੇ ਹਾਂ।"
+    },
+    "explanation": {
+      "en": "5 PM yesterday means the action was happening then, so “were playing” is correct.",
+      "pa": "ਕੱਲ੍ਹ 5 ਵਜੇ ਕੰਮ ਉਸ ਵੇਲੇ ਚਲ ਰਿਹਾ ਸੀ, ਇਸ ਲਈ “were playing” ਸਹੀ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "At 5 PM, the children were playing.",
+      "pa": "5 ਵਜੇ, ਬੱਚੇ ਖੇਡ ਰਹੇ ਸਨ।",
+      "highlight": "were playing"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_PROGRESSIVE_PAST_01::q_past_progressive_vs_simple_past_interrupt",
+    "lessonId": "L_PROGRESSIVE_PAST_01",
+    "stepId": "q_past_progressive_vs_simple_past_interrupt",
+    "lessonOrder": 15,
+    "lessonLabelEn": "Past Progressive",
+    "prompt": {
+      "en": "Choose the correct sentence.",
+      "pa": "ਸਹੀ ਵਾਕ ਚੁਣੋ।"
+    },
+    "options": [
+      {
+        "en": "I cooked when she arrived.",
+        "pa": "I cooked when she arrived. (ਘੱਟ ਢੁੱਕਵਾਂ)"
+      },
+      {
+        "en": "I was cooking when she arrived.",
+        "pa": "I was cooking when she arrived. (ਸਹੀ)"
+      },
+      {
+        "en": "I cooking when she arrived.",
+        "pa": "I cooking when she arrived. (ਗਲਤ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "I was cooking when she arrived.",
+    "hint": {
+      "en": "One action was in progress; another action happened (arrived).",
+      "pa": "ਇੱਕ ਕੰਮ ਚਲ ਰਿਹਾ ਸੀ; ਦੂਜਾ ਕੰਮ ਹੋ ਗਿਆ (arrived)।"
+    },
+    "explanation": {
+      "en": "Cooking was happening when she arrived, so past progressive “was cooking” is correct.",
+      "pa": "ਉਸਦੇ ਆਉਣ ਵੇਲੇ ਪਕਾਉਣਾ ਚਲ ਰਿਹਾ ਸੀ, ਇਸ ਲਈ “was cooking” ਸਹੀ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "I was cooking when she arrived.",
+      "pa": "ਜਦੋਂ ਉਹ ਆਈ, ਮੈਂ ਪਕਾ ਰਿਹਾ/ਰਹੀ ਸੀ।",
+      "highlight": "was cooking"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_future_complete_will_read",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_future_complete_will_read",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "I ___ a book tomorrow.",
+      "pa": "ਭਲਕੇ/ਕੱਲ੍ਹ ਮੈਂ ਇੱਕ ਕਿਤਾਬ ___."
+    },
+    "options": [
+      {
+        "en": "read",
+        "pa": "read (ਵਰਤਮਾਨ)"
+      },
+      {
+        "en": "reads",
+        "pa": "reads (ਵਰਤਮਾਨ—he/she ਲਈ)"
+      },
+      {
+        "en": "will read",
+        "pa": "will read (ਭਵਿੱਖ—ਪੜ੍ਹਾਂਗਾ/ਪੜ੍ਹਾਂਗੀ)"
+      }
+    ],
+    "correctOptionIndex": 2,
+    "correctAnswer": "will read",
+    "hint": {
+      "en": "“Tomorrow” means future, so use will + verb.",
+      "pa": "“Tomorrow” ਭਵਿੱਖ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ will + verb ਵਰਤੋ।"
+    },
+    "explanation": {
+      "en": "“Will read” is future tense. “Read/reads” are present tense.",
+      "pa": "“Will read” ਭਵਿੱਖ ਕਾਲ ਹੈ। “Read/reads” ਵਰਤਮਾਨ ਕਾਲ ਹਨ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_future_form_will_bake",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_future_form_will_bake",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "I ___ cake next Sunday.",
+      "pa": "ਅਗਲੇ ਐਤਵਾਰ ਮੈਂ ਕੇਕ ___."
+    },
+    "options": [
+      {
+        "en": "bake",
+        "pa": "bake (ਵਰਤਮਾਨ)"
+      },
+      {
+        "en": "baked",
+        "pa": "baked (ਭੂਤਕਾਲ)"
+      },
+      {
+        "en": "will bake",
+        "pa": "will bake (ਭਵਿੱਖ—ਬਣਾਵਾਂਗਾ/ਬਣਾਵਾਂਗੀ)"
+      }
+    ],
+    "correctOptionIndex": 2,
+    "correctAnswer": "will bake",
+    "hint": {
+      "en": "“Next Sunday” is future time → will + verb.",
+      "pa": "“ਅਗਲਾ ਐਤਵਾਰ” ਭਵਿੱਖ ਦਾ ਸਮਾਂ ਹੈ → will + verb।"
+    },
+    "explanation": {
+      "en": "We use “will bake” for a future action.",
+      "pa": "ਭਵਿੱਖ ਦੇ ਕੰਮ ਲਈ ਅਸੀਂ “will bake” ਵਰਤਦੇ ਹਾਂ।"
+    },
+    "workedExample": {
+      "en": "I will bake a cake next Sunday.",
+      "pa": "ਅਗਲੇ ਐਤਵਾਰ ਮੈਂ ਕੇਕ ਬਣਾਵਾਂਗਾ/ਬਣਾਵਾਂਗੀ।",
+      "highlight": "will bake"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_future_is_will_visit",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_future_is_will_visit",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "Which verb shows the future?",
+      "pa": "ਕਿਹੜੀ ਕਿਰਿਆ ਭਵਿੱਖ ਕਾਲ ਦਿਖਾਉਂਦੀ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "visits",
+        "pa": "visits (ਵਰਤਮਾਨ)"
+      },
+      {
+        "en": "visited",
+        "pa": "visited (ਭੂਤਕਾਲ)"
+      },
+      {
+        "en": "will visit",
+        "pa": "will visit (ਭਵਿੱਖ)"
+      }
+    ],
+    "correctOptionIndex": 2,
+    "correctAnswer": "will visit",
+    "hint": {
+      "en": "Look for “will”. It tells the future.",
+      "pa": "“Will” ਲੱਭੋ। ਇਹ ਭਵਿੱਖ ਦੱਸਦਾ ਹੈ।"
+    },
+    "explanation": {
+      "en": "“Will visit” is future tense; “visits” is present; “visited” is past.",
+      "pa": "“Will visit” ਭਵਿੱਖ ਹੈ; “visits” ਵਰਤਮਾਨ ਹੈ; “visited” ਭੂਤਕਾਲ ਹੈ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_future_not_yet_will_learn",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_future_not_yet_will_learn",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "Which sentence is about the future (not done yet)?",
+      "pa": "ਕਿਹੜਾ ਵਾਕ ਭਵਿੱਖ ਬਾਰੇ ਹੈ (ਅਜੇ ਨਹੀਂ ਹੋਇਆ)?"
+    },
+    "options": [
+      {
+        "en": "I learned",
+        "pa": "I learned (ਹੋ ਚੁੱਕਾ)"
+      },
+      {
+        "en": "I learn",
+        "pa": "I learn (ਆਦਤ/ਵਰਤਮਾਨ)"
+      },
+      {
+        "en": "I will learn",
+        "pa": "I will learn (ਅੱਗੇ ਹੋਵੇਗਾ)"
+      }
+    ],
+    "correctOptionIndex": 2,
+    "correctAnswer": "I will learn",
+    "hint": {
+      "en": "Future sentences often use “will”.",
+      "pa": "ਭਵਿੱਖ ਵਾਲੇ ਵਾਕ ਵਿੱਚ ਅਕਸਰ “will” ਹੁੰਦਾ ਹੈ।"
+    },
+    "explanation": {
+      "en": "“I will learn” talks about the future, so it is not done yet.",
+      "pa": "“I will learn” ਭਵਿੱਖ ਦੀ ਗੱਲ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਅਜੇ ਨਹੀਂ ਹੋਇਆ।"
+    },
+    "workedExample": {
+      "en": "I will learn English.",
+      "pa": "ਮੈਂ ਅੰਗਰੇਜ਼ੀ ਸਿੱਖਾਂਗਾ/ਸਿੱਖਾਂਗੀ।",
+      "highlight": "will"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_future_pick_will_go",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_future_pick_will_go",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "Pick the future tense.",
+      "pa": "ਭਵਿੱਖ ਕਾਲ ਵਾਲੀ ਚੋਣ ਚੁਣੋ।"
+    },
+    "options": [
+      {
+        "en": "goes",
+        "pa": "goes (ਵਰਤਮਾਨ)"
+      },
+      {
+        "en": "went",
+        "pa": "went (ਭੂਤਕਾਲ)"
+      },
+      {
+        "en": "will go",
+        "pa": "will go (ਭਵਿੱਖ)"
+      }
+    ],
+    "correctOptionIndex": 2,
+    "correctAnswer": "will go",
+    "hint": {
+      "en": "Future = will + base verb (will go).",
+      "pa": "ਭਵਿੱਖ = will + base verb (will go)।"
+    },
+    "explanation": {
+      "en": "“Will go” is future. “Went” is past. “Goes” is present.",
+      "pa": "“Will go” ਭਵਿੱਖ ਹੈ। “Went” ਭੂਤਕਾਲ ਹੈ। “Goes” ਵਰਤਮਾਨ ਹੈ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_future_time_tomorrow",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_future_time_tomorrow",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "Which time word shows the future?",
+      "pa": "ਕਿਹੜਾ ਸਮਾਂ-ਸ਼ਬਦ ਭਵਿੱਖ ਦਿਖਾਉਂਦਾ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "yesterday",
+        "pa": "ਕੱਲ੍ਹ (ਬੀਤਿਆ ਦਿਨ)"
+      },
+      {
+        "en": "now",
+        "pa": "ਹੁਣ"
+      },
+      {
+        "en": "tomorrow",
+        "pa": "ਭਲਕੇ/ਕੱਲ੍ਹ (ਆਉਣ ਵਾਲਾ ਦਿਨ)"
+      }
+    ],
+    "correctOptionIndex": 2,
+    "correctAnswer": "tomorrow",
+    "hint": {
+      "en": "“Tomorrow” means the day after today.",
+      "pa": "“Tomorrow” ਦਾ ਮਤਲਬ ਹੈ ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ।"
+    },
+    "explanation": {
+      "en": "“Tomorrow” is future. “Yesterday” is past. “Now” is present.",
+      "pa": "“Tomorrow” ਭਵਿੱਖ ਹੈ। “Yesterday” ਭੂਤਕਾਲ ਹੈ। “Now” ਵਰਤਮਾਨ ਹੈ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_SIMPLE_FUTURE_01::q_simple_future_will_vs_going_to",
+    "lessonId": "L_SIMPLE_FUTURE_01",
+    "stepId": "q_simple_future_will_vs_going_to",
+    "lessonOrder": 16,
+    "lessonLabelEn": "Simple Future",
+    "prompt": {
+      "en": "Choose the best sentence for a planned future action.",
+      "pa": "ਯੋਜਨਾ ਵਾਲੇ ਭਵਿੱਖ ਦੇ ਕੰਮ ਲਈ ਸਭ ਤੋਂ ਠੀਕ ਵਾਕ ਚੁਣੋ।"
+    },
+    "options": [
+      {
+        "en": "I am going to visit my aunt tomorrow.",
+        "pa": "I am going to visit my aunt tomorrow. (ਸਹੀ—ਯੋਜਨਾ)"
+      },
+      {
+        "en": "I goes to visit my aunt tomorrow.",
+        "pa": "I goes to visit my aunt tomorrow. (ਗਲਤ)"
+      },
+      {
+        "en": "I visited my aunt tomorrow.",
+        "pa": "I visited my aunt tomorrow. (ਗਲਤ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "I am going to visit my aunt tomorrow.",
+    "hint": {
+      "en": "For plans, use am/is/are going to + verb.",
+      "pa": "ਯੋਜਨਾ ਲਈ am/is/are going to + verb ਵਰਤਦੇ ਹਾਂ।"
+    },
+    "explanation": {
+      "en": "It is a plan for tomorrow, so “I am going to visit...” is correct.",
+      "pa": "ਇਹ ਭਲਕੇ ਲਈ ਯੋਜਨਾ ਹੈ, ਇਸ ਲਈ “I am going to visit...” ਸਹੀ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "I am going to visit my aunt tomorrow.",
+      "pa": "ਮੈਂ ਭਲਕੇ ਆਪਣੀ ਮਾਸੀ ਨੂੰ ਮਿਲਣ ਜਾ ਰਿਹਾ/ਰਹੀ ਹਾਂ।",
+      "highlight": "am going to"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_MODAL_VERBS_01::q_l_modal_verbs_01_in_tap_all_modal_verbs_in_the_se",
+    "lessonId": "L_MODAL_VERBS_01",
+    "stepId": "q_l_modal_verbs_01_in_tap_all_modal_verbs_in_the_se",
+    "lessonOrder": 17,
+    "lessonLabelEn": "Modal Verbs",
+    "prompt": {
+      "en": "Is “must” a modal verb?",
+      "pa": "ਕੀ “must” ਇੱਕ modal verb (ਸਹਾਇਕ ਕਿਰਿਆ) ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "Yes",
+        "pa": "ਹਾਂ"
+      },
+      {
+        "en": "No",
+        "pa": "ਨਹੀਂ"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "Yes",
+    "hint": {
+      "en": "Modal verbs include can, could, must, should, etc.",
+      "pa": "Modal verbs ਵਿੱਚ can, could, must, should ਆਦਿ ਆਉਂਦੇ ਹਨ।"
+    },
+    "explanation": {
+      "en": "Yes. “Must” is a modal verb that shows something is necessary.",
+      "pa": "ਹਾਂ। “Must” ਇੱਕ modal verb ਹੈ ਜੋ ਦੱਸਦਾ ਹੈ ਕਿ ਕੁਝ ਲਾਜ਼ਮੀ ਹੈ।"
+    },
+    "source": "yesNo"
+  },
+  {
+    "key": "L_MODAL_VERBS_01::q_modal_can_drive",
+    "lessonId": "L_MODAL_VERBS_01",
+    "stepId": "q_modal_can_drive",
+    "lessonOrder": 17,
+    "lessonLabelEn": "Modal Verbs",
+    "prompt": {
+      "en": "Complete: She ___ drive a car.",
+      "pa": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਉਹ ___ ਗੱਡੀ ਚਲਾ ਸਕਦੀ ਹੈ।"
+    },
+    "options": [
+      {
+        "en": "can",
+        "pa": "can (ਸਕਦੀ ਹੈ)"
+      },
+      {
+        "en": "cans",
+        "pa": "cans (ਡੱਬੇ/ਗਲਤ)"
+      },
+      {
+        "en": "canning",
+        "pa": "canning (-ing ਰੂਪ/ਗਲਤ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "can",
+    "hint": {
+      "en": "After a modal verb, use the base verb: can drive.",
+      "pa": "Modal verb ਤੋਂ ਬਾਅਦ base verb ਆਉਂਦੀ ਹੈ: can drive।"
+    },
+    "explanation": {
+      "en": "“Can” shows ability. “Cans/canning” do not fit here.",
+      "pa": "“Can” ਸਮਰੱਥਾ ਦੱਸਦਾ ਹੈ। “Cans/canning” ਇੱਥੇ ਨਹੀਂ ਬੈਠਦੇ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_MODAL_VERBS_01::q_modal_could_polite",
+    "lessonId": "L_MODAL_VERBS_01",
+    "stepId": "q_modal_could_polite",
+    "lessonOrder": 17,
+    "lessonLabelEn": "Modal Verbs",
+    "prompt": {
+      "en": "Which modal is used for polite requests?",
+      "pa": "ਨਮ੍ਰ ਬੇਨਤੀ ਲਈ ਕਿਹੜੀ modal verb ਵਰਤੀ ਜਾਂਦੀ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "can",
+        "pa": "can (ਘੱਟ ਨਮ੍ਰ)"
+      },
+      {
+        "en": "could",
+        "pa": "could (ਹੋਰ ਨਮ੍ਰ)"
+      },
+      {
+        "en": "must",
+        "pa": "must (ਲਾਜ਼ਮੀ/ਹੁਕਮ ਵਰਗਾ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "could",
+    "hint": {
+      "en": "“Could you...?” sounds more polite than “Can you...?”",
+      "pa": "“Could you...?” “Can you...?” ਨਾਲੋਂ ਵੱਧ ਨਮ੍ਰ ਲੱਗਦਾ ਹੈ।"
+    },
+    "explanation": {
+      "en": "We often use “could” to make a request polite.",
+      "pa": "ਨਮ੍ਰ ਬੇਨਤੀ ਲਈ ਅਸੀਂ ਅਕਸਰ “could” ਵਰਤਦੇ ਹਾਂ।"
+    },
+    "workedExample": {
+      "en": "Could you help me, please?",
+      "pa": "ਕੀ ਤੁਸੀਂ ਮੈਨੂੰ ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?",
+      "highlight": "Could"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_MODAL_VERBS_01::q_modal_must_necessary",
+    "lessonId": "L_MODAL_VERBS_01",
+    "stepId": "q_modal_must_necessary",
+    "lessonOrder": 17,
+    "lessonLabelEn": "Modal Verbs",
+    "prompt": {
+      "en": "Which modal verb means “it is necessary”?",
+      "pa": "ਕਿਹੜੀ modal verb ਦਾ ਮਤਲਬ ਹੈ “ਲਾਜ਼ਮੀ ਹੈ/ਜ਼ਰੂਰੀ ਹੈ”?"
+    },
+    "options": [
+      {
+        "en": "can",
+        "pa": "can (ਸਕਣਾ)"
+      },
+      {
+        "en": "must",
+        "pa": "must (ਲਾਜ਼ਮੀ/ਜ਼ਰੂਰੀ)"
+      },
+      {
+        "en": "could",
+        "pa": "could (ਸਕਦਾ ਸੀ/ਨਮ੍ਰ ਬੇਨਤੀ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "must",
+    "hint": {
+      "en": "“Must” = necessary/required.",
+      "pa": "“Must” = ਲਾਜ਼ਮੀ/ਜ਼ਰੂਰੀ।"
+    },
+    "explanation": {
+      "en": "“Must” expresses necessity. “Can” is ability; “could” is possibility or polite request.",
+      "pa": "“Must” ਲੋੜ/ਜ਼ਰੂਰਤ ਦੱਸਦਾ ਹੈ। “Can” ਸਮਰੱਥਾ ਹੈ; “could” ਸੰਭਾਵਨਾ ਜਾਂ ਨਮ੍ਰ ਬੇਨਤੀ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_MODAL_VERBS_01::q_modal_polite_request_could_you",
+    "lessonId": "L_MODAL_VERBS_01",
+    "stepId": "q_modal_polite_request_could_you",
+    "lessonOrder": 17,
+    "lessonLabelEn": "Modal Verbs",
+    "prompt": {
+      "en": "___ you help me, please? (most polite)",
+      "pa": "___ you help me, please? (ਸਭ ਤੋਂ ਨਮ੍ਰ)"
+    },
+    "options": [
+      {
+        "en": "Could",
+        "pa": "Could (ਨਮ੍ਰ)"
+      },
+      {
+        "en": "Can",
+        "pa": "Can (ਸਧਾਰਨ)"
+      },
+      {
+        "en": "Must",
+        "pa": "Must (ਲਾਜ਼ਮੀ/ਹੁਕਮ ਵਰਗਾ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "Could",
+    "hint": {
+      "en": "“Could you...?” is the most polite choice here.",
+      "pa": "ਇੱਥੇ “Could you...?” ਸਭ ਤੋਂ ਨਮ੍ਰ ਚੋਣ ਹੈ।"
+    },
+    "explanation": {
+      "en": "“Could” makes the request sound polite.",
+      "pa": "“Could” ਬੇਨਤੀ ਨੂੰ ਨਮ੍ਰ ਬਣਾਉਂਦਾ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "Could you help me, please?",
+      "pa": "ਕੀ ਤੁਸੀਂ ਮੈਨੂੰ ਕਿਰਪਾ ਕਰਕੇ ਮਦਦ ਕਰ ਸਕਦੇ ਹੋ?",
+      "highlight": "Could"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_adj_complete_interesting",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_adj_complete_interesting",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Complete: An ___ book.",
+      "pa": "ਵਾਕ ਪੂਰਾ ਕਰੋ: ਇੱਕ ___ ਕਿਤਾਬ।"
+    },
+    "options": [
+      {
+        "en": "interesting",
+        "pa": "ਦਿਲਚਸਪ (ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "read",
+        "pa": "read (ਕਿਰਿਆ)"
+      },
+      {
+        "en": "quickly",
+        "pa": "quickly (ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "interesting",
+    "hint": {
+      "en": "An adjective describes a noun. Here it describes “book”.",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ। ਇੱਥੇ ਇਹ “ਕਿਤਾਬ” ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ।"
+    },
+    "explanation": {
+      "en": "“Interesting” tells what kind of book it is, so it is the adjective.",
+      "pa": "“Interesting” ਦੱਸਦਾ ਹੈ ਕਿਤਾਬ ਕਿਹੋ ਜਿਹੀ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "An interesting book is fun to read.",
+      "pa": "ਦਿਲਚਸਪ ਕਿਤਾਬ ਪੜ੍ਹਨ ਵਿੱਚ ਮਜ਼ਾ ਆਉਂਦਾ ਹੈ।",
+      "highlight": "interesting"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_adj_is_blue",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_adj_is_blue",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Which is an adjective?",
+      "pa": "ਕਿਹੜਾ ਸ਼ਬਦ ਵਿਸ਼ੇਸ਼ਣ (adjective) ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "blue",
+        "pa": "ਨੀਲਾ (ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "run",
+        "pa": "ਦੌੜਨਾ (ਕਿਰਿਆ)"
+      },
+      {
+        "en": "quickly",
+        "pa": "ਜਲਦੀ (ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "blue",
+    "hint": {
+      "en": "Adjectives describe nouns (color, size, quality).",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਨੂੰ ਵਰਣਨ ਕਰਦੇ ਹਨ (ਰੰਗ, ਆਕਾਰ, ਗੁਣ)।"
+    },
+    "explanation": {
+      "en": "“Blue” describes color, so it is an adjective.",
+      "pa": "“Blue” ਰੰਗ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "The blue ball is big.",
+      "pa": "ਨੀਲੀ ਗੇਂਦ ਵੱਡੀ ਹੈ।",
+      "highlight": "blue"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_adj_is_sweet",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_adj_is_sweet",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Which word is an adjective?",
+      "pa": "ਕਿਹੜਾ ਸ਼ਬਦ ਵਿਸ਼ੇਸ਼ਣ (adjective) ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "sweet",
+        "pa": "ਮਿੱਠਾ (ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "eat",
+        "pa": "ਖਾਣਾ (ਕਿਰਿਆ)"
+      },
+      {
+        "en": "walk",
+        "pa": "ਤੁਰਨਾ (ਕਿਰਿਆ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "sweet",
+    "hint": {
+      "en": "Adjectives tell what something is like (sweet, big, happy).",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦੇ ਹਨ ਚੀਜ਼ ਕਿਹੋ ਜਿਹੀ ਹੈ (ਮਿੱਠੀ, ਵੱਡੀ, ਖੁਸ਼)।"
+    },
+    "explanation": {
+      "en": "“Sweet” describes taste, so it is an adjective.",
+      "pa": "“Sweet” ਸੁਆਦ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "This mango is sweet.",
+      "pa": "ਇਹ ਆਮ ਮਿੱਠਾ ਹੈ।",
+      "highlight": "sweet"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_adj_pick_tall",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_adj_pick_tall",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Pick the adjective.",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ (adjective) ਚੁਣੋ।"
+    },
+    "options": [
+      {
+        "en": "tree",
+        "pa": "ਦਰੱਖਤ (ਨਾਂਵ)"
+      },
+      {
+        "en": "tall",
+        "pa": "ਲੰਮਾ (ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "grows",
+        "pa": "ਉੱਗਦਾ ਹੈ (ਕਿਰਿਆ)"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "tall",
+    "hint": {
+      "en": "“Tall” describes height (a tall tree).",
+      "pa": "“Tall” ਲੰਬਾਈ ਦੱਸਦਾ ਹੈ (ਲੰਮਾ ਦਰੱਖਤ)।"
+    },
+    "explanation": {
+      "en": "“Tall” tells what kind of tree it is, so it is an adjective.",
+      "pa": "“Tall” ਦੱਸਦਾ ਹੈ ਦਰੱਖਤ ਕਿਹੋ ਜਿਹਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "That is a tall tree.",
+      "pa": "ਉਹ ਇੱਕ ਲੰਮਾ ਦਰੱਖਤ ਹੈ।",
+      "highlight": "tall"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_adj_sentence_smart",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_adj_sentence_smart",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Which sentence has an adjective?",
+      "pa": "ਕਿਹੜੇ ਵਾਕ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਣ (adjective) ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "He runs",
+        "pa": "ਉਹ ਦੌੜਦਾ ਹੈ।"
+      },
+      {
+        "en": "She is smart",
+        "pa": "ਉਹ ਹੋਸ਼ਿਆਰ ਹੈ।"
+      },
+      {
+        "en": "I walked",
+        "pa": "ਮੈਂ ਤੁਰਿਆ/ਤੁਰੀ।"
+      }
+    ],
+    "correctOptionIndex": 1,
+    "correctAnswer": "She is smart",
+    "hint": {
+      "en": "Adjectives describe a person or thing (smart, happy, tall).",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਵਿਅਕਤੀ ਜਾਂ ਚੀਜ਼ ਦਾ ਗੁਣ ਦੱਸਦੇ ਹਨ (ਹੋਸ਼ਿਆਰ, ਖੁਸ਼, ਲੰਮਾ)।"
+    },
+    "explanation": {
+      "en": "“Smart” describes “she”, so that sentence has an adjective.",
+      "pa": "“Smart” “she” ਦਾ ਗੁਣ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "She is smart and kind.",
+      "pa": "ਉਹ ਹੋਸ਼ਿਆਰ ਅਤੇ ਦਿਆਲੂ ਹੈ।",
+      "highlight": "smart"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_l_adjective_basics_01_adjectives_can_describe_size_whi",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_l_adjective_basics_01_adjectives_can_describe_size_whi",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Adjectives can describe size. Which is size?",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ ਆਕਾਰ (size) ਦਾ ਵਰਣਨ ਕਰ ਸਕਦੇ ਹਨ। ਕਿਹੜਾ ਆਕਾਰ ਦੱਸਦਾ ਹੈ?"
+    },
+    "options": [
+      {
+        "en": "tiny",
+        "pa": "ਨਿੱਕਾ (ਆਕਾਰ)"
+      },
+      {
+        "en": "happy",
+        "pa": "ਖੁਸ਼ (ਭਾਵਨਾ)"
+      },
+      {
+        "en": "cold",
+        "pa": "ਠੰਡਾ (ਮੌਸਮ/ਹਾਲਤ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "tiny",
+    "hint": {
+      "en": "Size words talk about big/small.",
+      "pa": "ਆਕਾਰ ਵਾਲੇ ਸ਼ਬਦ ਵੱਡਾ/ਛੋਟਾ ਦੱਸਦੇ ਹਨ।"
+    },
+    "explanation": {
+      "en": "“Tiny” means very small, so it describes size.",
+      "pa": "“Tiny” ਦਾ ਮਤਲਬ ਬਹੁਤ ਛੋਟਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਆਕਾਰ ਦੱਸਦਾ ਹੈ।"
+    },
+    "source": "nonYesNo",
+    "points": 5
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_l_adjective_basics_01_choose_green",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_l_adjective_basics_01_choose_green",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Choose the adjective.",
+      "pa": "ਵਿਸ਼ੇਸ਼ਣ (adjective) ਚੁਣੋ।"
+    },
+    "options": [
+      {
+        "en": "green",
+        "pa": "ਹਰਾ (ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "run",
+        "pa": "ਦੌੜਣਾ (ਕਿਰਿਆ)"
+      },
+      {
+        "en": "quickly",
+        "pa": "ਤੇਜ਼ੀ ਨਾਲ (ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "green",
+    "hint": {
+      "en": "Colors can be adjectives (green apple).",
+      "pa": "ਰੰਗ ਵਿਸ਼ੇਸ਼ਣ ਹੁੰਦੇ ਹਨ (ਹਰਾ ਸੇਬ)।"
+    },
+    "explanation": {
+      "en": "“Green” describes color, so it is an adjective.",
+      "pa": "“Green” ਰੰਗ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "The green apple is on the table.",
+      "pa": "ਹਰਾ ਸੇਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ।",
+      "highlight": "green"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  },
+  {
+    "key": "L_ADJECTIVE_BASICS_01::q_l_adjective_basics_01_complete_old_house",
+    "lessonId": "L_ADJECTIVE_BASICS_01",
+    "stepId": "q_l_adjective_basics_01_complete_old_house",
+    "lessonOrder": 18,
+    "lessonLabelEn": "Adjective Basics",
+    "prompt": {
+      "en": "Complete: The ___ house is quiet.",
+      "pa": "ਵਾਕ ਪੂਰਾ ਕਰੋ: The ___ house is quiet."
+    },
+    "options": [
+      {
+        "en": "old",
+        "pa": "ਪੁਰਾਣਾ (ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "quietly",
+        "pa": "ਚੁੱਪਚਾਪ (ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ)"
+      },
+      {
+        "en": "walk",
+        "pa": "ਤੁਰਨਾ (ਕਿਰਿਆ)"
+      }
+    ],
+    "correctOptionIndex": 0,
+    "correctAnswer": "old",
+    "hint": {
+      "en": "Before a noun (house), we use an adjective.",
+      "pa": "ਨਾਂਵ (house) ਤੋਂ ਪਹਿਲਾਂ ਵਿਸ਼ੇਸ਼ਣ ਆਉਂਦਾ ਹੈ।"
+    },
+    "explanation": {
+      "en": "“Old” describes the house, so it fits.",
+      "pa": "“Old” ਘਰ ਨੂੰ ਵਰਣਨ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਸਹੀ ਹੈ।"
+    },
+    "workedExample": {
+      "en": "The old house is quiet.",
+      "pa": "ਪੁਰਾਣਾ ਘਰ ਚੁੱਪ ਹੈ।",
+      "highlight": "old"
+    },
+    "points": 5,
+    "source": "nonYesNo"
+  }
+]

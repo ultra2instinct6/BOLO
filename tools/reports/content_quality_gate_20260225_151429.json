@@ -1,0 +1,49 @@
+{
+  "createdAtIso": "2026-02-25T20:14:29.641Z",
+  "booksFilter": null,
+  "ok": false,
+  "checks": [
+    {
+      "label": "Audit reading template fields",
+      "scriptPath": "tools/audit_reading_templates_fields.cjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 31,
+      "stdout": "book10_first10_stories.template.json: stories=10, issues=0\nbook1_first10_stories.template.json: stories=10, issues=0\nbook2_first10_stories.template.json: stories=10, issues=0\nbook3_first10_stories.template.json: stories=10, issues=0\nbook4_first10_stories.template.json: stories=10, issues=0\nbook5_first10_stories.template.json: stories=10, issues=0\nbook6_first10_stories.template.json: stories=10, issues=0\nbook7_first10_stories.template.json: stories=10, issues=0\nbook8_first10_stories.template.json: stories=10, issues=0\nbook9_first10_stories.template.json: stories=10, issues=0\nTOTAL_ISSUES=0\n",
+      "stderr": ""
+    },
+    {
+      "label": "Validate wrong option explanations",
+      "scriptPath": "tools/validate_wrong_option_explanations.cjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 26,
+      "stdout": "{\n  \"remainingMissingCount\": 0,\n  \"countMismatchCount\": 0,\n  \"skippedEdgeCases\": 0,\n  \"missingCases\": [],\n  \"countMismatchCases\": [],\n  \"skipped\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "Run lessons quality suite",
+      "scriptPath": "tools/run_lessons_quality_suite.cjs",
+      "status": "failed",
+      "exitCode": 1,
+      "durationMs": 119,
+      "stdout": "{\n  \"ok\": false,\n  \"reportPath\": \"/Users/deepakdaroach/bolo/tools/lessons_quality_suite_report.json\",\n  \"checks\": [\n    {\n      \"command\": \"node tools/fix_normalized_lessons_batch1.cjs --check\",\n      \"exitCode\": 1\n    },\n    {\n      \"command\": \"node tools/validate_normalized_lessons.js\",\n      \"exitCode\": 1\n    },\n    {\n      \"command\": \"node tools/validate_wrong_option_explanations.cjs\",\n      \"exitCode\": 0\n    },\n    {\n      \"command\": \"node tools/generate_lessons_content_report.js\",\n      \"exitCode\": 0\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "label": "Generate lesson rundown counts",
+      "scriptPath": "tools/generate_lesson_rundown_counts.cjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 27,
+      "stdout": "{\n  \"ok\": true,\n  \"files\": 10,\n  \"output\": \"app/data/templates/lesson_rundown_counts.json\",\n  \"totals\": {\n    \"lessons\": 100,\n    \"vocabularyWords\": 820,\n    \"multipleChoiceQuestions\": 500,\n    \"multipleChoiceOptions\": 1500,\n    \"partsOfSpeech\": {\n      \"nouns\": 4561,\n      \"verbs\": 1231,\n      \"pronouns\": 483,\n      \"adjectives\": 285,\n      \"adverbs\": 253,\n      \"prepositions\": 567,\n      \"conjunctions\": 420,\n      \"articles\": 181,\n      \"interjections\": 103\n    }\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "storyMinimums": {
+    "totalStories": 100,
+    "failingCount": 0,
+    "firstFailingStoryIds": [],
+    "failing": []
+  }
+}

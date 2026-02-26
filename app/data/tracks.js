@@ -66,5 +66,8 @@ var LESSON_META = [
   { id: "L_CONJ_JOINING_01", labelEn: "Conjunctions: Joining Ideas", labelPa: "ਸੰਯੋਜਕ: ਖ਼ਿਆਲ ਜੋੜਨਾ", trackId: "T_SENTENCE", difficulty: 1, order: 26 },
   { id: "L_ARTICLE_BASICS_01", labelEn: "Article Basics", labelPa: "ਲੇਖ ਮੁੱਢ", trackId: "T_SENTENCE", difficulty: 1, order: 27 },
   { id: "L_INTERJECTIONS_01", labelEn: "Interjections: Feelings", labelPa: "ਵਿਸਮਿਆਦਿ ਬੋਧਕ: ਭਾਵਨਾ", trackId: "T_SENTENCE", difficulty: 1, order: 28 },
-  { id: "L_SV_AGREEMENT_01", labelEn: "Subject–Verb Agreement", labelPa: "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ", trackId: "T_SENTENCE", difficulty: 2, order: 29 }
+  { id: "L_SV_AGREEMENT_01", labelEn: "Subject–Verb Agreement", labelPa: "ਕਰਤਾ–ਕਿਰਿਆ ਸਹਿਮਤੀ", trackId: "T_SENTENCE", difficulty: 2, order: 29 },
+  { id: "L_IRREGULAR_VERBS_01", labelEn: "Irregular Verbs", labelPa: "ਅਨਿਯਮਤ ਕਿਰਿਆਵਾਂ", trackId: "T_ACTIONS", difficulty: 2, order: 30 },
+  { id: "L_QUESTION_FORMATION_01", labelEn: "Question Formation", labelPa: "ਸਵਾਲ ਬਣਾਉਣਾ", trackId: "T_SENTENCE", difficulty: 2, order: 31 },
+  { id: "L_NEGATIVE_SENTENCES_01", labelEn: "Negative Sentences", labelPa: "ਨਾਂਹ-ਵਾਚਕ ਵਾਕ", trackId: "T_SENTENCE", difficulty: 2, order: 32 }
 ];

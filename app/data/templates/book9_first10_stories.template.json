@@ -1,0 +1,5146 @@
+[
+  {
+    "storyId": "B9_S01",
+    "bundleId": 9,
+    "orderInBundle": 1,
+    "titleEn": "Book 9 · Story 1: Bazaar Mission: Find the Fruit Seller",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 1: ਬਾਜ਼ਾਰ ਦਾ ਕੰਮ: ਫਲ ਵਾਲਾ ਲੱਭੋ",
+    "englishStory": "Panel 1 (Intro): Today I go to the bazaar with my mom to buy sweet fruit.\nPanel 2 (Body): First, I stay close to Mom and look around carefully. I ask, \"Excuse me, where is the fruit shop?\"\nPanel 3 (Body): Next, the shopkeeper points and says, \"Go straight, then turn left near the big sign.\"\nPanel 4 (Body): Then we find apples and bananas, and Mom asks, \"How much are the apples?\" The seller says, \"A kilo is cheaper today.\"\nPanel 5 (Conclusion): After that, we buy fruit and say, \"Thank you!\" I feel proud because I asked politely and followed directions.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਮਾਂ ਨਾਲ ਬਾਜ਼ਾਰ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ ਤਾਂ ਜੋ ਮਿੱਠੇ ਫਲ ਖਰੀਦ ਸਕੀਏ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਮੈਂ ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿੰਦਾ/ਰਹਿੰਦੀ ਹਾਂ ਅਤੇ ਧਿਆਨ ਨਾਲ ਆਲੇ-ਦੁਆਲੇ ਵੇਖਦਾ/ਵੇਖਦੀ ਹਾਂ। ਮੈਂ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹਾਂ, \"ਐਕਸਕਿਊਜ਼ ਮੀ, ਫਲ ਦੀ ਦੁਕਾਨ ਕਿੱਥੇ ਹੈ?\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਦੁਕਾਨਦਾਰ ਇਸ਼ਾਰਾ ਕਰਕੇ ਕਹਿੰਦਾ ਹੈ, \"ਸਿੱਧੇ ਜਾਓ, ਫਿਰ ਵੱਡੇ ਸਾਈਨ ਕੋਲ ਖੱਬੇ ਮੁੜੋ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਅਸੀਂ ਸੇਬ ਤੇ ਕੇਲੇ ਲੱਭ ਲੈਂਦੇ ਹਾਂ, ਅਤੇ ਮਾਂ ਪੁੱਛਦੀ ਹੈ, \"ਸੇਬ ਕਿੰਨੇ ਦੇ ਹਨ?\" ਫਲ ਵਾਲਾ ਕਹਿੰਦਾ ਹੈ, \"ਅੱਜ ਇੱਕ ਕਿਲੋ ਸਸਤਾ ਹੈ।\"\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਅਸੀਂ ਫਲ ਖਰੀਦਦੇ ਹਾਂ ਅਤੇ ਕਹਿੰਦੇ ਹਾਂ, \"ਧੰਨਵਾਦ!\" ਮੈਨੂੰ ਮਾਣ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਨਮਰਤਾ ਨਾਲ ਪੁੱਛਿਆ ਅਤੇ ਰਸਤਾ ਮੰਨਿਆ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choices": [
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "clinic / ਕਲੀਨਿਕ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child goes to the bazaar. / ਪੈਨਲ 1 ਵਿੱਚ ਬਾਜ਼ਾਰ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choicesPa": [
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "clinic / ਕਲੀਨਿਕ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first in a crowded place? / ਭੀੜ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "stay close to mom / ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿਣਾ",
+          "run far / ਦੂਰ ਦੌੜ ਜਾਣਾ",
+          "hide behind boxes / ਡੱਬਿਆਂ ਪਿੱਛੇ ਲੁਕਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 shows the child stays close to Mom for safety. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਸੁਰੱਖਿਆ ਲਈ ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿੰਦਾ/ਰਹਿੰਦੀ ਹੈ।",
+        "questionPa": "What should the child do first in a crowded place? / ਭੀੜ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "stay close to mom / ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿਣਾ",
+          "run far / ਦੂਰ ਦੌੜ ਜਾਣਾ",
+          "hide behind boxes / ਡੱਬਿਆਂ ਪਿੱਛੇ ਲੁਕਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who gives directions? / ਰਸਤਾ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
+        "choices": [
+          "shopkeeper / ਦੁਕਾਨਦਾਰ",
+          "bus driver / ਬੱਸ ਡਰਾਈਵਰ",
+          "doctor / ਡਾਕਟਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says the shopkeeper points and gives directions. / ਪੈਨਲ 3 ਵਿੱਚ ਦੁਕਾਨਦਾਰ ਰਸਤਾ ਦੱਸਦਾ ਹੈ।",
+        "questionPa": "Who gives directions? / ਰਸਤਾ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
+        "choicesPa": [
+          "shopkeeper / ਦੁਕਾਨਦਾਰ",
+          "bus driver / ਬੱਸ ਡਰਾਈਵਰ",
+          "doctor / ਡਾਕਟਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child follow directions? / ਬੱਚਾ ਰਸਤਾ ਕਿਉਂ ਮੰਨਦਾ/ਮੰਨਦੀ ਹੈ?",
+        "choices": [
+          "to find the fruit shop / ਫਲ ਦੀ ਦੁਕਾਨ ਲੱਭਣ ਲਈ",
+          "to get lost / ਗੁੰਮ ਹੋਣ ਲਈ",
+          "to be late / ਦੇਰ ਕਰਨ ਲਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Following directions helps the child reach the fruit shop. / ਰਸਤਾ ਮੰਨਣ ਨਾਲ ਫਲ ਦੀ ਦੁਕਾਨ ਮਿਲਦੀ ਹੈ।",
+        "questionPa": "Why does the child follow directions? / ਬੱਚਾ ਰਸਤਾ ਕਿਉਂ ਮੰਨਦਾ/ਮੰਨਦੀ ਹੈ?",
+        "choicesPa": [
+          "to find the fruit shop / ਫਲ ਦੀ ਦੁਕਾਨ ਲੱਭਣ ਲਈ",
+          "to get lost / ਗੁੰਮ ਹੋਣ ਲਈ",
+          "to be late / ਦੇਰ ਕਰਨ ਲਈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What do they buy? / ਉਹ ਕੀ ਖਰੀਦਦੇ ਹਨ?",
+        "choices": [
+          "fruit / ਫਲ",
+          "shoes / ਜੁੱਤੇ",
+          "medicine / ਦਵਾਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says they buy fruit and say thank you. / ਪੈਨਲ 5 ਵਿੱਚ ਫਲ ਖਰੀਦਦੇ ਹਨ।",
+        "questionPa": "What do they buy? / ਉਹ ਕੀ ਖਰੀਦਦੇ ਹਨ?",
+        "choicesPa": [
+          "fruit / ਫਲ",
+          "shoes / ਜੁੱਤੇ",
+          "medicine / ਦਵਾਈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "bazaar",
+        "meaningEn": "a busy market with many shops",
+        "meaningPa": "ਬਾਜ਼ਾਰ; ਕਈ ਦੁਕਾਨਾਂ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "fruit",
+        "meaningEn": "sweet food like apples or bananas",
+        "meaningPa": "ਫਲ; ਸੇਬ, ਕੇਲੇ ਵਰਗਾ ਮਿੱਠਾ ਖਾਣਾ"
+      },
+      {
+        "word": "excuse me",
+        "meaningEn": "polite words to get attention",
+        "meaningPa": "ਐਕਸਕਿਊਜ਼ ਮੀ; ਨਮਰਤਾ ਨਾਲ ਧਿਆਨ ਖਿੱਚਣਾ"
+      },
+      {
+        "word": "directions",
+        "meaningEn": "how to go to a place",
+        "meaningPa": "ਰਸਤਾ; ਕਿੱਧਰ ਜਾਣਾ"
+      },
+      {
+        "word": "straight",
+        "meaningEn": "go forward, not left or right",
+        "meaningPa": "ਸਿੱਧਾ; ਅੱਗੇ ਵੱਲ"
+      },
+      {
+        "word": "left",
+        "meaningEn": "the side opposite of right",
+        "meaningPa": "ਖੱਬਾ; ਸੱਜੇ ਦਾ ਉਲਟ"
+      },
+      {
+        "word": "sign",
+        "meaningEn": "a board with words or pictures",
+        "meaningPa": "ਸਾਈਨ; ਲਿਖਤ/ਤਸਵੀਰ ਵਾਲਾ ਬੋਰਡ"
+      },
+      {
+        "word": "price",
+        "meaningEn": "how much money something costs",
+        "meaningPa": "ਕੀਮਤ; ਕਿੰਨੇ ਪੈਸੇ"
+      },
+      {
+        "word": "cheaper",
+        "meaningEn": "costs less money",
+        "meaningPa": "ਸਸਤਾ; ਘੱਟ ਕੀਮਤ"
+      },
+      {
+        "word": "thank you",
+        "meaningEn": "polite words after help",
+        "meaningPa": "ਧੰਨਵਾਦ; ਮਦਦ ਲਈ ਸ਼ੁਕਰੀਆ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Bazaar",
+          "pa": "ਬਾਜ਼ਾਰ; ਕਈ ਦੁਕਾਨਾਂ ਵਾਲੀ ਥਾਂ"
+        },
+        {
+          "en": "Fruit",
+          "pa": "ਫਲ; ਸੇਬ, ਕੇਲੇ ਵਰਗਾ ਮਿੱਠਾ ਖਾਣਾ"
+        },
+        {
+          "en": "Excuse me",
+          "pa": "ਐਕਸਕਿਊਜ਼ ਮੀ; ਨਮਰਤਾ ਨਾਲ ਧਿਆਨ ਖਿੱਚਣਾ"
+        },
+        {
+          "en": "Directions",
+          "pa": "ਰਸਤਾ; ਕਿੱਧਰ ਜਾਣਾ"
+        },
+        {
+          "en": "Straight",
+          "pa": "ਸਿੱਧਾ; ਅੱਗੇ ਵੱਲ"
+        },
+        {
+          "en": "Left",
+          "pa": "ਖੱਬਾ; ਸੱਜੇ ਦਾ ਉਲਟ"
+        },
+        {
+          "en": "Sign",
+          "pa": "ਸਾਈਨ; ਲਿਖਤ/ਤਸਵੀਰ ਵਾਲਾ ਬੋਰਡ"
+        },
+        {
+          "en": "Price",
+          "pa": "ਕੀਮਤ; ਕਿੰਨੇ ਪੈਸੇ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Buy",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Sweet",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Carefully",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Excuse",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Where",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Shop",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Shopkeeper",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Points",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Turn",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Find",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Apples",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Bananas",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "How",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Much",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Seller",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Kilo",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Cheaper",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Politely",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank you",
+          "pa": "ਧੰਨਵਾਦ; ਮਦਦ ਲਈ ਸ਼ੁਕਰੀਆ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        },
+        {
+          "en": "Look",
+          "pa": "ਵੇਖਣਾ"
+        },
+        {
+          "en": "Turn",
+          "pa": "ਮੁੜਨਾ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Ask",
+          "pa": "ਪੁੱਛਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asked",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Followed",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Big",
+          "pa": "ਵੱਡਾ"
+        },
+        {
+          "en": "Proud",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "carefully",
+          "pa": "ਧਿਆਨ ਨਾਲ"
+        },
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "Near",
+          "pa": "ਨੇੜੇ"
+        },
+        {
+          "en": "Around",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        },
+        {
+          "en": "wow",
+          "pa": "ਵਾਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S02",
+    "bundleId": 9,
+    "orderInBundle": 2,
+    "titleEn": "Book 9 · Story 2: Auto-Rickshaw Ride: Saying the Address",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 2: ਆਟੋ ਰਿਕਸ਼ਾ ਸਫ਼ਰ: ਪਤਾ ਦੱਸਣਾ",
+    "englishStory": "Panel 1 (Intro): Today I ride in an auto-rickshaw with my dad to visit my aunt.\nPanel 2 (Body): First, Dad says, \"Stay seated and hold the side bar.\" I say, \"Okay, Dad, I will sit safely.\"\nPanel 3 (Body): Next, Dad tells the driver, \"Please take us to Green Street, near the school. That is our address.\" The driver says, \"Yes, I know.\"\nPanel 4 (Body): Then I watch for landmarks and say, \"I see the school, so we are close.\" Dad says, \"Good noticing!\"\nPanel 5 (Conclusion): After that, we stop safely and say, \"Thank you.\" I feel confident because I used polite words and stayed safe.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਪਿਉ ਨਾਲ ਆਟੋ ਰਿਕਸ਼ੇ ਵਿੱਚ ਮਾਸੀ/ਚਾਚੀ ਨੂੰ ਮਿਲਣ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਪਿਉ ਕਹਿੰਦਾ ਹੈ, \"ਬੈਠੇ ਰਹੋ ਅਤੇ ਸਾਈਡ ਵਾਲੀ ਪੱਟੀ ਫੜੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਠੀਕ ਹੈ ਪਿਉ ਜੀ, ਮੈਂ ਸੁਰੱਖਿਅਤ ਬੈਠਾਂਗਾ/ਬੈਠਾਂਗੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਪਿਉ ਡਰਾਈਵਰ ਨੂੰ ਕਹਿੰਦਾ ਹੈ, \"ਕਿਰਪਾ ਕਰਕੇ ਸਾਨੂੰ ਗ੍ਰੀਨ ਸਟਰੀਟ, ਸਕੂਲ ਦੇ ਨੇੜੇ ਲੈ ਜਾਓ। ਇਹ ਸਾਡਾ ਪਤਾ ਹੈ।\" ਡਰਾਈਵਰ ਕਹਿੰਦਾ ਹੈ, \"ਹਾਂ ਜੀ, ਮੈਨੂੰ ਪਤਾ ਹੈ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਨਿਸ਼ਾਨੀਆਂ ਵੇਖਦਾ/ਵੇਖਦੀ ਹਾਂ ਅਤੇ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਮੈਨੂੰ ਸਕੂਲ ਦਿਖ ਰਿਹਾ ਹੈ, ਅਸੀਂ ਨੇੜੇ ਹਾਂ।\" ਪਿਉ ਕਹਿੰਦਾ ਹੈ, \"ਵਧੀਆ ਧਿਆਨ!\"\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਅਸੀਂ ਸੁਰੱਖਿਅਤ ਰੁਕਦੇ ਹਾਂ ਅਤੇ ਕਹਿੰਦੇ ਹਾਂ, \"ਧੰਨਵਾਦ।\" ਮੈਨੂੰ ਭਰੋਸਾ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਨਮਰ ਸ਼ਬਦ ਵਰਤੇ ਅਤੇ ਸੁਰੱਖਿਅਤ ਰਿਹਾ/ਰਹੀ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Who is with the child? / ਬੱਚੇ ਨਾਲ ਕੌਣ ਹੈ?",
+        "choices": [
+          "dad / ਪਿਉ",
+          "teacher / ਟੀਚਰ",
+          "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child rides with Dad. / ਪੈਨਲ 1 ਵਿੱਚ ਪਿਉ ਨਾਲ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Who is with the child? / ਬੱਚੇ ਨਾਲ ਕੌਣ ਹੈ?",
+        "choicesPa": [
+          "dad / ਪਿਉ",
+          "teacher / ਟੀਚਰ",
+          "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do in the auto? / ਆਟੋ ਵਿੱਚ ਬੱਚੇ ਨੇ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "sit and hold the bar / ਬੈਠ ਕੇ ਪੱਟੀ ਫੜਨੀ",
+          "stand and jump / ਖੜ੍ਹ ਕੇ ਕੂਦਣਾ",
+          "lean out / ਬਾਹਰ ਝੁਕਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says to stay seated and hold the side bar. / ਪੈਨਲ 2 ਵਿੱਚ ਬੈਠ ਕੇ ਪੱਟੀ ਫੜਨ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do in the auto? / ਆਟੋ ਵਿੱਚ ਬੱਚੇ ਨੇ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "sit and hold the bar / ਬੈਠ ਕੇ ਪੱਟੀ ਫੜਨੀ",
+          "stand and jump / ਖੜ੍ਹ ਕੇ ਕੂਦਣਾ",
+          "lean out / ਬਾਹਰ ਝੁਕਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Where do they want to go? / ਉਹ ਕਿੱਥੇ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹਨ?",
+        "choices": [
+          "Green Street / ਗ੍ਰੀਨ ਸਟਰੀਟ",
+          "City Zoo / ਚਿੜੀਆਘਰ",
+          "Airport / ਹਵਾਈ ਅੱਡਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says \"Green Street, near the school.\" / ਪੈਨਲ 3 ਵਿੱਚ ਗ੍ਰੀਨ ਸਟਰੀਟ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where do they want to go? / ਉਹ ਕਿੱਥੇ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹਨ?",
+        "choicesPa": [
+          "Green Street / ਗ੍ਰੀਨ ਸਟਰੀਟ",
+          "City Zoo / ਚਿੜੀਆਘਰ",
+          "Airport / ਹਵਾਈ ਅੱਡਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child say they are close? / ਬੱਚਾ ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ ਕਿ ਅਸੀਂ ਨੇੜੇ ਹਾਂ?",
+        "choices": [
+          "because they see the school / ਕਿਉਂਕਿ ਸਕੂਲ ਦਿਖਦਾ ਹੈ",
+          "because it is night / ਕਿਉਂਕਿ ਰਾਤ ਹੈ",
+          "because it is raining / ਕਿਉਂਕਿ ਮੀਂਹ ਪੈਂਦਾ ਹੈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says the child sees the school as a landmark. / ਪੈਨਲ 4 ਵਿੱਚ ਸਕੂਲ ਨਿਸ਼ਾਨੀ ਵਜੋਂ ਦਿਖਦਾ ਹੈ।",
+        "questionPa": "Why does the child say they are close? / ਬੱਚਾ ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ ਕਿ ਅਸੀਂ ਨੇੜੇ ਹਾਂ?",
+        "choicesPa": [
+          "because they see the school / ਕਿਉਂਕਿ ਸਕੂਲ ਦਿਖਦਾ ਹੈ",
+          "because it is night / ਕਿਉਂਕਿ ਰਾਤ ਹੈ",
+          "because it is raining / ਕਿਉਂਕਿ ਮੀਂਹ ਪੈਂਦਾ ਹੈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What do they say at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
+        "choices": [
+          "Thank you / ਧੰਨਵਾਦ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "Be loud / ਸ਼ੋਰ ਕਰੋ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says they say \"Thank you.\" / ਪੈਨਲ 5 ਵਿੱਚ ਧੰਨਵਾਦ ਕਹਿੰਦੇ ਹਨ।",
+        "questionPa": "What do they say at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
+        "choicesPa": [
+          "Thank you / ਧੰਨਵਾਦ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "Be loud / ਸ਼ੋਰ ਕਰੋ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "auto-rickshaw",
+        "meaningEn": "a small vehicle for rides",
+        "meaningPa": "ਆਟੋ ਰਿਕਸ਼ਾ; ਛੋਟੀ ਸਵਾਰੀ ਵਾਲੀ ਗੱਡੀ"
+      },
+      {
+        "word": "driver",
+        "meaningEn": "person who drives a vehicle",
+        "meaningPa": "ਡਰਾਈਵਰ; ਗੱਡੀ ਚਲਾਉਣ ਵਾਲਾ"
+      },
+      {
+        "word": "address",
+        "meaningEn": "the place name where you go",
+        "meaningPa": "ਪਤਾ; ਕਿੱਥੇ ਜਾਣਾ ਹੈ"
+      },
+      {
+        "word": "near",
+        "meaningEn": "close to",
+        "meaningPa": "ਨੇੜੇ; ਕੋਲ"
+      },
+      {
+        "word": "landmark",
+        "meaningEn": "a place you recognize to guide you",
+        "meaningPa": "ਨਿਸ਼ਾਨੀ; ਰਸਤਾ ਦੱਸਣ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "seat",
+        "meaningEn": "a place to sit",
+        "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "hold",
+        "meaningEn": "keep in your hand",
+        "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "please",
+        "meaningEn": "polite word when asking",
+        "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ"
+      },
+      {
+        "word": "stop",
+        "meaningEn": "to end the ride at a place",
+        "meaningPa": "ਰੁਕਣਾ; ਥਾਂ ਤੇ ਰੁਕ ਜਾਣਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Auto-rickshaw",
+          "pa": "ਆਟੋ ਰਿਕਸ਼ਾ; ਛੋਟੀ ਸਵਾਰੀ ਵਾਲੀ ਗੱਡੀ"
+        },
+        {
+          "en": "Driver",
+          "pa": "ਡਰਾਈਵਰ; ਗੱਡੀ ਚਲਾਉਣ ਵਾਲਾ"
+        },
+        {
+          "en": "Address",
+          "pa": "ਪਤਾ; ਕਿੱਥੇ ਜਾਣਾ ਹੈ"
+        },
+        {
+          "en": "Near",
+          "pa": "ਨੇੜੇ; ਕੋਲ"
+        },
+        {
+          "en": "Landmark",
+          "pa": "ਨਿਸ਼ਾਨੀ; ਰਸਤਾ ਦੱਸਣ ਵਾਲੀ ਥਾਂ"
+        },
+        {
+          "en": "Seat",
+          "pa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Hold",
+          "pa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+        },
+        {
+          "en": "Safe",
+          "pa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+        },
+        {
+          "en": "School",
+          "pa": "ਸਕੂਲ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Ride",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Visit",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Aunt",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Side",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Bar",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Okay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Safely",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Tells",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Please",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Green",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Street",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Yes",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Know",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Watch",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Landmarks",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Good",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stop",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Confident",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Polite",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Words",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "Stop",
+          "pa": "ਰੁਕਣਾ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Seated",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Take",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "See",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Noticing",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Used",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Stayed",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Our",
+          "pa": "ਸਾਡਾ/ਸਾਡੀ"
+        },
+        {
+          "en": "Us",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Safe",
+          "pa": "ਸੁਰੱਖਿਅਤ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "Near",
+          "pa": "ਨੇੜੇ"
+        },
+        {
+          "en": "For",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "so",
+          "pa": "ਇਸ ਲਈ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "an",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        },
+        {
+          "en": "wow",
+          "pa": "ਵਾਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S03",
+    "bundleId": 9,
+    "orderInBundle": 3,
+    "titleEn": "Book 9 · Story 3: Gurdwara Visit: Langar Line Rules",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 3: ਗੁਰਦੁਆਰਾ ਦੌਰਾ: ਲੰਗਰ ਦੀ ਕਤਾਰ",
+    "englishStory": "Panel 1 (Intro): Today I visit the gurdwara with my family. The hall feels calm and quiet.\nPanel 2 (Body): First, Mom says, \"Cover your head and put your shoes in the rack.\" I say, \"Yes, Mom.\"\nPanel 3 (Body): Next, we stand in the langar line and wait our turn. I whisper, \"Please, may I sit here?\"\nPanel 4 (Body): Then the helper smiles and says, \"Yes, sit down and keep your plate ready.\" I say, \"Thank you.\"\nPanel 5 (Conclusion): After that, I help put cups in the bin and feel proud. I learn that respect means waiting and being kind to everyone.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਪਰਿਵਾਰ ਨਾਲ ਗੁਰਦੁਆਰੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ। ਹਾਲ ਵਿੱਚ ਸ਼ਾਂਤ ਅਤੇ ਚੁੱਪ ਲੱਗਦਾ ਹੈ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਮਾਂ ਕਹਿੰਦੀ ਹੈ, \"ਸਿਰ ਢੱਕੋ ਅਤੇ ਜੁੱਤੇ ਰੈਕ ਵਿੱਚ ਰੱਖੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਹਾਂ ਮਾਂ ਜੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਅਸੀਂ ਲੰਗਰ ਦੀ ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਦੇ ਹਾਂ ਅਤੇ ਆਪਣੀ ਵਾਰੀ ਉਡੀਕਦੇ ਹਾਂ। ਮੈਂ ਹੌਲੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਕਿਰਪਾ ਕਰਕੇ, ਕੀ ਮੈਂ ਇੱਥੇ ਬੈਠ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਸੇਵਾਦਾਰ ਮੁਸਕੁਰਾ ਕੇ ਕਹਿੰਦਾ ਹੈ, \"ਹਾਂ, ਬੈਠ ਜਾਓ ਅਤੇ ਥਾਲੀ ਤਿਆਰ ਰੱਖੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਧੰਨਵਾਦ।\"\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਮੈਂ ਗਿਲਾਸ ਡੱਬੇ ਵਿੱਚ ਰੱਖਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ ਅਤੇ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ। ਮੈਂ ਸਿੱਖਦਾ/ਸਿੱਖਦੀ ਹਾਂ ਕਿ ਆਦਰ ਦਾ ਮਤਲਬ ਹੈ ਉਡੀਕ ਕਰਨੀ ਅਤੇ ਸਭ ਨਾਲ ਦਇਆ ਕਰਨੀ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choices": [
+          "gurdwara / ਗੁਰਦੁਆਰਾ",
+          "cinema / ਸਿਨੇਮਾ",
+          "zoo / ਚਿੜੀਆਘਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child visits the gurdwara. / ਪੈਨਲ 1 ਵਿੱਚ ਗੁਰਦੁਆਰੇ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choicesPa": [
+          "gurdwara / ਗੁਰਦੁਆਰਾ",
+          "cinema / ਸਿਨੇਮਾ",
+          "zoo / ਚਿੜੀਆਘਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "cover head and place shoes / ਸਿਰ ਢੱਕਣਾ ਤੇ ਜੁੱਤੇ ਰੱਖਣਾ",
+          "run loudly / ਉੱਚੀ ਦੌੜਣਾ",
+          "push in line / ਕਤਾਰ ਧੱਕਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 shows head covering and shoes in the rack. / ਪੈਨਲ 2 ਵਿੱਚ ਸਿਰ ਢੱਕਣ ਅਤੇ ਜੁੱਤੇ ਰੱਖਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "cover head and place shoes / ਸਿਰ ਢੱਕਣਾ ਤੇ ਜੁੱਤੇ ਰੱਖਣਾ",
+          "run loudly / ਉੱਚੀ ਦੌੜਣਾ",
+          "push in line / ਕਤਾਰ ਧੱਕਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What do they do in the langar line? / ਲੰਗਰ ਦੀ ਕਤਾਰ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
+        "choices": [
+          "wait turn / ਵਾਰੀ ਉਡੀਕਦੇ",
+          "shout / ਚੀਕਦੇ",
+          "sleep / ਸੌਂਦੇ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says they wait their turn. / ਪੈਨਲ 3 ਵਿੱਚ ਵਾਰੀ ਉਡੀਕਦੇ ਹਨ।",
+        "questionPa": "What do they do in the langar line? / ਲੰਗਰ ਦੀ ਕਤਾਰ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
+        "choicesPa": [
+          "wait turn / ਵਾਰੀ ਉਡੀਕਦੇ",
+          "shout / ਚੀਕਦੇ",
+          "sleep / ਸੌਂਦੇ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child whisper? / ਬੱਚਾ ਹੌਲੀ ਕਿਉਂ ਬੋਲਦਾ/ਬੋਲਦੀ ਹੈ?",
+        "choices": [
+          "because it is quiet inside / ਕਿਉਂਕਿ ਅੰਦਰ ਚੁੱਪ ਹੈ",
+          "because it is windy / ਕਿਉਂਕਿ ਹਵਾ ਹੈ",
+          "because it is dark / ਕਿਉਂਕਿ ਹਨੇਰਾ ਹੈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "The story shows a calm, quiet place, so a soft voice is respectful. / ਕਹਾਣੀ ਵਿੱਚ ਸ਼ਾਂਤ ਥਾਂ ਹੈ, ਇਸ ਲਈ ਹੌਲੀ ਆਵਾਜ਼ ਆਦਰ ਹੈ।",
+        "questionPa": "Why does the child whisper? / ਬੱਚਾ ਹੌਲੀ ਕਿਉਂ ਬੋਲਦਾ/ਬੋਲਦੀ ਹੈ?",
+        "choicesPa": [
+          "because it is quiet inside / ਕਿਉਂਕਿ ਅੰਦਰ ਚੁੱਪ ਹੈ",
+          "because it is windy / ਕਿਉਂਕਿ ਹਵਾ ਹੈ",
+          "because it is dark / ਕਿਉਂਕਿ ਹਨੇਰਾ ਹੈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What does the child do at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choices": [
+          "helps with cups / ਗਿਲਾਸ ਰੱਖਣ ਵਿੱਚ ਮਦਦ",
+          "throws plates / ਥਾਲੀਆਂ ਸੁੱਟਦਾ",
+          "runs away / ਭੱਜ ਜਾਂਦਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says the child helps put cups in the bin. / ਪੈਨਲ 5 ਵਿੱਚ ਗਿਲਾਸ ਡੱਬੇ ਵਿੱਚ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।",
+        "questionPa": "What does the child do at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choicesPa": [
+          "helps with cups / ਗਿਲਾਸ ਰੱਖਣ ਵਿੱਚ ਮਦਦ",
+          "throws plates / ਥਾਲੀਆਂ ਸੁੱਟਦਾ",
+          "runs away / ਭੱਜ ਜਾਂਦਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "gurdwara",
+        "meaningEn": "a Sikh place of worship",
+        "meaningPa": "ਗੁਰਦੁਆਰਾ; ਸਿੱਖਾਂ ਦਾ ਧਾਰਮਿਕ ਸਥਾਨ"
+      },
+      {
+        "word": "langar",
+        "meaningEn": "community meal served to everyone",
+        "meaningPa": "ਲੰਗਰ; ਸਭ ਲਈ ਸਾਂਝਾ ਭੋਜਨ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people waiting in order",
+        "meaningPa": "ਕਤਾਰ; ਲਾਈਨ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until your turn comes",
+        "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "turn",
+        "meaningEn": "your time to do something",
+        "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+      },
+      {
+        "word": "whisper",
+        "meaningEn": "speak very softly",
+        "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ ਬੋਲਣਾ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "a person who helps",
+        "meaningPa": "ਮਦਦਗਾਰ/ਸੇਵਾਦਾਰ; ਜੋ ਮਦਦ ਕਰੇ"
+      },
+      {
+        "word": "plate",
+        "meaningEn": "a dish for food",
+        "meaningPa": "ਥਾਲੀ; ਖਾਣਾ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ"
+      },
+      {
+        "word": "respect",
+        "meaningEn": "show good manners",
+        "meaningPa": "ਆਦਰ; ਸਲੀਕਾ ਅਤੇ ਸਨਮਾਨ"
+      },
+      {
+        "word": "kindness",
+        "meaningEn": "being nice and helpful",
+        "meaningPa": "ਦਇਆ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ ਹੋਣਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Gurdwara",
+          "pa": "ਗੁਰਦੁਆਰਾ; ਸਿੱਖਾਂ ਦਾ ਧਾਰਮਿਕ ਸਥਾਨ"
+        },
+        {
+          "en": "Langar",
+          "pa": "ਲੰਗਰ; ਸਭ ਲਈ ਸਾਂਝਾ ਭੋਜਨ"
+        },
+        {
+          "en": "Line",
+          "pa": "ਕਤਾਰ; ਲਾਈਨ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+        },
+        {
+          "en": "Turn",
+          "pa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+        },
+        {
+          "en": "Whisper",
+          "pa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ ਬੋਲਣਾ"
+        },
+        {
+          "en": "Helper",
+          "pa": "ਮਦਦਗਾਰ/ਸੇਵਾਦਾਰ; ਜੋ ਮਦਦ ਕਰੇ"
+        },
+        {
+          "en": "Plate",
+          "pa": "ਥਾਲੀ; ਖਾਣਾ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ"
+        },
+        {
+          "en": "Family",
+          "pa": "ਪਰਿਵਾਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Visit",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hall",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Calm",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Cover",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Head",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Put",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Shoes",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Rack",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Yes",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Please",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "May",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Here",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Smiles",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Down",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Keep",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Cups",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Bin",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Respect",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Means",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Everyone",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Kindness",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "Help",
+          "pa": "ਮਦਦ ਕਰਨੀ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ ਕਰਨੀ"
+        },
+        {
+          "en": "Turn",
+          "pa": "ਮੁੜਨਾ"
+        },
+        {
+          "en": "Stand",
+          "pa": "ਖੜ੍ਹਨਾ"
+        },
+        {
+          "en": "Feels",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Learn",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Waiting",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Being",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Our",
+          "pa": "ਸਾਡਾ/ਸਾਡੀ"
+        },
+        {
+          "en": "Your",
+          "pa": "ਤੁਹਾਡਾ/ਤੁਹਾਡੀ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Quiet",
+          "pa": "ਚੁੱਪ"
+        },
+        {
+          "en": "Ready",
+          "pa": "ਤਿਆਰ"
+        },
+        {
+          "en": "Proud",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        },
+        {
+          "en": "Kind",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S04",
+    "bundleId": 9,
+    "orderInBundle": 4,
+    "titleEn": "Book 9 · Story 4: Bus Stop: Which Bus Is Ours?",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 4: ਬੱਸ ਸਟਾਪ: ਸਾਡੀ ਬੱਸ ਕਿਹੜੀ ਹੈ?",
+    "englishStory": "Panel 1 (Intro): Today I wait at the bus stop with my aunt. Many buses come and go.\nPanel 2 (Body): First, Aunt says, \"Stand behind the line and hold my hand.\" I say, \"Okay, I will stay close.\"\nPanel 3 (Body): Next, I read the bus number and ask, \"Excuse me, does this bus route go to City Park?\"\nPanel 4 (Body): Then the driver says, \"Yes, it goes there.\" Aunt says, \"Thank you,\" and we board calmly.\nPanel 5 (Conclusion): After that, I sit down and keep my bag close. I feel proud because I asked safely and used clear words.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਮਾਸੀ/ਚਾਚੀ ਨਾਲ ਬੱਸ ਸਟਾਪ ਤੇ ਉਡੀਕ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ। ਕਈ ਬੱਸਾਂ ਆਉਂਦੀਆਂ ਤੇ ਜਾਂਦੀਆਂ ਹਨ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਮਾਸੀ ਕਹਿੰਦੀ ਹੈ, \"ਲਾਈਨ ਦੇ ਪਿੱਛੇ ਖੜ੍ਹੋ ਅਤੇ ਮੇਰਾ ਹੱਥ ਫੜੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਠੀਕ ਹੈ, ਮੈਂ ਨੇੜੇ ਰਹਾਂਗਾ/ਰਹਾਂਗੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਬੱਸ ਦਾ ਨੰਬਰ ਵੇਖਦਾ/ਵੇਖਦੀ ਹਾਂ ਅਤੇ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹਾਂ, \"ਐਕਸਕਿਊਜ਼ ਮੀ, ਕੀ ਇਸ ਬੱਸ ਦਾ ਰੂਟ ਸਿਟੀ ਪਾਰਕ ਜਾਂਦਾ ਹੈ?\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਡਰਾਈਵਰ ਕਹਿੰਦਾ ਹੈ, \"ਹਾਂ, ਜਾਂਦੀ ਹੈ।\" ਮਾਸੀ ਕਹਿੰਦੀ ਹੈ, \"ਧੰਨਵਾਦ,\" ਅਤੇ ਅਸੀਂ ਸ਼ਾਂਤ ਹੋ ਕੇ ਚੜ੍ਹਦੇ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਮੈਂ ਬੈਠਦਾ/ਬੈਠਦੀ ਹਾਂ ਅਤੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ/ਰੱਖਦੀ ਹਾਂ। ਮੈਨੂੰ ਮਾਣ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਪੁੱਛਿਆ ਅਤੇ ਸਾਫ਼ ਬੋਲਿਆ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where are they waiting? / ਉਹ ਕਿੱਥੇ ਉਡੀਕ ਕਰ ਰਹੇ ਹਨ?",
+        "choices": [
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "kitchen / ਰਸੋਈ",
+          "park / ਪਾਰਕ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says they wait at the bus stop. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਸ ਸਟਾਪ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where are they waiting? / ਉਹ ਕਿੱਥੇ ਉਡੀਕ ਕਰ ਰਹੇ ਹਨ?",
+        "choicesPa": [
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "kitchen / ਰਸੋਈ",
+          "park / ਪਾਰਕ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "hold aunt’s hand / ਮਾਸੀ ਦਾ ਹੱਥ ਫੜਨਾ",
+          "run to the road / ਸੜਕ ਵੱਲ ਦੌੜਨਾ",
+          "push people / ਲੋਕਾਂ ਨੂੰ ਧੱਕਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 shows holding the adult’s hand for safety. / ਪੈਨਲ 2 ਵਿੱਚ ਸੁਰੱਖਿਆ ਲਈ ਵੱਡੇ ਦਾ ਹੱਥ ਫੜਦਾ/ਫੜਦੀ ਹੈ।",
+        "questionPa": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "hold aunt’s hand / ਮਾਸੀ ਦਾ ਹੱਥ ਫੜਨਾ",
+          "run to the road / ਸੜਕ ਵੱਲ ਦੌੜਨਾ",
+          "push people / ਲੋਕਾਂ ਨੂੰ ਧੱਕਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who answers the question? / ਸਵਾਲ ਦਾ ਜਵਾਬ ਕੌਣ ਦਿੰਦਾ ਹੈ?",
+        "choices": [
+          "driver / ਡਰਾਈਵਰ",
+          "chef / ਰਸੋਈਆ",
+          "teacher / ਟੀਚਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says the driver answers. / ਪੈਨਲ 4 ਵਿੱਚ ਡਰਾਈਵਰ ਜਵਾਬ ਦਿੰਦਾ ਹੈ।",
+        "questionPa": "Who answers the question? / ਸਵਾਲ ਦਾ ਜਵਾਬ ਕੌਣ ਦਿੰਦਾ ਹੈ?",
+        "choicesPa": [
+          "driver / ਡਰਾਈਵਰ",
+          "chef / ਰਸੋਈਆ",
+          "teacher / ਟੀਚਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child ask the driver? / ਬੱਚਾ ਡਰਾਈਵਰ ਨੂੰ ਕਿਉਂ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ?",
+        "choices": [
+          "to check the bus route / ਬੱਸ ਦਾ ਰੂਟ ਚੈੱਕ ਕਰਨ ਲਈ",
+          "to get candy / ਕੈਂਡੀ ਲਈ",
+          "to be noisy / ਸ਼ੋਰ ਕਰਨ ਲਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "The child asks to make sure the bus goes to the right place. / ਬੱਚਾ ਪੱਕਾ ਕਰਨ ਲਈ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।",
+        "questionPa": "Why does the child ask the driver? / ਬੱਚਾ ਡਰਾਈਵਰ ਨੂੰ ਕਿਉਂ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ?",
+        "choicesPa": [
+          "to check the bus route / ਬੱਸ ਦਾ ਰੂਟ ਚੈੱਕ ਕਰਨ ਲਈ",
+          "to get candy / ਕੈਂਡੀ ਲਈ",
+          "to be noisy / ਸ਼ੋਰ ਕਰਨ ਲਈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What does the child do after boarding? / ਚੜ੍ਹਨ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choices": [
+          "sits and keeps bag close / ਬੈਠ ਕੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ",
+          "stands on seat / ਸੀਟ ਤੇ ਖੜ੍ਹਦਾ",
+          "shouts / ਚੀਕਦਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says the child sits and keeps the bag close. / ਪੈਨਲ 5 ਵਿੱਚ ਬੈਠ ਕੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।",
+        "questionPa": "What does the child do after boarding? / ਚੜ੍ਹਨ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choicesPa": [
+          "sits and keeps bag close / ਬੈਠ ਕੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ",
+          "stands on seat / ਸੀਟ ਤੇ ਖੜ੍ਹਦਾ",
+          "shouts / ਚੀਕਦਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "bus stop",
+        "meaningEn": "a place where buses pick people up",
+        "meaningPa": "ਬੱਸ ਸਟਾਪ; ਬੱਸ ਚੜ੍ਹਨ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people waiting in order",
+        "meaningPa": "ਕਤਾਰ; ਲਾਈਨ"
+      },
+      {
+        "word": "hold hands",
+        "meaningEn": "hold an adult’s hand for safety",
+        "meaningPa": "ਹੱਥ ਫੜਨਾ; ਸੁਰੱਖਿਆ ਲਈ ਵੱਡੇ ਦਾ ਹੱਥ ਫੜਨਾ"
+      },
+      {
+        "word": "number",
+        "meaningEn": "the bus number",
+        "meaningPa": "ਨੰਬਰ; ਬੱਸ ਦਾ ਨੰਬਰ"
+      },
+      {
+        "word": "route",
+        "meaningEn": "the path the bus takes",
+        "meaningPa": "ਰੂਟ; ਬੱਸ ਦਾ ਰਸਤਾ"
+      },
+      {
+        "word": "board",
+        "meaningEn": "get on the bus",
+        "meaningPa": "ਚੜ੍ਹਨਾ; ਬੱਸ ਵਿੱਚ ਚੜ੍ਹਨਾ"
+      },
+      {
+        "word": "seat",
+        "meaningEn": "a place to sit",
+        "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "bag",
+        "meaningEn": "a school bag or carry bag",
+        "meaningPa": "ਬੈਗ; ਥੈਲਾ"
+      },
+      {
+        "word": "ask",
+        "meaningEn": "say a question",
+        "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+      },
+      {
+        "word": "clear",
+        "meaningEn": "easy to understand",
+        "meaningPa": "ਸਾਫ਼; ਸਮਝਣ ਵਿੱਚ ਆਸਾਨ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Bus stop",
+          "pa": "ਬੱਸ ਸਟਾਪ; ਬੱਸ ਚੜ੍ਹਨ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Line",
+          "pa": "ਕਤਾਰ; ਲਾਈਨ"
+        },
+        {
+          "en": "Hold hands",
+          "pa": "ਹੱਥ ਫੜਨਾ; ਸੁਰੱਖਿਆ ਲਈ ਵੱਡੇ ਦਾ ਹੱਥ ਫੜਨਾ"
+        },
+        {
+          "en": "Number",
+          "pa": "ਨੰਬਰ; ਬੱਸ ਦਾ ਨੰਬਰ"
+        },
+        {
+          "en": "Route",
+          "pa": "ਰੂਟ; ਬੱਸ ਦਾ ਰਸਤਾ"
+        },
+        {
+          "en": "Board",
+          "pa": "ਚੜ੍ਹਨਾ; ਬੱਸ ਵਿੱਚ ਚੜ੍ਹਨਾ"
+        },
+        {
+          "en": "Seat",
+          "pa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Bag",
+          "pa": "ਬੈਗ; ਥੈਲਾ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Bus",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stop",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Aunt",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Many",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Buses",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hold",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hand",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Okay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Excuse",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "This",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "City",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Park",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Driver",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Yes",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "There",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Calmly",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Down",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Keep",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Safely",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Words",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hands",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Ask",
+          "pa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+        },
+        {
+          "en": "Clear",
+          "pa": "ਸਾਫ਼; ਸਮਝਣ ਵਿੱਚ ਆਸਾਨ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        },
+        {
+          "en": "Sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "Read",
+          "pa": "ਪੜ੍ਹਨਾ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ ਕਰਨੀ"
+        },
+        {
+          "en": "Stop",
+          "pa": "ਰੁਕਣਾ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Stand",
+          "pa": "ਖੜ੍ਹਨਾ"
+        },
+        {
+          "en": "Ask",
+          "pa": "ਪੁੱਛਣਾ"
+        },
+        {
+          "en": "Come",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Does",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Goes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asked",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Used",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "It",
+          "pa": "ਇਹ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        },
+        {
+          "en": "Proud",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        },
+        {
+          "en": "Clear",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "calmly",
+          "pa": "ਸ਼ਾਂਤੀ ਨਾਲ"
+        },
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        },
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "Behind",
+          "pa": "ਪਿੱਛੇ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S05",
+    "bundleId": 9,
+    "orderInBundle": 5,
+    "titleEn": "Book 9 · Story 5: Railway Station: Finding the Platform",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 5: ਰੇਲਵੇ ਸਟੇਸ਼ਨ: ਪਲੇਟਫਾਰਮ ਲੱਭਣਾ",
+    "englishStory": "Panel 1 (Intro): Today I go to the railway station with my mom. It is busy, so we stay close.\nPanel 2 (Body): First, Mom says, \"Hold my hand and do not run.\" I say, \"I will stay with you.\"\nPanel 3 (Body): Next, I ask a staff member, \"Excuse me, which platform is the Amritsar train?\"\nPanel 4 (Body): Then he says, \"Platform two, go straight and follow the sign.\" Mom says, \"Thank you,\" and we walk calmly.\nPanel 5 (Conclusion): After that, we find platform two and wait near our coach. I feel proud because I asked and followed signs.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਮਾਂ ਨਾਲ ਰੇਲਵੇ ਸਟੇਸ਼ਨ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ। ਭੀੜ ਹੈ, ਇਸ ਲਈ ਅਸੀਂ ਨੇੜੇ ਰਹਿੰਦੇ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਮਾਂ ਕਹਿੰਦੀ ਹੈ, \"ਮੇਰਾ ਹੱਥ ਫੜੋ ਅਤੇ ਨਾ ਦੌੜੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਮੈਂ ਤੁਹਾਡੇ ਨਾਲ ਰਹਾਂਗਾ/ਰਹਾਂਗੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਸਟਾਫ਼ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹਾਂ, \"ਐਕਸਕਿਊਜ਼ ਮੀ, ਅੰਮ੍ਰਿਤਸਰ ਵਾਲੀ ਰੇਲ ਕਿਹੜੇ ਪਲੇਟਫਾਰਮ ਤੇ ਹੈ?\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਉਹ ਕਹਿੰਦਾ ਹੈ, \"ਪਲੇਟਫਾਰਮ ਦੋ, ਸਿੱਧੇ ਜਾਓ ਅਤੇ ਸਾਈਨ ਦੇਖੋ।\" ਮਾਂ ਕਹਿੰਦੀ ਹੈ, \"ਧੰਨਵਾਦ,\" ਅਤੇ ਅਸੀਂ ਹੌਲੀ ਤੁਰਦੇ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਅਸੀਂ ਪਲੇਟਫਾਰਮ ਦੋ ਲੱਭ ਲੈਂਦੇ ਹਾਂ ਅਤੇ ਆਪਣੇ ਕੋਚ ਕੋਲ ਉਡੀਕ ਕਰਦੇ ਹਾਂ। ਮੈਨੂੰ ਮਾਣ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਪੁੱਛਿਆ ਅਤੇ ਸਾਈਨ ਮੰਨੇ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "railway station / ਰੇਲਵੇ ਸਟੇਸ਼ਨ",
+          "school / ਸਕੂਲ",
+          "home / ਘਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says they are at the railway station. / ਪੈਨਲ 1 ਵਿੱਚ ਰੇਲਵੇ ਸਟੇਸ਼ਨ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choicesPa": [
+          "railway station / ਰੇਲਵੇ ਸਟੇਸ਼ਨ",
+          "school / ਸਕੂਲ",
+          "home / ਘਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first in the crowd? / ਭੀੜ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "hold mom’s hand / ਮਾਂ ਦਾ ਹੱਥ ਫੜਨਾ",
+          "run ahead / ਅੱਗੇ ਦੌੜਣਾ",
+          "sit on floor / ਫਰਸ਼ ਤੇ ਬੈਠਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says to hold Mom’s hand and not run. / ਪੈਨਲ 2 ਵਿੱਚ ਮਾਂ ਦਾ ਹੱਥ ਫੜ ਕੇ ਨਾ ਦੌੜਨ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first in the crowd? / ਭੀੜ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "hold mom’s hand / ਮਾਂ ਦਾ ਹੱਥ ਫੜਨਾ",
+          "run ahead / ਅੱਗੇ ਦੌੜਣਾ",
+          "sit on floor / ਫਰਸ਼ ਤੇ ਬੈਠਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who helps with information? / ਜਾਣਕਾਰੀ ਕੌਣ ਦਿੰਦਾ ਹੈ?",
+        "choices": [
+          "staff member / ਸਟਾਫ਼",
+          "cook / ਰਸੋਈਆ",
+          "friend / ਦੋਸਤ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 shows the child asks a staff member. / ਪੈਨਲ 3 ਵਿੱਚ ਸਟਾਫ਼ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।",
+        "questionPa": "Who helps with information? / ਜਾਣਕਾਰੀ ਕੌਣ ਦਿੰਦਾ ਹੈ?",
+        "choicesPa": [
+          "staff member / ਸਟਾਫ਼",
+          "cook / ਰਸੋਈਆ",
+          "friend / ਦੋਸਤ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why do they follow the sign? / ਉਹ ਸਾਈਨ ਕਿਉਂ ਮੰਨਦੇ ਹਨ?",
+        "choices": [
+          "to reach the platform / ਪਲੇਟਫਾਰਮ ਤੱਕ ਪਹੁੰਚਣ ਲਈ",
+          "to lose the train / ਰੇਲ ਛੱਡਣ ਲਈ",
+          "to play games / ਖੇਡਣ ਲਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Following signs helps them reach the correct platform. / ਸਾਈਨ ਮੰਨਣ ਨਾਲ ਸਹੀ ਪਲੇਟਫਾਰਮ ਮਿਲਦਾ ਹੈ।",
+        "questionPa": "Why do they follow the sign? / ਉਹ ਸਾਈਨ ਕਿਉਂ ਮੰਨਦੇ ਹਨ?",
+        "choicesPa": [
+          "to reach the platform / ਪਲੇਟਫਾਰਮ ਤੱਕ ਪਹੁੰਚਣ ਲਈ",
+          "to lose the train / ਰੇਲ ਛੱਡਣ ਲਈ",
+          "to play games / ਖੇਡਣ ਲਈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Which platform do they find? / ਉਹ ਕਿਹੜਾ ਪਲੇਟਫਾਰਮ ਲੱਭਦੇ ਹਨ?",
+        "choices": [
+          "platform two / ਪਲੇਟਫਾਰਮ ਦੋ",
+          "platform ten / ਪਲੇਟਫਾਰਮ ਦਸ",
+          "platform zero / ਪਲੇਟਫਾਰਮ ਸਿਫ਼ਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says they find platform two. / ਪੈਨਲ 5 ਵਿੱਚ ਪਲੇਟਫਾਰਮ ਦੋ ਲੱਭਦੇ ਹਨ।",
+        "questionPa": "Which platform do they find? / ਉਹ ਕਿਹੜਾ ਪਲੇਟਫਾਰਮ ਲੱਭਦੇ ਹਨ?",
+        "choicesPa": [
+          "platform two / ਪਲੇਟਫਾਰਮ ਦੋ",
+          "platform ten / ਪਲੇਟਫਾਰਮ ਦਸ",
+          "platform zero / ਪਲੇਟਫਾਰਮ ਸਿਫ਼ਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "station",
+        "meaningEn": "a place where trains arrive and leave",
+        "meaningPa": "ਸਟੇਸ਼ਨ; ਰੇਲ ਆਉਣ-ਜਾਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "platform",
+        "meaningEn": "the place beside the train",
+        "meaningPa": "ਪਲੇਟਫਾਰਮ; ਰੇਲ ਦੇ ਨਾਲ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "staff",
+        "meaningEn": "people who work there",
+        "meaningPa": "ਸਟਾਫ਼; ਉੱਥੇ ਕੰਮ ਕਰਨ ਵਾਲੇ"
+      },
+      {
+        "word": "sign",
+        "meaningEn": "a board that shows directions",
+        "meaningPa": "ਸਾਈਨ; ਰਸਤਾ ਦੱਸਣ ਵਾਲਾ ਬੋਰਡ"
+      },
+      {
+        "word": "follow",
+        "meaningEn": "go the same way",
+        "meaningPa": "ਮੰਨਣਾ/ਪਿੱਛੇ ਕਰਨਾ; ਉਸੇ ਰਸਤੇ ਜਾਣਾ"
+      },
+      {
+        "word": "coach",
+        "meaningEn": "a train car",
+        "meaningPa": "ਕੋਚ; ਰੇਲ ਦਾ ਡੱਬਾ"
+      },
+      {
+        "word": "busy",
+        "meaningEn": "many people and movement",
+        "meaningPa": "ਭੀੜ ਵਾਲਾ; ਬਹੁਤ ਲੋਕ"
+      },
+      {
+        "word": "hold",
+        "meaningEn": "keep in your hand",
+        "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "ask",
+        "meaningEn": "say a question",
+        "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until it is time",
+        "meaningPa": "ਉਡੀਕ; ਸਮਾਂ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Station",
+          "pa": "ਸਟੇਸ਼ਨ; ਰੇਲ ਆਉਣ-ਜਾਣ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Platform",
+          "pa": "ਪਲੇਟਫਾਰਮ; ਰੇਲ ਦੇ ਨਾਲ ਵਾਲੀ ਥਾਂ"
+        },
+        {
+          "en": "Staff",
+          "pa": "ਸਟਾਫ਼; ਉੱਥੇ ਕੰਮ ਕਰਨ ਵਾਲੇ"
+        },
+        {
+          "en": "Sign",
+          "pa": "ਸਾਈਨ; ਰਸਤਾ ਦੱਸਣ ਵਾਲਾ ਬੋਰਡ"
+        },
+        {
+          "en": "Follow",
+          "pa": "ਮੰਨਣਾ/ਪਿੱਛੇ ਕਰਨਾ; ਉਸੇ ਰਸਤੇ ਜਾਣਾ"
+        },
+        {
+          "en": "Coach",
+          "pa": "ਕੋਚ; ਰੇਲ ਦਾ ਡੱਬਾ"
+        },
+        {
+          "en": "Busy",
+          "pa": "ਭੀੜ ਵਾਲਾ; ਬਹੁਤ ਲੋਕ"
+        },
+        {
+          "en": "Hold",
+          "pa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Railway",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hand",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Not",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Member",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Excuse",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Which",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Amritsar",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Train",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Two",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Straight",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Calmly",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Find",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Signs",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Ask",
+          "pa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        },
+        {
+          "en": "Walk",
+          "pa": "ਤੁਰਨਾ"
+        },
+        {
+          "en": "Run",
+          "pa": "ਦੌੜਨਾ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ ਕਰਨੀ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Ask",
+          "pa": "ਪੁੱਛਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Do",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asked",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Followed",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "He",
+          "pa": "ਉਹ"
+        },
+        {
+          "en": "It",
+          "pa": "ਇਹ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Our",
+          "pa": "ਸਾਡਾ/ਸਾਡੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Good",
+          "pa": "ਚੰਗਾ"
+        },
+        {
+          "en": "Proud",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "calmly",
+          "pa": "ਸ਼ਾਂਤੀ ਨਾਲ"
+        },
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "Near",
+          "pa": "ਨੇੜੇ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "so",
+          "pa": "ਇਸ ਲਈ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S06",
+    "bundleId": 9,
+    "orderInBundle": 6,
+    "titleEn": "Book 9 · Story 6: Clinic Visit: Simple Symptoms",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 6: ਕਲੀਨਿਕ ਦੌਰਾ: ਸਧਾਰਣ ਲੱਛਣ",
+    "englishStory": "Panel 1 (Intro): Today I go to the clinic with my dad because my throat hurts. I feel tired.\nPanel 2 (Body): First, Dad says, \"Speak clearly to the nurse.\" I say, \"Okay, I will use my words.\"\nPanel 3 (Body): Next, I tell the nurse, \"My throat hurts, and I have a small cough.\" She says, \"Thank you for telling me.\"\nPanel 4 (Body): Then the doctor says, \"Drink warm water and rest today.\" Dad says, \"We will follow your advice.\"\nPanel 5 (Conclusion): After that, I rest at home and feel better. I feel proud because I explained my problem politely.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਪਿਉ ਨਾਲ ਕਲੀਨਿਕ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ ਕਿਉਂਕਿ ਮੇਰਾ ਗਲਾ ਦਰਦ ਕਰਦਾ ਹੈ। ਮੈਂ ਥੱਕਿਆ/ਥੱਕੀ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਪਿਉ ਕਹਿੰਦਾ ਹੈ, \"ਨਰਸ ਨੂੰ ਸਾਫ਼ ਬੋਲ ਕੇ ਦੱਸੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਠੀਕ ਹੈ, ਮੈਂ ਸ਼ਬਦਾਂ ਨਾਲ ਦੱਸਾਂਗਾ/ਦੱਸਾਂਗੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਨਰਸ ਨੂੰ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਮੇਰਾ ਗਲਾ ਦਰਦ ਕਰਦਾ ਹੈ, ਅਤੇ ਮੈਨੂੰ ਹਲਕੀ ਖਾਂਸੀ ਹੈ।\" ਨਰਸ ਕਹਿੰਦੀ ਹੈ, \"ਦੱਸਣ ਲਈ ਧੰਨਵਾਦ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਡਾਕਟਰ ਕਹਿੰਦੇ ਹਨ, \"ਗੁੰਮਗਰਮ ਪਾਣੀ ਪੀਓ ਅਤੇ ਅੱਜ ਆਰਾਮ ਕਰੋ।\" ਪਿਉ ਕਹਿੰਦਾ ਹੈ, \"ਅਸੀਂ ਤੁਹਾਡੀ ਸਲਾਹ ਮੰਨਾਂਗੇ।\"\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਮੈਂ ਘਰ ਵਿੱਚ ਆਰਾਮ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ ਅਤੇ ਚੰਗਾ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹਾਂ। ਮੈਨੂੰ ਮਾਣ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਨਮਰਤਾ ਨਾਲ ਆਪਣੀ ਸਮੱਸਿਆ ਦੱਸੀ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choices": [
+          "clinic / ਕਲੀਨਿਕ",
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "train / ਰੇਲ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child goes to the clinic. / ਪੈਨਲ 1 ਵਿੱਚ ਕਲੀਨਿਕ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choicesPa": [
+          "clinic / ਕਲੀਨਿਕ",
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "train / ਰੇਲ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first at the clinic? / ਕਲੀਨਿਕ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "speak clearly / ਸਾਫ਼ ਬੋਲਣਾ",
+          "hide / ਲੁਕਣਾ",
+          "shout / ਚੀਕਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says to speak clearly to the nurse. / ਪੈਨਲ 2 ਵਿੱਚ ਨਰਸ ਨੂੰ ਸਾਫ਼ ਦੱਸਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first at the clinic? / ਕਲੀਨਿਕ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "speak clearly / ਸਾਫ਼ ਬੋਲਣਾ",
+          "hide / ਲੁਕਣਾ",
+          "shout / ਚੀਕਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who does the child talk to? / ਬੱਚਾ ਕਿਸ ਨਾਲ ਗੱਲ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choices": [
+          "nurse / ਨਰਸ",
+          "driver / ਡਰਾਈਵਰ",
+          "guard / ਗਾਰਡ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 shows the child talks to the nurse. / ਪੈਨਲ 3 ਵਿੱਚ ਨਰਸ ਨਾਲ ਗੱਲ ਹੁੰਦੀ ਹੈ।",
+        "questionPa": "Who does the child talk to? / ਬੱਚਾ ਕਿਸ ਨਾਲ ਗੱਲ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choicesPa": [
+          "nurse / ਨਰਸ",
+          "driver / ਡਰਾਈਵਰ",
+          "guard / ਗਾਰਡ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child go to the clinic? / ਬੱਚਾ ਕਲੀਨਿਕ ਕਿਉਂ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choices": [
+          "because throat hurts / ਕਿਉਂਕਿ ਗਲਾ ਦਰਦ",
+          "because wants toys / ਕਿਉਂਕਿ ਖਿਡੌਣੇ",
+          "because late bus / ਕਿਉਂਕਿ ਬੱਸ ਦੇਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the throat hurts. / ਪੈਨਲ 1 ਵਿੱਚ ਗਲੇ ਦੇ ਦਰਦ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Why does the child go to the clinic? / ਬੱਚਾ ਕਲੀਨਿਕ ਕਿਉਂ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
+        "choicesPa": [
+          "because throat hurts / ਕਿਉਂਕਿ ਗਲਾ ਦਰਦ",
+          "because wants toys / ਕਿਉਂਕਿ ਖਿਡੌਣੇ",
+          "because late bus / ਕਿਉਂਕਿ ਬੱਸ ਦੇਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What does Dad say? / ਪਿਉ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
+        "choices": [
+          "We will follow your advice / ਅਸੀਂ ਤੁਹਾਡੀ ਸਲਾਹ ਮੰਨਾਂਗੇ",
+          "We will run fast / ਅਸੀਂ ਤੇਜ਼ ਦੌੜਾਂਗੇ",
+          "We will shout / ਅਸੀਂ ਚੀਕਾਂਗੇ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says Dad will follow the doctor’s advice. / ਪੈਨਲ 4 ਵਿੱਚ ਪਿਉ ਸਲਾਹ ਮੰਨਣ ਦੀ ਗੱਲ ਕਰਦਾ ਹੈ।",
+        "questionPa": "What does Dad say? / ਪਿਉ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
+        "choicesPa": [
+          "We will follow your advice / ਅਸੀਂ ਤੁਹਾਡੀ ਸਲਾਹ ਮੰਨਾਂਗੇ",
+          "We will run fast / ਅਸੀਂ ਤੇਜ਼ ਦੌੜਾਂਗੇ",
+          "We will shout / ਅਸੀਂ ਚੀਕਾਂਗੇ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "clinic",
+        "meaningEn": "a place to see a doctor",
+        "meaningPa": "ਕਲੀਨਿਕ; ਡਾਕਟਰ ਨੂੰ ਮਿਲਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "nurse",
+        "meaningEn": "a helper in a clinic or hospital",
+        "meaningPa": "ਨਰਸ; ਕਲੀਨਿਕ ਵਿੱਚ ਮਦਦਗਾਰ"
+      },
+      {
+        "word": "doctor",
+        "meaningEn": "a person who helps sick people",
+        "meaningPa": "ਡਾਕਟਰ; ਬਿਮਾਰ ਨੂੰ ਸਹਾਇਤਾ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "throat",
+        "meaningEn": "part inside your neck",
+        "meaningPa": "ਗਲਾ; ਗਰਦਨ ਅੰਦਰਲਾ ਹਿੱਸਾ"
+      },
+      {
+        "word": "hurt",
+        "meaningEn": "feel pain",
+        "meaningPa": "ਦਰਦ ਕਰਨਾ; ਪੀੜ ਹੋਣੀ"
+      },
+      {
+        "word": "cough",
+        "meaningEn": "a sound when you are sick",
+        "meaningPa": "ਖਾਂਸੀ; ਬਿਮਾਰੀ ਵਾਲੀ ਖੰਘ"
+      },
+      {
+        "word": "rest",
+        "meaningEn": "relax and sleep to feel better",
+        "meaningPa": "ਆਰਾਮ; ਸਰੀਰ ਨੂੰ ਸੁਕੂਨ"
+      },
+      {
+        "word": "warm",
+        "meaningEn": "not cold",
+        "meaningPa": "ਗੁੰਮਗਰਮ; ਠੰਢਾ ਨਹੀਂ"
+      },
+      {
+        "word": "clearly",
+        "meaningEn": "in an easy-to-understand way",
+        "meaningPa": "ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ; ਸਮਝ ਆਵੇ ਤਰ੍ਹਾਂ"
+      },
+      {
+        "word": "advice",
+        "meaningEn": "helpful words from an expert",
+        "meaningPa": "ਸਲਾਹ; ਮਦਦ ਵਾਲੀ ਗੱਲ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Clinic",
+          "pa": "ਕਲੀਨਿਕ; ਡਾਕਟਰ ਨੂੰ ਮਿਲਣ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Nurse",
+          "pa": "ਨਰਸ; ਕਲੀਨਿਕ ਵਿੱਚ ਮਦਦਗਾਰ"
+        },
+        {
+          "en": "Doctor",
+          "pa": "ਡਾਕਟਰ; ਬਿਮਾਰ ਨੂੰ ਸਹਾਇਤਾ ਕਰਨ ਵਾਲਾ"
+        },
+        {
+          "en": "Throat",
+          "pa": "ਗਲਾ; ਗਰਦਨ ਅੰਦਰਲਾ ਹਿੱਸਾ"
+        },
+        {
+          "en": "Hurt",
+          "pa": "ਦਰਦ ਕਰਨਾ; ਪੀੜ ਹੋਣੀ"
+        },
+        {
+          "en": "Cough",
+          "pa": "ਖਾਂਸੀ; ਬਿਮਾਰੀ ਵਾਲੀ ਖੰਘ"
+        },
+        {
+          "en": "Rest",
+          "pa": "ਆਰਾਮ; ਸਰੀਰ ਨੂੰ ਸੁਕੂਨ"
+        },
+        {
+          "en": "Warm",
+          "pa": "ਗੁੰਮਗਰਮ; ਠੰਢਾ ਨਹੀਂ"
+        },
+        {
+          "en": "Home",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hurts",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Speak",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Clearly",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Okay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Use",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Words",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Tell",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Water",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Follow",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Advice",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Better",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Problem",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Politely",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Tired",
+          "pa": "ਥੱਕਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Have",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Telling",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Drink",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Explained",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "She",
+          "pa": "ਉਹ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Your",
+          "pa": "ਤੁਹਾਡਾ/ਤੁਹਾਡੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Small",
+          "pa": "ਛੋਟਾ"
+        },
+        {
+          "en": "Tired",
+          "pa": "ਥੱਕਿਆ"
+        },
+        {
+          "en": "Warm",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        },
+        {
+          "en": "Proud",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        },
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "For",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S07",
+    "bundleId": 9,
+    "orderInBundle": 7,
+    "titleEn": "Book 9 · Story 7: Chemist Shop: Bandage and ORS",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 7: ਕੈਮਿਸਟ: ਪੱਟੀ ਅਤੇ ORS",
+    "englishStory": "Panel 1 (Intro): Today I go to the chemist with my mom because I got a small scrape.\nPanel 2 (Body): First, Mom says, \"Stay close to me and wait your turn.\" I say, \"Okay, Mom.\"\nPanel 3 (Body): Next, Mom says, \"We need a bandage and ORS, please.\" The chemist says, \"Sure, one moment.\"\nPanel 4 (Body): Then Mom asks, \"How much is it?\" The chemist answers, and Mom pays carefully.\nPanel 5 (Conclusion): After that, I say, \"Thank you,\" and we go home. I feel safe because I stayed with my mom.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਮਾਂ ਨਾਲ ਕੈਮਿਸਟ ਕੋਲ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ ਕਿਉਂਕਿ ਮੈਨੂੰ ਹਲਕੀ ਖਰੋਚ ਲੱਗੀ ਹੈ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਮਾਂ ਕਹਿੰਦੀ ਹੈ, \"ਮੇਰੇ ਨੇੜੇ ਰਹੋ ਅਤੇ ਆਪਣੀ ਵਾਰੀ ਉਡੀਕੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਠੀਕ ਹੈ ਮਾਂ ਜੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਮਾਂ ਕਹਿੰਦੀ ਹੈ, \"ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਪੱਟੀ ਅਤੇ ORS ਦੇ ਦਿਓ।\" ਕੈਮਿਸਟ ਕਹਿੰਦਾ ਹੈ, \"ਹਾਂ ਜੀ, ਇਕ ਮਿੰਟ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਮਾਂ ਪੁੱਛਦੀ ਹੈ, \"ਇਹ ਕਿੰਨੇ ਦਾ ਹੈ?\" ਕੈਮਿਸਟ ਜਵਾਬ ਦਿੰਦਾ ਹੈ, ਅਤੇ ਮਾਂ ਧਿਆਨ ਨਾਲ ਭੁਗਤਾਨ ਕਰਦੀ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਧੰਨਵਾਦ,\" ਅਤੇ ਅਸੀਂ ਘਰ ਜਾਂਦੇ ਹਾਂ। ਮੈਨੂੰ ਸੁਰੱਖਿਅਤ ਲੱਗਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਮਾਂ ਨਾਲ ਰਹਿਆ/ਰਹੀ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where do they go? / ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
+        "choices": [
+          "chemist / ਕੈਮਿਸਟ",
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "gurdwara / ਗੁਰਦੁਆਰਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says they go to the chemist. / ਪੈਨਲ 1 ਵਿੱਚ ਕੈਮਿਸਟ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where do they go? / ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
+        "choicesPa": [
+          "chemist / ਕੈਮਿਸਟ",
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "gurdwara / ਗੁਰਦੁਆਰਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first in the shop? / ਦੁਕਾਨ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "stay close and wait / ਨੇੜੇ ਰਹਿ ਕੇ ਉਡੀਕ",
+          "run outside / ਬਾਹਰ ਦੌੜਣਾ",
+          "touch everything / ਸਭ ਛੂਹਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says stay close and wait your turn. / ਪੈਨਲ 2 ਵਿੱਚ ਨੇੜੇ ਰਹਿ ਕੇ ਵਾਰੀ ਉਡੀਕਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first in the shop? / ਦੁਕਾਨ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "stay close and wait / ਨੇੜੇ ਰਹਿ ਕੇ ਉਡੀਕ",
+          "run outside / ਬਾਹਰ ਦੌੜਣਾ",
+          "touch everything / ਸਭ ਛੂਹਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What do they ask for? / ਉਹ ਕੀ ਮੰਗਦੇ ਹਨ?",
+        "choices": [
+          "bandage and ORS / ਪੱਟੀ ਅਤੇ ORS",
+          "toy car / ਖਿਡੌਣਾ ਗੱਡੀ",
+          "ice cream / ਆਈਸ ਕ੍ਰੀਮ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says they need a bandage and ORS. / ਪੈਨਲ 3 ਵਿੱਚ ਪੱਟੀ ਅਤੇ ORS ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What do they ask for? / ਉਹ ਕੀ ਮੰਗਦੇ ਹਨ?",
+        "choicesPa": [
+          "bandage and ORS / ਪੱਟੀ ਅਤੇ ORS",
+          "toy car / ਖਿਡੌਣਾ ਗੱਡੀ",
+          "ice cream / ਆਈਸ ਕ੍ਰੀਮ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why do they go to the chemist? / ਉਹ ਕੈਮਿਸਟ ਕਿਉਂ ਜਾਂਦੇ ਹਨ?",
+        "choices": [
+          "because of a scrape / ਕਿਉਂਕਿ ਖਰੋਚ",
+          "because of homework / ਕਿਉਂਕਿ ਹੋਮਵਰਕ",
+          "because of rain / ਕਿਉਂਕਿ ਮੀਂਹ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child got a small scrape. / ਪੈਨਲ 1 ਵਿੱਚ ਖਰੋਚ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Why do they go to the chemist? / ਉਹ ਕੈਮਿਸਟ ਕਿਉਂ ਜਾਂਦੇ ਹਨ?",
+        "choicesPa": [
+          "because of a scrape / ਕਿਉਂਕਿ ਖਰੋਚ",
+          "because of homework / ਕਿਉਂਕਿ ਹੋਮਵਰਕ",
+          "because of rain / ਕਿਉਂਕਿ ਮੀਂਹ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What does the child say at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
+        "choices": [
+          "Thank you / ਧੰਨਵਾਦ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "No / ਨਹੀਂ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says the child says thank you. / ਪੈਨਲ 5 ਵਿੱਚ ਧੰਨਵਾਦ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ।",
+        "questionPa": "What does the child say at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
+        "choicesPa": [
+          "Thank you / ਧੰਨਵਾਦ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "No / ਨਹੀਂ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "chemist",
+        "meaningEn": "a shop that sells health items",
+        "meaningPa": "ਕੈਮਿਸਟ; ਸਿਹਤ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਦੀ ਦੁਕਾਨ"
+      },
+      {
+        "word": "bandage",
+        "meaningEn": "a strip to cover a small wound",
+        "meaningPa": "ਪੱਟੀ; ਚੋਟ ਢੱਕਣ ਵਾਲੀ ਪੱਟੀ"
+      },
+      {
+        "word": "scrape",
+        "meaningEn": "a small skin scratch",
+        "meaningPa": "ਖਰੋਚ; ਚਮੜੀ ਦੀ ਹਲਕੀ ਚੋਟ"
+      },
+      {
+        "word": "ORS",
+        "meaningEn": "drink to help with dehydration (with adult)",
+        "meaningPa": "ORS; ਪਾਣੀ ਦੀ ਘਾਟ ਲਈ ਪੇਯ (ਵੱਡੇ ਨਾਲ)"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until your turn",
+        "meaningPa": "ਉਡੀਕ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "turn",
+        "meaningEn": "your time",
+        "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+      },
+      {
+        "word": "price",
+        "meaningEn": "how much it costs",
+        "meaningPa": "ਕੀਮਤ; ਕਿੰਨੇ ਦਾ"
+      },
+      {
+        "word": "pay",
+        "meaningEn": "give money for something",
+        "meaningPa": "ਭੁਗਤਾਨ ਕਰਨਾ; ਪੈਸੇ ਦੇਣਾ"
+      },
+      {
+        "word": "careful",
+        "meaningEn": "not rushed; safe",
+        "meaningPa": "ਧਿਆਨ ਨਾਲ; ਸਾਵਧਾਨ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Chemist",
+          "pa": "ਕੈਮਿਸਟ; ਸਿਹਤ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਦੀ ਦੁਕਾਨ"
+        },
+        {
+          "en": "Bandage",
+          "pa": "ਪੱਟੀ; ਚੋਟ ਢੱਕਣ ਵਾਲੀ ਪੱਟੀ"
+        },
+        {
+          "en": "Scrape",
+          "pa": "ਖਰੋਚ; ਚਮੜੀ ਦੀ ਹਲਕੀ ਚੋਟ"
+        },
+        {
+          "en": "ORS",
+          "pa": "ORS; ਪਾਣੀ ਦੀ ਘਾਟ ਲਈ ਪੇਯ (ਵੱਡੇ ਨਾਲ)"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+        },
+        {
+          "en": "Turn",
+          "pa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+        },
+        {
+          "en": "Price",
+          "pa": "ਕੀਮਤ; ਕਿੰਨੇ ਦਾ"
+        },
+        {
+          "en": "Pay",
+          "pa": "ਭੁਗਤਾਨ ਕਰਨਾ; ਪੈਸੇ ਦੇਣਾ"
+        },
+        {
+          "en": "Home",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Mom",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Got",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Okay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Please",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Sure",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "One",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Moment",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "How",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Much",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Answers",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Pays",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Carefully",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Safe",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Careful",
+          "pa": "ਧਿਆਨ ਨਾਲ; ਸਾਵਧਾਨ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Go",
+          "pa": "ਜਾਣਾ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ ਕਰਨੀ"
+        },
+        {
+          "en": "Turn",
+          "pa": "ਮੁੜਨਾ"
+        },
+        {
+          "en": "Close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Need",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Stayed",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "It",
+          "pa": "ਇਹ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Your",
+          "pa": "ਤੁਹਾਡਾ/ਤੁਹਾਡੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Small",
+          "pa": "ਛੋਟਾ"
+        },
+        {
+          "en": "Safe",
+          "pa": "ਸੁਰੱਖਿਅਤ"
+        },
+        {
+          "en": "Careful",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "carefully",
+          "pa": "ਧਿਆਨ ਨਾਲ"
+        },
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S08",
+    "bundleId": 9,
+    "orderInBundle": 8,
+    "titleEn": "Book 9 · Story 8: Library: Finding a Book",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 8: ਲਾਇਬ੍ਰੇਰੀ: ਕਿਤਾਬ ਲੱਭਣਾ",
+    "englishStory": "Panel 1 (Intro): Today I visit the library with my dad to find a science book. The room is quiet.\nPanel 2 (Body): First, Dad whispers, \"Use a soft voice here.\" I whisper, \"Yes, Dad, I will be quiet.\"\nPanel 3 (Body): Next, I ask the librarian, \"Excuse me, where are the science books for kids?\" She says, \"Aisle three, on the left.\"\nPanel 4 (Body): Then I walk to aisle three and look on the shelf. I find a book with pictures. I say, \"I found it!\" and Dad smiles.\nPanel 5 (Conclusion): After that, we check out the book and say, \"Thank you.\" I feel proud because I asked politely and used a quiet voice.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਪਿਉ ਨਾਲ ਲਾਇਬ੍ਰੇਰੀ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ ਤਾਂ ਜੋ ਸਾਇੰਸ ਦੀ ਕਿਤਾਬ ਲੱਭੀਏ। ਕਮਰਾ ਚੁੱਪ ਲੱਗਦਾ ਹੈ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਪਿਉ ਫੁਸਫੁਸਾ ਕੇ ਕਹਿੰਦਾ ਹੈ, \"ਇੱਥੇ ਹੌਲੀ ਆਵਾਜ਼ ਵਰਤੋ।\" ਮੈਂ ਹੌਲੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਜੀ ਪਿਉ ਜੀ, ਮੈਂ ਚੁੱਪ ਰਹਾਂਗਾ/ਰਹਾਂਗੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਲਾਇਬ੍ਰੇਰੀਅਨ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹਾਂ, \"ਐਕਸਕਿਊਜ਼ ਮੀ, ਬੱਚਿਆਂ ਲਈ ਸਾਇੰਸ ਦੀਆਂ ਕਿਤਾਬਾਂ ਕਿੱਥੇ ਹਨ?\" ਉਹ ਕਹਿੰਦੀ ਹੈ, \"ਅਇਜ਼ਲ ਤਿੰਨ, ਖੱਬੇ ਪਾਸੇ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਅਇਜ਼ਲ ਤਿੰਨ ਤੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹਾਂ ਅਤੇ ਸ਼ੈਲਫ਼ ਉੱਤੇ ਵੇਖਦਾ/ਵੇਖਦੀ ਹਾਂ। ਮੈਂ ਤਸਵੀਰਾਂ ਵਾਲੀ ਕਿਤਾਬ ਲੱਭ ਲੈਂਦਾ/ਲੱਭ ਲੈਂਦੀ ਹਾਂ। ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਮਿਲ ਗਈ!\" ਅਤੇ ਪਿਉ ਮੁਸਕੁਰਾਉਂਦਾ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਅਸੀਂ ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਂਦੇ ਹਾਂ ਅਤੇ ਕਹਿੰਦੇ ਹਾਂ, \"ਧੰਨਵਾਦ।\" ਮੈਨੂੰ ਮਾਣ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਨਮਰਤਾ ਨਾਲ ਪੁੱਛਿਆ ਅਤੇ ਹੌਲੀ ਬੋਲਿਆ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where are they? / ਉਹ ਕਿੱਥੇ ਹਨ?",
+        "choices": [
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "station / ਸਟੇਸ਼ਨ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says they are in the library. / ਪੈਨਲ 1 ਵਿੱਚ ਲਾਇਬ੍ਰੇਰੀ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where are they? / ਉਹ ਕਿੱਥੇ ਹਨ?",
+        "choicesPa": [
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "station / ਸਟੇਸ਼ਨ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first in the library? / ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "use a quiet voice / ਹੌਲੀ ਆਵਾਜ਼",
+          "shout loudly / ਉੱਚਾ ਚੀਕਣਾ",
+          "run fast / ਤੇਜ਼ ਦੌੜਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says to use a soft voice. / ਪੈਨਲ 2 ਵਿੱਚ ਹੌਲੀ ਆਵਾਜ਼ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first in the library? / ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "use a quiet voice / ਹੌਲੀ ਆਵਾਜ਼",
+          "shout loudly / ਉੱਚਾ ਚੀਕਣਾ",
+          "run fast / ਤੇਜ਼ ਦੌੜਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who helps the child find the aisle? / ਅਇਜ਼ਲ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
+        "choices": [
+          "librarian / ਲਾਇਬ੍ਰੇਰੀਅਨ",
+          "driver / ਡਰਾਈਵਰ",
+          "guard / ਗਾਰਡ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 shows the librarian gives the aisle number. / ਪੈਨਲ 3 ਵਿੱਚ ਲਾਇਬ੍ਰੇਰੀਅਨ ਅਇਜ਼ਲ ਦੱਸਦੀ ਹੈ।",
+        "questionPa": "Who helps the child find the aisle? / ਅਇਜ਼ਲ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
+        "choicesPa": [
+          "librarian / ਲਾਇਬ੍ਰੇਰੀਅਨ",
+          "driver / ਡਰਾਈਵਰ",
+          "guard / ਗਾਰਡ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child ask \"Excuse me\"? / ਬੱਚਾ \"Excuse me\" ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
+        "choices": [
+          "to be polite / ਨਮਰ ਹੋਣ ਲਈ",
+          "to be rude / ਬਦਤਮੀਜ਼ੀ ਲਈ",
+          "to be loud / ਸ਼ੋਰ ਲਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "\"Excuse me\" is polite when asking for help. / \"Excuse me\" ਮਦਦ ਮੰਗਦੇ ਸਮੇਂ ਨਮਰਤਾ ਹੈ।",
+        "questionPa": "Why does the child ask \"Excuse me\"? / ਬੱਚਾ \"Excuse me\" ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
+        "choicesPa": [
+          "to be polite / ਨਮਰ ਹੋਣ ਲਈ",
+          "to be rude / ਬਦਤਮੀਜ਼ੀ ਲਈ",
+          "to be loud / ਸ਼ੋਰ ਲਈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What do they do at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
+        "choices": [
+          "check out the book / ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਉਂਦੇ",
+          "throw the book / ਕਿਤਾਬ ਸੁੱਟਦੇ",
+          "hide the book / ਕਿਤਾਬ ਲੁਕਾਉਂਦੇ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says they check out the book and say thank you. / ਪੈਨਲ 5 ਵਿੱਚ ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਉਂਦੇ ਹਨ।",
+        "questionPa": "What do they do at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
+        "choicesPa": [
+          "check out the book / ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਉਂਦੇ",
+          "throw the book / ਕਿਤਾਬ ਸੁੱਟਦੇ",
+          "hide the book / ਕਿਤਾਬ ਲੁਕਾਉਂਦੇ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "library",
+        "meaningEn": "a place to borrow books",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ; ਕਿਤਾਬਾਂ ਲੈਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "librarian",
+        "meaningEn": "a helper who works in a library",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀਅਨ; ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਮਦਦਗਾਰ"
+      },
+      {
+        "word": "aisle",
+        "meaningEn": "a row/path between shelves",
+        "meaningPa": "ਅਇਜ਼ਲ; ਸ਼ੈਲਫ਼ਾਂ ਵਿਚਕਾਰ ਰਸਤਾ"
+      },
+      {
+        "word": "shelf",
+        "meaningEn": "a place where books sit",
+        "meaningPa": "ਸ਼ੈਲਫ਼; ਕਿਤਾਬਾਂ ਰੱਖਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "whisper",
+        "meaningEn": "speak very softly",
+        "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ"
+      },
+      {
+        "word": "quiet",
+        "meaningEn": "not loud",
+        "meaningPa": "ਚੁੱਪ; ਉੱਚਾ ਨਹੀਂ"
+      },
+      {
+        "word": "find",
+        "meaningEn": "discover after looking",
+        "meaningPa": "ਲੱਭਣਾ; ਵੇਖ ਕੇ ਮਿਲਣਾ"
+      },
+      {
+        "word": "science",
+        "meaningEn": "learning about the world",
+        "meaningPa": "ਸਾਇੰਸ; ਦੁਨੀਆ ਬਾਰੇ ਸਿੱਖਣਾ"
+      },
+      {
+        "word": "picture",
+        "meaningEn": "an image",
+        "meaningPa": "ਤਸਵੀਰ; ਚਿੱਤਰ"
+      },
+      {
+        "word": "check out",
+        "meaningEn": "borrow a book officially",
+        "meaningPa": "ਇਸ਼ੂ ਕਰਵਾਉਣਾ; ਕਿਤਾਬ ਲੈ ਜਾਣਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Library",
+          "pa": "ਲਾਇਬ੍ਰੇਰੀ; ਕਿਤਾਬਾਂ ਲੈਣ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Librarian",
+          "pa": "ਲਾਇਬ੍ਰੇਰੀਅਨ; ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਮਦਦਗਾਰ"
+        },
+        {
+          "en": "Aisle",
+          "pa": "ਅਇਜ਼ਲ; ਸ਼ੈਲਫ਼ਾਂ ਵਿਚਕਾਰ ਰਸਤਾ"
+        },
+        {
+          "en": "Shelf",
+          "pa": "ਸ਼ੈਲਫ਼; ਕਿਤਾਬਾਂ ਰੱਖਣ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Whisper",
+          "pa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ"
+        },
+        {
+          "en": "Quiet",
+          "pa": "ਚੁੱਪ; ਉੱਚਾ ਨਹੀਂ"
+        },
+        {
+          "en": "Find",
+          "pa": "ਲੱਭਣਾ; ਵੇਖ ਕੇ ਮਿਲਣਾ"
+        },
+        {
+          "en": "Science",
+          "pa": "ਸਾਇੰਸ; ਦੁਨੀਆ ਬਾਰੇ ਸਿੱਖਣਾ"
+        },
+        {
+          "en": "Book",
+          "pa": "ਕਿਤਾਬ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Visit",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Dad",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Room",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Whispers",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Use",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Soft",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Voice",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Here",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Yes",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Excuse",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Where",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Books",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Kids",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Three",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Left",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Pictures",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Found",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Smiles",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Check",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Out",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Thank",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Politely",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Picture",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Check out",
+          "pa": "ਇਸ਼ੂ ਕਰਵਾਉਣਾ; ਕਿਤਾਬ ਲੈ ਜਾਣਾ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Walk",
+          "pa": "ਤੁਰਨਾ"
+        },
+        {
+          "en": "Look",
+          "pa": "ਵੇਖਣਾ"
+        },
+        {
+          "en": "Ask",
+          "pa": "ਪੁੱਛਣਾ"
+        },
+        {
+          "en": "Find",
+          "pa": "ਲੱਭਣਾ; ਵੇਖ ਕੇ ਮਿਲਣਾ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Be",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asked",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Used",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "She",
+          "pa": "ਉਹ"
+        },
+        {
+          "en": "It",
+          "pa": "ਇਹ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Quiet",
+          "pa": "ਚੁੱਪ"
+        },
+        {
+          "en": "Proud",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "On",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "For",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "thank you",
+          "pa": "ਧੰਨਵਾਦ"
+        },
+        {
+          "en": "wow",
+          "pa": "ਵਾਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S09",
+    "bundleId": 9,
+    "orderInBundle": 9,
+    "titleEn": "Book 9 · Story 9: Society Gate: Talking to the Guard",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 9: ਸੋਸਾਇਟੀ ਗੇਟ: ਗਾਰਡ ਨਾਲ ਗੱਲ",
+    "englishStory": "Panel 1 (Intro): Today I come home with my grandma, and we reach the society gate. The guard is at his desk.\nPanel 2 (Body): First, Grandma says, \"Stand beside me and wait calmly.\" I say, \"Okay, Grandma.\"\nPanel 3 (Body): Next, the guard asks, \"Which flat are you going to?\" Grandma says, \"Flat 302, please.\"\nPanel 4 (Body): Then I add, \"My parent will meet us upstairs.\" The guard says, \"Okay, you may enter,\" and opens the gate.\nPanel 5 (Conclusion): After that, we enter the society and feel safe. I learn to speak clearly with helpers and stay with my adult.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਦਾਦੀ/ਨਾਨੀ ਨਾਲ ਘਰ ਆਉਂਦਾ/ਆਉਂਦੀ ਹਾਂ, ਅਤੇ ਅਸੀਂ ਸੋਸਾਇਟੀ ਦੇ ਗੇਟ ਤੇ ਪਹੁੰਚਦੇ ਹਾਂ। ਗਾਰਡ ਆਪਣੀ ਮੇਜ਼ ਤੇ ਬੈਠਾ ਹੈ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਦਾਦੀ ਕਹਿੰਦੀ ਹੈ, \"ਮੇਰੇ ਕੋਲ ਖੜ੍ਹੋ ਅਤੇ ਸ਼ਾਂਤ ਉਡੀਕ ਕਰੋ।\" ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਠੀਕ ਹੈ ਦਾਦੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਗਾਰਡ ਪੁੱਛਦਾ ਹੈ, \"ਤੁਸੀਂ ਕਿਹੜੇ ਫਲੈਟ ਵਿੱਚ ਜਾਣਾ ਹੈ?\" ਦਾਦੀ ਕਹਿੰਦੀ ਹੈ, \"ਫਲੈਟ 302, ਕਿਰਪਾ ਕਰਕੇ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਮੇਰਾ ਮੰਮੀ/ਡੈਡੀ ਉੱਪਰ ਸਾਨੂੰ ਮਿਲਣਗੇ।\" ਗਾਰਡ ਕਹਿੰਦਾ ਹੈ, \"ਠੀਕ ਹੈ, ਤੁਸੀਂ ਅੰਦਰ ਦਾਖ਼ਲ ਹੋ ਸਕਦੇ ਹੋ,\" ਅਤੇ ਗੇਟ ਖੋਲ੍ਹ ਦਿੰਦਾ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਅਸੀਂ ਸੋਸਾਇਟੀ ਵਿੱਚ ਦਾਖ਼ਲ ਹੋ ਜਾਂਦੇ ਹਾਂ ਅਤੇ ਮੈਨੂੰ ਸੁਰੱਖਿਅਤ ਲੱਗਦਾ ਹੈ। ਮੈਂ ਸਿੱਖਦਾ/ਸਿੱਖਦੀ ਹਾਂ ਕਿ ਮਦਦਗਾਰਾਂ ਨਾਲ ਸਾਫ਼ ਬੋਲਣਾ ਅਤੇ ਆਪਣੇ ਵੱਡੇ ਨਾਲ ਰਹਿਣਾ ਚੰਗਾ ਹੈ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where are they? / ਉਹ ਕਿੱਥੇ ਹਨ?",
+        "choices": [
+          "society gate / ਸੋਸਾਇਟੀ ਗੇਟ",
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "bazaar / ਬਾਜ਼ਾਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says they reach the society gate. / ਪੈਨਲ 1 ਵਿੱਚ ਸੋਸਾਇਟੀ ਗੇਟ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where are they? / ਉਹ ਕਿੱਥੇ ਹਨ?",
+        "choicesPa": [
+          "society gate / ਸੋਸਾਇਟੀ ਗੇਟ",
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "bazaar / ਬਾਜ਼ਾਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "stand beside grandma / ਦਾਦੀ ਦੇ ਕੋਲ ਖੜ੍ਹਨਾ",
+          "run inside alone / ਇਕੱਲਾ ਅੰਦਰ ਦੌੜਨਾ",
+          "argue with guard / ਗਾਰਡ ਨਾਲ ਝਗੜਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says stand beside Grandma and wait calmly. / ਪੈਨਲ 2 ਵਿੱਚ ਦਾਦੀ ਦੇ ਕੋਲ ਸ਼ਾਂਤ ਖੜ੍ਹਨ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "stand beside grandma / ਦਾਦੀ ਦੇ ਕੋਲ ਖੜ੍ਹਨਾ",
+          "run inside alone / ਇਕੱਲਾ ਅੰਦਰ ਦੌੜਨਾ",
+          "argue with guard / ਗਾਰਡ ਨਾਲ ਝਗੜਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who asks the question about the flat? / ਫਲੈਟ ਬਾਰੇ ਸਵਾਲ ਕੌਣ ਕਰਦਾ ਹੈ?",
+        "choices": [
+          "guard / ਗਾਰਡ",
+          "doctor / ਡਾਕਟਰ",
+          "shopkeeper / ਦੁਕਾਨਦਾਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 says the guard asks which flat they are going to. / ਪੈਨਲ 3 ਵਿੱਚ ਗਾਰਡ ਪੁੱਛਦਾ ਹੈ।",
+        "questionPa": "Who asks the question about the flat? / ਫਲੈਟ ਬਾਰੇ ਸਵਾਲ ਕੌਣ ਕਰਦਾ ਹੈ?",
+        "choicesPa": [
+          "guard / ਗਾਰਡ",
+          "doctor / ਡਾਕਟਰ",
+          "shopkeeper / ਦੁਕਾਨਦਾਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why do they tell the flat number? / ਉਹ ਫਲੈਟ ਨੰਬਰ ਕਿਉਂ ਦੱਸਦੇ ਹਨ?",
+        "choices": [
+          "so the guard can allow entry / ਤਾਂ ਜੋ ਗਾਰਡ ਅੰਦਰ ਜਾਣ ਦੇਵੇ",
+          "so they get lost / ਤਾਂ ਜੋ ਗੁੰਮ ਹੋਣ",
+          "so it rains / ਤਾਂ ਜੋ ਮੀਂਹ ਪਵੇ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Telling the flat number helps the guard know where they are going. / ਫਲੈਟ ਨੰਬਰ ਨਾਲ ਗਾਰਡ ਨੂੰ ਪਤਾ ਲੱਗਦਾ ਹੈ।",
+        "questionPa": "Why do they tell the flat number? / ਉਹ ਫਲੈਟ ਨੰਬਰ ਕਿਉਂ ਦੱਸਦੇ ਹਨ?",
+        "choicesPa": [
+          "so the guard can allow entry / ਤਾਂ ਜੋ ਗਾਰਡ ਅੰਦਰ ਜਾਣ ਦੇਵੇ",
+          "so they get lost / ਤਾਂ ਜੋ ਗੁੰਮ ਹੋਣ",
+          "so it rains / ਤਾਂ ਜੋ ਮੀਂਹ ਪਵੇ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
+        "choices": [
+          "gate opens / ਗੇਟ ਖੁਲਦਾ ਹੈ",
+          "bus arrives / ਬੱਸ ਆਉਂਦੀ ਹੈ",
+          "train leaves / ਰੇਲ ਜਾਂਦੀ ਹੈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 4 says the guard opens the gate. / ਪੈਨਲ 4 ਵਿੱਚ ਗਾਰਡ ਗੇਟ ਖੋਲ੍ਹ ਦਿੰਦਾ ਹੈ।",
+        "questionPa": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
+        "choicesPa": [
+          "gate opens / ਗੇਟ ਖੁਲਦਾ ਹੈ",
+          "bus arrives / ਬੱਸ ਆਉਂਦੀ ਹੈ",
+          "train leaves / ਰੇਲ ਜਾਂਦੀ ਹੈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "society",
+        "meaningEn": "a group of apartments with a gate",
+        "meaningPa": "ਸੋਸਾਇਟੀ; ਗੇਟ ਵਾਲੇ ਫਲੈਟਾਂ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "gate",
+        "meaningEn": "an entry door for a place",
+        "meaningPa": "ਗੇਟ; ਅੰਦਰ ਜਾਣ ਦਾ ਦਰਵਾਜ਼ਾ"
+      },
+      {
+        "word": "guard",
+        "meaningEn": "a person who keeps the place safe",
+        "meaningPa": "ਗਾਰਡ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "flat",
+        "meaningEn": "an apartment home",
+        "meaningPa": "ਫਲੈਟ; ਅਪਾਰਟਮੈਂਟ ਘਰ"
+      },
+      {
+        "word": "upstairs",
+        "meaningEn": "on a higher floor",
+        "meaningPa": "ਉੱਪਰ; ਉੱਪਰੀ ਮੰਜ਼ਿਲ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay calmly until time",
+        "meaningPa": "ਉਡੀਕ; ਸ਼ਾਂਤ ਰੁਕਣਾ"
+      },
+      {
+        "word": "calmly",
+        "meaningEn": "in a calm way",
+        "meaningPa": "ਸ਼ਾਂਤੀ ਨਾਲ; ਘਬਰਾਏ ਬਿਨਾਂ"
+      },
+      {
+        "word": "enter",
+        "meaningEn": "go inside",
+        "meaningPa": "ਅੰਦਰ ਜਾਣਾ; ਦਾਖ਼ਲ ਹੋਣਾ"
+      },
+      {
+        "word": "please",
+        "meaningEn": "polite word when asking",
+        "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "someone who helps you",
+        "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰੇ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Society",
+          "pa": "ਸੋਸਾਇਟੀ; ਗੇਟ ਵਾਲੇ ਫਲੈਟਾਂ ਦੀ ਥਾਂ"
+        },
+        {
+          "en": "Gate",
+          "pa": "ਗੇਟ; ਅੰਦਰ ਜਾਣ ਦਾ ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "Guard",
+          "pa": "ਗਾਰਡ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ"
+        },
+        {
+          "en": "Flat",
+          "pa": "ਫਲੈਟ; ਅਪਾਰਟਮੈਂਟ ਘਰ"
+        },
+        {
+          "en": "Upstairs",
+          "pa": "ਉੱਪਰ; ਉੱਪਰੀ ਮੰਜ਼ਿਲ"
+        },
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ; ਸ਼ਾਂਤ ਰੁਕਣਾ"
+        },
+        {
+          "en": "Calmly",
+          "pa": "ਸ਼ਾਂਤੀ ਨਾਲ; ਘਬਰਾਏ ਬਿਨਾਂ"
+        },
+        {
+          "en": "Enter",
+          "pa": "ਅੰਦਰ ਜਾਣਾ; ਦਾਖ਼ਲ ਹੋਣਾ"
+        },
+        {
+          "en": "Desk",
+          "pa": "ਡੈਸਕ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Home",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Grandma",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Reach",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Beside",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Okay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Which",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Please",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Add",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Parent",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Meet",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "May",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Safe",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Speak",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Clearly",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Helpers",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Adult",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Helper",
+          "pa": "ਸ਼ਬਦ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Wait",
+          "pa": "ਉਡੀਕ ਕਰਨੀ"
+        },
+        {
+          "en": "Stand",
+          "pa": "ਖੜ੍ਹਨਾ"
+        },
+        {
+          "en": "Come",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Going",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Opens",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Learn",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "You",
+          "pa": "ਤੂੰ/ਤੁਸੀਂ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "His",
+          "pa": "ਉਸਦਾ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        },
+        {
+          "en": "Us",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Safe",
+          "pa": "ਸੁਰੱਖਿਅਤ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "calmly",
+          "pa": "ਸ਼ਾਂਤੀ ਨਾਲ"
+        },
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        },
+        {
+          "en": "To",
+          "pa": "ਵੱਲ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  },
+  {
+    "storyId": "B9_S10",
+    "bundleId": 9,
+    "orderInBundle": 10,
+    "titleEn": "Book 9 · Story 10: Lost in a Crowd: Find a Safe Helper",
+    "titlePa": "ਕਿਤਾਬ 9 · ਕਹਾਣੀ 10: ਭੀੜ ਵਿੱਚ ਗੁੰਮ: ਸੁਰੱਖਿਅਤ ਮਦਦ ਲੱਭੋ",
+    "englishStory": "Panel 1 (Intro): Today I am at a busy mela with my parent. I look up, and I cannot see them.\nPanel 2 (Body): First, I stop my feet and take a slow breath. I say, \"I will stay in one safe place.\"\nPanel 3 (Body): Next, I find a police officer and say, \"Excuse me, I am lost. Please help me call my parent.\"\nPanel 4 (Body): Then the officer asks, \"What is your parent's phone number?\" I say it slowly, and we call together.\nPanel 5 (Conclusion): After that, my parent comes quickly and hugs me. I feel relieved because I stayed calm and asked a safe helper.",
+    "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਅੱਜ ਮੈਂ ਮੰਮੀ/ਡੈਡੀ ਨਾਲ ਮੇਲੇ ਵਿੱਚ ਹਾਂ। ਮੈਂ ਉੱਪਰ ਵੇਖਦਾ/ਵੇਖਦੀ ਹਾਂ, ਅਤੇ ਮੈਨੂੰ ਉਹ ਨਹੀਂ ਦਿਖਦੇ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਮੈਂ ਪੈਰ ਰੋਕਦਾ/ਰੋਕਦੀ ਹਾਂ ਅਤੇ ਹੌਲੀ ਸਾਹ ਲੈਂਦਾ/ਲੈਂਦੀ ਹਾਂ। ਮੈਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਮੈਂ ਇੱਕ ਸੁਰੱਖਿਅਤ ਥਾਂ ਤੇ ਹੀ ਖੜ੍ਹਾ/ਖੜ੍ਹੀ ਰਹਾਂਗਾ/ਰਹਾਂਗੀ।\"\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਫਿਰ ਮੈਂ ਪੁਲਿਸ ਅਫ਼ਸਰ ਨੂੰ ਲੱਭਦਾ/ਲੱਭਦੀ ਹਾਂ ਅਤੇ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹਾਂ, \"ਐਕਸਕਿਊਜ਼ ਮੀ, ਮੈਂ ਗੁੰਮ ਹੋ ਗਿਆ/ਹੋ ਗਈ ਹਾਂ। ਕਿਰਪਾ ਕਰਕੇ ਮੇਰੇ ਮੰਮੀ/ਡੈਡੀ ਨੂੰ ਫ਼ੋਨ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰੋ।\"\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਫਿਰ ਅਫ਼ਸਰ ਪੁੱਛਦਾ ਹੈ, \"ਤੁਹਾਡੇ ਮੰਮੀ/ਡੈਡੀ ਦਾ ਫ਼ੋਨ ਨੰਬਰ ਕੀ ਹੈ?\" ਮੈਂ ਹੌਲੀ-ਹੌਲੀ ਦੱਸਦਾ/ਦੱਸਦੀ ਹਾਂ, ਅਤੇ ਅਸੀਂ ਇਕੱਠੇ ਕਾਲ ਕਰਦੇ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਉਸ ਤੋਂ ਬਾਅਦ, ਮੇਰੇ ਮੰਮੀ/ਡੈਡੀ ਜਲਦੀ ਆ ਜਾਂਦੇ ਹਨ ਅਤੇ ਮੈਨੂੰ ਗਲੇ ਲਾ ਲੈਂਦੇ ਹਨ। ਮੈਨੂੰ ਸੁਕੂਨ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਮੈਂ ਸ਼ਾਂਤ ਰਿਹਾ/ਰਹੀ ਅਤੇ ਸੁਰੱਖਿਅਤ ਮਦਦ ਮੰਗੀ।",
+    "multipleChoiceQuestions": [
+      {
+        "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choices": [
+          "mela / ਮੇਲਾ",
+          "classroom / ਕਲਾਸ",
+          "bus / ਬੱਸ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 1 says the child is at a mela. / ਪੈਨਲ 1 ਵਿੱਚ ਮੇਲੇ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
+        "choicesPa": [
+          "mela / ਮੇਲਾ",
+          "classroom / ਕਲਾਸ",
+          "bus / ਬੱਸ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "What should the child do first when lost? / ਗੁੰਮ ਹੋਣ ਤੇ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choices": [
+          "stop and stay in one place / ਰੁਕ ਕੇ ਇੱਕ ਥਾਂ ਰਹਿਣਾ",
+          "run fast / ਤੇਜ਼ ਦੌੜਨਾ",
+          "hide quietly / ਚੁੱਪ ਲੁਕਣਾ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 2 says the child stops, breathes, and stays in one safe place. / ਪੈਨਲ 2 ਵਿੱਚ ਰੁਕ ਕੇ ਇੱਕ ਸੁਰੱਖਿਅਤ ਥਾਂ ਰਹਿਣ ਦੀ ਗੱਲ ਹੈ।",
+        "questionPa": "What should the child do first when lost? / ਗੁੰਮ ਹੋਣ ਤੇ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
+        "choicesPa": [
+          "stop and stay in one place / ਰੁਕ ਕੇ ਇੱਕ ਥਾਂ ਰਹਿਣਾ",
+          "run fast / ਤੇਜ਼ ਦੌੜਨਾ",
+          "hide quietly / ਚੁੱਪ ਲੁਕਣਾ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Who is a safe helper in the story? / ਕਹਾਣੀ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਮਦਦਗਾਰ ਕੌਣ ਹੈ?",
+        "choices": [
+          "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ",
+          "stranger kid / ਅਜਨਬੀ ਬੱਚਾ",
+          "random driver / ਅਜਨਬੀ ਡਰਾਈਵਰ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 3 shows the child asks a police officer for help. / ਪੈਨਲ 3 ਵਿੱਚ ਪੁਲਿਸ ਅਫ਼ਸਰ ਤੋਂ ਮਦਦ ਮੰਗਦਾ/ਮੰਗਦੀ ਹੈ।",
+        "questionPa": "Who is a safe helper in the story? / ਕਹਾਣੀ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਮਦਦਗਾਰ ਕੌਣ ਹੈ?",
+        "choicesPa": [
+          "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ",
+          "stranger kid / ਅਜਨਬੀ ਬੱਚਾ",
+          "random driver / ਅਜਨਬੀ ਡਰਾਈਵਰ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "Why does the child call the parent? / ਬੱਚਾ ਮੰਮੀ/ਡੈਡੀ ਨੂੰ ਕਿਉਂ ਫ਼ੋਨ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choices": [
+          "to meet again safely / ਸੁਰੱਖਿਅਤ ਮਿਲਣ ਲਈ",
+          "to buy toys / ਖਿਡੌਣੇ ਲਈ",
+          "to be late / ਦੇਰ ਕਰਨ ਲਈ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Calling helps the child meet the parent again safely. / ਫ਼ੋਨ ਕਰਨ ਨਾਲ ਸੁਰੱਖਿਅਤ ਮਿਲ ਸਕਦੇ ਹਨ।",
+        "questionPa": "Why does the child call the parent? / ਬੱਚਾ ਮੰਮੀ/ਡੈਡੀ ਨੂੰ ਕਿਉਂ ਫ਼ੋਨ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choicesPa": [
+          "to meet again safely / ਸੁਰੱਖਿਅਤ ਮਿਲਣ ਲਈ",
+          "to buy toys / ਖਿਡੌਣੇ ਲਈ",
+          "to be late / ਦੇਰ ਕਰਨ ਲਈ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      },
+      {
+        "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choices": [
+          "relieved / ਸੁਕੂਨ",
+          "angry / ਗੁੱਸਾ",
+          "sleepy / ਨੀਂਦ"
+        ],
+        "correctChoiceIndex": 0,
+        "explanation": "Panel 5 says the child feels relieved after getting help. / ਪੈਨਲ 5 ਵਿੱਚ ਸੁਕੂਨ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।",
+        "questionPa": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
+        "choicesPa": [
+          "relieved / ਸੁਕੂਨ",
+          "angry / ਗੁੱਸਾ",
+          "sleepy / ਨੀਂਦ"
+        ],
+        "explanationPa": "ਸਹੀ ਜਵਾਬ ਲਈ ਕਹਾਣੀ ਨੂੰ ਧਿਆਨ ਨਾਲ ਵੇਖੋ।"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "crowd",
+        "meaningEn": "many people together",
+        "meaningPa": "ਭੀੜ; ਬਹੁਤ ਲੋਕ"
+      },
+      {
+        "word": "lost",
+        "meaningEn": "not finding your parent or way",
+        "meaningPa": "ਗੁੰਮ; ਰਸਤਾ/ਵੱਡਾ ਨਾ ਮਿਲਣਾ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "a trusted person who helps",
+        "meaningPa": "ਮਦਦਗਾਰ; ਭਰੋਸੇਯੋਗ ਮਦਦ"
+      },
+      {
+        "word": "police officer",
+        "meaningEn": "a person who helps keep people safe",
+        "meaningPa": "ਪੁਲਿਸ ਅਫ਼ਸਰ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "breathe",
+        "meaningEn": "take air in and out slowly",
+        "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ"
+      },
+      {
+        "word": "phone number",
+        "meaningEn": "numbers to call someone",
+        "meaningPa": "ਫ਼ੋਨ ਨੰਬਰ; ਕਾਲ ਕਰਨ ਵਾਲੇ ਅੰਕ"
+      },
+      {
+        "word": "call",
+        "meaningEn": "phone someone",
+        "meaningPa": "ਫ਼ੋਨ ਕਰਨਾ; ਕਾਲ ਕਰਨੀ"
+      },
+      {
+        "word": "stay",
+        "meaningEn": "remain in one place",
+        "meaningPa": "ਰਹਿਣਾ; ਇੱਕ ਥਾਂ ਟਿਕੇ ਰਹਿਣਾ"
+      },
+      {
+        "word": "relieved",
+        "meaningEn": "feeling better after worry ends",
+        "meaningPa": "ਸੁਕੂਨ; ਚਿੰਤਾ ਘੱਟ ਹੋ ਜਾਣੀ"
+      }
+    ],
+    "partsOfGrammar": {
+      "definitions": {
+        "nouns": {
+          "definitionEn": "A noun is a person, place, or thing.",
+          "definitionPa": "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+        },
+        "verbs": {
+          "definitionEn": "A verb shows an action or a state (being).",
+          "definitionPa": "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+        },
+        "pronouns": {
+          "definitionEn": "A pronoun replaces a noun (I, you, my).",
+          "definitionPa": "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+        },
+        "adjectives": {
+          "definitionEn": "An adjective describes a noun.",
+          "definitionPa": "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+        },
+        "adverbs": {
+          "definitionEn": "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+          "definitionPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+        },
+        "prepositions": {
+          "definitionEn": "A preposition shows location or relationship (in, on, by).",
+          "definitionPa": "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+        },
+        "conjunctions": {
+          "definitionEn": "A conjunction joins words, phrases, or clauses (and, but, because).",
+          "definitionPa": "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+        },
+        "articles": {
+          "definitionEn": "An article introduces a noun as specific or general (a, an, the).",
+          "definitionPa": "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+        },
+        "interjections": {
+          "definitionEn": "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+          "definitionPa": "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+        }
+      },
+      "nouns": [
+        {
+          "en": "Crowd",
+          "pa": "ਭੀੜ; ਬਹੁਤ ਲੋਕ"
+        },
+        {
+          "en": "Lost",
+          "pa": "ਗੁੰਮ; ਰਸਤਾ/ਵੱਡਾ ਨਾ ਮਿਲਣਾ"
+        },
+        {
+          "en": "Safe",
+          "pa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+        },
+        {
+          "en": "Helper",
+          "pa": "ਮਦਦਗਾਰ; ਭਰੋਸੇਯੋਗ ਮਦਦ"
+        },
+        {
+          "en": "Police officer",
+          "pa": "ਪੁਲਿਸ ਅਫ਼ਸਰ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ"
+        },
+        {
+          "en": "Breathe",
+          "pa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ"
+        },
+        {
+          "en": "Phone number",
+          "pa": "ਫ਼ੋਨ ਨੰਬਰ; ਕਾਲ ਕਰਨ ਵਾਲੇ ਅੰਕ"
+        },
+        {
+          "en": "Call",
+          "pa": "ਫ਼ੋਨ ਕਰਨਾ; ਕਾਲ ਕਰਨੀ"
+        },
+        {
+          "en": "Panel",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Intro",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Today",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Busy",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Mela",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Parent",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "And",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Cannot",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Body",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "First",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stop",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Feet",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Breath",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Stay",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "One",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Place",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Next",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Find",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Police",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Officer",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Excuse",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Please",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Then",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "The",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "What",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Parent's",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Phone",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Number",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Slowly",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Together",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Conclusion",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "That",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Quickly",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Hugs",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Because",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Calm",
+          "pa": "ਸ਼ਬਦ"
+        },
+        {
+          "en": "Relieved",
+          "pa": "ਸੁਕੂਨ; ਚਿੰਤਾ ਘੱਟ ਹੋ ਜਾਣੀ"
+        }
+      ],
+      "verbs": [
+        {
+          "en": "Look",
+          "pa": "ਵੇਖਣਾ"
+        },
+        {
+          "en": "Help",
+          "pa": "ਮਦਦ ਕਰਨੀ"
+        },
+        {
+          "en": "Stop",
+          "pa": "ਰੁਕਣਾ"
+        },
+        {
+          "en": "See",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Take",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Will",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Comes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Feel",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Relieved",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Stayed",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "Asked",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "We",
+          "pa": "ਅਸੀਂ"
+        },
+        {
+          "en": "It",
+          "pa": "ਇਹ"
+        },
+        {
+          "en": "My",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        },
+        {
+          "en": "Your",
+          "pa": "ਤੁਹਾਡਾ/ਤੁਹਾਡੀ"
+        },
+        {
+          "en": "Them",
+          "pa": "ਸਰਵਨਾਮ"
+        },
+        {
+          "en": "Me",
+          "pa": "ਸਰਵਨਾਮ"
+        }
+      ],
+      "adjectives": [
+        {
+          "en": "Safe",
+          "pa": "ਸੁਰੱਖਿਅਤ"
+        },
+        {
+          "en": "Lost",
+          "pa": "ਗੁੰਮ"
+        },
+        {
+          "en": "Slow",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ"
+        }
+      ],
+      "adverbs": [
+        {
+          "en": "slowly",
+          "pa": "ਹੌਲੀ"
+        },
+        {
+          "en": "quickly",
+          "pa": "ਜਲਦੀ"
+        },
+        {
+          "en": "together",
+          "pa": "ਇਕੱਠੇ"
+        },
+        {
+          "en": "today",
+          "pa": "ਅੱਜ"
+        }
+      ],
+      "prepositions": [
+        {
+          "en": "In",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "At",
+          "pa": "ਤੇ"
+        },
+        {
+          "en": "With",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "After",
+          "pa": "ਸਬੰਧ ਬੋਧਕ"
+        }
+      ],
+      "conjunctions": [
+        {
+          "en": "and",
+          "pa": "ਅਤੇ"
+        },
+        {
+          "en": "because",
+          "pa": "ਕਿਉਂਕਿ"
+        },
+        {
+          "en": "then",
+          "pa": "ਫਿਰ"
+        },
+        {
+          "en": "after",
+          "pa": "ਬਾਅਦ"
+        }
+      ],
+      "articles": [
+        {
+          "en": "the",
+          "pa": "ਉਹ/ਉਹੀ"
+        },
+        {
+          "en": "a",
+          "pa": "ਇੱਕ"
+        }
+      ],
+      "interjections": [
+        {
+          "en": "oh",
+          "pa": "ਓਹ"
+        }
+      ]
+    }
+  }
+]

@@ -366,6 +366,8 @@ var Lessons = {
     if (t === 'example') return 'example';
     if (t === 'guided_practice') return 'tap_word';
     if (t === 'question') return 'mcq';
+    if (t === 'fix_it_sentence') return 'fix_it';
+    if (t === 'gian_check') return 'gian_check';
     if (t === 'summary') return 'summary';
     return 'info';
   },
@@ -387,6 +389,8 @@ var Lessons = {
     if (kind === 'info') return { en: 'Read and remember.', pa: 'ਪੜ੍ਹੋ ਅਤੇ ਯਾਦ ਰੱਖੋ।' };
     if (kind === 'tap_word') return { en: 'Tap the correct word.', pa: 'ਸਹੀ ਸ਼ਬਦ ਤੇ ਟੈਪ ਕਰੋ।' };
     if (kind === 'mcq') return { en: 'Choose the best answer.', pa: 'ਸਭ ਤੋਂ ਵਧੀਆ ਜਵਾਬ ਚੁਣੋ।' };
+    if (kind === 'fix_it') return { en: 'Fix the sentence.', pa: 'ਵਾਕ ਠੀਕ ਕਰੋ।' };
+    if (kind === 'gian_check') return { en: 'Test your knowledge.', pa: 'ਆਪਣਾ ਗਿਆਨ ਪਰਖੋ।' };
     if (kind === 'summary') return { en: 'Review what you learned.', pa: 'ਸਿੱਖਿਆ ਹੋਇਆ ਦੁਹਰਾਓ।' };
     return { en: '', pa: '' };
   },
@@ -1006,6 +1010,120 @@ var Lessons = {
     return getGeneratedWorked();
   },
 
+  /* ── token-list helpers (shared by prompt + feedback highlighting) ── */
+  toTokenList: function(raw) {
+    if (raw === null || raw === undefined) return [];
+    var out = [];
+    function pushOne(v) {
+      if (v === null || v === undefined) return;
+      var s = String(v).trim();
+      if (!s) return;
+      if (out.indexOf(s) === -1) out.push(s);
+    }
+    if (Array.isArray(raw)) {
+      for (var ai = 0; ai < raw.length; ai++) pushOne(raw[ai]);
+      return out;
+    }
+    if (typeof raw === 'string') {
+      var parts = raw.split(',');
+      for (var si = 0; si < parts.length; si++) pushOne(parts[si]);
+      if (!out.length) pushOne(raw);
+      return out;
+    }
+    if (typeof raw === 'object') {
+      if (raw.en !== undefined) {
+        var enList = Lessons.toTokenList(raw.en);
+        for (var ei = 0; ei < enList.length; ei++) pushOne(enList[ei]);
+      }
+      if (raw.pa !== undefined) {
+        var paList = Lessons.toTokenList(raw.pa);
+        for (var pi = 0; pi < paList.length; pi++) pushOne(paList[pi]);
+      }
+      return out;
+    }
+    pushOne(raw);
+    return out;
+  },
+
+  toLangTokenList: function(raw, langKey) {
+    if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
+      var own = Lessons.toTokenList(raw[langKey]);
+      if (own.length) return own;
+      if (langKey === 'en') {
+        var paFallback = Lessons.toTokenList(raw.pa);
+        if (paFallback.length) return paFallback;
+      } else {
+        var enFallback = Lessons.toTokenList(raw.en);
+        if (enFallback.length) return enFallback;
+      }
+    }
+    return Lessons.toTokenList(raw);
+  },
+
+  getStepHighlightTokens: function(step) {
+    if (!step) return null;
+    if (step.highlight) return step.highlight;
+    if (step.workedExample && step.workedExample.highlight) return step.workedExample.highlight;
+    if (Array.isArray(step.examples) && step.examples.length && step.examples[0].highlight) return step.examples[0].highlight;
+    if (step.highlightedWords) return step.highlightedWords;
+    return null;
+  },
+
+  getPromptUnderlineTokens: function(rawText) {
+    var text = (rawText === null || rawText === undefined) ? '' : String(rawText);
+    if (!text) return [];
+
+    var tokens = [];
+    var seen = {};
+
+    function addToken(value) {
+      var token = String(value || '').trim();
+      if (!token) return;
+      if (seen[token]) return;
+      seen[token] = true;
+      tokens.push(token);
+    }
+
+    var quotedRe = /["“”]([^"“”]{1,120})["“”]/g;
+    var quotedMatch;
+    while ((quotedMatch = quotedRe.exec(text)) !== null) {
+      addToken(quotedMatch[1]);
+    }
+
+    var blanksRe = /_{2,}/g;
+    var blankMatch;
+    while ((blankMatch = blanksRe.exec(text)) !== null) {
+      addToken(blankMatch[0]);
+    }
+
+    return tokens;
+  },
+
+  mergeUniqueTokens: function(primary, secondary) {
+    var out = [];
+    var seen = {};
+
+    function addAll(list) {
+      if (!Array.isArray(list)) return;
+      for (var i = 0; i < list.length; i++) {
+        var token = String(list[i] || '').trim();
+        if (!token || seen[token]) continue;
+        seen[token] = true;
+        out.push(token);
+      }
+    }
+
+    addAll(primary);
+    addAll(secondary);
+    return out;
+  },
+
+  applyPromptAutoUnderline: function(rawText) {
+    var text = (rawText === null || rawText === undefined) ? '' : String(rawText);
+    var tokens = Lessons.getPromptUnderlineTokens(text);
+    return Lessons.applyHighlights(text, tokens);
+  },
+
   applyHighlights: function(rawText, tokens) {
     var text = (rawText === null || rawText === undefined) ? '' : String(rawText);
     if (!tokens || !Array.isArray(tokens) || !tokens.length) {
@@ -1125,8 +1243,22 @@ var Lessons = {
     var highlightEn = (we.highlight && Array.isArray(we.highlight.en)) ? we.highlight.en : [];
     var highlightPa = (we.highlight && Array.isArray(we.highlight.pa)) ? we.highlight.pa : [];
 
+    var currentStepType = '';
+    if (Lessons.currentLessonSteps && Lessons.currentLessonSteps[Lessons.currentStepIndex]) {
+      var cs = Lessons.currentLessonSteps[Lessons.currentStepIndex];
+      currentStepType = cs.type || cs.step_type || '';
+    }
+    var isGianCheck = (currentStepType === 'gian_check');
+
     var html = '';
-    html += '<div class="lesson-feedback-panel ' + (correct ? 'is-correct' : 'is-wrong') + '">';
+    html += '<div class="lesson-feedback-panel ' + (correct ? 'is-correct' : 'is-wrong') + (isGianCheck ? ' is-gian-check' : '') + '">';
+    if (isGianCheck) {
+      html += '<div class="gian-feedback-banner">';
+      html += '  <span class="gian-feedback-banner-icon">🧠</span>';
+      html += '  <span class="gian-feedback-banner-en">Gian Knowledge Check</span>';
+      html += '  <span class="gian-feedback-banner-pa" lang="pa">ਗਿਆਨ ਪਰਖ</span>';
+      html += '</div>';
+    }
     html += '  <div class="lesson-feedback-status">';
     html += '    <div class="lesson-feedback-status-en">' + Lessons.escapeHtml(statusEn) + '</div>';
     if (punjabiOn) html += '    <div class="lesson-feedback-status-pa" lang="pa">' + Lessons.escapeHtml(statusPa) + '</div>';
@@ -1172,7 +1304,7 @@ var Lessons = {
     html += '</div>';
 
     el.innerHTML = html;
-    el.className = 'feedback ' + (correct ? 'correct' : 'wrong');
+    el.className = 'feedback ' + (correct ? 'correct' : 'wrong') + (isGianCheck ? ' is-gian-check' : '');
 
   },
 
@@ -1224,57 +1356,8 @@ var Lessons = {
     var explainPaRaw = ex.explainPa || ex.notePa || "";
     var highlight = ex.highlight || step.highlight || step.exampleHighlight || "";
 
-    function toTokenList(raw) {
-      if (raw === null || raw === undefined) return [];
-      var out = [];
-      function pushOne(v) {
-        if (v === null || v === undefined) return;
-        var s = String(v).trim();
-        if (!s) return;
-        if (out.indexOf(s) === -1) out.push(s);
-      }
-      if (Array.isArray(raw)) {
-        for (var ai = 0; ai < raw.length; ai++) pushOne(raw[ai]);
-        return out;
-      }
-      if (typeof raw === 'string') {
-        var parts = raw.split(',');
-        for (var si = 0; si < parts.length; si++) pushOne(parts[si]);
-        if (!out.length) pushOne(raw);
-        return out;
-      }
-      if (typeof raw === 'object') {
-        if (raw.en !== undefined) {
-          var enList = toTokenList(raw.en);
-          for (var ei = 0; ei < enList.length; ei++) pushOne(enList[ei]);
-        }
-        if (raw.pa !== undefined) {
-          var paList = toTokenList(raw.pa);
-          for (var pi = 0; pi < paList.length; pi++) pushOne(paList[pi]);
-        }
-        return out;
-      }
-      pushOne(raw);
-      return out;
-    }
-
-    function toLangTokenList(raw, langKey) {
-      if (raw && typeof raw === 'object' && !Array.isArray(raw)) {
-        var own = toTokenList(raw[langKey]);
-        if (own.length) return own;
-        if (langKey === 'en') {
-          var paFallback = toTokenList(raw.pa);
-          if (paFallback.length) return paFallback;
-        } else {
-          var enFallback = toTokenList(raw.en);
-          if (enFallback.length) return enFallback;
-        }
-      }
-      return toTokenList(raw);
-    }
-
-    var highlightEnTokens = toLangTokenList(highlight, 'en');
-    var highlightPaTokens = toLangTokenList(highlight, 'pa');
+    var highlightEnTokens = Lessons.toLangTokenList(highlight, 'en');
+    var highlightPaTokens = Lessons.toLangTokenList(highlight, 'pa');
 
     var safeSentenceEn = Lessons.applyHighlights(sentenceEnRaw, highlightEnTokens);
     var safeSentencePa = Lessons.applyHighlights(sentencePaRaw, highlightPaTokens);
@@ -1410,7 +1493,7 @@ var Lessons = {
     if (!step) return false;
 
     var stepType = step.type || step.step_type;
-    if (stepType === 'question' || stepType === 'guided_practice') {
+    if (stepType === 'question' || stepType === 'guided_practice' || stepType === 'fix_it_sentence' || stepType === 'gian_check') {
       Lessons.initLesson(Lessons.currentLessonId);
       var progress = State.state.session.lessonProgress[Lessons.currentLessonId] || null;
       return !!(progress && progress.stepResolved && progress.stepResolved[Lessons.currentStepIndex]);
@@ -1539,7 +1622,7 @@ var Lessons = {
 
     var step = Lessons.currentLessonSteps[Lessons.currentStepIndex] || null;
     var stepType = step ? (step.type || step.step_type) : '';
-    if (!isReview && (stepType === 'question' || stepType === 'guided_practice') && !Lessons.canAdvanceFromCurrentStep()) {
+    if (!isReview && (stepType === 'question' || stepType === 'guided_practice' || stepType === 'fix_it_sentence' || stepType === 'gian_check') && !Lessons.canAdvanceFromCurrentStep()) {
       hintEl.textContent = '';
       return;
     }
@@ -1673,12 +1756,41 @@ var Lessons = {
 
           if (allCorrect && selectedWords.length > 0) {
             // Phase 1 complete: user selected correctly
+            if (Lessons._guidedPracticeTimer) {
+              clearTimeout(Lessons._guidedPracticeTimer);
+              Lessons._guidedPracticeTimer = null;
+            }
             Lessons.handleGuidedPracticeCorrect(step, container, buttons);
             isPhase2 = true;
           }
         });
       })(buttons[bi]);
     }
+
+    // Escape hatch: show "Show Answer" button after 15 seconds
+    Lessons._guidedPracticeTimer = setTimeout(function() {
+      Lessons._guidedPracticeTimer = null;
+      if (isPhase2) return; // already solved
+      var showBtn = document.createElement("button");
+      showBtn.className = "btn btn-outline";
+      showBtn.style.marginTop = "12px";
+      showBtn.style.display = "block";
+      showBtn.style.marginLeft = "auto";
+      showBtn.style.marginRight = "auto";
+      showBtn.textContent = "Show Answer / \u0A1C\u0A35\u0A3E\u0A2C \u0A26\u0A3F\u0A16\u0A3E\u0A13";
+      var practiceContainer = container.querySelector(".guided-practice-container");
+      if (practiceContainer) {
+        practiceContainer.appendChild(showBtn);
+      } else {
+        container.appendChild(showBtn);
+      }
+      showBtn.addEventListener("click", function() {
+        if (isPhase2) return;
+        isPhase2 = true;
+        showBtn.disabled = true;
+        Lessons.handleGuidedPracticeCorrect(step, container, buttons);
+      });
+    }, 15000);
   },
 
   handleGuidedPracticeCorrect: function(step, container, buttons) {
@@ -1758,6 +1870,49 @@ var Lessons = {
     Lessons.markStepResolved(Lessons.currentStepIndex, true);
   },
 
+  renderSummaryBulletsStep: function(step) {
+    var container = document.getElementById("lesson-options");
+    if (!container) return;
+
+    var meta = Lessons._getSafeLessonMetaById(Lessons.currentLessonId) || {};
+    var lessonNameEn = (meta.labelEn || "").trim();
+    var lessonNamePa = (meta.labelPa || "").trim();
+    var reviewTitleEn = lessonNameEn ? ("Review: " + lessonNameEn) : "Review";
+    var reviewTitlePa = lessonNamePa ? ("ਦੁਹਰਾਈ: " + lessonNamePa) : "ਦੁਹਰਾਈ";
+
+    var bullets = Array.isArray(step.bullets) ? step.bullets : [];
+    var html = `
+      <div class="lesson-summary lesson-review-summary">
+        <div class="review-summary-header">
+          <h3 class="summary-title-en">${reviewTitleEn}</h3>
+          <h3 class="summary-title-pa">${reviewTitlePa}</h3>
+          <div class="review-summary-divider"></div>
+        </div>
+
+        <div class="summary-examples">
+          <div class="examples-list">
+            ${bullets.map(function(item) {
+              var en = item && item.en ? item.en : "";
+              var pa = item && item.pa ? item.pa : "";
+              return `
+                <div class="example-pair review-bullet-row">
+                  <span class="en">• ${en}</span>
+                  <span class="pa">• ${pa}</span>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </div>
+      </div>
+    `;
+
+    container.innerHTML = html;
+
+    var nextBtn = document.getElementById("btn-lesson-next");
+    if (nextBtn) nextBtn.disabled = false;
+    Lessons.markStepResolved(Lessons.currentStepIndex, true);
+  },
+
   // ===== EXISTING METHODS (MODIFIED) =====
 
   init: function() {
@@ -1788,7 +1943,7 @@ var Lessons = {
           var step = Lessons.currentLessonSteps && Lessons.currentLessonSteps[Lessons.currentStepIndex];
           if (!step) return;
           var stepType = step.type || step.step_type;
-          if (stepType !== 'question') return;
+          if (stepType !== 'question' && stepType !== 'fix_it_sentence' && stepType !== 'gian_check') return;
           Lessons.submitSelectedQuestionAnswer(Lessons.currentStepIndex, step);
         });
       }
@@ -2736,7 +2891,7 @@ var Lessons = {
     lessonId = Lessons.resolveCanonicalLessonId(lessonId);
     var meta = Lessons.findLessonMeta(lessonId);
     if (!meta) {
-      alert("Lesson not found.");
+      if (typeof UI !== 'undefined' && UI.showToast) UI.showToast("Lesson not found. / \u0A2A\u0A3E\u0A20 \u0A28\u0A39\u0A40\u0A02 \u0A2E\u0A3F\u0A32\u0A3F\u0A06\u0964", 2000);
       return;
     }
 
@@ -2771,7 +2926,7 @@ var Lessons = {
     }
     
     if (!Lessons.currentLessonSteps.length) {
-      alert("Content coming soon.");
+      if (typeof UI !== 'undefined' && UI.showToast) UI.showToast("Content coming soon! / \u0A38\u0A2E\u0A71\u0A17\u0A30\u0A40 \u0A1C\u0A32\u0A26\u0A40 \u0A06 \u0A30\u0A39\u0A40 \u0A39\u0A48!", 2000);
       return;
     }
 
@@ -2824,7 +2979,10 @@ var Lessons = {
     if (type === "example") return "Example / ਉਦਾਹਰਨ";
     if (type === "guided_practice") return "Practice / ਅਭਿਆਸ";
     if (type === "question") return "Question / ਪ੍ਰਸ਼ਨ";
+    if (type === "fix_it_sentence") return "Fix It / ਠੀਕ ਕਰੋ";
+    if (type === "gian_check") return "🧠 Gian Knowledge Check / ਗਿਆਨ ਪਰਖ";
     if (type === "summary") return "Summary / ਸਾਰਾਂਸ਼";
+    if (type === "summary_bullets") return "Review / ਦੁਹਰਾਈ";
     return "";
   },
 
@@ -2871,6 +3029,42 @@ var Lessons = {
     var stepType = step.type || step.step_type;
     Lessons.syncHeroQuestionAction(Lessons.currentStepIndex, step);
 
+    var isReviewSummaryStep = (stepType === "summary_bullets");
+
+    var lessonTitleEl = document.getElementById("lesson-title");
+    var lessonTitlePaEl = document.getElementById("lesson-title-pa");
+    var lessonStepTypeWrapEl = document.querySelector("#screen-lesson .lesson-step-type");
+    if (lessonTitleEl) {
+      var currentMeta = Lessons._getSafeLessonMetaById(Lessons.currentLessonId) || {};
+      var currentLabelEn = (currentMeta.labelEn || "").trim();
+      var currentLabelPa = (currentMeta.labelPa || "").trim();
+      if (isReviewSummaryStep) {
+        lessonTitleEl.textContent = currentLabelEn ? ("Review: " + currentLabelEn) : "Review";
+        lessonTitleEl.style.display = 'none';
+        if (lessonTitlePaEl) {
+          lessonTitlePaEl.textContent = currentLabelPa ? ("ਦੁਹਰਾਈ: " + currentLabelPa) : "ਦੁਹਰਾਈ";
+          lessonTitlePaEl.style.display = 'none';
+        }
+        if (lessonStepTypeWrapEl) lessonStepTypeWrapEl.style.display = 'none';
+      } else if (currentLabelEn) {
+        lessonTitleEl.textContent = currentLabelEn;
+        lessonTitleEl.style.display = '';
+        if (lessonTitlePaEl) {
+          lessonTitlePaEl.textContent = "";
+          lessonTitlePaEl.style.display = '';
+        }
+        if (lessonStepTypeWrapEl) lessonStepTypeWrapEl.style.display = '';
+      }
+    }
+
+    var lessonDeckCard = document.getElementById("lessonDeckCard");
+    if (lessonDeckCard) {
+      var langLabels = lessonDeckCard.querySelectorAll('.lang-label');
+      for (var li = 0; li < langLabels.length; li++) {
+        langLabels[li].style.display = isReviewSummaryStep ? 'none' : '';
+      }
+    }
+
     // Instruction line (always, consistent placement)
     var instructionEnText = '';
     var instructionPaText = '';
@@ -2878,13 +3072,21 @@ var Lessons = {
       var inst = Lessons.getInstructionForStep(step);
       var instEnEl = document.getElementById('lesson-instruction-en');
       var instPaEl = document.getElementById('lesson-instruction-pa');
+      var instWrapEl = document.getElementById('lesson-instruction');
       instructionEnText = (inst && inst.en) ? String(inst.en) : '';
       instructionPaText = (inst && inst.pa) ? String(inst.pa) : '';
+      if (isReviewSummaryStep) {
+        instructionEnText = '';
+        instructionPaText = '';
+      }
       if (instEnEl) instEnEl.textContent = instructionEnText;
       if (instPaEl) {
         instPaEl.textContent = instructionPaText;
         var showPa = Lessons.shouldShowPunjabi();
         instPaEl.style.display = showPa ? '' : 'none';
+      }
+      if (instWrapEl) {
+        instWrapEl.style.display = isReviewSummaryStep ? 'none' : '';
       }
     } catch (e) {
       // no-op
@@ -2892,11 +3094,12 @@ var Lessons = {
 
     var lessonSwipeDeckEl = document.getElementById('lessonSwipeDeck');
     var lessonInstructionEl = document.getElementById('lesson-instruction');
-    var isQuestionLike = (stepType === 'question' || stepType === 'guided_practice');
-    var isTwoChoiceQuestionStep = (stepType === 'question') && Lessons.isTwoOptionQuestionStep(step);
+    var isQuestionLike = (stepType === 'question' || stepType === 'guided_practice' || stepType === 'fix_it_sentence' || stepType === 'gian_check');
+    var isTwoChoiceQuestionStep = (stepType === 'question' || stepType === 'fix_it_sentence') && Lessons.isTwoOptionQuestionStep(step);
     if (lessonSwipeDeckEl) {
       lessonSwipeDeckEl.classList.toggle('is-question-step', isQuestionLike);
       lessonSwipeDeckEl.classList.toggle('is-two-choice-question-step', isTwoChoiceQuestionStep);
+      lessonSwipeDeckEl.classList.toggle('is-gian-check', stepType === 'gian_check');
     }
     if (lessonInstructionEl) {
       lessonInstructionEl.classList.toggle('is-question-step', isQuestionLike);
@@ -2914,35 +3117,58 @@ var Lessons = {
       lessonTextEnEl.style.height = "";
       lessonTextPaEl.style.height = "";
 
-      var full = Lessons.isFullLessonEnabled(Lessons.currentLessonId);
-      if (Lessons.currentStepIndex === 0 || full) {
-        // For questions, show the question prompt in EN/PA boxes only
-        // For definitions/examples, show their content
-        var en, pa;
-        if (stepType === "question") {
-          en = step.englishText || step.english_text || step.promptEn || step.contentEn || "";
-          pa = step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || "";
-        } else {
-          en = step.contentEn || step.exampleEn || step.englishText || step.english_text || "";
-          pa = step.contentPa || step.examplePa || step.punjabiText || step.punjabi_text || "";
-        }
+      if (stepType === "summary_bullets") {
+        lessonTextEnEl.innerHTML = "";
+        lessonTextPaEl.innerHTML = "";
+        lessonTextEnEl.style.display = 'none';
+        lessonTextPaEl.style.display = 'none';
+      } else {
+        lessonTextEnEl.style.display = '';
+        lessonTextPaEl.style.display = '';
 
-        var shouldUsePromptCard = (stepType === 'question') && Lessons.isTwoOptionQuestionStep(step);
-        if (shouldUsePromptCard) {
-          lessonTextEnEl.innerHTML = Lessons.buildLessonPromptMarkup(en, pa, {
-            kind: 'question'
-          });
-          lessonTextPaEl.innerHTML = '';
-          lessonTextPaEl.style.display = 'none';
+        var full = Lessons.isFullLessonEnabled(Lessons.currentLessonId);
+        if (Lessons.currentStepIndex === 0 || full) {
+          // For questions, show the question prompt in EN/PA boxes only
+          // For definitions/examples, show their content
+          var en, pa;
+          if (stepType === "question" || stepType === "fix_it_sentence" || stepType === "gian_check") {
+            en = step.englishText || step.english_text || step.promptEn || step.contentEn || "";
+            pa = step.punjabiText || step.punjabi_text || step.promptPa || step.contentPa || "";
+          } else {
+            en = step.contentEn || step.exampleEn || step.englishText || step.english_text || "";
+            pa = step.contentPa || step.examplePa || step.punjabiText || step.punjabi_text || "";
+          }
+
+          // Apply highlight / underline tokens to the prompt text
+          var hlRaw = Lessons.getStepHighlightTokens(step);
+          var hlEn = Lessons.toLangTokenList(hlRaw, 'en');
+          var hlPa = Lessons.toLangTokenList(hlRaw, 'pa');
+          var autoEn = Lessons.getPromptUnderlineTokens(en);
+          var autoPa = Lessons.getPromptUnderlineTokens(pa);
+          var enTokens = Lessons.mergeUniqueTokens(hlEn, autoEn);
+          var paTokens = Lessons.mergeUniqueTokens(hlPa, autoPa);
+          var enHi = Lessons.applyHighlights(en, enTokens);
+          var paHi = Lessons.applyHighlights(pa, paTokens);
+
+          var shouldUsePromptCard = (stepType === 'question' || stepType === 'fix_it_sentence') && Lessons.isTwoOptionQuestionStep(step);
+          if (shouldUsePromptCard) {
+            var promptLabel = (stepType === 'fix_it_sentence') ? { en: 'Fix this sentence', pa: '\u0a07\u0a39 \u0a35\u0a3e\u0a15 \u0a20\u0a40\u0a15 \u0a15\u0a30\u0a4b' } : null;
+            lessonTextEnEl.innerHTML = Lessons.buildLessonPromptMarkup(en, pa, {
+              kind: 'question',
+              label: promptLabel
+            });
+            lessonTextPaEl.innerHTML = '';
+            lessonTextPaEl.style.display = 'none';
+          } else {
+            lessonTextEnEl.innerHTML = enHi;
+            lessonTextPaEl.innerHTML = paHi;
+            lessonTextPaEl.style.display = '';
+          }
         } else {
-          lessonTextEnEl.innerHTML = en;
-          lessonTextPaEl.innerHTML = pa;
+          lessonTextEnEl.innerHTML = "Coming Soon!";
+          lessonTextPaEl.innerHTML = "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ!";
           lessonTextPaEl.style.display = '';
         }
-      } else {
-        lessonTextEnEl.innerHTML = "Coming Soon!";
-        lessonTextPaEl.innerHTML = "ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ!";
-        lessonTextPaEl.style.display = '';
       }
     }
 
@@ -3006,6 +3232,22 @@ var Lessons = {
         
       case "summary":
         Lessons.renderSummaryStep(step);
+        if (nextBtn) nextBtn.disabled = false;
+        break;
+      case "fix_it_sentence":
+      case "gian_check":
+        Lessons.renderQuestionStep(step);
+        if (!Lessons.isReviewMode() && !resolvedMap[Lessons.currentStepIndex]) {
+          Lessons.markStepResolved(Lessons.currentStepIndex, false);
+        }
+        if (nextBtn) {
+          if (Lessons.isReviewMode()) nextBtn.disabled = false;
+          else nextBtn.disabled = !!resolvedMap[Lessons.currentStepIndex] ? false : true;
+        }
+        break;
+
+      case "summary_bullets":
+        Lessons.renderSummaryBulletsStep(step);
         if (nextBtn) nextBtn.disabled = false;
         break;
         
@@ -3091,14 +3333,14 @@ var Lessons = {
 
         var enLine = document.createElement('span');
         enLine.className = 'lesson-option-line-en';
-        enLine.textContent = optionText.en;
+        enLine.innerHTML = Lessons.applyPromptAutoUnderline(optionText.en);
         textWrap.appendChild(enLine);
 
         if (Lessons.shouldShowPunjabi() && optionText.pa) {
           var paLine = document.createElement('span');
           paLine.className = 'lesson-option-line-pa';
           paLine.setAttribute('lang', 'pa');
-          paLine.textContent = optionText.pa;
+          paLine.innerHTML = Lessons.applyPromptAutoUnderline(optionText.pa);
           textWrap.appendChild(paLine);
         }
 
@@ -3178,7 +3420,7 @@ var Lessons = {
     }
 
     var stepType = step ? (step.type || step.step_type) : '';
-    var isQuestion = stepType === 'question';
+    var isQuestion = (stepType === 'question' || stepType === 'fix_it_sentence' || stepType === 'gian_check');
 
     if (!isQuestion) {
       checkBtn.hidden = true;
@@ -3375,26 +3617,32 @@ var Lessons = {
 
     var enHtml = '';
     for (var j = 0; j < enLines.length; j++) {
-      enHtml += '<span class="lesson-prompt-line-en-segment">' + enLines[j] + '</span>';
+      enHtml += '<span class="lesson-prompt-line-en-segment">' + Lessons.applyPromptAutoUnderline(enLines[j]) + '</span>';
     }
 
     if (!enHtml && payloadEn) {
-      enHtml = '<span class="lesson-prompt-line-en-segment">' + payloadEn + '</span>';
+      enHtml = '<span class="lesson-prompt-line-en-segment">' + Lessons.applyPromptAutoUnderline(payloadEn) + '</span>';
     }
 
     var paHtml = '';
     for (var i = 0; i < paLines.length; i++) {
-      paHtml += '<span class="lesson-prompt-line-pa-segment">' + paLines[i] + '</span>';
+      paHtml += '<span class="lesson-prompt-line-pa-segment">' + Lessons.applyPromptAutoUnderline(paLines[i]) + '</span>';
     }
 
     if (!paHtml && payloadPa) {
-      paHtml = '<span class="lesson-prompt-line-pa-segment">' + payloadPa + '</span>';
+      paHtml = '<span class="lesson-prompt-line-pa-segment">' + Lessons.applyPromptAutoUnderline(payloadPa) + '</span>';
     }
 
+    var labelEn = (opts && opts.label && opts.label.en) ? opts.label.en : 'Question';
+    var labelPa = (opts && opts.label && opts.label.pa) ? opts.label.pa : '';
+    var labelHtml = '<span class="lesson-prompt-label-en">' + labelEn + '</span>';
+    if (labelPa) {
+      labelHtml += ' <span class="lesson-prompt-label-pa">' + labelPa + '</span>';
+    }
     return [
       '<div class="lesson-prompt-card lesson-prompt-card--question">',
         '<div class="lesson-prompt-label">',
-          '<span class="lesson-prompt-label-en">Question</span>',
+          labelHtml,
         '</div>',
         '<div class="lesson-prompt-section">',
           '<div class="lesson-prompt-line-en">' + enHtml + '</div>',
@@ -3587,6 +3835,9 @@ var Lessons = {
   nextStep: function() {
     if (!Lessons.currentLessonSteps || !Lessons.currentLessonSteps.length) return;
     
+    // Clear guided_practice escape-hatch timer
+    if (Lessons._guidedPracticeTimer) { clearTimeout(Lessons._guidedPracticeTimer); Lessons._guidedPracticeTimer = null; }
+
     var step = Lessons.currentLessonSteps[Lessons.currentStepIndex];
 
     if (!Lessons.canAdvanceFromCurrentStep()) {
@@ -3606,8 +3857,11 @@ var Lessons = {
       }
     }
     
-    // If at summary step, complete the lesson
-    if (step && (step.type === "summary" || step.step_type === "summary")) {
+    // If at terminal summary step, complete the lesson
+    var stepType = step ? (step.type || step.step_type) : "";
+    var isSummaryType = (stepType === "summary" || stepType === "summary_bullets");
+    var isLastStep = Lessons.currentStepIndex >= (Lessons.currentLessonSteps.length - 1);
+    if (step && isSummaryType && isLastStep) {
       Lessons.completeLesson();
       return;
     }
@@ -3646,6 +3900,9 @@ var Lessons = {
   // Previous step
   prevStep: function() {
     if (!Lessons.currentLessonSteps || !Lessons.currentLessonSteps.length) return;
+
+    // Clear guided_practice escape-hatch timer
+    if (Lessons._guidedPracticeTimer) { clearTimeout(Lessons._guidedPracticeTimer); Lessons._guidedPracticeTimer = null; }
 
     if (!Lessons.canNavigateBack()) return;
     try {
@@ -3728,8 +3985,8 @@ var Lessons = {
     }
     
     Lessons.renderLearnSections();
-    alert("Lesson Complete! / ਪਾਠ ਮੁਕਤ ਹੋ ਗਿਆ!");
-    UI.goTo("screen-learn");
+    if (typeof UI !== 'undefined' && UI.showToast) UI.showToast("🎉 Lesson Complete! / ਪਾਠ ਮੁਕੰਮਲ!", 2200);
+    setTimeout(function() { UI.goTo("screen-learn"); }, 800);
   },
 
   _updateStreakBadge: function() {}

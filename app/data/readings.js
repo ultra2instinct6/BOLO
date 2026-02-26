@@ -94,44 +94,118 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮਾਂ ਅਤੇ ਪਿਉ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੇ ਹਨ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਭੈਣ ਅਤੇ ਭਰਾ ਖਿੜਕੀ ਦੇ ਕੋਲ ਖੜ੍ਹੇ ਹਨ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੇਰਾ ਘਰ ਵੱਡਾ ਹੈ। ਮੇਰਾ ਕਮਰਾ ਛੋਟਾ ਹੈ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "home", "pa": "ਘਰ" },
-        { "en": "mom", "pa": "ਮਾਂ" },
-        { "en": "dad", "pa": "ਪਿਉ" },
-        { "en": "door", "pa": "ਦਰਵਾਜ਼ਾ" },
-        { "en": "sister", "pa": "ਭੈਣ" },
-        { "en": "brother", "pa": "ਭਰਾ" },
-        { "en": "window", "pa": "ਖਿੜਕੀ" },
-        { "en": "grandma", "pa": "ਦਾਦੀ" },
-        { "en": "grandpa", "pa": "ਦਾਦਾ" },
-        { "en": "baby", "pa": "ਬੱਚਾ" },
-        { "en": "house", "pa": "ਘਰ" },
-        { "en": "room", "pa": "ਕਮਰਾ" }
+        {
+          "en": "home",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "sister",
+          "pa": "ਭੈਣ"
+        },
+        {
+          "en": "brother",
+          "pa": "ਭਰਾ"
+        },
+        {
+          "en": "window",
+          "pa": "ਖਿੜਕੀ"
+        },
+        {
+          "en": "grandma",
+          "pa": "ਦਾਦੀ"
+        },
+        {
+          "en": "grandpa",
+          "pa": "ਦਾਦਾ"
+        },
+        {
+          "en": "baby",
+          "pa": "ਬੱਚਾ"
+        },
+        {
+          "en": "house",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "room",
+          "pa": "ਕਮਰਾ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "open", "pa": "ਖੋਲ੍ਹਣਾ" },
-        { "en": "stand", "pa": "ਖੜ੍ਹਾ ਹੋਣਾ" },
-        { "en": "help", "pa": "ਮਦਦ ਕਰਨਾ" },
-        { "en": "is", "pa": "ਹੈ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਖੜ੍ਹਾ ਹੋਣਾ"
+        },
+        {
+          "en": "help",
+          "pa": "ਮਦਦ ਕਰਨਾ"
+        },
+        {
+          "en": "is",
+          "pa": "ਹੈ"
+        }
       ],
       "adjectives": [
-        { "en": "big", "pa": "ਵੱਡਾ" },
-        { "en": "small", "pa": "ਛੋਟਾ" }
+        {
+          "en": "big",
+          "pa": "ਵੱਡਾ"
+        },
+        {
+          "en": "small",
+          "pa": "ਛੋਟਾ"
+        }
       ],
       "prepositions": [
-        { "en": "by", "pa": "ਦੇ ਕੋਲ" }
+        {
+          "en": "by",
+          "pa": "ਦੇ ਕੋਲ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["home", "school", "park"],
-        "choicesPa": ["ਘਰ", "ਸਕੂਲ", "ਪਾਰਕ"],
+        "choices": [
+          "home",
+          "school",
+          "park"
+        ],
+        "choicesPa": [
+          "ਘਰ",
+          "ਸਕੂਲ",
+          "ਪਾਰਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says, “I am at home.”",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।”"
@@ -139,8 +213,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who opens the door?",
         "questionPa": "ਦਰਵਾਜ਼ਾ ਕੌਣ ਖੋਲ੍ਹਦਾ ਹੈ?",
-        "choices": ["mom and dad", "sister and brother", "the baby"],
-        "choicesPa": ["ਮਾਂ ਅਤੇ ਪਿਉ", "ਭੈਣ ਅਤੇ ਭਰਾ", "ਬੱਚਾ"],
+        "choices": [
+          "mom and dad",
+          "sister and brother",
+          "the baby"
+        ],
+        "choicesPa": [
+          "ਮਾਂ ਅਤੇ ਪਿਉ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ",
+          "ਬੱਚਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “Mom and dad open the door.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮਾਂ ਅਤੇ ਪਿਉ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੇ ਹਨ।”"
@@ -148,8 +230,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where do sister and brother stand?",
         "questionPa": "ਭੈਣ ਅਤੇ ਭਰਾ ਕਿੱਥੇ ਖੜ੍ਹੇ ਹਨ?",
-        "choices": ["by the window", "on the bed", "in the bathroom"],
-        "choicesPa": ["ਖਿੜਕੀ ਦੇ ਕੋਲ", "ਬਿਸਤਰ ਉੱਤੇ", "ਬਾਥਰੂਮ ਵਿੱਚ"],
+        "choices": [
+          "by the window",
+          "on the bed",
+          "in the bathroom"
+        ],
+        "choicesPa": [
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ",
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they stand by the window.",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਉਹ ਖਿੜਕੀ ਦੇ ਕੋਲ ਖੜ੍ਹੇ ਹਨ।"
@@ -157,8 +247,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who helps the baby?",
         "questionPa": "ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["grandma and grandpa", "mom and dad", "sister and brother"],
-        "choicesPa": ["ਦਾਦੀ ਅਤੇ ਦਾਦਾ", "ਮਾਂ ਅਤੇ ਪਿਉ", "ਭੈਣ ਅਤੇ ਭਰਾ"],
+        "choices": [
+          "grandma and grandpa",
+          "mom and dad",
+          "sister and brother"
+        ],
+        "choicesPa": [
+          "ਦਾਦੀ ਅਤੇ ਦਾਦਾ",
+          "ਮਾਂ ਅਤੇ ਪਿਉ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “Grandma and grandpa help the baby.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।”"
@@ -166,11 +264,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Is the house big or small?",
         "questionPa": "ਘਰ ਵੱਡਾ ਹੈ ਜਾਂ ਛੋਟਾ?",
-        "choices": ["big", "small", "cold"],
-        "choicesPa": ["ਵੱਡਾ", "ਛੋਟਾ", "ਠੰਢਾ"],
+        "choices": [
+          "big",
+          "small",
+          "cold"
+        ],
+        "choicesPa": [
+          "ਵੱਡਾ",
+          "ਛੋਟਾ",
+          "ਠੰਢਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “My house is big.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੇਰਾ ਘਰ ਵੱਡਾ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "family",
+        "meaningEn": "people in my home",
+        "meaningPa": "ਪਰਿਵਾਰ"
+      },
+      {
+        "word": "home",
+        "meaningEn": "story word: home",
+        "meaningPa": "ਘਰ"
+      },
+      {
+        "word": "mom",
+        "meaningEn": "story word: mom",
+        "meaningPa": "ਮਾਂ"
+      },
+      {
+        "word": "dad",
+        "meaningEn": "story word: dad",
+        "meaningPa": "ਪਿਉ"
+      },
+      {
+        "word": "door",
+        "meaningEn": "story word: door",
+        "meaningPa": "ਦਰਵਾਜ਼ਾ"
+      },
+      {
+        "word": "sister",
+        "meaningEn": "story word: sister",
+        "meaningPa": "ਭੈਣ"
+      },
+      {
+        "word": "brother",
+        "meaningEn": "story word: brother",
+        "meaningPa": "ਭਰਾ"
+      },
+      {
+        "word": "window",
+        "meaningEn": "story word: window",
+        "meaningPa": "ਖਿੜਕੀ"
+      },
+      {
+        "word": "grandma",
+        "meaningEn": "story word: grandma",
+        "meaningPa": "ਦਾਦੀ"
+      },
+      {
+        "word": "grandpa",
+        "meaningEn": "story word: grandpa",
+        "meaningPa": "ਦਾਦਾ"
       }
     ]
   },
@@ -184,40 +342,105 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਬਿਸਤਰ ਉੱਤੇ ਬੈਠਦਾ ਹਾਂ ਅਤੇ ਮੇਰੀ ਕਿਤਾਬ ਮੇਰੇ ਨਾਲ ਹੈ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੇਰਾ ਖਿਡੌਣਾ ਮੇਰੇ ਬੈਗ ਵਿੱਚ ਹੈ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੇਰੇ ਜੁੱਤੇ ਕੁਰਸੀ ਦੇ ਕੋਲ ਹਨ। ਮੈਂ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹਾਂ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "bedroom", "pa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ" },
-        { "en": "bed", "pa": "ਬਿਸਤਰ" },
-        { "en": "book", "pa": "ਕਿਤਾਬ" },
-        { "en": "toy", "pa": "ਖਿਡੌਣਾ" },
-        { "en": "bag", "pa": "ਬੈਗ" },
-        { "en": "shoes", "pa": "ਜੁੱਤੇ" },
-        { "en": "chair", "pa": "ਕੁਰਸੀ" },
-        { "en": "door", "pa": "ਦਰਵਾਜ਼ਾ" }
+        {
+          "en": "bedroom",
+          "pa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        },
+        {
+          "en": "bed",
+          "pa": "ਬਿਸਤਰ"
+        },
+        {
+          "en": "book",
+          "pa": "ਕਿਤਾਬ"
+        },
+        {
+          "en": "toy",
+          "pa": "ਖਿਡੌਣਾ"
+        },
+        {
+          "en": "bag",
+          "pa": "ਬੈਗ"
+        },
+        {
+          "en": "shoes",
+          "pa": "ਜੁੱਤੇ"
+        },
+        {
+          "en": "chair",
+          "pa": "ਕੁਰਸੀ"
+        },
+        {
+          "en": "door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "sit", "pa": "ਬੈਠਣਾ" },
-        { "en": "open", "pa": "ਖੋਲ੍ਹਣਾ" },
-        { "en": "close", "pa": "ਬੰਦ ਕਰਨਾ" },
-        { "en": "is/are", "pa": "ਹੈ/ਹਨ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "is/are",
+          "pa": "ਹੈ/ਹਨ"
+        }
       ],
       "adjectives": [],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "on", "pa": "ਉੱਤੇ" },
-        { "en": "with", "pa": "ਨਾਲ" },
-        { "en": "by", "pa": "ਦੇ ਕੋਲ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "on",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "with",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "by",
+          "pa": "ਦੇ ਕੋਲ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["bedroom", "kitchen", "bathroom"],
-        "choicesPa": ["ਸੋਣ ਵਾਲਾ ਕਮਰਾ", "ਰਸੋਈ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "bedroom",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says, “I am in the bedroom.”",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।”"
@@ -225,8 +448,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where does the child sit?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਬੈਠਦਾ ਹੈ?",
-        "choices": ["on the bed", "on the table", "by the window"],
-        "choicesPa": ["ਬਿਸਤਰ ਉੱਤੇ", "ਮੇਜ਼ ਉੱਤੇ", "ਖਿੜਕੀ ਦੇ ਕੋਲ"],
+        "choices": [
+          "on the bed",
+          "on the table",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਮੇਜ਼ ਉੱਤੇ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child sits on the bed.",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਬਿਸਤਰ ਉੱਤੇ ਬੈਠਦਾ ਹੈ।"
@@ -234,8 +465,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where is the toy?",
         "questionPa": "ਖਿਡੌਣਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["in the bag", "in the cup", "in the bathroom"],
-        "choicesPa": ["ਬੈਗ ਵਿੱਚ", "ਕੱਪ ਵਿੱਚ", "ਬਾਥਰੂਮ ਵਿੱਚ"],
+        "choices": [
+          "in the bag",
+          "in the cup",
+          "in the bathroom"
+        ],
+        "choicesPa": [
+          "ਬੈਗ ਵਿੱਚ",
+          "ਕੱਪ ਵਿੱਚ",
+          "ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “My toy is in my bag.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੇਰਾ ਖਿਡੌਣਾ ਮੇਰੇ ਬੈਗ ਵਿੱਚ ਹੈ।”"
@@ -243,8 +482,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What is by the chair?",
         "questionPa": "ਕੁਰਸੀ ਦੇ ਕੋਲ ਕੀ ਹੈ?",
-        "choices": ["shoes", "milk", "apple"],
-        "choicesPa": ["ਜੁੱਤੇ", "ਦੁੱਧ", "ਸੇਬ"],
+        "choices": [
+          "shoes",
+          "milk",
+          "apple"
+        ],
+        "choicesPa": [
+          "ਜੁੱਤੇ",
+          "ਦੁੱਧ",
+          "ਸੇਬ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “My shoes are by the chair.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੇਰੇ ਜੁੱਤੇ ਕੁਰਸੀ ਦੇ ਕੋਲ ਹਨ।”"
@@ -252,11 +499,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child do at the end?",
         "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ ਹੈ?",
-        "choices": ["close the door", "wash the door", "eat the door"],
-        "choicesPa": ["ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹੈ", "ਦਰਵਾਜ਼ਾ ਧੋਂਦਾ ਹੈ", "ਦਰਵਾਜ਼ਾ ਖਾਂਦਾ ਹੈ"],
+        "choices": [
+          "close the door",
+          "wash the door",
+          "eat the door"
+        ],
+        "choicesPa": [
+          "ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਧੋਂਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਖਾਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “I close the door.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "bedroom",
+        "meaningEn": "a room for sleeping",
+        "meaningPa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+      },
+      {
+        "word": "bed",
+        "meaningEn": "story word: bed",
+        "meaningPa": "ਬਿਸਤਰ"
+      },
+      {
+        "word": "book",
+        "meaningEn": "story word: book",
+        "meaningPa": "ਕਿਤਾਬ"
+      },
+      {
+        "word": "toy",
+        "meaningEn": "story word: toy",
+        "meaningPa": "ਖਿਡੌਣਾ"
+      },
+      {
+        "word": "bag",
+        "meaningEn": "story word: bag",
+        "meaningPa": "ਬੈਗ"
+      },
+      {
+        "word": "shoes",
+        "meaningEn": "story word: shoes",
+        "meaningPa": "ਜੁੱਤੇ"
+      },
+      {
+        "word": "chair",
+        "meaningEn": "story word: chair",
+        "meaningPa": "ਕੁਰਸੀ"
+      },
+      {
+        "word": "door",
+        "meaningEn": "story word: door",
+        "meaningPa": "ਦਰਵਾਜ਼ਾ"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਬੈਠਣਾ"
       }
     ]
   },
@@ -269,38 +576,99 @@ var BOOK1_CUSTOM_STORIES = [
     "englishStory": "Panel 1 (Intro): I am in the kitchen.\nPanel 2 (Body): I eat bread and rice on a plate.\nPanel 3 (Body): I drink milk in a cup.\nPanel 4 (Body): I eat an apple and a banana.\nPanel 5 (Conclusion): The bread is hot. The milk is cold.",
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਰਸੋਈ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਪਲੇਟ ਉੱਤੇ ਰੋਟੀ ਅਤੇ ਚਾਵਲ ਖਾਂਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਕੱਪ ਵਿੱਚ ਦੁੱਧ ਪੀਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੈਂ ਸੇਬ ਅਤੇ ਕੇਲਾ ਖਾਂਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਰੋਟੀ ਗਰਮ ਹੈ। ਦੁੱਧ ਠੰਢਾ ਹੈ।",
     "partsOfSpeech": {
-      "pronouns": [{ "en": "I", "pa": "ਮੈਂ" }],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        }
+      ],
       "nouns": [
-        { "en": "kitchen", "pa": "ਰਸੋਈ" },
-        { "en": "bread", "pa": "ਰੋਟੀ" },
-        { "en": "rice", "pa": "ਚਾਵਲ" },
-        { "en": "plate", "pa": "ਪਲੇਟ" },
-        { "en": "milk", "pa": "ਦੁੱਧ" },
-        { "en": "cup", "pa": "ਕੱਪ" },
-        { "en": "apple", "pa": "ਸੇਬ" },
-        { "en": "banana", "pa": "ਕੇਲਾ" }
+        {
+          "en": "kitchen",
+          "pa": "ਰਸੋਈ"
+        },
+        {
+          "en": "bread",
+          "pa": "ਰੋਟੀ"
+        },
+        {
+          "en": "rice",
+          "pa": "ਚਾਵਲ"
+        },
+        {
+          "en": "plate",
+          "pa": "ਪਲੇਟ"
+        },
+        {
+          "en": "milk",
+          "pa": "ਦੁੱਧ"
+        },
+        {
+          "en": "cup",
+          "pa": "ਕੱਪ"
+        },
+        {
+          "en": "apple",
+          "pa": "ਸੇਬ"
+        },
+        {
+          "en": "banana",
+          "pa": "ਕੇਲਾ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "eat", "pa": "ਖਾਣਾ" },
-        { "en": "drink", "pa": "ਪੀਣਾ" },
-        { "en": "is", "pa": "ਹੈ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "eat",
+          "pa": "ਖਾਣਾ"
+        },
+        {
+          "en": "drink",
+          "pa": "ਪੀਣਾ"
+        },
+        {
+          "en": "is",
+          "pa": "ਹੈ"
+        }
       ],
       "adjectives": [
-        { "en": "hot", "pa": "ਗਰਮ" },
-        { "en": "cold", "pa": "ਠੰਢਾ" }
+        {
+          "en": "hot",
+          "pa": "ਗਰਮ"
+        },
+        {
+          "en": "cold",
+          "pa": "ਠੰਢਾ"
+        }
       ],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "on", "pa": "ਉੱਤੇ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "on",
+          "pa": "ਉੱਤੇ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["kitchen", "bedroom", "bathroom"],
-        "choicesPa": ["ਰਸੋਈ", "ਸੋਣ ਵਾਲਾ ਕਮਰਾ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child is in the kitchen.",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਰਸੋਈ ਵਿੱਚ ਹੈ।"
@@ -308,8 +676,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child eat on a plate?",
         "questionPa": "ਬੱਚਾ ਪਲੇਟ ਉੱਤੇ ਕੀ ਖਾਂਦਾ ਹੈ?",
-        "choices": ["bread and rice", "milk and water", "shoes and hat"],
-        "choicesPa": ["ਰੋਟੀ ਅਤੇ ਚਾਵਲ", "ਦੁੱਧ ਅਤੇ ਪਾਣੀ", "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"],
+        "choices": [
+          "bread and rice",
+          "milk and water",
+          "shoes and hat"
+        ],
+        "choicesPa": [
+          "ਰੋਟੀ ਅਤੇ ਚਾਵਲ",
+          "ਦੁੱਧ ਅਤੇ ਪਾਣੀ",
+          "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “I eat bread and rice on a plate.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਲੇਟ ਉੱਤੇ ਰੋਟੀ ਅਤੇ ਚਾਵਲ ਖਾਂਦਾ ਹਾਂ।”"
@@ -317,8 +693,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child drink?",
         "questionPa": "ਬੱਚਾ ਕੀ ਪੀਦਾ ਹੈ?",
-        "choices": ["milk", "rice", "banana"],
-        "choicesPa": ["ਦੁੱਧ", "ਚਾਵਲ", "ਕੇਲਾ"],
+        "choices": [
+          "milk",
+          "rice",
+          "banana"
+        ],
+        "choicesPa": [
+          "ਦੁੱਧ",
+          "ਚਾਵਲ",
+          "ਕੇਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “I drink milk in a cup.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਕੱਪ ਵਿੱਚ ਦੁੱਧ ਪੀਦਾ ਹਾਂ।”"
@@ -326,8 +710,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Which fruit is in the story?",
         "questionPa": "ਕਹਾਣੀ ਵਿੱਚ ਕਿਹੜਾ ਫਲ ਹੈ?",
-        "choices": ["banana", "chair", "door"],
-        "choicesPa": ["ਕੇਲਾ", "ਕੁਰਸੀ", "ਦਰਵਾਜ਼ਾ"],
+        "choices": [
+          "banana",
+          "chair",
+          "door"
+        ],
+        "choicesPa": [
+          "ਕੇਲਾ",
+          "ਕੁਰਸੀ",
+          "ਦਰਵਾਜ਼ਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “I eat an apple and a banana.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਸੇਬ ਅਤੇ ਕੇਲਾ ਖਾਂਦਾ ਹਾਂ।”"
@@ -335,11 +727,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Is the bread hot or cold?",
         "questionPa": "ਰੋਟੀ ਗਰਮ ਹੈ ਜਾਂ ਠੰਢੀ?",
-        "choices": ["hot", "cold", "small"],
-        "choicesPa": ["ਗਰਮ", "ਠੰਢੀ", "ਛੋਟੀ"],
+        "choices": [
+          "hot",
+          "cold",
+          "small"
+        ],
+        "choicesPa": [
+          "ਗਰਮ",
+          "ਠੰਢੀ",
+          "ਛੋਟੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “The bread is hot.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਰੋਟੀ ਗਰਮ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "plate",
+        "meaningEn": "a flat dish for food",
+        "meaningPa": "ਪਲੇਟ"
+      },
+      {
+        "word": "kitchen",
+        "meaningEn": "story word: kitchen",
+        "meaningPa": "ਰਸੋਈ"
+      },
+      {
+        "word": "bread",
+        "meaningEn": "story word: bread",
+        "meaningPa": "ਰੋਟੀ"
+      },
+      {
+        "word": "rice",
+        "meaningEn": "story word: rice",
+        "meaningPa": "ਚਾਵਲ"
+      },
+      {
+        "word": "milk",
+        "meaningEn": "story word: milk",
+        "meaningPa": "ਦੁੱਧ"
+      },
+      {
+        "word": "cup",
+        "meaningEn": "story word: cup",
+        "meaningPa": "ਕੱਪ"
+      },
+      {
+        "word": "apple",
+        "meaningEn": "story word: apple",
+        "meaningPa": "ਸੇਬ"
+      },
+      {
+        "word": "banana",
+        "meaningEn": "story word: banana",
+        "meaningPa": "ਕੇਲਾ"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "eat",
+        "meaningEn": "action word from the story: eat",
+        "meaningPa": "ਖਾਣਾ"
       }
     ]
   },
@@ -353,34 +805,90 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਬਾਥਰੂਮ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਪਾਣੀ ਨਾਲ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਆਪਣੀ ਕਮੀਜ਼ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੈਂ ਆਪਣੇ ਜੁੱਤੇ ਅਤੇ ਆਪਣੀ ਟੋਪੀ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਤੂੰ ਮੇਰੀ ਮਦਦ ਕਰਦਾ ਹੈਂ। ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "you", "pa": "ਤੂੰ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "you",
+          "pa": "ਤੂੰ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "bathroom", "pa": "ਬਾਥਰੂਮ" },
-        { "en": "water", "pa": "ਪਾਣੀ" },
-        { "en": "shirt", "pa": "ਕਮੀਜ਼" },
-        { "en": "shoes", "pa": "ਜੁੱਤੇ" },
-        { "en": "hat", "pa": "ਟੋਪੀ" }
+        {
+          "en": "bathroom",
+          "pa": "ਬਾਥਰੂਮ"
+        },
+        {
+          "en": "water",
+          "pa": "ਪਾਣੀ"
+        },
+        {
+          "en": "shirt",
+          "pa": "ਕਮੀਜ਼"
+        },
+        {
+          "en": "shoes",
+          "pa": "ਜੁੱਤੇ"
+        },
+        {
+          "en": "hat",
+          "pa": "ਟੋਪੀ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "wash", "pa": "ਧੋਣਾ" },
-        { "en": "help", "pa": "ਮਦਦ ਕਰਨਾ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "wash",
+          "pa": "ਧੋਣਾ"
+        },
+        {
+          "en": "help",
+          "pa": "ਮਦਦ ਕਰਨਾ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
       ],
-      "adjectives": [{ "en": "happy", "pa": "ਖੁਸ਼" }],
+      "adjectives": [
+        {
+          "en": "happy",
+          "pa": "ਖੁਸ਼"
+        }
+      ],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "with", "pa": "ਨਾਲ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "with",
+          "pa": "ਨਾਲ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["bathroom", "kitchen", "bedroom"],
-        "choicesPa": ["ਬਾਥਰੂਮ", "ਰਸੋਈ", "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"],
+        "choices": [
+          "bathroom",
+          "kitchen",
+          "bedroom"
+        ],
+        "choicesPa": [
+          "ਬਾਥਰੂਮ",
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child is in the bathroom.",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਬਾਥਰੂਮ ਵਿੱਚ ਹੈ।"
@@ -388,8 +896,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child wash with?",
         "questionPa": "ਬੱਚਾ ਕਿਸ ਨਾਲ ਧੋਂਦਾ ਹੈ?",
-        "choices": ["water", "milk", "bread"],
-        "choicesPa": ["ਪਾਣੀ", "ਦੁੱਧ", "ਰੋਟੀ"],
+        "choices": [
+          "water",
+          "milk",
+          "bread"
+        ],
+        "choicesPa": [
+          "ਪਾਣੀ",
+          "ਦੁੱਧ",
+          "ਰੋਟੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “I wash with water.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਾਣੀ ਨਾਲ ਧੋਂਦਾ ਹਾਂ।”"
@@ -397,8 +913,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child wash?",
         "questionPa": "ਬੱਚਾ ਕੀ ਧੋਂਦਾ ਹੈ?",
-        "choices": ["shirt", "book", "banana"],
-        "choicesPa": ["ਕਮੀਜ਼", "ਕਿਤਾਬ", "ਕੇਲਾ"],
+        "choices": [
+          "shirt",
+          "book",
+          "banana"
+        ],
+        "choicesPa": [
+          "ਕਮੀਜ਼",
+          "ਕਿਤਾਬ",
+          "ਕੇਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “I wash my shirt.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੀ ਕਮੀਜ਼ ਧੋਂਦਾ ਹਾਂ।”"
@@ -406,8 +930,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What else does the child wash?",
         "questionPa": "ਬੱਚਾ ਹੋਰ ਕੀ ਧੋਂਦਾ ਹੈ?",
-        "choices": ["shoes and hat", "door and window", "bed and chair"],
-        "choicesPa": ["ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ", "ਦਰਵਾਜ਼ਾ ਅਤੇ ਖਿੜਕੀ", "ਬਿਸਤਰ ਅਤੇ ਕੁਰਸੀ"],
+        "choices": [
+          "shoes and hat",
+          "door and window",
+          "bed and chair"
+        ],
+        "choicesPa": [
+          "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ",
+          "ਦਰਵਾਜ਼ਾ ਅਤੇ ਖਿੜਕੀ",
+          "ਬਿਸਤਰ ਅਤੇ ਕੁਰਸੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “I wash my shoes and my hat.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਜੁੱਤੇ ਅਤੇ ਆਪਣੀ ਟੋਪੀ ਧੋਂਦਾ ਹਾਂ।”"
@@ -415,11 +947,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "How does the child feel at the end?",
         "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ ਹੈ?",
-        "choices": ["happy", "cold", "hot"],
-        "choicesPa": ["ਖੁਸ਼", "ਠੰਢਾ", "ਗਰਮ"],
+        "choices": [
+          "happy",
+          "cold",
+          "hot"
+        ],
+        "choicesPa": [
+          "ਖੁਸ਼",
+          "ਠੰਢਾ",
+          "ਗਰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “I am happy.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖੁਸ਼ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "bathroom",
+        "meaningEn": "a room for washing",
+        "meaningPa": "ਬਾਥਰੂਮ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "story word: water",
+        "meaningPa": "ਪਾਣੀ"
+      },
+      {
+        "word": "shirt",
+        "meaningEn": "story word: shirt",
+        "meaningPa": "ਕਮੀਜ਼"
+      },
+      {
+        "word": "shoes",
+        "meaningEn": "story word: shoes",
+        "meaningPa": "ਜੁੱਤੇ"
+      },
+      {
+        "word": "hat",
+        "meaningEn": "story word: hat",
+        "meaningPa": "ਟੋਪੀ"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "wash",
+        "meaningEn": "action word from the story: wash",
+        "meaningPa": "ਧੋਣਾ"
+      },
+      {
+        "word": "help",
+        "meaningEn": "action word from the story: help",
+        "meaningPa": "ਮਦਦ ਕਰਨਾ"
+      },
+      {
+        "word": "happy",
+        "meaningEn": "describing word from the story: happy",
+        "meaningPa": "ਖੁਸ਼"
+      },
+      {
+        "word": "in",
+        "meaningEn": "position word from the story: in",
+        "meaningPa": "ਵਿੱਚ"
       }
     ]
   },
@@ -433,38 +1025,102 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਆਪਣੇ ਖਿਡੌਣੇ ਨਾਲ ਖੇਡਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮਾਂ ਕੁਰਸੀ ਉੱਤੇ ਬੈਠਦੀ ਹੈ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਪਿਉ ਮੇਜ਼ ਤੇ ਬੈਠਦਾ ਹੈ। ਮੇਰੀ ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "room", "pa": "ਕਮਰਾ" },
-        { "en": "toy", "pa": "ਖਿਡੌਣਾ" },
-        { "en": "mom", "pa": "ਮਾਂ" },
-        { "en": "chair", "pa": "ਕੁਰਸੀ" },
-        { "en": "dad", "pa": "ਪਿਉ" },
-        { "en": "table", "pa": "ਮੇਜ਼" },
-        { "en": "book", "pa": "ਕਿਤਾਬ" }
+        {
+          "en": "room",
+          "pa": "ਕਮਰਾ"
+        },
+        {
+          "en": "toy",
+          "pa": "ਖਿਡੌਣਾ"
+        },
+        {
+          "en": "mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "chair",
+          "pa": "ਕੁਰਸੀ"
+        },
+        {
+          "en": "dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "table",
+          "pa": "ਮੇਜ਼"
+        },
+        {
+          "en": "book",
+          "pa": "ਕਿਤਾਬ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "play", "pa": "ਖੇਡਣਾ" },
-        { "en": "sit(s)", "pa": "ਬੈਠਣਾ" },
-        { "en": "is", "pa": "ਹੈ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "play",
+          "pa": "ਖੇਡਣਾ"
+        },
+        {
+          "en": "sit(s)",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "is",
+          "pa": "ਹੈ"
+        }
       ],
-      "adjectives": [{ "en": "happy", "pa": "ਖੁਸ਼" }],
+      "adjectives": [
+        {
+          "en": "happy",
+          "pa": "ਖੁਸ਼"
+        }
+      ],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "with", "pa": "ਨਾਲ" },
-        { "en": "on", "pa": "ਉੱਤੇ" },
-        { "en": "at", "pa": "ਤੇ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "with",
+          "pa": "ਨਾਲ"
+        },
+        {
+          "en": "on",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "at",
+          "pa": "ਤੇ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["room", "bathroom", "kitchen"],
-        "choicesPa": ["ਕਮਰਾ", "ਬਾਥਰੂਮ", "ਰਸੋਈ"],
+        "choices": [
+          "room",
+          "bathroom",
+          "kitchen"
+        ],
+        "choicesPa": [
+          "ਕਮਰਾ",
+          "ਬਾਥਰੂਮ",
+          "ਰਸੋਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says, “I am in my room.”",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।”"
@@ -472,8 +1128,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child play with?",
         "questionPa": "ਬੱਚਾ ਕਿਸ ਨਾਲ ਖੇਡਦਾ ਹੈ?",
-        "choices": ["toy", "spoon", "shoes"],
-        "choicesPa": ["ਖਿਡੌਣਾ", "ਚਮਚਾ", "ਜੁੱਤੇ"],
+        "choices": [
+          "toy",
+          "spoon",
+          "shoes"
+        ],
+        "choicesPa": [
+          "ਖਿਡੌਣਾ",
+          "ਚਮਚਾ",
+          "ਜੁੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “I play with my toy.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਖਿਡੌਣੇ ਨਾਲ ਖੇਡਦਾ ਹਾਂ।”"
@@ -481,8 +1145,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who sits on the chair?",
         "questionPa": "ਕੁਰਸੀ ਉੱਤੇ ਕੌਣ ਬੈਠਦਾ ਹੈ?",
-        "choices": ["mom", "baby", "grandpa"],
-        "choicesPa": ["ਮਾਂ", "ਬੱਚਾ", "ਦਾਦਾ"],
+        "choices": [
+          "mom",
+          "baby",
+          "grandpa"
+        ],
+        "choicesPa": [
+          "ਮਾਂ",
+          "ਬੱਚਾ",
+          "ਦਾਦਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “Mom sits on the chair.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮਾਂ ਕੁਰਸੀ ਉੱਤੇ ਬੈਠਦੀ ਹੈ।”"
@@ -490,8 +1162,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where does dad sit?",
         "questionPa": "ਪਿਉ ਕਿੱਥੇ ਬੈਠਦਾ ਹੈ?",
-        "choices": ["at the table", "on the bed", "by the window"],
-        "choicesPa": ["ਮੇਜ਼ ਤੇ", "ਬਿਸਤਰ ਉੱਤੇ", "ਖਿੜਕੀ ਦੇ ਕੋਲ"],
+        "choices": [
+          "at the table",
+          "on the bed",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਮੇਜ਼ ਤੇ",
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says dad sits at the table.",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਪਿਉ ਮੇਜ਼ ਤੇ ਬੈਠਦਾ ਹੈ।"
@@ -499,11 +1179,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "How does the child feel at the end?",
         "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਹੈ?",
-        "choices": ["happy", "cold", "hot"],
-        "choicesPa": ["ਖੁਸ਼", "ਠੰਢਾ", "ਗਰਮ"],
+        "choices": [
+          "happy",
+          "cold",
+          "hot"
+        ],
+        "choicesPa": [
+          "ਖੁਸ਼",
+          "ਠੰਢਾ",
+          "ਗਰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “I am happy.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖੁਸ਼ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "play",
+        "meaningEn": "have fun with toys or games",
+        "meaningPa": "ਖੇਡਣਾ"
+      },
+      {
+        "word": "room",
+        "meaningEn": "story word: room",
+        "meaningPa": "ਕਮਰਾ"
+      },
+      {
+        "word": "toy",
+        "meaningEn": "story word: toy",
+        "meaningPa": "ਖਿਡੌਣਾ"
+      },
+      {
+        "word": "mom",
+        "meaningEn": "story word: mom",
+        "meaningPa": "ਮਾਂ"
+      },
+      {
+        "word": "chair",
+        "meaningEn": "story word: chair",
+        "meaningPa": "ਕੁਰਸੀ"
+      },
+      {
+        "word": "dad",
+        "meaningEn": "story word: dad",
+        "meaningPa": "ਪਿਉ"
+      },
+      {
+        "word": "table",
+        "meaningEn": "story word: table",
+        "meaningPa": "ਮੇਜ਼"
+      },
+      {
+        "word": "book",
+        "meaningEn": "story word: book",
+        "meaningPa": "ਕਿਤਾਬ"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "sit(s)",
+        "meaningEn": "action word from the story: sit(s)",
+        "meaningPa": "ਬੈਠਣਾ"
       }
     ]
   },
@@ -518,34 +1258,87 @@ var BOOK1_CUSTOM_STORIES = [
     "partsOfSpeech": {
       "pronouns": [],
       "nouns": [
-        { "en": "baby", "pa": "ਬੱਚਾ" },
-        { "en": "bedroom", "pa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ" },
-        { "en": "grandma", "pa": "ਦਾਦੀ" },
-        { "en": "grandpa", "pa": "ਦਾਦਾ" },
-        { "en": "door", "pa": "ਦਰਵਾਜ਼ਾ" },
-        { "en": "mom", "pa": "ਮਾਂ" },
-        { "en": "dad", "pa": "ਪਿਉ" },
-        { "en": "bed", "pa": "ਬਿਸਤਰ" }
+        {
+          "en": "baby",
+          "pa": "ਬੱਚਾ"
+        },
+        {
+          "en": "bedroom",
+          "pa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        },
+        {
+          "en": "grandma",
+          "pa": "ਦਾਦੀ"
+        },
+        {
+          "en": "grandpa",
+          "pa": "ਦਾਦਾ"
+        },
+        {
+          "en": "door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "bed",
+          "pa": "ਬਿਸਤਰ"
+        }
       ],
       "verbs": [
-        { "en": "open(s)", "pa": "ਖੋਲ੍ਹਣਾ" },
-        { "en": "close(s)", "pa": "ਬੰਦ ਕਰਨਾ" },
-        { "en": "help", "pa": "ਮਦਦ ਕਰਨਾ" },
-        { "en": "sleep(s)", "pa": "ਸੋਣਾ" },
-        { "en": "is", "pa": "ਹੈ" }
+        {
+          "en": "open(s)",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "close(s)",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "help",
+          "pa": "ਮਦਦ ਕਰਨਾ"
+        },
+        {
+          "en": "sleep(s)",
+          "pa": "ਸੋਣਾ"
+        },
+        {
+          "en": "is",
+          "pa": "ਹੈ"
+        }
       ],
       "adjectives": [],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "on", "pa": "ਉੱਤੇ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "on",
+          "pa": "ਉੱਤੇ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the baby?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["bedroom", "kitchen", "bathroom"],
-        "choicesPa": ["ਸੋਣ ਵਾਲਾ ਕਮਰਾ", "ਰਸੋਈ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "bedroom",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the baby is in the bedroom.",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਸੋਣ ਵਾਲੇ ਕਮਰੇ ਵਿੱਚ ਹੈ।"
@@ -553,8 +1346,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who opens the door?",
         "questionPa": "ਦਰਵਾਜ਼ਾ ਕੌਣ ਖੋਲ੍ਹਦਾ ਹੈ?",
-        "choices": ["grandma", "dad", "sister"],
-        "choicesPa": ["ਦਾਦੀ", "ਪਿਉ", "ਭੈਣ"],
+        "choices": [
+          "grandma",
+          "dad",
+          "sister"
+        ],
+        "choicesPa": [
+          "ਦਾਦੀ",
+          "ਪਿਉ",
+          "ਭੈਣ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “Grandma opens the door.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦੀ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦੀ ਹੈ।”"
@@ -562,8 +1363,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who closes the door?",
         "questionPa": "ਦਰਵਾਜ਼ਾ ਕੌਣ ਬੰਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["grandpa", "mom", "brother"],
-        "choicesPa": ["ਦਾਦਾ", "ਮਾਂ", "ਭਰਾ"],
+        "choices": [
+          "grandpa",
+          "mom",
+          "brother"
+        ],
+        "choicesPa": [
+          "ਦਾਦਾ",
+          "ਮਾਂ",
+          "ਭਰਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “Grandpa closes the door.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦਾ ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰਦਾ ਹੈ।”"
@@ -571,8 +1380,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who helps the baby?",
         "questionPa": "ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["mom and dad", "sister and brother", "you"],
-        "choicesPa": ["ਮਾਂ ਅਤੇ ਪਿਉ", "ਭੈਣ ਅਤੇ ਭਰਾ", "ਤੂੰ"],
+        "choices": [
+          "mom and dad",
+          "sister and brother",
+          "you"
+        ],
+        "choicesPa": [
+          "ਮਾਂ ਅਤੇ ਪਿਉ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ",
+          "ਤੂੰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “Mom and dad help the baby.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮਾਂ ਅਤੇ ਪਿਉ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।”"
@@ -580,11 +1397,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where does the baby sleep?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਸੌਂਦਾ ਹੈ?",
-        "choices": ["on the bed", "on the table", "by the window"],
-        "choicesPa": ["ਬਿਸਤਰ ਉੱਤੇ", "ਮੇਜ਼ ਉੱਤੇ", "ਖਿੜਕੀ ਦੇ ਕੋਲ"],
+        "choices": [
+          "on the bed",
+          "on the table",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਮੇਜ਼ ਉੱਤੇ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “The baby sleeps on the bed.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਬੱਚਾ ਬਿਸਤਰ ਉੱਤੇ ਸੌਂਦਾ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "grandma",
+        "meaningEn": "your father's or mother's mother",
+        "meaningPa": "ਦਾਦੀ/ਨਾਨੀ"
+      },
+      {
+        "word": "baby",
+        "meaningEn": "story word: baby",
+        "meaningPa": "ਬੱਚਾ"
+      },
+      {
+        "word": "bedroom",
+        "meaningEn": "story word: bedroom",
+        "meaningPa": "ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+      },
+      {
+        "word": "grandpa",
+        "meaningEn": "story word: grandpa",
+        "meaningPa": "ਦਾਦਾ"
+      },
+      {
+        "word": "door",
+        "meaningEn": "story word: door",
+        "meaningPa": "ਦਰਵਾਜ਼ਾ"
+      },
+      {
+        "word": "mom",
+        "meaningEn": "story word: mom",
+        "meaningPa": "ਮਾਂ"
+      },
+      {
+        "word": "dad",
+        "meaningEn": "story word: dad",
+        "meaningPa": "ਪਿਉ"
+      },
+      {
+        "word": "bed",
+        "meaningEn": "story word: bed",
+        "meaningPa": "ਬਿਸਤਰ"
+      },
+      {
+        "word": "open(s)",
+        "meaningEn": "action word from the story: open(s)",
+        "meaningPa": "ਖੋਲ੍ਹਣਾ"
+      },
+      {
+        "word": "close(s)",
+        "meaningEn": "action word from the story: close(s)",
+        "meaningPa": "ਬੰਦ ਕਰਨਾ"
       }
     ]
   },
@@ -597,32 +1474,83 @@ var BOOK1_CUSTOM_STORIES = [
     "englishStory": "Panel 1 (Intro): I am in the kitchen.\nPanel 2 (Body): I wash a cup and a spoon with water.\nPanel 3 (Body): I wash a plate.\nPanel 4 (Body): I drink water.\nPanel 5 (Conclusion): The water is cold.",
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਰਸੋਈ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਪਾਣੀ ਨਾਲ ਕੱਪ ਅਤੇ ਚਮਚਾ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਪਲੇਟ ਧੋਂਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੈਂ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।\nਪੈਨਲ 5 (ਅੰਤ): ਪਾਣੀ ਠੰਢਾ ਹੈ।",
     "partsOfSpeech": {
-      "pronouns": [{ "en": "I", "pa": "ਮੈਂ" }],
+      "pronouns": [
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        }
+      ],
       "nouns": [
-        { "en": "kitchen", "pa": "ਰਸੋਈ" },
-        { "en": "cup", "pa": "ਕੱਪ" },
-        { "en": "spoon", "pa": "ਚਮਚਾ" },
-        { "en": "plate", "pa": "ਪਲੇਟ" },
-        { "en": "water", "pa": "ਪਾਣੀ" }
+        {
+          "en": "kitchen",
+          "pa": "ਰਸੋਈ"
+        },
+        {
+          "en": "cup",
+          "pa": "ਕੱਪ"
+        },
+        {
+          "en": "spoon",
+          "pa": "ਚਮਚਾ"
+        },
+        {
+          "en": "plate",
+          "pa": "ਪਲੇਟ"
+        },
+        {
+          "en": "water",
+          "pa": "ਪਾਣੀ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "wash", "pa": "ਧੋਣਾ" },
-        { "en": "drink", "pa": "ਪੀਣਾ" },
-        { "en": "is", "pa": "ਹੈ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "wash",
+          "pa": "ਧੋਣਾ"
+        },
+        {
+          "en": "drink",
+          "pa": "ਪੀਣਾ"
+        },
+        {
+          "en": "is",
+          "pa": "ਹੈ"
+        }
       ],
-      "adjectives": [{ "en": "cold", "pa": "ਠੰਢਾ" }],
+      "adjectives": [
+        {
+          "en": "cold",
+          "pa": "ਠੰਢਾ"
+        }
+      ],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "with", "pa": "ਨਾਲ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "with",
+          "pa": "ਨਾਲ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["kitchen", "bedroom", "bathroom"],
-        "choicesPa": ["ਰਸੋਈ", "ਸੋਣ ਵਾਲਾ ਕਮਰਾ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child is in the kitchen.",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਬੱਚਾ ਰਸੋਈ ਵਿੱਚ ਹੈ।"
@@ -630,8 +1558,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child wash first?",
         "questionPa": "ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਧੋਂਦਾ ਹੈ?",
-        "choices": ["cup and spoon", "shoes and hat", "bread and rice"],
-        "choicesPa": ["ਕੱਪ ਅਤੇ ਚਮਚਾ", "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ", "ਰੋਟੀ ਅਤੇ ਚਾਵਲ"],
+        "choices": [
+          "cup and spoon",
+          "shoes and hat",
+          "bread and rice"
+        ],
+        "choicesPa": [
+          "ਕੱਪ ਅਤੇ ਚਮਚਾ",
+          "ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ",
+          "ਰੋਟੀ ਅਤੇ ਚਾਵਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “I wash a cup and a spoon with water.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਾਣੀ ਨਾਲ ਕੱਪ ਅਤੇ ਚਮਚਾ ਧੋਂਦਾ ਹਾਂ।”"
@@ -639,8 +1575,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child wash next?",
         "questionPa": "ਬੱਚਾ ਅਗਲਾ ਕੀ ਧੋਂਦਾ ਹੈ?",
-        "choices": ["plate", "book", "window"],
-        "choicesPa": ["ਪਲੇਟ", "ਕਿਤਾਬ", "ਖਿੜਕੀ"],
+        "choices": [
+          "plate",
+          "book",
+          "window"
+        ],
+        "choicesPa": [
+          "ਪਲੇਟ",
+          "ਕਿਤਾਬ",
+          "ਖਿੜਕੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “I wash a plate.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਲੇਟ ਧੋਂਦਾ ਹਾਂ।”"
@@ -648,8 +1592,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child drink?",
         "questionPa": "ਬੱਚਾ ਕੀ ਪੀਦਾ ਹੈ?",
-        "choices": ["water", "milk", "rice"],
-        "choicesPa": ["ਪਾਣੀ", "ਦੁੱਧ", "ਚਾਵਲ"],
+        "choices": [
+          "water",
+          "milk",
+          "rice"
+        ],
+        "choicesPa": [
+          "ਪਾਣੀ",
+          "ਦੁੱਧ",
+          "ਚਾਵਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “I drink water.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।”"
@@ -657,11 +1609,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Is the water hot or cold?",
         "questionPa": "ਪਾਣੀ ਗਰਮ ਹੈ ਜਾਂ ਠੰਢਾ?",
-        "choices": ["cold", "hot", "big"],
-        "choicesPa": ["ਠੰਢਾ", "ਗਰਮ", "ਵੱਡਾ"],
+        "choices": [
+          "cold",
+          "hot",
+          "big"
+        ],
+        "choicesPa": [
+          "ਠੰਢਾ",
+          "ਗਰਮ",
+          "ਵੱਡਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “The water is cold.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਪਾਣੀ ਠੰਢਾ ਹੈ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "kitchen",
+        "meaningEn": "the room where food is made",
+        "meaningPa": "ਰਸੋਈ"
+      },
+      {
+        "word": "cup",
+        "meaningEn": "story word: cup",
+        "meaningPa": "ਕੱਪ"
+      },
+      {
+        "word": "spoon",
+        "meaningEn": "story word: spoon",
+        "meaningPa": "ਚਮਚਾ"
+      },
+      {
+        "word": "plate",
+        "meaningEn": "story word: plate",
+        "meaningPa": "ਪਲੇਟ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "story word: water",
+        "meaningPa": "ਪਾਣੀ"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "wash",
+        "meaningEn": "action word from the story: wash",
+        "meaningPa": "ਧੋਣਾ"
+      },
+      {
+        "word": "drink",
+        "meaningEn": "action word from the story: drink",
+        "meaningPa": "ਪੀਣਾ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਹੈ"
+      },
+      {
+        "word": "cold",
+        "meaningEn": "describing word from the story: cold",
+        "meaningPa": "ਠੰਢਾ"
       }
     ]
   },
@@ -675,35 +1687,89 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੇਰੀ ਕਮੀਜ਼ ਬਿਸਤਰ ਉੱਤੇ ਹੈ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੇਰੇ ਜੁੱਤੇ ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ ਹਨ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੇਰੀ ਟੋਪੀ ਮੇਜ਼ ਉੱਤੇ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹਾਂ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "home", "pa": "ਘਰ" },
-        { "en": "shirt", "pa": "ਕਮੀਜ਼" },
-        { "en": "bed", "pa": "ਬਿਸਤਰ" },
-        { "en": "shoes", "pa": "ਜੁੱਤੇ" },
-        { "en": "door", "pa": "ਦਰਵਾਜ਼ਾ" },
-        { "en": "hat", "pa": "ਟੋਪੀ" },
-        { "en": "table", "pa": "ਮੇਜ਼" }
+        {
+          "en": "home",
+          "pa": "ਘਰ"
+        },
+        {
+          "en": "shirt",
+          "pa": "ਕਮੀਜ਼"
+        },
+        {
+          "en": "bed",
+          "pa": "ਬਿਸਤਰ"
+        },
+        {
+          "en": "shoes",
+          "pa": "ਜੁੱਤੇ"
+        },
+        {
+          "en": "door",
+          "pa": "ਦਰਵਾਜ਼ਾ"
+        },
+        {
+          "en": "hat",
+          "pa": "ਟੋਪੀ"
+        },
+        {
+          "en": "table",
+          "pa": "ਮੇਜ਼"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "open", "pa": "ਖੋਲ੍ਹਣਾ" },
-        { "en": "is/are", "pa": "ਹੈ/ਹਨ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "is/are",
+          "pa": "ਹੈ/ਹਨ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
       ],
       "adjectives": [],
       "prepositions": [
-        { "en": "on", "pa": "ਉੱਤੇ" },
-        { "en": "by", "pa": "ਦੇ ਕੋਲ" }
+        {
+          "en": "on",
+          "pa": "ਉੱਤੇ"
+        },
+        {
+          "en": "by",
+          "pa": "ਦੇ ਕੋਲ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["home", "kitchen", "bathroom"],
-        "choicesPa": ["ਘਰ", "ਰਸੋਈ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "home",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਘਰ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says, “I am at home.”",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਘਰ ਵਿੱਚ ਹਾਂ।”"
@@ -711,8 +1777,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where is the shirt?",
         "questionPa": "ਕਮੀਜ਼ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["on the bed", "in the cup", "by the window"],
-        "choicesPa": ["ਬਿਸਤਰ ਉੱਤੇ", "ਕੱਪ ਵਿੱਚ", "ਖਿੜਕੀ ਦੇ ਕੋਲ"],
+        "choices": [
+          "on the bed",
+          "in the cup",
+          "by the window"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਕੱਪ ਵਿੱਚ",
+          "ਖਿੜਕੀ ਦੇ ਕੋਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the shirt is on the bed.",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਕਮੀਜ਼ ਬਿਸਤਰ ਉੱਤੇ ਹੈ।"
@@ -720,8 +1794,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where are the shoes?",
         "questionPa": "ਜੁੱਤੇ ਕਿੱਥੇ ਹਨ?",
-        "choices": ["by the door", "on the plate", "in the bathroom"],
-        "choicesPa": ["ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ", "ਪਲੇਟ ਉੱਤੇ", "ਬਾਥਰੂਮ ਵਿੱਚ"],
+        "choices": [
+          "by the door",
+          "on the plate",
+          "in the bathroom"
+        ],
+        "choicesPa": [
+          "ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ",
+          "ਪਲੇਟ ਉੱਤੇ",
+          "ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the shoes are by the door.",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਜੁੱਤੇ ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ ਹਨ।"
@@ -729,8 +1811,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where is the hat?",
         "questionPa": "ਟੋਪੀ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["on the table", "on the bed", "in the bag"],
-        "choicesPa": ["ਮੇਜ਼ ਉੱਤੇ", "ਬਿਸਤਰ ਉੱਤੇ", "ਬੈਗ ਵਿੱਚ"],
+        "choices": [
+          "on the table",
+          "on the bed",
+          "in the bag"
+        ],
+        "choicesPa": [
+          "ਮੇਜ਼ ਉੱਤੇ",
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਬੈਗ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the hat is on the table.",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਟੋਪੀ ਮੇਜ਼ ਉੱਤੇ ਹੈ।"
@@ -738,11 +1828,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child do at the end?",
         "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ ਹੈ?",
-        "choices": ["open the door", "wash the door", "drink the door"],
-        "choicesPa": ["ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹੈ", "ਦਰਵਾਜ਼ਾ ਧੋਂਦਾ ਹੈ", "ਦਰਵਾਜ਼ਾ ਪੀਂਦਾ ਹੈ"],
+        "choices": [
+          "open the door",
+          "wash the door",
+          "drink the door"
+        ],
+        "choicesPa": [
+          "ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਧੋਂਦਾ ਹੈ",
+          "ਦਰਵਾਜ਼ਾ ਪੀਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “I open the door.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹਦਾ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "shirt",
+        "meaningEn": "clothes worn on the upper body",
+        "meaningPa": "ਕਮੀਜ਼"
+      },
+      {
+        "word": "home",
+        "meaningEn": "story word: home",
+        "meaningPa": "ਘਰ"
+      },
+      {
+        "word": "bed",
+        "meaningEn": "story word: bed",
+        "meaningPa": "ਬਿਸਤਰ"
+      },
+      {
+        "word": "shoes",
+        "meaningEn": "story word: shoes",
+        "meaningPa": "ਜੁੱਤੇ"
+      },
+      {
+        "word": "door",
+        "meaningEn": "story word: door",
+        "meaningPa": "ਦਰਵਾਜ਼ਾ"
+      },
+      {
+        "word": "hat",
+        "meaningEn": "story word: hat",
+        "meaningPa": "ਟੋਪੀ"
+      },
+      {
+        "word": "table",
+        "meaningEn": "story word: table",
+        "meaningPa": "ਮੇਜ਼"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "open",
+        "meaningEn": "action word from the story: open",
+        "meaningPa": "ਖੋਲ੍ਹਣਾ"
+      },
+      {
+        "word": "is/are",
+        "meaningEn": "action word from the story: is/are",
+        "meaningPa": "ਹੈ/ਹਨ"
       }
     ]
   },
@@ -756,42 +1906,113 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮਾਂ ਅਤੇ ਪਿਉ ਰਸੋਈ ਵਿੱਚ ਹਨ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਮੇਜ਼ ਤੇ ਬੈਠਦੇ ਹਨ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਭੈਣ ਅਤੇ ਭਰਾ ਚਾਵਲ ਖਾਂਦੇ ਹਨ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਬੱਚਾ ਦੁੱਧ ਪੀਂਦਾ ਹੈ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੈਂ ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "mom", "pa": "ਮਾਂ" },
-        { "en": "dad", "pa": "ਪਿਉ" },
-        { "en": "kitchen", "pa": "ਰਸੋਈ" },
-        { "en": "grandma", "pa": "ਦਾਦੀ" },
-        { "en": "grandpa", "pa": "ਦਾਦਾ" },
-        { "en": "table", "pa": "ਮੇਜ਼" },
-        { "en": "sister", "pa": "ਭੈਣ" },
-        { "en": "brother", "pa": "ਭਰਾ" },
-        { "en": "rice", "pa": "ਚਾਵਲ" },
-        { "en": "baby", "pa": "ਬੱਚਾ" },
-        { "en": "milk", "pa": "ਦੁੱਧ" },
-        { "en": "water", "pa": "ਪਾਣੀ" },
-        { "en": "cup", "pa": "ਕੱਪ" }
+        {
+          "en": "mom",
+          "pa": "ਮਾਂ"
+        },
+        {
+          "en": "dad",
+          "pa": "ਪਿਉ"
+        },
+        {
+          "en": "kitchen",
+          "pa": "ਰਸੋਈ"
+        },
+        {
+          "en": "grandma",
+          "pa": "ਦਾਦੀ"
+        },
+        {
+          "en": "grandpa",
+          "pa": "ਦਾਦਾ"
+        },
+        {
+          "en": "table",
+          "pa": "ਮੇਜ਼"
+        },
+        {
+          "en": "sister",
+          "pa": "ਭੈਣ"
+        },
+        {
+          "en": "brother",
+          "pa": "ਭਰਾ"
+        },
+        {
+          "en": "rice",
+          "pa": "ਚਾਵਲ"
+        },
+        {
+          "en": "baby",
+          "pa": "ਬੱਚਾ"
+        },
+        {
+          "en": "milk",
+          "pa": "ਦੁੱਧ"
+        },
+        {
+          "en": "water",
+          "pa": "ਪਾਣੀ"
+        },
+        {
+          "en": "cup",
+          "pa": "ਕੱਪ"
+        }
       ],
       "verbs": [
-        { "en": "are", "pa": "ਹਨ" },
-        { "en": "sit", "pa": "ਬੈਠਣਾ" },
-        { "en": "eat", "pa": "ਖਾਣਾ" },
-        { "en": "drink(s)", "pa": "ਪੀਣਾ" }
+        {
+          "en": "are",
+          "pa": "ਹਨ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਬੈਠਣਾ"
+        },
+        {
+          "en": "eat",
+          "pa": "ਖਾਣਾ"
+        },
+        {
+          "en": "drink(s)",
+          "pa": "ਪੀਣਾ"
+        }
       ],
       "adjectives": [],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "at", "pa": "ਤੇ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "at",
+          "pa": "ਤੇ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where are mom and dad?",
         "questionPa": "ਮਾਂ ਅਤੇ ਪਿਉ ਕਿੱਥੇ ਹਨ?",
-        "choices": ["kitchen", "bedroom", "bathroom"],
-        "choicesPa": ["ਰਸੋਈ", "ਸੋਣ ਵਾਲਾ ਕਮਰਾ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਰਸੋਈ",
+          "ਸੋਣ ਵਾਲਾ ਕਮਰਾ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says mom and dad are in the kitchen.",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਮਾਂ ਅਤੇ ਪਿਉ ਰਸੋਈ ਵਿੱਚ ਹਨ।"
@@ -799,8 +2020,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Who sits at the table?",
         "questionPa": "ਮੇਜ਼ ਤੇ ਕੌਣ ਬੈਠਦਾ ਹੈ?",
-        "choices": ["grandma and grandpa", "sister and brother", "mom and dad"],
-        "choicesPa": ["ਦਾਦੀ ਅਤੇ ਦਾਦਾ", "ਭੈਣ ਅਤੇ ਭਰਾ", "ਮਾਂ ਅਤੇ ਪਿਉ"],
+        "choices": [
+          "grandma and grandpa",
+          "sister and brother",
+          "mom and dad"
+        ],
+        "choicesPa": [
+          "ਦਾਦੀ ਅਤੇ ਦਾਦਾ",
+          "ਭੈਣ ਅਤੇ ਭਰਾ",
+          "ਮਾਂ ਅਤੇ ਪਿਉ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “Grandma and grandpa sit at the table.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਦਾਦੀ ਅਤੇ ਦਾਦਾ ਮੇਜ਼ ਤੇ ਬੈਠਦੇ ਹਨ।”"
@@ -808,8 +2037,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What do sister and brother eat?",
         "questionPa": "ਭੈਣ ਅਤੇ ਭਰਾ ਕੀ ਖਾਂਦੇ ਹਨ?",
-        "choices": ["rice", "bread", "banana"],
-        "choicesPa": ["ਚਾਵਲ", "ਰੋਟੀ", "ਕੇਲਾ"],
+        "choices": [
+          "rice",
+          "bread",
+          "banana"
+        ],
+        "choicesPa": [
+          "ਚਾਵਲ",
+          "ਰੋਟੀ",
+          "ਕੇਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “Sister and brother eat rice.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਭੈਣ ਅਤੇ ਭਰਾ ਚਾਵਲ ਖਾਂਦੇ ਹਨ।”"
@@ -817,8 +2054,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the baby drink?",
         "questionPa": "ਬੱਚਾ ਕੀ ਪੀਂਦਾ ਹੈ?",
-        "choices": ["milk", "water", "rice"],
-        "choicesPa": ["ਦੁੱਧ", "ਪਾਣੀ", "ਚਾਵਲ"],
+        "choices": [
+          "milk",
+          "water",
+          "rice"
+        ],
+        "choicesPa": [
+          "ਦੁੱਧ",
+          "ਪਾਣੀ",
+          "ਚਾਵਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, “The baby drinks milk.”",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਬੱਚਾ ਦੁੱਧ ਪੀਂਦਾ ਹੈ।”"
@@ -826,11 +2071,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child drink at the end?",
         "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਪੀਂਦਾ ਹੈ?",
-        "choices": ["water", "milk", "apple"],
-        "choicesPa": ["ਪਾਣੀ", "ਦੁੱਧ", "ਸੇਬ"],
+        "choices": [
+          "water",
+          "milk",
+          "apple"
+        ],
+        "choicesPa": [
+          "ਪਾਣੀ",
+          "ਦੁੱਧ",
+          "ਸੇਬ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “I drink water in my cup.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਕੱਪ ਵਿੱਚ ਪਾਣੀ ਪੀਦਾ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "family",
+        "meaningEn": "people in your home like mom, dad, and children",
+        "meaningPa": "ਪਰਿਵਾਰ"
+      },
+      {
+        "word": "mom",
+        "meaningEn": "story word: mom",
+        "meaningPa": "ਮਾਂ"
+      },
+      {
+        "word": "dad",
+        "meaningEn": "story word: dad",
+        "meaningPa": "ਪਿਉ"
+      },
+      {
+        "word": "kitchen",
+        "meaningEn": "story word: kitchen",
+        "meaningPa": "ਰਸੋਈ"
+      },
+      {
+        "word": "grandma",
+        "meaningEn": "story word: grandma",
+        "meaningPa": "ਦਾਦੀ"
+      },
+      {
+        "word": "grandpa",
+        "meaningEn": "story word: grandpa",
+        "meaningPa": "ਦਾਦਾ"
+      },
+      {
+        "word": "table",
+        "meaningEn": "story word: table",
+        "meaningPa": "ਮੇਜ਼"
+      },
+      {
+        "word": "sister",
+        "meaningEn": "story word: sister",
+        "meaningPa": "ਭੈਣ"
+      },
+      {
+        "word": "brother",
+        "meaningEn": "story word: brother",
+        "meaningPa": "ਭਰਾ"
+      },
+      {
+        "word": "rice",
+        "meaningEn": "story word: rice",
+        "meaningPa": "ਚਾਵਲ"
       }
     ]
   },
@@ -844,37 +2149,90 @@ var BOOK1_CUSTOM_STORIES = [
     "punjabiStory": "ਪੈਨਲ 1 (ਸ਼ੁਰੂਆਤ): ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।\nਪੈਨਲ 2 (ਵਿਚਕਾਰ): ਮੈਂ ਖਿੜਕੀ ਖੋਲ੍ਹਦਾ ਹਾਂ।\nਪੈਨਲ 3 (ਵਿਚਕਾਰ): ਮੈਂ ਖਿੜਕੀ ਬੰਦ ਕਰਦਾ ਹਾਂ।\nਪੈਨਲ 4 (ਵਿਚਕਾਰ): ਮੇਰੀ ਕਿਤਾਬ ਅਤੇ ਮੇਰਾ ਖਿਡੌਣਾ ਬਿਸਤਰ ਉੱਤੇ ਹਨ।\nਪੈਨਲ 5 (ਅੰਤ): ਮੇਰਾ ਕਮਰਾ ਛੋਟਾ ਹੈ। ਮੈਂ ਖੁਸ਼ ਹਾਂ।",
     "partsOfSpeech": {
       "pronouns": [
-        { "en": "I", "pa": "ਮੈਂ" },
-        { "en": "my", "pa": "ਮੇਰਾ/ਮੇਰੀ" }
+        {
+          "en": "I",
+          "pa": "ਮੈਂ"
+        },
+        {
+          "en": "my",
+          "pa": "ਮੇਰਾ/ਮੇਰੀ"
+        }
       ],
       "nouns": [
-        { "en": "room", "pa": "ਕਮਰਾ" },
-        { "en": "window", "pa": "ਖਿੜਕੀ" },
-        { "en": "book", "pa": "ਕਿਤਾਬ" },
-        { "en": "toy", "pa": "ਖਿਡੌਣਾ" },
-        { "en": "bed", "pa": "ਬਿਸਤਰ" }
+        {
+          "en": "room",
+          "pa": "ਕਮਰਾ"
+        },
+        {
+          "en": "window",
+          "pa": "ਖਿੜਕੀ"
+        },
+        {
+          "en": "book",
+          "pa": "ਕਿਤਾਬ"
+        },
+        {
+          "en": "toy",
+          "pa": "ਖਿਡੌਣਾ"
+        },
+        {
+          "en": "bed",
+          "pa": "ਬਿਸਤਰ"
+        }
       ],
       "verbs": [
-        { "en": "am", "pa": "ਹਾਂ" },
-        { "en": "open", "pa": "ਖੋਲ੍ਹਣਾ" },
-        { "en": "close", "pa": "ਬੰਦ ਕਰਨਾ" },
-        { "en": "is/are", "pa": "ਹੈ/ਹਨ" }
+        {
+          "en": "am",
+          "pa": "ਹਾਂ"
+        },
+        {
+          "en": "open",
+          "pa": "ਖੋਲ੍ਹਣਾ"
+        },
+        {
+          "en": "close",
+          "pa": "ਬੰਦ ਕਰਨਾ"
+        },
+        {
+          "en": "is/are",
+          "pa": "ਹੈ/ਹਨ"
+        }
       ],
       "adjectives": [
-        { "en": "small", "pa": "ਛੋਟਾ" },
-        { "en": "happy", "pa": "ਖੁਸ਼" }
+        {
+          "en": "small",
+          "pa": "ਛੋਟਾ"
+        },
+        {
+          "en": "happy",
+          "pa": "ਖੁਸ਼"
+        }
       ],
       "prepositions": [
-        { "en": "in", "pa": "ਵਿੱਚ" },
-        { "en": "on", "pa": "ਉੱਤੇ" }
+        {
+          "en": "in",
+          "pa": "ਵਿੱਚ"
+        },
+        {
+          "en": "on",
+          "pa": "ਉੱਤੇ"
+        }
       ]
     },
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child?",
         "questionPa": "ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["room", "kitchen", "bathroom"],
-        "choicesPa": ["ਕਮਰਾ", "ਰਸੋਈ", "ਬਾਥਰੂਮ"],
+        "choices": [
+          "room",
+          "kitchen",
+          "bathroom"
+        ],
+        "choicesPa": [
+          "ਕਮਰਾ",
+          "ਰਸੋਈ",
+          "ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says, “I am in my room.”",
         "explanationPa": "ਪੈਨਲ 1 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਆਪਣੇ ਕਮਰੇ ਵਿੱਚ ਹਾਂ।”"
@@ -882,8 +2240,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child open?",
         "questionPa": "ਬੱਚਾ ਕੀ ਖੋਲ੍ਹਦਾ ਹੈ?",
-        "choices": ["window", "door", "cup"],
-        "choicesPa": ["ਖਿੜਕੀ", "ਦਰਵਾਜ਼ਾ", "ਕੱਪ"],
+        "choices": [
+          "window",
+          "door",
+          "cup"
+        ],
+        "choicesPa": [
+          "ਖਿੜਕੀ",
+          "ਦਰਵਾਜ਼ਾ",
+          "ਕੱਪ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says, “I open the window.”",
         "explanationPa": "ਪੈਨਲ 2 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖਿੜਕੀ ਖੋਲ੍ਹਦਾ ਹਾਂ।”"
@@ -891,8 +2257,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "What does the child close?",
         "questionPa": "ਬੱਚਾ ਕੀ ਬੰਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["window", "plate", "hat"],
-        "choicesPa": ["ਖਿੜਕੀ", "ਪਲੇਟ", "ਟੋਪੀ"],
+        "choices": [
+          "window",
+          "plate",
+          "hat"
+        ],
+        "choicesPa": [
+          "ਖਿੜਕੀ",
+          "ਪਲੇਟ",
+          "ਟੋਪੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, “I close the window.”",
         "explanationPa": "ਪੈਨਲ 3 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖਿੜਕੀ ਬੰਦ ਕਰਦਾ ਹਾਂ।”"
@@ -900,8 +2274,16 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "Where are the book and toy?",
         "questionPa": "ਕਿਤਾਬ ਅਤੇ ਖਿਡੌਣਾ ਕਿੱਥੇ ਹਨ?",
-        "choices": ["on the bed", "in the bag", "by the door"],
-        "choicesPa": ["ਬਿਸਤਰ ਉੱਤੇ", "ਬੈਗ ਵਿੱਚ", "ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ"],
+        "choices": [
+          "on the bed",
+          "in the bag",
+          "by the door"
+        ],
+        "choicesPa": [
+          "ਬਿਸਤਰ ਉੱਤੇ",
+          "ਬੈਗ ਵਿੱਚ",
+          "ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they are on the bed.",
         "explanationPa": "ਪੈਨਲ 4 ਵਿੱਚ ਲਿਖਿਆ ਹੈ ਕਿ ਉਹ ਬਿਸਤਰ ਉੱਤੇ ਹਨ।"
@@ -909,11 +2291,71 @@ var BOOK1_CUSTOM_STORIES = [
       {
         "question": "How does the child feel at the end?",
         "questionPa": "ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਹੈ?",
-        "choices": ["happy", "cold", "hot"],
-        "choicesPa": ["ਖੁਸ਼", "ਠੰਢਾ", "ਗਰਮ"],
+        "choices": [
+          "happy",
+          "cold",
+          "hot"
+        ],
+        "choicesPa": [
+          "ਖੁਸ਼",
+          "ਠੰਢਾ",
+          "ਗਰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says, “I am happy.”",
         "explanationPa": "ਪੈਨਲ 5 ਵਿੱਚ ਲਿਖਿਆ ਹੈ, “ਮੈਂ ਖੁਸ਼ ਹਾਂ।”"
+      }
+    ],
+    "vocabularyWords": [
+      {
+        "word": "window",
+        "meaningEn": "an opening in a wall for light and air",
+        "meaningPa": "ਖਿੜਕੀ"
+      },
+      {
+        "word": "room",
+        "meaningEn": "story word: room",
+        "meaningPa": "ਕਮਰਾ"
+      },
+      {
+        "word": "book",
+        "meaningEn": "story word: book",
+        "meaningPa": "ਕਿਤਾਬ"
+      },
+      {
+        "word": "toy",
+        "meaningEn": "story word: toy",
+        "meaningPa": "ਖਿਡੌਣਾ"
+      },
+      {
+        "word": "bed",
+        "meaningEn": "story word: bed",
+        "meaningPa": "ਬਿਸਤਰ"
+      },
+      {
+        "word": "am",
+        "meaningEn": "action word from the story: am",
+        "meaningPa": "ਹਾਂ"
+      },
+      {
+        "word": "open",
+        "meaningEn": "action word from the story: open",
+        "meaningPa": "ਖੋਲ੍ਹਣਾ"
+      },
+      {
+        "word": "close",
+        "meaningEn": "action word from the story: close",
+        "meaningPa": "ਬੰਦ ਕਰਨਾ"
+      },
+      {
+        "word": "is/are",
+        "meaningEn": "action word from the story: is/are",
+        "meaningPa": "ਹੈ/ਹਨ"
+      },
+      {
+        "word": "small",
+        "meaningEn": "describing word from the story: small",
+        "meaningPa": "ਛੋਟਾ"
       }
     ]
   }
@@ -931,40 +2373,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["school / ਸਕੂਲ", "park / ਪਾਰਕ", "home / ਘਰ"],
+        "choices": [
+          "school / ਸਕੂਲ",
+          "park / ਪਾਰਕ",
+          "home / ਘਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the child goes to school. / ਕਹਾਣੀ ਵਿੱਚ ਬੱਚਾ ਸਕੂਲ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ।"
       },
       {
         "question": "Who is at the door? / ਦਰਵਾਜ਼ੇ ਤੇ ਕੌਣ ਹੈ?",
-        "choices": ["teacher / ਟੀਚਰ", "friend / ਦੋਸਤ", "baby / ਬੱਚਾ"],
+        "choices": [
+          "teacher / ਟੀਚਰ",
+          "friend / ਦੋਸਤ",
+          "baby / ਬੱਚਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child sees the teacher at the door. / ਬੱਚਾ ਦਰਵਾਜ਼ੇ ਤੇ ਟੀਚਰ ਨੂੰ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       },
       {
         "question": "What do the children do next? / ਫਿਰ ਬੱਚੇ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["line up / ਕਤਾਰ ਬਣਾਉਂਦੇ ਹਨ", "run / ਦੌੜਦੇ ਹਨ", "sleep / ਸੌਂਦੇ ਹਨ"],
+        "choices": [
+          "line up / ਕਤਾਰ ਬਣਾਉਂਦੇ ਹਨ",
+          "run / ਦੌੜਦੇ ਹਨ",
+          "sleep / ਸੌਂਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They line up and wait quietly. / ਉਹ ਕਤਾਰ ਬਣਾਉਂਦੇ ਹਨ ਅਤੇ ਚੁੱਪ ਰਹਿੰਦੇ ਹਨ।"
       },
       {
         "question": "What does the teacher say? / ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Sit down / ਬੈਠ ਜਾਓ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Eat lunch / ਲੰਚ ਖਾਓ"],
+        "choices": [
+          "Sit down / ਬੈਠ ਜਾਓ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Eat lunch / ਲੰਚ ਖਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Sit down.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਬੈਠ ਜਾਓ।”"
       },
       {
         "question": "What do they look at after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਉਹ ਕਿੱਧਰ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["board / ਬੋਰਡ", "bed / ਬਿਸਤਰ", "bathroom / ਬਾਥਰੂਮ"],
+        "choices": [
+          "board / ਬੋਰਡ",
+          "bed / ਬਿਸਤਰ",
+          "bathroom / ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They look at the board to learn. / ਉਹ ਸਿੱਖਣ ਲਈ ਬੋਰਡ ਵੱਲ ਵੇਖਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "morning", "meaningEn": "the early part of the day", "meaningPa": "ਸਵੇਰ" },
-      { "word": "line up", "meaningEn": "stand in a line", "meaningPa": "ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਨਾ" },
-      { "word": "ready", "meaningEn": "prepared to start", "meaningPa": "ਤਿਆਰ" }
-    ]
+      {
+        "word": "morning",
+        "meaningEn": "the early part of the day",
+        "meaningPa": "ਸਵੇਰ"
+      },
+      {
+        "word": "line up",
+        "meaningEn": "stand in a line",
+        "meaningPa": "ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਨਾ"
+      },
+      {
+        "word": "ready",
+        "meaningEn": "prepared to start",
+        "meaningPa": "ਤਿਆਰ"
+      },
+      {
+        "word": "classroom",
+        "meaningEn": "the room where students learn",
+        "meaningPa": "ਕਲਾਸਰੂਮ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "walk",
+        "meaningEn": "action word from the story: walk",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "stand",
+        "meaningEn": "action word from the story: stand",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S02",
@@ -977,40 +2506,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child usually go first? / ਬੱਚਾ ਆਮ ਤੌਰ ਤੇ ਪਹਿਲਾਂ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["desk / ਡੈਸਕ", "bathroom / ਬਾਥਰੂਮ", "playground / ਖੇਡ ਮੈਦਾਨ"],
+        "choices": [
+          "desk / ਡੈਸਕ",
+          "bathroom / ਬਾਥਰੂਮ",
+          "playground / ਖੇਡ ਮੈਦਾਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child usually goes to the desk first. / ਬੱਚਾ ਆਮ ਤੌਰ ਤੇ ਪਹਿਲਾਂ ਡੈਸਕ ਤੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ।"
       },
       {
         "question": "Where does the bag go? / ਬੈਗ ਕਿੱਥੇ ਜਾਂਦਾ ਹੈ?",
-        "choices": ["by the desk / ਡੈਸਕ ਦੇ ਕੋਲ", "on the board / ਬੋਰਡ ਉੱਤੇ", "in the bathroom / ਬਾਥਰੂਮ ਵਿੱਚ"],
+        "choices": [
+          "by the desk / ਡੈਸਕ ਦੇ ਕੋਲ",
+          "on the board / ਬੋਰਡ ਉੱਤੇ",
+          "in the bathroom / ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The bag is put by the desk. / ਬੈਗ ਡੈਸਕ ਦੇ ਕੋਲ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ।"
       },
       {
         "question": "What comes out next? / ਫਿਰ ਕੀ ਕੱਢਦਾ/ਕੱਢਦੀ ਹੈ?",
-        "choices": ["book and pencil / ਕਿਤਾਬ ਅਤੇ ਪੈਂਸਿਲ", "milk and cup / ਦੁੱਧ ਅਤੇ ਕੱਪ", "shoes and hat / ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"],
+        "choices": [
+          "book and pencil / ਕਿਤਾਬ ਅਤੇ ਪੈਂਸਿਲ",
+          "milk and cup / ਦੁੱਧ ਅਤੇ ਕੱਪ",
+          "shoes and hat / ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child takes out a book and pencil. / ਬੱਚਾ ਕਿਤਾਬ ਅਤੇ ਪੈਂਸਿਲ ਕੱਢਦਾ/ਕੱਢਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say? / ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Write your name / ਆਪਣਾ ਨਾਮ ਲਿਖੋ", "Run / ਦੌੜੋ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Write your name / ਆਪਣਾ ਨਾਮ ਲਿਖੋ",
+          "Run / ਦੌੜੋ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Write your name.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਆਪਣਾ ਨਾਮ ਲਿਖੋ।”"
       },
       {
         "question": "How does the desk look at the end? / ਅੰਤ ਵਿੱਚ ਡੈਸਕ ਕਿਹੋ ਜਿਹੀ ਲੱਗਦੀ ਹੈ?",
-        "choices": ["clean / ਸਾਫ਼", "dirty / ਗੰਦੀ", "broken / ਟੁੱਟੀ"],
+        "choices": [
+          "clean / ਸਾਫ਼",
+          "dirty / ਗੰਦੀ",
+          "broken / ਟੁੱਟੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The desk looks clean and ready. / ਡੈਸਕ ਸਾਫ਼ ਅਤੇ ਤਿਆਰ ਲੱਗਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "desk", "meaningEn": "a table you work at", "meaningPa": "ਡੈਸਕ" },
-      { "word": "eraser", "meaningEn": "a tool to remove pencil marks", "meaningPa": "ਰੱਬੜ" },
-      { "word": "usually", "meaningEn": "often; most days", "meaningPa": "ਆਮ ਤੌਰ ਤੇ" }
-    ]
+      {
+        "word": "desk",
+        "meaningEn": "a table you work at",
+        "meaningPa": "ਡੈਸਕ"
+      },
+      {
+        "word": "eraser",
+        "meaningEn": "a tool to remove pencil marks",
+        "meaningPa": "ਰੱਬੜ"
+      },
+      {
+        "word": "usually",
+        "meaningEn": "often; most days",
+        "meaningPa": "ਆਮ ਤੌਰ ਤੇ"
+      },
+      {
+        "word": "chair",
+        "meaningEn": "a seat for one person",
+        "meaningPa": "ਕੁਰਸੀ"
+      },
+      {
+        "word": "go",
+        "meaningEn": "action word from the story: go",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "write",
+        "meaningEn": "action word from the story: write",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "looks",
+        "meaningEn": "action word from the story: looks",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S03",
@@ -1023,40 +2639,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What time is it now? / ਹੁਣ ਕਿਹੜਾ ਸਮਾਂ ਹੈ?",
-        "choices": ["reading time / ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ", "snack time / ਨਾਸ਼ਤੇ ਦਾ ਸਮਾਂ", "PE time / ਪੀ.ਈ. ਦਾ ਸਮਾਂ"],
+        "choices": [
+          "reading time / ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ",
+          "snack time / ਨਾਸ਼ਤੇ ਦਾ ਸਮਾਂ",
+          "PE time / ਪੀ.ਈ. ਦਾ ਸਮਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says it is reading time. / ਕਹਾਣੀ ਵਿੱਚ ਪੜ੍ਹਨ ਦਾ ਸਮਾਂ ਹੈ।"
       },
       {
         "question": "What does the teacher say first? / ਟੀਚਰ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Open your book / ਕਿਤਾਬ ਖੋਲ੍ਹੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Stand up / ਖੜ੍ਹੇ ਹੋ ਜਾਓ"],
+        "choices": [
+          "Open your book / ਕਿਤਾਬ ਖੋਲ੍ਹੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Stand up / ਖੜ੍ਹੇ ਹੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Open your book.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਕਿਤਾਬ ਖੋਲ੍ਹੋ।”"
       },
       {
         "question": "Who reads with the child? / ਬੱਚਾ ਕਿਨ੍ਹਾਂ ਨਾਲ ਪੜ੍ਹਦਾ/ਪੜ੍ਹਦੀ ਹੈ?",
-        "choices": ["friend / ਦੋਸਤ", "doctor / ਡਾਕਟਰ", "driver / ਡਰਾਈਵਰ"],
+        "choices": [
+          "friend / ਦੋਸਤ",
+          "doctor / ਡਾਕਟਰ",
+          "driver / ਡਰਾਈਵਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child reads with a friend. / ਬੱਚਾ ਦੋਸਤ ਨਾਲ ਪੜ੍ਹਦਾ/ਪੜ੍ਹਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do then? / ਫਿਰ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["answer a question / ਸਵਾਲ ਦਾ ਜਵਾਬ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ", "jump / ਛਾਲ ਮਾਰਦਾ/ਮਾਰਦੀ ਹੈ"],
+        "choices": [
+          "answer a question / ਸਵਾਲ ਦਾ ਜਵਾਬ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ",
+          "jump / ਛਾਲ ਮਾਰਦਾ/ਮਾਰਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child answers one short question. / ਬੱਚਾ ਇੱਕ ਛੋਟਾ ਜਵਾਬ ਦਿੰਦਾ/ਦਿੰਦੀ ਹੈ।"
       },
       {
         "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["close the book / ਕਿਤਾਬ ਬੰਦ", "throw the book / ਕਿਤਾਬ ਸੁੱਟਦਾ ਹੈ", "hide the book / ਕਿਤਾਬ ਛੁਪਾਉਂਦਾ ਹੈ"],
+        "choices": [
+          "close the book / ਕਿਤਾਬ ਬੰਦ",
+          "throw the book / ਕਿਤਾਬ ਸੁੱਟਦਾ ਹੈ",
+          "hide the book / ਕਿਤਾਬ ਛੁਪਾਉਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, the child closes the book. / ਉਸ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਕਿਤਾਬ ਬੰਦ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "read", "meaningEn": "look at words and say them", "meaningPa": "ਪੜ੍ਹਨਾ" },
-      { "word": "answer", "meaningEn": "reply to a question", "meaningPa": "ਜਵਾਬ ਦੇਣਾ" },
-      { "word": "open", "meaningEn": "make not closed", "meaningPa": "ਖੋਲ੍ਹਣਾ" }
-    ]
+      {
+        "word": "read",
+        "meaningEn": "look at words and say them",
+        "meaningPa": "ਪੜ੍ਹਨਾ"
+      },
+      {
+        "word": "answer",
+        "meaningEn": "reply to a question",
+        "meaningPa": "ਜਵਾਬ ਦੇਣਾ"
+      },
+      {
+        "word": "open",
+        "meaningEn": "make not closed",
+        "meaningPa": "ਖੋਲ੍ਹਣਾ"
+      },
+      {
+        "word": "page",
+        "meaningEn": "one side of a book sheet",
+        "meaningPa": "ਸਫ਼ਾ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "now",
+        "meaningEn": "story word: now",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "reading",
+        "meaningEn": "story word: reading",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "open",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "read",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S04",
@@ -1069,40 +2772,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What time is it now? / ਹੁਣ ਕਿਹੜਾ ਸਮਾਂ ਹੈ?",
-        "choices": ["writing time / ਲਿਖਣ ਦਾ ਸਮਾਂ", "lunch time / ਲੰਚ ਦਾ ਸਮਾਂ", "PE time / ਪੀ.ਈ. ਦਾ ਸਮਾਂ"],
+        "choices": [
+          "writing time / ਲਿਖਣ ਦਾ ਸਮਾਂ",
+          "lunch time / ਲੰਚ ਦਾ ਸਮਾਂ",
+          "PE time / ਪੀ.ਈ. ਦਾ ਸਮਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says it is writing time. / ਕਹਾਣੀ ਵਿੱਚ ਲਿਖਣ ਦਾ ਸਮਾਂ ਹੈ।"
       },
       {
         "question": "What does the teacher say first? / ਟੀਚਰ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Write slowly / ਹੌਲੀ ਲਿਖੋ", "Run / ਦੌੜੋ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Write slowly / ਹੌਲੀ ਲਿਖੋ",
+          "Run / ਦੌੜੋ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Write slowly.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਹੌਲੀ ਲਿਖੋ।”"
       },
       {
         "question": "What does the child write? / ਬੱਚਾ ਕੀ ਲਿਖਦਾ/ਲਿਖਦੀ ਹੈ?",
-        "choices": ["name / ਨਾਮ", "banana / ਕੇਲਾ", "chair / ਕੁਰਸੀ"],
+        "choices": [
+          "name / ਨਾਮ",
+          "banana / ਕੇਲਾ",
+          "chair / ਕੁਰਸੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child writes a name on paper. / ਬੱਚਾ ਕਾਗਜ਼ ਉੱਤੇ ਨਾਮ ਲਿਖਦਾ/ਲਿਖਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say then? / ਫਿਰ ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Show me / ਮੈਨੂੰ ਦਿਖਾਓ", "Close the door / ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰੋ", "Eat snack / ਨਾਸ਼ਤਾ ਖਾਓ"],
+        "choices": [
+          "Show me / ਮੈਨੂੰ ਦਿਖਾਓ",
+          "Close the door / ਦਰਵਾਜ਼ਾ ਬੰਦ ਕਰੋ",
+          "Eat snack / ਨਾਸ਼ਤਾ ਖਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Show me.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਮੈਨੂੰ ਦਿਖਾਓ।”"
       },
       {
         "question": "What is next after writing? / ਲਿਖਣ ਤੋਂ ਬਾਅਦ ਕੀ ਆਉਂਦਾ ਹੈ?",
-        "choices": ["math time / ਗਿਣਤੀ", "bath time / ਨਹਾਉਣਾ", "bed time / ਸੌਣਾ"],
+        "choices": [
+          "math time / ਗਿਣਤੀ",
+          "bath time / ਨਹਾਉਣਾ",
+          "bed time / ਸੌਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child is ready for math time. / ਬੱਚਾ ਗਿਣਤੀ ਲਈ ਤਿਆਰ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "write", "meaningEn": "make letters and words", "meaningPa": "ਲਿਖਣਾ" },
-      { "word": "paper", "meaningEn": "you write on it", "meaningPa": "ਕਾਗਜ਼" },
-      { "word": "pencil", "meaningEn": "a tool for writing", "meaningPa": "ਪੈਂਸਿਲ" }
-    ]
+      {
+        "word": "write",
+        "meaningEn": "make letters and words",
+        "meaningPa": "ਲਿਖਣਾ"
+      },
+      {
+        "word": "paper",
+        "meaningEn": "you write on it",
+        "meaningPa": "ਕਾਗਜ਼"
+      },
+      {
+        "word": "pencil",
+        "meaningEn": "a tool for writing",
+        "meaningPa": "ਪੈਂਸਿਲ"
+      },
+      {
+        "word": "show",
+        "meaningEn": "let someone see your work",
+        "meaningPa": "ਦਿਖਾਉਣਾ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "writes",
+        "meaningEn": "action word from the story: writes",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "go",
+        "meaningEn": "action word from the story: go",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "now",
+        "meaningEn": "story word: now",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "writes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S05",
@@ -1115,40 +2905,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What subject is this? / ਇਹ ਕਿਹੜਾ ਵਿਸ਼ਾ ਹੈ?",
-        "choices": ["math / ਗਿਣਤੀ", "music / ਸੰਗੀਤ", "reading / ਪੜ੍ਹਨਾ"],
+        "choices": [
+          "math / ਗਿਣਤੀ",
+          "music / ਸੰਗੀਤ",
+          "reading / ਪੜ੍ਹਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says it is math time. / ਕਹਾਣੀ ਵਿੱਚ ਗਿਣਤੀ ਦਾ ਸਮਾਂ ਹੈ।"
       },
       {
         "question": "What do children look at? / ਬੱਚੇ ਕਿੱਧਰ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["board / ਬੋਰਡ", "bed / ਬਿਸਤਰ", "window / ਖਿੜਕੀ"],
+        "choices": [
+          "board / ਬੋਰਡ",
+          "bed / ਬਿਸਤਰ",
+          "window / ਖਿੜਕੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They look at the board during math. / ਉਹ ਗਿਣਤੀ ਵੇਲੇ ਬੋਰਡ ਵੱਲ ਵੇਖਦੇ ਹਨ।"
       },
       {
         "question": "What does the child write? / ਬੱਚਾ ਕੀ ਲਿਖਦਾ/ਲਿਖਦੀ ਹੈ?",
-        "choices": ["numbers / ਨੰਬਰ", "shoes / ਜੁੱਤੇ", "bananas / ਕੇਲੇ"],
+        "choices": [
+          "numbers / ਨੰਬਰ",
+          "shoes / ਜੁੱਤੇ",
+          "bananas / ਕੇਲੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child writes numbers on paper. / ਬੱਚਾ ਕਾਗਜ਼ ਉੱਤੇ ਨੰਬਰ ਲਿਖਦਾ/ਲਿਖਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say then? / ਫਿਰ ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Answer now / ਹੁਣ ਜਵਾਬ ਦਿਓ", "Go home / ਘਰ ਜਾਓ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Answer now / ਹੁਣ ਜਵਾਬ ਦਿਓ",
+          "Go home / ਘਰ ਜਾਓ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Answer now.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਹੁਣ ਜਵਾਬ ਦਿਓ।”"
       },
       {
         "question": "What comes next? / ਅਗਲਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["art time / ਆਰਟ", "bathroom / ਬਾਥਰੂਮ", "bed / ਬਿਸਤਰ"],
+        "choices": [
+          "art time / ਆਰਟ",
+          "bathroom / ਬਾਥਰੂਮ",
+          "bed / ਬਿਸਤਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After math, they go to art time. / ਗਿਣਤੀ ਤੋਂ ਬਾਅਦ ਆਰਟ ਹੁੰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "board", "meaningEn": "the teacher writes here", "meaningPa": "ਬੋਰਡ" },
-      { "word": "math", "meaningEn": "numbers at school", "meaningPa": "ਗਿਣਤੀ" },
-      { "word": "number", "meaningEn": "1, 2, 3 and more", "meaningPa": "ਨੰਬਰ" }
-    ]
+      {
+        "word": "board",
+        "meaningEn": "the teacher writes here",
+        "meaningPa": "ਬੋਰਡ"
+      },
+      {
+        "word": "math",
+        "meaningEn": "numbers at school",
+        "meaningPa": "ਗਿਣਤੀ"
+      },
+      {
+        "word": "number",
+        "meaningEn": "1, 2, 3 and more",
+        "meaningPa": "ਨੰਬਰ"
+      },
+      {
+        "word": "listen",
+        "meaningEn": "hear with attention",
+        "meaningPa": "ਸੁਣਨਾ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "look",
+        "meaningEn": "action word from the story: look",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "write",
+        "meaningEn": "action word from the story: write",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S06",
@@ -1161,40 +3038,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What time is it now? / ਹੁਣ ਕਿਹੜਾ ਸਮਾਂ ਹੈ?",
-        "choices": ["science time / ਸਾਇੰਸ", "lunch time / ਲੰਚ", "PE time / ਪੀ.ਈ."],
+        "choices": [
+          "science time / ਸਾਇੰਸ",
+          "lunch time / ਲੰਚ",
+          "PE time / ਪੀ.ਈ."
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says it is science time. / ਕਹਾਣੀ ਵਿੱਚ ਸਾਇੰਸ ਦਾ ਸਮਾਂ ਹੈ।"
       },
       {
         "question": "What does the teacher say first? / ਟੀਚਰ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Look and listen / ਵੇਖੋ ਅਤੇ ਸੁਣੋ", "Run / ਦੌੜੋ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Look and listen / ਵੇਖੋ ਅਤੇ ਸੁਣੋ",
+          "Run / ਦੌੜੋ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Look and listen.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਵੇਖੋ ਅਤੇ ਸੁਣੋ।”"
       },
       {
         "question": "What does the child do next? / ਫਿਰ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["asks a question / ਸਵਾਲ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ", "cries / ਰੋਂਦਾ/ਰੋਂਦੀ ਹੈ", "hides / ਛੁਪਦਾ/ਛੁਪਦੀ ਹੈ"],
+        "choices": [
+          "asks a question / ਸਵਾਲ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ",
+          "cries / ਰੋਂਦਾ/ਰੋਂਦੀ ਹੈ",
+          "hides / ਛੁਪਦਾ/ਛੁਪਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child asks a small question. / ਬੱਚਾ ਇੱਕ ਛੋਟਾ ਸਵਾਲ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "Who helps the child? / ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["teacher / ਟੀਚਰ", "driver / ਡਰਾਈਵਰ", "farmer / ਕਿਸਾਨ"],
+        "choices": [
+          "teacher / ਟੀਚਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "farmer / ਕਿਸਾਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher helps the child. / ਟੀਚਰ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "What does the child always do? / ਬੱਚਾ ਹਮੇਸ਼ਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["listen / ਸੁਣਦਾ/ਸੁਣਦੀ ਹੈ", "shout / ਚੀਕਦਾ/ਚੀਕਦੀ ਹੈ", "run away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ"],
+        "choices": [
+          "listen / ਸੁਣਦਾ/ਸੁਣਦੀ ਹੈ",
+          "shout / ਚੀਕਦਾ/ਚੀਕਦੀ ਹੈ",
+          "run away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child says, “I always listen and learn.” / ਬੱਚਾ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ, “ਮੈਂ ਹਮੇਸ਼ਾ ਸੁਣਦਾ/ਸੁਣਦੀ ਹਾਂ।”"
       }
     ],
     "vocabularyWords": [
-      { "word": "listen", "meaningEn": "use your ears to hear", "meaningPa": "ਸੁਣਨਾ" },
-      { "word": "ask", "meaningEn": "say a question", "meaningPa": "ਪੁੱਛਣਾ" },
-      { "word": "help", "meaningEn": "do something to make it easier", "meaningPa": "ਮਦਦ ਕਰਨੀ" }
-    ]
+      {
+        "word": "listen",
+        "meaningEn": "use your ears to hear",
+        "meaningPa": "ਸੁਣਨਾ"
+      },
+      {
+        "word": "ask",
+        "meaningEn": "say a question",
+        "meaningPa": "ਪੁੱਛਣਾ"
+      },
+      {
+        "word": "help",
+        "meaningEn": "do something to make it easier",
+        "meaningPa": "ਮਦਦ ਕਰਨੀ"
+      },
+      {
+        "word": "curious",
+        "meaningEn": "wanting to learn or know more",
+        "meaningPa": "ਉਤਸੁਕ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "look",
+        "meaningEn": "action word from the story: look",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "helps",
+        "meaningEn": "action word from the story: helps",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S07",
@@ -1207,40 +3171,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What time is it now? / ਹੁਣ ਕਿਹੜਾ ਸਮਾਂ ਹੈ?",
-        "choices": ["art time / ਆਰਟ", "math time / ਗਿਣਤੀ", "bathroom / ਬਾਥਰੂਮ"],
+        "choices": [
+          "art time / ਆਰਟ",
+          "math time / ਗਿਣਤੀ",
+          "bathroom / ਬਾਥਰੂਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says it is art time. / ਕਹਾਣੀ ਵਿੱਚ ਆਰਟ ਦਾ ਸਮਾਂ ਹੈ।"
       },
       {
         "question": "What does the child take first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਲੈਂਦਾ/ਲੈਂਦੀ ਹੈ?",
-        "choices": ["crayon and paper / ਕ੍ਰੇਯੋਨ ਅਤੇ ਕਾਗਜ਼", "milk and cup / ਦੁੱਧ ਅਤੇ ਕੱਪ", "book and board / ਕਿਤਾਬ ਅਤੇ ਬੋਰਡ"],
+        "choices": [
+          "crayon and paper / ਕ੍ਰੇਯੋਨ ਅਤੇ ਕਾਗਜ਼",
+          "milk and cup / ਦੁੱਧ ਅਤੇ ਕੱਪ",
+          "book and board / ਕਿਤਾਬ ਅਤੇ ਬੋਰਡ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child takes a crayon and paper. / ਬੱਚਾ ਕ੍ਰੇਯੋਨ ਅਤੇ ਕਾਗਜ਼ ਲੈਂਦਾ/ਲੈਂਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do next? / ਫਿਰ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["shares / ਸਾਂਝਾ ਕਰਦਾ/ਕਰਦੀ ਹੈ", "hides / ਛੁਪਾਉਂਦਾ/ਛੁਪਾਉਂਦੀ ਹੈ", "breaks / ਤੋੜਦਾ/ਤੋੜਦੀ ਹੈ"],
+        "choices": [
+          "shares / ਸਾਂਝਾ ਕਰਦਾ/ਕਰਦੀ ਹੈ",
+          "hides / ਛੁਪਾਉਂਦਾ/ਛੁਪਾਉਂਦੀ ਹੈ",
+          "breaks / ਤੋੜਦਾ/ਤੋੜਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child shares the crayon with a friend. / ਬੱਚਾ ਦੋਸਤ ਨਾਲ ਕ੍ਰੇਯੋਨ ਸਾਂਝਾ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say then? / ਫਿਰ ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Take turns / ਵਾਰੀ-ਵਾਰੀ ਕਰੋ", "Run / ਦੌੜੋ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Take turns / ਵਾਰੀ-ਵਾਰੀ ਕਰੋ",
+          "Run / ਦੌੜੋ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Take turns.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਵਾਰੀ-ਵਾਰੀ ਕਰੋ।”"
       },
       {
         "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["clean the table / ਮੇਜ਼ ਸਾਫ਼", "go home / ਘਰ", "go to bed / ਬਿਸਤਰ"],
+        "choices": [
+          "clean the table / ਮੇਜ਼ ਸਾਫ਼",
+          "go home / ਘਰ",
+          "go to bed / ਬਿਸਤਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After art, they clean the table. / ਆਰਟ ਤੋਂ ਬਾਅਦ ਉਹ ਮੇਜ਼ ਸਾਫ਼ ਕਰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "crayon", "meaningEn": "a colored stick for drawing", "meaningPa": "ਕ੍ਰੇਯੋਨ" },
-      { "word": "share", "meaningEn": "let someone else use it too", "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ" },
-      { "word": "clean", "meaningEn": "make something tidy", "meaningPa": "ਸਾਫ਼ ਕਰਨਾ" }
-    ]
+      {
+        "word": "crayon",
+        "meaningEn": "a colored stick for drawing",
+        "meaningPa": "ਕ੍ਰੇਯੋਨ"
+      },
+      {
+        "word": "share",
+        "meaningEn": "let someone else use it too",
+        "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ"
+      },
+      {
+        "word": "clean",
+        "meaningEn": "make something tidy",
+        "meaningPa": "ਸਾਫ਼ ਕਰਨਾ"
+      },
+      {
+        "word": "draw",
+        "meaningEn": "make a picture",
+        "meaningPa": "ਚਿੱਤਰ ਬਣਾਉਣਾ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "help",
+        "meaningEn": "action word from the story: help",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "now",
+        "meaningEn": "story word: now",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "draw",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S08",
@@ -1253,40 +3304,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child need to go? / ਬੱਚੇ ਨੂੰ ਕਿੱਥੇ ਜਾਣਾ ਹੈ?",
-        "choices": ["bathroom / ਬਾਥਰੂਮ", "bank / ਬੈਂਕ", "park / ਪਾਰਕ"],
+        "choices": [
+          "bathroom / ਬਾਥਰੂਮ",
+          "bank / ਬੈਂਕ",
+          "park / ਪਾਰਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child needs the bathroom. / ਬੱਚੇ ਨੂੰ ਬਾਥਰੂਮ ਜਾਣਾ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["asks the teacher / ਟੀਚਰ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ", "runs / ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ", "hides / ਛੁਪਦਾ/ਛੁਪਦੀ ਹੈ"],
+        "choices": [
+          "asks the teacher / ਟੀਚਰ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ",
+          "runs / ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ",
+          "hides / ਛੁਪਦਾ/ਛੁਪਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, the child asks the teacher. / ਪਹਿਲਾਂ ਬੱਚਾ ਟੀਚਰ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "How does the child walk? / ਬੱਚਾ ਕਿਵੇਂ ਤੁਰਦਾ/ਤੁਰਦੀ ਹੈ?",
-        "choices": ["quietly / ਚੁੱਪਚਾਪ", "loudly / ਸ਼ੋਰ ਨਾਲ", "jumping / ਛਾਲਾਂ ਮਾਰ ਕੇ"],
+        "choices": [
+          "quietly / ਚੁੱਪਚਾਪ",
+          "loudly / ਸ਼ੋਰ ਨਾਲ",
+          "jumping / ਛਾਲਾਂ ਮਾਰ ਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child walks quietly to the bathroom. / ਬੱਚਾ ਚੁੱਪਚਾਪ ਬਾਥਰੂਮ ਤੁਰਦਾ/ਤੁਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say then? / ਫਿਰ ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Sit down / ਬੈਠ ਜਾਓ", "Eat snack / ਨਾਸ਼ਤਾ ਖਾਓ", "Close the window / ਖਿੜਕੀ ਬੰਦ ਕਰੋ"],
+        "choices": [
+          "Sit down / ਬੈਠ ਜਾਓ",
+          "Eat snack / ਨਾਸ਼ਤਾ ਖਾਓ",
+          "Close the window / ਖਿੜਕੀ ਬੰਦ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Sit down.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਬੈਠ ਜਾਓ।”"
       },
       {
         "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["the child listens / ਬੱਚਾ ਸੁਣਦਾ/ਸੁਣਦੀ ਹੈ", "the child sleeps / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ", "the child runs away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ"],
+        "choices": [
+          "the child listens / ਬੱਚਾ ਸੁਣਦਾ/ਸੁਣਦੀ ਹੈ",
+          "the child sleeps / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ",
+          "the child runs away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, the child sits and listens again. / ਉਸ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਬੈਠ ਕੇ ਸੁਣਦਾ/ਸੁਣਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "bathroom", "meaningEn": "a room for washing and toilet", "meaningPa": "ਬਾਥਰੂਮ" },
-      { "word": "wait", "meaningEn": "stay until your turn", "meaningPa": "ਉਡੀਕ ਕਰਨੀ" },
-      { "word": "rule", "meaningEn": "a classroom rule", "meaningPa": "ਨਿਯਮ" }
-    ]
+      {
+        "word": "bathroom",
+        "meaningEn": "a room for washing and toilet",
+        "meaningPa": "ਬਾਥਰੂਮ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until your turn",
+        "meaningPa": "ਉਡੀਕ ਕਰਨੀ"
+      },
+      {
+        "word": "rule",
+        "meaningEn": "a classroom rule",
+        "meaningPa": "ਨਿਯਮ"
+      },
+      {
+        "word": "raise",
+        "meaningEn": "lift up",
+        "meaningPa": "ਉੱਪਰ ਚੁੱਕਣਾ"
+      },
+      {
+        "word": "go",
+        "meaningEn": "action word from the story: go",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "walk",
+        "meaningEn": "action word from the story: walk",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "sit",
+        "meaningEn": "action word from the story: sit",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "look",
+        "meaningEn": "action word from the story: look",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S09",
@@ -1299,40 +3437,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go for PE? / ਪੀ.ਈ. ਲਈ ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["outside / ਬਾਹਰ", "bathroom / ਬਾਥਰੂਮ", "bedroom / ਸੋਣ ਵਾਲਾ ਕਮਰਾ"],
+        "choices": [
+          "outside / ਬਾਹਰ",
+          "bathroom / ਬਾਥਰੂਮ",
+          "bedroom / ਸੋਣ ਵਾਲਾ ਕਮਰਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They go outside with the teacher. / ਉਹ ਟੀਚਰ ਨਾਲ ਬਾਹਰ ਜਾਂਦੇ ਹਨ।"
       },
       {
         "question": "What does the teacher say first? / ਟੀਚਰ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Stand up / ਖੜ੍ਹੇ ਹੋ ਜਾਓ", "Eat / ਖਾਓ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Stand up / ਖੜ੍ਹੇ ਹੋ ਜਾਓ",
+          "Eat / ਖਾਓ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Stand up.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਖੜ੍ਹੇ ਹੋ ਜਾਓ।”"
       },
       {
         "question": "What do they do next? / ਫਿਰ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["run / ਦੌੜਦੇ ਹਨ", "write / ਲਿਖਦੇ ਹਨ", "read / ਪੜ੍ਹਦੇ ਹਨ"],
+        "choices": [
+          "run / ਦੌੜਦੇ ਹਨ",
+          "write / ਲਿਖਦੇ ਹਨ",
+          "read / ਪੜ੍ਹਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Next, they run fast. / ਫਿਰ ਉਹ ਤੇਜ਼ ਦੌੜਦੇ ਹਨ।"
       },
       {
         "question": "What does the teacher say then? / ਫਿਰ ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Stop / ਰੁੱਕੋ", "Sing / ਗਾਓ", "Close / ਬੰਦ ਕਰੋ"],
+        "choices": [
+          "Stop / ਰੁੱਕੋ",
+          "Sing / ਗਾਓ",
+          "Close / ਬੰਦ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Then the teacher says, “Stop.” / ਫਿਰ ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਰੁੱਕੋ।”"
       },
       {
         "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["back to class / ਵਾਪਸ ਕਲਾਸ", "go home / ਘਰ", "go to bed / ਬਿਸਤਰ"],
+        "choices": [
+          "back to class / ਵਾਪਸ ਕਲਾਸ",
+          "go home / ਘਰ",
+          "go to bed / ਬਿਸਤਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, they come back to class. / ਉਸ ਤੋਂ ਬਾਅਦ ਉਹ ਕਲਾਸ ਵਿੱਚ ਵਾਪਸ ਆਉਂਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "stand up", "meaningEn": "rise to your feet", "meaningPa": "ਖੜ੍ਹੇ ਹੋਣਾ" },
-      { "word": "run", "meaningEn": "move fast on your feet", "meaningPa": "ਦੌੜਨਾ" },
-      { "word": "stop", "meaningEn": "do not move", "meaningPa": "ਰੁਕਣਾ" }
-    ]
+      {
+        "word": "stand up",
+        "meaningEn": "rise to your feet",
+        "meaningPa": "ਖੜ੍ਹੇ ਹੋਣਾ"
+      },
+      {
+        "word": "run",
+        "meaningEn": "move fast on your feet",
+        "meaningPa": "ਦੌੜਨਾ"
+      },
+      {
+        "word": "stop",
+        "meaningEn": "do not move",
+        "meaningPa": "ਰੁਕਣਾ"
+      },
+      {
+        "word": "outside",
+        "meaningEn": "not inside a building",
+        "meaningPa": "ਬਾਹਰ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "go",
+        "meaningEn": "action word from the story: go",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "stand",
+        "meaningEn": "action word from the story: stand",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "walk",
+        "meaningEn": "action word from the story: walk",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B2_S10",
@@ -1345,40 +3570,127 @@ var BOOK2_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "When is it in the story? / ਕਹਾਣੀ ਵਿੱਚ ਕਦੋਂ ਹੈ?",
-        "choices": ["afternoon / ਦੁਪਹਿਰ", "night / ਰਾਤ", "winter / ਸਰਦੀ"],
+        "choices": [
+          "afternoon / ਦੁਪਹਿਰ",
+          "night / ਰਾਤ",
+          "winter / ਸਰਦੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says it is afternoon. / ਪੈਨਲ 1 ਵਿੱਚ ਦੁਪਹਿਰ ਹੈ।"
       },
       {
         "question": "What does the teacher say first? / ਟੀਚਰ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Clean your desk / ਡੈਸਕ ਸਾਫ਼ ਕਰੋ", "Run / ਦੌੜੋ", "Sleep / ਸੋ ਜਾਓ"],
+        "choices": [
+          "Clean your desk / ਡੈਸਕ ਸਾਫ਼ ਕਰੋ",
+          "Run / ਦੌੜੋ",
+          "Sleep / ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The teacher says, “Clean your desk.” / ਟੀਚਰ ਕਹਿੰਦੇ ਹਨ, “ਡੈਸਕ ਸਾਫ਼ ਕਰੋ।”"
       },
       {
         "question": "What goes in the bag next? / ਫਿਰ ਬੈਗ ਵਿੱਚ ਕੀ ਜਾਂਦਾ ਹੈ?",
-        "choices": ["book and eraser / ਕਿਤਾਬ ਅਤੇ ਰੱਬੜ", "milk and cup / ਦੁੱਧ ਅਤੇ ਕੱਪ", "shoes and hat / ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"],
+        "choices": [
+          "book and eraser / ਕਿਤਾਬ ਅਤੇ ਰੱਬੜ",
+          "milk and cup / ਦੁੱਧ ਅਤੇ ਕੱਪ",
+          "shoes and hat / ਜੁੱਤੇ ਅਤੇ ਟੋਪੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child puts a book and eraser in the bag. / ਬੱਚਾ ਕਿਤਾਬ ਅਤੇ ਰੱਬੜ ਬੈਗ ਵਿੱਚ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।"
       },
       {
         "question": "Where do children line up then? / ਫਿਰ ਬੱਚੇ ਕਿੱਥੇ ਕਤਾਰ ਬਣਾਉਂਦੇ ਹਨ?",
-        "choices": ["at the door / ਦਰਵਾਜ਼ੇ ਤੇ", "under the desk / ਡੈਸਕ ਹੇਠਾਂ", "in the bathroom / ਬਾਥਰੂਮ ਵਿੱਚ"],
+        "choices": [
+          "at the door / ਦਰਵਾਜ਼ੇ ਤੇ",
+          "under the desk / ਡੈਸਕ ਹੇਠਾਂ",
+          "in the bathroom / ਬਾਥਰੂਮ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They line up at the door and wait. / ਉਹ ਦਰਵਾਜ਼ੇ ਤੇ ਕਤਾਰ ਬਣਾਉਂਦੇ ਹਨ ਅਤੇ ਉਡੀਕ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "What does the child usually do at home? / ਘਰ ਬੱਚਾ ਆਮ ਤੌਰ ਤੇ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["eats snack and reads / ਨਾਸ਼ਤਾ ਖਾਂਦਾ/ਖਾਂਦੀ ਅਤੇ ਪੜ੍ਹਦਾ/ਪੜ੍ਹਦੀ ਹੈ", "drives a car / ਗੱਡੀ ਚਲਾਉਂਦਾ ਹੈ", "cooks dinner / ਖਾਣਾ ਬਣਾਉਂਦਾ ਹੈ"],
+        "choices": [
+          "eats snack and reads / ਨਾਸ਼ਤਾ ਖਾਂਦਾ/ਖਾਂਦੀ ਅਤੇ ਪੜ੍ਹਦਾ/ਪੜ੍ਹਦੀ ਹੈ",
+          "drives a car / ਗੱਡੀ ਚਲਾਉਂਦਾ ਹੈ",
+          "cooks dinner / ਖਾਣਾ ਬਣਾਉਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child usually eats snack and reads again. / ਪੈਨਲ 5 ਵਿੱਚ ਆਮ ਤੌਰ ਤੇ ਨਾਸ਼ਤਾ ਖਾਂਦਾ/ਖਾਂਦੀ ਅਤੇ ਫਿਰ ਪੜ੍ਹਦਾ/ਪੜ੍ਹਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "before", "meaningEn": "earlier than something", "meaningPa": "ਤੋਂ ਪਹਿਲਾਂ" },
-      { "word": "after", "meaningEn": "later; when something is finished", "meaningPa": "ਤੋਂ ਬਾਅਦ" },
-      { "word": "snack", "meaningEn": "a small meal", "meaningPa": "ਨਾਸ਼ਤਾ" }
-    ]
+      {
+        "word": "before",
+        "meaningEn": "earlier than something",
+        "meaningPa": "ਤੋਂ ਪਹਿਲਾਂ"
+      },
+      {
+        "word": "after",
+        "meaningEn": "later; when something is finished",
+        "meaningPa": "ਤੋਂ ਬਾਅਦ"
+      },
+      {
+        "word": "snack",
+        "meaningEn": "a small meal",
+        "meaningPa": "ਨਾਸ਼ਤਾ"
+      },
+      {
+        "word": "afternoon",
+        "meaningEn": "the time after noon",
+        "meaningPa": "ਦੁਪਹਿਰ"
+      },
+      {
+        "word": "is",
+        "meaningEn": "action word from the story: is",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "clean",
+        "meaningEn": "action word from the story: clean",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "stand",
+        "meaningEn": "action word from the story: stand",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "go",
+        "meaningEn": "action word from the story: go",
+        "meaningPa": "ਕਿਰਿਆ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "clean",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -1394,40 +3706,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go today? / ਅੱਜ ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["park / ਪਾਰਕ", "hospital / ਹਸਪਤਾਲ", "library / ਲਾਇਬ੍ਰੇਰੀ"],
+        "choices": [
+          "park / ਪਾਰਕ",
+          "hospital / ਹਸਪਤਾਲ",
+          "library / ਲਾਇਬ੍ਰੇਰੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They go to the park today. / ਉਹ ਅੱਜ ਪਾਰਕ ਜਾਂਦੇ ਹਨ।"
       },
       {
         "question": "What do they do first? / ਉਹ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["go straight / ਸਿੱਧੇ ਜਾਂਦੇ ਹਨ", "turn right / ਸੱਜੇ ਮੁੜਦੇ ਹਨ", "sit down / ਬੈਠ ਜਾਂਦੇ ਹਨ"],
+        "choices": [
+          "go straight / ਸਿੱਧੇ ਜਾਂਦੇ ਹਨ",
+          "turn right / ਸੱਜੇ ਮੁੜਦੇ ਹਨ",
+          "sit down / ਬੈਠ ਜਾਂਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, they go straight on the street. / ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਉਹ ਗਲੀ ਵਿੱਚ ਸਿੱਧੇ ਜਾਂਦੇ ਹਨ।"
       },
       {
         "question": "Which way do they turn? / ਉਹ ਕਿਹੜੇ ਪਾਸੇ ਮੁੜਦੇ ਹਨ?",
-        "choices": ["left / ਖੱਬੇ", "right / ਸੱਜੇ", "back / ਪਿੱਛੇ"],
+        "choices": [
+          "left / ਖੱਬੇ",
+          "right / ਸੱਜੇ",
+          "back / ਪਿੱਛੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They turn left at the big store. / ਉਹ ਵੱਡੀ ਦੁਕਾਨ ਤੋਂ ਖੱਬੇ ਮੁੜਦੇ ਹਨ।"
       },
       {
         "question": "Where is the park? / ਪਾਰਕ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["next to the store / ਦੁਕਾਨ ਦੇ ਕੋਲ", "under the bench / ਬੈਂਚ ਹੇਠਾਂ", "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ"],
+        "choices": [
+          "next to the store / ਦੁਕਾਨ ਦੇ ਕੋਲ",
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ",
+          "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The park is next to the store. / ਪਾਰਕ ਦੁਕਾਨ ਦੇ ਕੋਲ ਹੈ।"
       },
       {
         "question": "What do they do after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["play on swings / ਝੂਲੇ ਤੇ ਖੇਡਦੇ ਹਨ", "buy food / ਖਾਣਾ ਖਰੀਦਦੇ ਹਨ", "go to bed / ਬਿਸਤਰ ਤੇ ਜਾਂਦੇ ਹਨ"],
+        "choices": [
+          "play on swings / ਝੂਲੇ ਤੇ ਖੇਡਦੇ ਹਨ",
+          "buy food / ਖਾਣਾ ਖਰੀਦਦੇ ਹਨ",
+          "go to bed / ਬਿਸਤਰ ਤੇ ਜਾਂਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, they arrive and play. / ਉਸ ਤੋਂ ਬਾਅਦ, ਉਹ ਪਹੁੰਚ ਕੇ ਖੇਡਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "park", "meaningEn": "a place to play outside", "meaningPa": "ਪਾਰਕ" },
-      { "word": "left", "meaningEn": "the direction opposite of right", "meaningPa": "ਖੱਬੇ" },
-      { "word": "next to", "meaningEn": "beside; very near", "meaningPa": "ਦੇ ਕੋਲ" }
-    ]
+      {
+        "word": "park",
+        "meaningEn": "a place to play outside",
+        "meaningPa": "ਪਾਰਕ"
+      },
+      {
+        "word": "left",
+        "meaningEn": "the direction opposite of right",
+        "meaningPa": "ਖੱਬੇ"
+      },
+      {
+        "word": "next to",
+        "meaningEn": "beside; very near",
+        "meaningPa": "ਦੇ ਕੋਲ"
+      },
+      {
+        "word": "gate",
+        "meaningEn": "an entrance door to a place",
+        "meaningPa": "ਗੇਟ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "morning",
+        "meaningEn": "story word: morning",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "and",
+        "meaningEn": "story word: and",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "the",
+        "meaningEn": "story word: the",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S02",
@@ -1440,40 +3839,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child wait? / ਬੱਚਾ ਕਿੱਥੇ ਉਡੀਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["bus stop / ਬੱਸ ਸਟਾਪ", "park / ਪਾਰਕ", "bank / ਬੈਂਕ"],
+        "choices": [
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "park / ਪਾਰਕ",
+          "bank / ਬੈਂਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child waits at the bus stop. / ਬੱਚਾ ਬੱਸ ਸਟਾਪ ਤੇ ਉਡੀਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What do they do first? / ਉਹ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["stand in line / ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਦੇ ਹਨ", "turn left / ਖੱਬੇ ਮੁੜਦੇ ਹਨ", "buy fruit / ਫਲ ਖਰੀਦਦੇ ਹਨ"],
+        "choices": [
+          "stand in line / ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਦੇ ਹਨ",
+          "turn left / ਖੱਬੇ ਮੁੜਦੇ ਹਨ",
+          "buy fruit / ਫਲ ਖਰੀਦਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, they stand in line. / ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਉਹ ਕਤਾਰ ਵਿੱਚ ਖੜ੍ਹਦੇ ਹਨ।"
       },
       {
         "question": "Where does the bus stop? / ਬੱਸ ਕਿੱਥੇ ਰੁਕਦੀ ਹੈ?",
-        "choices": ["in front of them / ਉਹਨਾਂ ਦੇ ਸਾਹਮਣੇ", "under the bench / ਬੈਂਚ ਹੇਠਾਂ", "behind the store / ਦੁਕਾਨ ਦੇ ਪਿੱਛੇ"],
+        "choices": [
+          "in front of them / ਉਹਨਾਂ ਦੇ ਸਾਹਮਣੇ",
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ",
+          "behind the store / ਦੁਕਾਨ ਦੇ ਪਿੱਛੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The bus stops right in front of them. / ਬੱਸ ਉਹਨਾਂ ਦੇ ਸਾਹਮਣੇ ਰੁਕਦੀ ਹੈ।"
       },
       {
         "question": "What does the driver say? / ਡਰਾਈਵਰ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Step in and sit / ਅੰਦਰ ਆਓ ਤੇ ਬੈਠੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Be quiet / ਚੁੱਪ ਰਹੋ"],
+        "choices": [
+          "Step in and sit / ਅੰਦਰ ਆਓ ਤੇ ਬੈਠੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Be quiet / ਚੁੱਪ ਰਹੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The driver says, \"Step in and sit.\" / ਡਰਾਈਵਰ ਕਹਿੰਦਾ ਹੈ, \"ਅੰਦਰ ਆਓ ਤੇ ਬੈਠੋ।\""
       },
       {
         "question": "Where do they get off? / ਉਹ ਕਿੱਥੇ ਉਤਰਦੇ ਹਨ?",
-        "choices": ["near the school gate / ਸਕੂਲ ਗੇਟ ਦੇ ਨੇੜੇ", "at the market / ਮਾਰਕੀਟ ਤੇ", "at the park / ਪਾਰਕ ਤੇ"],
+        "choices": [
+          "near the school gate / ਸਕੂਲ ਗੇਟ ਦੇ ਨੇੜੇ",
+          "at the market / ਮਾਰਕੀਟ ਤੇ",
+          "at the park / ਪਾਰਕ ਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They get off near the school gate. / ਉਹ ਸਕੂਲ ਗੇਟ ਦੇ ਨੇੜੇ ਉਤਰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "bus stop", "meaningEn": "a place to wait for a bus", "meaningPa": "ਬੱਸ ਸਟਾਪ" },
-      { "word": "driver", "meaningEn": "a person who drives a bus", "meaningPa": "ਡਰਾਈਵਰ" },
-      { "word": "straight", "meaningEn": "forward, not left or right", "meaningPa": "ਸਿੱਧਾ" }
-    ]
+      {
+        "word": "bus stop",
+        "meaningEn": "a place to wait for a bus",
+        "meaningPa": "ਬੱਸ ਸਟਾਪ"
+      },
+      {
+        "word": "driver",
+        "meaningEn": "a person who drives a bus",
+        "meaningPa": "ਡਰਾਈਵਰ"
+      },
+      {
+        "word": "straight",
+        "meaningEn": "forward, not left or right",
+        "meaningPa": "ਸਿੱਧਾ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people standing one behind another",
+        "meaningPa": "ਕਤਾਰ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "morning",
+        "meaningEn": "story word: morning",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "and",
+        "meaningEn": "story word: and",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "school",
+        "meaningEn": "story word: school",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "bus",
+        "meaningEn": "story word: bus",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S03",
@@ -1486,40 +3972,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go today? / ਅੱਜ ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["market / ਮਾਰਕੀਟ", "hospital / ਹਸਪਤਾਲ", "school / ਸਕੂਲ"],
+        "choices": [
+          "market / ਮਾਰਕੀਟ",
+          "hospital / ਹਸਪਤਾਲ",
+          "school / ਸਕੂਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They go to the market today. / ਉਹ ਅੱਜ ਮਾਰਕੀਟ ਜਾਂਦੇ ਹਨ।"
       },
       {
         "question": "Where is the bank? / ਬੈਂਕ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["across from the store / ਦੁਕਾਨ ਦੇ ਸਾਹਮਣੇ", "under the bed / ਬਿਸਤਰ ਹੇਠਾਂ", "in the bus / ਬੱਸ ਵਿੱਚ"],
+        "choices": [
+          "across from the store / ਦੁਕਾਨ ਦੇ ਸਾਹਮਣੇ",
+          "under the bed / ਬਿਸਤਰ ਹੇਠਾਂ",
+          "in the bus / ਬੱਸ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The bank is across from the store. / ਬੈਂਕ ਦੁਕਾਨ ਦੇ ਸਾਹਮਣੇ ਹੈ।"
       },
       {
         "question": "Which way do they turn? / ਉਹ ਕਿਹੜੇ ਪਾਸੇ ਮੁੜਦੇ ਹਨ?",
-        "choices": ["right / ਸੱਜੇ", "left / ਖੱਬੇ", "back / ਪਿੱਛੇ"],
+        "choices": [
+          "right / ਸੱਜੇ",
+          "left / ਖੱਬੇ",
+          "back / ਪਿੱਛੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Mom says to turn right. / ਮਾਂ ਸੱਜੇ ਮੁੜਨ ਲਈ ਕਹਿੰਦੀ ਹੈ।"
       },
       {
         "question": "Where is the park? / ਪਾਰਕ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["behind the bank / ਬੈਂਕ ਦੇ ਪਿੱਛੇ", "next to the bus / ਬੱਸ ਦੇ ਕੋਲ", "in front of the bed / ਬਿਸਤਰ ਦੇ ਸਾਹਮਣੇ"],
+        "choices": [
+          "behind the bank / ਬੈਂਕ ਦੇ ਪਿੱਛੇ",
+          "next to the bus / ਬੱਸ ਦੇ ਕੋਲ",
+          "in front of the bed / ਬਿਸਤਰ ਦੇ ਸਾਹਮਣੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The park is behind the bank. / ਪਾਰਕ ਬੈਂਕ ਦੇ ਪਿੱਛੇ ਹੈ।"
       },
       {
         "question": "What do they buy? / ਉਹ ਕੀ ਖਰੀਦਦੇ ਹਨ?",
-        "choices": ["apples and bananas / ਸੇਬ ਤੇ ਕੇਲੇ", "tickets / ਟਿਕਟਾਂ", "shoes / ਜੁੱਤੇ"],
+        "choices": [
+          "apples and bananas / ਸੇਬ ਤੇ ਕੇਲੇ",
+          "tickets / ਟਿਕਟਾਂ",
+          "shoes / ਜੁੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They buy apples and bananas. / ਉਹ ਸੇਬ ਅਤੇ ਕੇਲੇ ਖਰੀਦਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "market", "meaningEn": "a place to buy food", "meaningPa": "ਮਾਰਕੀਟ" },
-      { "word": "across from", "meaningEn": "on the other side", "meaningPa": "ਦੇ ਸਾਹਮਣੇ" },
-      { "word": "buy", "meaningEn": "get something by paying", "meaningPa": "ਖਰੀਦਣਾ" }
-    ]
+      {
+        "word": "market",
+        "meaningEn": "a place to buy food",
+        "meaningPa": "ਮਾਰਕੀਟ"
+      },
+      {
+        "word": "across from",
+        "meaningEn": "on the other side",
+        "meaningPa": "ਦੇ ਸਾਹਮਣੇ"
+      },
+      {
+        "word": "buy",
+        "meaningEn": "get something by paying",
+        "meaningPa": "ਖਰੀਦਣਾ"
+      },
+      {
+        "word": "corner",
+        "meaningEn": "the point where two streets meet",
+        "meaningPa": "ਮੋੜ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "the",
+        "meaningEn": "story word: the",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "fruit",
+        "meaningEn": "story word: fruit",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "busy",
+        "meaningEn": "story word: busy",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S04",
@@ -1532,40 +4105,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go today? / ਅੱਜ ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["library / ਲਾਇਬ੍ਰੇਰੀ", "market / ਮਾਰਕੀਟ", "hospital / ਹਸਪਤਾਲ"],
+        "choices": [
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "market / ਮਾਰਕੀਟ",
+          "hospital / ਹਸਪਤਾਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They go to the library today. / ਉਹ ਅੱਜ ਲਾਇਬ੍ਰੇਰੀ ਜਾਂਦੇ ਹਨ।"
       },
       {
         "question": "Where is the library? / ਲਾਇਬ੍ਰੇਰੀ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["in front of the park / ਪਾਰਕ ਦੇ ਸਾਹਮਣੇ", "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ", "under the bench / ਬੈਂਚ ਹੇਠਾਂ"],
+        "choices": [
+          "in front of the park / ਪਾਰਕ ਦੇ ਸਾਹਮਣੇ",
+          "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ",
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The library is in front of the park entrance. / ਲਾਇਬ੍ਰੇਰੀ ਪਾਰਕ ਦੇ ਸਾਹਮਣੇ ਹੈ।"
       },
       {
         "question": "Where is the door? / ਦਰਵਾਜ਼ਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["between two windows / ਦੋ ਖਿੜਕੀਆਂ ਦੇ ਵਿਚਕਾਰ", "next to a spoon / ਚਮਚੇ ਦੇ ਕੋਲ", "in the bag / ਬੈਗ ਵਿੱਚ"],
+        "choices": [
+          "between two windows / ਦੋ ਖਿੜਕੀਆਂ ਦੇ ਵਿਚਕਾਰ",
+          "next to a spoon / ਚਮਚੇ ਦੇ ਕੋਲ",
+          "in the bag / ਬੈਗ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The door is between two windows. / ਦਰਵਾਜ਼ਾ ਦੋ ਖਿੜਕੀਆਂ ਦੇ ਵਿਚਕਾਰ ਹੈ।"
       },
       {
         "question": "What does the librarian say? / ਲਾਇਬ੍ਰੇਰੀ ਵਾਲਾ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Please be quiet / ਚੁੱਪ ਰਹੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Eat now / ਹੁਣ ਖਾਓ"],
+        "choices": [
+          "Please be quiet / ਚੁੱਪ ਰਹੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Eat now / ਹੁਣ ਖਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The librarian says, \"Please be quiet.\" / ਲਾਇਬ੍ਰੇਰੀ ਵਾਲਾ ਕਹਿੰਦਾ ਹੈ, \"ਚੁੱਪ ਰਹੋ।\""
       },
       {
         "question": "What do they do after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["sit and read / ਬੈਠ ਕੇ ਪੜ੍ਹਦੇ ਹਨ", "ride a bus / ਬੱਸ ਚੜ੍ਹਦੇ ਹਨ", "play soccer / ਫੁੱਟਬਾਲ ਖੇਡਦੇ ਹਨ"],
+        "choices": [
+          "sit and read / ਬੈਠ ਕੇ ਪੜ੍ਹਦੇ ਹਨ",
+          "ride a bus / ਬੱਸ ਚੜ੍ਹਦੇ ਹਨ",
+          "play soccer / ਫੁੱਟਬਾਲ ਖੇਡਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, they sit at a table and read. / ਉਸ ਤੋਂ ਬਾਅਦ, ਉਹ ਮੇਜ਼ ਤੇ ਬੈਠ ਕੇ ਪੜ੍ਹਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "library", "meaningEn": "a place with many books", "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ" },
-      { "word": "between", "meaningEn": "in the middle of two things", "meaningPa": "ਦੇ ਵਿਚਕਾਰ" },
-      { "word": "quiet", "meaningEn": "not loud", "meaningPa": "ਚੁੱਪ/ਸ਼ਾਂਤ" }
-    ]
+      {
+        "word": "library",
+        "meaningEn": "a place with many books",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ"
+      },
+      {
+        "word": "between",
+        "meaningEn": "in the middle of two things",
+        "meaningPa": "ਦੇ ਵਿਚਕਾਰ"
+      },
+      {
+        "word": "quiet",
+        "meaningEn": "not loud",
+        "meaningPa": "ਚੁੱਪ/ਸ਼ਾਂਤ"
+      },
+      {
+        "word": "librarian",
+        "meaningEn": "a person who helps in a library",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ ਅਧਿਕਾਰੀ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "the",
+        "meaningEn": "story word: the",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "with",
+        "meaningEn": "story word: with",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "dad",
+        "meaningEn": "story word: dad",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S05",
@@ -1578,40 +4238,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go today? / ਅੱਜ ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["hospital / ਹਸਪਤਾਲ", "park / ਪਾਰਕ", "bank / ਬੈਂਕ"],
+        "choices": [
+          "hospital / ਹਸਪਤਾਲ",
+          "park / ਪਾਰਕ",
+          "bank / ਬੈਂਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They go to the hospital today. / ਉਹ ਅੱਜ ਹਸਪਤਾਲ ਜਾਂਦੇ ਹਨ।"
       },
       {
         "question": "Where do they sit? / ਉਹ ਕਿੱਥੇ ਬੈਠਦੇ ਹਨ?",
-        "choices": ["next to a nurse / ਨਰਸ ਦੇ ਕੋਲ", "under the table / ਮੇਜ਼ ਹੇਠਾਂ", "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ"],
+        "choices": [
+          "next to a nurse / ਨਰਸ ਦੇ ਕੋਲ",
+          "under the table / ਮੇਜ਼ ਹੇਠਾਂ",
+          "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They sit next to a nurse and wait. / ਉਹ ਨਰਸ ਦੇ ਕੋਲ ਬੈਠ ਕੇ ਉਡੀਕ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "Who asks, \"How do you feel?\" / \"ਕਿਵੇਂ ਹੋ?\" ਕੌਣ ਪੁੱਛਦਾ ਹੈ?",
-        "choices": ["doctor / ਡਾਕਟਰ", "driver / ਡਰਾਈਵਰ", "librarian / ਲਾਇਬ੍ਰੇਰੀ ਵਾਲਾ"],
+        "choices": [
+          "doctor / ਡਾਕਟਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "librarian / ਲਾਇਬ੍ਰੇਰੀ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The doctor asks how the child feels. / ਡਾਕਟਰ ਪੁੱਛਦਾ ਹੈ ਕਿ ਬੱਚਾ ਕਿਵੇਂ ਹੈ।"
       },
       {
         "question": "What does the doctor say? / ਡਾਕਟਰ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Sit here and rest / ਇੱਥੇ ਬੈਠੋ ਤੇ ਆਰਾਮ ਕਰੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Turn left / ਖੱਬੇ ਮੁੜੋ"],
+        "choices": [
+          "Sit here and rest / ਇੱਥੇ ਬੈਠੋ ਤੇ ਆਰਾਮ ਕਰੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Turn left / ਖੱਬੇ ਮੁੜੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The doctor says to sit and rest. / ਡਾਕਟਰ ਬੈਠਣ ਅਤੇ ਆਰਾਮ ਕਰਨ ਲਈ ਕਹਿੰਦਾ ਹੈ।"
       },
       {
         "question": "What does the child drink? / ਬੱਚਾ ਕੀ ਪੀਂਦਾ/ਪੀੰਦੀ ਹੈ?",
-        "choices": ["water / ਪਾਣੀ", "juice / ਜੂਸ", "tea / ਚਾਹ"],
+        "choices": [
+          "water / ਪਾਣੀ",
+          "juice / ਜੂਸ",
+          "tea / ਚਾਹ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child drinks water in the story. / ਕਹਾਣੀ ਵਿੱਚ ਬੱਚਾ ਪਾਣੀ ਪੀਂਦਾ/ਪੀੰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "hospital", "meaningEn": "a place for doctors and nurses", "meaningPa": "ਹਸਪਤਾਲ" },
-      { "word": "nurse", "meaningEn": "a helper in a hospital", "meaningPa": "ਨਰਸ" },
-      { "word": "rest", "meaningEn": "relax and not work", "meaningPa": "ਆਰਾਮ" }
-    ]
+      {
+        "word": "hospital",
+        "meaningEn": "a place for doctors and nurses",
+        "meaningPa": "ਹਸਪਤਾਲ"
+      },
+      {
+        "word": "nurse",
+        "meaningEn": "a helper in a hospital",
+        "meaningPa": "ਨਰਸ"
+      },
+      {
+        "word": "rest",
+        "meaningEn": "relax and not work",
+        "meaningPa": "ਆਰਾਮ"
+      },
+      {
+        "word": "doctor",
+        "meaningEn": "a person who treats sick people",
+        "meaningPa": "ਡਾਕਟਰ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "the",
+        "meaningEn": "story word: the",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "with",
+        "meaningEn": "story word: with",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "mom",
+        "meaningEn": "story word: mom",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S06",
@@ -1624,40 +4371,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Who do they see today? / ਅੱਜ ਉਹ ਕਿਨ੍ਹਾਂ ਨੂੰ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["firefighter / ਫਾਇਰਫਾਈਟਰ", "doctor / ਡਾਕਟਰ", "cashier / ਕੈਸ਼ੀਅਰ"],
+        "choices": [
+          "firefighter / ਫਾਇਰਫਾਈਟਰ",
+          "doctor / ਡਾਕਟਰ",
+          "cashier / ਕੈਸ਼ੀਅਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They see a firefighter today. / ਉਹ ਅੱਜ ਫਾਇਰਫਾਈਟਰ ਵੇਖਦੇ ਹਨ।"
       },
       {
         "question": "What do they do first? / ਉਹ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["stop and watch / ਰੁਕ ਕੇ ਵੇਖਦੇ ਹਨ", "buy fruit / ਫਲ ਖਰੀਦਦੇ ਹਨ", "ride a bus / ਬੱਸ ਚੜ੍ਹਦੇ ਹਨ"],
+        "choices": [
+          "stop and watch / ਰੁਕ ਕੇ ਵੇਖਦੇ ਹਨ",
+          "buy fruit / ਫਲ ਖਰੀਦਦੇ ਹਨ",
+          "ride a bus / ਬੱਸ ਚੜ੍ਹਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, they stop near the truck and watch. / ਪਹਿਲਾਂ, ਉਹ ਟਰੱਕ ਦੇ ਨੇੜੇ ਰੁਕ ਕੇ ਵੇਖਦੇ ਹਨ।"
       },
       {
         "question": "Where do they stand? / ਉਹ ਕਿੱਥੇ ਖੜ੍ਹਦੇ ਹਨ?",
-        "choices": ["behind the line / ਲਾਈਨ ਦੇ ਪਿੱਛੇ", "under the bench / ਬੈਂਚ ਹੇਠਾਂ", "inside the truck / ਟਰੱਕ ਵਿੱਚ"],
+        "choices": [
+          "behind the line / ਲਾਈਨ ਦੇ ਪਿੱਛੇ",
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ",
+          "inside the truck / ਟਰੱਕ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They stand behind the line. / ਉਹ ਲਾਈਨ ਦੇ ਪਿੱਛੇ ਖੜ੍ਹਦੇ ਹਨ।"
       },
       {
         "question": "What does the firefighter say? / ਫਾਇਰਫਾਈਟਰ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Stay back / ਪਿੱਛੇ ਰਹੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Open the door / ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹੋ"],
+        "choices": [
+          "Stay back / ਪਿੱਛੇ ਰਹੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Open the door / ਦਰਵਾਜ਼ਾ ਖੋਲ੍ਹੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The firefighter says, \"Stay back, please.\" / ਫਾਇਰਫਾਈਟਰ ਕਹਿੰਦਾ ਹੈ, \"ਪਿੱਛੇ ਰਹੋ।\""
       },
       {
         "question": "How do they feel after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਉਹ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦੇ ਹਨ?",
-        "choices": ["safe / ਸੁਰੱਖਿਅਤ", "lost / ਗੁੰਮ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "safe / ਸੁਰੱਖਿਅਤ",
+          "lost / ਗੁੰਮ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They feel safe after the firefighter talks. / ਫਾਇਰਫਾਈਟਰ ਦੇ ਕਹਿਣ ਤੋਂ ਬਾਅਦ ਉਹ ਸੁਰੱਖਿਅਤ ਮਹਿਸੂਸ ਕਰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "firefighter", "meaningEn": "a person who helps in fires", "meaningPa": "ਫਾਇਰਫਾਈਟਰ" },
-      { "word": "behind", "meaningEn": "at the back of something", "meaningPa": "ਦੇ ਪਿੱਛੇ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ" }
-    ]
+      {
+        "word": "firefighter",
+        "meaningEn": "a person who helps in fires",
+        "meaningPa": "ਫਾਇਰਫਾਈਟਰ"
+      },
+      {
+        "word": "behind",
+        "meaningEn": "at the back of something",
+        "meaningPa": "ਦੇ ਪਿੱਛੇ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ"
+      },
+      {
+        "word": "truck",
+        "meaningEn": "a large road vehicle",
+        "meaningPa": "ਟਰੱਕ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "see",
+        "meaningEn": "story word: see",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "near",
+        "meaningEn": "story word: near",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "our",
+        "meaningEn": "story word: our",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S07",
@@ -1670,40 +4504,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What game do they play? / ਉਹ ਕਿਹੜਾ ਖੇਡ ਖੇਡਦੇ ਹਨ?",
-        "choices": ["treasure game / ਖਜ਼ਾਨੇ ਵਾਲਾ ਖੇਡ", "bus game / ਬੱਸ ਖੇਡ", "school game / ਸਕੂਲ ਖੇਡ"],
+        "choices": [
+          "treasure game / ਖਜ਼ਾਨੇ ਵਾਲਾ ਖੇਡ",
+          "bus game / ਬੱਸ ਖੇਡ",
+          "school game / ਸਕੂਲ ਖੇਡ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They play a treasure game in the park. / ਉਹ ਪਾਰਕ ਵਿੱਚ ਖਜ਼ਾਨੇ ਵਾਲਾ ਖੇਡ ਖੇਡਦੇ ਹਨ।"
       },
       {
         "question": "Where do they look first? / ਉਹ ਪਹਿਲਾਂ ਕਿੱਥੇ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["under the bench / ਬੈਂਚ ਹੇਠਾਂ", "in the bus / ਬੱਸ ਵਿੱਚ", "on the roof / ਛੱਤ ਉੱਤੇ"],
+        "choices": [
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ",
+          "in the bus / ਬੱਸ ਵਿੱਚ",
+          "on the roof / ਛੱਤ ਉੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, they look under the bench. / ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਉਹ ਬੈਂਚ ਹੇਠਾਂ ਵੇਖਦੇ ਹਨ।"
       },
       {
         "question": "Where do they look next? / ਫਿਰ ਉਹ ਕਿੱਥੇ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["between two trees / ਦੋ ਦਰੱਖਤਾਂ ਦੇ ਵਿਚਕਾਰ", "in the hospital / ਹਸਪਤਾਲ ਵਿੱਚ", "in the bank / ਬੈਂਕ ਵਿੱਚ"],
+        "choices": [
+          "between two trees / ਦੋ ਦਰੱਖਤਾਂ ਦੇ ਵਿਚਕਾਰ",
+          "in the hospital / ਹਸਪਤਾਲ ਵਿੱਚ",
+          "in the bank / ਬੈਂਕ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Next, they look between two trees. / ਫਿਰ, ਉਹ ਦੋ ਦਰੱਖਤਾਂ ਦੇ ਵਿਚਕਾਰ ਵੇਖਦੇ ਹਨ।"
       },
       {
         "question": "Where is the toy? / ਖਿਡੌਣਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["on the rock / ਪੱਥਰ ਉੱਤੇ", "under the bed / ਬਿਸਤਰ ਹੇਠਾਂ", "across from the store / ਦੁਕਾਨ ਦੇ ਸਾਹਮਣੇ"],
+        "choices": [
+          "on the rock / ਪੱਥਰ ਉੱਤੇ",
+          "under the bed / ਬਿਸਤਰ ਹੇਠਾਂ",
+          "across from the store / ਦੁਕਾਨ ਦੇ ਸਾਹਮਣੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The toy is on the rock. / ਖਿਡੌਣਾ ਪੱਥਰ ਉੱਤੇ ਹੈ।"
       },
       {
         "question": "What do they do after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["pick up the toy / ਖਿਡੌਣਾ ਚੁੱਕਦੇ ਹਨ", "throw the toy / ਖਿਡੌਣਾ ਸੁੱਟਦੇ ਹਨ", "leave the toy / ਖਿਡੌਣਾ ਛੱਡਦੇ ਹਨ"],
+        "choices": [
+          "pick up the toy / ਖਿਡੌਣਾ ਚੁੱਕਦੇ ਹਨ",
+          "throw the toy / ਖਿਡੌਣਾ ਸੁੱਟਦੇ ਹਨ",
+          "leave the toy / ਖਿਡੌਣਾ ਛੱਡਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, they pick up the toy carefully. / ਉਸ ਤੋਂ ਬਾਅਦ, ਉਹ ਖਿਡੌਣਾ ਧਿਆਨ ਨਾਲ ਚੁੱਕਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "under", "meaningEn": "below something", "meaningPa": "ਹੇਠਾਂ" },
-      { "word": "between", "meaningEn": "in the middle of two things", "meaningPa": "ਦੇ ਵਿਚਕਾਰ" },
-      { "word": "rock", "meaningEn": "a hard stone", "meaningPa": "ਪੱਥਰ" }
-    ]
+      {
+        "word": "under",
+        "meaningEn": "below something",
+        "meaningPa": "ਹੇਠਾਂ"
+      },
+      {
+        "word": "between",
+        "meaningEn": "in the middle of two things",
+        "meaningPa": "ਦੇ ਵਿਚਕਾਰ"
+      },
+      {
+        "word": "rock",
+        "meaningEn": "a hard stone",
+        "meaningPa": "ਪੱਥਰ"
+      },
+      {
+        "word": "bench",
+        "meaningEn": "a long seat",
+        "meaningPa": "ਬੈਂਚ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "play",
+        "meaningEn": "story word: play",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "treasure",
+        "meaningEn": "story word: treasure",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "game",
+        "meaningEn": "story word: game",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S08",
@@ -1716,40 +4637,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child feel lost? / ਬੱਚਾ ਕਿੱਥੇ ਗੁੰਮ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["near the store / ਦੁਕਾਨ ਦੇ ਨੇੜੇ", "in the park / ਪਾਰਕ ਵਿੱਚ", "in the hospital / ਹਸਪਤਾਲ ਵਿੱਚ"],
+        "choices": [
+          "near the store / ਦੁਕਾਨ ਦੇ ਨੇੜੇ",
+          "in the park / ਪਾਰਕ ਵਿੱਚ",
+          "in the hospital / ਹਸਪਤਾਲ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child feels lost near the store. / ਬੱਚਾ ਦੁਕਾਨ ਦੇ ਨੇੜੇ ਗੁੰਮ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["stop and breathe / ਰੁਕਦਾ ਅਤੇ ਸਾਹ ਲੈਂਦਾ ਹੈ", "run away / ਭੱਜ ਜਾਂਦਾ ਹੈ", "hide / ਛੁਪ ਜਾਂਦਾ ਹੈ"],
+        "choices": [
+          "stop and breathe / ਰੁਕਦਾ ਅਤੇ ਸਾਹ ਲੈਂਦਾ ਹੈ",
+          "run away / ਭੱਜ ਜਾਂਦਾ ਹੈ",
+          "hide / ਛੁਪ ਜਾਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, the child stops and takes a breath. / ਪਹਿਲਾਂ, ਬੱਚਾ ਰੁਕ ਕੇ ਸਾਹ ਲੈਂਦਾ/ਲੈਂਦੀ ਹੈ।"
       },
       {
         "question": "Who helps the child? / ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["police officer / ਪੁਲਿਸ ਅਫਸਰ", "doctor / ਡਾਕਟਰ", "driver / ਡਰਾਈਵਰ"],
+        "choices": [
+          "police officer / ਪੁਲਿਸ ਅਫਸਰ",
+          "doctor / ਡਾਕਟਰ",
+          "driver / ਡਰਾਈਵਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "A police officer helps the child. / ਪੁਲਿਸ ਅਫਸਰ ਬੱਚੇ ਦੀ ਮਦਦ ਕਰਦਾ ਹੈ।"
       },
       {
         "question": "What does the officer say? / ਪੁਲਿਸ ਅਫਸਰ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Come with me / ਮੇਰੇ ਨਾਲ ਆਓ", "Turn left / ਖੱਬੇ ਮੁੜੋ", "Be quiet / ਚੁੱਪ ਰਹੋ"],
+        "choices": [
+          "Come with me / ਮੇਰੇ ਨਾਲ ਆਓ",
+          "Turn left / ਖੱਬੇ ਮੁੜੋ",
+          "Be quiet / ਚੁੱਪ ਰਹੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The officer says, \"Come with me.\" / ਪੁਲਿਸ ਅਫਸਰ ਕਹਿੰਦਾ ਹੈ, \"ਮੇਰੇ ਨਾਲ ਆਓ।\""
       },
       {
         "question": "Where does the child find mom? / ਬੱਚਾ ਮਾਂ ਕਿੱਥੇ ਲੱਭਦਾ/ਲੱਭਦੀ ਹੈ?",
-        "choices": ["by the door / ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ", "under the bench / ਬੈਂਚ ਹੇਠਾਂ", "across from the bank / ਬੈਂਕ ਦੇ ਸਾਹਮਣੇ"],
+        "choices": [
+          "by the door / ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ",
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ",
+          "across from the bank / ਬੈਂਕ ਦੇ ਸਾਹਮਣੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child sees mom by the door. / ਬੱਚਾ ਮਾਂ ਨੂੰ ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਲ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "lost", "meaningEn": "not knowing where you are", "meaningPa": "ਗੁੰਮ" },
-      { "word": "police officer", "meaningEn": "a helper who keeps people safe", "meaningPa": "ਪੁਲਿਸ ਅਫਸਰ" },
-      { "word": "near", "meaningEn": "not far away", "meaningPa": "ਨੇੜੇ" }
-    ]
+      {
+        "word": "lost",
+        "meaningEn": "not knowing where you are",
+        "meaningPa": "ਗੁੰਮ"
+      },
+      {
+        "word": "police officer",
+        "meaningEn": "a helper who keeps people safe",
+        "meaningPa": "ਪੁਲਿਸ ਅਫਸਰ"
+      },
+      {
+        "word": "near",
+        "meaningEn": "not far away",
+        "meaningPa": "ਨੇੜੇ"
+      },
+      {
+        "word": "worry",
+        "meaningEn": "to feel afraid or nervous",
+        "meaningPa": "ਚਿੰਤਾ ਕਰਨੀ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "feel",
+        "meaningEn": "story word: feel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "the",
+        "meaningEn": "story word: the",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "store",
+        "meaningEn": "story word: store",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S09",
@@ -1762,40 +4770,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they help today? / ਅੱਜ ਉਹ ਕਿੱਥੇ ਮਦਦ ਕਰਦੇ ਹਨ?",
-        "choices": ["park / ਪਾਰਕ", "bank / ਬੈਂਕ", "bus stop / ਬੱਸ ਸਟਾਪ"],
+        "choices": [
+          "park / ਪਾਰਕ",
+          "bank / ਬੈਂਕ",
+          "bus stop / ਬੱਸ ਸਟਾਪ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They help clean the park today. / ਉਹ ਅੱਜ ਪਾਰਕ ਸਾਫ਼ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "What does the helper say first? / ਮਦਦਗਾਰ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Pick up trash / ਕੂੜਾ ਚੁੱਕੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Sleep now / ਹੁਣ ਸੋ ਜਾਓ"],
+        "choices": [
+          "Pick up trash / ਕੂੜਾ ਚੁੱਕੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Sleep now / ਹੁਣ ਸੋ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The helper says, \"Pick up trash, please.\" / ਮਦਦਗਾਰ ਕਹਿੰਦਾ ਹੈ, \"ਕੂੜਾ ਚੁੱਕੋ।\""
       },
       {
         "question": "Where do they look next? / ਫਿਰ ਉਹ ਕਿੱਥੇ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["under the slide / ਸਲਾਈਡ ਹੇਠਾਂ", "in the library / ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ", "on the bus / ਬੱਸ ਉੱਤੇ"],
+        "choices": [
+          "under the slide / ਸਲਾਈਡ ਹੇਠਾਂ",
+          "in the library / ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ",
+          "on the bus / ਬੱਸ ਉੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Next, they look under the slide and steps. / ਫਿਰ ਉਹ ਸਲਾਈਡ ਅਤੇ ਸੀੜ੍ਹੀਆਂ ਹੇਠਾਂ ਵੇਖਦੇ ਹਨ।"
       },
       {
         "question": "Which direction do they go? / ਉਹ ਕਿਹੜੇ ਪਾਸੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["right / ਸੱਜੇ", "left / ਖੱਬੇ", "up / ਉੱਪਰ"],
+        "choices": [
+          "right / ਸੱਜੇ",
+          "left / ਖੱਬੇ",
+          "up / ਉੱਪਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The helper says to go right and check. / ਮਦਦਗਾਰ ਸੱਜੇ ਜਾਣ ਲਈ ਕਹਿੰਦਾ ਹੈ।"
       },
       {
         "question": "How does the park look after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਪਾਰਕ ਕਿਹੋ ਜਿਹਾ ਲੱਗਦਾ ਹੈ?",
-        "choices": ["clean and bright / ਸਾਫ਼ ਅਤੇ ਚਮਕਦਾਰ", "dirty / ਗੰਦਾ", "broken / ਟੁੱਟਿਆ"],
+        "choices": [
+          "clean and bright / ਸਾਫ਼ ਅਤੇ ਚਮਕਦਾਰ",
+          "dirty / ਗੰਦਾ",
+          "broken / ਟੁੱਟਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "After that, the park looks clean and bright. / ਉਸ ਤੋਂ ਬਾਅਦ, ਪਾਰਕ ਸਾਫ਼ ਅਤੇ ਚਮਕਦਾਰ ਲੱਗਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "community", "meaningEn": "people in a neighborhood", "meaningPa": "ਕਮਿਊਨਟੀ/ਮੁਹੱਲਾ" },
-      { "word": "trash", "meaningEn": "things to throw away", "meaningPa": "ਕੂੜਾ" },
-      { "word": "together", "meaningEn": "with other people", "meaningPa": "ਇਕੱਠੇ" }
-    ]
+      {
+        "word": "community",
+        "meaningEn": "people in a neighborhood",
+        "meaningPa": "ਕਮਿਊਨਟੀ/ਮੁਹੱਲਾ"
+      },
+      {
+        "word": "trash",
+        "meaningEn": "things to throw away",
+        "meaningPa": "ਕੂੜਾ"
+      },
+      {
+        "word": "together",
+        "meaningEn": "with other people",
+        "meaningPa": "ਇਕੱਠੇ"
+      },
+      {
+        "word": "gloves",
+        "meaningEn": "hand coverings for protection",
+        "meaningPa": "ਦਸਤਾਨੇ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "our",
+        "meaningEn": "story word: our",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "helps",
+        "meaningEn": "story word: helps",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "clean",
+        "meaningEn": "story word: clean",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "clean",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B3_S10",
@@ -1808,40 +4903,127 @@ var BOOK3_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What is in town today? / ਅੱਜ ਸ਼ਹਿਰ ਵਿੱਚ ਕੀ ਹੈ?",
-        "choices": ["festival / ਮੇਲਾ", "hospital / ਹਸਪਤਾਲ", "class / ਕਲਾਸ"],
+        "choices": [
+          "festival / ਮੇਲਾ",
+          "hospital / ਹਸਪਤਾਲ",
+          "class / ਕਲਾਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Today there is a festival in town. / ਅੱਜ ਸ਼ਹਿਰ ਵਿੱਚ ਮੇਲਾ ਹੈ।"
       },
       {
         "question": "What do they do first? / ਉਹ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["walk straight / ਸਿੱਧੇ ਤੁਰਦੇ ਹਨ", "turn left / ਖੱਬੇ ਮੁੜਦੇ ਹਨ", "ride a bus / ਬੱਸ ਚੜ੍ਹਦੇ ਹਨ"],
+        "choices": [
+          "walk straight / ਸਿੱਧੇ ਤੁਰਦੇ ਹਨ",
+          "turn left / ਖੱਬੇ ਮੁੜਦੇ ਹਨ",
+          "ride a bus / ਬੱਸ ਚੜ੍ਹਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "First, they walk straight on the main road. / ਸਭ ਤੋਂ ਪਹਿਲਾਂ, ਉਹ ਮੁੱਖ ਸੜਕ ਤੇ ਸਿੱਧੇ ਤੁਰਦੇ ਹਨ।"
       },
       {
         "question": "Where is the stage? / ਸਟੇਜ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["in front of the library / ਲਾਇਬ੍ਰੇਰੀ ਦੇ ਸਾਹਮਣੇ", "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ", "under the bench / ਬੈਂਚ ਹੇਠਾਂ"],
+        "choices": [
+          "in front of the library / ਲਾਇਬ੍ਰੇਰੀ ਦੇ ਸਾਹਮਣੇ",
+          "behind the bus / ਬੱਸ ਦੇ ਪਿੱਛੇ",
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The stage is in front of the library. / ਸਟੇਜ ਲਾਇਬ੍ਰੇਰੀ ਦੇ ਸਾਹਮਣੇ ਹੈ।"
       },
       {
         "question": "Where is the food? / ਖਾਣਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["next to the stage / ਸਟੇਜ ਦੇ ਕੋਲ", "in the bathroom / ਬਾਥਰੂਮ ਵਿੱਚ", "across from the hospital / ਹਸਪਤਾਲ ਦੇ ਸਾਹਮਣੇ"],
+        "choices": [
+          "next to the stage / ਸਟੇਜ ਦੇ ਕੋਲ",
+          "in the bathroom / ਬਾਥਰੂਮ ਵਿੱਚ",
+          "across from the hospital / ਹਸਪਤਾਲ ਦੇ ਸਾਹਮਣੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Food tables are next to the stage. / ਖਾਣੇ ਵਾਲੀਆਂ ਮੇਜ਼ਾਂ ਸਟੇਜ ਦੇ ਕੋਲ ਹਨ।"
       },
       {
         "question": "What does Dad say then? / ਫਿਰ ਪਿਉ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Turn right and stop / ਸੱਜੇ ਮੁੜੋ ਤੇ ਰੁੱਕੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Be quiet / ਚੁੱਪ ਰਹੋ"],
+        "choices": [
+          "Turn right and stop / ਸੱਜੇ ਮੁੜੋ ਤੇ ਰੁੱਕੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Be quiet / ਚੁੱਪ ਰਹੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Dad says, \"Turn right and stop here.\" / ਪਿਉ ਕਹਿੰਦਾ ਹੈ, \"ਸੱਜੇ ਮੁੜੋ ਤੇ ਰੁੱਕੋ।\""
       }
     ],
     "vocabularyWords": [
-      { "word": "festival", "meaningEn": "a fun community event", "meaningPa": "ਮੇਲਾ" },
-      { "word": "in front of", "meaningEn": "before; facing", "meaningPa": "ਦੇ ਸਾਹਮਣੇ" },
-      { "word": "stage", "meaningEn": "a place for music and shows", "meaningPa": "ਸਟੇਜ" }
-    ]
+      {
+        "word": "festival",
+        "meaningEn": "a fun community event",
+        "meaningPa": "ਮੇਲਾ"
+      },
+      {
+        "word": "in front of",
+        "meaningEn": "before; facing",
+        "meaningPa": "ਦੇ ਸਾਹਮਣੇ"
+      },
+      {
+        "word": "stage",
+        "meaningEn": "a place for music and shows",
+        "meaningPa": "ਸਟੇਜ"
+      },
+      {
+        "word": "music",
+        "meaningEn": "sounds made by singing or instruments",
+        "meaningPa": "ਸੰਗੀਤ"
+      },
+      {
+        "word": "panel",
+        "meaningEn": "story word: panel",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "intro",
+        "meaningEn": "story word: intro",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "today",
+        "meaningEn": "story word: today",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "there",
+        "meaningEn": "story word: there",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "our",
+        "meaningEn": "story word: our",
+        "meaningPa": "ਸ਼ਬਦ"
+      },
+      {
+        "word": "town",
+        "meaningEn": "story word: town",
+        "meaningPa": "ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -1857,47 +5039,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["park / ਪਾਰਕ", "school / ਸਕੂਲ", "market / ਮਾਰਕੀਟ"],
+        "choices": [
+          "park / ਪਾਰਕ",
+          "school / ਸਕੂਲ",
+          "market / ਮਾਰਕੀਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the child is at the park. / ਕਹਾਣੀ ਵਿੱਚ ਬੱਚਾ ਪਾਰਕ ਵਿੱਚ ਹੈ।"
       },
       {
         "question": "How does the child feel in Panel 2? / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["worried / ਚਿੰਤਿਤ", "sleepy / ਨੀਂਦ ਵਾਲਾ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "worried / ਚਿੰਤਿਤ",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child feels worried. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਚਿੰਤਿਤ ਹੈ।"
       },
       {
         "question": "Where does the child look next? / ਫਿਰ ਬੱਚਾ ਕਿੱਥੇ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ?",
-        "choices": ["under the bench / ਬੈਂਚ ਹੇਠਾਂ", "in the bag / ਬੈਗ ਵਿੱਚ", "on the bus / ਬੱਸ ਉੱਤੇ"],
+        "choices": [
+          "under the bench / ਬੈਂਚ ਹੇਠਾਂ",
+          "in the bag / ਬੈਗ ਵਿੱਚ",
+          "on the bus / ਬੱਸ ਉੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child looks under the bench. / ਪੈਨਲ 3 ਵਿੱਚ ਬੈਂਚ ਹੇਠਾਂ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       },
       {
         "question": "Who helps the child? / ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["helper / ਮਦਦਗਾਰ", "driver / ਡਰਾਈਵਰ", "doctor / ਡਾਕਟਰ"],
+        "choices": [
+          "helper / ਮਦਦਗਾਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "doctor / ਡਾਕਟਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The helper walks with the child to the gate. / ਮਦਦਗਾਰ ਬੱਚੇ ਨਾਲ ਗੇਟ ਵੱਲ ਤੁਰਦਾ ਹੈ।"
       },
       {
         "question": "Where is teddy at the end? / ਅੰਤ ਵਿੱਚ ਟੈਡੀ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["by the gate / ਗੇਟ ਦੇ ਕੋਲ", "under the slide / ਸਲਾਈਡ ਹੇਠਾਂ", "behind the tree / ਦਰੱਖਤ ਦੇ ਪਿੱਛੇ"],
+        "choices": [
+          "by the gate / ਗੇਟ ਦੇ ਕੋਲ",
+          "under the slide / ਸਲਾਈਡ ਹੇਠਾਂ",
+          "behind the tree / ਦਰੱਖਤ ਦੇ ਪਿੱਛੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says teddy is by the gate sign. / ਪੈਨਲ 5 ਵਿੱਚ ਟੈਡੀ ਗੇਟ ਦੇ ਕੋਲ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "teddy", "meaningEn": "a soft toy bear you can hug", "meaningPa": "ਟੈਡੀ; ਨਰਮ ਖਿਡੌਣਾ ਜਿਸਨੂੰ ਗਲੇ ਲਾ ਸਕਦੇ ਹਾਂ" },
-      { "word": "missing", "meaningEn": "not there; you cannot see it", "meaningPa": "ਗੁੰਮ; ਚੀਜ਼ ਨਹੀਂ ਦਿਖਦੀ" },
-      { "word": "worried", "meaningEn": "feeling scared something bad might happen", "meaningPa": "ਚਿੰਤਿਤ; ਡਰ ਕਿ ਕੁਝ ਗਲਤ ਹੋ ਸਕਦਾ ਹੈ" },
-      { "word": "calm", "meaningEn": "quiet inside; not scared or upset", "meaningPa": "ਸ਼ਾਂਤ; ਦਿਲ ਵਿੱਚ ਸੁਕੂਨ" },
-      { "word": "helper", "meaningEn": "a person who helps you", "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰਦਾ ਹੈ" },
-      { "word": "bench", "meaningEn": "a long seat in the park", "meaningPa": "ਬੈਂਚ; ਪਾਰਕ ਵਿੱਚ ਬੈਠਣ ਵਾਲੀ ਸੀਟ" },
-      { "word": "gate", "meaningEn": "the place you enter or leave", "meaningPa": "ਗੇਟ; ਅੰਦਰ-ਬਾਹਰ ਜਾਣ ਦੀ ਥਾਂ" },
-      { "word": "breathe", "meaningEn": "take air in and out slowly", "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ" },
-      { "word": "look", "meaningEn": "use your eyes to see", "meaningPa": "ਵੇਖਣਾ; ਅੱਖਾਂ ਨਾਲ ਦੇਖਣਾ" },
-      { "word": "hug", "meaningEn": "hold close with your arms", "meaningPa": "ਗਲੇ ਲਾਉਣਾ; ਪਿਆਰ ਨਾਲ ਨੇੜੇ ਕਰਨਾ" }
-    ]
+      {
+        "word": "teddy",
+        "meaningEn": "a soft toy bear you can hug",
+        "meaningPa": "ਟੈਡੀ; ਨਰਮ ਖਿਡੌਣਾ ਜਿਸਨੂੰ ਗਲੇ ਲਾ ਸਕਦੇ ਹਾਂ"
+      },
+      {
+        "word": "missing",
+        "meaningEn": "not there; you cannot see it",
+        "meaningPa": "ਗੁੰਮ; ਚੀਜ਼ ਨਹੀਂ ਦਿਖਦੀ"
+      },
+      {
+        "word": "worried",
+        "meaningEn": "feeling scared something bad might happen",
+        "meaningPa": "ਚਿੰਤਿਤ; ਡਰ ਕਿ ਕੁਝ ਗਲਤ ਹੋ ਸਕਦਾ ਹੈ"
+      },
+      {
+        "word": "calm",
+        "meaningEn": "quiet inside; not scared or upset",
+        "meaningPa": "ਸ਼ਾਂਤ; ਦਿਲ ਵਿੱਚ ਸੁਕੂਨ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "a person who helps you",
+        "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰਦਾ ਹੈ"
+      },
+      {
+        "word": "bench",
+        "meaningEn": "a long seat in the park",
+        "meaningPa": "ਬੈਂਚ; ਪਾਰਕ ਵਿੱਚ ਬੈਠਣ ਵਾਲੀ ਸੀਟ"
+      },
+      {
+        "word": "gate",
+        "meaningEn": "the place you enter or leave",
+        "meaningPa": "ਗੇਟ; ਅੰਦਰ-ਬਾਹਰ ਜਾਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "breathe",
+        "meaningEn": "take air in and out slowly",
+        "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ"
+      },
+      {
+        "word": "look",
+        "meaningEn": "use your eyes to see",
+        "meaningPa": "ਵੇਖਣਾ; ਅੱਖਾਂ ਨਾਲ ਦੇਖਣਾ"
+      },
+      {
+        "word": "hug",
+        "meaningEn": "hold close with your arms",
+        "meaningPa": "ਗਲੇ ਲਾਉਣਾ; ਪਿਆਰ ਨਾਲ ਨੇੜੇ ਕਰਨਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S02",
@@ -1910,47 +5172,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What is missing? / ਕੀ ਗੁੰਮ ਹੈ?",
-        "choices": ["pencil / ਪੈਂਸਿਲ", "shoe / ਜੁੱਤਾ", "apple / ਸੇਬ"],
+        "choices": [
+          "pencil / ਪੈਂਸਿਲ",
+          "shoe / ਜੁੱਤਾ",
+          "apple / ਸੇਬ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the pencil is missing. / ਕਹਾਣੀ ਵਿੱਚ ਪੈਂਸਿਲ ਗੁੰਮ ਹੈ।"
       },
       {
         "question": "Where does the child check first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿੱਥੇ ਚੈੱਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["bag and chair / ਬੈਗ ਤੇ ਕੁਰਸੀ", "park / ਪਾਰਕ", "bus stop / ਬੱਸ ਸਟਾਪ"],
+        "choices": [
+          "bag and chair / ਬੈਗ ਤੇ ਕੁਰਸੀ",
+          "park / ਪਾਰਕ",
+          "bus stop / ਬੱਸ ਸਟਾਪ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child checks the bag and chair. / ਪੈਨਲ 2 ਵਿੱਚ ਬੈਗ ਤੇ ਕੁਰਸੀ ਚੈੱਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "Who does the child ask for help? / ਬੱਚਾ ਮਦਦ ਕਿਨ੍ਹਾਂ ਤੋਂ ਮੰਗਦਾ/ਮੰਗਦੀ ਹੈ?",
-        "choices": ["teacher / ਟੀਚਰ", "driver / ਡਰਾਈਵਰ", "police officer / ਪੁਲਿਸ ਅਫਸਰ"],
+        "choices": [
+          "teacher / ਟੀਚਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "police officer / ਪੁਲਿਸ ਅਫਸਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the child asks the teacher. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਟੀਚਰ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "Where does the teacher say to look? / ਟੀਚਰ ਕਿੱਥੇ ਵੇਖਣ ਲਈ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["under the desk / ਡੈਸਕ ਹੇਠਾਂ", "on the roof / ਛੱਤ ਉੱਤੇ", "in the market / ਮਾਰਕੀਟ ਵਿੱਚ"],
+        "choices": [
+          "under the desk / ਡੈਸਕ ਹੇਠਾਂ",
+          "on the roof / ਛੱਤ ਉੱਤੇ",
+          "in the market / ਮਾਰਕੀਟ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says to look under the desk. / ਪੈਨਲ 4 ਵਿੱਚ ਡੈਸਕ ਹੇਠਾਂ ਵੇਖੋ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["proud / ਮਾਣ", "scared / ਡਰਿਆ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "proud / ਮਾਣ",
+          "scared / ਡਰਿਆ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels proud. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚਾ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "pencil", "meaningEn": "a tool for writing", "meaningPa": "ਪੈਂਸਿਲ; ਲਿਖਣ ਵਾਲੀ ਚੀਜ਼" },
-      { "word": "missing", "meaningEn": "not there; you cannot find it", "meaningPa": "ਗੁੰਮ; ਚੀਜ਼ ਨਹੀਂ ਮਿਲ ਰਹੀ" },
-      { "word": "check", "meaningEn": "look to see if it is there", "meaningPa": "ਚੈੱਕ ਕਰਨਾ; ਵੇਖਣਾ ਕਿ ਚੀਜ਼ ਹੈ ਜਾਂ ਨਹੀਂ" },
-      { "word": "upset", "meaningEn": "sad or bothered", "meaningPa": "ਉਦਾਸ/ਪਰੇਸ਼ਾਨ; ਮਨ ਖਰਾਬ" },
-      { "word": "choose", "meaningEn": "pick one thing to do", "meaningPa": "ਚੋਣ ਕਰਨਾ; ਇੱਕ ਕੰਮ ਚੁਣਨਾ" },
-      { "word": "teacher", "meaningEn": "a person who helps you learn", "meaningPa": "ਟੀਚਰ; ਜੋ ਸਿਖਾਉਂਦਾ/ਸਿਖਾਉਂਦੀ ਹੈ" },
-      { "word": "under", "meaningEn": "below something", "meaningPa": "ਹੇਠਾਂ; ਕਿਸੇ ਚੀਜ਼ ਦੇ ਨੀਚੇ" },
-      { "word": "find", "meaningEn": "get it again after looking", "meaningPa": "ਲੱਭਣਾ; ਲੱਭ ਕੇ ਮਿਲ ਜਾਣਾ" },
-      { "word": "please", "meaningEn": "a polite word when you ask", "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰਤਾ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "ready", "meaningEn": "prepared to start", "meaningPa": "ਤਿਆਰ; ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ" }
-    ]
+      {
+        "word": "pencil",
+        "meaningEn": "a tool for writing",
+        "meaningPa": "ਪੈਂਸਿਲ; ਲਿਖਣ ਵਾਲੀ ਚੀਜ਼"
+      },
+      {
+        "word": "missing",
+        "meaningEn": "not there; you cannot find it",
+        "meaningPa": "ਗੁੰਮ; ਚੀਜ਼ ਨਹੀਂ ਮਿਲ ਰਹੀ"
+      },
+      {
+        "word": "check",
+        "meaningEn": "look to see if it is there",
+        "meaningPa": "ਚੈੱਕ ਕਰਨਾ; ਵੇਖਣਾ ਕਿ ਚੀਜ਼ ਹੈ ਜਾਂ ਨਹੀਂ"
+      },
+      {
+        "word": "upset",
+        "meaningEn": "sad or bothered",
+        "meaningPa": "ਉਦਾਸ/ਪਰੇਸ਼ਾਨ; ਮਨ ਖਰਾਬ"
+      },
+      {
+        "word": "choose",
+        "meaningEn": "pick one thing to do",
+        "meaningPa": "ਚੋਣ ਕਰਨਾ; ਇੱਕ ਕੰਮ ਚੁਣਨਾ"
+      },
+      {
+        "word": "teacher",
+        "meaningEn": "a person who helps you learn",
+        "meaningPa": "ਟੀਚਰ; ਜੋ ਸਿਖਾਉਂਦਾ/ਸਿਖਾਉਂਦੀ ਹੈ"
+      },
+      {
+        "word": "under",
+        "meaningEn": "below something",
+        "meaningPa": "ਹੇਠਾਂ; ਕਿਸੇ ਚੀਜ਼ ਦੇ ਨੀਚੇ"
+      },
+      {
+        "word": "find",
+        "meaningEn": "get it again after looking",
+        "meaningPa": "ਲੱਭਣਾ; ਲੱਭ ਕੇ ਮਿਲ ਜਾਣਾ"
+      },
+      {
+        "word": "please",
+        "meaningEn": "a polite word when you ask",
+        "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰਤਾ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "ready",
+        "meaningEn": "prepared to start",
+        "meaningPa": "ਤਿਆਰ; ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "need",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S03",
@@ -1963,47 +5305,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What toy is in the story? / ਕਹਾਣੀ ਵਿੱਚ ਕਿਹੜਾ ਖਿਡੌਣਾ ਹੈ?",
-        "choices": ["toy car / ਖਿਡੌਣਾ ਗੱਡੀ", "ball / ਗੇਂਦ", "book / ਕਿਤਾਬ"],
+        "choices": [
+          "toy car / ਖਿਡੌਣਾ ਗੱਡੀ",
+          "ball / ਗੇਂਦ",
+          "book / ਕਿਤਾਬ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story is about a toy car. / ਕਹਾਣੀ ਖਿਡੌਣਾ ਗੱਡੀ ਬਾਰੇ ਹੈ।"
       },
       {
         "question": "How does the child feel first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["angry / ਗੁੱਸੇ ਵਿੱਚ", "sleepy / ਨੀਂਦ ਵਾਲਾ", "sick / ਬਿਮਾਰ"],
+        "choices": [
+          "angry / ਗੁੱਸੇ ਵਿੱਚ",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ",
+          "sick / ਬਿਮਾਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child feels angry at first. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਪਹਿਲਾਂ ਗੁੱਸੇ ਵਿੱਚ ਹੈ।"
       },
       {
         "question": "What does the child choose to do? / ਬੱਚਾ ਕੀ ਕਰਨ ਦੀ ਚੋਣ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["share / ਸਾਂਝਾ ਕਰਨਾ", "hide it / ਛੁਪਾਉਣਾ", "break it / ਤੋੜਨਾ"],
+        "choices": [
+          "share / ਸਾਂਝਾ ਕਰਨਾ",
+          "hide it / ਛੁਪਾਉਣਾ",
+          "break it / ਤੋੜਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child chooses to share. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਸਾਂਝਾ ਕਰਨ ਦੀ ਚੋਣ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the friend say? / ਦੋਸਤ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["I can wait / ਮੈਂ ਉਡੀਕ ਕਰ ਸਕਦਾ ਹਾਂ", "Go away / ਦੂਰ ਜਾਓ", "I am lost / ਮੈਂ ਗੁੰਮ ਹਾਂ"],
+        "choices": [
+          "I can wait / ਮੈਂ ਉਡੀਕ ਕਰ ਸਕਦਾ ਹਾਂ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "I am lost / ਮੈਂ ਗੁੰਮ ਹਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the friend can wait. / ਪੈਨਲ 4 ਵਿੱਚ ਦੋਸਤ ਉਡੀਕ ਕਰ ਸਕਦਾ ਹੈ।"
       },
       {
         "question": "How do they feel at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦੇ ਹਨ?",
-        "choices": ["happy / ਖੁਸ਼", "worried / ਚਿੰਤਿਤ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "happy / ਖੁਸ਼",
+          "worried / ਚਿੰਤਿਤ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they feel calm and happy. / ਪੈਨਲ 5 ਵਿੱਚ ਉਹ ਸ਼ਾਂਤ ਅਤੇ ਖੁਸ਼ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "angry", "meaningEn": "feeling mad inside", "meaningPa": "ਗੁੱਸਾ; ਮਨ ਵਿੱਚ ਨਾਰਾਜ਼ਗੀ" },
-      { "word": "share", "meaningEn": "let someone else use it too", "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜੇ ਨੂੰ ਵੀ ਵਰਤਣ ਦੇਣਾ" },
-      { "word": "turn", "meaningEn": "your time to do something", "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ" },
-      { "word": "wait", "meaningEn": "stay until it is your turn", "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ" },
-      { "word": "timer", "meaningEn": "a clock that counts time", "meaningPa": "ਟਾਈਮਰ; ਸਮਾਂ ਗਿਣਣ ਵਾਲੀ ਘੜੀ" },
-      { "word": "calm", "meaningEn": "quiet inside; not angry", "meaningPa": "ਸ਼ਾਂਤ; ਗੁੱਸਾ ਨਹੀਂ" },
-      { "word": "choose", "meaningEn": "pick what you will do", "meaningPa": "ਚੋਣ ਕਰਨੀ; ਕੀ ਕਰਨਾ ਹੈ ਚੁਣਨਾ" },
-      { "word": "breath", "meaningEn": "air you take in and out", "meaningPa": "ਸਾਹ; ਹਵਾ ਅੰਦਰ-ਬਾਹਰ ਲੈਣਾ" },
-      { "word": "fair", "meaningEn": "everyone gets the same chance", "meaningPa": "ਨਿਆਂਪੂਰਨ; ਸਭ ਨੂੰ ਬਰਾਬਰ ਮੌਕਾ" },
-      { "word": "toy", "meaningEn": "something kids play with", "meaningPa": "ਖਿਡੌਣਾ; ਬੱਚਿਆਂ ਦੀ ਖੇਡਣ ਵਾਲੀ ਚੀਜ਼" }
-    ]
+      {
+        "word": "angry",
+        "meaningEn": "feeling mad inside",
+        "meaningPa": "ਗੁੱਸਾ; ਮਨ ਵਿੱਚ ਨਾਰਾਜ਼ਗੀ"
+      },
+      {
+        "word": "share",
+        "meaningEn": "let someone else use it too",
+        "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜੇ ਨੂੰ ਵੀ ਵਰਤਣ ਦੇਣਾ"
+      },
+      {
+        "word": "turn",
+        "meaningEn": "your time to do something",
+        "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until it is your turn",
+        "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "timer",
+        "meaningEn": "a clock that counts time",
+        "meaningPa": "ਟਾਈਮਰ; ਸਮਾਂ ਗਿਣਣ ਵਾਲੀ ਘੜੀ"
+      },
+      {
+        "word": "calm",
+        "meaningEn": "quiet inside; not angry",
+        "meaningPa": "ਸ਼ਾਂਤ; ਗੁੱਸਾ ਨਹੀਂ"
+      },
+      {
+        "word": "choose",
+        "meaningEn": "pick what you will do",
+        "meaningPa": "ਚੋਣ ਕਰਨੀ; ਕੀ ਕਰਨਾ ਹੈ ਚੁਣਨਾ"
+      },
+      {
+        "word": "breath",
+        "meaningEn": "air you take in and out",
+        "meaningPa": "ਸਾਹ; ਹਵਾ ਅੰਦਰ-ਬਾਹਰ ਲੈਣਾ"
+      },
+      {
+        "word": "fair",
+        "meaningEn": "everyone gets the same chance",
+        "meaningPa": "ਨਿਆਂਪੂਰਨ; ਸਭ ਨੂੰ ਬਰਾਬਰ ਮੌਕਾ"
+      },
+      {
+        "word": "toy",
+        "meaningEn": "something kids play with",
+        "meaningPa": "ਖਿਡੌਣਾ; ਬੱਚਿਆਂ ਦੀ ਖੇਡਣ ਵਾਲੀ ਚੀਜ਼"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "share",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "turns",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S04",
@@ -2016,47 +5438,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What breaks? / ਕੀ ਟੁੱਟਦਾ ਹੈ?",
-        "choices": ["crayon / ਕ੍ਰੇਯੋਨ", "chair / ਕੁਰਸੀ", "door / ਦਰਵਾਜ਼ਾ"],
+        "choices": [
+          "crayon / ਕ੍ਰੇਯੋਨ",
+          "chair / ਕੁਰਸੀ",
+          "door / ਦਰਵਾਜ਼ਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the crayon breaks. / ਕਹਾਣੀ ਵਿੱਚ ਕ੍ਰੇਯੋਨ ਟੁੱਟਦਾ ਹੈ।"
       },
       {
         "question": "How does the child feel first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["sad / ਉਦਾਸ", "excited / ਉਤਸਾਹਿਤ", "hungry / ਭੁੱਖਾ"],
+        "choices": [
+          "sad / ਉਦਾਸ",
+          "excited / ਉਤਸਾਹਿਤ",
+          "hungry / ਭੁੱਖਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child feels sad first. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਪਹਿਲਾਂ ਉਦਾਸ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do next? / ਫਿਰ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["tell the truth / ਸੱਚ ਦੱਸਣਾ", "hide it / ਛੁਪਾਉਣਾ", "run away / ਭੱਜ ਜਾਣਾ"],
+        "choices": [
+          "tell the truth / ਸੱਚ ਦੱਸਣਾ",
+          "hide it / ਛੁਪਾਉਣਾ",
+          "run away / ਭੱਜ ਜਾਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child tells the truth. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਸੱਚ ਦੱਸਦਾ/ਦੱਸਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say? / ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["It is okay / ਕੋਈ ਗੱਲ ਨਹੀਂ", "Go home / ਘਰ ਜਾਓ", "Be loud / ਸ਼ੋਰ ਕਰੋ"],
+        "choices": [
+          "It is okay / ਕੋਈ ਗੱਲ ਨਹੀਂ",
+          "Go home / ਘਰ ਜਾਓ",
+          "Be loud / ਸ਼ੋਰ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, \"It is okay.\" / ਪੈਨਲ 4 ਵਿੱਚ \"ਕੋਈ ਗੱਲ ਨਹੀਂ\" ਹੈ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਹੈ?",
-        "choices": ["better and proud / ਚੰਗਾ ਅਤੇ ਮਾਣ", "lost / ਗੁੰਮ", "scared / ਡਰਿਆ"],
+        "choices": [
+          "better and proud / ਚੰਗਾ ਅਤੇ ਮਾਣ",
+          "lost / ਗੁੰਮ",
+          "scared / ਡਰਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels better and proud. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚਾ ਚੰਗਾ ਅਤੇ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "crayon", "meaningEn": "a colored stick for drawing", "meaningPa": "ਕ੍ਰੇਯੋਨ; ਰੰਗ ਕਰਨ ਵਾਲੀ ਡੰਡੀ" },
-      { "word": "broke", "meaningEn": "split into pieces", "meaningPa": "ਟੁੱਟ ਗਿਆ; ਟੁਕੜੇ ਹੋ ਗਏ" },
-      { "word": "surprised", "meaningEn": "shocked for a moment", "meaningPa": "ਹੈਰਾਨ; ਅਚਾਨਕ ਚੌਂਕ ਜਾਣਾ" },
-      { "word": "truth", "meaningEn": "what really happened", "meaningPa": "ਸੱਚ; ਜੋ ਅਸਲ ਵਿੱਚ ਹੋਇਆ" },
-      { "word": "accident", "meaningEn": "something that happens by mistake", "meaningPa": "ਅਣਜਾਣੀ ਘਟਨਾ; ਗਲਤੀ ਨਾਲ ਹੋ ਜਾਣਾ" },
-      { "word": "sorry", "meaningEn": "words you say after a mistake", "meaningPa": "ਮਾਫ਼ ਕਰਨਾ; ਗਲਤੀ ਤੋਂ ਬਾਅਦ ਕਹਿਣਾ" },
-      { "word": "pieces", "meaningEn": "small parts of something", "meaningPa": "ਟੁਕੜੇ; ਛੋਟੇ ਹਿੱਸੇ" },
-      { "word": "safe", "meaningEn": "not hurt or in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਚੋਟ ਨਹੀਂ" },
-      { "word": "share", "meaningEn": "use something together", "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਇਕੱਠੇ ਵਰਤਣਾ" },
-      { "word": "choice", "meaningEn": "the thing you decide to do", "meaningPa": "ਚੋਣ; ਜੋ ਤੁਸੀਂ ਕਰਨ ਲਈ ਫੈਸਲਾ ਕਰੋ" }
-    ]
+      {
+        "word": "crayon",
+        "meaningEn": "a colored stick for drawing",
+        "meaningPa": "ਕ੍ਰੇਯੋਨ; ਰੰਗ ਕਰਨ ਵਾਲੀ ਡੰਡੀ"
+      },
+      {
+        "word": "broke",
+        "meaningEn": "split into pieces",
+        "meaningPa": "ਟੁੱਟ ਗਿਆ; ਟੁਕੜੇ ਹੋ ਗਏ"
+      },
+      {
+        "word": "surprised",
+        "meaningEn": "shocked for a moment",
+        "meaningPa": "ਹੈਰਾਨ; ਅਚਾਨਕ ਚੌਂਕ ਜਾਣਾ"
+      },
+      {
+        "word": "truth",
+        "meaningEn": "what really happened",
+        "meaningPa": "ਸੱਚ; ਜੋ ਅਸਲ ਵਿੱਚ ਹੋਇਆ"
+      },
+      {
+        "word": "accident",
+        "meaningEn": "something that happens by mistake",
+        "meaningPa": "ਅਣਜਾਣੀ ਘਟਨਾ; ਗਲਤੀ ਨਾਲ ਹੋ ਜਾਣਾ"
+      },
+      {
+        "word": "sorry",
+        "meaningEn": "words you say after a mistake",
+        "meaningPa": "ਮਾਫ਼ ਕਰਨਾ; ਗਲਤੀ ਤੋਂ ਬਾਅਦ ਕਹਿਣਾ"
+      },
+      {
+        "word": "pieces",
+        "meaningEn": "small parts of something",
+        "meaningPa": "ਟੁਕੜੇ; ਛੋਟੇ ਹਿੱਸੇ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not hurt or in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਚੋਟ ਨਹੀਂ"
+      },
+      {
+        "word": "share",
+        "meaningEn": "use something together",
+        "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਇਕੱਠੇ ਵਰਤਣਾ"
+      },
+      {
+        "word": "choice",
+        "meaningEn": "the thing you decide to do",
+        "meaningPa": "ਚੋਣ; ਜੋ ਤੁਸੀਂ ਕਰਨ ਲਈ ਫੈਸਲਾ ਕਰੋ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S05",
@@ -2069,47 +5571,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What spills? / ਕੀ ਡਿੱਗਦਾ ਹੈ?",
-        "choices": ["water / ਪਾਣੀ", "sand / ਰੇਤ", "juice / ਜੂਸ"],
+        "choices": [
+          "water / ਪਾਣੀ",
+          "sand / ਰੇਤ",
+          "juice / ਜੂਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Water spills from the cup. / ਕੱਪ ਤੋਂ ਪਾਣੀ ਡਿੱਗਦਾ ਹੈ।"
       },
       {
         "question": "How does the child feel first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["surprised / ਹੈਰਾਨ", "happy / ਖੁਸ਼", "sleepy / ਨੀਂਦ ਵਾਲਾ"],
+        "choices": [
+          "surprised / ਹੈਰਾਨ",
+          "happy / ਖੁਸ਼",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child feels surprised. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਹੈਰਾਨ ਹੈ।"
       },
       {
         "question": "What does the child do next? / ਫਿਰ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["asks for help / ਮਦਦ ਮੰਗਦਾ/ਮੰਗਦੀ ਹੈ", "runs away / ਭੱਜ ਜਾਂਦਾ ਹੈ", "laughs loud / ਉੱਚੀ ਹੱਸਦਾ ਹੈ"],
+        "choices": [
+          "asks for help / ਮਦਦ ਮੰਗਦਾ/ਮੰਗਦੀ ਹੈ",
+          "runs away / ਭੱਜ ਜਾਂਦਾ ਹੈ",
+          "laughs loud / ਉੱਚੀ ਹੱਸਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the child asks for help. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਮਦਦ ਮੰਗਦਾ/ਮੰਗਦੀ ਹੈ।"
       },
       {
         "question": "What does Dad say to get? / ਪਿਉ ਕੀ ਲਿਆਉਣ ਲਈ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["towel / ਤੌਲੀਆ", "toy / ਖਿਡੌਣਾ", "book / ਕਿਤਾਬ"],
+        "choices": [
+          "towel / ਤੌਲੀਆ",
+          "toy / ਖਿਡੌਣਾ",
+          "book / ਕਿਤਾਬ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says to get a towel. / ਪੈਨਲ 4 ਵਿੱਚ ਤੌਲੀਆ ਲਿਆਓ।"
       },
       {
         "question": "How is the floor at the end? / ਅੰਤ ਵਿੱਚ ਫਰਸ਼ ਕਿਵੇਂ ਹੈ?",
-        "choices": ["dry and safe / ਸੁੱਕਾ ਤੇ ਸੁਰੱਖਿਅਤ", "wet / ਭਿੱਜਾ", "dirty / ਗੰਦਾ"],
+        "choices": [
+          "dry and safe / ਸੁੱਕਾ ਤੇ ਸੁਰੱਖਿਅਤ",
+          "wet / ਭਿੱਜਾ",
+          "dirty / ਗੰਦਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the floor is dry and safe. / ਪੈਨਲ 5 ਵਿੱਚ ਫਰਸ਼ ਸੁੱਕਾ ਤੇ ਸੁਰੱਖਿਅਤ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "spill", "meaningEn": "drop liquid out of a cup", "meaningPa": "ਡਿੱਗਣਾ; ਕੱਪ ਤੋਂ ਤਰਲ ਬਾਹਰ ਨਿਕਲਣਾ" },
-      { "word": "puddle", "meaningEn": "a small pool of water on the floor", "meaningPa": "ਭਿੱਜੀ ਥਾਂ; ਫਰਸ਼ ਉੱਤੇ ਪਾਣੀ ਦਾ ਛੋਟਾ ਢੇਰ" },
-      { "word": "towel", "meaningEn": "cloth to dry water", "meaningPa": "ਤੌਲੀਆ; ਪਾਣੀ ਸੁਕਾਉਣ ਵਾਲਾ ਕਪੜਾ" },
-      { "word": "wipe", "meaningEn": "clean by rubbing with a cloth", "meaningPa": "ਪੋਂਛਣਾ; ਕਪੜੇ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ" },
-      { "word": "dry", "meaningEn": "not wet", "meaningPa": "ਸੁੱਕਾ; ਭਿੱਜਾ ਨਹੀਂ" },
-      { "word": "safe", "meaningEn": "not dangerous", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" },
-      { "word": "slip", "meaningEn": "slide and almost fall", "meaningPa": "ਫਿਸਲਣਾ; ਪੈਰ ਸਲਿੱਪ ਹੋਣਾ" },
-      { "word": "worried", "meaningEn": "thinking something bad might happen", "meaningPa": "ਚਿੰਤਿਤ; ਡਰ ਕਿ ਕੁਝ ਗਲਤ ਹੋ ਸਕਦਾ ਹੈ" },
-      { "word": "relieved", "meaningEn": "feeling better after worry is gone", "meaningPa": "ਸੁਕੂਨ; ਚਿੰਤਾ ਘੱਟ ਹੋ ਜਾਣੀ" },
-      { "word": "mess", "meaningEn": "a dirty or mixed-up area", "meaningPa": "ਗੰਦ; ਬੇਤਰਤੀਬ ਗੰਦੀ ਥਾਂ" }
-    ]
+      {
+        "word": "spill",
+        "meaningEn": "drop liquid out of a cup",
+        "meaningPa": "ਡਿੱਗਣਾ; ਕੱਪ ਤੋਂ ਤਰਲ ਬਾਹਰ ਨਿਕਲਣਾ"
+      },
+      {
+        "word": "puddle",
+        "meaningEn": "a small pool of water on the floor",
+        "meaningPa": "ਭਿੱਜੀ ਥਾਂ; ਫਰਸ਼ ਉੱਤੇ ਪਾਣੀ ਦਾ ਛੋਟਾ ਢੇਰ"
+      },
+      {
+        "word": "towel",
+        "meaningEn": "cloth to dry water",
+        "meaningPa": "ਤੌਲੀਆ; ਪਾਣੀ ਸੁਕਾਉਣ ਵਾਲਾ ਕਪੜਾ"
+      },
+      {
+        "word": "wipe",
+        "meaningEn": "clean by rubbing with a cloth",
+        "meaningPa": "ਪੋਂਛਣਾ; ਕਪੜੇ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ"
+      },
+      {
+        "word": "dry",
+        "meaningEn": "not wet",
+        "meaningPa": "ਸੁੱਕਾ; ਭਿੱਜਾ ਨਹੀਂ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not dangerous",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "slip",
+        "meaningEn": "slide and almost fall",
+        "meaningPa": "ਫਿਸਲਣਾ; ਪੈਰ ਸਲਿੱਪ ਹੋਣਾ"
+      },
+      {
+        "word": "worried",
+        "meaningEn": "thinking something bad might happen",
+        "meaningPa": "ਚਿੰਤਿਤ; ਡਰ ਕਿ ਕੁਝ ਗਲਤ ਹੋ ਸਕਦਾ ਹੈ"
+      },
+      {
+        "word": "relieved",
+        "meaningEn": "feeling better after worry is gone",
+        "meaningPa": "ਸੁਕੂਨ; ਚਿੰਤਾ ਘੱਟ ਹੋ ਜਾਣੀ"
+      },
+      {
+        "word": "mess",
+        "meaningEn": "a dirty or mixed-up area",
+        "meaningPa": "ਗੰਦ; ਬੇਤਰਤੀਬ ਗੰਦੀ ਥਾਂ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "ask",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S06",
@@ -2122,47 +5704,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What falls on the floor? / ਫਰਸ਼ ਤੇ ਕੀ ਡਿੱਗਦਾ ਹੈ?",
-        "choices": ["snack / ਨਾਸ਼ਤਾ", "book / ਕਿਤਾਬ", "hat / ਟੋਪੀ"],
+        "choices": [
+          "snack / ਨਾਸ਼ਤਾ",
+          "book / ਕਿਤਾਬ",
+          "hat / ਟੋਪੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The snack falls on the floor. / ਨਾਸ਼ਤਾ ਫਰਸ਼ ਤੇ ਡਿੱਗਦਾ ਹੈ।"
       },
       {
         "question": "How does the child feel first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["disappointed / ਨਿਰਾਸ਼", "excited / ਉਤਸਾਹਿਤ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "disappointed / ਨਿਰਾਸ਼",
+          "excited / ਉਤਸਾਹਿਤ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child feels disappointed. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਨਿਰਾਸ਼ ਹੈ।"
       },
       {
         "question": "What does the child choose next? / ਬੱਚਾ ਅਗਲਾ ਕੀ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ?",
-        "choices": ["kindness / ਦਇਆ", "fighting / ਲੜਾਈ", "hiding / ਛੁਪਾਉਣਾ"],
+        "choices": [
+          "kindness / ਦਇਆ",
+          "fighting / ਲੜਾਈ",
+          "hiding / ਛੁਪਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child chooses kindness. / ਪੈਨਲ 3 ਵਿੱਚ ਦਇਆ ਦੀ ਚੋਣ ਹੈ।"
       },
       {
         "question": "What does the friend do? / ਦੋਸਤ ਕੀ ਕਰਦਾ ਹੈ?",
-        "choices": ["shares snack / ਨਾਸ਼ਤਾ ਸਾਂਝਾ ਕਰਦਾ ਹੈ", "takes it away / ਲੈ ਜਾਂਦਾ ਹੈ", "cries / ਰੋਂਦਾ ਹੈ"],
+        "choices": [
+          "shares snack / ਨਾਸ਼ਤਾ ਸਾਂਝਾ ਕਰਦਾ ਹੈ",
+          "takes it away / ਲੈ ਜਾਂਦਾ ਹੈ",
+          "cries / ਰੋਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the friend shares. / ਪੈਨਲ 4 ਵਿੱਚ ਦੋਸਤ ਸਾਂਝਾ ਕਰਦਾ ਹੈ।"
       },
       {
         "question": "Why is the child happy? / ਬੱਚਾ ਖੁਸ਼ ਕਿਉਂ ਹੈ?",
-        "choices": ["they shared / ਉਹਨਾਂ ਨੇ ਸਾਂਝਾ ਕੀਤਾ", "the bell rang / ਘੰਟੀ ਵੱਜੀ", "they ran outside / ਬਾਹਰ ਦੌੜੇ"],
+        "choices": [
+          "they shared / ਉਹਨਾਂ ਨੇ ਸਾਂਝਾ ਕੀਤਾ",
+          "the bell rang / ਘੰਟੀ ਵੱਜੀ",
+          "they ran outside / ਬਾਹਰ ਦੌੜੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child is happy because they shared. / ਪੈਨਲ 5 ਵਿੱਚ ਸਾਂਝਾ ਕਰਨ ਕਰਕੇ ਬੱਚਾ ਖੁਸ਼ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "snack", "meaningEn": "a small food between meals", "meaningPa": "ਨਾਸ਼ਤਾ; ਥੋੜ੍ਹਾ ਖਾਣਾ" },
-      { "word": "floor", "meaningEn": "the ground inside a room", "meaningPa": "ਫਰਸ਼; ਕਮਰੇ ਦੀ ਜ਼ਮੀਨ" },
-      { "word": "clean", "meaningEn": "not dirty", "meaningPa": "ਸਾਫ਼; ਗੰਦ ਨਾ ਹੋਣਾ" },
-      { "word": "disappointed", "meaningEn": "sad because it did not work", "meaningPa": "ਨਿਰਾਸ਼; ਮਨ ਮੁਤਾਬਕ ਨਾ ਹੋਇਆ" },
-      { "word": "kindness", "meaningEn": "being nice and helpful", "meaningPa": "ਦਇਆ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ ਹੋਣਾ" },
-      { "word": "mess", "meaningEn": "a dirty, mixed-up area", "meaningPa": "ਗੰਦ; ਬੇਤਰਤੀਬ ਗੰਦੀ ਥਾਂ" },
-      { "word": "share", "meaningEn": "give some to someone else", "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜੇ ਨੂੰ ਵੀ ਦੇਣਾ" },
-      { "word": "bite", "meaningEn": "a small piece you eat", "meaningPa": "ਕੌਰ; ਛੋਟਾ ਟੁਕੜਾ ਖਾਣਾ" },
-      { "word": "thank you", "meaningEn": "polite words after help", "meaningPa": "ਥੈਂਕ ਯੂ; ਮਦਦ ਲਈ ਧੰਨਵਾਦ" },
-      { "word": "choice", "meaningEn": "the thing you decide to do", "meaningPa": "ਚੋਣ; ਜੋ ਤੁਸੀਂ ਕਰਨ ਲਈ ਫੈਸਲਾ ਕਰੋ" }
-    ]
+      {
+        "word": "snack",
+        "meaningEn": "a small food between meals",
+        "meaningPa": "ਨਾਸ਼ਤਾ; ਥੋੜ੍ਹਾ ਖਾਣਾ"
+      },
+      {
+        "word": "floor",
+        "meaningEn": "the ground inside a room",
+        "meaningPa": "ਫਰਸ਼; ਕਮਰੇ ਦੀ ਜ਼ਮੀਨ"
+      },
+      {
+        "word": "clean",
+        "meaningEn": "not dirty",
+        "meaningPa": "ਸਾਫ਼; ਗੰਦ ਨਾ ਹੋਣਾ"
+      },
+      {
+        "word": "disappointed",
+        "meaningEn": "sad because it did not work",
+        "meaningPa": "ਨਿਰਾਸ਼; ਮਨ ਮੁਤਾਬਕ ਨਾ ਹੋਇਆ"
+      },
+      {
+        "word": "kindness",
+        "meaningEn": "being nice and helpful",
+        "meaningPa": "ਦਇਆ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ ਹੋਣਾ"
+      },
+      {
+        "word": "mess",
+        "meaningEn": "a dirty, mixed-up area",
+        "meaningPa": "ਗੰਦ; ਬੇਤਰਤੀਬ ਗੰਦੀ ਥਾਂ"
+      },
+      {
+        "word": "share",
+        "meaningEn": "give some to someone else",
+        "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜੇ ਨੂੰ ਵੀ ਦੇਣਾ"
+      },
+      {
+        "word": "bite",
+        "meaningEn": "a small piece you eat",
+        "meaningPa": "ਕੌਰ; ਛੋਟਾ ਟੁਕੜਾ ਖਾਣਾ"
+      },
+      {
+        "word": "thank you",
+        "meaningEn": "polite words after help",
+        "meaningPa": "ਥੈਂਕ ਯੂ; ਮਦਦ ਲਈ ਧੰਨਵਾਦ"
+      },
+      {
+        "word": "choice",
+        "meaningEn": "the thing you decide to do",
+        "meaningPa": "ਚੋਣ; ਜੋ ਤੁਸੀਂ ਕਰਨ ਲਈ ਫੈਸਲਾ ਕਰੋ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "open",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S07",
@@ -2175,47 +5837,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["playground / ਖੇਡ ਮੈਦਾਨ", "hospital / ਹਸਪਤਾਲ", "library / ਲਾਇਬ੍ਰੇਰੀ"],
+        "choices": [
+          "playground / ਖੇਡ ਮੈਦਾਨ",
+          "hospital / ਹਸਪਤਾਲ",
+          "library / ਲਾਇਬ੍ਰੇਰੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the child is at the playground. / ਕਹਾਣੀ ਵਿੱਚ ਬੱਚਾ ਖੇਡ ਮੈਦਾਨ ਵਿੱਚ ਹੈ।"
       },
       {
         "question": "What does the child want? / ਬੱਚਾ ਕੀ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ?",
-        "choices": ["slide / ਸਲਾਈਡ", "book / ਕਿਤਾਬ", "bus / ਬੱਸ"],
+        "choices": [
+          "slide / ਸਲਾਈਡ",
+          "book / ਕਿਤਾਬ",
+          "bus / ਬੱਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wants the slide. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਸਲਾਈਡ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "What does the child choose next? / ਬੱਚਾ ਅਗਲਾ ਕੀ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ?",
-        "choices": ["wait / ਉਡੀਕ ਕਰਨਾ", "push / ਧੱਕਾ ਦੇਣਾ", "run away / ਭੱਜ ਜਾਣਾ"],
+        "choices": [
+          "wait / ਉਡੀਕ ਕਰਨਾ",
+          "push / ਧੱਕਾ ਦੇਣਾ",
+          "run away / ਭੱਜ ਜਾਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child chooses to wait. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਉਡੀਕ ਕਰਨ ਦੀ ਚੋਣ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say? / ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Wait nicely / ਚੰਗੀ ਤਰ੍ਹਾਂ ਉਡੀਕ ਕਰੋ", "Eat now / ਹੁਣ ਖਾਓ", "Be loud / ਸ਼ੋਰ ਕਰੋ"],
+        "choices": [
+          "Wait nicely / ਚੰਗੀ ਤਰ੍ਹਾਂ ਉਡੀਕ ਕਰੋ",
+          "Eat now / ਹੁਣ ਖਾਓ",
+          "Be loud / ਸ਼ੋਰ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says, \"Wait nicely.\" / ਪੈਨਲ 4 ਵਿੱਚ \"ਚੰਗੀ ਤਰ੍ਹਾਂ ਉਡੀਕ ਕਰੋ\" ਹੈ।"
       },
       {
         "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["child slides / ਬੱਚਾ ਸਲਾਈਡ ਕਰਦਾ ਹੈ", "child sleeps / ਬੱਚਾ ਸੌਂਦਾ ਹੈ", "child cries / ਬੱਚਾ ਰੋਂਦਾ ਹੈ"],
+        "choices": [
+          "child slides / ਬੱਚਾ ਸਲਾਈਡ ਕਰਦਾ ਹੈ",
+          "child sleeps / ਬੱਚਾ ਸੌਂਦਾ ਹੈ",
+          "child cries / ਬੱਚਾ ਰੋਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says it becomes the child’s turn to slide. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚੇ ਦੀ ਵਾਰੀ ਆਉਂਦੀ ਹੈ ਅਤੇ ਬੱਚਾ ਫਿਸਲਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "playground", "meaningEn": "a place outside to play", "meaningPa": "ਖੇਡ ਮੈਦਾਨ; ਬਾਹਰ ਖੇਡਣ ਦੀ ਥਾਂ" },
-      { "word": "slide", "meaningEn": "a play thing you go down", "meaningPa": "ਸਲਾਈਡ; ਜਿਸ ਉੱਤੇ ਬੱਚੇ ਥੱਲੇ ਫਿਸਲਦੇ ਹਨ" },
-      { "word": "line", "meaningEn": "people waiting in order", "meaningPa": "ਕਤਾਰ; ਵਾਰੀ ਲਈ ਖੜ੍ਹੇ ਲੋਕ" },
-      { "word": "impatient", "meaningEn": "not wanting to wait", "meaningPa": "ਬੇਚੈਨ; ਉਡੀਕ ਨਾ ਕਰਨੀ ਚਾਹੁੰਨਾ" },
-      { "word": "wait", "meaningEn": "stay until your turn comes", "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ" },
-      { "word": "turn", "meaningEn": "your time to do something", "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ" },
-      { "word": "count", "meaningEn": "say numbers in order", "meaningPa": "ਗਿਣਣਾ; ਨੰਬਰ ਕਹਿਣਾ" },
-      { "word": "steps", "meaningEn": "stairs you climb up", "meaningPa": "ਸੀੜ੍ਹੀਆਂ; ਚੜ੍ਹਨ ਵਾਲੇ ਪੌੜੇ" },
-      { "word": "excited", "meaningEn": "very happy and ready", "meaningPa": "ਉਤਸਾਹਿਤ; ਬਹੁਤ ਖੁਸ਼ ਅਤੇ ਤਿਆਰ" },
-      { "word": "nicely", "meaningEn": "in a kind, good way", "meaningPa": "ਚੰਗੀ ਤਰ੍ਹਾਂ; ਨਮਰਤਾ ਨਾਲ" }
-    ]
+      {
+        "word": "playground",
+        "meaningEn": "a place outside to play",
+        "meaningPa": "ਖੇਡ ਮੈਦਾਨ; ਬਾਹਰ ਖੇਡਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "slide",
+        "meaningEn": "a play thing you go down",
+        "meaningPa": "ਸਲਾਈਡ; ਜਿਸ ਉੱਤੇ ਬੱਚੇ ਥੱਲੇ ਫਿਸਲਦੇ ਹਨ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people waiting in order",
+        "meaningPa": "ਕਤਾਰ; ਵਾਰੀ ਲਈ ਖੜ੍ਹੇ ਲੋਕ"
+      },
+      {
+        "word": "impatient",
+        "meaningEn": "not wanting to wait",
+        "meaningPa": "ਬੇਚੈਨ; ਉਡੀਕ ਨਾ ਕਰਨੀ ਚਾਹੁੰਨਾ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until your turn comes",
+        "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "turn",
+        "meaningEn": "your time to do something",
+        "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+      },
+      {
+        "word": "count",
+        "meaningEn": "say numbers in order",
+        "meaningPa": "ਗਿਣਣਾ; ਨੰਬਰ ਕਹਿਣਾ"
+      },
+      {
+        "word": "steps",
+        "meaningEn": "stairs you climb up",
+        "meaningPa": "ਸੀੜ੍ਹੀਆਂ; ਚੜ੍ਹਨ ਵਾਲੇ ਪੌੜੇ"
+      },
+      {
+        "word": "excited",
+        "meaningEn": "very happy and ready",
+        "meaningPa": "ਉਤਸਾਹਿਤ; ਬਹੁਤ ਖੁਸ਼ ਅਤੇ ਤਿਆਰ"
+      },
+      {
+        "word": "nicely",
+        "meaningEn": "in a kind, good way",
+        "meaningPa": "ਚੰਗੀ ਤਰ੍ਹਾਂ; ਨਮਰਤਾ ਨਾਲ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "turn",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S08",
@@ -2228,47 +5970,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["classroom / ਕਲਾਸ", "park / ਪਾਰਕ", "bus stop / ਬੱਸ ਸਟਾਪ"],
+        "choices": [
+          "classroom / ਕਲਾਸ",
+          "park / ਪਾਰਕ",
+          "bus stop / ਬੱਸ ਸਟਾਪ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story happens in the classroom. / ਕਹਾਣੀ ਕਲਾਸ ਵਿੱਚ ਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "What is the problem? / ਸਮੱਸਿਆ ਕੀ ਹੈ?",
-        "choices": ["talking loudly / ਉੱਚੀ ਆਵਾਜ਼", "lost toy / ਖਿਡੌਣਾ ਗੁੰਮ", "spilled water / ਪਾਣੀ ਡਿੱਗਿਆ"],
+        "choices": [
+          "talking loudly / ਉੱਚੀ ਆਵਾਜ਼",
+          "lost toy / ਖਿਡੌਣਾ ਗੁੰਮ",
+          "spilled water / ਪਾਣੀ ਡਿੱਗਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child talks loudly. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਉੱਚੀ ਆਵਾਜ਼ ਨਾਲ ਬੋਲਦਾ/ਬੋਲਦੀ ਹੈ।"
       },
       {
         "question": "What does the child choose next? / ਬੱਚਾ ਅਗਲਾ ਕੀ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ?",
-        "choices": ["quiet voice / ਹੌਲੀ ਆਵਾਜ਼", "running / ਦੌੜਨਾ", "crying / ਰੋਣਾ"],
+        "choices": [
+          "quiet voice / ਹੌਲੀ ਆਵਾਜ਼",
+          "running / ਦੌੜਨਾ",
+          "crying / ਰੋਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child chooses a quiet voice. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਹੌਲੀ ਆਵਾਜ਼ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say? / ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Thank you for listening / ਧੰਨਵਾਦ", "Be louder / ਹੋਰ ਉੱਚਾ", "Go home / ਘਰ ਜਾਓ"],
+        "choices": [
+          "Thank you for listening / ਧੰਨਵਾਦ",
+          "Be louder / ਹੋਰ ਉੱਚਾ",
+          "Go home / ਘਰ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the teacher thanks the child. / ਪੈਨਲ 4 ਵਿੱਚ ਟੀਚਰ ਧੰਨਵਾਦ ਕਹਿੰਦੇ ਹਨ।"
       },
       {
         "question": "How does the class feel at the end? / ਅੰਤ ਵਿੱਚ ਕਲਾਸ ਕਿਵੇਂ ਹੈ?",
-        "choices": ["calm / ਸ਼ਾਂਤ", "messy / ਗੰਦੀ", "scary / ਡਰਾਉਣੀ"],
+        "choices": [
+          "calm / ਸ਼ਾਂਤ",
+          "messy / ਗੰਦੀ",
+          "scary / ਡਰਾਉਣੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the classroom feels calm. / ਪੈਨਲ 5 ਵਿੱਚ ਕਲਾਸ ਸ਼ਾਂਤ ਲੱਗਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "loud", "meaningEn": "a strong sound; not quiet", "meaningPa": "ਉੱਚਾ; ਜ਼ੋਰ ਦੀ ਆਵਾਜ਼" },
-      { "word": "quiet", "meaningEn": "a soft sound; not loud", "meaningPa": "ਹੌਲੀ/ਚੁੱਪ; ਜ਼ੋਰ ਨਹੀਂ" },
-      { "word": "whisper", "meaningEn": "talk very softly", "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ ਬੋਲਣਾ" },
-      { "word": "notice", "meaningEn": "see and understand something", "meaningPa": "ਧਿਆਨ ਦੇਣਾ; ਵੇਖ ਕੇ ਸਮਝਣਾ" },
-      { "word": "upset", "meaningEn": "sad or bothered", "meaningPa": "ਉਦਾਸ/ਪਰੇਸ਼ਾਨ; ਮਨ ਖਰਾਬ" },
-      { "word": "tired", "meaningEn": "needing rest", "meaningPa": "ਥੱਕਿਆ; ਆਰਾਮ ਦੀ ਲੋੜ" },
-      { "word": "listen", "meaningEn": "use your ears to hear", "meaningPa": "ਸੁਣਣਾ; ਧਿਆਨ ਨਾਲ ਸੁਣਨਾ" },
-      { "word": "care", "meaningEn": "to be kind and think about others", "meaningPa": "ਪਰਵਾਹ; ਦੂਜਿਆਂ ਬਾਰੇ ਸੋਚਣਾ" },
-      { "word": "still", "meaningEn": "not moving", "meaningPa": "ਥਿਰ; ਨਾ ਹਿਲਣਾ" },
-      { "word": "proud", "meaningEn": "happy about doing the right thing", "meaningPa": "ਮਾਣ; ਠੀਕ ਕੰਮ ਕਰਕੇ ਖੁਸ਼" }
-    ]
+      {
+        "word": "loud",
+        "meaningEn": "a strong sound; not quiet",
+        "meaningPa": "ਉੱਚਾ; ਜ਼ੋਰ ਦੀ ਆਵਾਜ਼"
+      },
+      {
+        "word": "quiet",
+        "meaningEn": "a soft sound; not loud",
+        "meaningPa": "ਹੌਲੀ/ਚੁੱਪ; ਜ਼ੋਰ ਨਹੀਂ"
+      },
+      {
+        "word": "whisper",
+        "meaningEn": "talk very softly",
+        "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ ਬੋਲਣਾ"
+      },
+      {
+        "word": "notice",
+        "meaningEn": "see and understand something",
+        "meaningPa": "ਧਿਆਨ ਦੇਣਾ; ਵੇਖ ਕੇ ਸਮਝਣਾ"
+      },
+      {
+        "word": "upset",
+        "meaningEn": "sad or bothered",
+        "meaningPa": "ਉਦਾਸ/ਪਰੇਸ਼ਾਨ; ਮਨ ਖਰਾਬ"
+      },
+      {
+        "word": "tired",
+        "meaningEn": "needing rest",
+        "meaningPa": "ਥੱਕਿਆ; ਆਰਾਮ ਦੀ ਲੋੜ"
+      },
+      {
+        "word": "listen",
+        "meaningEn": "use your ears to hear",
+        "meaningPa": "ਸੁਣਣਾ; ਧਿਆਨ ਨਾਲ ਸੁਣਨਾ"
+      },
+      {
+        "word": "care",
+        "meaningEn": "to be kind and think about others",
+        "meaningPa": "ਪਰਵਾਹ; ਦੂਜਿਆਂ ਬਾਰੇ ਸੋਚਣਾ"
+      },
+      {
+        "word": "still",
+        "meaningEn": "not moving",
+        "meaningPa": "ਥਿਰ; ਨਾ ਹਿਲਣਾ"
+      },
+      {
+        "word": "proud",
+        "meaningEn": "happy about doing the right thing",
+        "meaningPa": "ਮਾਣ; ਠੀਕ ਕੰਮ ਕਰਕੇ ਖੁਸ਼"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "talk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S09",
@@ -2281,47 +6103,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the friend hear? / ਦੋਸਤ ਕੀ ਸੁਣਦਾ ਹੈ?",
-        "choices": ["thunder / ਗੱਜਣ", "music / ਮਿਊਜ਼ਿਕ", "bus / ਬੱਸ"],
+        "choices": [
+          "thunder / ਗੱਜਣ",
+          "music / ਮਿਊਜ਼ਿਕ",
+          "bus / ਬੱਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the friend hears thunder. / ਪੈਨਲ 1 ਵਿੱਚ ਦੋਸਤ ਗੱਜਣ ਸੁਣਦਾ ਹੈ।"
       },
       {
         "question": "How does the friend feel? / ਦੋਸਤ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ ਹੈ?",
-        "choices": ["scared / ਡਰਿਆ", "hungry / ਭੁੱਖਾ", "proud / ਮਾਣ"],
+        "choices": [
+          "scared / ਡਰਿਆ",
+          "hungry / ਭੁੱਖਾ",
+          "proud / ਮਾਣ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the friend feels scared. / ਪੈਨਲ 1 ਵਿੱਚ ਦੋਸਤ ਡਰਿਆ ਹੁੰਦਾ ਹੈ।"
       },
       {
         "question": "What does the child say next? / ਬੱਚਾ ਅਗਲਾ ਕੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["Breathe with me / ਮੇਰੇ ਨਾਲ ਸਾਹ ਲਵੋ", "Run fast / ਤੇਜ਼ ਦੌੜੋ", "Go away / ਦੂਰ ਜਾਓ"],
+        "choices": [
+          "Breathe with me / ਮੇਰੇ ਨਾਲ ਸਾਹ ਲਵੋ",
+          "Run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "Go away / ਦੂਰ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the child says to breathe slowly. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਹੌਲੀ ਸਾਹ ਲੈਣ ਲਈ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ।"
       },
       {
         "question": "What does the teacher say? / ਟੀਚਰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["You are safe / ਤੁਸੀਂ ਸੁਰੱਖਿਅਤ ਹੋ", "Be loud / ਸ਼ੋਰ ਕਰੋ", "Go outside / ਬਾਹਰ ਜਾਓ"],
+        "choices": [
+          "You are safe / ਤੁਸੀਂ ਸੁਰੱਖਿਅਤ ਹੋ",
+          "Be loud / ਸ਼ੋਰ ਕਰੋ",
+          "Go outside / ਬਾਹਰ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they are safe. / ਪੈਨਲ 4 ਵਿੱਚ ਟੀਚਰ ਸੁਰੱਖਿਅਤ ਕਹਿੰਦੇ ਹਨ।"
       },
       {
         "question": "How does the friend feel after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਦੋਸਤ ਕਿਵੇਂ ਹੈ?",
-        "choices": ["calm / ਸ਼ਾਂਤ", "angry / ਗੁੱਸੇ ਵਿੱਚ", "lost / ਗੁੰਮ"],
+        "choices": [
+          "calm / ਸ਼ਾਂਤ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ",
+          "lost / ਗੁੰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the friend feels calm again. / ਪੈਨਲ 5 ਵਿੱਚ ਦੋਸਤ ਫਿਰ ਸ਼ਾਂਤ ਹੁੰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "scared", "meaningEn": "feeling afraid", "meaningPa": "ਡਰਿਆ; ਡਰ ਮਹਿਸੂਸ ਕਰਨਾ" },
-      { "word": "thunder", "meaningEn": "a loud sound in a storm", "meaningPa": "ਗੱਜਣ; ਤੂਫ਼ਾਨ ਦੀ ਉੱਚੀ ਆਵਾਜ਼" },
-      { "word": "storm", "meaningEn": "rain and loud thunder outside", "meaningPa": "ਤੂਫ਼ਾਨ; ਮੀਂਹ ਅਤੇ ਗੱਜਣ ਵਾਲਾ ਮੌਸਮ" },
-      { "word": "shake", "meaningEn": "move because you are scared", "meaningPa": "ਕੰਬਣਾ; ਡਰ ਨਾਲ ਹਿੱਲਣਾ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" },
-      { "word": "softly", "meaningEn": "in a gentle, quiet way", "meaningPa": "ਹੌਲੀ; ਨਰਮ ਤਰੀਕੇ ਨਾਲ" },
-      { "word": "breathe", "meaningEn": "take air in and out slowly", "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ" },
-      { "word": "count", "meaningEn": "say numbers in order", "meaningPa": "ਗਿਣਣਾ; ਨੰਬਰ ਕਹਿਣਾ" },
-      { "word": "brave", "meaningEn": "not giving up even when scared", "meaningPa": "ਬਹਾਦਰ; ਡਰ ਹੋਵੇ ਵੀ ਹੌਸਲਾ" },
-      { "word": "calm", "meaningEn": "peaceful again", "meaningPa": "ਸ਼ਾਂਤ; ਸੁਕੂਨ ਨਾਲ ਹੋ ਜਾਣਾ" }
-    ]
+      {
+        "word": "scared",
+        "meaningEn": "feeling afraid",
+        "meaningPa": "ਡਰਿਆ; ਡਰ ਮਹਿਸੂਸ ਕਰਨਾ"
+      },
+      {
+        "word": "thunder",
+        "meaningEn": "a loud sound in a storm",
+        "meaningPa": "ਗੱਜਣ; ਤੂਫ਼ਾਨ ਦੀ ਉੱਚੀ ਆਵਾਜ਼"
+      },
+      {
+        "word": "storm",
+        "meaningEn": "rain and loud thunder outside",
+        "meaningPa": "ਤੂਫ਼ਾਨ; ਮੀਂਹ ਅਤੇ ਗੱਜਣ ਵਾਲਾ ਮੌਸਮ"
+      },
+      {
+        "word": "shake",
+        "meaningEn": "move because you are scared",
+        "meaningPa": "ਕੰਬਣਾ; ਡਰ ਨਾਲ ਹਿੱਲਣਾ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "softly",
+        "meaningEn": "in a gentle, quiet way",
+        "meaningPa": "ਹੌਲੀ; ਨਰਮ ਤਰੀਕੇ ਨਾਲ"
+      },
+      {
+        "word": "breathe",
+        "meaningEn": "take air in and out slowly",
+        "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ"
+      },
+      {
+        "word": "count",
+        "meaningEn": "say numbers in order",
+        "meaningPa": "ਗਿਣਣਾ; ਨੰਬਰ ਕਹਿਣਾ"
+      },
+      {
+        "word": "brave",
+        "meaningEn": "not giving up even when scared",
+        "meaningPa": "ਬਹਾਦਰ; ਡਰ ਹੋਵੇ ਵੀ ਹੌਸਲਾ"
+      },
+      {
+        "word": "calm",
+        "meaningEn": "peaceful again",
+        "meaningPa": "ਸ਼ਾਂਤ; ਸੁਕੂਨ ਨਾਲ ਹੋ ਜਾਣਾ"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "close",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "count",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B4_S10",
@@ -2334,47 +6236,127 @@ var BOOK4_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What falls down? / ਕੀ ਡਿੱਗਦਾ ਹੈ?",
-        "choices": ["tower / ਟਾਵਰ", "bus / ਬੱਸ", "tree / ਦਰੱਖਤ"],
+        "choices": [
+          "tower / ਟਾਵਰ",
+          "bus / ਬੱਸ",
+          "tree / ਦਰੱਖਤ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The block tower falls down. / ਬਲੌਕ ਟਾਵਰ ਡਿੱਗਦਾ ਹੈ।"
       },
       {
         "question": "How does the child feel first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["nervous / ਘਬਰਾਇਆ", "excited / ਉਤਸਾਹਿਤ", "sleepy / ਨੀਂਦ ਵਾਲਾ"],
+        "choices": [
+          "nervous / ਘਬਰਾਇਆ",
+          "excited / ਉਤਸਾਹਿਤ",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child feels nervous. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਘਬਰਾਇਆ ਹੁੰਦਾ ਹੈ।"
       },
       {
         "question": "What choice does the child make? / ਬੱਚਾ ਕਿਹੜੀ ਚੋਣ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["tell the truth / ਸੱਚ ਦੱਸਣਾ", "hide / ਛੁਪਣਾ", "blame friend / ਦੋਸਤ ਨੂੰ ਦੋਸ਼"],
+        "choices": [
+          "tell the truth / ਸੱਚ ਦੱਸਣਾ",
+          "hide / ਛੁਪਣਾ",
+          "blame friend / ਦੋਸਤ ਨੂੰ ਦੋਸ਼"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child tells the truth. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਸੱਚ ਦੱਸਦਾ/ਦੱਸਦੀ ਹੈ।"
       },
       {
         "question": "What do they do then? / ਫਿਰ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["rebuild together / ਇਕੱਠੇ ਬਣਾਉਂਦੇ ਹਨ", "fight / ਲੜਦੇ ਹਨ", "leave / ਚਲੇ ਜਾਂਦੇ ਹਨ"],
+        "choices": [
+          "rebuild together / ਇਕੱਠੇ ਬਣਾਉਂਦੇ ਹਨ",
+          "fight / ਲੜਦੇ ਹਨ",
+          "leave / ਚਲੇ ਜਾਂਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they rebuild together. / ਪੈਨਲ 4 ਵਿੱਚ ਉਹ ਇਕੱਠੇ ਫਿਰ ਬਣਾਉਂਦੇ ਹਨ।"
       },
       {
         "question": "Why is the child proud? / ਬੱਚਾ ਮਾਣ ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["told the truth / ਸੱਚ ਬੋਲਿਆ", "ate snack / ਨਾਸ਼ਤਾ ਖਾਇਆ", "ran fast / ਤੇਜ਼ ਦੌੜਿਆ"],
+        "choices": [
+          "told the truth / ਸੱਚ ਬੋਲਿਆ",
+          "ate snack / ਨਾਸ਼ਤਾ ਖਾਇਆ",
+          "ran fast / ਤੇਜ਼ ਦੌੜਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child is proud for telling the truth. / ਪੈਨਲ 5 ਵਿੱਚ ਸੱਚ ਬੋਲਣ ਕਰਕੇ ਬੱਚਾ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "blocks", "meaningEn": "toy pieces you stack to build", "meaningPa": "ਬਲੌਕ; ਖਿਡੌਣੇ ਦੇ ਟੁਕੜੇ ਬਣਾਉਣ ਲਈ" },
-      { "word": "tower", "meaningEn": "a tall stack of blocks", "meaningPa": "ਟਾਵਰ; ਬਲੌਕਾਂ ਦਾ ਉੱਚਾ ਢੇਰ" },
-      { "word": "bump", "meaningEn": "hit something by accident", "meaningPa": "ਟੱਕਰ ਲੱਗਣਾ; ਅਣਜਾਣੇ ਵਿੱਚ ਲੱਗ ਜਾਣਾ" },
-      { "word": "accident", "meaningEn": "something that happens by mistake", "meaningPa": "ਅਣਜਾਣੀ ਘਟਨਾ; ਗਲਤੀ ਨਾਲ ਹੋ ਜਾਣਾ" },
-      { "word": "nervous", "meaningEn": "worried and shaky inside", "meaningPa": "ਘਬਰਾਇਆ; ਮਨ ਵਿੱਚ ਡਰ ਅਤੇ ਚਿੰਤਾ" },
-      { "word": "truth", "meaningEn": "what really happened", "meaningPa": "ਸੱਚ; ਜੋ ਅਸਲ ਵਿੱਚ ਹੋਇਆ" },
-      { "word": "sorry", "meaningEn": "words you say after a mistake", "meaningPa": "ਮਾਫ਼ ਕਰਨਾ; ਗਲਤੀ ਤੋਂ ਬਾਅਦ ਕਹਿਣਾ" },
-      { "word": "rebuild", "meaningEn": "build it again", "meaningPa": "ਫਿਰ ਬਣਾਉਣਾ; ਮੁੜ ਤਿਆਰ ਕਰਨਾ" },
-      { "word": "fix", "meaningEn": "make it right again", "meaningPa": "ਠੀਕ ਕਰਨਾ; ਫਿਰ ਠੀਕ ਬਣਾਉਣਾ" },
-      { "word": "proud", "meaningEn": "happy about doing the right thing", "meaningPa": "ਮਾਣ; ਠੀਕ ਕੰਮ ਕਰਕੇ ਖੁਸ਼" }
-    ]
+      {
+        "word": "blocks",
+        "meaningEn": "toy pieces you stack to build",
+        "meaningPa": "ਬਲੌਕ; ਖਿਡੌਣੇ ਦੇ ਟੁਕੜੇ ਬਣਾਉਣ ਲਈ"
+      },
+      {
+        "word": "tower",
+        "meaningEn": "a tall stack of blocks",
+        "meaningPa": "ਟਾਵਰ; ਬਲੌਕਾਂ ਦਾ ਉੱਚਾ ਢੇਰ"
+      },
+      {
+        "word": "bump",
+        "meaningEn": "hit something by accident",
+        "meaningPa": "ਟੱਕਰ ਲੱਗਣਾ; ਅਣਜਾਣੇ ਵਿੱਚ ਲੱਗ ਜਾਣਾ"
+      },
+      {
+        "word": "accident",
+        "meaningEn": "something that happens by mistake",
+        "meaningPa": "ਅਣਜਾਣੀ ਘਟਨਾ; ਗਲਤੀ ਨਾਲ ਹੋ ਜਾਣਾ"
+      },
+      {
+        "word": "nervous",
+        "meaningEn": "worried and shaky inside",
+        "meaningPa": "ਘਬਰਾਇਆ; ਮਨ ਵਿੱਚ ਡਰ ਅਤੇ ਚਿੰਤਾ"
+      },
+      {
+        "word": "truth",
+        "meaningEn": "what really happened",
+        "meaningPa": "ਸੱਚ; ਜੋ ਅਸਲ ਵਿੱਚ ਹੋਇਆ"
+      },
+      {
+        "word": "sorry",
+        "meaningEn": "words you say after a mistake",
+        "meaningPa": "ਮਾਫ਼ ਕਰਨਾ; ਗਲਤੀ ਤੋਂ ਬਾਅਦ ਕਹਿਣਾ"
+      },
+      {
+        "word": "rebuild",
+        "meaningEn": "build it again",
+        "meaningPa": "ਫਿਰ ਬਣਾਉਣਾ; ਮੁੜ ਤਿਆਰ ਕਰਨਾ"
+      },
+      {
+        "word": "fix",
+        "meaningEn": "make it right again",
+        "meaningPa": "ਠੀਕ ਕਰਨਾ; ਫਿਰ ਠੀਕ ਬਣਾਉਣਾ"
+      },
+      {
+        "word": "proud",
+        "meaningEn": "happy about doing the right thing",
+        "meaningPa": "ਮਾਣ; ਠੀਕ ਕੰਮ ਕਰਕੇ ਖੁਸ਼"
+      }
+    ],
+    "partsOfGrammar": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -2390,47 +6372,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child go today? / ਬੱਚਾ ਅੱਜ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["clinic / ਕਲੀਨਿਕ", "park / ਪਾਰਕ", "market / ਮਾਰਕੀਟ"],
+        "choices": [
+          "clinic / ਕਲੀਨਿਕ",
+          "park / ਪਾਰਕ",
+          "market / ਮਾਰਕੀਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the child visits the clinic. / ਕਹਾਣੀ ਵਿੱਚ ਬੱਚਾ ਕਲੀਨਿਕ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What job does the child want? / ਬੱਚਾ ਕਿਹੜਾ ਕੰਮ ਬਣਨਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ?",
-        "choices": ["doctor / ਡਾਕਟਰ", "driver / ਡਰਾਈਵਰ", "chef / ਰਸੋਈਆ"],
+        "choices": [
+          "doctor / ਡਾਕਟਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "chef / ਰਸੋਈਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child says they want to be a doctor. / ਬੱਚਾ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ ਕਿ ਉਹ ਡਾਕਟਰ ਬਣਨਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "What will the child do tomorrow? / ਬੱਚਾ ਭਲਕੇ ਕੀ ਕਰੇਗਾ/ਕਰੇਗੀ?",
-        "choices": ["practice with a toy stethoscope / ਖਿਡੌਣੇ ਸਟੀਥੋਸਕੋਪ ਨਾਲ ਅਭਿਆਸ", "sleep all day / ਸਾਰਾ ਦਿਨ ਸੋਣਾ", "ride a bus / ਬੱਸ ਚਲਾਉਣਾ"],
+        "choices": [
+          "practice with a toy stethoscope / ਖਿਡੌਣੇ ਸਟੀਥੋਸਕੋਪ ਨਾਲ ਅਭਿਆਸ",
+          "sleep all day / ਸਾਰਾ ਦਿਨ ਸੋਣਾ",
+          "ride a bus / ਬੱਸ ਚਲਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child will practice tomorrow at home. / ਪੈਨਲ 2 ਵਿੱਚ ਭਲਕੇ ਘਰ ਵਿੱਚ ਅਭਿਆਸ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the doctor say to do every day? / ਡਾਕਟਰ ਹਰ ਰੋਜ਼ ਕੀ ਕਰਨ ਲਈ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["study and be kind / ਪੜ੍ਹੋ ਤੇ ਦਿਆਲੂ ਰਹੋ", "shout loudly / ਉੱਚਾ ਚੀਕੋ", "hide toys / ਖਿਡੌਣੇ ਲੁਕਾਓ"],
+        "choices": [
+          "study and be kind / ਪੜ੍ਹੋ ਤੇ ਦਿਆਲੂ ਰਹੋ",
+          "shout loudly / ਉੱਚਾ ਚੀਕੋ",
+          "hide toys / ਖਿਡੌਣੇ ਲੁਕਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The doctor says to study, practice, and be kind. / ਡਾਕਟਰ ਪੜ੍ਹਨ, ਅਭਿਆਸ, ਅਤੇ ਦਿਆਲਤਾ ਲਈ ਕਹਿੰਦਾ ਹੈ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["proud / ਮਾਣ", "angry / ਗੁੱਸੇ ਵਿੱਚ", "lost / ਗੁੰਮ"],
+        "choices": [
+          "proud / ਮਾਣ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ",
+          "lost / ਗੁੰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels proud. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚਾ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "dream", "meaningEn": "a big hope for your future", "meaningPa": "ਸੁਪਨਾ; ਭਵਿੱਖ ਲਈ ਵੱਡੀ ਉਮੀਦ" },
-      { "word": "goal", "meaningEn": "something you want to reach", "meaningPa": "ਲਕਸ਼; ਜੋ ਤੁਸੀਂ ਹਾਸਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ" },
-      { "word": "plan", "meaningEn": "steps you will follow to reach a goal", "meaningPa": "ਯੋਜਨਾ; ਲਕਸ਼ ਲਈ ਬਣਾਏ ਕਦਮ" },
-      { "word": "practice", "meaningEn": "do something again and again to improve", "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਵਾਰ-ਵਾਰ ਕਰਨਾ" },
-      { "word": "clinic", "meaningEn": "a place where a doctor helps people", "meaningPa": "ਕਲੀਨਿਕ; ਜਿੱਥੇ ਡਾਕਟਰ ਮਦਦ ਕਰਦਾ ਹੈ" },
-      { "word": "doctor", "meaningEn": "a person who helps sick people get better", "meaningPa": "ਡਾਕਟਰ; ਜੋ ਬਿਮਾਰ ਲੋਕਾਂ ਨੂੰ ਠੀਕ ਕਰਦਾ ਹੈ" },
-      { "word": "stethoscope", "meaningEn": "a tool doctors use to listen to hearts", "meaningPa": "ਸਟੀਥੋਸਕੋਪ; ਦਿਲ ਸੁਣਨ ਵਾਲਾ ਸੰਦ" },
-      { "word": "kind", "meaningEn": "nice and helpful to others", "meaningPa": "ਦਿਆਲੂ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ" },
-      { "word": "tomorrow", "meaningEn": "the day after today", "meaningPa": "ਭਲਕੇ; ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" }
-    ]
+      {
+        "word": "dream",
+        "meaningEn": "a big hope for your future",
+        "meaningPa": "ਸੁਪਨਾ; ਭਵਿੱਖ ਲਈ ਵੱਡੀ ਉਮੀਦ"
+      },
+      {
+        "word": "goal",
+        "meaningEn": "something you want to reach",
+        "meaningPa": "ਲਕਸ਼; ਜੋ ਤੁਸੀਂ ਹਾਸਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ"
+      },
+      {
+        "word": "plan",
+        "meaningEn": "steps you will follow to reach a goal",
+        "meaningPa": "ਯੋਜਨਾ; ਲਕਸ਼ ਲਈ ਬਣਾਏ ਕਦਮ"
+      },
+      {
+        "word": "practice",
+        "meaningEn": "do something again and again to improve",
+        "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਵਾਰ-ਵਾਰ ਕਰਨਾ"
+      },
+      {
+        "word": "clinic",
+        "meaningEn": "a place where a doctor helps people",
+        "meaningPa": "ਕਲੀਨਿਕ; ਜਿੱਥੇ ਡਾਕਟਰ ਮਦਦ ਕਰਦਾ ਹੈ"
+      },
+      {
+        "word": "doctor",
+        "meaningEn": "a person who helps sick people get better",
+        "meaningPa": "ਡਾਕਟਰ; ਜੋ ਬਿਮਾਰ ਲੋਕਾਂ ਨੂੰ ਠੀਕ ਕਰਦਾ ਹੈ"
+      },
+      {
+        "word": "stethoscope",
+        "meaningEn": "a tool doctors use to listen to hearts",
+        "meaningPa": "ਸਟੀਥੋਸਕੋਪ; ਦਿਲ ਸੁਣਨ ਵਾਲਾ ਸੰਦ"
+      },
+      {
+        "word": "kind",
+        "meaningEn": "nice and helpful to others",
+        "meaningPa": "ਦਿਆਲੂ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ"
+      },
+      {
+        "word": "tomorrow",
+        "meaningEn": "the day after today",
+        "meaningPa": "ਭਲਕੇ; ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "be",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S02",
@@ -2443,47 +6505,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What sport does the child play? / ਬੱਚਾ ਕਿਹੜੀ ਖੇਡ ਖੇਡਦਾ/ਖੇਡਦੀ ਹੈ?",
-        "choices": ["soccer / ਫੁੱਟਬਾਲ", "basketball / ਬਾਸਕਟਬਾਲ", "tennis / ਟੈਨਿਸ"],
+        "choices": [
+          "soccer / ਫੁੱਟਬਾਲ",
+          "basketball / ਬਾਸਕਟਬਾਲ",
+          "tennis / ਟੈਨਿਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story is about playing soccer. / ਕਹਾਣੀ ਫੁੱਟਬਾਲ ਬਾਰੇ ਹੈ।"
       },
       {
         "question": "What does the child want to do? / ਬੱਚਾ ਕੀ ਕਰਨਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ?",
-        "choices": ["score a goal / ਗੋਲ ਕਰਨਾ", "eat lunch / ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ", "buy a toy / ਖਿਡੌਣਾ ਖਰੀਦਣਾ"],
+        "choices": [
+          "score a goal / ਗੋਲ ਕਰਨਾ",
+          "eat lunch / ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ",
+          "buy a toy / ਖਿਡੌਣਾ ਖਰੀਦਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wants to score a goal. / ਪੈਨਲ 1 ਵਿੱਚ ਗੋਲ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the coach say? / ਕੋਚ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["Aim and try again / ਨਿਸ਼ਾਨਾ ਲਗਾਓ ਤੇ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ", "Stop forever / ਹਮੇਸ਼ਾਂ ਲਈ ਰੁਕੋ", "Be late / ਦੇਰ ਕਰੋ"],
+        "choices": [
+          "Aim and try again / ਨਿਸ਼ਾਨਾ ਲਗਾਓ ਤੇ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+          "Stop forever / ਹਮੇਸ਼ਾਂ ਲਈ ਰੁਕੋ",
+          "Be late / ਦੇਰ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 shows the coach encourages trying again. / ਪੈਨਲ 2 ਵਿੱਚ ਕੋਚ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਲਈ ਕਹਿੰਦਾ ਹੈ।"
       },
       {
         "question": "What helps the child succeed? / ਬੱਚੇ ਨੂੰ ਕਾਮਯਾਬ ਕੀ ਬਣਾਉਂਦਾ ਹੈ?",
-        "choices": ["practice and teamwork / ਅਭਿਆਸ ਤੇ ਟੀਮਵਰਕ", "hiding / ਲੁਕਣਾ", "shouting / ਚੀਕਣਾ"],
+        "choices": [
+          "practice and teamwork / ਅਭਿਆਸ ਤੇ ਟੀਮਵਰਕ",
+          "hiding / ਲੁਕਣਾ",
+          "shouting / ਚੀਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says practice and teamwork help the child. / ਪੈਨਲ 5 ਵਿੱਚ ਅਭਿਆਸ ਅਤੇ ਟੀਮਵਰਕ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["proud / ਮਾਣ", "scared / ਡਰਿਆ", "sad / ਉਦਾਸ"],
+        "choices": [
+          "proud / ਮਾਣ",
+          "scared / ਡਰਿਆ",
+          "sad / ਉਦਾਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child feels proud after scoring. / ਗੋਲ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "team", "meaningEn": "a group that plays together", "meaningPa": "ਟੀਮ; ਜੋ ਇਕੱਠੇ ਖੇਡਦੇ ਹਨ" },
-      { "word": "goal", "meaningEn": "a point you score in soccer", "meaningPa": "ਗੋਲ; ਫੁੱਟਬਾਲ ਵਿੱਚ ਅੰਕ" },
-      { "word": "coach", "meaningEn": "a person who teaches a sport", "meaningPa": "ਕੋਚ; ਜੋ ਖੇਡ ਸਿਖਾਂਦਾ ਹੈ" },
-      { "word": "practice", "meaningEn": "do it again to get better", "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਮੁੜ ਕਰਨਾ" },
-      { "word": "aim", "meaningEn": "point toward the target", "meaningPa": "ਨਿਸ਼ਾਨਾ; ਟਾਰਗੇਟ ਵੱਲ ਧਿਆਨ" },
-      { "word": "net", "meaningEn": "the goal net where the ball goes", "meaningPa": "ਜਾਲ; ਗੋਲ ਦਾ ਜਾਲ" },
-      { "word": "disappointed", "meaningEn": "sad because it did not work", "meaningPa": "ਨਿਰਾਸ਼; ਮਨ ਮੁਤਾਬਕ ਨਾ ਹੋਇਆ" },
-      { "word": "focus", "meaningEn": "pay strong attention", "meaningPa": "ਧਿਆਨ; ਪੂਰਾ ਧਿਆਨ ਦੇਣਾ" },
-      { "word": "cheer", "meaningEn": "happy shouting to support someone", "meaningPa": "ਹੌਸਲਾ ਦੇਣਾ; ਖੁਸ਼ੀ ਨਾਲ ਚੀਕਣਾ" },
-      { "word": "teamwork", "meaningEn": "working together to succeed", "meaningPa": "ਟੀਮਵਰਕ; ਇਕੱਠੇ ਮਿਲ ਕੇ ਕੰਮ ਕਰਨਾ" }
-    ]
+      {
+        "word": "team",
+        "meaningEn": "a group that plays together",
+        "meaningPa": "ਟੀਮ; ਜੋ ਇਕੱਠੇ ਖੇਡਦੇ ਹਨ"
+      },
+      {
+        "word": "goal",
+        "meaningEn": "a point you score in soccer",
+        "meaningPa": "ਗੋਲ; ਫੁੱਟਬਾਲ ਵਿੱਚ ਅੰਕ"
+      },
+      {
+        "word": "coach",
+        "meaningEn": "a person who teaches a sport",
+        "meaningPa": "ਕੋਚ; ਜੋ ਖੇਡ ਸਿਖਾਂਦਾ ਹੈ"
+      },
+      {
+        "word": "practice",
+        "meaningEn": "do it again to get better",
+        "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਮੁੜ ਕਰਨਾ"
+      },
+      {
+        "word": "aim",
+        "meaningEn": "point toward the target",
+        "meaningPa": "ਨਿਸ਼ਾਨਾ; ਟਾਰਗੇਟ ਵੱਲ ਧਿਆਨ"
+      },
+      {
+        "word": "net",
+        "meaningEn": "the goal net where the ball goes",
+        "meaningPa": "ਜਾਲ; ਗੋਲ ਦਾ ਜਾਲ"
+      },
+      {
+        "word": "disappointed",
+        "meaningEn": "sad because it did not work",
+        "meaningPa": "ਨਿਰਾਸ਼; ਮਨ ਮੁਤਾਬਕ ਨਾ ਹੋਇਆ"
+      },
+      {
+        "word": "focus",
+        "meaningEn": "pay strong attention",
+        "meaningPa": "ਧਿਆਨ; ਪੂਰਾ ਧਿਆਨ ਦੇਣਾ"
+      },
+      {
+        "word": "cheer",
+        "meaningEn": "happy shouting to support someone",
+        "meaningPa": "ਹੌਸਲਾ ਦੇਣਾ; ਖੁਸ਼ੀ ਨਾਲ ਚੀਕਣਾ"
+      },
+      {
+        "word": "teamwork",
+        "meaningEn": "working together to succeed",
+        "meaningPa": "ਟੀਮਵਰਕ; ਇਕੱਠੇ ਮਿਲ ਕੇ ਕੰਮ ਕਰਨਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "goes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S03",
@@ -2496,47 +6638,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child make? / ਬੱਚਾ ਕੀ ਬਣਾਂਦਾ/ਬਣਾਂਦੀ ਹੈ?",
-        "choices": ["science fair poster / ਸਾਇੰਸ ਫੇਅਰ ਪੋਸਟਰ", "cake / ਕੇਕ", "kite / ਪਤੰਗ"],
+        "choices": [
+          "science fair poster / ਸਾਇੰਸ ਫੇਅਰ ਪੋਸਟਰ",
+          "cake / ਕੇਕ",
+          "kite / ਪਤੰਗ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story is about making a science fair poster. / ਕਹਾਣੀ ਸਾਇੰਸ ਫੇਅਰ ਪੋਸਟਰ ਬਾਰੇ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["chooses pictures / ਤਸਵੀਰਾਂ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ", "runs outside / ਬਾਹਰ ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ", "takes a nap / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"],
+        "choices": [
+          "chooses pictures / ਤਸਵੀਰਾਂ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ",
+          "runs outside / ਬਾਹਰ ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ",
+          "takes a nap / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child chooses pictures first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਤਸਵੀਰਾਂ ਚੁਣਦਾ/ਚੁਣਦੀ ਹੈ।"
       },
       {
         "question": "Why does the child glue carefully? / ਬੱਚਾ ਧਿਆਨ ਨਾਲ ਗੂੰਦ ਕਿਉਂ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["so pictures do not slide / ਤਾਂ ਜੋ ਤਸਵੀਰਾਂ ਨਾ ਖਿਸਕਣ", "to make noise / ਸ਼ੋਰ ਕਰਨ ਲਈ", "to hide it / ਲੁਕਾਉਣ ਲਈ"],
+        "choices": [
+          "so pictures do not slide / ਤਾਂ ਜੋ ਤਸਵੀਰਾਂ ਨਾ ਖਿਸਕਣ",
+          "to make noise / ਸ਼ੋਰ ਕਰਨ ਲਈ",
+          "to hide it / ਲੁਕਾਉਣ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says careful glue helps pictures stay in place. / ਪੈਨਲ 2 ਵਿੱਚ ਤਸਵੀਰਾਂ ਥਾਂ ਤੇ ਰਹਿੰਦੀਆਂ ਹਨ।"
       },
       {
         "question": "Who helps the child? / ਬੱਚੇ ਦੀ ਮਦਦ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["teacher / ਟੀਚਰ", "driver / ਡਰਾਈਵਰ", "chef / ਰਸੋਈਆ"],
+        "choices": [
+          "teacher / ਟੀਚਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "chef / ਰਸੋਈਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 and 4 show the teacher helps. / ਪੈਨਲ 3 ਅਤੇ 4 ਵਿੱਚ ਟੀਚਰ ਮਦਦ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "What does the child practice at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਅਭਿਆਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["talking about the project / ਪ੍ਰੋਜੈਕਟ ਬਾਰੇ ਬੋਲਣਾ", "swimming / ਤੈਰਨਾ", "driving / ਗੱਡੀ ਚਲਾਉਣਾ"],
+        "choices": [
+          "talking about the project / ਪ੍ਰੋਜੈਕਟ ਬਾਰੇ ਬੋਲਣਾ",
+          "swimming / ਤੈਰਨਾ",
+          "driving / ਗੱਡੀ ਚਲਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child practices talking about the project. / ਪੈਨਲ 5 ਵਿੱਚ ਪ੍ਰੋਜੈਕਟ ਬਾਰੇ ਬੋਲਣਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "project", "meaningEn": "work you do to make or show something", "meaningPa": "ਪ੍ਰੋਜੈਕਟ; ਕੋਈ ਕੰਮ ਜੋ ਤੁਸੀਂ ਬਣਾਉਂਦੇ ਹੋ" },
-      { "word": "poster", "meaningEn": "a big paper you use to show ideas", "meaningPa": "ਪੋਸਟਰ; ਵਿਚਾਰ ਦਿਖਾਉਣ ਵਾਲਾ ਵੱਡਾ ਕਾਗਜ਼" },
-      { "word": "board", "meaningEn": "a strong paper for a poster", "meaningPa": "ਬੋਰਡ; ਪੋਸਟਰ ਲਈ ਮਜ਼ਬੂਤ ਕਾਗਜ਼" },
-      { "word": "label", "meaningEn": "a name word you write near a picture", "meaningPa": "ਲੇਬਲ; ਤਸਵੀਰ ਕੋਲ ਲਿਖਿਆ ਨਾਮ" },
-      { "word": "glue", "meaningEn": "sticky stuff that holds paper", "meaningPa": "ਗੂੰਦ; ਚੀਜ਼ਾਂ ਚਿਪਕਾਉਣ ਵਾਲੀ ਚੀਜ਼" },
-      { "word": "neat", "meaningEn": "clean and in order", "meaningPa": "ਸਾਫ਼-ਸੁਥਰਾ; ਢੰਗ ਨਾਲ" },
-      { "word": "spell", "meaningEn": "write a word with correct letters", "meaningPa": "ਸਪੈਲ ਕਰਨਾ; ਸ਼ਬਦ ਸਹੀ ਅੱਖਰਾਂ ਨਾਲ ਲਿਖਣਾ" },
-      { "word": "yesterday", "meaningEn": "the day before today", "meaningPa": "ਕੱਲ੍ਹ; ਅੱਜ ਤੋਂ ਪਿਛਲਾ ਦਿਨ" },
-      { "word": "finally", "meaningEn": "at the end", "meaningPa": "ਆਖਿਰਕਾਰ; ਅੰਤ ਵਿੱਚ" },
-      { "word": "practice", "meaningEn": "do it again to improve", "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਦੁਹਰਾਉਣਾ" }
-    ]
+      {
+        "word": "project",
+        "meaningEn": "work you do to make or show something",
+        "meaningPa": "ਪ੍ਰੋਜੈਕਟ; ਕੋਈ ਕੰਮ ਜੋ ਤੁਸੀਂ ਬਣਾਉਂਦੇ ਹੋ"
+      },
+      {
+        "word": "poster",
+        "meaningEn": "a big paper you use to show ideas",
+        "meaningPa": "ਪੋਸਟਰ; ਵਿਚਾਰ ਦਿਖਾਉਣ ਵਾਲਾ ਵੱਡਾ ਕਾਗਜ਼"
+      },
+      {
+        "word": "board",
+        "meaningEn": "a strong paper for a poster",
+        "meaningPa": "ਬੋਰਡ; ਪੋਸਟਰ ਲਈ ਮਜ਼ਬੂਤ ਕਾਗਜ਼"
+      },
+      {
+        "word": "label",
+        "meaningEn": "a name word you write near a picture",
+        "meaningPa": "ਲੇਬਲ; ਤਸਵੀਰ ਕੋਲ ਲਿਖਿਆ ਨਾਮ"
+      },
+      {
+        "word": "glue",
+        "meaningEn": "sticky stuff that holds paper",
+        "meaningPa": "ਗੂੰਦ; ਚੀਜ਼ਾਂ ਚਿਪਕਾਉਣ ਵਾਲੀ ਚੀਜ਼"
+      },
+      {
+        "word": "neat",
+        "meaningEn": "clean and in order",
+        "meaningPa": "ਸਾਫ਼-ਸੁਥਰਾ; ਢੰਗ ਨਾਲ"
+      },
+      {
+        "word": "spell",
+        "meaningEn": "write a word with correct letters",
+        "meaningPa": "ਸਪੈਲ ਕਰਨਾ; ਸ਼ਬਦ ਸਹੀ ਅੱਖਰਾਂ ਨਾਲ ਲਿਖਣਾ"
+      },
+      {
+        "word": "yesterday",
+        "meaningEn": "the day before today",
+        "meaningPa": "ਕੱਲ੍ਹ; ਅੱਜ ਤੋਂ ਪਿਛਲਾ ਦਿਨ"
+      },
+      {
+        "word": "finally",
+        "meaningEn": "at the end",
+        "meaningPa": "ਆਖਿਰਕਾਰ; ਅੰਤ ਵਿੱਚ"
+      },
+      {
+        "word": "practice",
+        "meaningEn": "do it again to improve",
+        "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਦੁਹਰਾਉਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S04",
@@ -2549,47 +6771,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["library / ਲਾਇਬ੍ਰੇਰੀ", "park / ਪਾਰਕ", "store / ਦੁਕਾਨ"],
+        "choices": [
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "park / ਪਾਰਕ",
+          "store / ਦੁਕਾਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says the child goes to the library. / ਕਹਾਣੀ ਵਿੱਚ ਬੱਚਾ ਲਾਇਬ੍ਰੇਰੀ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What does the child get? / ਬੱਚੇ ਨੂੰ ਕੀ ਮਿਲਦਾ ਹੈ?",
-        "choices": ["library card / ਲਾਇਬ੍ਰੇਰੀ ਕਾਰਡ", "bus ticket / ਬੱਸ ਟਿਕਟ", "toy car / ਖਿਡੌਣਾ ਗੱਡੀ"],
+        "choices": [
+          "library card / ਲਾਇਬ੍ਰੇਰੀ ਕਾਰਡ",
+          "bus ticket / ਬੱਸ ਟਿਕਟ",
+          "toy car / ਖਿਡੌਣਾ ਗੱਡੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child gets a library card. / ਪੈਨਲ 2 ਵਿੱਚ ਲਾਇਬ੍ਰੇਰੀ ਕਾਰਡ ਮਿਲਦਾ ਹੈ।"
       },
       {
         "question": "How many weeks until return? / ਕਿੰਨੇ ਹਫ਼ਤਿਆਂ ਵਿੱਚ ਵਾਪਸ ਕਰਨਾ ਹੈ?",
-        "choices": ["two weeks / ਦੋ ਹਫ਼ਤੇ", "one day / ਇੱਕ ਦਿਨ", "ten weeks / ਦਸ ਹਫ਼ਤੇ"],
+        "choices": [
+          "two weeks / ਦੋ ਹਫ਼ਤੇ",
+          "one day / ਇੱਕ ਦਿਨ",
+          "ten weeks / ਦਸ ਹਫ਼ਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says return books in two weeks. / ਪੈਨਲ 4 ਵਿੱਚ ਦੋ ਹਫ਼ਤਿਆਂ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why does the child carry books carefully? / ਬੱਚਾ ਕਿਤਾਬਾਂ ਧਿਆਨ ਨਾਲ ਕਿਉਂ ਫੜਦਾ/ਫੜਦੀ ਹੈ?",
-        "choices": ["to keep pages safe / ਪੰਨੇ ਸੁਰੱਖਿਅਤ ਰਹਿਣ", "to run faster / ਤੇਜ਼ ਦੌੜਨ ਲਈ", "to be loud / ਉੱਚਾ ਹੋਣ ਲਈ"],
+        "choices": [
+          "to keep pages safe / ਪੰਨੇ ਸੁਰੱਖਿਅਤ ਰਹਿਣ",
+          "to run faster / ਤੇਜ਼ ਦੌੜਨ ਲਈ",
+          "to be loud / ਉੱਚਾ ਹੋਣ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says careful carrying keeps pages safe. / ਪੈਨਲ 3 ਵਿੱਚ ਪੰਨੇ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦੇ ਹਨ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["proud / ਮਾਣ", "angry / ਗੁੱਸੇ ਵਿੱਚ", "scared / ਡਰਿਆ"],
+        "choices": [
+          "proud / ਮਾਣ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ",
+          "scared / ਡਰਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels proud. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚਾ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "library", "meaningEn": "a place where you borrow books", "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ; ਜਿੱਥੇ ਕਿਤਾਬਾਂ ਉਧਾਰ ਮਿਲਦੀਆਂ ਹਨ" },
-      { "word": "librarian", "meaningEn": "a person who helps you in the library", "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ ਵਾਲਾ/ਵਾਲੀ; ਜੋ ਮਦਦ ਕਰਦਾ/ਕਰਦੀ ਹੈ" },
-      { "word": "card", "meaningEn": "a small card that shows your membership", "meaningPa": "ਕਾਰਡ; ਮੈਂਬਰਸ਼ਿਪ ਵਾਲਾ ਛੋਟਾ ਕਾਰਡ" },
-      { "word": "borrow", "meaningEn": "take for a short time and return later", "meaningPa": "ਉਧਾਰ ਲੈਣਾ; ਕੁਝ ਸਮੇਂ ਲਈ ਲੈ ਕੇ ਵਾਪਸ ਕਰਨਾ" },
-      { "word": "return", "meaningEn": "bring back to the place it came from", "meaningPa": "ਵਾਪਸ ਕਰਨਾ; ਮੁੜ ਦੇਣਾ" },
-      { "word": "responsible", "meaningEn": "careful and doing the right thing", "meaningPa": "ਜ਼ਿੰਮੇਵਾਰ; ਧਿਆਨ ਨਾਲ ਠੀਕ ਕੰਮ ਕਰਨਾ" },
-      { "word": "sign", "meaningEn": "write your name", "meaningPa": "ਦਸਤਖਤ/ਨਾਮ ਲਿਖਣਾ; ਆਪਣਾ ਨਾਮ ਲਿਖਣਾ" },
-      { "word": "polite", "meaningEn": "kind words and good manners", "meaningPa": "ਨਮਰ; ਚੰਗੀ ਤਮੀਜ਼ ਨਾਲ" },
-      { "word": "two weeks", "meaningEn": "fourteen days", "meaningPa": "ਦੋ ਹਫ਼ਤੇ; ਚੌਦਾਂ ਦਿਨ" },
-      { "word": "promise", "meaningEn": "say you will do it for sure", "meaningPa": "ਵਾਅਦਾ; ਯਕੀਨ ਨਾਲ ਕਹਿਣਾ" }
-    ]
+      {
+        "word": "library",
+        "meaningEn": "a place where you borrow books",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ; ਜਿੱਥੇ ਕਿਤਾਬਾਂ ਉਧਾਰ ਮਿਲਦੀਆਂ ਹਨ"
+      },
+      {
+        "word": "librarian",
+        "meaningEn": "a person who helps you in the library",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ ਵਾਲਾ/ਵਾਲੀ; ਜੋ ਮਦਦ ਕਰਦਾ/ਕਰਦੀ ਹੈ"
+      },
+      {
+        "word": "card",
+        "meaningEn": "a small card that shows your membership",
+        "meaningPa": "ਕਾਰਡ; ਮੈਂਬਰਸ਼ਿਪ ਵਾਲਾ ਛੋਟਾ ਕਾਰਡ"
+      },
+      {
+        "word": "borrow",
+        "meaningEn": "take for a short time and return later",
+        "meaningPa": "ਉਧਾਰ ਲੈਣਾ; ਕੁਝ ਸਮੇਂ ਲਈ ਲੈ ਕੇ ਵਾਪਸ ਕਰਨਾ"
+      },
+      {
+        "word": "return",
+        "meaningEn": "bring back to the place it came from",
+        "meaningPa": "ਵਾਪਸ ਕਰਨਾ; ਮੁੜ ਦੇਣਾ"
+      },
+      {
+        "word": "responsible",
+        "meaningEn": "careful and doing the right thing",
+        "meaningPa": "ਜ਼ਿੰਮੇਵਾਰ; ਧਿਆਨ ਨਾਲ ਠੀਕ ਕੰਮ ਕਰਨਾ"
+      },
+      {
+        "word": "sign",
+        "meaningEn": "write your name",
+        "meaningPa": "ਦਸਤਖਤ/ਨਾਮ ਲਿਖਣਾ; ਆਪਣਾ ਨਾਮ ਲਿਖਣਾ"
+      },
+      {
+        "word": "polite",
+        "meaningEn": "kind words and good manners",
+        "meaningPa": "ਨਮਰ; ਚੰਗੀ ਤਮੀਜ਼ ਨਾਲ"
+      },
+      {
+        "word": "two weeks",
+        "meaningEn": "fourteen days",
+        "meaningPa": "ਦੋ ਹਫ਼ਤੇ; ਚੌਦਾਂ ਦਿਨ"
+      },
+      {
+        "word": "promise",
+        "meaningEn": "say you will do it for sure",
+        "meaningPa": "ਵਾਅਦਾ; ਯਕੀਨ ਨਾਲ ਕਹਿਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "read",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S05",
@@ -2602,47 +6904,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What event is the family preparing for? / ਪਰਿਵਾਰ ਕਿਸ ਲਈ ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ?",
-        "choices": ["festival / ਤਿਉਹਾਰ", "test / ਟੈਸਟ", "doctor visit / ਡਾਕਟਰ ਕੋਲ ਜਾਣਾ"],
+        "choices": [
+          "festival / ਤਿਉਹਾਰ",
+          "test / ਟੈਸਟ",
+          "doctor visit / ਡਾਕਟਰ ਕੋਲ ਜਾਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the family prepares for a festival. / ਪੈਨਲ 1 ਵਿੱਚ ਤਿਉਹਾਰ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they make? / ਉਹ ਕੀ ਬਣਾਂਦੇ ਹਨ?",
-        "choices": ["lanterns / ਲੰਟਰਨਾਂ", "bicycles / ਸਾਈਕਲ", "robots / ਰੋਬੋਟ"],
+        "choices": [
+          "lanterns / ਲੰਟਰਨਾਂ",
+          "bicycles / ਸਾਈਕਲ",
+          "robots / ਰੋਬੋਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they make lanterns. / ਪੈਨਲ 2 ਵਿੱਚ ਲੰਟਰਨਾਂ ਬਣਾਉਂਦੇ ਹਨ।"
       },
       {
         "question": "Where do they hang the lanterns? / ਉਹ ਲੰਟਰਨਾਂ ਕਿੱਥੇ ਟੰਗਦੇ ਹਨ?",
-        "choices": ["on the porch / ਵਰਾਂਡੇ ਤੇ", "in the sink / ਸਿੰਕ ਵਿੱਚ", "on the bus / ਬੱਸ ਤੇ"],
+        "choices": [
+          "on the porch / ਵਰਾਂਡੇ ਤੇ",
+          "in the sink / ਸਿੰਕ ਵਿੱਚ",
+          "on the bus / ਬੱਸ ਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they hang lanterns on the porch. / ਪੈਨਲ 3 ਵਿੱਚ ਵਰਾਂਡੇ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why do they check the string? / ਉਹ ਡੋਰ ਕਿਉਂ ਚੈੱਕ ਕਰਦੇ ਹਨ?",
-        "choices": ["so lanterns do not fall / ਤਾਂ ਜੋ ਨਾ ਡਿੱਗਣ", "to make it loud / ਸ਼ੋਰ ਕਰਨ ਲਈ", "to lose it / ਗੁੰਮ ਕਰਨ ਲਈ"],
+        "choices": [
+          "so lanterns do not fall / ਤਾਂ ਜੋ ਨਾ ਡਿੱਗਣ",
+          "to make it loud / ਸ਼ੋਰ ਕਰਨ ਲਈ",
+          "to lose it / ਗੁੰਮ ਕਰਨ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They check the string so lanterns stay up safely. / ਡੋਰ ਚੈੱਕ ਕਰਕੇ ਲੰਟਰਨ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦੀਆਂ ਹਨ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["happy / ਖੁਸ਼", "angry / ਗੁੱਸੇ ਵਿੱਚ", "sleepy / ਨੀਂਦ ਵਾਲਾ"],
+        "choices": [
+          "happy / ਖੁਸ਼",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels happy. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚਾ ਖੁਸ਼ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "festival", "meaningEn": "a special community celebration", "meaningPa": "ਤਿਉਹਾਰ; ਖਾਸ ਕਮਿਊਨਿਟੀ ਜਸ਼ਨ" },
-      { "word": "lantern", "meaningEn": "a light you can hang up", "meaningPa": "ਲੰਟਰਨ; ਟੰਗਣ ਵਾਲੀ ਰੌਸ਼ਨੀ" },
-      { "word": "fold", "meaningEn": "bend paper to make a shape", "meaningPa": "ਮੋੜਨਾ; ਕਾਗਜ਼ ਨੂੰ ਆਕਾਰ ਦੇਣਾ" },
-      { "word": "hang", "meaningEn": "put something up on a hook or string", "meaningPa": "ਟੰਗਣਾ; ਡੋਰ ਜਾਂ ਕਿਲੀ ਤੇ ਲਗਾਉਣਾ" },
-      { "word": "string", "meaningEn": "thin rope used to tie things", "meaningPa": "ਡੋਰ; ਪਤਲੀ ਰੱਸੀ" },
-      { "word": "neighbors", "meaningEn": "people who live near you", "meaningPa": "ਪੜੋਸੀ; ਨੇੜੇ ਰਹਿਣ ਵਾਲੇ ਲੋਕ" },
-      { "word": "beautiful", "meaningEn": "very pretty", "meaningPa": "ਸੋਹਣਾ; ਬਹੁਤ ਸੁੰਦਰ" },
-      { "word": "together", "meaningEn": "with other people", "meaningPa": "ਇਕੱਠੇ; ਹੋਰਾਂ ਨਾਲ" },
-      { "word": "glow", "meaningEn": "shine softly", "meaningPa": "ਹੌਲੀ ਚਮਕਣਾ; ਨਰਮ ਰੌਸ਼ਨੀ" },
-      { "word": "share", "meaningEn": "give some to others", "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜਿਆਂ ਨਾਲ ਵੰਡਣਾ" }
-    ]
+      {
+        "word": "festival",
+        "meaningEn": "a special community celebration",
+        "meaningPa": "ਤਿਉਹਾਰ; ਖਾਸ ਕਮਿਊਨਿਟੀ ਜਸ਼ਨ"
+      },
+      {
+        "word": "lantern",
+        "meaningEn": "a light you can hang up",
+        "meaningPa": "ਲੰਟਰਨ; ਟੰਗਣ ਵਾਲੀ ਰੌਸ਼ਨੀ"
+      },
+      {
+        "word": "fold",
+        "meaningEn": "bend paper to make a shape",
+        "meaningPa": "ਮੋੜਨਾ; ਕਾਗਜ਼ ਨੂੰ ਆਕਾਰ ਦੇਣਾ"
+      },
+      {
+        "word": "hang",
+        "meaningEn": "put something up on a hook or string",
+        "meaningPa": "ਟੰਗਣਾ; ਡੋਰ ਜਾਂ ਕਿਲੀ ਤੇ ਲਗਾਉਣਾ"
+      },
+      {
+        "word": "string",
+        "meaningEn": "thin rope used to tie things",
+        "meaningPa": "ਡੋਰ; ਪਤਲੀ ਰੱਸੀ"
+      },
+      {
+        "word": "neighbors",
+        "meaningEn": "people who live near you",
+        "meaningPa": "ਪੜੋਸੀ; ਨੇੜੇ ਰਹਿਣ ਵਾਲੇ ਲੋਕ"
+      },
+      {
+        "word": "beautiful",
+        "meaningEn": "very pretty",
+        "meaningPa": "ਸੋਹਣਾ; ਬਹੁਤ ਸੁੰਦਰ"
+      },
+      {
+        "word": "together",
+        "meaningEn": "with other people",
+        "meaningPa": "ਇਕੱਠੇ; ਹੋਰਾਂ ਨਾਲ"
+      },
+      {
+        "word": "glow",
+        "meaningEn": "shine softly",
+        "meaningPa": "ਹੌਲੀ ਚਮਕਣਾ; ਨਰਮ ਰੌਸ਼ਨੀ"
+      },
+      {
+        "word": "share",
+        "meaningEn": "give some to others",
+        "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜਿਆਂ ਨਾਲ ਵੰਡਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "draw",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "share",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S06",
@@ -2655,47 +7037,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they cook? / ਉਹ ਕਿੱਥੇ ਖਾਣਾ ਬਣਾਂਦੇ ਹਨ?",
-        "choices": ["kitchen / ਰਸੋਈ", "playground / ਖੇਡ ਮੈਦਾਨ", "bus / ਬੱਸ"],
+        "choices": [
+          "kitchen / ਰਸੋਈ",
+          "playground / ਖੇਡ ਮੈਦਾਨ",
+          "bus / ਬੱਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they cook in the kitchen. / ਪੈਨਲ 1 ਵਿੱਚ ਰਸੋਈ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they read together? / ਉਹ ਇਕੱਠੇ ਕੀ ਪੜ੍ਹਦੇ ਹਨ?",
-        "choices": ["recipe / ਰੇਸਪੀ", "map / ਨਕਸ਼ਾ", "ticket / ਟਿਕਟ"],
+        "choices": [
+          "recipe / ਰੇਸਪੀ",
+          "map / ਨਕਸ਼ਾ",
+          "ticket / ਟਿਕਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they read a simple recipe together. / ਪੈਨਲ 1 ਵਿੱਚ ਸੌਖੀ ਰੇਸਪੀ ਪੜ੍ਹਦੇ ਹਨ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["washes hands / ਹੱਥ ਧੋਦਾ/ਧੋਦੀ ਹੈ", "runs outside / ਬਾਹਰ ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ", "goes to sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"],
+        "choices": [
+          "washes hands / ਹੱਥ ਧੋਦਾ/ਧੋਦੀ ਹੈ",
+          "runs outside / ਬਾਹਰ ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ",
+          "goes to sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child washes hands first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਹੱਥ ਧੋਣੇ ਹਨ।"
       },
       {
         "question": "What do they use to know the time? / ਸਮਾਂ ਜਾਣਨ ਲਈ ਉਹ ਕੀ ਵਰਤਦੇ ਹਨ?",
-        "choices": ["timer / ਟਾਈਮਰ", "pillow / ਤਕੀਆ", "ball / ਗੇਂਦ"],
+        "choices": [
+          "timer / ਟਾਈਮਰ",
+          "pillow / ਤਕੀਆ",
+          "ball / ਗੇਂਦ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 mentions listening for the timer bell. / ਪੈਨਲ 4 ਵਿੱਚ ਟਾਈਮਰ ਦੀ ਘੰਟੀ ਹੈ।"
       },
       {
         "question": "Why is the child proud? / ਬੱਚਾ ਮਾਣ ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["helped and followed steps / ਮਦਦ ਕੀਤੀ ਤੇ ਕਦਮ ਫੋਲੋ ਕੀਤੇ", "broke a plate / ਪਲੇਟ ਤੋੜੀ", "made a mess / ਗੰਦ ਕੀਤਾ"],
+        "choices": [
+          "helped and followed steps / ਮਦਦ ਕੀਤੀ ਤੇ ਕਦਮ ਫੋਲੋ ਕੀਤੇ",
+          "broke a plate / ਪਲੇਟ ਤੋੜੀ",
+          "made a mess / ਗੰਦ ਕੀਤਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child is proud for helping. / ਪੈਨਲ 5 ਵਿੱਚ ਮਦਦ ਕਰਕੇ ਮਾਣ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "recipe", "meaningEn": "instructions for cooking food", "meaningPa": "ਰੇਸਪੀ; ਖਾਣਾ ਬਣਾਉਣ ਦੀ ਹਦਾਇਤ" },
-      { "word": "steps", "meaningEn": "small parts of a plan you follow", "meaningPa": "ਕਦਮ; ਯੋਜਨਾ ਦੇ ਛੋਟੇ ਹਿੱਸੇ" },
-      { "word": "wash", "meaningEn": "clean with water and soap", "meaningPa": "ਧੋਣਾ; ਪਾਣੀ ਅਤੇ ਸਾਬਣ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ" },
-      { "word": "cut", "meaningEn": "make pieces with a knife", "meaningPa": "ਕੱਟਣਾ; ਚਾਕੂ ਨਾਲ ਟੁਕੜੇ ਕਰਨਾ" },
-      { "word": "stir", "meaningEn": "mix by moving a spoon around", "meaningPa": "ਹਿਲਾਉਣਾ; ਚਮਚੀ ਨਾਲ ਮਿਕਸ ਕਰਨਾ" },
-      { "word": "bowl", "meaningEn": "a round dish for food", "meaningPa": "ਕਟੋਰੀ; ਖਾਣੇ ਲਈ ਗੋਲ ਬਰਤਨ" },
-      { "word": "spoon", "meaningEn": "a tool for eating or measuring", "meaningPa": "ਚਮਚੀ; ਖਾਣ ਜਾਂ ਮਾਪਣ ਲਈ" },
-      { "word": "stove", "meaningEn": "a place where food is cooked", "meaningPa": "ਚੂਲਾ; ਜਿੱਥੇ ਖਾਣਾ ਪਕਦਾ ਹੈ" },
-      { "word": "timer", "meaningEn": "a clock that tells when time is done", "meaningPa": "ਟਾਈਮਰ; ਸਮਾਂ ਮੁਕਣ ਦੀ ਘੜੀ" },
-      { "word": "safe", "meaningEn": "not dangerous or hurtful", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" }
-    ]
+      {
+        "word": "recipe",
+        "meaningEn": "instructions for cooking food",
+        "meaningPa": "ਰੇਸਪੀ; ਖਾਣਾ ਬਣਾਉਣ ਦੀ ਹਦਾਇਤ"
+      },
+      {
+        "word": "steps",
+        "meaningEn": "small parts of a plan you follow",
+        "meaningPa": "ਕਦਮ; ਯੋਜਨਾ ਦੇ ਛੋਟੇ ਹਿੱਸੇ"
+      },
+      {
+        "word": "wash",
+        "meaningEn": "clean with water and soap",
+        "meaningPa": "ਧੋਣਾ; ਪਾਣੀ ਅਤੇ ਸਾਬਣ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ"
+      },
+      {
+        "word": "cut",
+        "meaningEn": "make pieces with a knife",
+        "meaningPa": "ਕੱਟਣਾ; ਚਾਕੂ ਨਾਲ ਟੁਕੜੇ ਕਰਨਾ"
+      },
+      {
+        "word": "stir",
+        "meaningEn": "mix by moving a spoon around",
+        "meaningPa": "ਹਿਲਾਉਣਾ; ਚਮਚੀ ਨਾਲ ਮਿਕਸ ਕਰਨਾ"
+      },
+      {
+        "word": "bowl",
+        "meaningEn": "a round dish for food",
+        "meaningPa": "ਕਟੋਰੀ; ਖਾਣੇ ਲਈ ਗੋਲ ਬਰਤਨ"
+      },
+      {
+        "word": "spoon",
+        "meaningEn": "a tool for eating or measuring",
+        "meaningPa": "ਚਮਚੀ; ਖਾਣ ਜਾਂ ਮਾਪਣ ਲਈ"
+      },
+      {
+        "word": "stove",
+        "meaningEn": "a place where food is cooked",
+        "meaningPa": "ਚੂਲਾ; ਜਿੱਥੇ ਖਾਣਾ ਪਕਦਾ ਹੈ"
+      },
+      {
+        "word": "timer",
+        "meaningEn": "a clock that tells when time is done",
+        "meaningPa": "ਟਾਈਮਰ; ਸਮਾਂ ਮੁਕਣ ਦੀ ਘੜੀ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not dangerous or hurtful",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "cooks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "read",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "cook",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S07",
@@ -2708,47 +7170,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What do they plant? / ਉਹ ਕੀ ਲਗਾਂਦੇ ਹਨ?",
-        "choices": ["seeds / ਬੀਜ", "shoes / ਜੁੱਤੇ", "books / ਕਿਤਾਬਾਂ"],
+        "choices": [
+          "seeds / ਬੀਜ",
+          "shoes / ਜੁੱਤੇ",
+          "books / ਕਿਤਾਬਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they plant seeds. / ਪੈਨਲ 1 ਵਿੱਚ ਬੀਜ ਲਗਾਉਂਦੇ ਹਨ।"
       },
       {
         "question": "Where do they plant? / ਉਹ ਕਿੱਥੇ ਲਗਾਂਦੇ ਹਨ?",
-        "choices": ["backyard / ਆੰਗਣ", "bus / ਬੱਸ", "store / ਦੁਕਾਨ"],
+        "choices": [
+          "backyard / ਆੰਗਣ",
+          "bus / ਬੱਸ",
+          "store / ਦੁਕਾਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says they plant in the backyard. / ਕਹਾਣੀ ਵਿੱਚ ਆੰਗਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child do every morning? / ਬੱਚਾ ਹਰ ਸਵੇਰੇ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["waters the soil / ਮਿੱਟੀ ਨੂੰ ਪਾਣੀ ਦੇਂਦਾ/ਦੇਂਦੀ ਹੈ", "jumps on bed / ਬਿਸਤਰੇ ਤੇ ਕੂਦਦਾ/ਕੂਦਦੀ ਹੈ", "draws cars / ਗੱਡੀਆਂ ਬਣਾਂਦਾ/ਬਣਾਂਦੀ ਹੈ"],
+        "choices": [
+          "waters the soil / ਮਿੱਟੀ ਨੂੰ ਪਾਣੀ ਦੇਂਦਾ/ਦੇਂਦੀ ਹੈ",
+          "jumps on bed / ਬਿਸਤਰੇ ਤੇ ਕੂਦਦਾ/ਕੂਦਦੀ ਹੈ",
+          "draws cars / ਗੱਡੀਆਂ ਬਣਾਂਦਾ/ਬਣਾਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child waters the soil every morning. / ਪੈਨਲ 3 ਵਿੱਚ ਹਰ ਸਵੇਰੇ ਪਾਣੀ ਹੈ।"
       },
       {
         "question": "What does Grandma teach? / ਦਾਦੀ/ਨਾਨੀ ਕੀ ਸਿਖਾਂਦੀ ਹੈ?",
-        "choices": ["be patient / ਧੀਰਜ ਰੱਖੋ", "be loud / ਸ਼ੋਰ ਕਰੋ", "run away / ਭੱਜ ਜਾਓ"],
+        "choices": [
+          "be patient / ਧੀਰਜ ਰੱਖੋ",
+          "be loud / ਸ਼ੋਰ ਕਰੋ",
+          "run away / ਭੱਜ ਜਾਓ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says plants need time, so be patient. / ਪੈਨਲ 4 ਵਿੱਚ ਧੀਰਜ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they see at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["sprouts / ਅੰਕੁਰ", "snow / ਬਰਫ਼", "a bus / ਬੱਸ"],
+        "choices": [
+          "sprouts / ਅੰਕੁਰ",
+          "snow / ਬਰਫ਼",
+          "a bus / ਬੱਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they see sprouts. / ਪੈਨਲ 5 ਵਿੱਚ ਅੰਕੁਰ ਵੇਖਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "seed", "meaningEn": "a tiny thing that can grow into a plant", "meaningPa": "ਬੀਜ; ਜਿਸ ਤੋਂ ਪੌਦਾ ਬਣਦਾ ਹੈ" },
-      { "word": "soil", "meaningEn": "dirt where plants grow", "meaningPa": "ਮਿੱਟੀ; ਜਿੱਥੇ ਪੌਦੇ ਉੱਗਦੇ ਹਨ" },
-      { "word": "dig", "meaningEn": "make a hole in the ground", "meaningPa": "ਖੋਦਣਾ; ਜ਼ਮੀਨ ਵਿੱਚ ਖੱਡਾ ਕਰਨਾ" },
-      { "word": "cover", "meaningEn": "put soil on top", "meaningPa": "ਢੱਕਣਾ; ਉੱਤੇ ਮਿੱਟੀ ਪਾਉਣਾ" },
-      { "word": "water", "meaningEn": "give water to help it grow", "meaningPa": "ਪਾਣੀ ਦੇਣਾ; ਵਧਣ ਲਈ ਪਾਣੀ ਪਾਉਣਾ" },
-      { "word": "schedule", "meaningEn": "a plan for when you do things", "meaningPa": "ਸ਼ਡਿਊਲ; ਕਦੋਂ ਕੀ ਕਰਨਾ ਹੈ ਯੋਜਨਾ" },
-      { "word": "patient", "meaningEn": "able to wait calmly", "meaningPa": "ਧੀਰਜ ਵਾਲਾ; ਸ਼ਾਂਤ ਹੋ ਕੇ ਉਡੀਕ ਕਰਨਾ" },
-      { "word": "sprout", "meaningEn": "a tiny new plant", "meaningPa": "ਅੰਕੁਰ; ਨੰਨਾ ਨਵਾਂ ਪੌਦਾ" },
-      { "word": "grow", "meaningEn": "get bigger over time", "meaningPa": "ਵਧਣਾ; ਸਮੇਂ ਨਾਲ ਵੱਡਾ ਹੋਣਾ" },
-      { "word": "care", "meaningEn": "help and protect something", "meaningPa": "ਸੰਭਾਲ; ਧਿਆਨ ਨਾਲ ਰੱਖਿਆ" }
-    ]
+      {
+        "word": "seed",
+        "meaningEn": "a tiny thing that can grow into a plant",
+        "meaningPa": "ਬੀਜ; ਜਿਸ ਤੋਂ ਪੌਦਾ ਬਣਦਾ ਹੈ"
+      },
+      {
+        "word": "soil",
+        "meaningEn": "dirt where plants grow",
+        "meaningPa": "ਮਿੱਟੀ; ਜਿੱਥੇ ਪੌਦੇ ਉੱਗਦੇ ਹਨ"
+      },
+      {
+        "word": "dig",
+        "meaningEn": "make a hole in the ground",
+        "meaningPa": "ਖੋਦਣਾ; ਜ਼ਮੀਨ ਵਿੱਚ ਖੱਡਾ ਕਰਨਾ"
+      },
+      {
+        "word": "cover",
+        "meaningEn": "put soil on top",
+        "meaningPa": "ਢੱਕਣਾ; ਉੱਤੇ ਮਿੱਟੀ ਪਾਉਣਾ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "give water to help it grow",
+        "meaningPa": "ਪਾਣੀ ਦੇਣਾ; ਵਧਣ ਲਈ ਪਾਣੀ ਪਾਉਣਾ"
+      },
+      {
+        "word": "schedule",
+        "meaningEn": "a plan for when you do things",
+        "meaningPa": "ਸ਼ਡਿਊਲ; ਕਦੋਂ ਕੀ ਕਰਨਾ ਹੈ ਯੋਜਨਾ"
+      },
+      {
+        "word": "patient",
+        "meaningEn": "able to wait calmly",
+        "meaningPa": "ਧੀਰਜ ਵਾਲਾ; ਸ਼ਾਂਤ ਹੋ ਕੇ ਉਡੀਕ ਕਰਨਾ"
+      },
+      {
+        "word": "sprout",
+        "meaningEn": "a tiny new plant",
+        "meaningPa": "ਅੰਕੁਰ; ਨੰਨਾ ਨਵਾਂ ਪੌਦਾ"
+      },
+      {
+        "word": "grow",
+        "meaningEn": "get bigger over time",
+        "meaningPa": "ਵਧਣਾ; ਸਮੇਂ ਨਾਲ ਵੱਡਾ ਹੋਣਾ"
+      },
+      {
+        "word": "care",
+        "meaningEn": "help and protect something",
+        "meaningPa": "ਸੰਭਾਲ; ਧਿਆਨ ਨਾਲ ਰੱਖਿਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "plant",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "plants",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S08",
@@ -2761,47 +7303,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child want to buy? / ਬੱਚਾ ਕੀ ਖਰੀਦਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ?",
-        "choices": ["bike / ਸਾਈਕਲ", "book / ਕਿਤਾਬ", "dog / ਕੁੱਤਾ"],
+        "choices": [
+          "bike / ਸਾਈਕਲ",
+          "book / ਕਿਤਾਬ",
+          "dog / ਕੁੱਤਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wants a bike. / ਪੈਨਲ 1 ਵਿੱਚ ਸਾਈਕਲ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Where does the child put coins? / ਬੱਚਾ ਸਿੱਕੇ ਕਿੱਥੇ ਪਾਂਦਾ/ਪਾਂਦੀ ਹੈ?",
-        "choices": ["jar / ਜਾਰ", "shoe / ਜੁੱਤਾ", "pocket / ਜੇਬ"],
+        "choices": [
+          "jar / ਜਾਰ",
+          "shoe / ਜੁੱਤਾ",
+          "pocket / ਜੇਬ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child saves coins in a jar. / ਪੈਨਲ 2 ਵਿੱਚ ਜਾਰ ਵਿੱਚ ਸਿੱਕੇ ਬਚਾਉਂਦਾ/ਬਚਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What does the child stop buying every day? / ਬੱਚਾ ਹਰ ਰੋਜ਼ ਕੀ ਨਹੀਂ ਖਰੀਦਦਾ/ਖਰੀਦਦੀ ਹੈ?",
-        "choices": ["candy / ਕੈਂਡੀ", "water / ਪਾਣੀ", "pencils / ਪੈਂਸਿਲਾਂ"],
+        "choices": [
+          "candy / ਕੈਂਡੀ",
+          "water / ਪਾਣੀ",
+          "pencils / ਪੈਂਸਿਲਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child does not buy candy every day. / ਪੈਨਲ 3 ਵਿੱਚ ਕੈਂਡੀ ਨਹੀਂ ਲੈਂਦਾ/ਲੈਂਦੀ।"
       },
       {
         "question": "When will Mom check the total money? / ਮਾਂ ਕਦੋਂ ਕੁੱਲ ਪੈਸੇ ਵੇਖੇਗੀ?",
-        "choices": ["next month / ਅਗਲਾ ਮਹੀਨਾ", "yesterday / ਕੱਲ੍ਹ", "today / ਅੱਜ"],
+        "choices": [
+          "next month / ਅਗਲਾ ਮਹੀਨਾ",
+          "yesterday / ਕੱਲ੍ਹ",
+          "today / ਅੱਜ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says Mom will check next month. / ਪੈਨਲ 4 ਵਿੱਚ ਅਗਲੇ ਮਹੀਨੇ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why is the child happy at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਖੁਸ਼ ਕਿਉਂ ਹੈ?",
-        "choices": ["saving helps the dream / ਬਚਤ ਸੁਪਨੇ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ", "it is raining / ਮੀਂਹ ਪੈਂਦਾ ਹੈ", "class is loud / ਕਲਾਸ ਸ਼ੋਰ ਹੈ"],
+        "choices": [
+          "saving helps the dream / ਬਚਤ ਸੁਪਨੇ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ",
+          "it is raining / ਮੀਂਹ ਪੈਂਦਾ ਹੈ",
+          "class is loud / ਕਲਾਸ ਸ਼ੋਰ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says planning and saving help the dream. / ਪੈਨਲ 5 ਵਿੱਚ ਯੋਜਨਾ ਅਤੇ ਬਚਤ ਦੀ ਗੱਲ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "save", "meaningEn": "keep money instead of spending it", "meaningPa": "ਬਚਾਉਣਾ; ਖਰਚ ਨਾ ਕਰਕੇ ਰੱਖਣਾ" },
-      { "word": "money", "meaningEn": "coins and bills you use to buy things", "meaningPa": "ਪੈਸਾ; ਸਿੱਕੇ ਅਤੇ ਨੋਟ" },
-      { "word": "jar", "meaningEn": "a container to hold coins", "meaningPa": "ਜਾਰ; ਸਿੱਕੇ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ" },
-      { "word": "chores", "meaningEn": "small jobs at home", "meaningPa": "ਘਰੇਲੂ ਕੰਮ; ਛੋਟੇ ਕੰਮ" },
-      { "word": "chart", "meaningEn": "a paper that shows numbers and progress", "meaningPa": "ਚਾਰਟ; ਨੰਬਰ ਅਤੇ ਤਰੱਕੀ ਦਿਖਾਉਣ ਵਾਲਾ ਕਾਗਜ਼" },
-      { "word": "amount", "meaningEn": "how much you have", "meaningPa": "ਰਕਮ; ਕਿੰਨਾ ਪੈਸਾ ਹੈ" },
-      { "word": "self-control", "meaningEn": "stopping yourself from doing something", "meaningPa": "ਆਪਣੇ ਆਪ ਨੂੰ ਰੋਕਣਾ; ਕਾਬੂ" },
-      { "word": "total", "meaningEn": "all added together", "meaningPa": "ਕੁੱਲ; ਸਾਰਾ ਜੋੜ ਕੇ" },
-      { "word": "helmet", "meaningEn": "a hard hat to keep your head safe", "meaningPa": "ਹੈਲਮੈਟ; ਸਿਰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਟੋਪੀ" },
-      { "word": "next month", "meaningEn": "the month after this one", "meaningPa": "ਅਗਲਾ ਮਹੀਨਾ; ਇਸ ਤੋਂ ਬਾਅਦ ਵਾਲਾ ਮਹੀਨਾ" }
-    ]
+      {
+        "word": "save",
+        "meaningEn": "keep money instead of spending it",
+        "meaningPa": "ਬਚਾਉਣਾ; ਖਰਚ ਨਾ ਕਰਕੇ ਰੱਖਣਾ"
+      },
+      {
+        "word": "money",
+        "meaningEn": "coins and bills you use to buy things",
+        "meaningPa": "ਪੈਸਾ; ਸਿੱਕੇ ਅਤੇ ਨੋਟ"
+      },
+      {
+        "word": "jar",
+        "meaningEn": "a container to hold coins",
+        "meaningPa": "ਜਾਰ; ਸਿੱਕੇ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ"
+      },
+      {
+        "word": "chores",
+        "meaningEn": "small jobs at home",
+        "meaningPa": "ਘਰੇਲੂ ਕੰਮ; ਛੋਟੇ ਕੰਮ"
+      },
+      {
+        "word": "chart",
+        "meaningEn": "a paper that shows numbers and progress",
+        "meaningPa": "ਚਾਰਟ; ਨੰਬਰ ਅਤੇ ਤਰੱਕੀ ਦਿਖਾਉਣ ਵਾਲਾ ਕਾਗਜ਼"
+      },
+      {
+        "word": "amount",
+        "meaningEn": "how much you have",
+        "meaningPa": "ਰਕਮ; ਕਿੰਨਾ ਪੈਸਾ ਹੈ"
+      },
+      {
+        "word": "self-control",
+        "meaningEn": "stopping yourself from doing something",
+        "meaningPa": "ਆਪਣੇ ਆਪ ਨੂੰ ਰੋਕਣਾ; ਕਾਬੂ"
+      },
+      {
+        "word": "total",
+        "meaningEn": "all added together",
+        "meaningPa": "ਕੁੱਲ; ਸਾਰਾ ਜੋੜ ਕੇ"
+      },
+      {
+        "word": "helmet",
+        "meaningEn": "a hard hat to keep your head safe",
+        "meaningPa": "ਹੈਲਮੈਟ; ਸਿਰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਲਈ ਟੋਪੀ"
+      },
+      {
+        "word": "next month",
+        "meaningEn": "the month after this one",
+        "meaningPa": "ਅਗਲਾ ਮਹੀਨਾ; ਇਸ ਤੋਂ ਬਾਅਦ ਵਾਲਾ ਮਹੀਨਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "save",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S09",
@@ -2814,47 +7436,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What event does the class join? / ਕਲਾਸ ਕਿਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ?",
-        "choices": ["food drive / ਫੂਡ ਡਰਾਈਵ", "movie night / ਫਿਲਮ ਰਾਤ", "birthday party / ਜਨਮਦਿਨ"],
+        "choices": [
+          "food drive / ਫੂਡ ਡਰਾਈਵ",
+          "movie night / ਫਿਲਮ ਰਾਤ",
+          "birthday party / ਜਨਮਦਿਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the class joins a food drive. / ਪੈਨਲ 1 ਵਿੱਚ ਫੂਡ ਡਰਾਈਵ ਹੈ।"
       },
       {
         "question": "What do they carry? / ਉਹ ਕੀ ਲੈ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["boxes of cans / ਕੈਨਾਂ ਵਾਲੇ ਡੱਬੇ", "chairs / ਕੁਰਸੀਆਂ", "bicycles / ਸਾਈਕਲਾਂ"],
+        "choices": [
+          "boxes of cans / ਕੈਨਾਂ ਵਾਲੇ ਡੱਬੇ",
+          "chairs / ਕੁਰਸੀਆਂ",
+          "bicycles / ਸਾਈਕਲਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they carry boxes of cans. / ਪੈਨਲ 2 ਵਿੱਚ ਕੈਨਾਂ ਵਾਲੇ ਡੱਬੇ ਹਨ।"
       },
       {
         "question": "How do they sort the food? / ਉਹ ਖਾਣਾ ਕਿਵੇਂ ਛਾਂਟਦੇ ਹਨ?",
-        "choices": ["by labels / ਲੇਬਲ ਮੁਤਾਬਕ", "by colors only / ਸਿਰਫ਼ ਰੰਗਾਂ ਨਾਲ", "by jokes / ਮਜ਼ਾਕਾਂ ਨਾਲ"],
+        "choices": [
+          "by labels / ਲੇਬਲ ਮੁਤਾਬਕ",
+          "by colors only / ਸਿਰਫ਼ ਰੰਗਾਂ ਨਾਲ",
+          "by jokes / ਮਜ਼ਾਕਾਂ ਨਾਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they sort food by labels. / ਪੈਨਲ 2 ਵਿੱਚ ਲੇਬਲ ਮੁਤਾਬਕ ਛਾਂਟਣਾ ਹੈ।"
       },
       {
         "question": "Who guides the child? / ਬੱਚੇ ਨੂੰ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
-        "choices": ["volunteer / ਵਲੰਟੀਅਰ", "pilot / ਪਾਇਲਟ", "chef / ਰਸੋਈਆ"],
+        "choices": [
+          "volunteer / ਵਲੰਟੀਅਰ",
+          "pilot / ਪਾਇਲਟ",
+          "chef / ਰਸੋਈਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 and 4 show a volunteer guiding the child. / ਪੈਨਲ 3 ਅਤੇ 4 ਵਿੱਚ ਵਲੰਟੀਅਰ ਦੱਸਦਾ ਹੈ।"
       },
       {
         "question": "What does the child learn at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਸਿੱਖਦਾ/ਸਿੱਖਦੀ ਹੈ?",
-        "choices": ["small help matters / ਛੋਟੀ ਮਦਦ ਵੀ ਮਹੱਤਵਪੂਰਨ ਹੈ", "to be rude / ਬਦਤਮੀਜ਼ ਬਣਨਾ", "to break rules / ਨਿਯਮ ਤੋੜਨਾ"],
+        "choices": [
+          "small help matters / ਛੋਟੀ ਮਦਦ ਵੀ ਮਹੱਤਵਪੂਰਨ ਹੈ",
+          "to be rude / ਬਦਤਮੀਜ਼ ਬਣਨਾ",
+          "to break rules / ਨਿਯਮ ਤੋੜਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says small help can make a big difference. / ਪੈਨਲ 5 ਵਿੱਚ ਛੋਟੀ ਮਦਦ ਦਾ ਫਰਕ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "food drive", "meaningEn": "a time when people collect food to help others", "meaningPa": "ਫੂਡ ਡਰਾਈਵ; ਦੂਜਿਆਂ ਲਈ ਖਾਣਾ ਇਕੱਠਾ ਕਰਨਾ" },
-      { "word": "donation", "meaningEn": "a gift you give to help", "meaningPa": "ਦਾਨ; ਮਦਦ ਲਈ ਦਿੱਤਾ ਤੋਹਫ਼ਾ" },
-      { "word": "volunteer", "meaningEn": "a helper who works without pay", "meaningPa": "ਵਲੰਟੀਅਰ; ਬਿਨਾਂ ਪੈਸੇ ਮਦਦ ਕਰਨ ਵਾਲਾ" },
-      { "word": "sort", "meaningEn": "put things into groups", "meaningPa": "ਛਾਂਟਣਾ; ਗਰੁੱਪਾਂ ਵਿੱਚ ਰੱਖਣਾ" },
-      { "word": "label", "meaningEn": "a name tag on food", "meaningPa": "ਲੇਬਲ; ਚੀਜ਼ ਦਾ ਨਾਮ ਵਾਲਾ ਟੈਗ" },
-      { "word": "bin", "meaningEn": "a box or container for items", "meaningPa": "ਡੱਬਾ; ਚੀਜ਼ਾਂ ਰੱਖਣ ਵਾਲਾ ਬਕਸਾ" },
-      { "word": "direction", "meaningEn": "information about where to go", "meaningPa": "ਹਦਾਇਤ; ਕਿੱਥੇ ਜਾਣਾ ਹੈ ਦੱਸਣਾ" },
-      { "word": "carefully", "meaningEn": "slowly and safely", "meaningPa": "ਧਿਆਨ ਨਾਲ; ਹੌਲੀ ਅਤੇ ਸੁਰੱਖਿਅਤ" },
-      { "word": "difference", "meaningEn": "a change that matters", "meaningPa": "ਫਰਕ; ਮਹੱਤਵਪੂਰਨ ਬਦਲਾਵ" },
-      { "word": "together", "meaningEn": "as a group", "meaningPa": "ਇਕੱਠੇ; ਸਮੂਹ ਵਜੋਂ" }
-    ]
+      {
+        "word": "food drive",
+        "meaningEn": "a time when people collect food to help others",
+        "meaningPa": "ਫੂਡ ਡਰਾਈਵ; ਦੂਜਿਆਂ ਲਈ ਖਾਣਾ ਇਕੱਠਾ ਕਰਨਾ"
+      },
+      {
+        "word": "donation",
+        "meaningEn": "a gift you give to help",
+        "meaningPa": "ਦਾਨ; ਮਦਦ ਲਈ ਦਿੱਤਾ ਤੋਹਫ਼ਾ"
+      },
+      {
+        "word": "volunteer",
+        "meaningEn": "a helper who works without pay",
+        "meaningPa": "ਵਲੰਟੀਅਰ; ਬਿਨਾਂ ਪੈਸੇ ਮਦਦ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "sort",
+        "meaningEn": "put things into groups",
+        "meaningPa": "ਛਾਂਟਣਾ; ਗਰੁੱਪਾਂ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "label",
+        "meaningEn": "a name tag on food",
+        "meaningPa": "ਲੇਬਲ; ਚੀਜ਼ ਦਾ ਨਾਮ ਵਾਲਾ ਟੈਗ"
+      },
+      {
+        "word": "bin",
+        "meaningEn": "a box or container for items",
+        "meaningPa": "ਡੱਬਾ; ਚੀਜ਼ਾਂ ਰੱਖਣ ਵਾਲਾ ਬਕਸਾ"
+      },
+      {
+        "word": "direction",
+        "meaningEn": "information about where to go",
+        "meaningPa": "ਹਦਾਇਤ; ਕਿੱਥੇ ਜਾਣਾ ਹੈ ਦੱਸਣਾ"
+      },
+      {
+        "word": "carefully",
+        "meaningEn": "slowly and safely",
+        "meaningPa": "ਧਿਆਨ ਨਾਲ; ਹੌਲੀ ਅਤੇ ਸੁਰੱਖਿਅਤ"
+      },
+      {
+        "word": "difference",
+        "meaningEn": "a change that matters",
+        "meaningPa": "ਫਰਕ; ਮਹੱਤਵਪੂਰਨ ਬਦਲਾਵ"
+      },
+      {
+        "word": "together",
+        "meaningEn": "as a group",
+        "meaningPa": "ਇਕੱਠੇ; ਸਮੂਹ ਵਜੋਂ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B5_S10",
@@ -2867,47 +7569,127 @@ var BOOK5_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Who helps the child read? / ਬੱਚੇ ਨੂੰ ਪੜ੍ਹਨ ਵਿੱਚ ਕੌਣ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["teacher / ਟੀਚਰ", "driver / ਡਰਾਈਵਰ", "shopkeeper / ਦੁਕਾਨਦਾਰ"],
+        "choices": [
+          "teacher / ਟੀਚਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "shopkeeper / ਦੁਕਾਨਦਾਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the teacher helps the child read. / ਪੈਨਲ 1 ਵਿੱਚ ਟੀਚਰ ਮਦਦ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "How does the child feel at first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["nervous / ਘਬਰਾਇਆ", "angry / ਗੁੱਸੇ ਵਿੱਚ", "sleepy / ਨੀਂਦ ਵਾਲਾ"],
+        "choices": [
+          "nervous / ਘਬਰਾਇਆ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child feels nervous at first. / ਪੈਨਲ 1 ਵਿੱਚ ਪਹਿਲਾਂ ਘਬਰਾਹਟ ਹੈ।"
       },
       {
         "question": "What does the child do to improve? / ਬੱਚਾ ਸੁਧਾਰ ਲਈ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["practices each word / ਹਰ ਸ਼ਬਦ ਦਾ ਅਭਿਆਸ", "hides the book / ਕਿਤਾਬ ਲੁਕਾਉਣਾ", "stops reading / ਪੜ੍ਹਨਾ ਛੱਡਣਾ"],
+        "choices": [
+          "practices each word / ਹਰ ਸ਼ਬਦ ਦਾ ਅਭਿਆਸ",
+          "hides the book / ਕਿਤਾਬ ਲੁਕਾਉਣਾ",
+          "stops reading / ਪੜ੍ਹਨਾ ਛੱਡਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child practices each word to improve. / ਪੈਨਲ 2 ਵਿੱਚ ਅਭਿਆਸ ਨਾਲ ਸੁਧਾਰ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What promise does the child make? / ਬੱਚਾ ਕਿਹੜਾ ਵਾਅਦਾ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["practice reading daily / ਹਰ ਰੋਜ਼ ਪੜ੍ਹਨ ਦਾ ਅਭਿਆਸ", "never read / ਕਦੇ ਨਾ ਪੜ੍ਹਨਾ", "skip school / ਸਕੂਲ ਛੱਡਣਾ"],
+        "choices": [
+          "practice reading daily / ਹਰ ਰੋਜ਼ ਪੜ੍ਹਨ ਦਾ ਅਭਿਆਸ",
+          "never read / ਕਦੇ ਨਾ ਪੜ੍ਹਨਾ",
+          "skip school / ਸਕੂਲ ਛੱਡਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the child will practice reading every day. / ਪੈਨਲ 4 ਵਿੱਚ ਹਰ ਰੋਜ਼ ਅਭਿਆਸ ਹੈ।"
       },
       {
         "question": "Who does the child read to at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਨ੍ਹਾਂ ਨੂੰ ਪੜ੍ਹ ਕੇ ਸੁਣਾਂਦਾ/ਸੁਣਾਂਦੀ ਹੈ?",
-        "choices": ["little brother / ਛੋਟਾ ਭਰਾ", "bus driver / ਬੱਸ ਡਰਾਈਵਰ", "doctor / ਡਾਕਟਰ"],
+        "choices": [
+          "little brother / ਛੋਟਾ ਭਰਾ",
+          "bus driver / ਬੱਸ ਡਰਾਈਵਰ",
+          "doctor / ਡਾਕਟਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child reads to a little brother. / ਪੈਨਲ 5 ਵਿੱਚ ਛੋਟੇ ਭਰਾ ਨੂੰ ਪੜ੍ਹ ਕੇ ਸੁਣਾਂਦਾ/ਸੁਣਾਂਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "role model", "meaningEn": "someone you want to be like", "meaningPa": "ਰੋਲ ਮਾਡਲ; ਜਿਸ ਵਰਗਾ ਤੁਸੀਂ ਬਣਨਾ ਚਾਹੁੰਦੇ ਹੋ" },
-      { "word": "promise", "meaningEn": "a strong plan you say you will do", "meaningPa": "ਵਾਅਦਾ; ਯਕੀਨ ਨਾਲ ਕਹਿਣਾ ਕਿ ਕਰਾਂਗਾ/ਕਰਾਂਗੀ" },
-      { "word": "patient", "meaningEn": "able to wait calmly and kindly", "meaningPa": "ਧੀਰਜ ਵਾਲਾ; ਸ਼ਾਂਤ ਅਤੇ ਦਿਆਲੂ ਰਹਿਣਾ" },
-      { "word": "practice", "meaningEn": "do it again to improve", "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਦੁਹਰਾਉਣਾ" },
-      { "word": "effort", "meaningEn": "trying hard", "meaningPa": "ਮਿਹਨਤ; ਪੂਰੀ ਕੋਸ਼ਿਸ਼" },
-      { "word": "nervous", "meaningEn": "worried and shaky inside", "meaningPa": "ਘਬਰਾਇਆ; ਮਨ ਵਿੱਚ ਡਰ ਅਤੇ ਚਿੰਤਾ" },
-      { "word": "improve", "meaningEn": "get better over time", "meaningPa": "ਸੁਧਾਰਨਾ; ਸਮੇਂ ਨਾਲ ਵਧੀਆ ਹੋਣਾ" },
-      { "word": "inspire", "meaningEn": "make you want to do your best", "meaningPa": "ਪ੍ਰੇਰਨਾ ਦੇਣਾ; ਆਪਣਾ ਵਧੀਆ ਕਰਨ ਲਈ ਉਤਸ਼ਾਹ" },
-      { "word": "notebook", "meaningEn": "a book where you write notes", "meaningPa": "ਕਾਪੀ; ਜਿਸ ਵਿੱਚ ਲਿਖਦੇ ਹਾਂ" },
-      { "word": "last week", "meaningEn": "the week before this one", "meaningPa": "ਪਿਛਲਾ ਹਫ਼ਤਾ; ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲਾ ਹਫ਼ਤਾ" }
-    ]
+      {
+        "word": "role model",
+        "meaningEn": "someone you want to be like",
+        "meaningPa": "ਰੋਲ ਮਾਡਲ; ਜਿਸ ਵਰਗਾ ਤੁਸੀਂ ਬਣਨਾ ਚਾਹੁੰਦੇ ਹੋ"
+      },
+      {
+        "word": "promise",
+        "meaningEn": "a strong plan you say you will do",
+        "meaningPa": "ਵਾਅਦਾ; ਯਕੀਨ ਨਾਲ ਕਹਿਣਾ ਕਿ ਕਰਾਂਗਾ/ਕਰਾਂਗੀ"
+      },
+      {
+        "word": "patient",
+        "meaningEn": "able to wait calmly and kindly",
+        "meaningPa": "ਧੀਰਜ ਵਾਲਾ; ਸ਼ਾਂਤ ਅਤੇ ਦਿਆਲੂ ਰਹਿਣਾ"
+      },
+      {
+        "word": "practice",
+        "meaningEn": "do it again to improve",
+        "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਦੁਹਰਾਉਣਾ"
+      },
+      {
+        "word": "effort",
+        "meaningEn": "trying hard",
+        "meaningPa": "ਮਿਹਨਤ; ਪੂਰੀ ਕੋਸ਼ਿਸ਼"
+      },
+      {
+        "word": "nervous",
+        "meaningEn": "worried and shaky inside",
+        "meaningPa": "ਘਬਰਾਇਆ; ਮਨ ਵਿੱਚ ਡਰ ਅਤੇ ਚਿੰਤਾ"
+      },
+      {
+        "word": "improve",
+        "meaningEn": "get better over time",
+        "meaningPa": "ਸੁਧਾਰਨਾ; ਸਮੇਂ ਨਾਲ ਵਧੀਆ ਹੋਣਾ"
+      },
+      {
+        "word": "inspire",
+        "meaningEn": "make you want to do your best",
+        "meaningPa": "ਪ੍ਰੇਰਨਾ ਦੇਣਾ; ਆਪਣਾ ਵਧੀਆ ਕਰਨ ਲਈ ਉਤਸ਼ਾਹ"
+      },
+      {
+        "word": "notebook",
+        "meaningEn": "a book where you write notes",
+        "meaningPa": "ਕਾਪੀ; ਜਿਸ ਵਿੱਚ ਲਿਖਦੇ ਹਾਂ"
+      },
+      {
+        "word": "last week",
+        "meaningEn": "the week before this one",
+        "meaningPa": "ਪਿਛਲਾ ਹਫ਼ਤਾ; ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲਾ ਹਫ਼ਤਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "read",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -2923,47 +7705,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they cross? / ਉਹ ਕਿੱਥੇ ਪਾਰ ਕਰਦੇ ਹਨ?",
-        "choices": ["crosswalk / ਪੈਦਲ ਪਾਰ", "kitchen / ਰਸੋਈ", "library / ਲਾਇਬ੍ਰੇਰੀ"],
+        "choices": [
+          "crosswalk / ਪੈਦਲ ਪਾਰ",
+          "kitchen / ਰਸੋਈ",
+          "library / ਲਾਇਬ੍ਰੇਰੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They cross at the crosswalk in the story. / ਕਹਾਣੀ ਵਿੱਚ ਉਹ ਪੈਦਲ ਪਾਰ ਲਾਈਨਾਂ ਤੋਂ ਪਾਰ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "What should the child do first? / ਬੱਚੇ ਨੂੰ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["stop and wait / ਰੁਕੋ ਤੇ ਉਡੀਕ ਕਰੋ", "run fast / ਤੇਜ਼ ਦੌੜੋ", "close eyes / ਅੱਖਾਂ ਬੰਦ ਕਰੋ"],
+        "choices": [
+          "stop and wait / ਰੁਕੋ ਤੇ ਉਡੀਕ ਕਰੋ",
+          "run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "close eyes / ਅੱਖਾਂ ਬੰਦ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to stop and wait at the curb. / ਪੈਨਲ 2 ਵਿੱਚ ਕਰਬ ਤੇ ਰੁਕਣ ਅਤੇ ਉਡੀਕ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child do next? / ਬੱਚਾ ਅਗਲਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["look left and right / ਖੱਬੇ ਤੇ ਸੱਜੇ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ", "eat lunch / ਲੰਚ ਖਾਂਦਾ/ਖਾਂਦੀ ਹੈ", "take a nap / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"],
+        "choices": [
+          "look left and right / ਖੱਬੇ ਤੇ ਸੱਜੇ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ",
+          "eat lunch / ਲੰਚ ਖਾਂਦਾ/ਖਾਂਦੀ ਹੈ",
+          "take a nap / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child looks left and right. / ਪੈਨਲ 2 ਵਿੱਚ ਖੱਬੇ ਅਤੇ ਸੱਜੇ ਵੇਖਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why does the child look left and right? / ਬੱਚਾ ਖੱਬੇ ਤੇ ਸੱਜੇ ਕਿਉਂ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ?",
-        "choices": ["because of traffic / ਆਵਾਜਾਈ ਕਰਕੇ", "because of music / ਗਾਣੇ ਕਰਕੇ", "because of snow / ਬਰਫ਼ ਕਰਕੇ"],
+        "choices": [
+          "because of traffic / ਆਵਾਜਾਈ ਕਰਕੇ",
+          "because of music / ਗਾਣੇ ਕਰਕੇ",
+          "because of snow / ਬਰਫ਼ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child looks because traffic can move fast. / ਬੱਚਾ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ ਕਿਉਂਕਿ ਆਵਾਜਾਈ ਤੇਜ਼ ਹੋ ਸਕਦੀ ਹੈ।"
       },
       {
         "question": "What keeps the child safe? / ਬੱਚੇ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕੀ ਰੱਖਦਾ ਹੈ?",
-        "choices": ["wait and follow rules / ਉਡੀਕ ਤੇ ਨਿਯਮ", "shout loudly / ਉੱਚਾ ਚੀਕਣਾ", "push others / ਧੱਕਾ ਦੇਣਾ"],
+        "choices": [
+          "wait and follow rules / ਉਡੀਕ ਤੇ ਨਿਯਮ",
+          "shout loudly / ਉੱਚਾ ਚੀਕਣਾ",
+          "push others / ਧੱਕਾ ਦੇਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They stay safe by waiting and crossing carefully. / ਉਹ ਉਡੀਕ ਕਰਕੇ ਅਤੇ ਧਿਆਨ ਨਾਲ ਪਾਰ ਕਰਕੇ ਸੁਰੱਖਿਅਤ ਰਹਿੰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "crosswalk", "meaningEn": "painted lines where people cross a street", "meaningPa": "ਪੈਦਲ ਪਾਰ ਲਾਈਨਾਂ; ਸੜਕ ਪਾਰ ਕਰਨ ਵਾਲੀਆਂ ਲਾਈਨਾਂ" },
-      { "word": "traffic", "meaningEn": "cars and buses moving on a road", "meaningPa": "ਆਵਾਜਾਈ; ਸੜਕ ਉੱਤੇ ਗੱਡੀਆਂ ਦੀ ਚਲਚਲਾਹਟ" },
-      { "word": "look", "meaningEn": "use your eyes to see", "meaningPa": "ਵੇਖਣਾ; ਅੱਖਾਂ ਨਾਲ ਦੇਖਣਾ" },
-      { "word": "left", "meaningEn": "the side opposite right", "meaningPa": "ਖੱਬਾ; ਸੱਜੇ ਦੇ ਉਲਟ ਪਾਸਾ" },
-      { "word": "right", "meaningEn": "the side opposite left", "meaningPa": "ਸੱਜਾ; ਖੱਬੇ ਦੇ ਉਲਟ ਪਾਸਾ" },
-      { "word": "stop", "meaningEn": "do not move", "meaningPa": "ਰੁਕਣਾ; ਹਿਲਣਾ ਨਹੀਂ" },
-      { "word": "wait", "meaningEn": "stay until it is time", "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਸਮਾਂ ਆਉਣ ਤੱਕ ਰੁਕਣਾ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "should", "meaningEn": "a word for a good choice", "meaningPa": "ਚਾਹੀਦਾ ਹੈ; ਚੰਗੀ ਚੋਣ ਲਈ ਸ਼ਬਦ" }
-    ]
+      {
+        "word": "crosswalk",
+        "meaningEn": "painted lines where people cross a street",
+        "meaningPa": "ਪੈਦਲ ਪਾਰ ਲਾਈਨਾਂ; ਸੜਕ ਪਾਰ ਕਰਨ ਵਾਲੀਆਂ ਲਾਈਨਾਂ"
+      },
+      {
+        "word": "traffic",
+        "meaningEn": "cars and buses moving on a road",
+        "meaningPa": "ਆਵਾਜਾਈ; ਸੜਕ ਉੱਤੇ ਗੱਡੀਆਂ ਦੀ ਚਲਚਲਾਹਟ"
+      },
+      {
+        "word": "look",
+        "meaningEn": "use your eyes to see",
+        "meaningPa": "ਵੇਖਣਾ; ਅੱਖਾਂ ਨਾਲ ਦੇਖਣਾ"
+      },
+      {
+        "word": "left",
+        "meaningEn": "the side opposite right",
+        "meaningPa": "ਖੱਬਾ; ਸੱਜੇ ਦੇ ਉਲਟ ਪਾਸਾ"
+      },
+      {
+        "word": "right",
+        "meaningEn": "the side opposite left",
+        "meaningPa": "ਸੱਜਾ; ਖੱਬੇ ਦੇ ਉਲਟ ਪਾਸਾ"
+      },
+      {
+        "word": "stop",
+        "meaningEn": "do not move",
+        "meaningPa": "ਰੁਕਣਾ; ਹਿਲਣਾ ਨਹੀਂ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until it is time",
+        "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਸਮਾਂ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "should",
+        "meaningEn": "a word for a good choice",
+        "meaningPa": "ਚਾਹੀਦਾ ਹੈ; ਚੰਗੀ ਚੋਣ ਲਈ ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S02",
@@ -2976,47 +7838,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "When does the child pack the backpack? / ਬੱਚਾ ਬੈਕਪੈਕ ਕਦੋਂ ਪੈਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["tonight / ਅੱਜ ਰਾਤ", "yesterday / ਕੱਲ੍ਹ", "next week / ਅਗਲਾ ਹਫ਼ਤਾ"],
+        "choices": [
+          "tonight / ਅੱਜ ਰਾਤ",
+          "yesterday / ਕੱਲ੍ਹ",
+          "next week / ਅਗਲਾ ਹਫ਼ਤਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child packs tonight. / ਪੈਨਲ 1 ਵਿੱਚ ਅੱਜ ਰਾਤ ਪੈਕ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What helps the child remember items? / ਚੀਜ਼ਾਂ ਯਾਦ ਰੱਖਣ ਵਿੱਚ ਕੀ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["checklist / ਚੈਕਲਿਸਟ", "pillow / ਤਕੀਆ", "ball / ਗੇਂਦ"],
+        "choices": [
+          "checklist / ਚੈਕਲਿਸਟ",
+          "pillow / ਤਕੀਆ",
+          "ball / ਗੇਂਦ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child uses a checklist to remember items. / ਬੱਚਾ ਚੀਜ਼ਾਂ ਯਾਦ ਰੱਖਣ ਲਈ ਚੈਕਲਿਸਟ ਵਰਤਦਾ/ਵਰਤਦੀ ਹੈ।"
       },
       {
         "question": "What goes in first? / ਪਹਿਲਾਂ ਕੀ ਜਾਂਦਾ ਹੈ?",
-        "choices": ["folder / ਫੋਲਡਰ", "lunch / ਲੰਚ", "water / ਪਾਣੀ"],
+        "choices": [
+          "folder / ਫੋਲਡਰ",
+          "lunch / ਲੰਚ",
+          "water / ਪਾਣੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the folder goes in first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਫੋਲਡਰ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।"
       },
       {
         "question": "What does the child pack next after the folder? / ਫੋਲਡਰ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਅਗਲਾ ਕੀ ਪੈਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["pencil / ਪੈਂਸਿਲ", "bed / ਬਿਸਤਰਾ", "television / ਟੀਵੀ"],
+        "choices": [
+          "pencil / ਪੈਂਸਿਲ",
+          "bed / ਬਿਸਤਰਾ",
+          "television / ਟੀਵੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child adds a pencil next. / ਪੈਨਲ 2 ਵਿੱਚ ਅਗਲਾ ਪੈਂਸਿਲ ਪਾਉਂਦਾ/ਪਾਂਦੀ ਹੈ।"
       },
       {
         "question": "Why does the child feel ready tomorrow? / ਬੱਚਾ ਭਲਕੇ ਤਿਆਰ ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["because the plan worked / ਯੋਜਨਾ ਚੱਲੀ", "because of rain / ਮੀਂਹ ਕਰਕੇ", "because of noise / ਸ਼ੋਰ ਕਰਕੇ"],
+        "choices": [
+          "because the plan worked / ਯੋਜਨਾ ਚੱਲੀ",
+          "because of rain / ਮੀਂਹ ਕਰਕੇ",
+          "because of noise / ਸ਼ੋਰ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels ready because the plan worked. / ਪੈਨਲ 5 ਵਿੱਚ ਯੋਜਨਾ ਚੱਲਣ ਕਰਕੇ ਤਿਆਰ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "backpack", "meaningEn": "a bag you carry on your back", "meaningPa": "ਬੈਕਪੈਕ; ਪਿੱਠ ਉੱਤੇ ਚੁੱਕਣ ਵਾਲਾ ਬੈਗ" },
-      { "word": "checklist", "meaningEn": "a list to help you remember things", "meaningPa": "ਚੈਕਲਿਸਟ; ਯਾਦ ਰੱਖਣ ਲਈ ਸੂਚੀ" },
-      { "word": "homework", "meaningEn": "school work you do at home", "meaningPa": "ਹੋਮਵਰਕ; ਘਰ ਲਈ ਸਕੂਲ ਦਾ ਕੰਮ" },
-      { "word": "folder", "meaningEn": "a cover to hold papers", "meaningPa": "ਫੋਲਡਰ; ਕਾਗਜ਼ ਰੱਖਣ ਵਾਲਾ ਕਵਰ" },
-      { "word": "pencil", "meaningEn": "a tool for writing", "meaningPa": "ਪੈਂਸਿਲ; ਲਿਖਣ ਵਾਲੀ ਚੀਜ਼" },
-      { "word": "lunch", "meaningEn": "food you eat in the middle of the day", "meaningPa": "ਲੰਚ; ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ" },
-      { "word": "water", "meaningEn": "a drink your body needs", "meaningPa": "ਪਾਣੀ; ਸਰੀਰ ਲਈ ਜ਼ਰੂਰੀ ਪੀਣ ਵਾਲੀ ਚੀਜ਼" },
-      { "word": "tomorrow", "meaningEn": "the day after today", "meaningPa": "ਭਲਕੇ; ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ" },
-      { "word": "first", "meaningEn": "before everything else", "meaningPa": "ਪਹਿਲਾਂ; ਸਭ ਤੋਂ ਪਹਿਲਾਂ" },
-      { "word": "ready", "meaningEn": "prepared to start", "meaningPa": "ਤਿਆਰ; ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ" }
-    ]
+      {
+        "word": "backpack",
+        "meaningEn": "a bag you carry on your back",
+        "meaningPa": "ਬੈਕਪੈਕ; ਪਿੱਠ ਉੱਤੇ ਚੁੱਕਣ ਵਾਲਾ ਬੈਗ"
+      },
+      {
+        "word": "checklist",
+        "meaningEn": "a list to help you remember things",
+        "meaningPa": "ਚੈਕਲਿਸਟ; ਯਾਦ ਰੱਖਣ ਲਈ ਸੂਚੀ"
+      },
+      {
+        "word": "homework",
+        "meaningEn": "school work you do at home",
+        "meaningPa": "ਹੋਮਵਰਕ; ਘਰ ਲਈ ਸਕੂਲ ਦਾ ਕੰਮ"
+      },
+      {
+        "word": "folder",
+        "meaningEn": "a cover to hold papers",
+        "meaningPa": "ਫੋਲਡਰ; ਕਾਗਜ਼ ਰੱਖਣ ਵਾਲਾ ਕਵਰ"
+      },
+      {
+        "word": "pencil",
+        "meaningEn": "a tool for writing",
+        "meaningPa": "ਪੈਂਸਿਲ; ਲਿਖਣ ਵਾਲੀ ਚੀਜ਼"
+      },
+      {
+        "word": "lunch",
+        "meaningEn": "food you eat in the middle of the day",
+        "meaningPa": "ਲੰਚ; ਦੁਪਹਿਰ ਦਾ ਖਾਣਾ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "a drink your body needs",
+        "meaningPa": "ਪਾਣੀ; ਸਰੀਰ ਲਈ ਜ਼ਰੂਰੀ ਪੀਣ ਵਾਲੀ ਚੀਜ਼"
+      },
+      {
+        "word": "tomorrow",
+        "meaningEn": "the day after today",
+        "meaningPa": "ਭਲਕੇ; ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ"
+      },
+      {
+        "word": "first",
+        "meaningEn": "before everything else",
+        "meaningPa": "ਪਹਿਲਾਂ; ਸਭ ਤੋਂ ਪਹਿਲਾਂ"
+      },
+      {
+        "word": "ready",
+        "meaningEn": "prepared to start",
+        "meaningPa": "ਤਿਆਰ; ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "pack",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "be",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S03",
@@ -3029,47 +7971,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Who rides with the child? / ਬੱਚੇ ਨਾਲ ਕੌਣ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["adult / ਵੱਡਾ", "baby / ਬੱਚਾ", "dog / ਕੁੱਤਾ"],
+        "choices": [
+          "adult / ਵੱਡਾ",
+          "baby / ਬੱਚਾ",
+          "dog / ਕੁੱਤਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child rides with a trusted adult. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਭਰੋਸੇਮੰਦ ਵੱਡੇ ਨਾਲ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ।"
       },
       {
         "question": "Where do they wait for the bus? / ਉਹ ਬੱਸ ਲਈ ਕਿੱਥੇ ਉਡੀਕ ਕਰਦੇ ਹਨ?",
-        "choices": ["stop / ਸਟਾਪ", "roof / ਛੱਤ", "river / ਦਰਿਆ"],
+        "choices": [
+          "stop / ਸਟਾਪ",
+          "roof / ਛੱਤ",
+          "river / ਦਰਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they wait at the bus stop. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਸ ਸਟਾਪ ਤੇ ਉਡੀਕ ਹੈ।"
       },
       {
         "question": "What must the child do? / ਬੱਚੇ ਨੂੰ ਕੀ ਲਾਜ਼ਮੀ ਕਰਨਾ ਹੈ?",
-        "choices": ["stay close / ਨੇੜੇ ਰਹਿਣਾ", "run away / ਭੱਜ ਜਾਣਾ", "shout loud / ਉੱਚਾ ਚੀਕਣਾ"],
+        "choices": [
+          "stay close / ਨੇੜੇ ਰਹਿਣਾ",
+          "run away / ਭੱਜ ਜਾਣਾ",
+          "shout loud / ਉੱਚਾ ਚੀਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child must stay close to the adult. / ਪੈਨਲ 2 ਵਿੱਚ ਵੱਡੇ ਦੇ ਨੇੜੇ ਰਹਿਣਾ ਲਾਜ਼ਮੀ ਹੈ।"
       },
       {
         "question": "What happens next after the bus arrives? / ਬੱਸ ਆਉਣ ਤੋਂ ਬਾਅਦ ਅਗਲਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["show ticket / ਟਿਕਟ ਦਿਖਾਉਣਾ", "eat dinner / ਰਾਤ ਦਾ ਖਾਣਾ", "go to sleep / ਸੌਣਾ"],
+        "choices": [
+          "show ticket / ਟਿਕਟ ਦਿਖਾਉਣਾ",
+          "eat dinner / ਰਾਤ ਦਾ ਖਾਣਾ",
+          "go to sleep / ਸੌਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they show the ticket to the driver. / ਪੈਨਲ 3 ਵਿੱਚ ਡਰਾਈਵਰ ਨੂੰ ਟਿਕਟ ਦਿਖਾਉਂਦੇ ਹਨ।"
       },
       {
         "question": "Why does the child hold the pole? / ਬੱਚਾ ਪੋਲ ਕਿਉਂ ਫੜਦਾ/ਫੜਦੀ ਹੈ?",
-        "choices": ["because the bus moves / ਬੱਸ ਹਿੱਲਦੀ ਹੈ", "because of candy / ਕੈਂਡੀ ਕਰਕੇ", "because of snow / ਬਰਫ਼ ਕਰਕੇ"],
+        "choices": [
+          "because the bus moves / ਬੱਸ ਹਿੱਲਦੀ ਹੈ",
+          "because of candy / ਕੈਂਡੀ ਕਰਕੇ",
+          "because of snow / ਬਰਫ਼ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the bus moves, so holding helps. / ਪੈਨਲ 4 ਵਿੱਚ ਬੱਸ ਹਿੱਲਦੀ ਹੈ, ਇਸ ਲਈ ਫੜਨਾ ਮਦਦ ਕਰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "bus", "meaningEn": "a big vehicle that carries many people", "meaningPa": "ਬੱਸ; ਬਹੁਤ ਲੋਕਾਂ ਨੂੰ ਲਿਜਾਣ ਵਾਲੀ ਗੱਡੀ" },
-      { "word": "stop", "meaningEn": "a place where the bus comes and goes", "meaningPa": "ਸਟਾਪ; ਬੱਸ ਰੁਕਣ ਵਾਲੀ ਥਾਂ" },
-      { "word": "line", "meaningEn": "people waiting in order", "meaningPa": "ਕਤਾਰ; ਵਾਰੀ ਨਾਲ ਖੜ੍ਹੇ ਲੋਕ" },
-      { "word": "ticket", "meaningEn": "a paper or card for a ride", "meaningPa": "ਟਿਕਟ; ਸਫ਼ਰ ਲਈ ਕਾਗਜ਼/ਕਾਰਡ" },
-      { "word": "seat", "meaningEn": "a place to sit", "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ" },
-      { "word": "quiet", "meaningEn": "not loud", "meaningPa": "ਹੌਲਾ/ਚੁੱਪ; ਉੱਚਾ ਨਹੀਂ" },
-      { "word": "adult", "meaningEn": "a grown-up person", "meaningPa": "ਵੱਡਾ; ਬਾਲਗ ਵਿਅਕਤੀ" },
-      { "word": "hold", "meaningEn": "keep in your hand", "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ" },
-      { "word": "must", "meaningEn": "a word for something you have to do", "meaningPa": "ਲਾਜ਼ਮੀ; ਕਰਨਾ ਹੀ ਪੈਂਦਾ ਹੈ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" }
-    ]
+      {
+        "word": "bus",
+        "meaningEn": "a big vehicle that carries many people",
+        "meaningPa": "ਬੱਸ; ਬਹੁਤ ਲੋਕਾਂ ਨੂੰ ਲਿਜਾਣ ਵਾਲੀ ਗੱਡੀ"
+      },
+      {
+        "word": "stop",
+        "meaningEn": "a place where the bus comes and goes",
+        "meaningPa": "ਸਟਾਪ; ਬੱਸ ਰੁਕਣ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people waiting in order",
+        "meaningPa": "ਕਤਾਰ; ਵਾਰੀ ਨਾਲ ਖੜ੍ਹੇ ਲੋਕ"
+      },
+      {
+        "word": "ticket",
+        "meaningEn": "a paper or card for a ride",
+        "meaningPa": "ਟਿਕਟ; ਸਫ਼ਰ ਲਈ ਕਾਗਜ਼/ਕਾਰਡ"
+      },
+      {
+        "word": "seat",
+        "meaningEn": "a place to sit",
+        "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "quiet",
+        "meaningEn": "not loud",
+        "meaningPa": "ਹੌਲਾ/ਚੁੱਪ; ਉੱਚਾ ਨਹੀਂ"
+      },
+      {
+        "word": "adult",
+        "meaningEn": "a grown-up person",
+        "meaningPa": "ਵੱਡਾ; ਬਾਲਗ ਵਿਅਕਤੀ"
+      },
+      {
+        "word": "hold",
+        "meaningEn": "keep in your hand",
+        "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "must",
+        "meaningEn": "a word for something you have to do",
+        "meaningPa": "ਲਾਜ਼ਮੀ; ਕਰਨਾ ਹੀ ਪੈਂਦਾ ਹੈ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "close",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S04",
@@ -3082,47 +8104,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child wear? / ਬੱਚਾ ਕੀ ਪਾਂਦਾ/ਪਾਂਦੀ ਹੈ?",
-        "choices": ["helmet / ਹੈਲਮੈਟ", "gloves / ਦਸਤਾਨੇ", "scarf / ਮਫ਼ਲਰ"],
+        "choices": [
+          "helmet / ਹੈਲਮੈਟ",
+          "gloves / ਦਸਤਾਨੇ",
+          "scarf / ਮਫ਼ਲਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wears a helmet. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਹੈਲਮੈਟ ਪਾਂਦਾ/ਪਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What should the child be? / ਬੱਚੇ ਨੂੰ ਕੀ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["careful / ਧਿਆਨ ਵਾਲਾ", "rude / ਬਦਤਮੀਜ਼", "noisy / ਸ਼ੋਰ ਵਾਲਾ"],
+        "choices": [
+          "careful / ਧਿਆਨ ਵਾਲਾ",
+          "rude / ਬਦਤਮੀਜ਼",
+          "noisy / ਸ਼ੋਰ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says we should be careful. / ਪੈਨਲ 2 ਵਿੱਚ ਧਿਆਨ ਨਾਲ ਰਹਿਣਾ ਚਾਹੀਦਾ ਹੈ।"
       },
       {
         "question": "What happens next when the wheel slips? / ਪਹੀਆ ਖਿਸਕਣ ਤੇ ਅਗਲਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["almost fall / ਲਗਭਗ ਡਿੱਗਣਾ", "eat lunch / ਲੰਚ ਖਾਣਾ", "read book / ਕਿਤਾਬ ਪੜ੍ਹਨਾ"],
+        "choices": [
+          "almost fall / ਲਗਭਗ ਡਿੱਗਣਾ",
+          "eat lunch / ਲੰਚ ਖਾਣਾ",
+          "read book / ਕਿਤਾਬ ਪੜ੍ਹਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child almost falls. / ਪੈਨਲ 3 ਵਿੱਚ ਲਗਭਗ ਡਿੱਗਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why does the child feel safer? / ਬੱਚਾ ਹੋਰ ਸੁਰੱਖਿਅਤ ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["because of the helmet / ਹੈਲਮੈਟ ਕਰਕੇ", "because of candy / ਕੈਂਡੀ ਕਰਕੇ", "because of rain / ਮੀਂਹ ਕਰਕੇ"],
+        "choices": [
+          "because of the helmet / ਹੈਲਮੈਟ ਕਰਕੇ",
+          "because of candy / ਕੈਂਡੀ ਕਰਕੇ",
+          "because of rain / ਮੀਂਹ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The helmet helps protect the head, so the child feels safer. / ਹੈਲਮੈਟ ਸਿਰ ਦੀ ਰੱਖਿਆ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਬੱਚਾ ਹੋਰ ਸੁਰੱਖਿਅਤ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do after the slip? / ਖਿਸਕਣ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["stop and ride slower / ਰੁਕ ਕੇ ਹੌਲੀ ਚਲਾਉਂਦਾ/ਚਲਾਉਂਦੀ ਹੈ", "run away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ", "throw helmet / ਹੈਲਮੈਟ ਸੁੱਟਦਾ/ਸੁੱਟਦੀ ਹੈ"],
+        "choices": [
+          "stop and ride slower / ਰੁਕ ਕੇ ਹੌਲੀ ਚਲਾਉਂਦਾ/ਚਲਾਉਂਦੀ ਹੈ",
+          "run away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ",
+          "throw helmet / ਹੈਲਮੈਟ ਸੁੱਟਦਾ/ਸੁੱਟਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the child stops, fixes balance, and rides slower. / ਪੈਨਲ 4 ਵਿੱਚ ਰੁਕ ਕੇ ਸੰਤੁਲਨ ਠੀਕ ਕਰਕੇ ਹੌਲੀ ਚਲਾਉਂਦਾ/ਚਲਾਉਂਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "helmet", "meaningEn": "a hard hat that protects your head", "meaningPa": "ਹੈਲਮੈਟ; ਸਿਰ ਬਚਾਉਣ ਵਾਲੀ ਸਖ਼ਤ ਟੋਪੀ" },
-      { "word": "bike", "meaningEn": "a bicycle you ride", "meaningPa": "ਸਾਈਕਲ; ਦੋ ਪਹੀਿਆਂ ਵਾਲੀ ਗੱਡੀ" },
-      { "word": "head", "meaningEn": "the top part of your body", "meaningPa": "ਸਿਰ; ਸਰੀਰ ਦਾ ਉੱਪਰਲਾ ਹਿੱਸਾ" },
-      { "word": "fall", "meaningEn": "drop down to the ground", "meaningPa": "ਡਿੱਗਣਾ; ਜ਼ਮੀਨ ਤੇ ਡਿੱਗ ਪੈਣਾ" },
-      { "word": "safer", "meaningEn": "more safe than before", "meaningPa": "ਹੋਰ ਸੁਰੱਖਿਅਤ; ਪਹਿਲਾਂ ਨਾਲੋਂ ਵਧੇਰੇ ਸੁਰੱਖਿਅਤ" },
-      { "word": "should", "meaningEn": "a word for a good choice", "meaningPa": "ਚਾਹੀਦਾ ਹੈ; ਚੰਗੀ ਚੋਣ ਲਈ ਸ਼ਬਦ" },
-      { "word": "straps", "meaningEn": "bands that hold the helmet on", "meaningPa": "ਸਟ੍ਰੈਪਸ; ਹੈਲਮੈਟ ਫੜਨ ਵਾਲੀਆਂ ਪੱਟੀਆਂ" },
-      { "word": "buckle", "meaningEn": "a clip that closes a strap", "meaningPa": "ਬਕਲ; ਪੱਟੀ ਬੰਦ ਕਰਨ ਵਾਲੀ ਕਲਿੱਪ" },
-      { "word": "careful", "meaningEn": "paying attention to stay safe", "meaningPa": "ਧਿਆਨ ਵਾਲਾ; ਸੁਰੱਖਿਅਤ ਰਹਿਣ ਲਈ ਧਿਆਨ" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" }
-    ]
+      {
+        "word": "helmet",
+        "meaningEn": "a hard hat that protects your head",
+        "meaningPa": "ਹੈਲਮੈਟ; ਸਿਰ ਬਚਾਉਣ ਵਾਲੀ ਸਖ਼ਤ ਟੋਪੀ"
+      },
+      {
+        "word": "bike",
+        "meaningEn": "a bicycle you ride",
+        "meaningPa": "ਸਾਈਕਲ; ਦੋ ਪਹੀਿਆਂ ਵਾਲੀ ਗੱਡੀ"
+      },
+      {
+        "word": "head",
+        "meaningEn": "the top part of your body",
+        "meaningPa": "ਸਿਰ; ਸਰੀਰ ਦਾ ਉੱਪਰਲਾ ਹਿੱਸਾ"
+      },
+      {
+        "word": "fall",
+        "meaningEn": "drop down to the ground",
+        "meaningPa": "ਡਿੱਗਣਾ; ਜ਼ਮੀਨ ਤੇ ਡਿੱਗ ਪੈਣਾ"
+      },
+      {
+        "word": "safer",
+        "meaningEn": "more safe than before",
+        "meaningPa": "ਹੋਰ ਸੁਰੱਖਿਅਤ; ਪਹਿਲਾਂ ਨਾਲੋਂ ਵਧੇਰੇ ਸੁਰੱਖਿਅਤ"
+      },
+      {
+        "word": "should",
+        "meaningEn": "a word for a good choice",
+        "meaningPa": "ਚਾਹੀਦਾ ਹੈ; ਚੰਗੀ ਚੋਣ ਲਈ ਸ਼ਬਦ"
+      },
+      {
+        "word": "straps",
+        "meaningEn": "bands that hold the helmet on",
+        "meaningPa": "ਸਟ੍ਰੈਪਸ; ਹੈਲਮੈਟ ਫੜਨ ਵਾਲੀਆਂ ਪੱਟੀਆਂ"
+      },
+      {
+        "word": "buckle",
+        "meaningEn": "a clip that closes a strap",
+        "meaningPa": "ਬਕਲ; ਪੱਟੀ ਬੰਦ ਕਰਨ ਵਾਲੀ ਕਲਿੱਪ"
+      },
+      {
+        "word": "careful",
+        "meaningEn": "paying attention to stay safe",
+        "meaningPa": "ਧਿਆਨ ਵਾਲਾ; ਸੁਰੱਖਿਅਤ ਰਹਿਣ ਲਈ ਧਿਆਨ"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "be",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "turns",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S05",
@@ -3135,47 +8237,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What do they do today? / ਉਹ ਅੱਜ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["test / ਟੈਸਟ", "dance / ਨੱਚਣਾ", "sleep / ਸੌਣਾ"],
+        "choices": [
+          "test / ਟੈਸਟ",
+          "dance / ਨੱਚਣਾ",
+          "sleep / ਸੌਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they do a science test. / ਪੈਨਲ 1 ਵਿੱਚ ਸਾਇੰਸ ਟੈਸਟ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What is in the bowl? / ਕਟੋਰੀ ਵਿੱਚ ਕੀ ਹੈ?",
-        "choices": ["water / ਪਾਣੀ", "sand / ਰੇਤ", "milk / ਦੁੱਧ"],
+        "choices": [
+          "water / ਪਾਣੀ",
+          "sand / ਰੇਤ",
+          "milk / ਦੁੱਧ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the bowl is filled with water. / ਪੈਨਲ 1 ਵਿੱਚ ਕਟੋਰੀ ਵਿੱਚ ਪਾਣੀ ਹੈ।"
       },
       {
         "question": "What does the rock do? / ਪੱਥਰ ਕੀ ਕਰਦਾ ਹੈ?",
-        "choices": ["sink / ਡੁੱਬਣਾ", "float / ਤਰਨਾ", "fly / ਉੱਡਣਾ"],
+        "choices": [
+          "sink / ਡੁੱਬਣਾ",
+          "float / ਤਰਨਾ",
+          "fly / ਉੱਡਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the rock sinks right away. / ਪੈਨਲ 3 ਵਿੱਚ ਪੱਥਰ ਤੁਰੰਤ ਡੁੱਬਦਾ ਹੈ।"
       },
       {
         "question": "Why does the leaf float? / ਪੱਤਾ ਕਿਉਂ ਤਰਦਾ ਹੈ?",
-        "choices": ["because it is light / ਕਿਉਂਕਿ ਉਹ ਹਲਕਾ ਹੈ", "because it is heavy / ਕਿਉਂਕਿ ਉਹ ਭਾਰੀ ਹੈ", "because it is hot / ਕਿਉਂਕਿ ਉਹ ਗਰਮ ਹੈ"],
+        "choices": [
+          "because it is light / ਕਿਉਂਕਿ ਉਹ ਹਲਕਾ ਹੈ",
+          "because it is heavy / ਕਿਉਂਕਿ ਉਹ ਭਾਰੀ ਹੈ",
+          "because it is hot / ਕਿਉਂਕਿ ਉਹ ਗਰਮ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the leaf floats because it is light. / ਪੈਨਲ 3 ਵਿੱਚ ਪੱਤਾ ਹਲਕਾ ਹੋਣ ਕਰਕੇ ਤਰਦਾ ਹੈ।"
       },
       {
         "question": "What do they write next? / ਉਹ ਅਗਲਾ ਕੀ ਲਿਖਦੇ ਹਨ?",
-        "choices": ["results / ਨਤੀਜੇ", "songs / ਗਾਣੇ", "rules / ਨਿਯਮ"],
+        "choices": [
+          "results / ਨਤੀਜੇ",
+          "songs / ਗਾਣੇ",
+          "rules / ਨਿਯਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they write the results in notebooks. / ਪੈਨਲ 4 ਵਿੱਚ ਨਤੀਜੇ ਕਾਪੀ ਵਿੱਚ ਲਿਖਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "sink", "meaningEn": "go down in water", "meaningPa": "ਡੁੱਬਣਾ; ਪਾਣੀ ਵਿੱਚ ਹੇਠਾਂ ਜਾਣਾ" },
-      { "word": "float", "meaningEn": "stay on top of water", "meaningPa": "ਤਰਨਾ; ਪਾਣੀ ਦੇ ਉੱਪਰ ਰਹਿਣਾ" },
-      { "word": "predict", "meaningEn": "guess what will happen before", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਹੀ ਕਹਿਣਾ" },
-      { "word": "heavy", "meaningEn": "not light; weighs a lot", "meaningPa": "ਭਾਰੀ; ਵਜ਼ਨ ਜ਼ਿਆਦਾ" },
-      { "word": "light", "meaningEn": "not heavy; weighs little", "meaningPa": "ਹਲਕਾ; ਵਜ਼ਨ ਘੱਟ" },
-      { "word": "water", "meaningEn": "a clear liquid to drink and wash", "meaningPa": "ਪਾਣੀ; ਸਾਫ਼ ਤਰਲ" },
-      { "word": "bowl", "meaningEn": "a round dish that can hold water", "meaningPa": "ਕਟੋਰੀ; ਗੋਲ ਬਰਤਨ" },
-      { "word": "test", "meaningEn": "a try to see what happens", "meaningPa": "ਟੈਸਟ; ਜਾਂਚ ਲਈ ਕੋਸ਼ਿਸ਼" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "results", "meaningEn": "what you find out at the end", "meaningPa": "ਨਤੀਜੇ; ਅੰਤ ਵਿੱਚ ਮਿਲੀ ਜਾਣਕਾਰੀ" }
-    ]
+      {
+        "word": "sink",
+        "meaningEn": "go down in water",
+        "meaningPa": "ਡੁੱਬਣਾ; ਪਾਣੀ ਵਿੱਚ ਹੇਠਾਂ ਜਾਣਾ"
+      },
+      {
+        "word": "float",
+        "meaningEn": "stay on top of water",
+        "meaningPa": "ਤਰਨਾ; ਪਾਣੀ ਦੇ ਉੱਪਰ ਰਹਿਣਾ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen before",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਹੀ ਕਹਿਣਾ"
+      },
+      {
+        "word": "heavy",
+        "meaningEn": "not light; weighs a lot",
+        "meaningPa": "ਭਾਰੀ; ਵਜ਼ਨ ਜ਼ਿਆਦਾ"
+      },
+      {
+        "word": "light",
+        "meaningEn": "not heavy; weighs little",
+        "meaningPa": "ਹਲਕਾ; ਵਜ਼ਨ ਘੱਟ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "a clear liquid to drink and wash",
+        "meaningPa": "ਪਾਣੀ; ਸਾਫ਼ ਤਰਲ"
+      },
+      {
+        "word": "bowl",
+        "meaningEn": "a round dish that can hold water",
+        "meaningPa": "ਕਟੋਰੀ; ਗੋਲ ਬਰਤਨ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "a try to see what happens",
+        "meaningPa": "ਟੈਸਟ; ਜਾਂਚ ਲਈ ਕੋਸ਼ਿਸ਼"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "results",
+        "meaningEn": "what you find out at the end",
+        "meaningPa": "ਨਤੀਜੇ; ਅੰਤ ਵਿੱਚ ਮਿਲੀ ਜਾਣਕਾਰੀ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S06",
@@ -3188,47 +8370,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the class do today? / ਕਲਾਸ ਅੱਜ ਕੀ ਕਰਦੀ ਹੈ?",
-        "choices": ["recycle / ਰੀਸਾਇਕਲ", "paint walls / ਕੰਧਾਂ ਰੰਗਣਾ", "sleep all day / ਸਾਰਾ ਦਿਨ ਸੌਣਾ"],
+        "choices": [
+          "recycle / ਰੀਸਾਇਕਲ",
+          "paint walls / ਕੰਧਾਂ ਰੰਗਣਾ",
+          "sleep all day / ਸਾਰਾ ਦਿਨ ਸੌਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the class will recycle today. / ਪੈਨਲ 1 ਵਿੱਚ ਅੱਜ ਰੀਸਾਇਕਲ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they sort first? / ਉਹ ਪਹਿਲਾਂ ਕੀ ਛਾਂਟਦੇ ਹਨ?",
-        "choices": ["paper and plastic / ਕਾਗਜ਼ ਤੇ ਪਲਾਸਟਿਕ", "cars and buses / ਗੱਡੀਆਂ ਤੇ ਬੱਸਾਂ", "shoes and hats / ਜੁੱਤੇ ਤੇ ਟੋਪੀਆਂ"],
+        "choices": [
+          "paper and plastic / ਕਾਗਜ਼ ਤੇ ਪਲਾਸਟਿਕ",
+          "cars and buses / ਗੱਡੀਆਂ ਤੇ ਬੱਸਾਂ",
+          "shoes and hats / ਜੁੱਤੇ ਤੇ ਟੋਪੀਆਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they sort paper and plastic. / ਪੈਨਲ 2 ਵਿੱਚ ਕਾਗਜ਼ ਅਤੇ ਪਲਾਸਟਿਕ ਛਾਂਟਦੇ ਹਨ।"
       },
       {
         "question": "What helps them choose the bin? / ਡੱਬਾ ਚੁਣਨ ਵਿੱਚ ਕੀ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["label / ਲੇਬਲ", "song / ਗਾਣਾ", "cloud / ਬੱਦਲ"],
+        "choices": [
+          "label / ਲੇਬਲ",
+          "song / ਗਾਣਾ",
+          "cloud / ਬੱਦਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they read each label to choose the bin. / ਪੈਨਲ 2 ਵਿੱਚ ਲੇਬਲ ਪੜ੍ਹ ਕੇ ਡੱਬਾ ਚੁਣਦੇ ਹਨ।"
       },
       {
         "question": "What does the child do next with the bottle? / ਬੋਤਲ ਨਾਲ ਬੱਚਾ ਅਗਲਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["rinse / ਛੇਤੀ ਧੋਣਾ", "break / ਤੋੜਦਾ/ਤੋੜਦੀ ਹੈ", "hide / ਲੁਕਾਉਂਦਾ/ਲੁਕਾਉਂਦੀ ਹੈ"],
+        "choices": [
+          "rinse / ਛੇਤੀ ਧੋਣਾ",
+          "break / ਤੋੜਦਾ/ਤੋੜਦੀ ਹੈ",
+          "hide / ਲੁਕਾਉਂਦਾ/ਲੁਕਾਉਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child rinses the bottle to make it clean. / ਪੈਨਲ 3 ਵਿੱਚ ਬੱਚਾ ਬੋਤਲ ਨੂੰ ਛੇਤੀ ਧੋ ਕੇ ਸਾਫ਼ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "Why do they recycle? / ਉਹ ਰੀਸਾਇਕਲ ਕਿਉਂ ਕਰਦੇ ਹਨ?",
-        "choices": ["because they care for earth / ਧਰਤੀ ਦੀ ਪਰਵਾਹ ਕਰਕੇ", "because of noise / ਸ਼ੋਰ ਕਰਕੇ", "because of candy / ਕੈਂਡੀ ਕਰਕੇ"],
+        "choices": [
+          "because they care for earth / ਧਰਤੀ ਦੀ ਪਰਵਾਹ ਕਰਕੇ",
+          "because of noise / ਸ਼ੋਰ ਕਰਕੇ",
+          "because of candy / ਕੈਂਡੀ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story says they care for earth, so they recycle. / ਕਹਾਣੀ ਵਿੱਚ ਧਰਤੀ ਦੀ ਪਰਵਾਹ ਕਰਕੇ ਰੀਸਾਇਕਲ ਕਰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "recycle", "meaningEn": "use old items again in a new way", "meaningPa": "ਰੀਸਾਇਕਲ; ਪੁਰਾਣੀ ਚੀਜ਼ ਨੂੰ ਮੁੜ ਵਰਤਣਾ" },
-      { "word": "paper", "meaningEn": "thin sheets used for writing", "meaningPa": "ਕਾਗਜ਼; ਲਿਖਣ ਵਾਲੇ ਪੱਤੇ" },
-      { "word": "plastic", "meaningEn": "a light material used for bottles and bags", "meaningPa": "ਪਲਾਸਟਿਕ; ਬੋਤਲਾਂ ਅਤੇ ਬੈਗਾਂ ਵਾਲਾ ਸਮਾਨ" },
-      { "word": "bin", "meaningEn": "a container for trash or recycling", "meaningPa": "ਡੱਬਾ; ਕੂੜਾ ਜਾਂ ਰੀਸਾਇਕਲ ਲਈ ਬਕਸਾ" },
-      { "word": "label", "meaningEn": "words on an item that tell what it is", "meaningPa": "ਲੇਬਲ; ਚੀਜ਼ ਉੱਤੇ ਲਿਖੇ ਸ਼ਬਦ" },
-      { "word": "rinse", "meaningEn": "wash quickly with water", "meaningPa": "ਛੇਤੀ ਧੋਣਾ; ਪਾਣੀ ਨਾਲ ਛੇਤੀ ਧੋਣਾ" },
-      { "word": "sort", "meaningEn": "put things into groups", "meaningPa": "ਛਾਂਟਣਾ; ਚੀਜ਼ਾਂ ਨੂੰ ਗਰੁੱਪਾਂ ਵਿੱਚ ਰੱਖਣਾ" },
-      { "word": "clean", "meaningEn": "not dirty", "meaningPa": "ਸਾਫ਼; ਗੰਦਾ ਨਹੀਂ" },
-      { "word": "earth", "meaningEn": "our planet where we live", "meaningPa": "ਧਰਤੀ; ਸਾਡਾ ਗ੍ਰਹਿ" },
-      { "word": "can", "meaningEn": "a word that means you are able to", "meaningPa": "ਕਰ ਸਕਦਾ/ਸਕਦੀ; ਸਮਰਥ ਹੋਣਾ" }
-    ]
+      {
+        "word": "recycle",
+        "meaningEn": "use old items again in a new way",
+        "meaningPa": "ਰੀਸਾਇਕਲ; ਪੁਰਾਣੀ ਚੀਜ਼ ਨੂੰ ਮੁੜ ਵਰਤਣਾ"
+      },
+      {
+        "word": "paper",
+        "meaningEn": "thin sheets used for writing",
+        "meaningPa": "ਕਾਗਜ਼; ਲਿਖਣ ਵਾਲੇ ਪੱਤੇ"
+      },
+      {
+        "word": "plastic",
+        "meaningEn": "a light material used for bottles and bags",
+        "meaningPa": "ਪਲਾਸਟਿਕ; ਬੋਤਲਾਂ ਅਤੇ ਬੈਗਾਂ ਵਾਲਾ ਸਮਾਨ"
+      },
+      {
+        "word": "bin",
+        "meaningEn": "a container for trash or recycling",
+        "meaningPa": "ਡੱਬਾ; ਕੂੜਾ ਜਾਂ ਰੀਸਾਇਕਲ ਲਈ ਬਕਸਾ"
+      },
+      {
+        "word": "label",
+        "meaningEn": "words on an item that tell what it is",
+        "meaningPa": "ਲੇਬਲ; ਚੀਜ਼ ਉੱਤੇ ਲਿਖੇ ਸ਼ਬਦ"
+      },
+      {
+        "word": "rinse",
+        "meaningEn": "wash quickly with water",
+        "meaningPa": "ਛੇਤੀ ਧੋਣਾ; ਪਾਣੀ ਨਾਲ ਛੇਤੀ ਧੋਣਾ"
+      },
+      {
+        "word": "sort",
+        "meaningEn": "put things into groups",
+        "meaningPa": "ਛਾਂਟਣਾ; ਚੀਜ਼ਾਂ ਨੂੰ ਗਰੁੱਪਾਂ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "clean",
+        "meaningEn": "not dirty",
+        "meaningPa": "ਸਾਫ਼; ਗੰਦਾ ਨਹੀਂ"
+      },
+      {
+        "word": "earth",
+        "meaningEn": "our planet where we live",
+        "meaningPa": "ਧਰਤੀ; ਸਾਡਾ ਗ੍ਰਹਿ"
+      },
+      {
+        "word": "can",
+        "meaningEn": "a word that means you are able to",
+        "meaningPa": "ਕਰ ਸਕਦਾ/ਸਕਦੀ; ਸਮਰਥ ਹੋਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "recycle",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "read",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S07",
@@ -3241,47 +8503,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Who is the child today? / ਬੱਚਾ ਅੱਜ ਕੌਣ ਹੈ?",
-        "choices": ["helper / ਮਦਦਗਾਰ", "driver / ਡਰਾਈਵਰ", "doctor / ਡਾਕਟਰ"],
+        "choices": [
+          "helper / ਮਦਦਗਾਰ",
+          "driver / ਡਰਾਈਵਰ",
+          "doctor / ਡਾਕਟਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child is a helper. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਮਦਦਗਾਰ ਹੈ।"
       },
       {
         "question": "Who is the younger person? / ਛੋਟਾ ਵਿਅਕਤੀ ਕੌਣ ਹੈ?",
-        "choices": ["younger student / ਛੋਟਾ ਵਿਦਿਆਰਥੀ", "teacher / ਟੀਚਰ", "pilot / ਪਾਇਲਟ"],
+        "choices": [
+          "younger student / ਛੋਟਾ ਵਿਦਿਆਰਥੀ",
+          "teacher / ਟੀਚਰ",
+          "pilot / ਪਾਇਲਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The helper sits with a younger student who wants to read. / ਮਦਦਗਾਰ ਛੋਟੇ ਵਿਦਿਆਰਥੀ ਨਾਲ ਬੈਠਦਾ/ਬੈਠਦੀ ਹੈ।"
       },
       {
         "question": "What does the helper whisper first? / ਮਦਦਗਾਰ ਪਹਿਲਾਂ ਕੀ ਹੌਲੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["sound and word / ਧੁਨੀ ਤੇ ਸ਼ਬਦ", "run fast / ਤੇਜ਼ ਦੌੜੋ", "close eyes / ਅੱਖਾਂ ਬੰਦ ਕਰੋ"],
+        "choices": [
+          "sound and word / ਧੁਨੀ ਤੇ ਸ਼ਬਦ",
+          "run fast / ਤੇਜ਼ ਦੌੜੋ",
+          "close eyes / ਅੱਖਾਂ ਬੰਦ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to sound the letter and look at the word. / ਪੈਨਲ 2 ਵਿੱਚ ਅੱਖਰ ਦੀ ਧੁਨੀ ਅਤੇ ਸ਼ਬਦ ਵੇਖਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the helper say next? / ਮਦਦਗਾਰ ਅਗਲਾ ਕੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["try again / ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ", "give up / ਛੱਡ ਦਿਓ", "be loud / ਸ਼ੋਰ ਕਰੋ"],
+        "choices": [
+          "try again / ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+          "give up / ਛੱਡ ਦਿਓ",
+          "be loud / ਸ਼ੋਰ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says, \"Try again.\" / ਪੈਨਲ 3 ਵਿੱਚ \"ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ\" ਹੈ।"
       },
       {
         "question": "Why does the younger student improve? / ਛੋਟਾ ਵਿਦਿਆਰਥੀ ਕਿਉਂ ਵਧੀਆ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["because of patient praise / ਧੀਰਜ ਵਾਲੀ ਸ਼ਾਬਾਸ਼ ਕਰਕੇ", "because of yelling / ਚੀਕਣ ਕਰਕੇ", "because of hiding / ਲੁਕਾਉਣ ਕਰਕੇ"],
+        "choices": [
+          "because of patient praise / ਧੀਰਜ ਵਾਲੀ ਸ਼ਾਬਾਸ਼ ਕਰਕੇ",
+          "because of yelling / ਚੀਕਣ ਕਰਕੇ",
+          "because of hiding / ਲੁਕਾਉਣ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says patient praise helps kids try again. / ਪੈਨਲ 5 ਵਿੱਚ ਧੀਰਜ ਵਾਲੀ ਸ਼ਾਬਾਸ਼ ਮਦਦ ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "helper", "meaningEn": "a person who helps someone", "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰਦਾ/ਕਰਦੀ ਹੈ" },
-      { "word": "younger", "meaningEn": "not as old; smaller age", "meaningPa": "ਛੋਟਾ; ਘੱਟ ਉਮਰ ਵਾਲਾ" },
-      { "word": "read", "meaningEn": "say words from a book", "meaningPa": "ਪੜ੍ਹਨਾ; ਕਿਤਾਬ ਦੇ ਸ਼ਬਦ ਬੋਲਣਾ" },
-      { "word": "sound", "meaningEn": "the noise a letter makes in a word", "meaningPa": "ਧੁਨੀ; ਅੱਖਰ ਦੀ ਆਵਾਜ਼" },
-      { "word": "word", "meaningEn": "letters that make meaning", "meaningPa": "ਸ਼ਬਦ; ਅੱਖਰਾਂ ਨਾਲ ਬਣਿਆ ਮਤਲਬ" },
-      { "word": "patient", "meaningEn": "able to wait calmly and kindly", "meaningPa": "ਧੀਰਜ ਵਾਲਾ; ਸ਼ਾਂਤ ਅਤੇ ਦਿਆਲੂ" },
-      { "word": "praise", "meaningEn": "kind words like \"good job\"", "meaningPa": "ਸ਼ਾਬਾਸ਼; ਚੰਗੇ ਸ਼ਬਦ" },
-      { "word": "try", "meaningEn": "make an effort to do something", "meaningPa": "ਕੋਸ਼ਿਸ਼ ਕਰਨੀ; ਯਤਨ ਕਰਨਾ" },
-      { "word": "again", "meaningEn": "one more time", "meaningPa": "ਫਿਰ; ਇਕ ਵਾਰੀ ਹੋਰ" },
-      { "word": "whisper", "meaningEn": "talk very softly", "meaningPa": "ਹੌਲੀ ਬੋਲਣਾ; ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ" }
-    ]
+      {
+        "word": "helper",
+        "meaningEn": "a person who helps someone",
+        "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰਦਾ/ਕਰਦੀ ਹੈ"
+      },
+      {
+        "word": "younger",
+        "meaningEn": "not as old; smaller age",
+        "meaningPa": "ਛੋਟਾ; ਘੱਟ ਉਮਰ ਵਾਲਾ"
+      },
+      {
+        "word": "read",
+        "meaningEn": "say words from a book",
+        "meaningPa": "ਪੜ੍ਹਨਾ; ਕਿਤਾਬ ਦੇ ਸ਼ਬਦ ਬੋਲਣਾ"
+      },
+      {
+        "word": "sound",
+        "meaningEn": "the noise a letter makes in a word",
+        "meaningPa": "ਧੁਨੀ; ਅੱਖਰ ਦੀ ਆਵਾਜ਼"
+      },
+      {
+        "word": "word",
+        "meaningEn": "letters that make meaning",
+        "meaningPa": "ਸ਼ਬਦ; ਅੱਖਰਾਂ ਨਾਲ ਬਣਿਆ ਮਤਲਬ"
+      },
+      {
+        "word": "patient",
+        "meaningEn": "able to wait calmly and kindly",
+        "meaningPa": "ਧੀਰਜ ਵਾਲਾ; ਸ਼ਾਂਤ ਅਤੇ ਦਿਆਲੂ"
+      },
+      {
+        "word": "praise",
+        "meaningEn": "kind words like \"good job\"",
+        "meaningPa": "ਸ਼ਾਬਾਸ਼; ਚੰਗੇ ਸ਼ਬਦ"
+      },
+      {
+        "word": "try",
+        "meaningEn": "make an effort to do something",
+        "meaningPa": "ਕੋਸ਼ਿਸ਼ ਕਰਨੀ; ਯਤਨ ਕਰਨਾ"
+      },
+      {
+        "word": "again",
+        "meaningEn": "one more time",
+        "meaningPa": "ਫਿਰ; ਇਕ ਵਾਰੀ ਹੋਰ"
+      },
+      {
+        "word": "whisper",
+        "meaningEn": "talk very softly",
+        "meaningPa": "ਹੌਲੀ ਬੋਲਣਾ; ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "read",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S08",
@@ -3294,47 +8636,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child want to save? / ਬੱਚਾ ਕੀ ਬਚਾਉਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ?",
-        "choices": ["water / ਪਾਣੀ", "sand / ਰੇਤ", "toys / ਖਿਡੌਣੇ"],
+        "choices": [
+          "water / ਪਾਣੀ",
+          "sand / ਰੇਤ",
+          "toys / ਖਿਡੌਣੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wants to save water. / ਪੈਨਲ 1 ਵਿੱਚ ਪਾਣੀ ਬਚਾਉਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should they do with the tap? / ਟੈਪ ਨਾਲ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["turn off / ਬੰਦ ਕਰਨਾ", "break it / ਤੋੜਨਾ", "paint it / ਰੰਗਣਾ"],
+        "choices": [
+          "turn off / ਬੰਦ ਕਰਨਾ",
+          "break it / ਤੋੜਨਾ",
+          "paint it / ਰੰਗਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to turn off the tap while brushing. / ਪੈਨਲ 2 ਵਿੱਚ ਟੈਪ ਬੰਦ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What happens next after brushing? / ਦੰਦ ਸਾਫ਼ ਕਰਨ ਤੋਂ ਬਾਅਦ ਅਗਲਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["short shower / ਛੋਟਾ ਸ਼ਾਵਰ", "long movie / ਲੰਮੀ ਫ਼ਿਲਮ", "big party / ਵੱਡੀ ਪਾਰਟੀ"],
+        "choices": [
+          "short shower / ਛੋਟਾ ਸ਼ਾਵਰ",
+          "long movie / ਲੰਮੀ ਫ਼ਿਲਮ",
+          "big party / ਵੱਡੀ ਪਾਰਟੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child takes a short shower next. / ਪੈਨਲ 2 ਵਿੱਚ ਅਗਲਾ ਛੋਟਾ ਸ਼ਾਵਰ ਹੈ।"
       },
       {
         "question": "Why do they reuse water? / ਉਹ ਪਾਣੀ ਮੁੜ ਕਿਉਂ ਵਰਤਦੇ ਹਨ?",
-        "choices": ["because it is still clean / ਕਿਉਂਕਿ ਸਾਫ਼ ਹੈ", "because it is loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ", "because it is heavy / ਕਿਉਂਕਿ ਭਾਰੀ ਹੈ"],
+        "choices": [
+          "because it is still clean / ਕਿਉਂਕਿ ਸਾਫ਼ ਹੈ",
+          "because it is loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ",
+          "because it is heavy / ਕਿਉਂਕਿ ਭਾਰੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they reuse water because it is still clean. / ਪੈਨਲ 3 ਵਿੱਚ ਸਾਫ਼ ਹੋਣ ਕਰਕੇ ਮੁੜ ਵਰਤਦੇ ਹਨ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["proud / ਮਾਣ", "lost / ਗੁੰਮ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "proud / ਮਾਣ",
+          "lost / ਗੁੰਮ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels proud. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚਾ ਮਾਣ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "save", "meaningEn": "use less and keep for later", "meaningPa": "ਬਚਾਉਣਾ; ਘੱਟ ਵਰਤ ਕੇ ਰੱਖਣਾ" },
-      { "word": "water", "meaningEn": "a clear liquid we need", "meaningPa": "ਪਾਣੀ; ਸਾਨੂੰ ਚਾਹੀਦਾ ਸਾਫ਼ ਤਰਲ" },
-      { "word": "tap", "meaningEn": "the faucet where water comes out", "meaningPa": "ਟੈਪ; ਜਿੱਥੋਂ ਪਾਣੀ ਨਿਕਲਦਾ ਹੈ" },
-      { "word": "turn off", "meaningEn": "stop the water by closing the tap", "meaningPa": "ਬੰਦ ਕਰਨਾ; ਟੈਪ ਬੰਦ ਕਰਨਾ" },
-      { "word": "shower", "meaningEn": "washing your body with falling water", "meaningPa": "ਸ਼ਾਵਰ; ਪਾਣੀ ਨਾਲ ਨਹਾਉਣਾ" },
-      { "word": "bucket", "meaningEn": "a container that can hold water", "meaningPa": "ਬਾਲਟੀ; ਪਾਣੀ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ" },
-      { "word": "reuse", "meaningEn": "use again", "meaningPa": "ਮੁੜ ਵਰਤਣਾ; ਫਿਰ ਵਰਤਣਾ" },
-      { "word": "should", "meaningEn": "a word for a good choice", "meaningPa": "ਚਾਹੀਦਾ ਹੈ; ਚੰਗੀ ਚੋਣ ਲਈ ਸ਼ਬਦ" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "habit", "meaningEn": "something you do often", "meaningPa": "ਆਦਤ; ਜੋ ਤੁਸੀਂ ਅਕਸਰ ਕਰਦੇ ਹੋ" }
-    ]
+      {
+        "word": "save",
+        "meaningEn": "use less and keep for later",
+        "meaningPa": "ਬਚਾਉਣਾ; ਘੱਟ ਵਰਤ ਕੇ ਰੱਖਣਾ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "a clear liquid we need",
+        "meaningPa": "ਪਾਣੀ; ਸਾਨੂੰ ਚਾਹੀਦਾ ਸਾਫ਼ ਤਰਲ"
+      },
+      {
+        "word": "tap",
+        "meaningEn": "the faucet where water comes out",
+        "meaningPa": "ਟੈਪ; ਜਿੱਥੋਂ ਪਾਣੀ ਨਿਕਲਦਾ ਹੈ"
+      },
+      {
+        "word": "turn off",
+        "meaningEn": "stop the water by closing the tap",
+        "meaningPa": "ਬੰਦ ਕਰਨਾ; ਟੈਪ ਬੰਦ ਕਰਨਾ"
+      },
+      {
+        "word": "shower",
+        "meaningEn": "washing your body with falling water",
+        "meaningPa": "ਸ਼ਾਵਰ; ਪਾਣੀ ਨਾਲ ਨਹਾਉਣਾ"
+      },
+      {
+        "word": "bucket",
+        "meaningEn": "a container that can hold water",
+        "meaningPa": "ਬਾਲਟੀ; ਪਾਣੀ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ"
+      },
+      {
+        "word": "reuse",
+        "meaningEn": "use again",
+        "meaningPa": "ਮੁੜ ਵਰਤਣਾ; ਫਿਰ ਵਰਤਣਾ"
+      },
+      {
+        "word": "should",
+        "meaningEn": "a word for a good choice",
+        "meaningPa": "ਚਾਹੀਦਾ ਹੈ; ਚੰਗੀ ਚੋਣ ਲਈ ਸ਼ਬਦ"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "habit",
+        "meaningEn": "something you do often",
+        "meaningPa": "ਆਦਤ; ਜੋ ਤੁਸੀਂ ਅਕਸਰ ਕਰਦੇ ਹੋ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "save",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S09",
@@ -3347,47 +8769,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child make? / ਬੱਚਾ ਕੀ ਬਣਾਂਦਾ/ਬਣਾਂਦੀ ਹੈ?",
-        "choices": ["schedule / ਸ਼ਡਿਊਲ", "sandcastle / ਰੇਤ ਦਾ ਘਰ", "kite / ਪਤੰਗ"],
+        "choices": [
+          "schedule / ਸ਼ਡਿਊਲ",
+          "sandcastle / ਰੇਤ ਦਾ ਘਰ",
+          "kite / ਪਤੰਗ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child makes a schedule for homework. / ਪੈਨਲ 1 ਵਿੱਚ ਹੋਮਵਰਕ ਲਈ ਸ਼ਡਿਊਲ ਬਣਾਉਂਦਾ/ਬਣਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What helps the child track time? / ਸਮਾਂ ਦੇਖਣ ਵਿੱਚ ਕੀ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["timer / ਟਾਈਮਰ", "shoe / ਜੁੱਤਾ", "spoon / ਚਮਚੀ"],
+        "choices": [
+          "timer / ਟਾਈਮਰ",
+          "shoe / ਜੁੱਤਾ",
+          "spoon / ਚਮਚੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 mentions a timer to track time. / ਪੈਨਲ 1 ਵਿੱਚ ਸਮਾਂ ਲਈ ਟਾਈਮਰ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["finish homework / ਹੋਮਵਰਕ ਮੁਕਾਉਂਦਾ/ਮੁਕਾਂਦੀ ਹੈ", "play games / ਖੇਡਦਾ/ਖੇਡਦੀ ਹੈ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"],
+        "choices": [
+          "finish homework / ਹੋਮਵਰਕ ਮੁਕਾਉਂਦਾ/ਮੁਕਾਂਦੀ ਹੈ",
+          "play games / ਖੇਡਦਾ/ਖੇਡਦੀ ਹੈ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 starts with first and finishing homework. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਹੋਮਵਰਕ ਮੁਕਾਉਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What happens next after math? / ਮੈਥ ਤੋਂ ਬਾਅਦ ਅਗਲਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["break / ਬ੍ਰੇਕ", "big storm / ਵੱਡਾ ਤੂਫ਼ਾਨ", "lost book / ਕਿਤਾਬ ਗੁੰਮ"],
+        "choices": [
+          "break / ਬ੍ਰੇਕ",
+          "big storm / ਵੱਡਾ ਤੂਫ਼ਾਨ",
+          "lost book / ਕਿਤਾਬ ਗੁੰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child takes a break after math. / ਪੈਨਲ 2 ਵਿੱਚ ਮੈਥ ਤੋਂ ਬਾਅਦ ਬ੍ਰੇਕ ਹੈ।"
       },
       {
         "question": "Why does the child feel free? / ਬੱਚਾ ਫ੍ਰੀ ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["finish on time / ਸਮੇਂ ਤੇ ਮੁਕਾਇਆ", "ate candy / ਕੈਂਡੀ ਖਾਈ", "ran fast / ਤੇਜ਼ ਦੌੜਿਆ"],
+        "choices": [
+          "finish on time / ਸਮੇਂ ਤੇ ਮੁਕਾਇਆ",
+          "ate candy / ਕੈਂਡੀ ਖਾਈ",
+          "ran fast / ਤੇਜ਼ ਦੌੜਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels free because work is finished on time. / ਪੈਨਲ 5 ਵਿੱਚ ਸਮੇਂ ਤੇ ਕੰਮ ਮੁਕਾਉਣ ਕਰਕੇ ਫ੍ਰੀ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "schedule", "meaningEn": "a plan for when you do things", "meaningPa": "ਸ਼ਡਿਊਲ; ਕਦੋਂ ਕੀ ਕਰਨਾ ਹੈ ਯੋਜਨਾ" },
-      { "word": "timer", "meaningEn": "a clock that counts time", "meaningPa": "ਟਾਈਮਰ; ਸਮਾਂ ਗਿਣਣ ਵਾਲੀ ਘੜੀ" },
-      { "word": "homework", "meaningEn": "school work you do at home", "meaningPa": "ਹੋਮਵਰਕ; ਘਰ ਲਈ ਸਕੂਲ ਦਾ ਕੰਮ" },
-      { "word": "break", "meaningEn": "a short rest time", "meaningPa": "ਬ੍ਰੇਕ; ਥੋੜ੍ਹਾ ਆਰਾਮ" },
-      { "word": "finish", "meaningEn": "complete and end the work", "meaningPa": "ਮੁਕਾਉਣਾ; ਕੰਮ ਪੂਰਾ ਕਰਨਾ" },
-      { "word": "first", "meaningEn": "before everything else", "meaningPa": "ਪਹਿਲਾਂ; ਸਭ ਤੋਂ ਪਹਿਲਾਂ" },
-      { "word": "then", "meaningEn": "after that", "meaningPa": "ਫਿਰ; ਉਸ ਤੋਂ ਬਾਅਦ" },
-      { "word": "next", "meaningEn": "the step after now", "meaningPa": "ਅਗਲਾ; ਅਗਲਾ ਕਦਮ" },
-      { "word": "finally", "meaningEn": "at the end", "meaningPa": "ਆਖਿਰਕਾਰ; ਅੰਤ ਵਿੱਚ" },
-      { "word": "free", "meaningEn": "not busy; able to play", "meaningPa": "ਫ੍ਰੀ; ਵਿਹਲਾ/ਵਿਹਲੀ, ਖੇਡ ਸਕਣਾ" }
-    ]
+      {
+        "word": "schedule",
+        "meaningEn": "a plan for when you do things",
+        "meaningPa": "ਸ਼ਡਿਊਲ; ਕਦੋਂ ਕੀ ਕਰਨਾ ਹੈ ਯੋਜਨਾ"
+      },
+      {
+        "word": "timer",
+        "meaningEn": "a clock that counts time",
+        "meaningPa": "ਟਾਈਮਰ; ਸਮਾਂ ਗਿਣਣ ਵਾਲੀ ਘੜੀ"
+      },
+      {
+        "word": "homework",
+        "meaningEn": "school work you do at home",
+        "meaningPa": "ਹੋਮਵਰਕ; ਘਰ ਲਈ ਸਕੂਲ ਦਾ ਕੰਮ"
+      },
+      {
+        "word": "break",
+        "meaningEn": "a short rest time",
+        "meaningPa": "ਬ੍ਰੇਕ; ਥੋੜ੍ਹਾ ਆਰਾਮ"
+      },
+      {
+        "word": "finish",
+        "meaningEn": "complete and end the work",
+        "meaningPa": "ਮੁਕਾਉਣਾ; ਕੰਮ ਪੂਰਾ ਕਰਨਾ"
+      },
+      {
+        "word": "first",
+        "meaningEn": "before everything else",
+        "meaningPa": "ਪਹਿਲਾਂ; ਸਭ ਤੋਂ ਪਹਿਲਾਂ"
+      },
+      {
+        "word": "then",
+        "meaningEn": "after that",
+        "meaningPa": "ਫਿਰ; ਉਸ ਤੋਂ ਬਾਅਦ"
+      },
+      {
+        "word": "next",
+        "meaningEn": "the step after now",
+        "meaningPa": "ਅਗਲਾ; ਅਗਲਾ ਕਦਮ"
+      },
+      {
+        "word": "finally",
+        "meaningEn": "at the end",
+        "meaningPa": "ਆਖਿਰਕਾਰ; ਅੰਤ ਵਿੱਚ"
+      },
+      {
+        "word": "free",
+        "meaningEn": "not busy; able to play",
+        "meaningPa": "ਫ੍ਰੀ; ਵਿਹਲਾ/ਵਿਹਲੀ, ਖੇਡ ਸਕਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "pack",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B6_S10",
@@ -3400,47 +8902,127 @@ var BOOK6_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child prepare? / ਬੱਚਾ ਕੀ ਤਿਆਰ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["presentation / ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ", "pizza / ਪੀਜ਼ਾ", "bus / ਬੱਸ"],
+        "choices": [
+          "presentation / ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ",
+          "pizza / ਪੀਜ਼ਾ",
+          "bus / ਬੱਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child prepares a presentation. / ਪੈਨਲ 1 ਵਿੱਚ ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ ਤਿਆਰ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who listens to the presentation? / ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ ਕੌਣ ਸੁਣਦਾ ਹੈ?",
-        "choices": ["audience / ਦਰਸ਼ਕ", "fish / ਮੱਛੀ", "robot / ਰੋਬੋਟ"],
+        "choices": [
+          "audience / ਦਰਸ਼ਕ",
+          "fish / ਮੱਛੀ",
+          "robot / ਰੋਬੋਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child explains to the audience. / ਪੈਨਲ 1 ਵਿੱਚ ਦਰਸ਼ਕਾਂ ਨੂੰ ਸਮਝਾਉਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child write first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਲਿਖਦਾ/ਲਿਖਦੀ ਹੈ?",
-        "choices": ["steps / ਕਦਮ", "songs / ਗਾਣੇ", "shoes / ਜੁੱਤੇ"],
+        "choices": [
+          "steps / ਕਦਮ",
+          "songs / ਗਾਣੇ",
+          "shoes / ਜੁੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child writes steps on a card first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਕਦਮ ਲਿਖਦਾ/ਲਿਖਦੀ ਹੈ।"
       },
       {
         "question": "What happens next at home? / ਘਰ ਵਿੱਚ ਅਗਲਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["practice / ਅਭਿਆਸ", "storm / ਤੂਫ਼ਾਨ", "sleep all day / ਸਾਰਾ ਦਿਨ ਸੌਣਾ"],
+        "choices": [
+          "practice / ਅਭਿਆਸ",
+          "storm / ਤੂਫ਼ਾਨ",
+          "sleep all day / ਸਾਰਾ ਦਿਨ ਸੌਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child practices at home. / ਪੈਨਲ 2 ਵਿੱਚ ਘਰ ਵਿੱਚ ਅਭਿਆਸ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why does the child feel confident? / ਬੱਚਾ confident ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["because of practice / ਅਭਿਆਸ ਕਰਕੇ", "because of candy / ਕੈਂਡੀ ਕਰਕੇ", "because of rain / ਮੀਂਹ ਕਰਕੇ"],
+        "choices": [
+          "because of practice / ਅਭਿਆਸ ਕਰਕੇ",
+          "because of candy / ਕੈਂਡੀ ਕਰਕੇ",
+          "because of rain / ਮੀਂਹ ਕਰਕੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child feels confident because of practice. / ਪੈਨਲ 3 ਵਿੱਚ ਅਭਿਆਸ ਕਰਕੇ ਭਰੋਸਾ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "explain", "meaningEn": "tell in a clear way", "meaningPa": "ਸਮਝਾਉਣਾ; ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ ਦੱਸਣਾ" },
-      { "word": "presentation", "meaningEn": "a short talk you give to a group", "meaningPa": "ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ; ਸਮੂਹ ਅੱਗੇ ਛੋਟੀ ਗੱਲ" },
-      { "word": "steps", "meaningEn": "parts you do in order", "meaningPa": "ਕਦਮ; ਕ੍ਰਮ ਨਾਲ ਕਰਨ ਵਾਲੇ ਹਿੱਸੇ" },
-      { "word": "topic", "meaningEn": "what you are talking about", "meaningPa": "ਟਾਪਿਕ; ਜਿਸ ਬਾਰੇ ਗੱਲ ਹੁੰਦੀ ਹੈ" },
-      { "word": "audience", "meaningEn": "people who listen and watch", "meaningPa": "ਦਰਸ਼ਕ; ਜੋ ਸੁਣਦੇ ਅਤੇ ਵੇਖਦੇ ਹਨ" },
-      { "word": "practice", "meaningEn": "do it again to get better", "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਦੁਹਰਾਉਣਾ" },
-      { "word": "voice", "meaningEn": "the sound you make when you speak", "meaningPa": "ਆਵਾਜ਼; ਬੋਲਣ ਦੀ ਧੁਨੀ" },
-      { "word": "confident", "meaningEn": "feeling sure you can do it", "meaningPa": "ਭਰੋਸੇ ਵਾਲਾ; ਯਕੀਨ ਨਾਲ" },
-      { "word": "question", "meaningEn": "words you ask to get an answer", "meaningPa": "ਸਵਾਲ; ਪੁੱਛਣ ਵਾਲੀ ਗੱਲ" },
-      { "word": "answer", "meaningEn": "words you say to respond to a question", "meaningPa": "ਜਵਾਬ; ਸਵਾਲ ਦਾ ਉੱਤਰ" }
-    ]
+      {
+        "word": "explain",
+        "meaningEn": "tell in a clear way",
+        "meaningPa": "ਸਮਝਾਉਣਾ; ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ ਦੱਸਣਾ"
+      },
+      {
+        "word": "presentation",
+        "meaningEn": "a short talk you give to a group",
+        "meaningPa": "ਪ੍ਰੇਜ਼ੈਂਟੇਸ਼ਨ; ਸਮੂਹ ਅੱਗੇ ਛੋਟੀ ਗੱਲ"
+      },
+      {
+        "word": "steps",
+        "meaningEn": "parts you do in order",
+        "meaningPa": "ਕਦਮ; ਕ੍ਰਮ ਨਾਲ ਕਰਨ ਵਾਲੇ ਹਿੱਸੇ"
+      },
+      {
+        "word": "topic",
+        "meaningEn": "what you are talking about",
+        "meaningPa": "ਟਾਪਿਕ; ਜਿਸ ਬਾਰੇ ਗੱਲ ਹੁੰਦੀ ਹੈ"
+      },
+      {
+        "word": "audience",
+        "meaningEn": "people who listen and watch",
+        "meaningPa": "ਦਰਸ਼ਕ; ਜੋ ਸੁਣਦੇ ਅਤੇ ਵੇਖਦੇ ਹਨ"
+      },
+      {
+        "word": "practice",
+        "meaningEn": "do it again to get better",
+        "meaningPa": "ਅਭਿਆਸ; ਵਧੀਆ ਬਣਨ ਲਈ ਦੁਹਰਾਉਣਾ"
+      },
+      {
+        "word": "voice",
+        "meaningEn": "the sound you make when you speak",
+        "meaningPa": "ਆਵਾਜ਼; ਬੋਲਣ ਦੀ ਧੁਨੀ"
+      },
+      {
+        "word": "confident",
+        "meaningEn": "feeling sure you can do it",
+        "meaningPa": "ਭਰੋਸੇ ਵਾਲਾ; ਯਕੀਨ ਨਾਲ"
+      },
+      {
+        "word": "question",
+        "meaningEn": "words you ask to get an answer",
+        "meaningPa": "ਸਵਾਲ; ਪੁੱਛਣ ਵਾਲੀ ਗੱਲ"
+      },
+      {
+        "word": "answer",
+        "meaningEn": "words you say to respond to a question",
+        "meaningPa": "ਜਵਾਬ; ਸਵਾਲ ਦਾ ਉੱਤਰ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -3456,47 +9038,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["class / ਕਲਾਸ", "park / ਪਾਰਕ", "market / ਮਾਰਕੀਟ"],
+        "choices": [
+          "class / ਕਲਾਸ",
+          "park / ਪਾਰਕ",
+          "market / ਮਾਰਕੀਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child sits in class in Panel 1. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਕਲਾਸ ਵਿੱਚ ਬੈਠਦਾ/ਬੈਠਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["ask / ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ", "run / ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"],
+        "choices": [
+          "ask / ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ",
+          "run / ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child asks the teacher politely. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਟੀਚਰ ਨੂੰ ਨਮਰਤਾ ਨਾਲ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "What does the child ask the teacher to do? / ਬੱਚਾ ਟੀਚਰ ਨੂੰ ਕੀ ਕਰਨ ਲਈ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["repeat slowly / ਹੌਲੀ ਫਿਰ ਕਹਿਣਾ", "jump / ਕੂਦਣਾ", "sing / ਗਾਉਣਾ"],
+        "choices": [
+          "repeat slowly / ਹੌਲੀ ਫਿਰ ਕਹਿਣਾ",
+          "jump / ਕੂਦਣਾ",
+          "sing / ਗਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child asks the teacher to repeat the word again, slowly. / ਬੱਚਾ ਟੀਚਰ ਨੂੰ ਸ਼ਬਦ ਹੌਲੀ-ਹੌਲੀ ਫਿਰ ਕਹਿਣ ਲਈ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ।"
       },
       {
         "question": "Why does the child smile? / ਬੱਚਾ ਕਿਉਂ ਮੁਸਕੁਰਾਉਂਦਾ/ਮੁਸਕੁਰਾਉਂਦੀ ਹੈ?",
-        "choices": ["understand / ਸਮਝ ਆ ਗਈ", "lost / ਗੁੰਮ ਹੋ ਗਿਆ", "hungry / ਭੁੱਖ ਲੱਗੀ"],
+        "choices": [
+          "understand / ਸਮਝ ਆ ਗਈ",
+          "lost / ਗੁੰਮ ਹੋ ਗਿਆ",
+          "hungry / ਭੁੱਖ ਲੱਗੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the child smiles because they understand now. / ਪੈਨਲ 4 ਵਿੱਚ ਬੱਚਾ ਮੁਸਕੁਰਾਉਂਦਾ/ਮੁਸਕੁਰਾਉਂਦੀ ਹੈ ਕਿਉਂਕਿ ਹੁਣ ਸਮਝ ਆ ਗਈ।"
       },
       {
         "question": "What helps the child learn? / ਬੱਚੇ ਨੂੰ ਸਿੱਖਣ ਵਿੱਚ ਕੀ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["ask / ਪੁੱਛਣਾ", "hide / ਲੁਕਾਉਣਾ", "shout / ਚੀਕਣਾ"],
+        "choices": [
+          "ask / ਪੁੱਛਣਾ",
+          "hide / ਲੁਕਾਉਣਾ",
+          "shout / ਚੀਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 shows asking helps the child learn again and again. / ਪੈਨਲ 5 ਵਿੱਚ ਪੁੱਛਣਾ ਬੱਚੇ ਨੂੰ ਸਿੱਖਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "ask", "meaningEn": "say a question to get help or information", "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ" },
-      { "word": "repeat", "meaningEn": "say something again", "meaningPa": "ਫਿਰ ਕਹਿਣਾ; ਦੁਬਾਰਾ ਦੱਸਣਾ" },
-      { "word": "again", "meaningEn": "one more time", "meaningPa": "ਫਿਰ; ਇਕ ਵਾਰੀ ਹੋਰ" },
-      { "word": "slowly", "meaningEn": "not fast; at a gentle speed", "meaningPa": "ਹੌਲੀ; ਧੀਰੇ-ਧੀਰੇ" },
-      { "word": "please", "meaningEn": "a polite word when asking", "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ" },
-      { "word": "mean", "meaningEn": "have a meaning", "meaningPa": "ਮਤਲਬ ਹੋਣਾ; ਅਰਥ ਹੋਣਾ" },
-      { "word": "word", "meaningEn": "letters that make meaning", "meaningPa": "ਸ਼ਬਦ; ਅਰਥ ਵਾਲਾ ਲਫ਼ਜ਼" },
-      { "word": "listen", "meaningEn": "use your ears to hear carefully", "meaningPa": "ਸੁਣਨਾ; ਧਿਆਨ ਨਾਲ ਸੁਣਨਾ" },
-      { "word": "understand", "meaningEn": "know what it means", "meaningPa": "ਸਮਝਣਾ; ਮਤਲਬ ਸਮਝ ਲੈਣਾ" },
-      { "word": "answer", "meaningEn": "a reply to a question", "meaningPa": "ਜਵਾਬ; ਸਵਾਲ ਦਾ ਉੱਤਰ" }
-    ]
+      {
+        "word": "ask",
+        "meaningEn": "say a question to get help or information",
+        "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+      },
+      {
+        "word": "repeat",
+        "meaningEn": "say something again",
+        "meaningPa": "ਫਿਰ ਕਹਿਣਾ; ਦੁਬਾਰਾ ਦੱਸਣਾ"
+      },
+      {
+        "word": "again",
+        "meaningEn": "one more time",
+        "meaningPa": "ਫਿਰ; ਇਕ ਵਾਰੀ ਹੋਰ"
+      },
+      {
+        "word": "slowly",
+        "meaningEn": "not fast; at a gentle speed",
+        "meaningPa": "ਹੌਲੀ; ਧੀਰੇ-ਧੀਰੇ"
+      },
+      {
+        "word": "please",
+        "meaningEn": "a polite word when asking",
+        "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ"
+      },
+      {
+        "word": "mean",
+        "meaningEn": "have a meaning",
+        "meaningPa": "ਮਤਲਬ ਹੋਣਾ; ਅਰਥ ਹੋਣਾ"
+      },
+      {
+        "word": "word",
+        "meaningEn": "letters that make meaning",
+        "meaningPa": "ਸ਼ਬਦ; ਅਰਥ ਵਾਲਾ ਲਫ਼ਜ਼"
+      },
+      {
+        "word": "listen",
+        "meaningEn": "use your ears to hear carefully",
+        "meaningPa": "ਸੁਣਨਾ; ਧਿਆਨ ਨਾਲ ਸੁਣਨਾ"
+      },
+      {
+        "word": "understand",
+        "meaningEn": "know what it means",
+        "meaningPa": "ਸਮਝਣਾ; ਮਤਲਬ ਸਮਝ ਲੈਣਾ"
+      },
+      {
+        "word": "answer",
+        "meaningEn": "a reply to a question",
+        "meaningPa": "ਜਵਾਬ; ਸਵਾਲ ਦਾ ਉੱਤਰ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "sit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S02",
@@ -3509,47 +9171,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "When do they choose a snack? / ਉਹ ਨਾਸ਼ਤਾ ਕਦੋਂ ਚੁਣਦੇ ਹਨ?",
-        "choices": ["after school / ਸਕੂਲ ਤੋਂ ਬਾਅਦ", "at night / ਰਾਤ ਨੂੰ", "in winter / ਸਰਦੀ ਵਿੱਚ"],
+        "choices": [
+          "after school / ਸਕੂਲ ਤੋਂ ਬਾਅਦ",
+          "at night / ਰਾਤ ਨੂੰ",
+          "in winter / ਸਰਦੀ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they choose a snack after school. / ਪੈਨਲ 1 ਵਿੱਚ ਸਕੂਲ ਤੋਂ ਬਾਅਦ ਨਾਸ਼ਤਾ ਚੁਣਦੇ ਹਨ।"
       },
       {
         "question": "What word means a choice you can pick? / ਕਿਹੜਾ ਸ਼ਬਦ \"ਚੋਣ\" ਦੱਸਦਾ ਹੈ?",
-        "choices": ["option / ਚੋਣ", "storm / ਤੂਫ਼ਾਨ", "pillow / ਤਕੀਆ"],
+        "choices": [
+          "option / ਚੋਣ",
+          "storm / ਤੂਫ਼ਾਨ",
+          "pillow / ਤਕੀਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 uses the word option for a choice you can pick. / ਪੈਨਲ 2 ਵਿੱਚ option ਦਾ ਮਤਲਬ ਚੋਣ ਹੁੰਦਾ ਹੈ।"
       },
       {
         "question": "Why does the friend prefer apples? / ਦੋਸਤ ਸੇਬ ਕਿਉਂ ਪਸੰਦ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["sweet taste / ਮਿੱਠਾ ਸੁਆਦ", "cold / ਠੰਢਾ", "noisy / ਸ਼ੋਰ ਵਾਲਾ"],
+        "choices": [
+          "sweet taste / ਮਿੱਠਾ ਸੁਆਦ",
+          "cold / ਠੰਢਾ",
+          "noisy / ਸ਼ੋਰ ਵਾਲਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says apples taste sweet. / ਪੈਨਲ 3 ਵਿੱਚ ਸੇਬ ਮਿੱਠੇ ਲੱਗਦੇ ਹਨ।"
       },
       {
         "question": "Are the snacks the same or different? / ਨਾਸ਼ਤੇ ਇੱਕੋ ਜਿਹੇ ਹਨ ਜਾਂ ਵੱਖਰੇ?",
-        "choices": ["different / ਵੱਖਰੇ", "same / ਇੱਕੋ ਜਿਹੇ", "broken / ਟੁੱਟੇ ਹੋਏ"],
+        "choices": [
+          "different / ਵੱਖਰੇ",
+          "same / ਇੱਕੋ ਜਿਹੇ",
+          "broken / ਟੁੱਟੇ ਹੋਏ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the snacks are different and not the same. / ਪੈਨਲ 4 ਵਿੱਚ ਨਾਸ਼ਤੇ ਵੱਖਰੇ ਅਤੇ ਇੱਕੋ ਜਿਹੇ ਨਹੀਂ ਹਨ।"
       },
       {
         "question": "What do they do at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["share / ਸਾਂਝਾ", "fight / ਲੜਾਈ", "cry / ਰੋਣਾ"],
+        "choices": [
+          "share / ਸਾਂਝਾ",
+          "fight / ਲੜਾਈ",
+          "cry / ਰੋਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they decide to share. / ਪੈਨਲ 5 ਵਿੱਚ ਉਹ ਸਾਂਝਾ ਕਰਨ ਦਾ ਫੈਸਲਾ ਕਰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "prefer", "meaningEn": "like one thing more than another", "meaningPa": "ਵਧੇਰੇ ਪਸੰਦ ਕਰਨਾ; ਇੱਕ ਚੀਜ਼ ਨੂੰ ਜ਼ਿਆਦਾ ਚਾਹੁਣਾ" },
-      { "word": "choose", "meaningEn": "pick one option", "meaningPa": "ਚੁਣਨਾ; ਇੱਕ ਵਿਕਲਪ ਲੈਣਾ" },
-      { "word": "option", "meaningEn": "a choice you can pick", "meaningPa": "ਚੋਣ; ਚੁਣਨ ਵਾਲਾ ਵਿਕਲਪ" },
-      { "word": "different", "meaningEn": "not the same", "meaningPa": "ਵੱਖਰਾ; ਇੱਕੋ ਜਿਹਾ ਨਹੀਂ" },
-      { "word": "same", "meaningEn": "not different", "meaningPa": "ਇੱਕੋ ਜਿਹਾ; ਵੱਖਰਾ ਨਹੀਂ" },
-      { "word": "favorite", "meaningEn": "the one you like the most", "meaningPa": "ਮਨਪਸੰਦ; ਸਭ ਤੋਂ ਵਧੇਰੇ ਪਸੰਦ" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "taste", "meaningEn": "the flavor of food", "meaningPa": "ਸੁਆਦ; ਖਾਣੇ ਦਾ ਰਸ" },
-      { "word": "share", "meaningEn": "give some to someone else", "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜੇ ਨੂੰ ਵੀ ਦੇਣਾ" },
-      { "word": "decide", "meaningEn": "make a choice", "meaningPa": "ਫੈਸਲਾ ਕਰਨਾ; ਚੋਣ ਤੈਅ ਕਰਨਾ" }
-    ]
+      {
+        "word": "prefer",
+        "meaningEn": "like one thing more than another",
+        "meaningPa": "ਵਧੇਰੇ ਪਸੰਦ ਕਰਨਾ; ਇੱਕ ਚੀਜ਼ ਨੂੰ ਜ਼ਿਆਦਾ ਚਾਹੁਣਾ"
+      },
+      {
+        "word": "choose",
+        "meaningEn": "pick one option",
+        "meaningPa": "ਚੁਣਨਾ; ਇੱਕ ਵਿਕਲਪ ਲੈਣਾ"
+      },
+      {
+        "word": "option",
+        "meaningEn": "a choice you can pick",
+        "meaningPa": "ਚੋਣ; ਚੁਣਨ ਵਾਲਾ ਵਿਕਲਪ"
+      },
+      {
+        "word": "different",
+        "meaningEn": "not the same",
+        "meaningPa": "ਵੱਖਰਾ; ਇੱਕੋ ਜਿਹਾ ਨਹੀਂ"
+      },
+      {
+        "word": "same",
+        "meaningEn": "not different",
+        "meaningPa": "ਇੱਕੋ ਜਿਹਾ; ਵੱਖਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "favorite",
+        "meaningEn": "the one you like the most",
+        "meaningPa": "ਮਨਪਸੰਦ; ਸਭ ਤੋਂ ਵਧੇਰੇ ਪਸੰਦ"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "taste",
+        "meaningEn": "the flavor of food",
+        "meaningPa": "ਸੁਆਦ; ਖਾਣੇ ਦਾ ਰਸ"
+      },
+      {
+        "word": "share",
+        "meaningEn": "give some to someone else",
+        "meaningPa": "ਸਾਂਝਾ ਕਰਨਾ; ਦੂਜੇ ਨੂੰ ਵੀ ਦੇਣਾ"
+      },
+      {
+        "word": "decide",
+        "meaningEn": "make a choice",
+        "meaningPa": "ਫੈਸਲਾ ਕਰਨਾ; ਚੋਣ ਤੈਅ ਕਰਨਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "share",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "be",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S03",
@@ -3562,47 +9304,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child want to do? / ਬੱਚਾ ਕੀ ਕਰਨਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ?",
-        "choices": ["meet a friend / ਦੋਸਤ ਨੂੰ ਮਿਲਣਾ", "fly a plane / ਜਹਾਜ਼ ਉਡਾਉਣਾ", "build a house / ਘਰ ਬਣਾਉਣਾ"],
+        "choices": [
+          "meet a friend / ਦੋਸਤ ਨੂੰ ਮਿਲਣਾ",
+          "fly a plane / ਜਹਾਜ਼ ਉਡਾਉਣਾ",
+          "build a house / ਘਰ ਬਣਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wants to meet a friend. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਦੋਸਤ ਨੂੰ ਮਿਲਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["call / ਫ਼ੋਨ ਕਰਦਾ/ਕਰਦੀ ਹੈ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ", "cry / ਰੋਂਦਾ/ਰੋਂਦੀ ਹੈ"],
+        "choices": [
+          "call / ਫ਼ੋਨ ਕਰਦਾ/ਕਰਦੀ ਹੈ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ",
+          "cry / ਰੋਂਦਾ/ਰੋਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child calls the friend. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਦੋਸਤ ਨੂੰ ਫ਼ੋਨ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "When do they plan to meet? / ਉਹ ਕਦੋਂ ਮਿਲਣ ਦੀ ਯੋਜਨਾ ਬਣਾਂਦੇ ਹਨ?",
-        "choices": ["tomorrow / ਭਲਕੇ", "yesterday / ਕੱਲ੍ਹ", "next month / ਅਗਲਾ ਮਹੀਨਾ"],
+        "choices": [
+          "tomorrow / ਭਲਕੇ",
+          "yesterday / ਕੱਲ੍ਹ",
+          "next month / ਅਗਲਾ ਮਹੀਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they plan to meet tomorrow. / ਪੈਨਲ 2 ਵਿੱਚ ਭਲਕੇ ਮਿਲਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Where do they plan to meet first? / ਉਹ ਪਹਿਲਾਂ ਕਿੱਥੇ ਮਿਲਣ ਦੀ ਯੋਜਨਾ ਬਣਾਂਦੇ ਹਨ?",
-        "choices": ["park gate / ਪਾਰਕ ਗੇਟ", "train / ਰੇਲ", "roof / ਛੱਤ"],
+        "choices": [
+          "park gate / ਪਾਰਕ ਗੇਟ",
+          "train / ਰੇਲ",
+          "roof / ਛੱਤ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they meet at the park gate. / ਪੈਨਲ 3 ਵਿੱਚ ਪਾਰਕ ਗੇਟ ਤੇ ਮਿਲਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What is the backup plan if it rains? / ਜੇ ਮੀਂਹ ਪਏ ਤਾਂ ਯੋਜਨਾ ਕੀ ਹੈ?",
-        "choices": ["meet at home / ਘਰ ਮਿਲਣਾ", "cancel forever / ਹਮੇਸ਼ਾ ਲਈ ਰੱਦ", "swim outside / ਬਾਹਰ ਤੈਰਨਾ"],
+        "choices": [
+          "meet at home / ਘਰ ਮਿਲਣਾ",
+          "cancel forever / ਹਮੇਸ਼ਾ ਲਈ ਰੱਦ",
+          "swim outside / ਬਾਹਰ ਤੈਰਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they can meet at home and play inside. / ਪੈਨਲ 4 ਵਿੱਚ ਘਰ ਮਿਲ ਕੇ ਅੰਦਰ ਖੇਡਣ ਦੀ ਗੱਲ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "plan", "meaningEn": "think about what to do and when", "meaningPa": "ਯੋਜਨਾ; ਪਹਿਲਾਂ ਤੋਂ ਤਿਆਰੀ" },
-      { "word": "invite", "meaningEn": "ask someone to come", "meaningPa": "ਬੁਲਾਣਾ; ਆਉਣ ਲਈ ਕਹਿਣਾ" },
-      { "word": "call", "meaningEn": "talk on the phone", "meaningPa": "ਫ਼ੋਨ ਕਰਨਾ; ਕਾਲ ਕਰਨੀ" },
-      { "word": "tomorrow", "meaningEn": "the day after today", "meaningPa": "ਭਲਕੇ; ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ" },
-      { "word": "time", "meaningEn": "when something happens", "meaningPa": "ਸਮਾਂ; ਕਦੋਂ" },
-      { "word": "place", "meaningEn": "where something happens", "meaningPa": "ਥਾਂ; ਕਿੱਥੇ" },
-      { "word": "schedule", "meaningEn": "a plan with times", "meaningPa": "ਸ਼ਡਿਊਲ; ਸਮੇਂ ਵਾਲੀ ਯੋਜਨਾ" },
-      { "word": "agree", "meaningEn": "say yes to the same plan", "meaningPa": "ਸਹਿਮਤ ਹੋਣਾ; ਹਾਂ ਕਹਿਣਾ" },
-      { "word": "bring", "meaningEn": "carry something with you", "meaningPa": "ਲਿਆਉਣਾ; ਨਾਲ ਲੈ ਆਉਣਾ" },
-      { "word": "meet", "meaningEn": "come together in the same place", "meaningPa": "ਮਿਲਣਾ; ਇਕੱਠੇ ਹੋਣਾ" }
-    ]
+      {
+        "word": "plan",
+        "meaningEn": "think about what to do and when",
+        "meaningPa": "ਯੋਜਨਾ; ਪਹਿਲਾਂ ਤੋਂ ਤਿਆਰੀ"
+      },
+      {
+        "word": "invite",
+        "meaningEn": "ask someone to come",
+        "meaningPa": "ਬੁਲਾਣਾ; ਆਉਣ ਲਈ ਕਹਿਣਾ"
+      },
+      {
+        "word": "call",
+        "meaningEn": "talk on the phone",
+        "meaningPa": "ਫ਼ੋਨ ਕਰਨਾ; ਕਾਲ ਕਰਨੀ"
+      },
+      {
+        "word": "tomorrow",
+        "meaningEn": "the day after today",
+        "meaningPa": "ਭਲਕੇ; ਅੱਜ ਤੋਂ ਅਗਲਾ ਦਿਨ"
+      },
+      {
+        "word": "time",
+        "meaningEn": "when something happens",
+        "meaningPa": "ਸਮਾਂ; ਕਦੋਂ"
+      },
+      {
+        "word": "place",
+        "meaningEn": "where something happens",
+        "meaningPa": "ਥਾਂ; ਕਿੱਥੇ"
+      },
+      {
+        "word": "schedule",
+        "meaningEn": "a plan with times",
+        "meaningPa": "ਸ਼ਡਿਊਲ; ਸਮੇਂ ਵਾਲੀ ਯੋਜਨਾ"
+      },
+      {
+        "word": "agree",
+        "meaningEn": "say yes to the same plan",
+        "meaningPa": "ਸਹਿਮਤ ਹੋਣਾ; ਹਾਂ ਕਹਿਣਾ"
+      },
+      {
+        "word": "bring",
+        "meaningEn": "carry something with you",
+        "meaningPa": "ਲਿਆਉਣਾ; ਨਾਲ ਲੈ ਆਉਣਾ"
+      },
+      {
+        "word": "meet",
+        "meaningEn": "come together in the same place",
+        "meaningPa": "ਮਿਲਣਾ; ਇਕੱਠੇ ਹੋਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "agree",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S04",
@@ -3615,47 +9437,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What two animals do they see? / ਉਹ ਕਿਹੜੇ ਦੋ ਜਾਨਵਰ ਵੇਖਦੇ ਹਨ?",
-        "choices": ["dog and cat / ਕੁੱਤਾ ਅਤੇ ਬਿੱਲੀ", "fish and bird / ਮੱਛੀ ਅਤੇ ਪੰਛੀ", "lion and tiger / ਸ਼ੇਰ ਅਤੇ ਬਾਘ"],
+        "choices": [
+          "dog and cat / ਕੁੱਤਾ ਅਤੇ ਬਿੱਲੀ",
+          "fish and bird / ਮੱਛੀ ਅਤੇ ਪੰਛੀ",
+          "lion and tiger / ਸ਼ੇਰ ਅਤੇ ਬਾਘ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they see a dog and a cat. / ਪੈਨਲ 1 ਵਿੱਚ ਕੁੱਤਾ ਅਤੇ ਬਿੱਲੀ ਹਨ।"
       },
       {
         "question": "What do they do first? / ਉਹ ਪਹਿਲਾਂ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["compare / ਤੁਲਨਾ", "sleep / ਸੌਣਾ", "shout / ਚੀਕਣਾ"],
+        "choices": [
+          "compare / ਤੁਲਨਾ",
+          "sleep / ਸੌਣਾ",
+          "shout / ਚੀਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they compare and talk. / ਪੈਨਲ 2 ਵਿੱਚ ਤੁਲਨਾ ਕਰਦੇ ਅਤੇ ਗੱਲ ਕਰਦੇ ਹਨ।"
       },
       {
         "question": "Which animal runs faster? / ਕਿਹੜਾ ਜਾਨਵਰ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ?",
-        "choices": ["dog / ਕੁੱਤਾ", "cat / ਬਿੱਲੀ", "both same / ਦੋਵੇਂ ਇੱਕੋ"],
+        "choices": [
+          "dog / ਕੁੱਤਾ",
+          "cat / ਬਿੱਲੀ",
+          "both same / ਦੋਵੇਂ ਇੱਕੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the dog runs faster. / ਪੈਨਲ 3 ਵਿੱਚ ਕੁੱਤਾ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ।"
       },
       {
         "question": "Which animal is smaller? / ਕਿਹੜਾ ਜਾਨਵਰ ਛੋਟਾ ਹੈ?",
-        "choices": ["cat / ਬਿੱਲੀ", "dog / ਕੁੱਤਾ", "none / ਕੋਈ ਨਹੀਂ"],
+        "choices": [
+          "cat / ਬਿੱਲੀ",
+          "dog / ਕੁੱਤਾ",
+          "none / ਕੋਈ ਨਹੀਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the cat is smaller than the dog. / ਪੈਨਲ 3 ਵਿੱਚ ਬਿੱਲੀ ਕੁੱਤੇ ਨਾਲੋਂ ਛੋਟੀ ਹੈ।"
       },
       {
         "question": "Why does the friend like both? / ਦੋਸਤ ਨੂੰ ਦੋਵੇਂ ਕਿਉਂ ਪਸੰਦ ਹਨ?",
-        "choices": ["because cute / ਕਿਉਂਕਿ ਸੋਹਣੇ", "because loud / ਕਿਉਂਕਿ ਸ਼ੋਰ", "because cold / ਕਿਉਂਕਿ ਠੰਢੇ"],
+        "choices": [
+          "because cute / ਕਿਉਂਕਿ ਸੋਹਣੇ",
+          "because loud / ਕਿਉਂਕਿ ਸ਼ੋਰ",
+          "because cold / ਕਿਉਂਕਿ ਠੰਢੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says both are cute. / ਪੈਨਲ 4 ਵਿੱਚ ਦੋਵੇਂ ਸੋਹਣੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "compare", "meaningEn": "look at two things to see same and different", "meaningPa": "ਤੁਲਨਾ ਕਰਨਾ; ਇੱਕੋ ਜਿਹਾ ਅਤੇ ਵੱਖਰਾ ਵੇਖਣਾ" },
-      { "word": "same", "meaningEn": "not different", "meaningPa": "ਇੱਕੋ ਜਿਹਾ; ਵੱਖਰਾ ਨਹੀਂ" },
-      { "word": "different", "meaningEn": "not the same", "meaningPa": "ਵੱਖਰਾ; ਇੱਕੋ ਜਿਹਾ ਨਹੀਂ" },
-      { "word": "both", "meaningEn": "two together", "meaningPa": "ਦੋਵੇਂ; ਦੋਨਾਂ" },
-      { "word": "but", "meaningEn": "a word that shows contrast", "meaningPa": "ਪਰ; ਵਿਰੋਧ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "bigger", "meaningEn": "larger in size", "meaningPa": "ਵੱਡਾ; ਆਕਾਰ ਵਿੱਚ ਵਧੇਰਾ" },
-      { "word": "smaller", "meaningEn": "less in size", "meaningPa": "ਛੋਟਾ; ਆਕਾਰ ਵਿੱਚ ਘੱਟ" },
-      { "word": "faster", "meaningEn": "more fast", "meaningPa": "ਤੇਜ਼; ਹੋਰ ਤੇਜ਼" },
-      { "word": "slower", "meaningEn": "more slow", "meaningPa": "ਹੌਲਾ; ਹੋਰ ਹੌਲਾ" },
-      { "word": "like", "meaningEn": "enjoy or prefer", "meaningPa": "ਪਸੰਦ ਕਰਨਾ; ਚੰਗਾ ਲੱਗਣਾ" }
-    ]
+      {
+        "word": "compare",
+        "meaningEn": "look at two things to see same and different",
+        "meaningPa": "ਤੁਲਨਾ ਕਰਨਾ; ਇੱਕੋ ਜਿਹਾ ਅਤੇ ਵੱਖਰਾ ਵੇਖਣਾ"
+      },
+      {
+        "word": "same",
+        "meaningEn": "not different",
+        "meaningPa": "ਇੱਕੋ ਜਿਹਾ; ਵੱਖਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "different",
+        "meaningEn": "not the same",
+        "meaningPa": "ਵੱਖਰਾ; ਇੱਕੋ ਜਿਹਾ ਨਹੀਂ"
+      },
+      {
+        "word": "both",
+        "meaningEn": "two together",
+        "meaningPa": "ਦੋਵੇਂ; ਦੋਨਾਂ"
+      },
+      {
+        "word": "but",
+        "meaningEn": "a word that shows contrast",
+        "meaningPa": "ਪਰ; ਵਿਰੋਧ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "bigger",
+        "meaningEn": "larger in size",
+        "meaningPa": "ਵੱਡਾ; ਆਕਾਰ ਵਿੱਚ ਵਧੇਰਾ"
+      },
+      {
+        "word": "smaller",
+        "meaningEn": "less in size",
+        "meaningPa": "ਛੋਟਾ; ਆਕਾਰ ਵਿੱਚ ਘੱਟ"
+      },
+      {
+        "word": "faster",
+        "meaningEn": "more fast",
+        "meaningPa": "ਤੇਜ਼; ਹੋਰ ਤੇਜ਼"
+      },
+      {
+        "word": "slower",
+        "meaningEn": "more slow",
+        "meaningPa": "ਹੌਲਾ; ਹੋਰ ਹੌਲਾ"
+      },
+      {
+        "word": "like",
+        "meaningEn": "enjoy or prefer",
+        "meaningPa": "ਪਸੰਦ ਕਰਨਾ; ਚੰਗਾ ਲੱਗਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S05",
@@ -3668,47 +9570,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child make? / ਬੱਚਾ ਕੀ ਬਣਾਂਦਾ/ਬਣਾਂਦੀ ਹੈ?",
-        "choices": ["sandwich / ਸੈਂਡਵਿਚ", "kite / ਪਤੰਗ", "boat / ਕਿਸ਼ਤੀ"],
+        "choices": [
+          "sandwich / ਸੈਂਡਵਿਚ",
+          "kite / ਪਤੰਗ",
+          "boat / ਕਿਸ਼ਤੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child wants to make a sandwich. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਚਾ ਸੈਂਡਵਿਚ ਬਣਾਉਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["wash hands / ਹੱਥ ਧੋਣਾ", "run outside / ਬਾਹਰ ਦੌੜਨਾ", "turn off lights / ਬੱਤੀਆਂ ਬੰਦ ਕਰਨਾ"],
+        "choices": [
+          "wash hands / ਹੱਥ ਧੋਣਾ",
+          "run outside / ਬਾਹਰ ਦੌੜਨਾ",
+          "turn off lights / ਬੱਤੀਆਂ ਬੰਦ ਕਰਨਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says first the child washes hands. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਹੱਥ ਧੋਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child use for the sandwich? / ਸੈਂਡਵਿਚ ਲਈ ਬੱਚਾ ਕੀ ਵਰਤਦਾ/ਵਰਤਦੀ ਹੈ?",
-        "choices": ["bread slices / ਰੋਟੀ ਦੇ ਟੁਕੜੇ", "stones / ਪੱਥਰ", "paper / ਕਾਗਜ਼"],
+        "choices": [
+          "bread slices / ਰੋਟੀ ਦੇ ਟੁਕੜੇ",
+          "stones / ਪੱਥਰ",
+          "paper / ਕਾਗਜ਼"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child takes two slices of bread. / ਪੈਨਲ 2 ਵਿੱਚ ਰੋਟੀ ਦੇ ਦੋ ਟੁਕੜੇ ਹਨ।"
       },
       {
         "question": "What does the child do next after adding food? / ਖਾਣਾ ਪਾਉਣ ਤੋਂ ਬਾਅਦ ਅਗਲਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["cut / ਕੱਟਦਾ/ਕੱਟਦੀ ਹੈ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ", "cry / ਰੋਂਦਾ/ਰੋਂਦੀ ਹੈ"],
+        "choices": [
+          "cut / ਕੱਟਦਾ/ਕੱਟਦੀ ਹੈ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ",
+          "cry / ਰੋਂਦਾ/ਰੋਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the child closes and cuts the sandwich. / ਪੈਨਲ 4 ਵਿੱਚ ਸੈਂਡਵਿਚ ਬੰਦ ਕਰਕੇ ਕੱਟਦਾ/ਕੱਟਦੀ ਹੈ।"
       },
       {
         "question": "Why does following steps help? / ਕਦਮ ਮੰਨਣਾ ਕਿਉਂ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["safe food / ਸੁਰੱਖਿਅਤ ਖਾਣਾ", "loud noise / ਉੱਚਾ ਸ਼ੋਰ", "cold rain / ਠੰਢਾ ਮੀਂਹ"],
+        "choices": [
+          "safe food / ਸੁਰੱਖਿਅਤ ਖਾਣਾ",
+          "loud noise / ਉੱਚਾ ਸ਼ੋਰ",
+          "cold rain / ਠੰਢਾ ਮੀਂਹ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says steps help make food safely. / ਪੈਨਲ 5 ਵਿੱਚ ਕਦਮ ਸੁਰੱਖਿਅਤ ਤਰੀਕੇ ਨਾਲ ਖਾਣਾ ਬਣਾਉਂਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "first", "meaningEn": "before everything else", "meaningPa": "ਪਹਿਲਾਂ; ਸਭ ਤੋਂ ਪਹਿਲਾਂ" },
-      { "word": "next", "meaningEn": "the step after now", "meaningPa": "ਅਗਲਾ; ਅਗਲਾ ਕਦਮ" },
-      { "word": "then", "meaningEn": "after that", "meaningPa": "ਫਿਰ; ਉਸ ਤੋਂ ਬਾਅਦ" },
-      { "word": "finally", "meaningEn": "at the end", "meaningPa": "ਆਖਿਰਕਾਰ; ਅੰਤ ਵਿੱਚ" },
-      { "word": "wash", "meaningEn": "clean with water", "meaningPa": "ਧੋਣਾ; ਪਾਣੀ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ" },
-      { "word": "bread", "meaningEn": "food you can make a sandwich with", "meaningPa": "ਰੋਟੀ; ਸੈਂਡਵਿਚ ਲਈ ਖਾਣਾ" },
-      { "word": "spread", "meaningEn": "put a soft food on top", "meaningPa": "ਲਗਾਉਣਾ; ਉੱਤੇ ਫੈਲਾਉਣਾ" },
-      { "word": "butter", "meaningEn": "a soft dairy food you can spread", "meaningPa": "ਮੱਖਣ; ਰੋਟੀ ਉੱਤੇ ਲਗਾਉਣ ਵਾਲਾ ਨਰਮ ਖਾਣਾ" },
-      { "word": "cheese", "meaningEn": "a dairy food; often yellow or white", "meaningPa": "ਚੀਜ਼; ਦੁੱਧ ਤੋਂ ਬਣਿਆ ਖਾਣਾ" },
-      { "word": "clean", "meaningEn": "not dirty", "meaningPa": "ਸਾਫ਼; ਗੰਦਾ ਨਹੀਂ" }
-    ]
+      {
+        "word": "first",
+        "meaningEn": "before everything else",
+        "meaningPa": "ਪਹਿਲਾਂ; ਸਭ ਤੋਂ ਪਹਿਲਾਂ"
+      },
+      {
+        "word": "next",
+        "meaningEn": "the step after now",
+        "meaningPa": "ਅਗਲਾ; ਅਗਲਾ ਕਦਮ"
+      },
+      {
+        "word": "then",
+        "meaningEn": "after that",
+        "meaningPa": "ਫਿਰ; ਉਸ ਤੋਂ ਬਾਅਦ"
+      },
+      {
+        "word": "finally",
+        "meaningEn": "at the end",
+        "meaningPa": "ਆਖਿਰਕਾਰ; ਅੰਤ ਵਿੱਚ"
+      },
+      {
+        "word": "wash",
+        "meaningEn": "clean with water",
+        "meaningPa": "ਧੋਣਾ; ਪਾਣੀ ਨਾਲ ਸਾਫ਼ ਕਰਨਾ"
+      },
+      {
+        "word": "bread",
+        "meaningEn": "food you can make a sandwich with",
+        "meaningPa": "ਰੋਟੀ; ਸੈਂਡਵਿਚ ਲਈ ਖਾਣਾ"
+      },
+      {
+        "word": "spread",
+        "meaningEn": "put a soft food on top",
+        "meaningPa": "ਲਗਾਉਣਾ; ਉੱਤੇ ਫੈਲਾਉਣਾ"
+      },
+      {
+        "word": "butter",
+        "meaningEn": "a soft dairy food you can spread",
+        "meaningPa": "ਮੱਖਣ; ਰੋਟੀ ਉੱਤੇ ਲਗਾਉਣ ਵਾਲਾ ਨਰਮ ਖਾਣਾ"
+      },
+      {
+        "word": "cheese",
+        "meaningEn": "a dairy food; often yellow or white",
+        "meaningPa": "ਚੀਜ਼; ਦੁੱਧ ਤੋਂ ਬਣਿਆ ਖਾਣਾ"
+      },
+      {
+        "word": "clean",
+        "meaningEn": "not dirty",
+        "meaningPa": "ਸਾਫ਼; ਗੰਦਾ ਨਹੀਂ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "close",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "share",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S06",
@@ -3721,47 +9703,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What problem do they have? / ਉਹਨਾਂ ਦੀ ਸਮੱਸਿਆ ਕੀ ਹੈ?",
-        "choices": ["different ideas / ਵੱਖਰੇ ਵਿਚਾਰ", "lost bag / ਬੈਗ ਗੁੰਮ", "broken chair / ਕੁਰਸੀ ਟੁੱਟੀ"],
+        "choices": [
+          "different ideas / ਵੱਖਰੇ ਵਿਚਾਰ",
+          "lost bag / ਬੈਗ ਗੁੰਮ",
+          "broken chair / ਕੁਰਸੀ ਟੁੱਟੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they have different ideas for a game. / ਪੈਨਲ 1 ਵਿੱਚ ਖੇਡ ਲਈ ਵੱਖਰੇ ਵਿਚਾਰ ਹਨ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["breathe / ਸਾਹ ਲੈਂਦਾ/ਲੈਂਦੀ ਹੈ", "push / ਧੱਕਾ ਦਿੰਦਾ/ਦਿੰਦੀ ਹੈ", "shout / ਚੀਕਦਾ/ਚੀਕਦੀ ਹੈ"],
+        "choices": [
+          "breathe / ਸਾਹ ਲੈਂਦਾ/ਲੈਂਦੀ ਹੈ",
+          "push / ਧੱਕਾ ਦਿੰਦਾ/ਦਿੰਦੀ ਹੈ",
+          "shout / ਚੀਕਦਾ/ਚੀਕਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child takes a breath first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਸਾਹ ਲੈਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "How does the child disagree? / ਬੱਚਾ ਕਿਵੇਂ ਅਸਹਿਮਤ ਹੁੰਦਾ/ਹੁੰਦੀ ਹੈ?",
-        "choices": ["politely / ਨਮਰਤਾ ਨਾਲ", "rudely / ਬਦਤਮੀਜ਼ੀ ਨਾਲ", "silently / ਚੁੱਪਚਾਪ"],
+        "choices": [
+          "politely / ਨਮਰਤਾ ਨਾਲ",
+          "rudely / ਬਦਤਮੀਜ਼ੀ ਨਾਲ",
+          "silently / ਚੁੱਪਚਾਪ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child speaks politely. / ਪੈਨਲ 2 ਵਿੱਚ ਨਮਰਤਾ ਨਾਲ ਬੋਲਦਾ/ਬੋਲਦੀ ਹੈ।"
       },
       {
         "question": "What do they do next? / ਅਗਲਾ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["compromise / ਸਮਝੌਤਾ", "fight / ਲੜਾਈ", "leave / ਚਲੇ ਜਾਣਾ"],
+        "choices": [
+          "compromise / ਸਮਝੌਤਾ",
+          "fight / ਲੜਾਈ",
+          "leave / ਚਲੇ ਜਾਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they try a compromise and play both games. / ਪੈਨਲ 4 ਵਿੱਚ ਸਮਝੌਤਾ ਕਰਕੇ ਦੋਵੇਂ ਖੇਡਦੇ ਹਨ।"
       },
       {
         "question": "What helps them stay friends? / ਉਹਨਾਂ ਨੂੰ ਦੋਸਤ ਬਣੇ ਰਹਿਣ ਵਿੱਚ ਕੀ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["kind words / ਨਮਰ ਸ਼ਬਦ", "loud yelling / ਉੱਚੀ ਚੀਕ", "hiding / ਲੁਕਾਉਣਾ"],
+        "choices": [
+          "kind words / ਨਮਰ ਸ਼ਬਦ",
+          "loud yelling / ਉੱਚੀ ਚੀਕ",
+          "hiding / ਲੁਕਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says kind words help them solve the problem. / ਪੈਨਲ 5 ਵਿੱਚ ਨਮਰ ਸ਼ਬਦ ਸਮੱਸਿਆ ਹੱਲ ਕਰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "disagree", "meaningEn": "not have the same idea", "meaningPa": "ਅਸਹਿਮਤ ਹੋਣਾ; ਸਹਿਮਤ ਨਾ ਹੋਣਾ" },
-      { "word": "kindly", "meaningEn": "in a kind and polite way", "meaningPa": "ਨਮਰਤਾ ਨਾਲ; ਦਿਆਲੂ ਤਰੀਕੇ ਨਾਲ" },
-      { "word": "polite", "meaningEn": "using respectful words", "meaningPa": "ਨਮਰ; ਆਦਰ ਵਾਲਾ" },
-      { "word": "respect", "meaningEn": "treat someone kindly and fairly", "meaningPa": "ਇੱਜ਼ਤ; ਆਦਰ ਨਾਲ ਪੇਸ਼ ਆਉਣਾ" },
-      { "word": "idea", "meaningEn": "a thought or plan", "meaningPa": "ਵਿਚਾਰ; ਸੋਚ" },
-      { "word": "think", "meaningEn": "use your mind to decide", "meaningPa": "ਸੋਚਣਾ; ਮਨ ਨਾਲ ਫੈਸਲਾ ਕਰਨਾ" },
-      { "word": "better", "meaningEn": "more good", "meaningPa": "ਵਧੀਆ; ਹੋਰ ਚੰਗਾ" },
-      { "word": "fair", "meaningEn": "everyone gets a turn and rules", "meaningPa": "ਨਿਆਂਪੂਰਨ; ਸਭ ਨੂੰ ਬਰਾਬਰ ਮੌਕਾ" },
-      { "word": "compromise", "meaningEn": "meet in the middle", "meaningPa": "ਸਮਝੌਤਾ; ਵਿਚਕਾਰਲਾ ਹੱਲ" },
-      { "word": "together", "meaningEn": "with another person", "meaningPa": "ਇਕੱਠੇ; ਨਾਲ ਮਿਲ ਕੇ" }
-    ]
+      {
+        "word": "disagree",
+        "meaningEn": "not have the same idea",
+        "meaningPa": "ਅਸਹਿਮਤ ਹੋਣਾ; ਸਹਿਮਤ ਨਾ ਹੋਣਾ"
+      },
+      {
+        "word": "kindly",
+        "meaningEn": "in a kind and polite way",
+        "meaningPa": "ਨਮਰਤਾ ਨਾਲ; ਦਿਆਲੂ ਤਰੀਕੇ ਨਾਲ"
+      },
+      {
+        "word": "polite",
+        "meaningEn": "using respectful words",
+        "meaningPa": "ਨਮਰ; ਆਦਰ ਵਾਲਾ"
+      },
+      {
+        "word": "respect",
+        "meaningEn": "treat someone kindly and fairly",
+        "meaningPa": "ਇੱਜ਼ਤ; ਆਦਰ ਨਾਲ ਪੇਸ਼ ਆਉਣਾ"
+      },
+      {
+        "word": "idea",
+        "meaningEn": "a thought or plan",
+        "meaningPa": "ਵਿਚਾਰ; ਸੋਚ"
+      },
+      {
+        "word": "think",
+        "meaningEn": "use your mind to decide",
+        "meaningPa": "ਸੋਚਣਾ; ਮਨ ਨਾਲ ਫੈਸਲਾ ਕਰਨਾ"
+      },
+      {
+        "word": "better",
+        "meaningEn": "more good",
+        "meaningPa": "ਵਧੀਆ; ਹੋਰ ਚੰਗਾ"
+      },
+      {
+        "word": "fair",
+        "meaningEn": "everyone gets a turn and rules",
+        "meaningPa": "ਨਿਆਂਪੂਰਨ; ਸਭ ਨੂੰ ਬਰਾਬਰ ਮੌਕਾ"
+      },
+      {
+        "word": "compromise",
+        "meaningEn": "meet in the middle",
+        "meaningPa": "ਸਮਝੌਤਾ; ਵਿਚਕਾਰਲਾ ਹੱਲ"
+      },
+      {
+        "word": "together",
+        "meaningEn": "with another person",
+        "meaningPa": "ਇਕੱਠੇ; ਨਾਲ ਮਿਲ ਕੇ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "disagree",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S07",
@@ -3774,47 +9836,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What animal is the report about? / ਰਿਪੋਰਟ ਕਿਸ ਜਾਨਵਰ ਬਾਰੇ ਹੈ?",
-        "choices": ["tiger / ਬਾਘ", "duck / ਬਤਖ", "horse / ਘੋੜਾ"],
+        "choices": [
+          "tiger / ਬਾਘ",
+          "duck / ਬਤਖ",
+          "horse / ਘੋੜਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the report is about a tiger. / ਪੈਨਲ 1 ਵਿੱਚ ਰਿਪੋਰਟ ਬਾਘ ਬਾਰੇ ਹੈ।"
       },
       {
         "question": "What does a tiger have? / ਬਾਘ ਕੋਲ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["stripes / ਧਾਰੀਆਂ", "wheels / ਪਹੀਏ", "books / ਕਿਤਾਬਾਂ"],
+        "choices": [
+          "stripes / ਧਾਰੀਆਂ",
+          "wheels / ਪਹੀਏ",
+          "books / ਕਿਤਾਬਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says a tiger has stripes. / ਪੈਨਲ 2 ਵਿੱਚ ਬਾਘ ਦੀਆਂ ਧਾਰੀਆਂ ਹਨ।"
       },
       {
         "question": "Where do tigers live? / ਬਾਘ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹਨ?",
-        "choices": ["forest / ਜੰਗਲ", "ocean / ਸਮੁੰਦਰ", "classroom / ਕਲਾਸ"],
+        "choices": [
+          "forest / ਜੰਗਲ",
+          "ocean / ਸਮੁੰਦਰ",
+          "classroom / ਕਲਾਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says tigers live in a forest. / ਪੈਨਲ 3 ਵਿੱਚ ਬਾਘ ਜੰਗਲ ਵਿੱਚ ਰਹਿੰਦੇ ਹਨ।"
       },
       {
         "question": "What can tigers do for food? / ਖਾਣੇ ਲਈ ਬਾਘ ਕੀ ਕਰ ਸਕਦੇ ਹਨ?",
-        "choices": ["hunt / ਸ਼ਿਕਾਰ", "paint / ਰੰਗਣਾ", "drive / ਗੱਡੀ ਚਲਾਉਣਾ"],
+        "choices": [
+          "hunt / ਸ਼ਿਕਾਰ",
+          "paint / ਰੰਗਣਾ",
+          "drive / ਗੱਡੀ ਚਲਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says tigers can hunt for food. / ਪੈਨਲ 3 ਵਿੱਚ ਬਾਘ ਸ਼ਿਕਾਰ ਕਰ ਸਕਦੇ ਹਨ।"
       },
       {
         "question": "What should we do for tigers? / ਸਾਨੂੰ ਬਾਘਾਂ ਲਈ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["protect / ਰੱਖਿਆ", "ignore / ਅਣਡਿੱਠਾ", "scare / ਡਰਾਉਣਾ"],
+        "choices": [
+          "protect / ਰੱਖਿਆ",
+          "ignore / ਅਣਡਿੱਠਾ",
+          "scare / ਡਰਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says we should protect them. / ਪੈਨਲ 4 ਵਿੱਚ ਰੱਖਿਆ ਕਰਨ ਦੀ ਗੱਲ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "report", "meaningEn": "a short talk with facts", "meaningPa": "ਰਿਪੋਰਟ; ਤੱਥਾਂ ਵਾਲੀ ਛੋਟੀ ਗੱਲ" },
-      { "word": "fact", "meaningEn": "something true", "meaningPa": "ਤੱਥ; ਸੱਚੀ ਗੱਲ" },
-      { "word": "animal", "meaningEn": "a living creature like a tiger", "meaningPa": "ਜਾਨਵਰ; ਜੀਵ" },
-      { "word": "stripes", "meaningEn": "long lines of color on fur", "meaningPa": "ਧਾਰੀਆਂ; ਰੰਗ ਦੀਆਂ ਲੰਬੀਆਂ ਲਾਈਨਾਂ" },
-      { "word": "forest", "meaningEn": "a place with many trees", "meaningPa": "ਜੰਗਲ; ਬਹੁਤ ਦਰੱਖਤਾਂ ਵਾਲੀ ਥਾਂ" },
-      { "word": "hunt", "meaningEn": "look for food by chasing", "meaningPa": "ਸ਼ਿਕਾਰ ਕਰਨਾ; ਖਾਣਾ ਲੱਭਣਾ" },
-      { "word": "big", "meaningEn": "large in size", "meaningPa": "ਵੱਡਾ; ਆਕਾਰ ਵਿੱਚ ਵਧੇਰਾ" },
-      { "word": "strong", "meaningEn": "having a lot of power", "meaningPa": "ਮਜ਼ਬੂਤ; ਤਾਕਤਵਰ" },
-      { "word": "protect", "meaningEn": "keep safe from harm", "meaningPa": "ਰੱਖਿਆ ਕਰਨਾ; ਸੁਰੱਖਿਅਤ ਰੱਖਣਾ" },
-      { "word": "learn", "meaningEn": "get new knowledge", "meaningPa": "ਸਿੱਖਣਾ; ਨਵੀਂ ਜਾਣਕਾਰੀ ਲੈਣਾ" }
-    ]
+      {
+        "word": "report",
+        "meaningEn": "a short talk with facts",
+        "meaningPa": "ਰਿਪੋਰਟ; ਤੱਥਾਂ ਵਾਲੀ ਛੋਟੀ ਗੱਲ"
+      },
+      {
+        "word": "fact",
+        "meaningEn": "something true",
+        "meaningPa": "ਤੱਥ; ਸੱਚੀ ਗੱਲ"
+      },
+      {
+        "word": "animal",
+        "meaningEn": "a living creature like a tiger",
+        "meaningPa": "ਜਾਨਵਰ; ਜੀਵ"
+      },
+      {
+        "word": "stripes",
+        "meaningEn": "long lines of color on fur",
+        "meaningPa": "ਧਾਰੀਆਂ; ਰੰਗ ਦੀਆਂ ਲੰਬੀਆਂ ਲਾਈਨਾਂ"
+      },
+      {
+        "word": "forest",
+        "meaningEn": "a place with many trees",
+        "meaningPa": "ਜੰਗਲ; ਬਹੁਤ ਦਰੱਖਤਾਂ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "hunt",
+        "meaningEn": "look for food by chasing",
+        "meaningPa": "ਸ਼ਿਕਾਰ ਕਰਨਾ; ਖਾਣਾ ਲੱਭਣਾ"
+      },
+      {
+        "word": "big",
+        "meaningEn": "large in size",
+        "meaningPa": "ਵੱਡਾ; ਆਕਾਰ ਵਿੱਚ ਵਧੇਰਾ"
+      },
+      {
+        "word": "strong",
+        "meaningEn": "having a lot of power",
+        "meaningPa": "ਮਜ਼ਬੂਤ; ਤਾਕਤਵਰ"
+      },
+      {
+        "word": "protect",
+        "meaningEn": "keep safe from harm",
+        "meaningPa": "ਰੱਖਿਆ ਕਰਨਾ; ਸੁਰੱਖਿਅਤ ਰੱਖਣਾ"
+      },
+      {
+        "word": "learn",
+        "meaningEn": "get new knowledge",
+        "meaningPa": "ਸਿੱਖਣਾ; ਨਵੀਂ ਜਾਣਕਾਰੀ ਲੈਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "share",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S08",
@@ -3827,47 +9969,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go? / ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["playground / ਖੇਡ ਮੈਦਾਨ", "hospital / ਹਸਪਤਾਲ", "store / ਦੁਕਾਨ"],
+        "choices": [
+          "playground / ਖੇਡ ਮੈਦਾਨ",
+          "hospital / ਹਸਪਤਾਲ",
+          "store / ਦੁਕਾਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they go to the playground. / ਪੈਨਲ 1 ਵਿੱਚ ਖੇਡ ਮੈਦਾਨ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they do first to choose the game? / ਖੇਡ ਚੁਣਨ ਲਈ ਉਹ ਪਹਿਲਾਂ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["vote / ਵੋਟ", "fight / ਲੜਾਈ", "hide / ਲੁਕਾਉਣਾ"],
+        "choices": [
+          "vote / ਵੋਟ",
+          "fight / ਲੜਾਈ",
+          "hide / ਲੁਕਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says they vote to choose. / ਪੈਨਲ 2 ਵਿੱਚ ਵੋਟ ਕਰਕੇ ਚੁਣਦੇ ਹਨ।"
       },
       {
         "question": "What do they count? / ਉਹ ਕੀ ਗਿਣਦੇ ਹਨ?",
-        "choices": ["votes / ਵੋਟ", "clouds / ਬੱਦਲ", "shoes / ਜੁੱਤੇ"],
+        "choices": [
+          "votes / ਵੋਟ",
+          "clouds / ਬੱਦਲ",
+          "shoes / ਜੁੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they count the votes. / ਪੈਨਲ 3 ਵਿੱਚ ਵੋਟ ਗਿਣਦੇ ਹਨ।"
       },
       {
         "question": "How do they play? / ਉਹ ਕਿਵੇਂ ਖੇਡਦੇ ਹਨ?",
-        "choices": ["fair / ਨਿਆਂ ਨਾਲ", "rude / ਬਦਤਮੀਜ਼ੀ ਨਾਲ", "angry / ਗੁੱਸੇ ਨਾਲ"],
+        "choices": [
+          "fair / ਨਿਆਂ ਨਾਲ",
+          "rude / ਬਦਤਮੀਜ਼ੀ ਨਾਲ",
+          "angry / ਗੁੱਸੇ ਨਾਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they agree to play fairly. / ਪੈਨਲ 3 ਵਿੱਚ ਨਿਆਂ ਨਾਲ ਖੇਡਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "How do they help the sad friend? / ਉਹ ਉਦਾਸ ਦੋਸਤ ਦੀ ਮਦਦ ਕਿਵੇਂ ਕਰਦੇ ਹਨ?",
-        "choices": ["invite to team / ਟੀਮ ਵਿੱਚ ਬੁਲਾਉਂਦੇ ਹਨ", "ignore / ਅਣਡਿੱਠਾ ਕਰਦੇ ਹਨ", "laugh / ਹੱਸਦੇ ਹਨ"],
+        "choices": [
+          "invite to team / ਟੀਮ ਵਿੱਚ ਬੁਲਾਉਂਦੇ ਹਨ",
+          "ignore / ਅਣਡਿੱਠਾ ਕਰਦੇ ਹਨ",
+          "laugh / ਹੱਸਦੇ ਹਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says they invite the friend to play on a team. / ਪੈਨਲ 4 ਵਿੱਚ ਦੋਸਤ ਨੂੰ ਟੀਮ ਵਿੱਚ ਬੁਲਾਉਂਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "vote", "meaningEn": "choose by picking an option", "meaningPa": "ਵੋਟ; ਚੋਣ ਲਈ ਵੋਟ ਪਾਉਣਾ" },
-      { "word": "rule", "meaningEn": "something you must follow", "meaningPa": "ਨਿਯਮ; ਮੰਨਣ ਵਾਲੀ ਗੱਲ" },
-      { "word": "count", "meaningEn": "say numbers in order", "meaningPa": "ਗਿਣਣਾ; ਨੰਬਰ ਕਹਿਣਾ" },
-      { "word": "winner", "meaningEn": "the one that gets the most votes", "meaningPa": "ਜੇਤੂ; ਜੋ ਜਿੱਤੇ" },
-      { "word": "team", "meaningEn": "a group that plays together", "meaningPa": "ਟੀਮ; ਇਕੱਠੇ ਖੇਡਣ ਵਾਲਾ ਗਰੁੱਪ" },
-      { "word": "agree", "meaningEn": "say yes to the same plan", "meaningPa": "ਸਹਿਮਤ ਹੋਣਾ; ਇੱਕੋ ਗੱਲ ਤੇ ਹਾਂ" },
-      { "word": "fair", "meaningEn": "everyone follows rules and gets a chance", "meaningPa": "ਨਿਆਂਪੂਰਨ; ਸਭ ਨੂੰ ਮੌਕਾ" },
-      { "word": "cheer", "meaningEn": "shout happily for a team", "meaningPa": "ਹੌਸਲਾ ਦੇਣਾ; ਖੁਸ਼ੀ ਨਾਲ ਨਾਅਰਾ" },
-      { "word": "include", "meaningEn": "let someone join", "meaningPa": "ਸ਼ਾਮਲ ਕਰਨਾ; ਨਾਲ ਜੋੜਨਾ" },
-      { "word": "play", "meaningEn": "do a fun game", "meaningPa": "ਖੇਡਣਾ; ਮਜ਼ੇ ਵਾਲੀ ਗਤੀਵਿਧੀ" }
-    ]
+      {
+        "word": "vote",
+        "meaningEn": "choose by picking an option",
+        "meaningPa": "ਵੋਟ; ਚੋਣ ਲਈ ਵੋਟ ਪਾਉਣਾ"
+      },
+      {
+        "word": "rule",
+        "meaningEn": "something you must follow",
+        "meaningPa": "ਨਿਯਮ; ਮੰਨਣ ਵਾਲੀ ਗੱਲ"
+      },
+      {
+        "word": "count",
+        "meaningEn": "say numbers in order",
+        "meaningPa": "ਗਿਣਣਾ; ਨੰਬਰ ਕਹਿਣਾ"
+      },
+      {
+        "word": "winner",
+        "meaningEn": "the one that gets the most votes",
+        "meaningPa": "ਜੇਤੂ; ਜੋ ਜਿੱਤੇ"
+      },
+      {
+        "word": "team",
+        "meaningEn": "a group that plays together",
+        "meaningPa": "ਟੀਮ; ਇਕੱਠੇ ਖੇਡਣ ਵਾਲਾ ਗਰੁੱਪ"
+      },
+      {
+        "word": "agree",
+        "meaningEn": "say yes to the same plan",
+        "meaningPa": "ਸਹਿਮਤ ਹੋਣਾ; ਇੱਕੋ ਗੱਲ ਤੇ ਹਾਂ"
+      },
+      {
+        "word": "fair",
+        "meaningEn": "everyone follows rules and gets a chance",
+        "meaningPa": "ਨਿਆਂਪੂਰਨ; ਸਭ ਨੂੰ ਮੌਕਾ"
+      },
+      {
+        "word": "cheer",
+        "meaningEn": "shout happily for a team",
+        "meaningPa": "ਹੌਸਲਾ ਦੇਣਾ; ਖੁਸ਼ੀ ਨਾਲ ਨਾਅਰਾ"
+      },
+      {
+        "word": "include",
+        "meaningEn": "let someone join",
+        "meaningPa": "ਸ਼ਾਮਲ ਕਰਨਾ; ਨਾਲ ਜੋੜਨਾ"
+      },
+      {
+        "word": "play",
+        "meaningEn": "do a fun game",
+        "meaningPa": "ਖੇਡਣਾ; ਮਜ਼ੇ ਵਾਲੀ ਗਤੀਵਿਧੀ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "goes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "count",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "agree",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S09",
@@ -3880,47 +10102,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "When does the child draw? / ਬੱਚਾ ਕਦੋਂ ਡਰਾਇੰਗ ਬਣਾਂਦਾ/ਬਣਾਂਦੀ ਹੈ?",
-        "choices": ["art time / ਆਰਟ ਟਾਈਮ", "midnight / ਅੱਧੀ ਰਾਤ", "winter only / ਸਿਰਫ਼ ਸਰਦੀ"],
+        "choices": [
+          "art time / ਆਰਟ ਟਾਈਮ",
+          "midnight / ਅੱਧੀ ਰਾਤ",
+          "winter only / ਸਿਰਫ਼ ਸਰਦੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child draws in art time. / ਪੈਨਲ 1 ਵਿੱਚ ਆਰਟ ਟਾਈਮ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child describe first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਦੱਸਦਾ/ਦੱਸਦੀ ਹੈ?",
-        "choices": ["background / ਪਿੱਛੋਕੜ", "bus / ਬੱਸ", "shoe / ਜੁੱਤਾ"],
+        "choices": [
+          "background / ਪਿੱਛੋਕੜ",
+          "bus / ਬੱਸ",
+          "shoe / ਜੁੱਤਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child points to the background first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਪਿੱਛੋਕੜ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who is in the front of the picture? / ਤਸਵੀਰ ਦੇ ਅੱਗੇ ਕੌਣ ਹੈ?",
-        "choices": ["family / ਪਰਿਵਾਰ", "lion / ਸ਼ੇਰ", "robot / ਰੋਬੋਟ"],
+        "choices": [
+          "family / ਪਰਿਵਾਰ",
+          "lion / ਸ਼ੇਰ",
+          "robot / ਰੋਬੋਟ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child describes the family in the front. / ਪੈਨਲ 3 ਵਿੱਚ ਪਰਿਵਾਰ ਬਾਰੇ ਦੱਸਦਾ/ਦੱਸਦੀ ਹੈ।"
       },
       {
         "question": "Why did the child choose these colors? / ਬੱਚੇ ਨੇ ਇਹ ਰੰਗ ਕਿਉਂ ਚੁਣੇ?",
-        "choices": ["feel happy / ਖੁਸ਼ ਮਹਿਸੂਸ", "feel sick / ਬਿਮਾਰ ਮਹਿਸੂਸ", "feel angry / ਗੁੱਸਾ ਮਹਿਸੂਸ"],
+        "choices": [
+          "feel happy / ਖੁਸ਼ ਮਹਿਸੂਸ",
+          "feel sick / ਬਿਮਾਰ ਮਹਿਸੂਸ",
+          "feel angry / ਗੁੱਸਾ ਮਹਿਸੂਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the colors make the child feel happy and calm. / ਪੈਨਲ 4 ਵਿੱਚ ਰੰਗ ਖੁਸ਼ ਅਤੇ ਸ਼ਾਂਤ ਮਹਿਸੂਸ ਕਰਾਉਂਦੇ ਹਨ।"
       },
       {
         "question": "What helps the child explain? / ਬੱਚੇ ਨੂੰ ਸਮਝਾਉਣ ਵਿੱਚ ਕੀ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["imagination / ਕਲਪਨਾ", "noise / ਸ਼ੋਰ", "fear / ਡਰ"],
+        "choices": [
+          "imagination / ਕਲਪਨਾ",
+          "noise / ਸ਼ੋਰ",
+          "fear / ਡਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says imagination helps the child explain. / ਪੈਨਲ 5 ਵਿੱਚ ਕਲਪਨਾ ਮਦਦ ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "drawing", "meaningEn": "a picture you make with pencil or crayon", "meaningPa": "ਡਰਾਇੰਗ; ਬਣਾਈ ਹੋਈ ਤਸਵੀਰ" },
-      { "word": "picture", "meaningEn": "an image you can see", "meaningPa": "ਤਸਵੀਰ; ਚਿੱਤਰ" },
-      { "word": "color", "meaningEn": "red, blue, yellow, and more", "meaningPa": "ਰੰਗ; ਲਾਲ, ਨੀਲਾ, ਪੀਲਾ ਆਦਿ" },
-      { "word": "background", "meaningEn": "the back part of a picture", "meaningPa": "ਪਿੱਛੋਕੜ; ਤਸਵੀਰ ਦਾ ਪਿੱਛਲਾ ਹਿੱਸਾ" },
-      { "word": "front", "meaningEn": "the part closest to you", "meaningPa": "ਅੱਗੇ; ਨੇੜੇ ਵਾਲਾ ਹਿੱਸਾ" },
-      { "word": "describe", "meaningEn": "tell details about something", "meaningPa": "ਵਰਣਨ ਕਰਨਾ; ਵੇਰਵਾ ਦੱਸਣਾ" },
-      { "word": "why", "meaningEn": "a question word for a reason", "meaningPa": "ਕਿਉਂ; ਕਾਰਨ ਪੁੱਛਣ ਵਾਲਾ ਸ਼ਬਦ" },
-      { "word": "feel", "meaningEn": "have an emotion", "meaningPa": "ਮਹਿਸੂਸ ਕਰਨਾ; ਭਾਵਨਾ ਹੋਣੀ" },
-      { "word": "story", "meaningEn": "a tale with events", "meaningPa": "ਕਹਾਣੀ; ਘਟਨਾਵਾਂ ਵਾਲੀ ਗੱਲ" },
-      { "word": "imagination", "meaningEn": "making pictures in your mind", "meaningPa": "ਕਲਪਨਾ; ਮਨ ਵਿੱਚ ਤਸਵੀਰ ਬਣਾਉਣਾ" }
-    ]
+      {
+        "word": "drawing",
+        "meaningEn": "a picture you make with pencil or crayon",
+        "meaningPa": "ਡਰਾਇੰਗ; ਬਣਾਈ ਹੋਈ ਤਸਵੀਰ"
+      },
+      {
+        "word": "picture",
+        "meaningEn": "an image you can see",
+        "meaningPa": "ਤਸਵੀਰ; ਚਿੱਤਰ"
+      },
+      {
+        "word": "color",
+        "meaningEn": "red, blue, yellow, and more",
+        "meaningPa": "ਰੰਗ; ਲਾਲ, ਨੀਲਾ, ਪੀਲਾ ਆਦਿ"
+      },
+      {
+        "word": "background",
+        "meaningEn": "the back part of a picture",
+        "meaningPa": "ਪਿੱਛੋਕੜ; ਤਸਵੀਰ ਦਾ ਪਿੱਛਲਾ ਹਿੱਸਾ"
+      },
+      {
+        "word": "front",
+        "meaningEn": "the part closest to you",
+        "meaningPa": "ਅੱਗੇ; ਨੇੜੇ ਵਾਲਾ ਹਿੱਸਾ"
+      },
+      {
+        "word": "describe",
+        "meaningEn": "tell details about something",
+        "meaningPa": "ਵਰਣਨ ਕਰਨਾ; ਵੇਰਵਾ ਦੱਸਣਾ"
+      },
+      {
+        "word": "why",
+        "meaningEn": "a question word for a reason",
+        "meaningPa": "ਕਿਉਂ; ਕਾਰਨ ਪੁੱਛਣ ਵਾਲਾ ਸ਼ਬਦ"
+      },
+      {
+        "word": "feel",
+        "meaningEn": "have an emotion",
+        "meaningPa": "ਮਹਿਸੂਸ ਕਰਨਾ; ਭਾਵਨਾ ਹੋਣੀ"
+      },
+      {
+        "word": "story",
+        "meaningEn": "a tale with events",
+        "meaningPa": "ਕਹਾਣੀ; ਘਟਨਾਵਾਂ ਵਾਲੀ ਗੱਲ"
+      },
+      {
+        "word": "imagination",
+        "meaningEn": "making pictures in your mind",
+        "meaningPa": "ਕਲਪਨਾ; ਮਨ ਵਿੱਚ ਤਸਵੀਰ ਬਣਾਉਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "explain",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B7_S10",
@@ -3933,47 +10235,127 @@ var BOOK7_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Who comes to the classroom? / ਕਲਾਸ ਵਿੱਚ ਕੌਣ ਆਉਂਦਾ/ਆਉਂਦੀ ਹੈ?",
-        "choices": ["new student / ਨਵਾਂ ਵਿਦਿਆਰਥੀ", "bus driver / ਬੱਸ ਡਰਾਈਵਰ", "chef / ਰਸੋਈਆ"],
+        "choices": [
+          "new student / ਨਵਾਂ ਵਿਦਿਆਰਥੀ",
+          "bus driver / ਬੱਸ ਡਰਾਈਵਰ",
+          "chef / ਰਸੋਈਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says a new student comes to class. / ਪੈਨਲ 1 ਵਿੱਚ ਨਵਾਂ ਵਿਦਿਆਰਥੀ ਆਉਂਦਾ/ਆਉਂਦੀ ਹੈ।"
       },
       {
         "question": "How does the new student look? / ਨਵਾਂ ਵਿਦਿਆਰਥੀ ਕਿਵੇਂ ਲੱਗਦਾ/ਲੱਗਦੀ ਹੈ?",
-        "choices": ["nervous / ਘਬਰਾਇਆ", "sleepy / ਨੀਂਦ ਵਾਲਾ", "angry / ਗੁੱਸੇ ਵਿੱਚ"],
+        "choices": [
+          "nervous / ਘਬਰਾਇਆ",
+          "sleepy / ਨੀਂਦ ਵਾਲਾ",
+          "angry / ਗੁੱਸੇ ਵਿੱਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the student looks nervous. / ਪੈਨਲ 1 ਵਿੱਚ ਵਿਦਿਆਰਥੀ ਘਬਰਾਇਆ/ਘਬਰਾਈ ਲੱਗਦਾ/ਲੱਗਦੀ ਹੈ।"
       },
       {
         "question": "What does the child say first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["welcome / ਸੁਆਗਤ", "go away / ਦੂਰ ਜਾਓ", "be quiet / ਚੁੱਪ ਰਹੋ"],
+        "choices": [
+          "welcome / ਸੁਆਗਤ",
+          "go away / ਦੂਰ ਜਾਓ",
+          "be quiet / ਚੁੱਪ ਰਹੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child smiles and says welcome. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਸੁਆਗਤ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ।"
       },
       {
         "question": "What does the new student ask for? / ਨਵਾਂ ਵਿਦਿਆਰਥੀ ਕੀ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ?",
-        "choices": ["directions / ਰਸਤਾ", "candy / ਕੈਂਡੀ", "rain / ਮੀਂਹ"],
+        "choices": [
+          "directions / ਰਸਤਾ",
+          "candy / ਕੈਂਡੀ",
+          "rain / ਮੀਂਹ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the student asks for directions to the reading corner. / ਪੈਨਲ 3 ਵਿੱਚ ਪੜ੍ਹਨ ਵਾਲੇ ਕੋਨੇ ਦਾ ਰਸਤਾ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "What happens at the end? / ਅੰਤ ਵਿੱਚ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["friends / ਦੋਸਤ", "fight / ਲੜਾਈ", "lost / ਗੁੰਮ"],
+        "choices": [
+          "friends / ਦੋਸਤ",
+          "fight / ਲੜਾਈ",
+          "lost / ਗੁੰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they become friends. / ਪੈਨਲ 5 ਵਿੱਚ ਉਹ ਦੋਸਤ ਬਣ ਜਾਂਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "new", "meaningEn": "not old; just started", "meaningPa": "ਨਵਾਂ; ਹੁਣੇ ਆਇਆ" },
-      { "word": "welcome", "meaningEn": "a kind greeting for someone new", "meaningPa": "ਸੁਆਗਤ; ਨਵਿਆਂ ਲਈ ਪਿਆਰਾ ਸਲਾਮ" },
-      { "word": "introduce", "meaningEn": "tell your name to someone", "meaningPa": "ਪਰਚਿਆ ਦੇਣਾ; ਆਪਣਾ ਨਾਂ ਦੱਸਣਾ" },
-      { "word": "question", "meaningEn": "words you ask to get an answer", "meaningPa": "ਸਵਾਲ; ਪੁੱਛਣ ਵਾਲੀ ਗੱਲ" },
-      { "word": "directions", "meaningEn": "how to get to a place", "meaningPa": "ਰਸਤਾ; ਕਿੱਧਰ ਜਾਣਾ" },
-      { "word": "classroom", "meaningEn": "a room where students learn", "meaningPa": "ਕਲਾਸ; ਪੜ੍ਹਾਈ ਵਾਲਾ ਕਮਰਾ" },
-      { "word": "help", "meaningEn": "do something to support someone", "meaningPa": "ਮਦਦ; ਸਹਾਰਾ ਦੇਣਾ" },
-      { "word": "together", "meaningEn": "with another person", "meaningPa": "ਇਕੱਠੇ; ਨਾਲ ਮਿਲ ਕੇ" },
-      { "word": "friend", "meaningEn": "a person you like and trust", "meaningPa": "ਦੋਸਤ; ਪਿਆਰਾ ਸਾਥੀ" },
-      { "word": "smile", "meaningEn": "a happy face expression", "meaningPa": "ਮੁਸਕਾਨ; ਖੁਸ਼ ਚਿਹਰਾ" }
-    ]
+      {
+        "word": "new",
+        "meaningEn": "not old; just started",
+        "meaningPa": "ਨਵਾਂ; ਹੁਣੇ ਆਇਆ"
+      },
+      {
+        "word": "welcome",
+        "meaningEn": "a kind greeting for someone new",
+        "meaningPa": "ਸੁਆਗਤ; ਨਵਿਆਂ ਲਈ ਪਿਆਰਾ ਸਲਾਮ"
+      },
+      {
+        "word": "introduce",
+        "meaningEn": "tell your name to someone",
+        "meaningPa": "ਪਰਚਿਆ ਦੇਣਾ; ਆਪਣਾ ਨਾਂ ਦੱਸਣਾ"
+      },
+      {
+        "word": "question",
+        "meaningEn": "words you ask to get an answer",
+        "meaningPa": "ਸਵਾਲ; ਪੁੱਛਣ ਵਾਲੀ ਗੱਲ"
+      },
+      {
+        "word": "directions",
+        "meaningEn": "how to get to a place",
+        "meaningPa": "ਰਸਤਾ; ਕਿੱਧਰ ਜਾਣਾ"
+      },
+      {
+        "word": "classroom",
+        "meaningEn": "a room where students learn",
+        "meaningPa": "ਕਲਾਸ; ਪੜ੍ਹਾਈ ਵਾਲਾ ਕਮਰਾ"
+      },
+      {
+        "word": "help",
+        "meaningEn": "do something to support someone",
+        "meaningPa": "ਮਦਦ; ਸਹਾਰਾ ਦੇਣਾ"
+      },
+      {
+        "word": "together",
+        "meaningEn": "with another person",
+        "meaningPa": "ਇਕੱਠੇ; ਨਾਲ ਮਿਲ ਕੇ"
+      },
+      {
+        "word": "friend",
+        "meaningEn": "a person you like and trust",
+        "meaningPa": "ਦੋਸਤ; ਪਿਆਰਾ ਸਾਥੀ"
+      },
+      {
+        "word": "smile",
+        "meaningEn": "a happy face expression",
+        "meaningPa": "ਮੁਸਕਾਨ; ਖੁਸ਼ ਚਿਹਰਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "comes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -3989,47 +10371,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child see in the sky? / ਬੱਚਾ ਆਸਮਾਨ ਵਿੱਚ ਕੀ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ?",
-        "choices": ["clouds / ਬੱਦਲ", "fish / ਮੱਛੀ", "books / ਕਿਤਾਬਾਂ"],
+        "choices": [
+          "clouds / ਬੱਦਲ",
+          "fish / ਮੱਛੀ",
+          "books / ਕਿਤਾਬਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child sees big clouds. / ਪੈਨਲ 1 ਵਿੱਚ ਵੱਡੇ ਬੱਦਲ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["observe / ਧਿਆਨ ਨਾਲ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ", "run / ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ"],
+        "choices": [
+          "observe / ਧਿਆਨ ਨਾਲ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ",
+          "run / ਦੌੜਦਾ/ਦੌੜਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child observes the clouds. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਦਲ ਧਿਆਨ ਨਾਲ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["it will rain / ਮੀਂਹ ਪਵੇਗਾ", "it will snow / ਬਰਫ਼ ਪਵੇਗੀ", "it will be night / ਰਾਤ ਹੋ ਜਾਵੇਗੀ"],
+        "choices": [
+          "it will rain / ਮੀਂਹ ਪਵੇਗਾ",
+          "it will snow / ਬਰਫ਼ ਪਵੇਗੀ",
+          "it will be night / ਰਾਤ ਹੋ ਜਾਵੇਗੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child predicts rain. / ਪੈਨਲ 3 ਵਿੱਚ ਮੀਂਹ ਦਾ ਅੰਦਾਜ਼ਾ ਹੈ।"
       },
       {
         "question": "How does the child test the plan? / ਬੱਚਾ ਯੋਜਨਾ ਕਿਵੇਂ ਅਜ਼ਮਾਉਂਦਾ/ਅਜ਼ਮਾਉਂਦੀ ਹੈ?",
-        "choices": ["packs an umbrella / ਛਤਰੀ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ", "eats candy / ਕੈਂਡੀ ਖਾਂਦਾ/ਖਾਂਦੀ ਹੈ", "jumps high / ਉੱਚਾ ਕੂਦਦਾ/ਕੂਦਦੀ ਹੈ"],
+        "choices": [
+          "packs an umbrella / ਛਤਰੀ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ",
+          "eats candy / ਕੈਂਡੀ ਖਾਂਦਾ/ਖਾਂਦੀ ਹੈ",
+          "jumps high / ਉੱਚਾ ਕੂਦਦਾ/ਕੂਦਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child packs an umbrella to be ready. / ਪੈਨਲ 3 ਵਿੱਚ ਛਤਰੀ ਰੱਖ ਕੇ ਤਿਆਰ ਹੁੰਦਾ/ਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "Why was the prediction right? / ਅੰਦਾਜ਼ਾ ਠੀਕ ਕਿਉਂ ਸੀ?",
-        "choices": ["because it rained / ਕਿਉਂਕਿ ਮੀਂਹ ਪਿਆ", "because it was loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਸੀ", "because it was dark / ਕਿਉਂਕਿ ਹਨੇਰਾ ਸੀ"],
+        "choices": [
+          "because it rained / ਕਿਉਂਕਿ ਮੀਂਹ ਪਿਆ",
+          "because it was loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਸੀ",
+          "because it was dark / ਕਿਉਂਕਿ ਹਨੇਰਾ ਸੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the result is rain, so the prediction was right. / ਪੈਨਲ 4 ਵਿੱਚ ਨਤੀਜਾ ਮੀਂਹ ਹੈ, ਇਸ ਲਈ ਅੰਦਾਜ਼ਾ ਠੀਕ ਸੀ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "observe", "meaningEn": "look carefully to learn", "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ" },
-      { "word": "notice", "meaningEn": "see something and pay attention", "meaningPa": "ਨੋਟ ਕਰਨਾ; ਧਿਆਨ ਦੇਣਾ" },
-      { "word": "cloud", "meaningEn": "a white or gray shape in the sky", "meaningPa": "ਬੱਦਲ; ਆਸਮਾਨ ਵਿੱਚ ਧੁੰਦਲਾ ਗੁੱਛ" },
-      { "word": "gray", "meaningEn": "a color between black and white", "meaningPa": "ਸਲੇਟੀ; ਕਾਲੇ ਤੇ ਚਿੱਟੇ ਵਿਚਕਾਰ ਰੰਗ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਕੀ ਹੋਵੇਗਾ ਕਹਿਣਾ" },
-      { "word": "test", "meaningEn": "try to check what happens", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "result", "meaningEn": "what happens in the end", "meaningPa": "ਨਤੀਜਾ; ਅੰਤ ਵਿੱਚ ਕੀ ਹੋਇਆ" },
-      { "word": "rain", "meaningEn": "water falling from clouds", "meaningPa": "ਮੀਂਹ; ਬੱਦਲਾਂ ਤੋਂ ਪਾਣੀ ਡਿੱਗਣਾ" },
-      { "word": "umbrella", "meaningEn": "a tool to stay dry in rain", "meaningPa": "ਛਤਰੀ; ਮੀਂਹ ਤੋਂ ਬਚਣ ਦੀ ਚੀਜ਼" },
-      { "word": "because", "meaningEn": "a word that tells the reason", "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ" }
-    ]
+      {
+        "word": "observe",
+        "meaningEn": "look carefully to learn",
+        "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ"
+      },
+      {
+        "word": "notice",
+        "meaningEn": "see something and pay attention",
+        "meaningPa": "ਨੋਟ ਕਰਨਾ; ਧਿਆਨ ਦੇਣਾ"
+      },
+      {
+        "word": "cloud",
+        "meaningEn": "a white or gray shape in the sky",
+        "meaningPa": "ਬੱਦਲ; ਆਸਮਾਨ ਵਿੱਚ ਧੁੰਦਲਾ ਗੁੱਛ"
+      },
+      {
+        "word": "gray",
+        "meaningEn": "a color between black and white",
+        "meaningPa": "ਸਲੇਟੀ; ਕਾਲੇ ਤੇ ਚਿੱਟੇ ਵਿਚਕਾਰ ਰੰਗ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਕੀ ਹੋਵੇਗਾ ਕਹਿਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to check what happens",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens in the end",
+        "meaningPa": "ਨਤੀਜਾ; ਅੰਤ ਵਿੱਚ ਕੀ ਹੋਇਆ"
+      },
+      {
+        "word": "rain",
+        "meaningEn": "water falling from clouds",
+        "meaningPa": "ਮੀਂਹ; ਬੱਦਲਾਂ ਤੋਂ ਪਾਣੀ ਡਿੱਗਣਾ"
+      },
+      {
+        "word": "umbrella",
+        "meaningEn": "a tool to stay dry in rain",
+        "meaningPa": "ਛਤਰੀ; ਮੀਂਹ ਤੋਂ ਬਚਣ ਦੀ ਚੀਜ਼"
+      },
+      {
+        "word": "because",
+        "meaningEn": "a word that tells the reason",
+        "meaningPa": "ਕਿਉਂਕਿ; ਕਾਰਨ ਦੱਸਣ ਵਾਲਾ ਸ਼ਬਦ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "was",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S02",
@@ -4042,47 +10504,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What two places does the child compare? / ਬੱਚਾ ਕਿਹੜੀਆਂ ਦੋ ਥਾਵਾਂ ਦੀ ਤੁਲਨਾ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["sun and shade / ਧੁੱਪ ਅਤੇ ਛਾਂ", "bus and train / ਬੱਸ ਅਤੇ ਰੇਲ", "milk and water / ਦੁੱਧ ਅਤੇ ਪਾਣੀ"],
+        "choices": [
+          "sun and shade / ਧੁੱਪ ਅਤੇ ਛਾਂ",
+          "bus and train / ਬੱਸ ਅਤੇ ਰੇਲ",
+          "milk and water / ਦੁੱਧ ਅਤੇ ਪਾਣੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story compares a sunny place and a shady place. / ਕਹਾਣੀ ਵਿੱਚ ਧੁੱਪ ਅਤੇ ਛਾਂ ਦੀ ਤੁਲਨਾ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["sun is warmer / ਧੁੱਪ ਗਰਮ", "shade is louder / ਛਾਂ ਸ਼ੋਰ ਵਾਲੀ", "tree is wet / ਦਰੱਖਤ ਭਿੱਜਾ"],
+        "choices": [
+          "sun is warmer / ਧੁੱਪ ਗਰਮ",
+          "shade is louder / ਛਾਂ ਸ਼ੋਰ ਵਾਲੀ",
+          "tree is wet / ਦਰੱਖਤ ਭਿੱਜਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts the sun will feel warmer. / ਪੈਨਲ 3 ਵਿੱਚ ਧੁੱਪ ਗਰਮ ਹੋਣ ਦਾ ਅੰਦਾਜ਼ਾ ਹੈ।"
       },
       {
         "question": "How does the child test? / ਬੱਚਾ ਕਿਵੇਂ ਅਜ਼ਮਾਉਂਦਾ/ਅਜ਼ਮਾਉਂਦੀ ਹੈ?",
-        "choices": ["stands in both / ਦੋਵੇਂ ਥਾਵਾਂ ਖੜ੍ਹਦਾ/ਖੜ੍ਹਦੀ ਹੈ", "jumps / ਕੂਦਦਾ/ਕੂਦਦੀ ਹੈ", "sings / ਗਾਉਂਦਾ/ਗਾਉਂਦੀ ਹੈ"],
+        "choices": [
+          "stands in both / ਦੋਵੇਂ ਥਾਵਾਂ ਖੜ੍ਹਦਾ/ਖੜ੍ਹਦੀ ਹੈ",
+          "jumps / ਕੂਦਦਾ/ਕੂਦਦੀ ਹੈ",
+          "sings / ਗਾਉਂਦਾ/ਗਾਉਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 tests by standing in the sun and then in the shade. / ਪੈਨਲ 3 ਵਿੱਚ ਧੁੱਪ ਅਤੇ ਛਾਂ ਵਿੱਚ ਖੜ੍ਹ ਕੇ ਅਜ਼ਮਾਉਂਦਾ/ਅਜ਼ਮਾਉਂਦੀ ਹੈ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["sunny is warmer / ਧੁੱਪ ਵਾਲੀ ਗਰਮ", "shade is warmer / ਛਾਂ ਗਰਮ", "both same / ਦੋਵੇਂ ਇੱਕੋ"],
+        "choices": [
+          "sunny is warmer / ਧੁੱਪ ਵਾਲੀ ਗਰਮ",
+          "shade is warmer / ਛਾਂ ਗਰਮ",
+          "both same / ਦੋਵੇਂ ਇੱਕੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the sunny spot feels warmer. / ਪੈਨਲ 4 ਵਿੱਚ ਧੁੱਪ ਵਾਲੀ ਥਾਂ ਗਰਮ ਲੱਗਦੀ ਹੈ।"
       },
       {
         "question": "Why does shade feel cooler? / ਛਾਂ ਠੰਢੀ ਕਿਉਂ ਲੱਗਦੀ ਹੈ?",
-        "choices": ["because sun is warmer / ਕਿਉਂਕਿ ਧੁੱਪ ਗਰਮ", "because rain falls / ਕਿਉਂਕਿ ਮੀਂਹ ਪੈਂਦਾ", "because shoes are soft / ਕਿਉਂਕਿ ਜੁੱਤੇ ਨਰਮ"],
+        "choices": [
+          "because sun is warmer / ਕਿਉਂਕਿ ਧੁੱਪ ਗਰਮ",
+          "because rain falls / ਕਿਉਂਕਿ ਮੀਂਹ ਪੈਂਦਾ",
+          "because shoes are soft / ਕਿਉਂਕਿ ਜੁੱਤੇ ਨਰਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child explains shade feels cooler because sun is warmer. / ਬੱਚਾ ਦੱਸਦਾ/ਦੱਸਦੀ ਹੈ ਕਿ ਧੁੱਪ ਗਰਮ ਹੈ ਇਸ ਲਈ ਛਾਂ ਠੰਢੀ ਲੱਗਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "sun", "meaningEn": "the bright light in the sky", "meaningPa": "ਸੂਰਜ; ਆਸਮਾਨ ਦੀ ਰੌਸ਼ਨੀ" },
-      { "word": "shade", "meaningEn": "a cool dark place away from sun", "meaningPa": "ਛਾਂ; ਧੁੱਪ ਤੋਂ ਦੂਰ ਠੰਢੀ ਥਾਂ" },
-      { "word": "warm", "meaningEn": "not cold; a little hot", "meaningPa": "ਗਰਮ; ਠੰਢਾ ਨਹੀਂ" },
-      { "word": "cool", "meaningEn": "a little cold", "meaningPa": "ਠੰਢਾ; ਹਲਕਾ ਠੰਢਾ" },
-      { "word": "compare", "meaningEn": "see what is same and different", "meaningPa": "ਤੁਲਨਾ ਕਰਨਾ; ਫਰਕ ਵੇਖਣਾ" },
-      { "word": "difference", "meaningEn": "how things are not the same", "meaningPa": "ਫਰਕ; ਇੱਕੋ ਜਿਹਾ ਨਾ ਹੋਣਾ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ" },
-      { "word": "test", "meaningEn": "try to check", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "result", "meaningEn": "what happens after the test", "meaningPa": "ਨਤੀਜਾ; ਟੈਸਟ ਤੋਂ ਬਾਅਦ ਜੋ ਹੋਇਆ" },
-      { "word": "warmer", "meaningEn": "more warm", "meaningPa": "ਹੋਰ ਗਰਮ; ਵਧੇਰੇ ਗਰਮੀ" }
-    ]
+      {
+        "word": "sun",
+        "meaningEn": "the bright light in the sky",
+        "meaningPa": "ਸੂਰਜ; ਆਸਮਾਨ ਦੀ ਰੌਸ਼ਨੀ"
+      },
+      {
+        "word": "shade",
+        "meaningEn": "a cool dark place away from sun",
+        "meaningPa": "ਛਾਂ; ਧੁੱਪ ਤੋਂ ਦੂਰ ਠੰਢੀ ਥਾਂ"
+      },
+      {
+        "word": "warm",
+        "meaningEn": "not cold; a little hot",
+        "meaningPa": "ਗਰਮ; ਠੰਢਾ ਨਹੀਂ"
+      },
+      {
+        "word": "cool",
+        "meaningEn": "a little cold",
+        "meaningPa": "ਠੰਢਾ; ਹਲਕਾ ਠੰਢਾ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "see what is same and different",
+        "meaningPa": "ਤੁਲਨਾ ਕਰਨਾ; ਫਰਕ ਵੇਖਣਾ"
+      },
+      {
+        "word": "difference",
+        "meaningEn": "how things are not the same",
+        "meaningPa": "ਫਰਕ; ਇੱਕੋ ਜਿਹਾ ਨਾ ਹੋਣਾ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to check",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after the test",
+        "meaningPa": "ਨਤੀਜਾ; ਟੈਸਟ ਤੋਂ ਬਾਅਦ ਜੋ ਹੋਇਆ"
+      },
+      {
+        "word": "warmer",
+        "meaningEn": "more warm",
+        "meaningPa": "ਹੋਰ ਗਰਮ; ਵਧੇਰੇ ਗਰਮੀ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "play",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S03",
@@ -4095,47 +10637,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What two things does the child use? / ਬੱਚਾ ਕਿਹੜੀਆਂ ਦੋ ਚੀਜ਼ਾਂ ਵਰਤਦਾ/ਵਰਤਦੀ ਹੈ?",
-        "choices": ["paper and cardboard / ਕਾਗਜ਼ ਤੇ ਗੱਤਾ", "spoon and fork / ਚਮਚਾ ਤੇ ਕਾਂਟਾ", "shoe and hat / ਜੁੱਤਾ ਤੇ ਟੋਪੀ"],
+        "choices": [
+          "paper and cardboard / ਕਾਗਜ਼ ਤੇ ਗੱਤਾ",
+          "spoon and fork / ਚਮਚਾ ਤੇ ਕਾਂਟਾ",
+          "shoe and hat / ਜੁੱਤਾ ਤੇ ਟੋਪੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child has paper and cardboard. / ਪੈਨਲ 1 ਵਿੱਚ ਕਾਗਜ਼ ਅਤੇ ਗੱਤਾ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["paper moves more / ਕਾਗਜ਼ ਵਧੇਰੇ ਹਿਲੇਗਾ", "cardboard melts / ਗੱਤਾ ਪਿਘਲੇਗਾ", "wind stops / ਹਵਾ ਰੁਕ ਜਾਵੇਗੀ"],
+        "choices": [
+          "paper moves more / ਕਾਗਜ਼ ਵਧੇਰੇ ਹਿਲੇਗਾ",
+          "cardboard melts / ਗੱਤਾ ਪਿਘਲੇਗਾ",
+          "wind stops / ਹਵਾ ਰੁਕ ਜਾਵੇਗੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts the paper will move more. / ਪੈਨਲ 3 ਵਿੱਚ ਕਾਗਜ਼ ਵਧੇਰੇ ਹਿਲੇਗਾ।"
       },
       {
         "question": "Why does the child predict paper moves more? / ਬੱਚਾ ਕਾਗਜ਼ ਵਧੇਰੇ ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["because it is lighter / ਕਿਉਂਕਿ ਹਲਕਾ ਹੈ", "because it is loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ", "because it is wet / ਕਿਉਂਕਿ ਭਿੱਜਾ ਹੈ"],
+        "choices": [
+          "because it is lighter / ਕਿਉਂਕਿ ਹਲਕਾ ਹੈ",
+          "because it is loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ",
+          "because it is wet / ਕਿਉਂਕਿ ਭਿੱਜਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says paper is lighter. / ਪੈਨਲ 3 ਵਿੱਚ ਕਾਗਜ਼ ਹਲਕਾ ਹੈ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["paper flaps more / ਕਾਗਜ਼ ਵਧੇਰੇ ਫੜਫੜਾਉਂਦਾ", "cardboard flaps more / ਗੱਤਾ ਵਧੇਰੇ ਫੜਫੜਾਉਂਦਾ", "both same / ਦੋਵੇਂ ਇੱਕੋ"],
+        "choices": [
+          "paper flaps more / ਕਾਗਜ਼ ਵਧੇਰੇ ਫੜਫੜਾਉਂਦਾ",
+          "cardboard flaps more / ਗੱਤਾ ਵਧੇਰੇ ਫੜਫੜਾਉਂਦਾ",
+          "both same / ਦੋਵੇਂ ਇੱਕੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says paper flaps more than cardboard. / ਪੈਨਲ 4 ਵਿੱਚ ਕਾਗਜ਼ ਵਧੇਰੇ ਫੜਫੜਾਉਂਦਾ ਹੈ।"
       },
       {
         "question": "What does the child learn? / ਬੱਚਾ ਕੀ ਸਿੱਖਦਾ/ਸਿੱਖਦੀ ਹੈ?",
-        "choices": ["light things move more / ਹਲਕੀਆਂ ਚੀਜ਼ਾਂ ਵਧੇਰੇ ਹਿਲਦੀਆਂ", "trees are loud / ਦਰੱਖਤ ਸ਼ੋਰ ਕਰਦੇ", "books fly / ਕਿਤਾਬਾਂ ਉੱਡਦੀਆਂ"],
+        "choices": [
+          "light things move more / ਹਲਕੀਆਂ ਚੀਜ਼ਾਂ ਵਧੇਰੇ ਹਿਲਦੀਆਂ",
+          "trees are loud / ਦਰੱਖਤ ਸ਼ੋਰ ਕਰਦੇ",
+          "books fly / ਕਿਤਾਬਾਂ ਉੱਡਦੀਆਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says light things move more in wind. / ਪੈਨਲ 5 ਵਿੱਚ ਹਲਕੀਆਂ ਚੀਜ਼ਾਂ ਵਧੇਰੇ ਹਿਲਦੀਆਂ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "wind", "meaningEn": "moving air outside", "meaningPa": "ਹਵਾ; ਚੱਲਦੀ ਹਵਾ" },
-      { "word": "blow", "meaningEn": "air moves strongly", "meaningPa": "ਵਗਣਾ; ਹਵਾ ਚੱਲਣਾ" },
-      { "word": "paper", "meaningEn": "thin sheets used for writing", "meaningPa": "ਕਾਗਜ਼; ਪਤਲਾ ਪੱਤਾ" },
-      { "word": "cardboard", "meaningEn": "thick paper material", "meaningPa": "ਗੱਤਾ; ਮੋਟਾ ਕਾਗਜ਼" },
-      { "word": "light", "meaningEn": "not heavy", "meaningPa": "ਹਲਕਾ; ਭਾਰੀ ਨਹੀਂ" },
-      { "word": "heavy", "meaningEn": "not light", "meaningPa": "ਭਾਰੀ; ਹਲਕਾ ਨਹੀਂ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ" },
-      { "word": "test", "meaningEn": "try to check", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "compare", "meaningEn": "see which is more or less", "meaningPa": "ਤੁਲਨਾ; ਕਿਹੜਾ ਵਧੇਰਾ/ਘੱਟ" },
-      { "word": "result", "meaningEn": "what happens in the end", "meaningPa": "ਨਤੀਜਾ; ਆਖਿਰ ਕੀ ਹੋਇਆ" }
-    ]
+      {
+        "word": "wind",
+        "meaningEn": "moving air outside",
+        "meaningPa": "ਹਵਾ; ਚੱਲਦੀ ਹਵਾ"
+      },
+      {
+        "word": "blow",
+        "meaningEn": "air moves strongly",
+        "meaningPa": "ਵਗਣਾ; ਹਵਾ ਚੱਲਣਾ"
+      },
+      {
+        "word": "paper",
+        "meaningEn": "thin sheets used for writing",
+        "meaningPa": "ਕਾਗਜ਼; ਪਤਲਾ ਪੱਤਾ"
+      },
+      {
+        "word": "cardboard",
+        "meaningEn": "thick paper material",
+        "meaningPa": "ਗੱਤਾ; ਮੋਟਾ ਕਾਗਜ਼"
+      },
+      {
+        "word": "light",
+        "meaningEn": "not heavy",
+        "meaningPa": "ਹਲਕਾ; ਭਾਰੀ ਨਹੀਂ"
+      },
+      {
+        "word": "heavy",
+        "meaningEn": "not light",
+        "meaningPa": "ਭਾਰੀ; ਹਲਕਾ ਨਹੀਂ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to check",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "see which is more or less",
+        "meaningPa": "ਤੁਲਨਾ; ਕਿਹੜਾ ਵਧੇਰਾ/ਘੱਟ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens in the end",
+        "meaningPa": "ਨਤੀਜਾ; ਆਖਿਰ ਕੀ ਹੋਇਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S04",
@@ -4148,47 +10770,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child observe? / ਬੱਚਾ ਕੀ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ?",
-        "choices": ["shadow / ਛਾਂ", "snow / ਬਰਫ਼", "cake / ਕੇਕ"],
+        "choices": [
+          "shadow / ਛਾਂ",
+          "snow / ਬਰਫ਼",
+          "cake / ਕੇਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story is about the child observing a shadow. / ਕਹਾਣੀ ਵਿੱਚ ਛਾਂ ਵੇਖਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "When is the shadow long? / ਛਾਂ ਕਦੋਂ ਲੰਬੀ ਹੁੰਦੀ ਹੈ?",
-        "choices": ["morning / ਸਵੇਰੇ", "midnight / ਅੱਧੀ ਰਾਤ", "inside / ਅੰਦਰ"],
+        "choices": [
+          "morning / ਸਵੇਰੇ",
+          "midnight / ਅੱਧੀ ਰਾਤ",
+          "inside / ਅੰਦਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the shadow is long in the morning. / ਪੈਨਲ 2 ਵਿੱਚ ਸਵੇਰੇ ਛਾਂ ਲੰਬੀ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["shadow shorter / ਛਾਂ ਛੋਟੀ", "shadow louder / ਛਾਂ ਸ਼ੋਰ ਵਾਲੀ", "shadow wet / ਛਾਂ ਭਿੱਜੀ"],
+        "choices": [
+          "shadow shorter / ਛਾਂ ਛੋਟੀ",
+          "shadow louder / ਛਾਂ ਸ਼ੋਰ ਵਾਲੀ",
+          "shadow wet / ਛਾਂ ਭਿੱਜੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts the shadow will be shorter later. / ਪੈਨਲ 3 ਵਿੱਚ ਛਾਂ ਛੋਟੀ ਹੋਣ ਦਾ ਅੰਦਾਜ਼ਾ ਹੈ।"
       },
       {
         "question": "How does the child test the prediction? / ਬੱਚਾ ਅੰਦਾਜ਼ਾ ਕਿਵੇਂ ਅਜ਼ਮਾਉਂਦਾ/ਅਜ਼ਮਾਉਂਦੀ ਹੈ?",
-        "choices": ["checks again / ਫਿਰ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ", "runs away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ", "sleeps / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"],
+        "choices": [
+          "checks again / ਫਿਰ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ",
+          "runs away / ਭੱਜ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ",
+          "sleeps / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child checks again after lunch. / ਪੈਨਲ 3 ਵਿੱਚ ਲੰਚ ਤੋਂ ਬਾਅਦ ਫਿਰ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["shorter shadow / ਛੋਟੀ ਛਾਂ", "longer shadow / ਲੰਬੀ ਛਾਂ", "no shadow / ਛਾਂ ਨਹੀਂ"],
+        "choices": [
+          "shorter shadow / ਛੋਟੀ ਛਾਂ",
+          "longer shadow / ਲੰਬੀ ਛਾਂ",
+          "no shadow / ਛਾਂ ਨਹੀਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the shadow becomes shorter than before. / ਪੈਨਲ 4 ਵਿੱਚ ਛਾਂ ਪਹਿਲਾਂ ਨਾਲੋਂ ਛੋਟੀ ਹੋ ਜਾਂਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "shadow", "meaningEn": "a dark shape made by light", "meaningPa": "ਛਾਂ; ਰੌਸ਼ਨੀ ਨਾਲ ਬਣੀ ਕਾਲੀ ਆਕ੍ਰਿਤੀ" },
-      { "word": "morning", "meaningEn": "early part of the day", "meaningPa": "ਸਵੇਰ; ਦਿਨ ਦਾ ਸ਼ੁਰੂ" },
-      { "word": "noon", "meaningEn": "middle of the day", "meaningPa": "ਦੁਪਹਿਰ; ਦਿਨ ਦਾ ਵਿਚਕਾਰ" },
-      { "word": "higher", "meaningEn": "more up", "meaningPa": "ਉੱਚਾ; ਹੋਰ ਉੱਪਰ" },
-      { "word": "shorter", "meaningEn": "less long", "meaningPa": "ਛੋਟਾ; ਲੰਬਾ ਨਹੀਂ" },
-      { "word": "long", "meaningEn": "not short", "meaningPa": "ਲੰਬਾ; ਛੋਟਾ ਨਹੀਂ" },
-      { "word": "observe", "meaningEn": "look carefully", "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ" },
-      { "word": "compare", "meaningEn": "see what is different", "meaningPa": "ਤੁਲਨਾ ਕਰਨਾ; ਫਰਕ ਵੇਖਣਾ" },
-      { "word": "result", "meaningEn": "what happens after", "meaningPa": "ਨਤੀਜਾ; ਬਾਅਦ ਵਿੱਚ ਕੀ ਹੋਇਆ" }
-    ]
+      {
+        "word": "shadow",
+        "meaningEn": "a dark shape made by light",
+        "meaningPa": "ਛਾਂ; ਰੌਸ਼ਨੀ ਨਾਲ ਬਣੀ ਕਾਲੀ ਆਕ੍ਰਿਤੀ"
+      },
+      {
+        "word": "morning",
+        "meaningEn": "early part of the day",
+        "meaningPa": "ਸਵੇਰ; ਦਿਨ ਦਾ ਸ਼ੁਰੂ"
+      },
+      {
+        "word": "noon",
+        "meaningEn": "middle of the day",
+        "meaningPa": "ਦੁਪਹਿਰ; ਦਿਨ ਦਾ ਵਿਚਕਾਰ"
+      },
+      {
+        "word": "higher",
+        "meaningEn": "more up",
+        "meaningPa": "ਉੱਚਾ; ਹੋਰ ਉੱਪਰ"
+      },
+      {
+        "word": "shorter",
+        "meaningEn": "less long",
+        "meaningPa": "ਛੋਟਾ; ਲੰਬਾ ਨਹੀਂ"
+      },
+      {
+        "word": "long",
+        "meaningEn": "not short",
+        "meaningPa": "ਲੰਬਾ; ਛੋਟਾ ਨਹੀਂ"
+      },
+      {
+        "word": "observe",
+        "meaningEn": "look carefully",
+        "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "see what is different",
+        "meaningPa": "ਤੁਲਨਾ ਕਰਨਾ; ਫਰਕ ਵੇਖਣਾ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after",
+        "meaningPa": "ਨਤੀਜਾ; ਬਾਅਦ ਵਿੱਚ ਕੀ ਹੋਇਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "be",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S05",
@@ -4201,47 +10903,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What does the child plant? / ਬੱਚਾ ਕੀ ਲਾਂਦਾ/ਲਾਂਦੀ ਹੈ?",
-        "choices": ["seed / ਬੀਜ", "stone / ਪੱਥਰ", "coin / ਸਿੱਕਾ"],
+        "choices": [
+          "seed / ਬੀਜ",
+          "stone / ਪੱਥਰ",
+          "coin / ਸਿੱਕਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child plants a seed. / ਪੈਨਲ 1 ਵਿੱਚ ਬੀਜ ਲਾਂਦਾ/ਲਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What goes in the cup first? / ਕੱਪ ਵਿੱਚ ਪਹਿਲਾਂ ਕੀ ਜਾਂਦਾ ਹੈ?",
-        "choices": ["soil / ਮਿੱਟੀ", "juice / ਜੂਸ", "sandwich / ਸੈਂਡਵਿਚ"],
+        "choices": [
+          "soil / ਮਿੱਟੀ",
+          "juice / ਜੂਸ",
+          "sandwich / ਸੈਂਡਵਿਚ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child puts soil in the cup first. / ਪੈਨਲ 2 ਵਿੱਚ ਪਹਿਲਾਂ ਮਿੱਟੀ ਪਾਂਦਾ/ਪਾਂਦੀ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["sprout / ਅੰਕੁਰ ਨਿਕਲੇਗਾ", "freeze / ਜਮ ਜਾਵੇਗਾ", "fly / ਉੱਡ ਜਾਵੇਗਾ"],
+        "choices": [
+          "sprout / ਅੰਕੁਰ ਨਿਕਲੇਗਾ",
+          "freeze / ਜਮ ਜਾਵੇਗਾ",
+          "fly / ਉੱਡ ਜਾਵੇਗਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts the seed will sprout. / ਪੈਨਲ 3 ਵਿੱਚ ਅੰਕੁਰ ਨਿਕਲਣ ਦਾ ਅੰਦਾਜ਼ਾ ਹੈ।"
       },
       {
         "question": "How does the child test growth? / ਬੱਚਾ ਵਧਣ ਨੂੰ ਕਿਵੇਂ ਅਜ਼ਮਾਉਂਦਾ/ਅਜ਼ਮਾਉਂਦੀ ਹੈ?",
-        "choices": ["water and window / ਪਾਣੀ ਤੇ ਖਿੜਕੀ ਕੋਲ", "hide it / ਲੁਕਾਉਣਾ", "shake it / ਹਿਲਾਉਣਾ"],
+        "choices": [
+          "water and window / ਪਾਣੀ ਤੇ ਖਿੜਕੀ ਕੋਲ",
+          "hide it / ਲੁਕਾਉਣਾ",
+          "shake it / ਹਿਲਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child waters and places it near a window. / ਪੈਨਲ 3 ਵਿੱਚ ਪਾਣੀ ਦੇ ਕੇ ਖਿੜਕੀ ਕੋਲ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।"
       },
       {
         "question": "What is the result after a few days? / ਕੁਝ ਦਿਨਾਂ ਬਾਅਦ ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["sprout / ਅੰਕੁਰ", "toy / ਖਿਡੌਣਾ", "rain / ਮੀਂਹ"],
+        "choices": [
+          "sprout / ਅੰਕੁਰ",
+          "toy / ਖਿਡੌਣਾ",
+          "rain / ਮੀਂਹ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says a small sprout comes up. / ਪੈਨਲ 4 ਵਿੱਚ ਛੋਟਾ ਅੰਕੁਰ ਨਿਕਲਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "seed", "meaningEn": "a tiny start of a plant", "meaningPa": "ਬੀਜ; ਪੌਦੇ ਦੀ ਸ਼ੁਰੂਆਤ" },
-      { "word": "soil", "meaningEn": "dirt where plants grow", "meaningPa": "ਮਿੱਟੀ; ਜਿੱਥੇ ਪੌਦੇ ਉੱਗਦੇ ਹਨ" },
-      { "word": "sprout", "meaningEn": "a baby plant coming out", "meaningPa": "ਅੰਕੁਰ; ਨਵਾਂ ਪੌਦਾ ਨਿਕਲਣਾ" },
-      { "word": "water", "meaningEn": "a liquid plants need", "meaningPa": "ਪਾਣੀ; ਪੌਦੇ ਲਈ ਜ਼ਰੂਰੀ" },
-      { "word": "light", "meaningEn": "brightness from sun or lamp", "meaningPa": "ਰੌਸ਼ਨੀ; ਚਾਨਣ" },
-      { "word": "window", "meaningEn": "glass opening in a wall", "meaningPa": "ਖਿੜਕੀ; ਕੰਧ ਦਾ ਕੱਚ ਵਾਲਾ ਹਿੱਸਾ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ" },
-      { "word": "test", "meaningEn": "try to see what happens", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "result", "meaningEn": "what happens after the test", "meaningPa": "ਨਤੀਜਾ; ਅੰਤ ਵਿੱਚ ਜੋ ਹੋਇਆ" },
-      { "word": "compare", "meaningEn": "look for changes", "meaningPa": "ਤੁਲਨਾ; ਬਦਲਾਅ ਵੇਖਣਾ" }
-    ]
+      {
+        "word": "seed",
+        "meaningEn": "a tiny start of a plant",
+        "meaningPa": "ਬੀਜ; ਪੌਦੇ ਦੀ ਸ਼ੁਰੂਆਤ"
+      },
+      {
+        "word": "soil",
+        "meaningEn": "dirt where plants grow",
+        "meaningPa": "ਮਿੱਟੀ; ਜਿੱਥੇ ਪੌਦੇ ਉੱਗਦੇ ਹਨ"
+      },
+      {
+        "word": "sprout",
+        "meaningEn": "a baby plant coming out",
+        "meaningPa": "ਅੰਕੁਰ; ਨਵਾਂ ਪੌਦਾ ਨਿਕਲਣਾ"
+      },
+      {
+        "word": "water",
+        "meaningEn": "a liquid plants need",
+        "meaningPa": "ਪਾਣੀ; ਪੌਦੇ ਲਈ ਜ਼ਰੂਰੀ"
+      },
+      {
+        "word": "light",
+        "meaningEn": "brightness from sun or lamp",
+        "meaningPa": "ਰੌਸ਼ਨੀ; ਚਾਨਣ"
+      },
+      {
+        "word": "window",
+        "meaningEn": "glass opening in a wall",
+        "meaningPa": "ਖਿੜਕੀ; ਕੰਧ ਦਾ ਕੱਚ ਵਾਲਾ ਹਿੱਸਾ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to see what happens",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after the test",
+        "meaningPa": "ਨਤੀਜਾ; ਅੰਤ ਵਿੱਚ ਜੋ ਹੋਇਆ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "look for changes",
+        "meaningPa": "ਤੁਲਨਾ; ਬਦਲਾਅ ਵੇਖਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "comes",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S06",
@@ -4254,47 +11036,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "How many plants does the child have? / ਬੱਚੇ ਕੋਲ ਕਿੰਨੇ ਪੌਦੇ ਹਨ?",
-        "choices": ["two / ਦੋ", "one / ਇੱਕ", "five / ਪੰਜ"],
+        "choices": [
+          "two / ਦੋ",
+          "one / ਇੱਕ",
+          "five / ਪੰਜ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child has two plants. / ਪੈਨਲ 1 ਵਿੱਚ ਦੋ ਪੌਦੇ ਹਨ।"
       },
       {
         "question": "What does the child change in the test? / ਟੈਸਟ ਵਿੱਚ ਬੱਚਾ ਕੀ ਬਦਲਦਾ/ਬਦਲਦੀ ਹੈ?",
-        "choices": ["light / ਰੌਸ਼ਨੀ", "music / ਗਾਣਾ", "shoes / ਜੁੱਤੇ"],
+        "choices": [
+          "light / ਰੌਸ਼ਨੀ",
+          "music / ਗਾਣਾ",
+          "shoes / ਜੁੱਤੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 changes how much light the plants get. / ਪੈਨਲ 3 ਵਿੱਚ ਰੌਸ਼ਨੀ ਘੱਟ-ਵੱਧ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["less light grows slower / ਘੱਟ ਰੌਸ਼ਨੀ ਹੌਲੀ", "less light grows faster / ਘੱਟ ਰੌਸ਼ਨੀ ਤੇਜ਼", "less light makes ice / ਘੱਟ ਰੌਸ਼ਨੀ ਬਰਫ਼"],
+        "choices": [
+          "less light grows slower / ਘੱਟ ਰੌਸ਼ਨੀ ਹੌਲੀ",
+          "less light grows faster / ਘੱਟ ਰੌਸ਼ਨੀ ਤੇਜ਼",
+          "less light makes ice / ਘੱਟ ਰੌਸ਼ਨੀ ਬਰਫ਼"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts the less-light plant will grow slower. / ਪੈਨਲ 3 ਵਿੱਚ ਘੱਟ ਰੌਸ਼ਨੀ ਵਾਲਾ ਹੌਲੀ ਵਧੇਗਾ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["window plant healthier / ਖਿੜਕੀ ਵਾਲਾ ਤੰਦਰੁਸਤ", "corner plant healthier / ਕੋਨੇ ਵਾਲਾ ਤੰਦਰੁਸਤ", "both dead / ਦੋਵੇਂ ਮਰ ਗਏ"],
+        "choices": [
+          "window plant healthier / ਖਿੜਕੀ ਵਾਲਾ ਤੰਦਰੁਸਤ",
+          "corner plant healthier / ਕੋਨੇ ਵਾਲਾ ਤੰਦਰੁਸਤ",
+          "both dead / ਦੋਵੇਂ ਮਰ ਗਏ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the window plant looks healthier. / ਪੈਨਲ 4 ਵਿੱਚ ਖਿੜਕੀ ਵਾਲਾ ਤੰਦਰੁਸਤ ਲੱਗਦਾ ਹੈ।"
       },
       {
         "question": "Why should we care for plants? / ਪੌਦਿਆਂ ਦੀ ਸੰਭਾਲ ਕਿਉਂ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ?",
-        "choices": ["because they need light and water / ਕਿਉਂਕਿ ਰੌਸ਼ਨੀ ਤੇ ਪਾਣੀ", "because they are loud / ਕਿਉਂਕਿ ਸ਼ੋਰ", "because they are toys / ਕਿਉਂਕਿ ਖਿਡੌਣੇ"],
+        "choices": [
+          "because they need light and water / ਕਿਉਂਕਿ ਰੌਸ਼ਨੀ ਤੇ ਪਾਣੀ",
+          "because they are loud / ਕਿਉਂਕਿ ਸ਼ੋਰ",
+          "because they are toys / ਕਿਉਂਕਿ ਖਿਡੌਣੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says plants need light and water, so we should care. / ਪੈਨਲ 5 ਵਿੱਚ ਰੌਸ਼ਨੀ ਤੇ ਪਾਣੀ ਚਾਹੀਦਾ ਹੈ, ਇਸ ਲਈ ਸੰਭਾਲ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "plant", "meaningEn": "a living thing that grows in soil", "meaningPa": "ਪੌਦਾ; ਮਿੱਟੀ ਵਿੱਚ ਉੱਗਣ ਵਾਲਾ ਜੀਵ" },
-      { "word": "need", "meaningEn": "must have to grow or live", "meaningPa": "ਲੋੜ; ਚਾਹੀਦਾ ਹੋਣਾ" },
-      { "word": "light", "meaningEn": "brightness from the sun", "meaningPa": "ਰੌਸ਼ਨੀ; ਚਾਨਣ" },
-      { "word": "dim", "meaningEn": "not very bright", "meaningPa": "ਮੱਧਮ; ਘੱਟ ਚਾਨਣ" },
-      { "word": "healthier", "meaningEn": "more healthy", "meaningPa": "ਵਧੇਰੇ ਤੰਦਰੁਸਤ; ਹੋਰ ਚੰਗਾ" },
-      { "word": "slower", "meaningEn": "not fast", "meaningPa": "ਹੌਲਾ; ਤੇਜ਼ ਨਹੀਂ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ" },
-      { "word": "test", "meaningEn": "try to find out", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਪਤਾ ਲਗਾਉਣਾ" },
-      { "word": "compare", "meaningEn": "look for differences", "meaningPa": "ਤੁਲਨਾ; ਫਰਕ ਵੇਖਣਾ" },
-      { "word": "result", "meaningEn": "what happens after", "meaningPa": "ਨਤੀਜਾ; ਅਖੀਰ ਜੋ ਹੋਇਆ" }
-    ]
+      {
+        "word": "plant",
+        "meaningEn": "a living thing that grows in soil",
+        "meaningPa": "ਪੌਦਾ; ਮਿੱਟੀ ਵਿੱਚ ਉੱਗਣ ਵਾਲਾ ਜੀਵ"
+      },
+      {
+        "word": "need",
+        "meaningEn": "must have to grow or live",
+        "meaningPa": "ਲੋੜ; ਚਾਹੀਦਾ ਹੋਣਾ"
+      },
+      {
+        "word": "light",
+        "meaningEn": "brightness from the sun",
+        "meaningPa": "ਰੌਸ਼ਨੀ; ਚਾਨਣ"
+      },
+      {
+        "word": "dim",
+        "meaningEn": "not very bright",
+        "meaningPa": "ਮੱਧਮ; ਘੱਟ ਚਾਨਣ"
+      },
+      {
+        "word": "healthier",
+        "meaningEn": "more healthy",
+        "meaningPa": "ਵਧੇਰੇ ਤੰਦਰੁਸਤ; ਹੋਰ ਚੰਗਾ"
+      },
+      {
+        "word": "slower",
+        "meaningEn": "not fast",
+        "meaningPa": "ਹੌਲਾ; ਤੇਜ਼ ਨਹੀਂ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to find out",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਪਤਾ ਲਗਾਉਣਾ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "look for differences",
+        "meaningPa": "ਤੁਲਨਾ; ਫਰਕ ਵੇਖਣਾ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after",
+        "meaningPa": "ਨਤੀਜਾ; ਅਖੀਰ ਜੋ ਹੋਇਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "need",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "grow",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S07",
@@ -4307,47 +11169,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What do they use for the test? / ਟੈਸਟ ਲਈ ਉਹ ਕੀ ਵਰਤਦੇ ਹਨ?",
-        "choices": ["bowl of water / ਪਾਣੀ ਦੀ ਕਟੋਰੀ", "sand / ਰੇਤ", "fire / ਅੱਗ"],
+        "choices": [
+          "bowl of water / ਪਾਣੀ ਦੀ ਕਟੋਰੀ",
+          "sand / ਰੇਤ",
+          "fire / ਅੱਗ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they use a bowl of water. / ਪੈਨਲ 1 ਵਿੱਚ ਪਾਣੀ ਦੀ ਕਟੋਰੀ ਹੈ।"
       },
       {
         "question": "What does the child predict about the coin? / ਸਿੱਕੇ ਬਾਰੇ ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["sink / ਡੁੱਬੇਗਾ", "float / ਤਰੇਗਾ", "fly / ਉੱਡੇਗਾ"],
+        "choices": [
+          "sink / ਡੁੱਬੇਗਾ",
+          "float / ਤਰੇਗਾ",
+          "fly / ਉੱਡੇਗਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the coin will sink. / ਪੈਨਲ 3 ਵਿੱਚ ਸਿੱਕਾ ਡੁੱਬੇਗਾ।"
       },
       {
         "question": "What does the child predict about the sponge? / ਸਪੰਜ ਬਾਰੇ ਕੀ ਅੰਦਾਜ਼ਾ ਹੈ?",
-        "choices": ["float / ਤਰੇਗਾ", "sink / ਡੁੱਬੇਗਾ", "break / ਟੁੱਟੇਗਾ"],
+        "choices": [
+          "float / ਤਰੇਗਾ",
+          "sink / ਡੁੱਬੇਗਾ",
+          "break / ਟੁੱਟੇਗਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the sponge will float. / ਪੈਨਲ 3 ਵਿੱਚ ਸਪੰਜ ਤਰੇਗਾ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["coin sinks, sponge floats / ਸਿੱਕਾ ਡੁੱਬਦਾ, ਸਪੰਜ ਤਰਦਾ", "coin floats, sponge sinks / ਸਿੱਕਾ ਤਰਦਾ, ਸਪੰਜ ਡੁੱਬਦਾ", "both float / ਦੋਵੇਂ ਤਰਦੇ"],
+        "choices": [
+          "coin sinks, sponge floats / ਸਿੱਕਾ ਡੁੱਬਦਾ, ਸਪੰਜ ਤਰਦਾ",
+          "coin floats, sponge sinks / ਸਿੱਕਾ ਤਰਦਾ, ਸਪੰਜ ਡੁੱਬਦਾ",
+          "both float / ਦੋਵੇਂ ਤਰਦੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the coin sinks and the sponge floats. / ਪੈਨਲ 4 ਵਿੱਚ ਸਿੱਕਾ ਡੁੱਬਦਾ ਅਤੇ ਸਪੰਜ ਤਰਦਾ ਹੈ।"
       },
       {
         "question": "Why does the coin sink? / ਸਿੱਕਾ ਕਿਉਂ ਡੁੱਬਦਾ ਹੈ?",
-        "choices": ["because it is heavy / ਕਿਉਂਕਿ ਭਾਰੀ ਹੈ", "because it is soft / ਕਿਉਂਕਿ ਨਰਮ ਹੈ", "because it is loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ"],
+        "choices": [
+          "because it is heavy / ਕਿਉਂਕਿ ਭਾਰੀ ਹੈ",
+          "because it is soft / ਕਿਉਂਕਿ ਨਰਮ ਹੈ",
+          "because it is loud / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 explains the coin sinks because it is heavy. / ਪੈਨਲ 3 ਵਿੱਚ ਭਾਰੀ ਹੋਣ ਕਰਕੇ ਡੁੱਬਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "sink", "meaningEn": "go down in water", "meaningPa": "ਡੁੱਬਣਾ; ਪਾਣੀ ਵਿੱਚ ਹੇਠਾਂ ਜਾਣਾ" },
-      { "word": "float", "meaningEn": "stay on top of water", "meaningPa": "ਤਰਨਾ; ਪਾਣੀ ਉੱਤੇ ਰਹਿਣਾ" },
-      { "word": "bowl", "meaningEn": "a dish that can hold water", "meaningPa": "ਕਟੋਰੀ; ਪਾਣੀ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ" },
-      { "word": "coin", "meaningEn": "small round money", "meaningPa": "ਸਿੱਕਾ; ਗੋਲ ਪੈਸਾ" },
-      { "word": "sponge", "meaningEn": "soft thing that soaks water", "meaningPa": "ਸਪੰਜ; ਪਾਣੀ ਸੋਖਣ ਵਾਲੀ ਨਰਮ ਚੀਜ਼" },
-      { "word": "heavy", "meaningEn": "not light", "meaningPa": "ਭਾਰੀ; ਹਲਕਾ ਨਹੀਂ" },
-      { "word": "light", "meaningEn": "not heavy", "meaningPa": "ਹਲਕਾ; ਭਾਰੀ ਨਹੀਂ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ" },
-      { "word": "test", "meaningEn": "try to check", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "result", "meaningEn": "what happens after", "meaningPa": "ਨਤੀਜਾ; ਬਾਅਦ ਵਿੱਚ ਕੀ ਹੋਇਆ" }
-    ]
+      {
+        "word": "sink",
+        "meaningEn": "go down in water",
+        "meaningPa": "ਡੁੱਬਣਾ; ਪਾਣੀ ਵਿੱਚ ਹੇਠਾਂ ਜਾਣਾ"
+      },
+      {
+        "word": "float",
+        "meaningEn": "stay on top of water",
+        "meaningPa": "ਤਰਨਾ; ਪਾਣੀ ਉੱਤੇ ਰਹਿਣਾ"
+      },
+      {
+        "word": "bowl",
+        "meaningEn": "a dish that can hold water",
+        "meaningPa": "ਕਟੋਰੀ; ਪਾਣੀ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ"
+      },
+      {
+        "word": "coin",
+        "meaningEn": "small round money",
+        "meaningPa": "ਸਿੱਕਾ; ਗੋਲ ਪੈਸਾ"
+      },
+      {
+        "word": "sponge",
+        "meaningEn": "soft thing that soaks water",
+        "meaningPa": "ਸਪੰਜ; ਪਾਣੀ ਸੋਖਣ ਵਾਲੀ ਨਰਮ ਚੀਜ਼"
+      },
+      {
+        "word": "heavy",
+        "meaningEn": "not light",
+        "meaningPa": "ਭਾਰੀ; ਹਲਕਾ ਨਹੀਂ"
+      },
+      {
+        "word": "light",
+        "meaningEn": "not heavy",
+        "meaningPa": "ਹਲਕਾ; ਭਾਰੀ ਨਹੀਂ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to check",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after",
+        "meaningPa": "ਨਤੀਜਾ; ਬਾਅਦ ਵਿੱਚ ਕੀ ਹੋਇਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S08",
@@ -4360,47 +11302,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What do they test? / ਉਹ ਕੀ ਅਜ਼ਮਾਉਂਦੇ ਹਨ?",
-        "choices": ["ice melting / ਬਰਫ਼ ਪਿਘਲਣਾ", "paper flying / ਕਾਗਜ਼ ਉੱਡਣਾ", "seed singing / ਬੀਜ ਗਾਉਣਾ"],
+        "choices": [
+          "ice melting / ਬਰਫ਼ ਪਿਘਲਣਾ",
+          "paper flying / ਕਾਗਜ਼ ਉੱਡਣਾ",
+          "seed singing / ਬੀਜ ਗਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story tests how ice melts. / ਕਹਾਣੀ ਵਿੱਚ ਬਰਫ਼ ਪਿਘਲਣ ਦਾ ਟੈਸਟ ਹੈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["sun melts faster / ਧੁੱਪ ਜਲਦੀ ਪਿਘਲਾਏਗੀ", "shade melts faster / ਛਾਂ ਜਲਦੀ ਪਿਘਲਾਏਗੀ", "ice grows / ਬਰਫ਼ ਵਧੇਗੀ"],
+        "choices": [
+          "sun melts faster / ਧੁੱਪ ਜਲਦੀ ਪਿਘਲਾਏਗੀ",
+          "shade melts faster / ਛਾਂ ਜਲਦੀ ਪਿਘਲਾਏਗੀ",
+          "ice grows / ਬਰਫ਼ ਵਧੇਗੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts ice in the sun will melt faster. / ਪੈਨਲ 3 ਵਿੱਚ ਧੁੱਪ ਵਾਲੀ ਬਰਫ਼ ਜਲਦੀ ਪਿਘਲੇਗੀ।"
       },
       {
         "question": "How do they test? / ਉਹ ਕਿਵੇਂ ਅਜ਼ਮਾਉਂਦੇ ਹਨ?",
-        "choices": ["sun and shade / ਧੁੱਪ ਤੇ ਛਾਂ", "hot and cold soup / ਗਰਮ ਤੇ ਠੰਢਾ ਸੂਪ", "bus and car / ਬੱਸ ਤੇ ਗੱਡੀ"],
+        "choices": [
+          "sun and shade / ਧੁੱਪ ਤੇ ਛਾਂ",
+          "hot and cold soup / ਗਰਮ ਤੇ ਠੰਢਾ ਸੂਪ",
+          "bus and car / ਬੱਸ ਤੇ ਗੱਡੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "They put one ice in the sun and one in the shade. / ਇੱਕ ਧੁੱਪ ਵਿੱਚ ਅਤੇ ਇੱਕ ਛਾਂ ਵਿੱਚ ਰੱਖਦੇ ਹਨ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["sun melts faster / ਧੁੱਪ ਵਾਲੀ ਜਲਦੀ", "shade melts faster / ਛਾਂ ਵਾਲੀ ਜਲਦੀ", "both same / ਦੋਵੇਂ ਇੱਕੋ"],
+        "choices": [
+          "sun melts faster / ਧੁੱਪ ਵਾਲੀ ਜਲਦੀ",
+          "shade melts faster / ਛਾਂ ਵਾਲੀ ਜਲਦੀ",
+          "both same / ਦੋਵੇਂ ਇੱਕੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the sunny ice melts faster. / ਪੈਨਲ 4 ਵਿੱਚ ਧੁੱਪ ਵਾਲੀ ਜਲਦੀ ਪਿਘਲਦੀ ਹੈ।"
       },
       {
         "question": "Why does ice melt faster in the sun? / ਧੁੱਪ ਵਿੱਚ ਬਰਫ਼ ਜਲਦੀ ਕਿਉਂ ਪਿਘਲਦੀ ਹੈ?",
-        "choices": ["because it is warmer / ਕਿਉਂਕਿ ਗਰਮ ਹੈ", "because it is louder / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ", "because it is darker / ਕਿਉਂਕਿ ਹਨੇਰਾ ਹੈ"],
+        "choices": [
+          "because it is warmer / ਕਿਉਂਕਿ ਗਰਮ ਹੈ",
+          "because it is louder / ਕਿਉਂਕਿ ਸ਼ੋਰ ਹੈ",
+          "because it is darker / ਕਿਉਂਕਿ ਹਨੇਰਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The sun is warmer, so the ice melts faster. / ਧੁੱਪ ਗਰਮ ਹੈ, ਇਸ ਲਈ ਬਰਫ਼ ਜਲਦੀ ਪਿਘਲਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "ice", "meaningEn": "frozen water", "meaningPa": "ਬਰਫ਼; ਜਮਿਆ ਪਾਣੀ" },
-      { "word": "melt", "meaningEn": "change from solid to liquid", "meaningPa": "ਪਿਘਲਣਾ; ਠੋਸ ਤੋਂ ਤਰਲ ਬਣਨਾ" },
-      { "word": "warmth", "meaningEn": "heat; feeling warm", "meaningPa": "ਗਰਮੀ; ਤਪਸ਼" },
-      { "word": "heat", "meaningEn": "hot energy that warms things", "meaningPa": "ਤਾਪ; ਗਰਮੀ ਵਾਲੀ ਊਰਜਾ" },
-      { "word": "sun", "meaningEn": "the bright light in the sky", "meaningPa": "ਸੂਰਜ; ਧੁੱਪ ਵਾਲਾ ਤਾਰਾ" },
-      { "word": "shade", "meaningEn": "a place away from sun", "meaningPa": "ਛਾਂ; ਧੁੱਪ ਤੋਂ ਦੂਰ ਥਾਂ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ" },
-      { "word": "test", "meaningEn": "try to find out", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਪਤਾ ਲਗਾਉਣਾ" },
-      { "word": "compare", "meaningEn": "see which is more", "meaningPa": "ਤੁਲਨਾ; ਕਿਹੜਾ ਵਧੇਰਾ" },
-      { "word": "result", "meaningEn": "what happens after", "meaningPa": "ਨਤੀਜਾ; ਆਖਿਰ ਜੋ ਹੋਇਆ" }
-    ]
+      {
+        "word": "ice",
+        "meaningEn": "frozen water",
+        "meaningPa": "ਬਰਫ਼; ਜਮਿਆ ਪਾਣੀ"
+      },
+      {
+        "word": "melt",
+        "meaningEn": "change from solid to liquid",
+        "meaningPa": "ਪਿਘਲਣਾ; ਠੋਸ ਤੋਂ ਤਰਲ ਬਣਨਾ"
+      },
+      {
+        "word": "warmth",
+        "meaningEn": "heat; feeling warm",
+        "meaningPa": "ਗਰਮੀ; ਤਪਸ਼"
+      },
+      {
+        "word": "heat",
+        "meaningEn": "hot energy that warms things",
+        "meaningPa": "ਤਾਪ; ਗਰਮੀ ਵਾਲੀ ਊਰਜਾ"
+      },
+      {
+        "word": "sun",
+        "meaningEn": "the bright light in the sky",
+        "meaningPa": "ਸੂਰਜ; ਧੁੱਪ ਵਾਲਾ ਤਾਰਾ"
+      },
+      {
+        "word": "shade",
+        "meaningEn": "a place away from sun",
+        "meaningPa": "ਛਾਂ; ਧੁੱਪ ਤੋਂ ਦੂਰ ਥਾਂ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to find out",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਪਤਾ ਲਗਾਉਣਾ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "see which is more",
+        "meaningPa": "ਤੁਲਨਾ; ਕਿਹੜਾ ਵਧੇਰਾ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after",
+        "meaningPa": "ਨਤੀਜਾ; ਆਖਿਰ ਜੋ ਹੋਇਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "makes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S09",
@@ -4413,47 +11435,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What materials do they sort? / ਉਹ ਕਿਹੜੇ ਸਮਾਨ ਛਾਂਟਦੇ ਹਨ?",
-        "choices": ["paper, plastic, metal / ਕਾਗਜ਼, ਪਲਾਸਟਿਕ, ਧਾਤੂ", "sand, water, fire / ਰੇਤ, ਪਾਣੀ, ਅੱਗ", "shoes, hats, socks / ਜੁੱਤੇ, ਟੋਪੀ, ਮੋਜੇ"],
+        "choices": [
+          "paper, plastic, metal / ਕਾਗਜ਼, ਪਲਾਸਟਿਕ, ਧਾਤੂ",
+          "sand, water, fire / ਰੇਤ, ਪਾਣੀ, ਅੱਗ",
+          "shoes, hats, socks / ਜੁੱਤੇ, ਟੋਪੀ, ਮੋਜੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 lists paper, plastic, and metal. / ਪੈਨਲ 1 ਵਿੱਚ ਕਾਗਜ਼, ਪਲਾਸਟਿਕ, ਧਾਤੂ ਹਨ।"
       },
       {
         "question": "What does the child do first? / ਬੱਚਾ ਪਹਿਲਾਂ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["observe / ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ", "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ", "dance / ਨੱਚਦਾ/ਨੱਚਦੀ ਹੈ"],
+        "choices": [
+          "observe / ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ",
+          "sleep / ਸੌਂਦਾ/ਸੌਂਦੀ ਹੈ",
+          "dance / ਨੱਚਦਾ/ਨੱਚਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child observes the items. / ਪੈਨਲ 2 ਵਿੱਚ ਚੀਜ਼ਾਂ ਵੇਖਦਾ/ਵੇਖਦੀ ਹੈ।"
       },
       {
         "question": "How does the child test sorting? / ਬੱਚਾ ਛਾਂਟਣ ਨੂੰ ਕਿਵੇਂ ਅਜ਼ਮਾਉਂਦਾ/ਅਜ਼ਮਾਉਂਦੀ ਹੈ?",
-        "choices": ["read labels and check / ਲੇਬਲ ਪੜ੍ਹ ਕੇ ਚੈੱਕ", "throw away / ਸੁੱਟ ਦੇਣਾ", "hide items / ਲੁਕਾਉਣਾ"],
+        "choices": [
+          "read labels and check / ਲੇਬਲ ਪੜ੍ਹ ਕੇ ਚੈੱਕ",
+          "throw away / ਸੁੱਟ ਦੇਣਾ",
+          "hide items / ਲੁਕਾਉਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the child reads labels and checks with the teacher. / ਪੈਨਲ 3 ਵਿੱਚ ਲੇਬਲ ਪੜ੍ਹ ਕੇ ਟੀਚਰ ਨਾਲ ਚੈੱਕ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["clean groups / ਸਾਫ਼ ਗਰੁੱਪ", "broken toys / ਟੁੱਟੇ ਖਿਡੌਣੇ", "wet books / ਭਿੱਜੀਆਂ ਕਿਤਾਬਾਂ"],
+        "choices": [
+          "clean groups / ਸਾਫ਼ ਗਰੁੱਪ",
+          "broken toys / ਟੁੱਟੇ ਖਿਡੌਣੇ",
+          "wet books / ਭਿੱਜੀਆਂ ਕਿਤਾਬਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the result is clean groups that match bins. / ਪੈਨਲ 4 ਵਿੱਚ ਸਾਫ਼ ਗਰੁੱਪ ਬਣਦੇ ਹਨ।"
       },
       {
         "question": "Why does sorting help? / ਛਾਂਟਣਾ ਕਿਉਂ ਮਦਦ ਕਰਦਾ ਹੈ?",
-        "choices": ["because recycling works / ਕਿਉਂਕਿ ਰੀਸਾਇਕਲ ਚੱਲਦਾ", "because clouds move / ਕਿਉਂਕਿ ਬੱਦਲ ਹਿਲਦੇ", "because ice melts / ਕਿਉਂਕਿ ਬਰਫ਼ ਪਿਘਲਦੀ"],
+        "choices": [
+          "because recycling works / ਕਿਉਂਕਿ ਰੀਸਾਇਕਲ ਚੱਲਦਾ",
+          "because clouds move / ਕਿਉਂਕਿ ਬੱਦਲ ਹਿਲਦੇ",
+          "because ice melts / ਕਿਉਂਕਿ ਬਰਫ਼ ਪਿਘਲਦੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 explains sorting helps recycling, so trash becomes less. / ਪੈਨਲ 5 ਵਿੱਚ ਰੀਸਾਇਕਲ ਲਈ ਛਾਂਟਣਾ ਮਦਦ ਕਰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "sort", "meaningEn": "put into groups", "meaningPa": "ਛਾਂਟਣਾ; ਗਰੁੱਪ ਬਣਾਉਣਾ" },
-      { "word": "recycle", "meaningEn": "use again in a new way", "meaningPa": "ਰੀਸਾਇਕਲ; ਮੁੜ ਵਰਤਣਾ" },
-      { "word": "paper", "meaningEn": "thin sheets", "meaningPa": "ਕਾਗਜ਼; ਪੱਤੇ" },
-      { "word": "plastic", "meaningEn": "light material for bottles and bags", "meaningPa": "ਪਲਾਸਟਿਕ; ਹਲਕਾ ਸਮਾਨ" },
-      { "word": "metal", "meaningEn": "hard material like a can", "meaningPa": "ਧਾਤੂ; ਸਖ਼ਤ ਸਮਾਨ" },
-      { "word": "label", "meaningEn": "words on an item", "meaningPa": "ਲੇਬਲ; ਚੀਜ਼ ਉੱਤੇ ਲਿਖਾਈ" },
-      { "word": "bin", "meaningEn": "container for trash or recycling", "meaningPa": "ਡੱਬਾ; ਕੂੜਾ/ਰੀਸਾਇਕਲ ਬਕਸਾ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ" },
-      { "word": "test", "meaningEn": "try to check", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "result", "meaningEn": "what happens after", "meaningPa": "ਨਤੀਜਾ; ਅਖੀਰ ਜੋ ਹੋਇਆ" }
-    ]
+      {
+        "word": "sort",
+        "meaningEn": "put into groups",
+        "meaningPa": "ਛਾਂਟਣਾ; ਗਰੁੱਪ ਬਣਾਉਣਾ"
+      },
+      {
+        "word": "recycle",
+        "meaningEn": "use again in a new way",
+        "meaningPa": "ਰੀਸਾਇਕਲ; ਮੁੜ ਵਰਤਣਾ"
+      },
+      {
+        "word": "paper",
+        "meaningEn": "thin sheets",
+        "meaningPa": "ਕਾਗਜ਼; ਪੱਤੇ"
+      },
+      {
+        "word": "plastic",
+        "meaningEn": "light material for bottles and bags",
+        "meaningPa": "ਪਲਾਸਟਿਕ; ਹਲਕਾ ਸਮਾਨ"
+      },
+      {
+        "word": "metal",
+        "meaningEn": "hard material like a can",
+        "meaningPa": "ਧਾਤੂ; ਸਖ਼ਤ ਸਮਾਨ"
+      },
+      {
+        "word": "label",
+        "meaningEn": "words on an item",
+        "meaningPa": "ਲੇਬਲ; ਚੀਜ਼ ਉੱਤੇ ਲਿਖਾਈ"
+      },
+      {
+        "word": "bin",
+        "meaningEn": "container for trash or recycling",
+        "meaningPa": "ਡੱਬਾ; ਕੂੜਾ/ਰੀਸਾਇਕਲ ਬਕਸਾ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਸੋਚਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to check",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after",
+        "meaningPa": "ਨਤੀਜਾ; ਅਖੀਰ ਜੋ ਹੋਇਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "goes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B8_S10",
@@ -4466,47 +11568,127 @@ var BOOK8_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "What event does the class have? / ਕਲਾਸ ਵਿੱਚ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["science fair / ਸਾਇੰਸ ਮੇਲਾ", "birthday party / ਜਨਮਦਿਨ ਪਾਰਟੀ", "sleep time / ਸੌਣ ਦਾ ਸਮਾਂ"],
+        "choices": [
+          "science fair / ਸਾਇੰਸ ਮੇਲਾ",
+          "birthday party / ਜਨਮਦਿਨ ਪਾਰਟੀ",
+          "sleep time / ਸੌਣ ਦਾ ਸਮਾਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the class has a mini science fair. / ਪੈਨਲ 1 ਵਿੱਚ ਛੋਟਾ ਸਾਇੰਸ ਮੇਲਾ ਹੈ।"
       },
       {
         "question": "What did the child test? / ਬੱਚੇ ਨੇ ਕੀ ਅਜ਼ਮਾਇਆ?",
-        "choices": ["ice in sun and shade / ਧੁੱਪ ਅਤੇ ਛਾਂ ਵਿੱਚ ਬਰਫ਼", "paper in water / ਪਾਣੀ ਵਿੱਚ ਕਾਗਜ਼", "seed in soup / ਸੂਪ ਵਿੱਚ ਬੀਜ"],
+        "choices": [
+          "ice in sun and shade / ਧੁੱਪ ਅਤੇ ਛਾਂ ਵਿੱਚ ਬਰਫ਼",
+          "paper in water / ਪਾਣੀ ਵਿੱਚ ਕਾਗਜ਼",
+          "seed in soup / ਸੂਪ ਵਿੱਚ ਬੀਜ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child tested ice in sun and shade. / ਪੈਨਲ 2 ਵਿੱਚ ਧੁੱਪ ਅਤੇ ਛਾਂ ਵਿੱਚ ਬਰਫ਼ ਅਜ਼ਮਾਈ।"
       },
       {
         "question": "What does the child predict? / ਬੱਚਾ ਕੀ ਅੰਦਾਜ਼ਾ ਲਗਾਂਦਾ/ਲਗਾਂਦੀ ਹੈ?",
-        "choices": ["sun melts faster / ਧੁੱਪ ਜਲਦੀ ਪਿਘਲਾਏਗੀ", "shade melts faster / ਛਾਂ ਜਲਦੀ ਪਿਘਲਾਏਗੀ", "ice grows / ਬਰਫ਼ ਵਧੇਗੀ"],
+        "choices": [
+          "sun melts faster / ਧੁੱਪ ਜਲਦੀ ਪਿਘਲਾਏਗੀ",
+          "shade melts faster / ਛਾਂ ਜਲਦੀ ਪਿਘਲਾਏਗੀ",
+          "ice grows / ਬਰਫ਼ ਵਧੇਗੀ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 predicts the sunny ice will melt faster. / ਪੈਨਲ 3 ਵਿੱਚ ਧੁੱਪ ਵਾਲੀ ਜਲਦੀ ਪਿਘਲੇਗੀ।"
       },
       {
         "question": "What is the result? / ਨਤੀਜਾ ਕੀ ਹੈ?",
-        "choices": ["more water on sunny plate / ਧੁੱਪ ਵਾਲੀ ਪਲੇਟ ਤੇ ਵਧੇਰਾ ਪਾਣੀ", "more water on shady plate / ਛਾਂ ਵਾਲੀ ਪਲੇਟ ਤੇ ਵਧੇਰਾ ਪਾਣੀ", "no water / ਪਾਣੀ ਨਹੀਂ"],
+        "choices": [
+          "more water on sunny plate / ਧੁੱਪ ਵਾਲੀ ਪਲੇਟ ਤੇ ਵਧੇਰਾ ਪਾਣੀ",
+          "more water on shady plate / ਛਾਂ ਵਾਲੀ ਪਲੇਟ ਤੇ ਵਧੇਰਾ ਪਾਣੀ",
+          "no water / ਪਾਣੀ ਨਹੀਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the sunny plate has more water. / ਪੈਨਲ 4 ਵਿੱਚ ਧੁੱਪ ਵਾਲੀ ਪਲੇਟ ਤੇ ਵਧੇਰਾ ਪਾਣੀ ਹੈ।"
       },
       {
         "question": "Why is the child proud? / ਬੱਚਾ ਮਾਣ ਕਿਉਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["did science steps / ਸਾਇੰਸ ਦੇ ਕਦਮ ਕੀਤੇ", "ate candy / ਕੈਂਡੀ ਖਾਈ", "ran fast / ਤੇਜ਼ ਦੌੜਿਆ"],
+        "choices": [
+          "did science steps / ਸਾਇੰਸ ਦੇ ਕਦਮ ਕੀਤੇ",
+          "ate candy / ਕੈਂਡੀ ਖਾਈ",
+          "ran fast / ਤੇਜ਼ ਦੌੜਿਆ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child observed, predicted, tested, and explained. / ਪੈਨਲ 5 ਵਿੱਚ ਬੱਚੇ ਨੇ ਵੇਖਿਆ, ਅੰਦਾਜ਼ਾ ਲਗਾਇਆ, ਅਜ਼ਮਾਇਆ, ਅਤੇ ਸਮਝਾਇਆ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "science", "meaningEn": "learning about the world by testing", "meaningPa": "ਸਾਇੰਸ; ਅਜ਼ਮਾਉਂ ਕੇ ਸਿੱਖਣਾ" },
-      { "word": "fair", "meaningEn": "an event where people show projects", "meaningPa": "ਮੇਲਾ; ਪ੍ਰੋਜੈਕਟ ਦਿਖਾਉਣ ਦਾ ਸਮਾਗਮ" },
-      { "word": "project", "meaningEn": "a work you make to show", "meaningPa": "ਪ੍ਰੋਜੈਕਟ; ਦਿਖਾਉਣ ਵਾਲਾ ਕੰਮ" },
-      { "word": "observe", "meaningEn": "look carefully", "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ" },
-      { "word": "predict", "meaningEn": "guess what will happen", "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ" },
-      { "word": "test", "meaningEn": "try to check", "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ" },
-      { "word": "compare", "meaningEn": "see which is more or less", "meaningPa": "ਤੁਲਨਾ; ਵਧੇਰਾ/ਘੱਟ ਵੇਖਣਾ" },
-      { "word": "result", "meaningEn": "what happens after", "meaningPa": "ਨਤੀਜਾ; ਅਖੀਰ ਜੋ ਹੋਇਆ" },
-      { "word": "explain", "meaningEn": "tell the reason clearly", "meaningPa": "ਸਮਝਾਉਣਾ; ਕਾਰਨ ਦੱਸਣਾ" },
-      { "word": "proud", "meaningEn": "happy about doing well", "meaningPa": "ਮਾਣ; ਚੰਗਾ ਕਰਕੇ ਖੁਸ਼" }
-    ]
+      {
+        "word": "science",
+        "meaningEn": "learning about the world by testing",
+        "meaningPa": "ਸਾਇੰਸ; ਅਜ਼ਮਾਉਂ ਕੇ ਸਿੱਖਣਾ"
+      },
+      {
+        "word": "fair",
+        "meaningEn": "an event where people show projects",
+        "meaningPa": "ਮੇਲਾ; ਪ੍ਰੋਜੈਕਟ ਦਿਖਾਉਣ ਦਾ ਸਮਾਗਮ"
+      },
+      {
+        "word": "project",
+        "meaningEn": "a work you make to show",
+        "meaningPa": "ਪ੍ਰੋਜੈਕਟ; ਦਿਖਾਉਣ ਵਾਲਾ ਕੰਮ"
+      },
+      {
+        "word": "observe",
+        "meaningEn": "look carefully",
+        "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ"
+      },
+      {
+        "word": "predict",
+        "meaningEn": "guess what will happen",
+        "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਪਹਿਲਾਂ ਕਹਿਣਾ"
+      },
+      {
+        "word": "test",
+        "meaningEn": "try to check",
+        "meaningPa": "ਅਜ਼ਮਾਉਣਾ; ਜਾਂਚ ਕਰਨੀ"
+      },
+      {
+        "word": "compare",
+        "meaningEn": "see which is more or less",
+        "meaningPa": "ਤੁਲਨਾ; ਵਧੇਰਾ/ਘੱਟ ਵੇਖਣਾ"
+      },
+      {
+        "word": "result",
+        "meaningEn": "what happens after",
+        "meaningPa": "ਨਤੀਜਾ; ਅਖੀਰ ਜੋ ਹੋਇਆ"
+      },
+      {
+        "word": "explain",
+        "meaningEn": "tell the reason clearly",
+        "meaningPa": "ਸਮਝਾਉਣਾ; ਕਾਰਨ ਦੱਸਣਾ"
+      },
+      {
+        "word": "proud",
+        "meaningEn": "happy about doing well",
+        "meaningPa": "ਮਾਣ; ਚੰਗਾ ਕਰਕੇ ਖੁਸ਼"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -4522,47 +11704,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["bazaar / ਬਾਜ਼ਾਰ", "library / ਲਾਇਬ੍ਰੇਰੀ", "clinic / ਕਲੀਨਿਕ"],
+        "choices": [
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "clinic / ਕਲੀਨਿਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child goes to the bazaar. / ਪੈਨਲ 1 ਵਿੱਚ ਬਾਜ਼ਾਰ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first in a crowded place? / ਭੀੜ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["stay close to mom / ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿਣਾ", "run far / ਦੂਰ ਦੌੜ ਜਾਣਾ", "hide behind boxes / ਡੱਬਿਆਂ ਪਿੱਛੇ ਲੁਕਣਾ"],
+        "choices": [
+          "stay close to mom / ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿਣਾ",
+          "run far / ਦੂਰ ਦੌੜ ਜਾਣਾ",
+          "hide behind boxes / ਡੱਬਿਆਂ ਪਿੱਛੇ ਲੁਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 shows the child stays close to Mom for safety. / ਪੈਨਲ 2 ਵਿੱਚ ਬੱਚਾ ਸੁਰੱਖਿਆ ਲਈ ਮਾਂ ਦੇ ਨੇੜੇ ਰਹਿੰਦਾ/ਰਹਿੰਦੀ ਹੈ।"
       },
       {
         "question": "Who gives directions? / ਰਸਤਾ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
-        "choices": ["shopkeeper / ਦੁਕਾਨਦਾਰ", "bus driver / ਬੱਸ ਡਰਾਈਵਰ", "doctor / ਡਾਕਟਰ"],
+        "choices": [
+          "shopkeeper / ਦੁਕਾਨਦਾਰ",
+          "bus driver / ਬੱਸ ਡਰਾਈਵਰ",
+          "doctor / ਡਾਕਟਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the shopkeeper points and gives directions. / ਪੈਨਲ 3 ਵਿੱਚ ਦੁਕਾਨਦਾਰ ਰਸਤਾ ਦੱਸਦਾ ਹੈ।"
       },
       {
         "question": "Why does the child follow directions? / ਬੱਚਾ ਰਸਤਾ ਕਿਉਂ ਮੰਨਦਾ/ਮੰਨਦੀ ਹੈ?",
-        "choices": ["to find the fruit shop / ਫਲ ਦੀ ਦੁਕਾਨ ਲੱਭਣ ਲਈ", "to get lost / ਗੁੰਮ ਹੋਣ ਲਈ", "to be late / ਦੇਰ ਕਰਨ ਲਈ"],
+        "choices": [
+          "to find the fruit shop / ਫਲ ਦੀ ਦੁਕਾਨ ਲੱਭਣ ਲਈ",
+          "to get lost / ਗੁੰਮ ਹੋਣ ਲਈ",
+          "to be late / ਦੇਰ ਕਰਨ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Following directions helps the child reach the fruit shop. / ਰਸਤਾ ਮੰਨਣ ਨਾਲ ਫਲ ਦੀ ਦੁਕਾਨ ਮਿਲਦੀ ਹੈ।"
       },
       {
         "question": "What do they buy? / ਉਹ ਕੀ ਖਰੀਦਦੇ ਹਨ?",
-        "choices": ["fruit / ਫਲ", "shoes / ਜੁੱਤੇ", "medicine / ਦਵਾਈ"],
+        "choices": [
+          "fruit / ਫਲ",
+          "shoes / ਜੁੱਤੇ",
+          "medicine / ਦਵਾਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they buy fruit and say thank you. / ਪੈਨਲ 5 ਵਿੱਚ ਫਲ ਖਰੀਦਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "bazaar", "meaningEn": "a busy market with many shops", "meaningPa": "ਬਾਜ਼ਾਰ; ਕਈ ਦੁਕਾਨਾਂ ਵਾਲੀ ਥਾਂ" },
-      { "word": "fruit", "meaningEn": "sweet food like apples or bananas", "meaningPa": "ਫਲ; ਸੇਬ, ਕੇਲੇ ਵਰਗਾ ਮਿੱਠਾ ਖਾਣਾ" },
-      { "word": "excuse me", "meaningEn": "polite words to get attention", "meaningPa": "ਐਕਸਕਿਊਜ਼ ਮੀ; ਨਮਰਤਾ ਨਾਲ ਧਿਆਨ ਖਿੱਚਣਾ" },
-      { "word": "directions", "meaningEn": "how to go to a place", "meaningPa": "ਰਸਤਾ; ਕਿੱਧਰ ਜਾਣਾ" },
-      { "word": "straight", "meaningEn": "go forward, not left or right", "meaningPa": "ਸਿੱਧਾ; ਅੱਗੇ ਵੱਲ" },
-      { "word": "left", "meaningEn": "the side opposite of right", "meaningPa": "ਖੱਬਾ; ਸੱਜੇ ਦਾ ਉਲਟ" },
-      { "word": "sign", "meaningEn": "a board with words or pictures", "meaningPa": "ਸਾਈਨ; ਲਿਖਤ/ਤਸਵੀਰ ਵਾਲਾ ਬੋਰਡ" },
-      { "word": "price", "meaningEn": "how much money something costs", "meaningPa": "ਕੀਮਤ; ਕਿੰਨੇ ਪੈਸੇ" },
-      { "word": "cheaper", "meaningEn": "costs less money", "meaningPa": "ਸਸਤਾ; ਘੱਟ ਕੀਮਤ" },
-      { "word": "thank you", "meaningEn": "polite words after help", "meaningPa": "ਧੰਨਵਾਦ; ਮਦਦ ਲਈ ਸ਼ੁਕਰੀਆ" }
-    ]
+      {
+        "word": "bazaar",
+        "meaningEn": "a busy market with many shops",
+        "meaningPa": "ਬਾਜ਼ਾਰ; ਕਈ ਦੁਕਾਨਾਂ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "fruit",
+        "meaningEn": "sweet food like apples or bananas",
+        "meaningPa": "ਫਲ; ਸੇਬ, ਕੇਲੇ ਵਰਗਾ ਮਿੱਠਾ ਖਾਣਾ"
+      },
+      {
+        "word": "excuse me",
+        "meaningEn": "polite words to get attention",
+        "meaningPa": "ਐਕਸਕਿਊਜ਼ ਮੀ; ਨਮਰਤਾ ਨਾਲ ਧਿਆਨ ਖਿੱਚਣਾ"
+      },
+      {
+        "word": "directions",
+        "meaningEn": "how to go to a place",
+        "meaningPa": "ਰਸਤਾ; ਕਿੱਧਰ ਜਾਣਾ"
+      },
+      {
+        "word": "straight",
+        "meaningEn": "go forward, not left or right",
+        "meaningPa": "ਸਿੱਧਾ; ਅੱਗੇ ਵੱਲ"
+      },
+      {
+        "word": "left",
+        "meaningEn": "the side opposite of right",
+        "meaningPa": "ਖੱਬਾ; ਸੱਜੇ ਦਾ ਉਲਟ"
+      },
+      {
+        "word": "sign",
+        "meaningEn": "a board with words or pictures",
+        "meaningPa": "ਸਾਈਨ; ਲਿਖਤ/ਤਸਵੀਰ ਵਾਲਾ ਬੋਰਡ"
+      },
+      {
+        "word": "price",
+        "meaningEn": "how much money something costs",
+        "meaningPa": "ਕੀਮਤ; ਕਿੰਨੇ ਪੈਸੇ"
+      },
+      {
+        "word": "cheaper",
+        "meaningEn": "costs less money",
+        "meaningPa": "ਸਸਤਾ; ਘੱਟ ਕੀਮਤ"
+      },
+      {
+        "word": "thank you",
+        "meaningEn": "polite words after help",
+        "meaningPa": "ਧੰਨਵਾਦ; ਮਦਦ ਲਈ ਸ਼ੁਕਰੀਆ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "close",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "ask",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S02",
@@ -4575,47 +11837,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Who is with the child? / ਬੱਚੇ ਨਾਲ ਕੌਣ ਹੈ?",
-        "choices": ["dad / ਪਿਉ", "teacher / ਟੀਚਰ", "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ"],
+        "choices": [
+          "dad / ਪਿਉ",
+          "teacher / ਟੀਚਰ",
+          "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child rides with Dad. / ਪੈਨਲ 1 ਵਿੱਚ ਪਿਉ ਨਾਲ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do in the auto? / ਆਟੋ ਵਿੱਚ ਬੱਚੇ ਨੇ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["sit and hold the bar / ਬੈਠ ਕੇ ਪੱਟੀ ਫੜਨੀ", "stand and jump / ਖੜ੍ਹ ਕੇ ਕੂਦਣਾ", "lean out / ਬਾਹਰ ਝੁਕਣਾ"],
+        "choices": [
+          "sit and hold the bar / ਬੈਠ ਕੇ ਪੱਟੀ ਫੜਨੀ",
+          "stand and jump / ਖੜ੍ਹ ਕੇ ਕੂਦਣਾ",
+          "lean out / ਬਾਹਰ ਝੁਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to stay seated and hold the side bar. / ਪੈਨਲ 2 ਵਿੱਚ ਬੈਠ ਕੇ ਪੱਟੀ ਫੜਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Where do they want to go? / ਉਹ ਕਿੱਥੇ ਜਾਣਾ ਚਾਹੁੰਦੇ ਹਨ?",
-        "choices": ["Green Street / ਗ੍ਰੀਨ ਸਟਰੀਟ", "City Zoo / ਚਿੜੀਆਘਰ", "Airport / ਹਵਾਈ ਅੱਡਾ"],
+        "choices": [
+          "Green Street / ਗ੍ਰੀਨ ਸਟਰੀਟ",
+          "City Zoo / ਚਿੜੀਆਘਰ",
+          "Airport / ਹਵਾਈ ਅੱਡਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says \"Green Street, near the school.\" / ਪੈਨਲ 3 ਵਿੱਚ ਗ੍ਰੀਨ ਸਟਰੀਟ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why does the child say they are close? / ਬੱਚਾ ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ ਕਿ ਅਸੀਂ ਨੇੜੇ ਹਾਂ?",
-        "choices": ["because they see the school / ਕਿਉਂਕਿ ਸਕੂਲ ਦਿਖਦਾ ਹੈ", "because it is night / ਕਿਉਂਕਿ ਰਾਤ ਹੈ", "because it is raining / ਕਿਉਂਕਿ ਮੀਂਹ ਪੈਂਦਾ ਹੈ"],
+        "choices": [
+          "because they see the school / ਕਿਉਂਕਿ ਸਕੂਲ ਦਿਖਦਾ ਹੈ",
+          "because it is night / ਕਿਉਂਕਿ ਰਾਤ ਹੈ",
+          "because it is raining / ਕਿਉਂਕਿ ਮੀਂਹ ਪੈਂਦਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the child sees the school as a landmark. / ਪੈਨਲ 4 ਵਿੱਚ ਸਕੂਲ ਨਿਸ਼ਾਨੀ ਵਜੋਂ ਦਿਖਦਾ ਹੈ।"
       },
       {
         "question": "What do they say at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
-        "choices": ["Thank you / ਧੰਨਵਾਦ", "Go away / ਦੂਰ ਜਾਓ", "Be loud / ਸ਼ੋਰ ਕਰੋ"],
+        "choices": [
+          "Thank you / ਧੰਨਵਾਦ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "Be loud / ਸ਼ੋਰ ਕਰੋ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they say \"Thank you.\" / ਪੈਨਲ 5 ਵਿੱਚ ਧੰਨਵਾਦ ਕਹਿੰਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "auto-rickshaw", "meaningEn": "a small vehicle for rides", "meaningPa": "ਆਟੋ ਰਿਕਸ਼ਾ; ਛੋਟੀ ਸਵਾਰੀ ਵਾਲੀ ਗੱਡੀ" },
-      { "word": "driver", "meaningEn": "person who drives a vehicle", "meaningPa": "ਡਰਾਈਵਰ; ਗੱਡੀ ਚਲਾਉਣ ਵਾਲਾ" },
-      { "word": "address", "meaningEn": "the place name where you go", "meaningPa": "ਪਤਾ; ਕਿੱਥੇ ਜਾਣਾ ਹੈ" },
-      { "word": "near", "meaningEn": "close to", "meaningPa": "ਨੇੜੇ; ਕੋਲ" },
-      { "word": "landmark", "meaningEn": "a place you recognize to guide you", "meaningPa": "ਨਿਸ਼ਾਨੀ; ਰਸਤਾ ਦੱਸਣ ਵਾਲੀ ਥਾਂ" },
-      { "word": "seat", "meaningEn": "a place to sit", "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ" },
-      { "word": "hold", "meaningEn": "keep in your hand", "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" },
-      { "word": "please", "meaningEn": "polite word when asking", "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ" },
-      { "word": "stop", "meaningEn": "to end the ride at a place", "meaningPa": "ਰੁਕਣਾ; ਥਾਂ ਤੇ ਰੁਕ ਜਾਣਾ" }
-    ]
+      {
+        "word": "auto-rickshaw",
+        "meaningEn": "a small vehicle for rides",
+        "meaningPa": "ਆਟੋ ਰਿਕਸ਼ਾ; ਛੋਟੀ ਸਵਾਰੀ ਵਾਲੀ ਗੱਡੀ"
+      },
+      {
+        "word": "driver",
+        "meaningEn": "person who drives a vehicle",
+        "meaningPa": "ਡਰਾਈਵਰ; ਗੱਡੀ ਚਲਾਉਣ ਵਾਲਾ"
+      },
+      {
+        "word": "address",
+        "meaningEn": "the place name where you go",
+        "meaningPa": "ਪਤਾ; ਕਿੱਥੇ ਜਾਣਾ ਹੈ"
+      },
+      {
+        "word": "near",
+        "meaningEn": "close to",
+        "meaningPa": "ਨੇੜੇ; ਕੋਲ"
+      },
+      {
+        "word": "landmark",
+        "meaningEn": "a place you recognize to guide you",
+        "meaningPa": "ਨਿਸ਼ਾਨੀ; ਰਸਤਾ ਦੱਸਣ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "seat",
+        "meaningEn": "a place to sit",
+        "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "hold",
+        "meaningEn": "keep in your hand",
+        "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "please",
+        "meaningEn": "polite word when asking",
+        "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ"
+      },
+      {
+        "word": "stop",
+        "meaningEn": "to end the ride at a place",
+        "meaningPa": "ਰੁਕਣਾ; ਥਾਂ ਤੇ ਰੁਕ ਜਾਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "ride",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "visit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S03",
@@ -4628,47 +11970,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["gurdwara / ਗੁਰਦੁਆਰਾ", "cinema / ਸਿਨੇਮਾ", "zoo / ਚਿੜੀਆਘਰ"],
+        "choices": [
+          "gurdwara / ਗੁਰਦੁਆਰਾ",
+          "cinema / ਸਿਨੇਮਾ",
+          "zoo / ਚਿੜੀਆਘਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child visits the gurdwara. / ਪੈਨਲ 1 ਵਿੱਚ ਗੁਰਦੁਆਰੇ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["cover head and place shoes / ਸਿਰ ਢੱਕਣਾ ਤੇ ਜੁੱਤੇ ਰੱਖਣਾ", "run loudly / ਉੱਚੀ ਦੌੜਣਾ", "push in line / ਕਤਾਰ ਧੱਕਣਾ"],
+        "choices": [
+          "cover head and place shoes / ਸਿਰ ਢੱਕਣਾ ਤੇ ਜੁੱਤੇ ਰੱਖਣਾ",
+          "run loudly / ਉੱਚੀ ਦੌੜਣਾ",
+          "push in line / ਕਤਾਰ ਧੱਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 shows head covering and shoes in the rack. / ਪੈਨਲ 2 ਵਿੱਚ ਸਿਰ ਢੱਕਣ ਅਤੇ ਜੁੱਤੇ ਰੱਖਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they do in the langar line? / ਲੰਗਰ ਦੀ ਕਤਾਰ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["wait turn / ਵਾਰੀ ਉਡੀਕਦੇ", "shout / ਚੀਕਦੇ", "sleep / ਸੌਂਦੇ"],
+        "choices": [
+          "wait turn / ਵਾਰੀ ਉਡੀਕਦੇ",
+          "shout / ਚੀਕਦੇ",
+          "sleep / ਸੌਂਦੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they wait their turn. / ਪੈਨਲ 3 ਵਿੱਚ ਵਾਰੀ ਉਡੀਕਦੇ ਹਨ।"
       },
       {
         "question": "Why does the child whisper? / ਬੱਚਾ ਹੌਲੀ ਕਿਉਂ ਬੋਲਦਾ/ਬੋਲਦੀ ਹੈ?",
-        "choices": ["because it is quiet inside / ਕਿਉਂਕਿ ਅੰਦਰ ਚੁੱਪ ਹੈ", "because it is windy / ਕਿਉਂਕਿ ਹਵਾ ਹੈ", "because it is dark / ਕਿਉਂਕਿ ਹਨੇਰਾ ਹੈ"],
+        "choices": [
+          "because it is quiet inside / ਕਿਉਂਕਿ ਅੰਦਰ ਚੁੱਪ ਹੈ",
+          "because it is windy / ਕਿਉਂਕਿ ਹਵਾ ਹੈ",
+          "because it is dark / ਕਿਉਂਕਿ ਹਨੇਰਾ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The story shows a calm, quiet place, so a soft voice is respectful. / ਕਹਾਣੀ ਵਿੱਚ ਸ਼ਾਂਤ ਥਾਂ ਹੈ, ਇਸ ਲਈ ਹੌਲੀ ਆਵਾਜ਼ ਆਦਰ ਹੈ।"
       },
       {
         "question": "What does the child do at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["helps with cups / ਗਿਲਾਸ ਰੱਖਣ ਵਿੱਚ ਮਦਦ", "throws plates / ਥਾਲੀਆਂ ਸੁੱਟਦਾ", "runs away / ਭੱਜ ਜਾਂਦਾ"],
+        "choices": [
+          "helps with cups / ਗਿਲਾਸ ਰੱਖਣ ਵਿੱਚ ਮਦਦ",
+          "throws plates / ਥਾਲੀਆਂ ਸੁੱਟਦਾ",
+          "runs away / ਭੱਜ ਜਾਂਦਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child helps put cups in the bin. / ਪੈਨਲ 5 ਵਿੱਚ ਗਿਲਾਸ ਡੱਬੇ ਵਿੱਚ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "gurdwara", "meaningEn": "a Sikh place of worship", "meaningPa": "ਗੁਰਦੁਆਰਾ; ਸਿੱਖਾਂ ਦਾ ਧਾਰਮਿਕ ਸਥਾਨ" },
-      { "word": "langar", "meaningEn": "community meal served to everyone", "meaningPa": "ਲੰਗਰ; ਸਭ ਲਈ ਸਾਂਝਾ ਭੋਜਨ" },
-      { "word": "line", "meaningEn": "people waiting in order", "meaningPa": "ਕਤਾਰ; ਲਾਈਨ" },
-      { "word": "wait", "meaningEn": "stay until your turn comes", "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ" },
-      { "word": "turn", "meaningEn": "your time to do something", "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ" },
-      { "word": "whisper", "meaningEn": "speak very softly", "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ ਬੋਲਣਾ" },
-      { "word": "helper", "meaningEn": "a person who helps", "meaningPa": "ਮਦਦਗਾਰ/ਸੇਵਾਦਾਰ; ਜੋ ਮਦਦ ਕਰੇ" },
-      { "word": "plate", "meaningEn": "a dish for food", "meaningPa": "ਥਾਲੀ; ਖਾਣਾ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ" },
-      { "word": "respect", "meaningEn": "show good manners", "meaningPa": "ਆਦਰ; ਸਲੀਕਾ ਅਤੇ ਸਨਮਾਨ" },
-      { "word": "kindness", "meaningEn": "being nice and helpful", "meaningPa": "ਦਇਆ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ ਹੋਣਾ" }
-    ]
+      {
+        "word": "gurdwara",
+        "meaningEn": "a Sikh place of worship",
+        "meaningPa": "ਗੁਰਦੁਆਰਾ; ਸਿੱਖਾਂ ਦਾ ਧਾਰਮਿਕ ਸਥਾਨ"
+      },
+      {
+        "word": "langar",
+        "meaningEn": "community meal served to everyone",
+        "meaningPa": "ਲੰਗਰ; ਸਭ ਲਈ ਸਾਂਝਾ ਭੋਜਨ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people waiting in order",
+        "meaningPa": "ਕਤਾਰ; ਲਾਈਨ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until your turn comes",
+        "meaningPa": "ਉਡੀਕ ਕਰਨੀ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "turn",
+        "meaningEn": "your time to do something",
+        "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+      },
+      {
+        "word": "whisper",
+        "meaningEn": "speak very softly",
+        "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ ਬੋਲਣਾ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "a person who helps",
+        "meaningPa": "ਮਦਦਗਾਰ/ਸੇਵਾਦਾਰ; ਜੋ ਮਦਦ ਕਰੇ"
+      },
+      {
+        "word": "plate",
+        "meaningEn": "a dish for food",
+        "meaningPa": "ਥਾਲੀ; ਖਾਣਾ ਰੱਖਣ ਵਾਲਾ ਬਰਤਨ"
+      },
+      {
+        "word": "respect",
+        "meaningEn": "show good manners",
+        "meaningPa": "ਆਦਰ; ਸਲੀਕਾ ਅਤੇ ਸਨਮਾਨ"
+      },
+      {
+        "word": "kindness",
+        "meaningEn": "being nice and helpful",
+        "meaningPa": "ਦਇਆ; ਚੰਗਾ ਅਤੇ ਮਦਦਗਾਰ ਹੋਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "visit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S04",
@@ -4681,47 +12103,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where are they waiting? / ਉਹ ਕਿੱਥੇ ਉਡੀਕ ਕਰ ਰਹੇ ਹਨ?",
-        "choices": ["bus stop / ਬੱਸ ਸਟਾਪ", "kitchen / ਰਸੋਈ", "park / ਪਾਰਕ"],
+        "choices": [
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "kitchen / ਰਸੋਈ",
+          "park / ਪਾਰਕ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they wait at the bus stop. / ਪੈਨਲ 1 ਵਿੱਚ ਬੱਸ ਸਟਾਪ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["hold aunt’s hand / ਮਾਸੀ ਦਾ ਹੱਥ ਫੜਨਾ", "run to the road / ਸੜਕ ਵੱਲ ਦੌੜਨਾ", "push people / ਲੋਕਾਂ ਨੂੰ ਧੱਕਣਾ"],
+        "choices": [
+          "hold aunt’s hand / ਮਾਸੀ ਦਾ ਹੱਥ ਫੜਨਾ",
+          "run to the road / ਸੜਕ ਵੱਲ ਦੌੜਨਾ",
+          "push people / ਲੋਕਾਂ ਨੂੰ ਧੱਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 shows holding the adult’s hand for safety. / ਪੈਨਲ 2 ਵਿੱਚ ਸੁਰੱਖਿਆ ਲਈ ਵੱਡੇ ਦਾ ਹੱਥ ਫੜਦਾ/ਫੜਦੀ ਹੈ।"
       },
       {
         "question": "Who answers the question? / ਸਵਾਲ ਦਾ ਜਵਾਬ ਕੌਣ ਦਿੰਦਾ ਹੈ?",
-        "choices": ["driver / ਡਰਾਈਵਰ", "chef / ਰਸੋਈਆ", "teacher / ਟੀਚਰ"],
+        "choices": [
+          "driver / ਡਰਾਈਵਰ",
+          "chef / ਰਸੋਈਆ",
+          "teacher / ਟੀਚਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the driver answers. / ਪੈਨਲ 4 ਵਿੱਚ ਡਰਾਈਵਰ ਜਵਾਬ ਦਿੰਦਾ ਹੈ।"
       },
       {
         "question": "Why does the child ask the driver? / ਬੱਚਾ ਡਰਾਈਵਰ ਨੂੰ ਕਿਉਂ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ?",
-        "choices": ["to check the bus route / ਬੱਸ ਦਾ ਰੂਟ ਚੈੱਕ ਕਰਨ ਲਈ", "to get candy / ਕੈਂਡੀ ਲਈ", "to be noisy / ਸ਼ੋਰ ਕਰਨ ਲਈ"],
+        "choices": [
+          "to check the bus route / ਬੱਸ ਦਾ ਰੂਟ ਚੈੱਕ ਕਰਨ ਲਈ",
+          "to get candy / ਕੈਂਡੀ ਲਈ",
+          "to be noisy / ਸ਼ੋਰ ਕਰਨ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "The child asks to make sure the bus goes to the right place. / ਬੱਚਾ ਪੱਕਾ ਕਰਨ ਲਈ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "What does the child do after boarding? / ਚੜ੍ਹਨ ਤੋਂ ਬਾਅਦ ਬੱਚਾ ਕੀ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["sits and keeps bag close / ਬੈਠ ਕੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ", "stands on seat / ਸੀਟ ਤੇ ਖੜ੍ਹਦਾ", "shouts / ਚੀਕਦਾ"],
+        "choices": [
+          "sits and keeps bag close / ਬੈਠ ਕੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ",
+          "stands on seat / ਸੀਟ ਤੇ ਖੜ੍ਹਦਾ",
+          "shouts / ਚੀਕਦਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child sits and keeps the bag close. / ਪੈਨਲ 5 ਵਿੱਚ ਬੈਠ ਕੇ ਬੈਗ ਨੇੜੇ ਰੱਖਦਾ/ਰੱਖਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "bus stop", "meaningEn": "a place where buses pick people up", "meaningPa": "ਬੱਸ ਸਟਾਪ; ਬੱਸ ਚੜ੍ਹਨ ਦੀ ਥਾਂ" },
-      { "word": "line", "meaningEn": "people waiting in order", "meaningPa": "ਕਤਾਰ; ਲਾਈਨ" },
-      { "word": "hold hands", "meaningEn": "hold an adult’s hand for safety", "meaningPa": "ਹੱਥ ਫੜਨਾ; ਸੁਰੱਖਿਆ ਲਈ ਵੱਡੇ ਦਾ ਹੱਥ ਫੜਨਾ" },
-      { "word": "number", "meaningEn": "the bus number", "meaningPa": "ਨੰਬਰ; ਬੱਸ ਦਾ ਨੰਬਰ" },
-      { "word": "route", "meaningEn": "the path the bus takes", "meaningPa": "ਰੂਟ; ਬੱਸ ਦਾ ਰਸਤਾ" },
-      { "word": "board", "meaningEn": "get on the bus", "meaningPa": "ਚੜ੍ਹਨਾ; ਬੱਸ ਵਿੱਚ ਚੜ੍ਹਨਾ" },
-      { "word": "seat", "meaningEn": "a place to sit", "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ" },
-      { "word": "bag", "meaningEn": "a school bag or carry bag", "meaningPa": "ਬੈਗ; ਥੈਲਾ" },
-      { "word": "ask", "meaningEn": "say a question", "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ" },
-      { "word": "clear", "meaningEn": "easy to understand", "meaningPa": "ਸਾਫ਼; ਸਮਝਣ ਵਿੱਚ ਆਸਾਨ" }
-    ]
+      {
+        "word": "bus stop",
+        "meaningEn": "a place where buses pick people up",
+        "meaningPa": "ਬੱਸ ਸਟਾਪ; ਬੱਸ ਚੜ੍ਹਨ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "line",
+        "meaningEn": "people waiting in order",
+        "meaningPa": "ਕਤਾਰ; ਲਾਈਨ"
+      },
+      {
+        "word": "hold hands",
+        "meaningEn": "hold an adult’s hand for safety",
+        "meaningPa": "ਹੱਥ ਫੜਨਾ; ਸੁਰੱਖਿਆ ਲਈ ਵੱਡੇ ਦਾ ਹੱਥ ਫੜਨਾ"
+      },
+      {
+        "word": "number",
+        "meaningEn": "the bus number",
+        "meaningPa": "ਨੰਬਰ; ਬੱਸ ਦਾ ਨੰਬਰ"
+      },
+      {
+        "word": "route",
+        "meaningEn": "the path the bus takes",
+        "meaningPa": "ਰੂਟ; ਬੱਸ ਦਾ ਰਸਤਾ"
+      },
+      {
+        "word": "board",
+        "meaningEn": "get on the bus",
+        "meaningPa": "ਚੜ੍ਹਨਾ; ਬੱਸ ਵਿੱਚ ਚੜ੍ਹਨਾ"
+      },
+      {
+        "word": "seat",
+        "meaningEn": "a place to sit",
+        "meaningPa": "ਸੀਟ; ਬੈਠਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "bag",
+        "meaningEn": "a school bag or carry bag",
+        "meaningPa": "ਬੈਗ; ਥੈਲਾ"
+      },
+      {
+        "word": "ask",
+        "meaningEn": "say a question",
+        "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+      },
+      {
+        "word": "clear",
+        "meaningEn": "easy to understand",
+        "meaningPa": "ਸਾਫ਼; ਸਮਝਣ ਵਿੱਚ ਆਸਾਨ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "come",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S05",
@@ -4734,47 +12236,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["railway station / ਰੇਲਵੇ ਸਟੇਸ਼ਨ", "school / ਸਕੂਲ", "home / ਘਰ"],
+        "choices": [
+          "railway station / ਰੇਲਵੇ ਸਟੇਸ਼ਨ",
+          "school / ਸਕੂਲ",
+          "home / ਘਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they are at the railway station. / ਪੈਨਲ 1 ਵਿੱਚ ਰੇਲਵੇ ਸਟੇਸ਼ਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first in the crowd? / ਭੀੜ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["hold mom’s hand / ਮਾਂ ਦਾ ਹੱਥ ਫੜਨਾ", "run ahead / ਅੱਗੇ ਦੌੜਣਾ", "sit on floor / ਫਰਸ਼ ਤੇ ਬੈਠਣਾ"],
+        "choices": [
+          "hold mom’s hand / ਮਾਂ ਦਾ ਹੱਥ ਫੜਨਾ",
+          "run ahead / ਅੱਗੇ ਦੌੜਣਾ",
+          "sit on floor / ਫਰਸ਼ ਤੇ ਬੈਠਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to hold Mom’s hand and not run. / ਪੈਨਲ 2 ਵਿੱਚ ਮਾਂ ਦਾ ਹੱਥ ਫੜ ਕੇ ਨਾ ਦੌੜਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who helps with information? / ਜਾਣਕਾਰੀ ਕੌਣ ਦਿੰਦਾ ਹੈ?",
-        "choices": ["staff member / ਸਟਾਫ਼", "cook / ਰਸੋਈਆ", "friend / ਦੋਸਤ"],
+        "choices": [
+          "staff member / ਸਟਾਫ਼",
+          "cook / ਰਸੋਈਆ",
+          "friend / ਦੋਸਤ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the child asks a staff member. / ਪੈਨਲ 3 ਵਿੱਚ ਸਟਾਫ਼ ਨੂੰ ਪੁੱਛਦਾ/ਪੁੱਛਦੀ ਹੈ।"
       },
       {
         "question": "Why do they follow the sign? / ਉਹ ਸਾਈਨ ਕਿਉਂ ਮੰਨਦੇ ਹਨ?",
-        "choices": ["to reach the platform / ਪਲੇਟਫਾਰਮ ਤੱਕ ਪਹੁੰਚਣ ਲਈ", "to lose the train / ਰੇਲ ਛੱਡਣ ਲਈ", "to play games / ਖੇਡਣ ਲਈ"],
+        "choices": [
+          "to reach the platform / ਪਲੇਟਫਾਰਮ ਤੱਕ ਪਹੁੰਚਣ ਲਈ",
+          "to lose the train / ਰੇਲ ਛੱਡਣ ਲਈ",
+          "to play games / ਖੇਡਣ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Following signs helps them reach the correct platform. / ਸਾਈਨ ਮੰਨਣ ਨਾਲ ਸਹੀ ਪਲੇਟਫਾਰਮ ਮਿਲਦਾ ਹੈ।"
       },
       {
         "question": "Which platform do they find? / ਉਹ ਕਿਹੜਾ ਪਲੇਟਫਾਰਮ ਲੱਭਦੇ ਹਨ?",
-        "choices": ["platform two / ਪਲੇਟਫਾਰਮ ਦੋ", "platform ten / ਪਲੇਟਫਾਰਮ ਦਸ", "platform zero / ਪਲੇਟਫਾਰਮ ਸਿਫ਼ਰ"],
+        "choices": [
+          "platform two / ਪਲੇਟਫਾਰਮ ਦੋ",
+          "platform ten / ਪਲੇਟਫਾਰਮ ਦਸ",
+          "platform zero / ਪਲੇਟਫਾਰਮ ਸਿਫ਼ਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they find platform two. / ਪੈਨਲ 5 ਵਿੱਚ ਪਲੇਟਫਾਰਮ ਦੋ ਲੱਭਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "station", "meaningEn": "a place where trains arrive and leave", "meaningPa": "ਸਟੇਸ਼ਨ; ਰੇਲ ਆਉਣ-ਜਾਣ ਦੀ ਥਾਂ" },
-      { "word": "platform", "meaningEn": "the place beside the train", "meaningPa": "ਪਲੇਟਫਾਰਮ; ਰੇਲ ਦੇ ਨਾਲ ਵਾਲੀ ਥਾਂ" },
-      { "word": "staff", "meaningEn": "people who work there", "meaningPa": "ਸਟਾਫ਼; ਉੱਥੇ ਕੰਮ ਕਰਨ ਵਾਲੇ" },
-      { "word": "sign", "meaningEn": "a board that shows directions", "meaningPa": "ਸਾਈਨ; ਰਸਤਾ ਦੱਸਣ ਵਾਲਾ ਬੋਰਡ" },
-      { "word": "follow", "meaningEn": "go the same way", "meaningPa": "ਮੰਨਣਾ/ਪਿੱਛੇ ਕਰਨਾ; ਉਸੇ ਰਸਤੇ ਜਾਣਾ" },
-      { "word": "coach", "meaningEn": "a train car", "meaningPa": "ਕੋਚ; ਰੇਲ ਦਾ ਡੱਬਾ" },
-      { "word": "busy", "meaningEn": "many people and movement", "meaningPa": "ਭੀੜ ਵਾਲਾ; ਬਹੁਤ ਲੋਕ" },
-      { "word": "hold", "meaningEn": "keep in your hand", "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ" },
-      { "word": "ask", "meaningEn": "say a question", "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ" },
-      { "word": "wait", "meaningEn": "stay until it is time", "meaningPa": "ਉਡੀਕ; ਸਮਾਂ ਆਉਣ ਤੱਕ ਰੁਕਣਾ" }
-    ]
+      {
+        "word": "station",
+        "meaningEn": "a place where trains arrive and leave",
+        "meaningPa": "ਸਟੇਸ਼ਨ; ਰੇਲ ਆਉਣ-ਜਾਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "platform",
+        "meaningEn": "the place beside the train",
+        "meaningPa": "ਪਲੇਟਫਾਰਮ; ਰੇਲ ਦੇ ਨਾਲ ਵਾਲੀ ਥਾਂ"
+      },
+      {
+        "word": "staff",
+        "meaningEn": "people who work there",
+        "meaningPa": "ਸਟਾਫ਼; ਉੱਥੇ ਕੰਮ ਕਰਨ ਵਾਲੇ"
+      },
+      {
+        "word": "sign",
+        "meaningEn": "a board that shows directions",
+        "meaningPa": "ਸਾਈਨ; ਰਸਤਾ ਦੱਸਣ ਵਾਲਾ ਬੋਰਡ"
+      },
+      {
+        "word": "follow",
+        "meaningEn": "go the same way",
+        "meaningPa": "ਮੰਨਣਾ/ਪਿੱਛੇ ਕਰਨਾ; ਉਸੇ ਰਸਤੇ ਜਾਣਾ"
+      },
+      {
+        "word": "coach",
+        "meaningEn": "a train car",
+        "meaningPa": "ਕੋਚ; ਰੇਲ ਦਾ ਡੱਬਾ"
+      },
+      {
+        "word": "busy",
+        "meaningEn": "many people and movement",
+        "meaningPa": "ਭੀੜ ਵਾਲਾ; ਬਹੁਤ ਲੋਕ"
+      },
+      {
+        "word": "hold",
+        "meaningEn": "keep in your hand",
+        "meaningPa": "ਫੜਨਾ; ਹੱਥ ਵਿੱਚ ਰੱਖਣਾ"
+      },
+      {
+        "word": "ask",
+        "meaningEn": "say a question",
+        "meaningPa": "ਪੁੱਛਣਾ; ਸਵਾਲ ਕਰਨਾ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until it is time",
+        "meaningPa": "ਉਡੀਕ; ਸਮਾਂ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "close",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S06",
@@ -4787,47 +12369,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where does the child go? / ਬੱਚਾ ਕਿੱਥੇ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["clinic / ਕਲੀਨਿਕ", "bazaar / ਬਾਜ਼ਾਰ", "train / ਰੇਲ"],
+        "choices": [
+          "clinic / ਕਲੀਨਿਕ",
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "train / ਰੇਲ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child goes to the clinic. / ਪੈਨਲ 1 ਵਿੱਚ ਕਲੀਨਿਕ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first at the clinic? / ਕਲੀਨਿਕ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["speak clearly / ਸਾਫ਼ ਬੋਲਣਾ", "hide / ਲੁਕਣਾ", "shout / ਚੀਕਣਾ"],
+        "choices": [
+          "speak clearly / ਸਾਫ਼ ਬੋਲਣਾ",
+          "hide / ਲੁਕਣਾ",
+          "shout / ਚੀਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to speak clearly to the nurse. / ਪੈਨਲ 2 ਵਿੱਚ ਨਰਸ ਨੂੰ ਸਾਫ਼ ਦੱਸਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who does the child talk to? / ਬੱਚਾ ਕਿਸ ਨਾਲ ਗੱਲ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["nurse / ਨਰਸ", "driver / ਡਰਾਈਵਰ", "guard / ਗਾਰਡ"],
+        "choices": [
+          "nurse / ਨਰਸ",
+          "driver / ਡਰਾਈਵਰ",
+          "guard / ਗਾਰਡ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the child talks to the nurse. / ਪੈਨਲ 3 ਵਿੱਚ ਨਰਸ ਨਾਲ ਗੱਲ ਹੁੰਦੀ ਹੈ।"
       },
       {
         "question": "Why does the child go to the clinic? / ਬੱਚਾ ਕਲੀਨਿਕ ਕਿਉਂ ਜਾਂਦਾ/ਜਾਂਦੀ ਹੈ?",
-        "choices": ["because throat hurts / ਕਿਉਂਕਿ ਗਲਾ ਦਰਦ", "because wants toys / ਕਿਉਂਕਿ ਖਿਡੌਣੇ", "because late bus / ਕਿਉਂਕਿ ਬੱਸ ਦੇਰ"],
+        "choices": [
+          "because throat hurts / ਕਿਉਂਕਿ ਗਲਾ ਦਰਦ",
+          "because wants toys / ਕਿਉਂਕਿ ਖਿਡੌਣੇ",
+          "because late bus / ਕਿਉਂਕਿ ਬੱਸ ਦੇਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the throat hurts. / ਪੈਨਲ 1 ਵਿੱਚ ਗਲੇ ਦੇ ਦਰਦ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does Dad say? / ਪਿਉ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
-        "choices": ["We will follow your advice / ਅਸੀਂ ਤੁਹਾਡੀ ਸਲਾਹ ਮੰਨਾਂਗੇ", "We will run fast / ਅਸੀਂ ਤੇਜ਼ ਦੌੜਾਂਗੇ", "We will shout / ਅਸੀਂ ਚੀਕਾਂਗੇ"],
+        "choices": [
+          "We will follow your advice / ਅਸੀਂ ਤੁਹਾਡੀ ਸਲਾਹ ਮੰਨਾਂਗੇ",
+          "We will run fast / ਅਸੀਂ ਤੇਜ਼ ਦੌੜਾਂਗੇ",
+          "We will shout / ਅਸੀਂ ਚੀਕਾਂਗੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says Dad will follow the doctor’s advice. / ਪੈਨਲ 4 ਵਿੱਚ ਪਿਉ ਸਲਾਹ ਮੰਨਣ ਦੀ ਗੱਲ ਕਰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "clinic", "meaningEn": "a place to see a doctor", "meaningPa": "ਕਲੀਨਿਕ; ਡਾਕਟਰ ਨੂੰ ਮਿਲਣ ਦੀ ਥਾਂ" },
-      { "word": "nurse", "meaningEn": "a helper in a clinic or hospital", "meaningPa": "ਨਰਸ; ਕਲੀਨਿਕ ਵਿੱਚ ਮਦਦਗਾਰ" },
-      { "word": "doctor", "meaningEn": "a person who helps sick people", "meaningPa": "ਡਾਕਟਰ; ਬਿਮਾਰ ਨੂੰ ਸਹਾਇਤਾ ਕਰਨ ਵਾਲਾ" },
-      { "word": "throat", "meaningEn": "part inside your neck", "meaningPa": "ਗਲਾ; ਗਰਦਨ ਅੰਦਰਲਾ ਹਿੱਸਾ" },
-      { "word": "hurt", "meaningEn": "feel pain", "meaningPa": "ਦਰਦ ਕਰਨਾ; ਪੀੜ ਹੋਣੀ" },
-      { "word": "cough", "meaningEn": "a sound when you are sick", "meaningPa": "ਖਾਂਸੀ; ਬਿਮਾਰੀ ਵਾਲੀ ਖੰਘ" },
-      { "word": "rest", "meaningEn": "relax and sleep to feel better", "meaningPa": "ਆਰਾਮ; ਸਰੀਰ ਨੂੰ ਸੁਕੂਨ" },
-      { "word": "warm", "meaningEn": "not cold", "meaningPa": "ਗੁੰਮਗਰਮ; ਠੰਢਾ ਨਹੀਂ" },
-      { "word": "clearly", "meaningEn": "in an easy-to-understand way", "meaningPa": "ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ; ਸਮਝ ਆਵੇ ਤਰ੍ਹਾਂ" },
-      { "word": "advice", "meaningEn": "helpful words from an expert", "meaningPa": "ਸਲਾਹ; ਮਦਦ ਵਾਲੀ ਗੱਲ" }
-    ]
+      {
+        "word": "clinic",
+        "meaningEn": "a place to see a doctor",
+        "meaningPa": "ਕਲੀਨਿਕ; ਡਾਕਟਰ ਨੂੰ ਮਿਲਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "nurse",
+        "meaningEn": "a helper in a clinic or hospital",
+        "meaningPa": "ਨਰਸ; ਕਲੀਨਿਕ ਵਿੱਚ ਮਦਦਗਾਰ"
+      },
+      {
+        "word": "doctor",
+        "meaningEn": "a person who helps sick people",
+        "meaningPa": "ਡਾਕਟਰ; ਬਿਮਾਰ ਨੂੰ ਸਹਾਇਤਾ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "throat",
+        "meaningEn": "part inside your neck",
+        "meaningPa": "ਗਲਾ; ਗਰਦਨ ਅੰਦਰਲਾ ਹਿੱਸਾ"
+      },
+      {
+        "word": "hurt",
+        "meaningEn": "feel pain",
+        "meaningPa": "ਦਰਦ ਕਰਨਾ; ਪੀੜ ਹੋਣੀ"
+      },
+      {
+        "word": "cough",
+        "meaningEn": "a sound when you are sick",
+        "meaningPa": "ਖਾਂਸੀ; ਬਿਮਾਰੀ ਵਾਲੀ ਖੰਘ"
+      },
+      {
+        "word": "rest",
+        "meaningEn": "relax and sleep to feel better",
+        "meaningPa": "ਆਰਾਮ; ਸਰੀਰ ਨੂੰ ਸੁਕੂਨ"
+      },
+      {
+        "word": "warm",
+        "meaningEn": "not cold",
+        "meaningPa": "ਗੁੰਮਗਰਮ; ਠੰਢਾ ਨਹੀਂ"
+      },
+      {
+        "word": "clearly",
+        "meaningEn": "in an easy-to-understand way",
+        "meaningPa": "ਸਾਫ਼ ਤਰੀਕੇ ਨਾਲ; ਸਮਝ ਆਵੇ ਤਰ੍ਹਾਂ"
+      },
+      {
+        "word": "advice",
+        "meaningEn": "helpful words from an expert",
+        "meaningPa": "ਸਲਾਹ; ਮਦਦ ਵਾਲੀ ਗੱਲ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S07",
@@ -4840,47 +12502,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where do they go? / ਉਹ ਕਿੱਥੇ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["chemist / ਕੈਮਿਸਟ", "bus stop / ਬੱਸ ਸਟਾਪ", "gurdwara / ਗੁਰਦੁਆਰਾ"],
+        "choices": [
+          "chemist / ਕੈਮਿਸਟ",
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "gurdwara / ਗੁਰਦੁਆਰਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they go to the chemist. / ਪੈਨਲ 1 ਵਿੱਚ ਕੈਮਿਸਟ ਜਾਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first in the shop? / ਦੁਕਾਨ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["stay close and wait / ਨੇੜੇ ਰਹਿ ਕੇ ਉਡੀਕ", "run outside / ਬਾਹਰ ਦੌੜਣਾ", "touch everything / ਸਭ ਛੂਹਣਾ"],
+        "choices": [
+          "stay close and wait / ਨੇੜੇ ਰਹਿ ਕੇ ਉਡੀਕ",
+          "run outside / ਬਾਹਰ ਦੌੜਣਾ",
+          "touch everything / ਸਭ ਛੂਹਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says stay close and wait your turn. / ਪੈਨਲ 2 ਵਿੱਚ ਨੇੜੇ ਰਹਿ ਕੇ ਵਾਰੀ ਉਡੀਕਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What do they ask for? / ਉਹ ਕੀ ਮੰਗਦੇ ਹਨ?",
-        "choices": ["bandage and ORS / ਪੱਟੀ ਅਤੇ ORS", "toy car / ਖਿਡੌਣਾ ਗੱਡੀ", "ice cream / ਆਈਸ ਕ੍ਰੀਮ"],
+        "choices": [
+          "bandage and ORS / ਪੱਟੀ ਅਤੇ ORS",
+          "toy car / ਖਿਡੌਣਾ ਗੱਡੀ",
+          "ice cream / ਆਈਸ ਕ੍ਰੀਮ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says they need a bandage and ORS. / ਪੈਨਲ 3 ਵਿੱਚ ਪੱਟੀ ਅਤੇ ORS ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Why do they go to the chemist? / ਉਹ ਕੈਮਿਸਟ ਕਿਉਂ ਜਾਂਦੇ ਹਨ?",
-        "choices": ["because of a scrape / ਕਿਉਂਕਿ ਖਰੋਚ", "because of homework / ਕਿਉਂਕਿ ਹੋਮਵਰਕ", "because of rain / ਕਿਉਂਕਿ ਮੀਂਹ"],
+        "choices": [
+          "because of a scrape / ਕਿਉਂਕਿ ਖਰੋਚ",
+          "because of homework / ਕਿਉਂਕਿ ਹੋਮਵਰਕ",
+          "because of rain / ਕਿਉਂਕਿ ਮੀਂਹ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child got a small scrape. / ਪੈਨਲ 1 ਵਿੱਚ ਖਰੋਚ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What does the child say at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕੀ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["Thank you / ਧੰਨਵਾਦ", "Go away / ਦੂਰ ਜਾਓ", "No / ਨਹੀਂ"],
+        "choices": [
+          "Thank you / ਧੰਨਵਾਦ",
+          "Go away / ਦੂਰ ਜਾਓ",
+          "No / ਨਹੀਂ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child says thank you. / ਪੈਨਲ 5 ਵਿੱਚ ਧੰਨਵਾਦ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "chemist", "meaningEn": "a shop that sells health items", "meaningPa": "ਕੈਮਿਸਟ; ਸਿਹਤ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਦੀ ਦੁਕਾਨ" },
-      { "word": "bandage", "meaningEn": "a strip to cover a small wound", "meaningPa": "ਪੱਟੀ; ਚੋਟ ਢੱਕਣ ਵਾਲੀ ਪੱਟੀ" },
-      { "word": "scrape", "meaningEn": "a small skin scratch", "meaningPa": "ਖਰੋਚ; ਚਮੜੀ ਦੀ ਹਲਕੀ ਚੋਟ" },
-      { "word": "ORS", "meaningEn": "drink to help with dehydration (with adult)", "meaningPa": "ORS; ਪਾਣੀ ਦੀ ਘਾਟ ਲਈ ਪੇਯ (ਵੱਡੇ ਨਾਲ)" },
-      { "word": "wait", "meaningEn": "stay until your turn", "meaningPa": "ਉਡੀਕ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ" },
-      { "word": "turn", "meaningEn": "your time", "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ" },
-      { "word": "price", "meaningEn": "how much it costs", "meaningPa": "ਕੀਮਤ; ਕਿੰਨੇ ਦਾ" },
-      { "word": "pay", "meaningEn": "give money for something", "meaningPa": "ਭੁਗਤਾਨ ਕਰਨਾ; ਪੈਸੇ ਦੇਣਾ" },
-      { "word": "careful", "meaningEn": "not rushed; safe", "meaningPa": "ਧਿਆਨ ਨਾਲ; ਸਾਵਧਾਨ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" }
-    ]
+      {
+        "word": "chemist",
+        "meaningEn": "a shop that sells health items",
+        "meaningPa": "ਕੈਮਿਸਟ; ਸਿਹਤ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ ਦੀ ਦੁਕਾਨ"
+      },
+      {
+        "word": "bandage",
+        "meaningEn": "a strip to cover a small wound",
+        "meaningPa": "ਪੱਟੀ; ਚੋਟ ਢੱਕਣ ਵਾਲੀ ਪੱਟੀ"
+      },
+      {
+        "word": "scrape",
+        "meaningEn": "a small skin scratch",
+        "meaningPa": "ਖਰੋਚ; ਚਮੜੀ ਦੀ ਹਲਕੀ ਚੋਟ"
+      },
+      {
+        "word": "ORS",
+        "meaningEn": "drink to help with dehydration (with adult)",
+        "meaningPa": "ORS; ਪਾਣੀ ਦੀ ਘਾਟ ਲਈ ਪੇਯ (ਵੱਡੇ ਨਾਲ)"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay until your turn",
+        "meaningPa": "ਉਡੀਕ; ਵਾਰੀ ਆਉਣ ਤੱਕ ਰੁਕਣਾ"
+      },
+      {
+        "word": "turn",
+        "meaningEn": "your time",
+        "meaningPa": "ਵਾਰੀ; ਤੁਹਾਡਾ ਮੌਕਾ"
+      },
+      {
+        "word": "price",
+        "meaningEn": "how much it costs",
+        "meaningPa": "ਕੀਮਤ; ਕਿੰਨੇ ਦਾ"
+      },
+      {
+        "word": "pay",
+        "meaningEn": "give money for something",
+        "meaningPa": "ਭੁਗਤਾਨ ਕਰਨਾ; ਪੈਸੇ ਦੇਣਾ"
+      },
+      {
+        "word": "careful",
+        "meaningEn": "not rushed; safe",
+        "meaningPa": "ਧਿਆਨ ਨਾਲ; ਸਾਵਧਾਨ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "go",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "close",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S08",
@@ -4893,47 +12635,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where are they? / ਉਹ ਕਿੱਥੇ ਹਨ?",
-        "choices": ["library / ਲਾਇਬ੍ਰੇਰੀ", "bazaar / ਬਾਜ਼ਾਰ", "station / ਸਟੇਸ਼ਨ"],
+        "choices": [
+          "library / ਲਾਇਬ੍ਰੇਰੀ",
+          "bazaar / ਬਾਜ਼ਾਰ",
+          "station / ਸਟੇਸ਼ਨ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they are in the library. / ਪੈਨਲ 1 ਵਿੱਚ ਲਾਇਬ੍ਰੇਰੀ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first in the library? / ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["use a quiet voice / ਹੌਲੀ ਆਵਾਜ਼", "shout loudly / ਉੱਚਾ ਚੀਕਣਾ", "run fast / ਤੇਜ਼ ਦੌੜਣਾ"],
+        "choices": [
+          "use a quiet voice / ਹੌਲੀ ਆਵਾਜ਼",
+          "shout loudly / ਉੱਚਾ ਚੀਕਣਾ",
+          "run fast / ਤੇਜ਼ ਦੌੜਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says to use a soft voice. / ਪੈਨਲ 2 ਵਿੱਚ ਹੌਲੀ ਆਵਾਜ਼ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who helps the child find the aisle? / ਅਇਜ਼ਲ ਕੌਣ ਦੱਸਦਾ ਹੈ?",
-        "choices": ["librarian / ਲਾਇਬ੍ਰੇਰੀਅਨ", "driver / ਡਰਾਈਵਰ", "guard / ਗਾਰਡ"],
+        "choices": [
+          "librarian / ਲਾਇਬ੍ਰੇਰੀਅਨ",
+          "driver / ਡਰਾਈਵਰ",
+          "guard / ਗਾਰਡ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the librarian gives the aisle number. / ਪੈਨਲ 3 ਵਿੱਚ ਲਾਇਬ੍ਰੇਰੀਅਨ ਅਇਜ਼ਲ ਦੱਸਦੀ ਹੈ।"
       },
       {
         "question": "Why does the child ask \"Excuse me\"? / ਬੱਚਾ \"Excuse me\" ਕਿਉਂ ਕਹਿੰਦਾ/ਕਹਿੰਦੀ ਹੈ?",
-        "choices": ["to be polite / ਨਮਰ ਹੋਣ ਲਈ", "to be rude / ਬਦਤਮੀਜ਼ੀ ਲਈ", "to be loud / ਸ਼ੋਰ ਲਈ"],
+        "choices": [
+          "to be polite / ਨਮਰ ਹੋਣ ਲਈ",
+          "to be rude / ਬਦਤਮੀਜ਼ੀ ਲਈ",
+          "to be loud / ਸ਼ੋਰ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "\"Excuse me\" is polite when asking for help. / \"Excuse me\" ਮਦਦ ਮੰਗਦੇ ਸਮੇਂ ਨਮਰਤਾ ਹੈ।"
       },
       {
         "question": "What do they do at the end? / ਅੰਤ ਵਿੱਚ ਉਹ ਕੀ ਕਰਦੇ ਹਨ?",
-        "choices": ["check out the book / ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਉਂਦੇ", "throw the book / ਕਿਤਾਬ ਸੁੱਟਦੇ", "hide the book / ਕਿਤਾਬ ਲੁਕਾਉਂਦੇ"],
+        "choices": [
+          "check out the book / ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਉਂਦੇ",
+          "throw the book / ਕਿਤਾਬ ਸੁੱਟਦੇ",
+          "hide the book / ਕਿਤਾਬ ਲੁਕਾਉਂਦੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says they check out the book and say thank you. / ਪੈਨਲ 5 ਵਿੱਚ ਕਿਤਾਬ ਇਸ਼ੂ ਕਰਵਾਉਂਦੇ ਹਨ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "library", "meaningEn": "a place to borrow books", "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ; ਕਿਤਾਬਾਂ ਲੈਣ ਦੀ ਥਾਂ" },
-      { "word": "librarian", "meaningEn": "a helper who works in a library", "meaningPa": "ਲਾਇਬ੍ਰੇਰੀਅਨ; ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਮਦਦਗਾਰ" },
-      { "word": "aisle", "meaningEn": "a row/path between shelves", "meaningPa": "ਅਇਜ਼ਲ; ਸ਼ੈਲਫ਼ਾਂ ਵਿਚਕਾਰ ਰਸਤਾ" },
-      { "word": "shelf", "meaningEn": "a place where books sit", "meaningPa": "ਸ਼ੈਲਫ਼; ਕਿਤਾਬਾਂ ਰੱਖਣ ਦੀ ਥਾਂ" },
-      { "word": "whisper", "meaningEn": "speak very softly", "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ" },
-      { "word": "quiet", "meaningEn": "not loud", "meaningPa": "ਚੁੱਪ; ਉੱਚਾ ਨਹੀਂ" },
-      { "word": "find", "meaningEn": "discover after looking", "meaningPa": "ਲੱਭਣਾ; ਵੇਖ ਕੇ ਮਿਲਣਾ" },
-      { "word": "science", "meaningEn": "learning about the world", "meaningPa": "ਸਾਇੰਸ; ਦੁਨੀਆ ਬਾਰੇ ਸਿੱਖਣਾ" },
-      { "word": "picture", "meaningEn": "an image", "meaningPa": "ਤਸਵੀਰ; ਚਿੱਤਰ" },
-      { "word": "check out", "meaningEn": "borrow a book officially", "meaningPa": "ਇਸ਼ੂ ਕਰਵਾਉਣਾ; ਕਿਤਾਬ ਲੈ ਜਾਣਾ" }
-    ]
+      {
+        "word": "library",
+        "meaningEn": "a place to borrow books",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀ; ਕਿਤਾਬਾਂ ਲੈਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "librarian",
+        "meaningEn": "a helper who works in a library",
+        "meaningPa": "ਲਾਇਬ੍ਰੇਰੀਅਨ; ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਮਦਦਗਾਰ"
+      },
+      {
+        "word": "aisle",
+        "meaningEn": "a row/path between shelves",
+        "meaningPa": "ਅਇਜ਼ਲ; ਸ਼ੈਲਫ਼ਾਂ ਵਿਚਕਾਰ ਰਸਤਾ"
+      },
+      {
+        "word": "shelf",
+        "meaningEn": "a place where books sit",
+        "meaningPa": "ਸ਼ੈਲਫ਼; ਕਿਤਾਬਾਂ ਰੱਖਣ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "whisper",
+        "meaningEn": "speak very softly",
+        "meaningPa": "ਫੁਸਫੁਸਾ ਕੇ ਬੋਲਣਾ; ਬਹੁਤ ਹੌਲੀ"
+      },
+      {
+        "word": "quiet",
+        "meaningEn": "not loud",
+        "meaningPa": "ਚੁੱਪ; ਉੱਚਾ ਨਹੀਂ"
+      },
+      {
+        "word": "find",
+        "meaningEn": "discover after looking",
+        "meaningPa": "ਲੱਭਣਾ; ਵੇਖ ਕੇ ਮਿਲਣਾ"
+      },
+      {
+        "word": "science",
+        "meaningEn": "learning about the world",
+        "meaningPa": "ਸਾਇੰਸ; ਦੁਨੀਆ ਬਾਰੇ ਸਿੱਖਣਾ"
+      },
+      {
+        "word": "picture",
+        "meaningEn": "an image",
+        "meaningPa": "ਤਸਵੀਰ; ਚਿੱਤਰ"
+      },
+      {
+        "word": "check out",
+        "meaningEn": "borrow a book officially",
+        "meaningPa": "ਇਸ਼ੂ ਕਰਵਾਉਣਾ; ਕਿਤਾਬ ਲੈ ਜਾਣਾ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "visit",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "find",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S09",
@@ -4946,47 +12768,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where are they? / ਉਹ ਕਿੱਥੇ ਹਨ?",
-        "choices": ["society gate / ਸੋਸਾਇਟੀ ਗੇਟ", "bus stop / ਬੱਸ ਸਟਾਪ", "bazaar / ਬਾਜ਼ਾਰ"],
+        "choices": [
+          "society gate / ਸੋਸਾਇਟੀ ਗੇਟ",
+          "bus stop / ਬੱਸ ਸਟਾਪ",
+          "bazaar / ਬਾਜ਼ਾਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says they reach the society gate. / ਪੈਨਲ 1 ਵਿੱਚ ਸੋਸਾਇਟੀ ਗੇਟ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first? / ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["stand beside grandma / ਦਾਦੀ ਦੇ ਕੋਲ ਖੜ੍ਹਨਾ", "run inside alone / ਇਕੱਲਾ ਅੰਦਰ ਦੌੜਨਾ", "argue with guard / ਗਾਰਡ ਨਾਲ ਝਗੜਾ"],
+        "choices": [
+          "stand beside grandma / ਦਾਦੀ ਦੇ ਕੋਲ ਖੜ੍ਹਨਾ",
+          "run inside alone / ਇਕੱਲਾ ਅੰਦਰ ਦੌੜਨਾ",
+          "argue with guard / ਗਾਰਡ ਨਾਲ ਝਗੜਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says stand beside Grandma and wait calmly. / ਪੈਨਲ 2 ਵਿੱਚ ਦਾਦੀ ਦੇ ਕੋਲ ਸ਼ਾਂਤ ਖੜ੍ਹਨ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who asks the question about the flat? / ਫਲੈਟ ਬਾਰੇ ਸਵਾਲ ਕੌਣ ਕਰਦਾ ਹੈ?",
-        "choices": ["guard / ਗਾਰਡ", "doctor / ਡਾਕਟਰ", "shopkeeper / ਦੁਕਾਨਦਾਰ"],
+        "choices": [
+          "guard / ਗਾਰਡ",
+          "doctor / ਡਾਕਟਰ",
+          "shopkeeper / ਦੁਕਾਨਦਾਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 says the guard asks which flat they are going to. / ਪੈਨਲ 3 ਵਿੱਚ ਗਾਰਡ ਪੁੱਛਦਾ ਹੈ।"
       },
       {
         "question": "Why do they tell the flat number? / ਉਹ ਫਲੈਟ ਨੰਬਰ ਕਿਉਂ ਦੱਸਦੇ ਹਨ?",
-        "choices": ["so the guard can allow entry / ਤਾਂ ਜੋ ਗਾਰਡ ਅੰਦਰ ਜਾਣ ਦੇਵੇ", "so they get lost / ਤਾਂ ਜੋ ਗੁੰਮ ਹੋਣ", "so it rains / ਤਾਂ ਜੋ ਮੀਂਹ ਪਵੇ"],
+        "choices": [
+          "so the guard can allow entry / ਤਾਂ ਜੋ ਗਾਰਡ ਅੰਦਰ ਜਾਣ ਦੇਵੇ",
+          "so they get lost / ਤਾਂ ਜੋ ਗੁੰਮ ਹੋਣ",
+          "so it rains / ਤਾਂ ਜੋ ਮੀਂਹ ਪਵੇ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Telling the flat number helps the guard know where they are going. / ਫਲੈਟ ਨੰਬਰ ਨਾਲ ਗਾਰਡ ਨੂੰ ਪਤਾ ਲੱਗਦਾ ਹੈ।"
       },
       {
         "question": "What happens after that? / ਉਸ ਤੋਂ ਬਾਅਦ ਕੀ ਹੁੰਦਾ ਹੈ?",
-        "choices": ["gate opens / ਗੇਟ ਖੁਲਦਾ ਹੈ", "bus arrives / ਬੱਸ ਆਉਂਦੀ ਹੈ", "train leaves / ਰੇਲ ਜਾਂਦੀ ਹੈ"],
+        "choices": [
+          "gate opens / ਗੇਟ ਖੁਲਦਾ ਹੈ",
+          "bus arrives / ਬੱਸ ਆਉਂਦੀ ਹੈ",
+          "train leaves / ਰੇਲ ਜਾਂਦੀ ਹੈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 4 says the guard opens the gate. / ਪੈਨਲ 4 ਵਿੱਚ ਗਾਰਡ ਗੇਟ ਖੋਲ੍ਹ ਦਿੰਦਾ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "society", "meaningEn": "a group of apartments with a gate", "meaningPa": "ਸੋਸਾਇਟੀ; ਗੇਟ ਵਾਲੇ ਫਲੈਟਾਂ ਦੀ ਥਾਂ" },
-      { "word": "gate", "meaningEn": "an entry door for a place", "meaningPa": "ਗੇਟ; ਅੰਦਰ ਜਾਣ ਦਾ ਦਰਵਾਜ਼ਾ" },
-      { "word": "guard", "meaningEn": "a person who keeps the place safe", "meaningPa": "ਗਾਰਡ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ" },
-      { "word": "flat", "meaningEn": "an apartment home", "meaningPa": "ਫਲੈਟ; ਅਪਾਰਟਮੈਂਟ ਘਰ" },
-      { "word": "upstairs", "meaningEn": "on a higher floor", "meaningPa": "ਉੱਪਰ; ਉੱਪਰੀ ਮੰਜ਼ਿਲ" },
-      { "word": "wait", "meaningEn": "stay calmly until time", "meaningPa": "ਉਡੀਕ; ਸ਼ਾਂਤ ਰੁਕਣਾ" },
-      { "word": "calmly", "meaningEn": "in a calm way", "meaningPa": "ਸ਼ਾਂਤੀ ਨਾਲ; ਘਬਰਾਏ ਬਿਨਾਂ" },
-      { "word": "enter", "meaningEn": "go inside", "meaningPa": "ਅੰਦਰ ਜਾਣਾ; ਦਾਖ਼ਲ ਹੋਣਾ" },
-      { "word": "please", "meaningEn": "polite word when asking", "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ" },
-      { "word": "helper", "meaningEn": "someone who helps you", "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰੇ" }
-    ]
+      {
+        "word": "society",
+        "meaningEn": "a group of apartments with a gate",
+        "meaningPa": "ਸੋਸਾਇਟੀ; ਗੇਟ ਵਾਲੇ ਫਲੈਟਾਂ ਦੀ ਥਾਂ"
+      },
+      {
+        "word": "gate",
+        "meaningEn": "an entry door for a place",
+        "meaningPa": "ਗੇਟ; ਅੰਦਰ ਜਾਣ ਦਾ ਦਰਵਾਜ਼ਾ"
+      },
+      {
+        "word": "guard",
+        "meaningEn": "a person who keeps the place safe",
+        "meaningPa": "ਗਾਰਡ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "flat",
+        "meaningEn": "an apartment home",
+        "meaningPa": "ਫਲੈਟ; ਅਪਾਰਟਮੈਂਟ ਘਰ"
+      },
+      {
+        "word": "upstairs",
+        "meaningEn": "on a higher floor",
+        "meaningPa": "ਉੱਪਰ; ਉੱਪਰੀ ਮੰਜ਼ਿਲ"
+      },
+      {
+        "word": "wait",
+        "meaningEn": "stay calmly until time",
+        "meaningPa": "ਉਡੀਕ; ਸ਼ਾਂਤ ਰੁਕਣਾ"
+      },
+      {
+        "word": "calmly",
+        "meaningEn": "in a calm way",
+        "meaningPa": "ਸ਼ਾਂਤੀ ਨਾਲ; ਘਬਰਾਏ ਬਿਨਾਂ"
+      },
+      {
+        "word": "enter",
+        "meaningEn": "go inside",
+        "meaningPa": "ਅੰਦਰ ਜਾਣਾ; ਦਾਖ਼ਲ ਹੋਣਾ"
+      },
+      {
+        "word": "please",
+        "meaningEn": "polite word when asking",
+        "meaningPa": "ਕਿਰਪਾ ਕਰਕੇ; ਨਮਰ ਸ਼ਬਦ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "someone who helps you",
+        "meaningPa": "ਮਦਦਗਾਰ; ਜੋ ਮਦਦ ਕਰੇ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "come",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "says",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B9_S10",
@@ -4999,47 +12901,127 @@ var BOOK9_CUSTOM_STORIES = [
     "multipleChoiceQuestions": [
       {
         "question": "Where is the child? / ਬੱਚਾ ਕਿੱਥੇ ਹੈ?",
-        "choices": ["mela / ਮੇਲਾ", "classroom / ਕਲਾਸ", "bus / ਬੱਸ"],
+        "choices": [
+          "mela / ਮੇਲਾ",
+          "classroom / ਕਲਾਸ",
+          "bus / ਬੱਸ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 1 says the child is at a mela. / ਪੈਨਲ 1 ਵਿੱਚ ਮੇਲੇ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "What should the child do first when lost? / ਗੁੰਮ ਹੋਣ ਤੇ ਬੱਚੇ ਨੇ ਪਹਿਲਾਂ ਕੀ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ?",
-        "choices": ["stop and stay in one place / ਰੁਕ ਕੇ ਇੱਕ ਥਾਂ ਰਹਿਣਾ", "run fast / ਤੇਜ਼ ਦੌੜਨਾ", "hide quietly / ਚੁੱਪ ਲੁਕਣਾ"],
+        "choices": [
+          "stop and stay in one place / ਰੁਕ ਕੇ ਇੱਕ ਥਾਂ ਰਹਿਣਾ",
+          "run fast / ਤੇਜ਼ ਦੌੜਨਾ",
+          "hide quietly / ਚੁੱਪ ਲੁਕਣਾ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 2 says the child stops, breathes, and stays in one safe place. / ਪੈਨਲ 2 ਵਿੱਚ ਰੁਕ ਕੇ ਇੱਕ ਸੁਰੱਖਿਅਤ ਥਾਂ ਰਹਿਣ ਦੀ ਗੱਲ ਹੈ।"
       },
       {
         "question": "Who is a safe helper in the story? / ਕਹਾਣੀ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਮਦਦਗਾਰ ਕੌਣ ਹੈ?",
-        "choices": ["police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ", "stranger kid / ਅਜਨਬੀ ਬੱਚਾ", "random driver / ਅਜਨਬੀ ਡਰਾਈਵਰ"],
+        "choices": [
+          "police officer / ਪੁਲਿਸ ਅਫ਼ਸਰ",
+          "stranger kid / ਅਜਨਬੀ ਬੱਚਾ",
+          "random driver / ਅਜਨਬੀ ਡਰਾਈਵਰ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 3 shows the child asks a police officer for help. / ਪੈਨਲ 3 ਵਿੱਚ ਪੁਲਿਸ ਅਫ਼ਸਰ ਤੋਂ ਮਦਦ ਮੰਗਦਾ/ਮੰਗਦੀ ਹੈ।"
       },
       {
         "question": "Why does the child call the parent? / ਬੱਚਾ ਮੰਮੀ/ਡੈਡੀ ਨੂੰ ਕਿਉਂ ਫ਼ੋਨ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["to meet again safely / ਸੁਰੱਖਿਅਤ ਮਿਲਣ ਲਈ", "to buy toys / ਖਿਡੌਣੇ ਲਈ", "to be late / ਦੇਰ ਕਰਨ ਲਈ"],
+        "choices": [
+          "to meet again safely / ਸੁਰੱਖਿਅਤ ਮਿਲਣ ਲਈ",
+          "to buy toys / ਖਿਡੌਣੇ ਲਈ",
+          "to be late / ਦੇਰ ਕਰਨ ਲਈ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Calling helps the child meet the parent again safely. / ਫ਼ੋਨ ਕਰਨ ਨਾਲ ਸੁਰੱਖਿਅਤ ਮਿਲ ਸਕਦੇ ਹਨ।"
       },
       {
         "question": "How does the child feel at the end? / ਅੰਤ ਵਿੱਚ ਬੱਚਾ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ?",
-        "choices": ["relieved / ਸੁਕੂਨ", "angry / ਗੁੱਸਾ", "sleepy / ਨੀਂਦ"],
+        "choices": [
+          "relieved / ਸੁਕੂਨ",
+          "angry / ਗੁੱਸਾ",
+          "sleepy / ਨੀਂਦ"
+        ],
         "correctChoiceIndex": 0,
         "explanation": "Panel 5 says the child feels relieved after getting help. / ਪੈਨਲ 5 ਵਿੱਚ ਸੁਕੂਨ ਮਹਿਸੂਸ ਕਰਦਾ/ਕਰਦੀ ਹੈ।"
       }
     ],
     "vocabularyWords": [
-      { "word": "crowd", "meaningEn": "many people together", "meaningPa": "ਭੀੜ; ਬਹੁਤ ਲੋਕ" },
-      { "word": "lost", "meaningEn": "not finding your parent or way", "meaningPa": "ਗੁੰਮ; ਰਸਤਾ/ਵੱਡਾ ਨਾ ਮਿਲਣਾ" },
-      { "word": "safe", "meaningEn": "not in danger", "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ" },
-      { "word": "helper", "meaningEn": "a trusted person who helps", "meaningPa": "ਮਦਦਗਾਰ; ਭਰੋਸੇਯੋਗ ਮਦਦ" },
-      { "word": "police officer", "meaningEn": "a person who helps keep people safe", "meaningPa": "ਪੁਲਿਸ ਅਫ਼ਸਰ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ" },
-      { "word": "breathe", "meaningEn": "take air in and out slowly", "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ" },
-      { "word": "phone number", "meaningEn": "numbers to call someone", "meaningPa": "ਫ਼ੋਨ ਨੰਬਰ; ਕਾਲ ਕਰਨ ਵਾਲੇ ਅੰਕ" },
-      { "word": "call", "meaningEn": "phone someone", "meaningPa": "ਫ਼ੋਨ ਕਰਨਾ; ਕਾਲ ਕਰਨੀ" },
-      { "word": "stay", "meaningEn": "remain in one place", "meaningPa": "ਰਹਿਣਾ; ਇੱਕ ਥਾਂ ਟਿਕੇ ਰਹਿਣਾ" },
-      { "word": "relieved", "meaningEn": "feeling better after worry ends", "meaningPa": "ਸੁਕੂਨ; ਚਿੰਤਾ ਘੱਟ ਹੋ ਜਾਣੀ" }
-    ]
+      {
+        "word": "crowd",
+        "meaningEn": "many people together",
+        "meaningPa": "ਭੀੜ; ਬਹੁਤ ਲੋਕ"
+      },
+      {
+        "word": "lost",
+        "meaningEn": "not finding your parent or way",
+        "meaningPa": "ਗੁੰਮ; ਰਸਤਾ/ਵੱਡਾ ਨਾ ਮਿਲਣਾ"
+      },
+      {
+        "word": "safe",
+        "meaningEn": "not in danger",
+        "meaningPa": "ਸੁਰੱਖਿਅਤ; ਖ਼ਤਰਾ ਨਹੀਂ"
+      },
+      {
+        "word": "helper",
+        "meaningEn": "a trusted person who helps",
+        "meaningPa": "ਮਦਦਗਾਰ; ਭਰੋਸੇਯੋਗ ਮਦਦ"
+      },
+      {
+        "word": "police officer",
+        "meaningEn": "a person who helps keep people safe",
+        "meaningPa": "ਪੁਲਿਸ ਅਫ਼ਸਰ; ਸੁਰੱਖਿਆ ਕਰਨ ਵਾਲਾ"
+      },
+      {
+        "word": "breathe",
+        "meaningEn": "take air in and out slowly",
+        "meaningPa": "ਸਾਹ ਲੈਣਾ; ਹੌਲੀ ਸਾਹ ਅੰਦਰ-ਬਾਹਰ"
+      },
+      {
+        "word": "phone number",
+        "meaningEn": "numbers to call someone",
+        "meaningPa": "ਫ਼ੋਨ ਨੰਬਰ; ਕਾਲ ਕਰਨ ਵਾਲੇ ਅੰਕ"
+      },
+      {
+        "word": "call",
+        "meaningEn": "phone someone",
+        "meaningPa": "ਫ਼ੋਨ ਕਰਨਾ; ਕਾਲ ਕਰਨੀ"
+      },
+      {
+        "word": "stay",
+        "meaningEn": "remain in one place",
+        "meaningPa": "ਰਹਿਣਾ; ਇੱਕ ਥਾਂ ਟਿਕੇ ਰਹਿਣਾ"
+      },
+      {
+        "word": "relieved",
+        "meaningEn": "feeling better after worry ends",
+        "meaningPa": "ਸੁਕੂਨ; ਚਿੰਤਾ ਘੱਟ ਹੋ ਜਾਣੀ"
+      }
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "am",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stop",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "say",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -5155,7 +13137,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "make a smart guess before you see the result",
         "meaningPa": "ਅੰਦਾਜ਼ਾ ਲਗਾਉਣਾ; ਨਤੀਜੇ ਤੋਂ ਪਹਿਲਾਂ ਅਨੁਮਾਨ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "comes",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "recycles",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S02",
@@ -5268,7 +13270,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "look at two things and see differences",
         "meaningPa": "ਤੁਲਨਾ ਕਰਨੀ; ਦੋ ਚੀਜ਼ਾਂ ਦਾ ਫਰਕ ਵੇਖਣਾ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "draw",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S03",
@@ -5381,7 +13403,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "hanging down and tired-looking",
         "meaningPa": "ਝੁੱਕਿਆ; ਥੱਲੇ ਲਟਕਿਆ ਹੋਇਆ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "use",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "saves",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S04",
@@ -5494,7 +13536,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "what happens after a test",
         "meaningPa": "ਨਤੀਜੇ; ਟੈਸਟ ਤੋਂ ਬਾਅਦ ਕੀ ਹੋਇਆ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "grow",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "make",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S05",
@@ -5607,7 +13669,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "a boundary you should not cross",
         "meaningPa": "ਸੁਰੱਖਿਅਤ ਰੇਖਾ; ਜਿਸ ਤੋਂ ਪਾਰ ਨਹੀਂ ਜਾਣਾ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "stand",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "grow",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S06",
@@ -5720,7 +13802,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "collecting crops when ready",
         "meaningPa": "ਕਟਾਈ; ਤਿਆਰ ਫਸਲ ਇਕੱਠੀ ਕਰਨੀ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "help",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "looks",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "grow",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S07",
@@ -5833,7 +13935,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "look carefully",
         "meaningPa": "ਨਿਰੀਖਣ ਕਰਨਾ; ਧਿਆਨ ਨਾਲ ਵੇਖਣਾ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "look",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "turn",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "count",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S08",
@@ -5946,7 +14068,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "powder made from grains",
         "meaningPa": "ਆਟਾ; ਦਾਣਿਆਂ ਦਾ ਪਿਸਿਆ ਪਾਊਡਰ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "walk",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "learn",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S09",
@@ -6059,7 +14201,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "clean habits to stay healthy",
         "meaningPa": "ਸਫ਼ਾਈ; ਤੰਦਰੁਸਤ ਰਹਿਣ ਲਈ ਸਾਫ਼ ਆਦਤਾਂ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "helps",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "are",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   },
   {
     "storyId": "B10_S10",
@@ -6172,7 +14334,27 @@ var BOOK10_CUSTOM_STORIES = [
         "meaningEn": "check and choose the best option",
         "meaningPa": "ਤੁਲਨਾ ਕਰਨੀ; ਵੇਖ ਕੇ ਚੰਗੀ ਚੋਣ"
       }
-    ]
+    ],
+    "partsOfSpeech": {
+      "verbs": [
+        {
+          "en": "wait",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "count",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "write",
+          "pa": "ਕਿਰਿਆ"
+        },
+        {
+          "en": "is",
+          "pa": "ਕਿਰਿਆ"
+        }
+      ]
+    }
   }
 ];
 
@@ -6205,10 +14387,296 @@ var BOOK10_CUSTOM_STORIES = [
     });
   }
 
+  var GRAMMAR_POS_ORDER = [
+    "nouns",
+    "verbs",
+    "pronouns",
+    "adjectives",
+    "adverbs",
+    "prepositions",
+    "conjunctions",
+    "articles",
+    "interjections"
+  ];
+
+  var GRAMMAR_DEFAULT_DEFINITIONS = {
+    nouns: {
+      definitionEn: "A noun is a person, place, or thing.",
+      definitionPa: "ਨਾਂਵ ਵਿਅਕਤੀ, ਥਾਂ ਜਾਂ ਚੀਜ਼ ਦਾ ਨਾਂ ਹੁੰਦਾ ਹੈ।"
+    },
+    verbs: {
+      definitionEn: "A verb shows an action or a state (being).",
+      definitionPa: "ਕਿਰਿਆ ਕੰਮ ਜਾਂ ਹਾਲਤ (ਹੋਣਾ) ਦੱਸਦੀ ਹੈ।"
+    },
+    pronouns: {
+      definitionEn: "A pronoun replaces a noun (I, you, my).",
+      definitionPa: "ਸਰਵਨਾਮ ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ (ਮੈਂ, ਤੂੰ/ਤੁਸੀਂ, ਮੇਰਾ)।"
+    },
+    adjectives: {
+      definitionEn: "An adjective describes a noun.",
+      definitionPa: "ਵਿਸ਼ੇਸ਼ਣ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ।"
+    },
+    adverbs: {
+      definitionEn: "An adverb describes a verb, adjective, or another adverb (how, when, where).",
+      definitionPa: "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ ਜਾਂ ਹੋਰ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਬਾਰੇ ਦੱਸਦਾ ਹੈ (ਕਿਵੇਂ, ਕਦੋਂ, ਕਿੱਥੇ)।"
+    },
+    prepositions: {
+      definitionEn: "A preposition shows location or relationship (in, on, by).",
+      definitionPa: "ਸਬੰਧ ਬੋਧਕ ਥਾਂ ਜਾਂ ਸਬੰਧ ਦੱਸਦਾ ਹੈ (ਵਿੱਚ, ਉੱਤੇ, ਦੇ ਕੋਲ)।"
+    },
+    conjunctions: {
+      definitionEn: "A conjunction joins words, phrases, or clauses (and, but, because).",
+      definitionPa: "ਸੰਯੋਜਕ ਸ਼ਬਦ, ਭਾਗਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ (ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ)।"
+    },
+    articles: {
+      definitionEn: "An article introduces a noun as specific or general (a, an, the).",
+      definitionPa: "ਲੇਖ (ਆਰਟਿਕਲ) ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ ਆਉਂਦਾ ਹੈ ਅਤੇ ਖ਼ਾਸ ਜਾਂ ਆਮ ਅਰਥ ਦਿੰਦਾ ਹੈ (a, an, the)।"
+    },
+    interjections: {
+      definitionEn: "An interjection shows sudden feeling or reaction (wow!, oh!, yay!).",
+      definitionPa: "ਵਿਸਮਿਆਦਿਬੋਧਕ ਅਚਾਨਕ ਭਾਵਨਾ ਜਾਂ ਪ੍ਰਤੀਕਿਰਿਆ ਦੱਸਦਾ ਹੈ (ਵਾਹ!, ਓਹ!, ਯੇ!)."
+    }
+  };
+
+  function deriveArticlesFromStoryText(englishStory) {
+    var text = (englishStory || "").toLowerCase();
+    var out = [];
+    function add(en, pa) {
+      for (var i = 0; i < out.length; i++) {
+        if ((out[i] && out[i].en) === en) return;
+      }
+      out.push({ en: en, pa: pa });
+    }
+    if (/\bthe\b/.test(text)) add("the", "ਉਹ/ਉਹੀ");
+    if (/\ban\b/.test(text)) add("an", "ਇੱਕ");
+    if (/\ba\b/.test(text)) add("a", "ਇੱਕ");
+    if (!out.length) add("the", "ਉਹ/ਉਹੀ");
+    return out;
+  }
+
+  function inferPartsFromVocabulary(vocabularyWords) {
+    var inferred = {
+      nouns: [],
+      verbs: [],
+      pronouns: [],
+      adjectives: [],
+      adverbs: [],
+      prepositions: [],
+      conjunctions: [],
+      articles: [],
+      interjections: []
+    };
+
+    var vocab = Array.isArray(vocabularyWords) ? vocabularyWords : [];
+    for (var i = 0; i < vocab.length; i++) {
+      var item = vocab[i] || {};
+      var enWord = (item.word || "").trim();
+      var paWord = (item.meaningPa || "").trim();
+      if (!enWord && !paWord) continue;
+      var entry = { en: enWord || paWord || "—", pa: paWord || enWord || "—" };
+      var meaningEn = (item.meaningEn || "").toLowerCase();
+
+      if (/^\s*verb\b/.test(meaningEn)) inferred.verbs.push(entry);
+      else if (/^\s*pronoun\b/.test(meaningEn)) inferred.pronouns.push(entry);
+      else if (/^\s*adjective\b/.test(meaningEn)) inferred.adjectives.push(entry);
+      else if (/^\s*adverb\b/.test(meaningEn)) inferred.adverbs.push(entry);
+      else if (/^\s*preposition\b/.test(meaningEn)) inferred.prepositions.push(entry);
+      else if (/^\s*conjunction\b/.test(meaningEn)) inferred.conjunctions.push(entry);
+      else if (/^\s*(article|determiner)\b/.test(meaningEn)) inferred.articles.push(entry);
+      else if (/^\s*interjection\b/.test(meaningEn)) inferred.interjections.push(entry);
+      else inferred.nouns.push(entry);
+    }
+
+    return inferred;
+  }
+
+  function normalizePosEntries(items) {
+    var out = [];
+    var src = Array.isArray(items) ? items : [];
+    for (var i = 0; i < src.length; i++) {
+      var item = src[i] || {};
+      var en = "";
+      var pa = "";
+      if (typeof item === "string") {
+        en = item.trim();
+      } else if (item && typeof item === "object") {
+        en = (item.en || "").trim();
+        pa = (item.pa || "").trim();
+      }
+      if (!en && !pa) continue;
+      out.push({
+        en: en || pa || "—",
+        pa: pa || en || "—"
+      });
+    }
+    return out;
+  }
+
+  function mergePosEntries(baseItems, extraItems, maxItems) {
+    var out = normalizePosEntries(baseItems);
+    var extra = normalizePosEntries(extraItems);
+    var limit = (typeof maxItems === "number" && maxItems > 0) ? maxItems : 8;
+
+    for (var i = 0; i < extra.length; i++) {
+      var en = ((extra[i] && extra[i].en) || "").toLowerCase();
+      if (!en) continue;
+      var exists = false;
+      for (var j = 0; j < out.length; j++) {
+        if ((((out[j] && out[j].en) || "").toLowerCase()) === en) {
+          exists = true;
+          break;
+        }
+      }
+      if (!exists) out.push(extra[i]);
+      if (out.length >= limit) break;
+    }
+
+    return out;
+  }
+
+  function derivePartsFromStoryText(englishStory, vocabularyWords) {
+    var text = (englishStory || "").toLowerCase();
+    var tokens = text.match(/[a-z']+/g) || [];
+    var tokenSet = {};
+    for (var i = 0; i < tokens.length; i++) tokenSet[tokens[i]] = true;
+
+    var out = {
+      nouns: [],
+      verbs: [],
+      pronouns: [],
+      adjectives: [],
+      adverbs: [],
+      prepositions: [],
+      conjunctions: [],
+      articles: deriveArticlesFromStoryText(englishStory),
+      interjections: []
+    };
+
+    function add(list, en, pa) {
+      var key = (en || "").toLowerCase();
+      if (!key) return;
+      for (var j = 0; j < list.length; j++) {
+        if (((list[j] && list[j].en) || "").toLowerCase() === key) return;
+      }
+      list.push({ en: en, pa: pa });
+    }
+
+    function addFromWordMap(list, map) {
+      for (var word in map) {
+        if (!Object.prototype.hasOwnProperty.call(map, word)) continue;
+        if (tokenSet[word]) add(list, word, map[word]);
+      }
+    }
+
+    addFromWordMap(out.pronouns, {
+      i: "ਮੈਂ", we: "ਅਸੀਂ", you: "ਤੂੰ/ਤੁਸੀਂ", he: "ਉਹ", she: "ਉਹ", it: "ਇਹ", they: "ਉਹ",
+      my: "ਮੇਰਾ/ਮੇਰੀ", our: "ਸਾਡਾ/ਸਾਡੀ", your: "ਤੁਹਾਡਾ/ਤੁਹਾਡੀ", his: "ਉਸਦਾ", her: "ਉਸਦੀ", their: "ਉਹਨਾਂ ਦਾ"
+    });
+
+    addFromWordMap(out.conjunctions, {
+      and: "ਅਤੇ", but: "ਪਰ", because: "ਕਿਉਂਕਿ", so: "ਇਸ ਲਈ", or: "ਜਾਂ", if: "ਜੇ", when: "ਜਦੋਂ", then: "ਫਿਰ", after: "ਬਾਅਦ", before: "ਪਹਿਲਾਂ"
+    });
+
+    addFromWordMap(out.prepositions, {
+      in: "ਵਿੱਚ", on: "ਉੱਤੇ", at: "ਤੇ", by: "ਦੇ ਕੋਲ", to: "ਵੱਲ", from: "ਤੋਂ", with: "ਨਾਲ", near: "ਨੇੜੇ",
+      behind: "ਪਿੱਛੇ", under: "ਹੇਠਾਂ", over: "ਉੱਪਰ", between: "ਵਿਚਕਾਰ", into: "ਅੰਦਰ", through: "ਵਿੱਚੋਂ"
+    });
+
+    if (text.indexOf("next to") >= 0) add(out.prepositions, "next to", "ਦੇ ਕੋਲ");
+    if (text.indexOf("in front of") >= 0) add(out.prepositions, "in front of", "ਦੇ ਸਾਹਮਣੇ");
+
+    addFromWordMap(out.adverbs, {
+      slowly: "ਹੌਲੀ", quickly: "ਜਲਦੀ", quietly: "ਚੁੱਪਚਾਪ", carefully: "ਧਿਆਨ ਨਾਲ", calmly: "ਸ਼ਾਂਤੀ ਨਾਲ",
+      together: "ਇਕੱਠੇ", always: "ਹਮੇਸ਼ਾ", now: "ਹੁਣ", today: "ਅੱਜ", very: "ਬਹੁਤ", again: "ਫਿਰ"
+    });
+
+    addFromWordMap(out.adjectives, {
+      big: "ਵੱਡਾ", small: "ਛੋਟਾ", happy: "ਖੁਸ਼", quiet: "ਚੁੱਪ", clean: "ਸਾਫ਼", ready: "ਤਿਆਰ",
+      safe: "ਸੁਰੱਖਿਅਤ", lost: "ਗੁੰਮ", tired: "ਥੱਕਿਆ", bright: "ਚਮਕਦਾਰ", red: "ਲਾਲ", short: "ਛੋਟਾ"
+    });
+
+    addFromWordMap(out.verbs, {
+      go: "ਜਾਣਾ", walk: "ਤੁਰਨਾ", run: "ਦੌੜਨਾ", sit: "ਬੈਠਣਾ", look: "ਵੇਖਣਾ", read: "ਪੜ੍ਹਨਾ", write: "ਲਿਖਣਾ",
+      play: "ਖੇਡਣਾ", help: "ਮਦਦ ਕਰਨੀ", wait: "ਉਡੀਕ ਕਰਨੀ", turn: "ਮੁੜਨਾ", stop: "ਰੁਕਣਾ", carry: "ਲੈ ਜਾਣਾ",
+      open: "ਖੋਲ੍ਹਣਾ", close: "ਬੰਦ ਕਰਨਾ", stand: "ਖੜ੍ਹਨਾ", ask: "ਪੁੱਛਣਾ", answer: "ਜਵਾਬ ਦੇਣਾ", smile: "ਮੁਸਕੁਰਾਉਣਾ"
+    });
+
+    addFromWordMap(out.nouns, {
+      school: "ਸਕੂਲ", class: "ਕਲਾਸ", teacher: "ਟੀਚਰ", friend: "ਦੋਸਤ", desk: "ਡੈਸਕ", bag: "ਬੈਗ", book: "ਕਿਤਾਬ",
+      park: "ਪਾਰਕ", bus: "ਬੱਸ", road: "ਸੜਕ", door: "ਦਰਵਾਜ਼ਾ", board: "ਬੋਰਡ", library: "ਲਾਇਬ੍ਰੇਰੀ", market: "ਮਾਰਕੀਟ",
+      hospital: "ਹਸਪਤਾਲ", firefighter: "ਫਾਇਰਫਾਈਟਰ", story: "ਕਹਾਣੀ", family: "ਪਰਿਵਾਰ", home: "ਘਰ"
+    });
+
+    var vocab = Array.isArray(vocabularyWords) ? vocabularyWords : [];
+    for (var v = 0; v < vocab.length; v++) {
+      var vw = vocab[v] || {};
+      var wEn = (vw.word || "").trim();
+      var wPa = (vw.meaningPa || "").trim();
+      if (wEn || wPa) add(out.nouns, wEn || wPa, wPa || wEn);
+    }
+
+    if (text.indexOf("thank you") >= 0) add(out.interjections, "thank you", "ਧੰਨਵਾਦ");
+    if (/[!]/.test(englishStory || "")) add(out.interjections, "wow", "ਵਾਹ");
+
+    if (!out.nouns.length) add(out.nouns, "story", "ਕਹਾਣੀ");
+    if (!out.verbs.length) add(out.verbs, "go", "ਜਾਣਾ");
+    if (!out.pronouns.length) add(out.pronouns, "I", "ਮੈਂ");
+    if (!out.adjectives.length) add(out.adjectives, "good", "ਚੰਗਾ");
+    if (!out.adverbs.length) add(out.adverbs, "slowly", "ਹੌਲੀ");
+    if (!out.prepositions.length) add(out.prepositions, "in", "ਵਿੱਚ");
+    if (!out.conjunctions.length) add(out.conjunctions, "and", "ਅਤੇ");
+    if (!out.interjections.length) add(out.interjections, "oh", "ਓਹ");
+
+    return out;
+  }
+
+  function normalizePartsOfGrammar(story, englishStory, vocabularyWords) {
+    var source = (story && story.partsOfGrammar && typeof story.partsOfGrammar === "object")
+      ? story.partsOfGrammar
+      : ((story && story.partsOfSpeech && typeof story.partsOfSpeech === "object") ? story.partsOfSpeech : {});
+
+    var out = { definitions: {} };
+    var inferred = inferPartsFromVocabulary(vocabularyWords);
+    var storyDerived = derivePartsFromStoryText(englishStory, vocabularyWords);
+
+    for (var i = 0; i < GRAMMAR_POS_ORDER.length; i++) {
+      var key = GRAMMAR_POS_ORDER[i];
+      var rawDef = source && source.definitions && source.definitions[key];
+      out.definitions[key] = (rawDef && typeof rawDef === "object")
+        ? rawDef
+        : GRAMMAR_DEFAULT_DEFINITIONS[key];
+
+      var arr = Array.isArray(source && source[key]) ? source[key].slice() : [];
+      arr = mergePosEntries(arr, inferred[key], 8);
+      arr = mergePosEntries(arr, storyDerived[key], 8);
+      out[key] = arr;
+    }
+
+    if (!out.articles.length) {
+      out.articles = deriveArticlesFromStoryText(englishStory);
+    }
+
+    return out;
+  }
+
+  function toPartsOfSpeech(partsOfGrammar) {
+    var out = {};
+    for (var i = 0; i < GRAMMAR_POS_ORDER.length; i++) {
+      var key = GRAMMAR_POS_ORDER[i];
+      out[key] = Array.isArray(partsOfGrammar && partsOfGrammar[key])
+        ? partsOfGrammar[key].slice()
+        : [];
+    }
+    return out;
+  }
+
   function normalizeCustomStory(story, fallbackIndex) {
     var id = (story && story.storyId) ? story.storyId : readingId(fallbackIndex);
     var englishStory = (story && (story.englishStory || story.english)) || "";
     var punjabiStory = (story && (story.punjabiStory || story.punjabi)) || "";
+    var vocabularyWords = (story && story.vocabularyWords) || [];
+    var partsOfGrammar = normalizePartsOfGrammar(story, englishStory, vocabularyWords);
+    var partsOfSpeech = toPartsOfSpeech(partsOfGrammar);
     return {
       id: id,
       storyId: id,
@@ -6222,8 +14690,9 @@ var BOOK10_CUSTOM_STORIES = [
       punjabi: punjabiStory,
       englishStory: englishStory,
       punjabiStory: punjabiStory,
-      partsOfSpeech: (story && story.partsOfSpeech) || null,
-      vocabularyWords: (story && story.vocabularyWords) || [],
+      partsOfSpeech: partsOfSpeech,
+      partsOfGrammar: partsOfGrammar,
+      vocabularyWords: vocabularyWords,
       multipleChoiceQuestions: Array.isArray(story && story.multipleChoiceQuestions)
         ? story.multipleChoiceQuestions
         : [],
@@ -6278,6 +14747,10 @@ var BOOK10_CUSTOM_STORIES = [
       var bundleMeta = BUNDLES[bookId - 1] || {};
       var bundleLabelEn = bundleMeta.nameEn || ("Book " + bookId);
       var bundleLabelPa = bundleMeta.namePa || ("ਕਿਤਾਬ " + bookId);
+      var fallbackEnglish = "This is Story " + storyInBook + " from Book " + bookId + ". We read short lines, learn new words, and answer one simple question. The goal is to build daily reading confidence step by step.";
+      var fallbackPunjabi = "ਇਹ ਕਿਤਾਬ " + bookId + " ਦੀ ਕਹਾਣੀ " + storyInBook + " ਹੈ। ਅਸੀਂ ਛੋਟੀਆਂ ਲਾਈਨਾਂ ਪੜ੍ਹਦੇ ਹਾਂ, ਨਵੇਂ ਸ਼ਬਦ ਸਿੱਖਦੇ ਹਾਂ, ਅਤੇ ਇੱਕ ਸਧਾਰਣ ਪ੍ਰਸ਼ਨ ਦਾ ਜਵਾਬ ਦਿੰਦੇ ਹਾਂ। ਮਕਸਦ ਰੋਜ਼ਾਨਾ ਪੜ੍ਹਨ ਦਾ ਵਿਸ਼ਵਾਸ ਵਧਾਉਣਾ ਹੈ।";
+      var fallbackPartsOfGrammar = normalizePartsOfGrammar({}, fallbackEnglish, []);
+      var fallbackPartsOfSpeech = toPartsOfSpeech(fallbackPartsOfGrammar);
       READINGS.push({
         id: readingId(idx),
         bundleId: bookId,
@@ -6286,8 +14759,13 @@ var BOOK10_CUSTOM_STORIES = [
         titlePa: bundleLabelPa + " · ਕਹਾਣੀ " + storyInBook,
         levelHint: (bookId <= 2) ? "Easy" : ((bookId <= 4) ? "Medium" : "Hard"),
         primaryTrackId: "T_READING",
-        english: "This is Story " + storyInBook + " from Book " + bookId + ". We read short lines, learn new words, and answer one simple question. The goal is to build daily reading confidence step by step.",
-        punjabi: "ਇਹ ਕਿਤਾਬ " + bookId + " ਦੀ ਕਹਾਣੀ " + storyInBook + " ਹੈ। ਅਸੀਂ ਛੋਟੀਆਂ ਲਾਈਨਾਂ ਪੜ੍ਹਦੇ ਹਾਂ, ਨਵੇਂ ਸ਼ਬਦ ਸਿੱਖਦੇ ਹਾਂ, ਅਤੇ ਇੱਕ ਸਧਾਰਣ ਪ੍ਰਸ਼ਨ ਦਾ ਜਵਾਬ ਦਿੰਦੇ ਹਾਂ। ਮਕਸਦ ਰੋਜ਼ਾਨਾ ਪੜ੍ਹਨ ਦਾ ਵਿਸ਼ਵਾਸ ਵਧਾਉਣਾ ਹੈ।",
+        english: fallbackEnglish,
+        punjabi: fallbackPunjabi,
+        englishStory: fallbackEnglish,
+        punjabiStory: fallbackPunjabi,
+        partsOfSpeech: fallbackPartsOfSpeech,
+        partsOfGrammar: fallbackPartsOfGrammar,
+        vocabularyWords: [],
         images: [],
         questions: [buildQuestion(bookId, storyInBook)]
       });

@@ -6,7 +6,8 @@
   "license": "Educational Use Only",
   "type": "module",
   "scripts": {
-    "start": "python3 -m http.server 8000 --directory . || python3 -m http.server 8001 --directory ."
+    "start": "python3 -m http.server 8000 --directory . || python3 -m http.server 8001 --directory .",
+    "qa:content": "node ../tools/run_content_quality_gate.cjs"
   },
   "keywords": [
     "education",

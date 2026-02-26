@@ -1072,10 +1072,28 @@ var UI = {
       try { UI.renderProfilesModal(); } catch (e0) {}
     }
 
+    try {
+      modal._returnFocusEl = document.activeElement || null;
+    } catch (eFocusRef) {
+      modal._returnFocusEl = null;
+    }
+
     UI.lockBodyScroll();
     UI.syncViewportVars();
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
+
+    try {
+      var firstFocusable = modal.querySelector('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      if (firstFocusable && typeof firstFocusable.focus === "function") {
+        firstFocusable.focus({ preventScroll: true });
+      } else if (typeof modal.focus === "function") {
+        if (!modal.hasAttribute("tabindex")) modal.setAttribute("tabindex", "-1");
+        modal.focus({ preventScroll: true });
+      }
+    } catch (eFocusIn) {
+      // no-op
+    }
   },
 
   // Close a modal
@@ -1086,12 +1104,31 @@ var UI = {
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
 
+    try {
+      if (typeof modal._onAfterClose === "function") {
+        modal._onAfterClose();
+      }
+    } catch (eAfterClose) {
+      // no-op
+    }
+    modal._onAfterClose = null;
+
     // Only unlock if no other modals are active.
     try {
       var anyActive = document.querySelector(".modal-backdrop.active");
       if (!anyActive) UI.unlockBodyScroll();
     } catch (e) {
       UI.unlockBodyScroll();
+    }
+
+    try {
+      var returnEl = modal._returnFocusEl;
+      if (returnEl && typeof returnEl.focus === "function" && document.contains(returnEl)) {
+        returnEl.focus({ preventScroll: true });
+      }
+      modal._returnFocusEl = null;
+    } catch (eFocusBack) {
+      // no-op
     }
   },
 
@@ -1163,6 +1200,70 @@ var UI = {
         UI.closeModal(modalId);
       });
     });
+
+    var backdrops = document.querySelectorAll(".modal-backdrop");
+    backdrops.forEach(function(backdrop) {
+      UI.bindOnce(backdrop, "modalBackdropBound", "click", function(e) {
+        if (!e || e.target !== backdrop) return;
+        if (!backdrop.id) return;
+        UI.closeModal(backdrop.id);
+      });
+    });
+
+    if (!UI._modalEscapeBound) {
+      UI._modalEscapeBound = true;
+      document.addEventListener("keydown", function(e) {
+        if (!e) return;
+
+        var activeModal = document.querySelector(".modal-backdrop.active");
+        if (!activeModal || !activeModal.id) return;
+
+        if (e.key === "Escape") {
+          try { if (e.preventDefault) e.preventDefault(); } catch (ePrevent) {}
+          UI.closeModal(activeModal.id);
+          return;
+        }
+
+        if (e.key !== "Tab") return;
+
+        var selector = 'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+        var nodes = activeModal.querySelectorAll(selector);
+        var focusables = [];
+        for (var i = 0; i < nodes.length; i++) {
+          var node = nodes[i];
+          if (!node) continue;
+          if (node.getAttribute && node.getAttribute("aria-hidden") === "true") continue;
+          focusables.push(node);
+        }
+
+        if (!focusables.length) {
+          try { if (e.preventDefault) e.preventDefault(); } catch (eNoFocusables) {}
+          try {
+            if (!activeModal.hasAttribute("tabindex")) activeModal.setAttribute("tabindex", "-1");
+            activeModal.focus({ preventScroll: true });
+          } catch (eFocusModal) {}
+          return;
+        }
+
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        var current = document.activeElement;
+        var outside = !current || !activeModal.contains(current);
+
+        if (e.shiftKey) {
+          if (outside || current === first) {
+            try { if (e.preventDefault) e.preventDefault(); } catch (eShiftPrevent) {}
+            try { last.focus({ preventScroll: true }); } catch (eShiftFocus) { try { last.focus(); } catch (eShiftFocus2) {} }
+          }
+          return;
+        }
+
+        if (outside || current === last) {
+          try { if (e.preventDefault) e.preventDefault(); } catch (eTabPrevent) {}
+          try { first.focus({ preventScroll: true }); } catch (eTabFocus) { try { first.focus(); } catch (eTabFocus2) {} }
+        }
+      });
+    }
   },
 
   // Wire up footer toggles
@@ -1592,6 +1693,127 @@ var UI = {
 
   renderStreakSection: function() {
     return;
+  },
+
+  showConfirmDialog: function(message, options) {
+    return new Promise(function(resolve) {
+      var opts = options || {};
+      var canRender = !!(document && document.body);
+      var msg = (message == null) ? "" : String(message);
+
+      if (!canRender) {
+        try {
+          resolve(window.confirm(msg));
+        } catch (eNoDom) {
+          resolve(false);
+        }
+        return;
+      }
+
+      var title = (opts.title == null) ? "Confirm" : String(opts.title);
+      var confirmText = (opts.confirmText == null) ? "Confirm" : String(opts.confirmText);
+      var cancelText = (opts.cancelText == null) ? "Cancel" : String(opts.cancelText);
+      var allowCancel = opts.allowCancel !== false;
+
+      var modalId = "modal-system-dialog-" + Date.now() + "-" + Math.floor(Math.random() * 100000);
+      var titleId = modalId + "-title";
+
+      var backdrop = document.createElement("div");
+      backdrop.id = modalId;
+      backdrop.className = "modal-backdrop";
+      backdrop.setAttribute("aria-hidden", "true");
+      backdrop.setAttribute("role", "dialog");
+      backdrop.setAttribute("aria-modal", "true");
+      backdrop.setAttribute("aria-labelledby", titleId);
+
+      var card = document.createElement("div");
+      card.className = "modal-card";
+
+      var heading = document.createElement("h3");
+      heading.id = titleId;
+      heading.textContent = title;
+
+      var body = document.createElement("p");
+      body.style.marginTop = "6px";
+      body.textContent = msg;
+
+      var actions = document.createElement("div");
+      actions.className = "button-row";
+      actions.style.marginTop = "12px";
+
+      if (allowCancel) {
+        var cancelBtn = document.createElement("button");
+        cancelBtn.type = "button";
+        cancelBtn.className = "btn btn-secondary";
+        cancelBtn.textContent = cancelText;
+        actions.appendChild(cancelBtn);
+      }
+
+      var confirmBtn = document.createElement("button");
+      confirmBtn.type = "button";
+      confirmBtn.className = "btn";
+      confirmBtn.textContent = confirmText;
+      actions.appendChild(confirmBtn);
+
+      card.appendChild(heading);
+      card.appendChild(body);
+      card.appendChild(actions);
+      backdrop.appendChild(card);
+
+      var resolved = false;
+      function done(value) {
+        if (resolved) return;
+        resolved = true;
+
+        try { UI.closeModal(modalId); } catch (eClose) {}
+        try {
+          if (backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+        } catch (eRemove) {}
+        resolve(!!value);
+      }
+
+      backdrop._onAfterClose = function() {
+        if (resolved) return;
+        resolved = true;
+        try {
+          if (backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+        } catch (eAfter) {}
+        resolve(false);
+      };
+
+      confirmBtn.addEventListener("click", function() {
+        done(true);
+      });
+
+      if (allowCancel) {
+        cancelBtn.addEventListener("click", function() {
+          done(false);
+        });
+      }
+
+      try {
+        document.body.appendChild(backdrop);
+        UI.openModal(modalId);
+      } catch (eOpen) {
+        try {
+          if (backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+        } catch (eClean) {}
+        try {
+          resolve(window.confirm(msg));
+        } catch (eFallback) {
+          resolve(false);
+        }
+      }
+    });
+  },
+
+  showAlertDialog: function(message, options) {
+    var opts = options || {};
+    return UI.showConfirmDialog(message, {
+      title: (opts.title == null) ? "Notice" : opts.title,
+      confirmText: (opts.confirmText == null) ? "OK" : opts.confirmText,
+      allowCancel: false
+    });
   },
 
   showToast: function(message, durationMs) {

@@ -6105,6 +6105,27 @@
       return ariaDisabled || status === "comingsoon" || classDisabled;
     }
 
+
+    function bindTypingModeCardKeyboard(cardEl, onActivate) {
+      if (!cardEl) return;
+
+      try { cardEl.setAttribute("tabindex", "0"); } catch (e0) {}
+      try { cardEl.setAttribute("role", "button"); } catch (e1) {}
+      try { cardEl.setAttribute("aria-keyshortcuts", "Enter Space"); } catch (e2) {}
+
+      if (cardEl.dataset && cardEl.dataset.typingKeyBound) return;
+      try { if (cardEl.dataset) cardEl.dataset.typingKeyBound = "1"; } catch (e3) {}
+
+      cardEl.addEventListener("keydown", function(ev) {
+        var key = ev && ev.key;
+        if (key !== "Enter" && key !== " " && key !== "Spacebar") return;
+        try { if (ev && ev.preventDefault) ev.preventDefault(); } catch (e4) {}
+        try { if (ev && ev.stopPropagation) ev.stopPropagation(); } catch (e5) {}
+        if (isTypingModeCardDisabled(cardEl)) return;
+        if (typeof onActivate === "function") onActivate();
+      });
+    }
+
     // Restore last selected mode (optional convenience)
     var savedMode = readLastMode();
     if (savedMode) {
@@ -6611,6 +6632,25 @@
         openRace("timeTrial");
       });
     }
+
+    // Keyboard support for card-style controls (Enter/Space)
+    bindTypingModeCardKeyboard(practice, function() {
+      writeTypingCenterSelectedMode("practice");
+      refreshTypingCenterUI();
+    });
+    bindTypingModeCardKeyboard(race, function() {
+      writeTypingCenterSelectedMode("race");
+      refreshTypingCenterUI();
+    });
+    bindTypingModeCardKeyboard(timeTrial, function() {
+      selectTimeTrialCard();
+    });
+    bindTypingModeCardKeyboard(ngrams, function() {
+      selectNgramsCard();
+    });
+    bindTypingModeCardKeyboard(typeDefine, function() {
+      selectTypeDefineCard();
+    });
 
     // Initial sync for toggle state
     try { syncTimeTrialDurationButtons(); } catch (eTT0) {}

@@ -7,7 +7,7 @@
     "stepIndex": 4,
     "stepId": "q_adj_vs_adv_choose_quickly",
     "questionEn": "In “He finished quickly.”, is “quickly” correct?",
-    "questionPa": "“ਉਸਨੇ ਜਲਦੀ ਮੁਕਾਇਆ।” ਵਿੱਚ, ਕੀ “quickly” ਸਹੀ ਹੈ?",
+    "questionPa": "“ਉਸਨੇ ਜਲਦੀ ਕੰਮ ਮੁਕਾਇਆ।” ਵਿੱਚ, ਕੀ “ਜਲਦੀ” ਸਹੀ ਹੈ?",
     "options": [
       {
         "en": "Yes",
@@ -22,7 +22,7 @@
     "hintEn": "Adverb = tells HOW.",
     "hintPa": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਦੱਸਦਾ ਹੈ ਕਿ ਕਿਰਿਆ ਕਿਵੇਂ ਹੁੰਦੀ ਹੈ।",
     "explanationEn": "Yes. “Quickly” is an adverb—it describes how an action happens.",
-    "explanationPa": "ਹਾਂ। “quickly” ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ—ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।"
+    "explanationPa": "ਹਾਂ। “ਜਲਦੀ” ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਂਗ ਕੰਮ ਕਰਦਾ ਹੈ—ਇਹ ਦੱਸਦਾ ਹੈ ਕਿ ਕੰਮ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ।"
   },
   {
     "lessonId": "L_ADJ_VS_ADV_01",
@@ -31,7 +31,7 @@
     "stepIndex": 3,
     "stepId": "q_l_adj_vs_adv_01_in_she_sings_beautifully_is_beau",
     "questionEn": "In “She sings beautifully.”, is “beautifully” correct?",
-    "questionPa": "“ਉਹ ਸੁੰਦਰ ਤਰੀਕੇ ਨਾਲ ਗਾਂਦੀ ਹੈ।” ਵਿੱਚ, ਕੀ “beautifully” ਸਹੀ ਹੈ?",
+    "questionPa": "“ਉਹ ਸੁੰਦਰ ਤਰੀਕੇ ਨਾਲ ਗਾਂਦੀ ਹੈ।” ਵਿੱਚ, ਕੀ “ਸੁੰਦਰ ਤਰੀਕੇ ਨਾਲ” ਸਹੀ ਹੈ?",
     "options": [
       {
         "en": "Yes",
@@ -46,7 +46,7 @@
     "hintEn": "Check if the highlighted word is grammatically correct in this sentence.",
     "hintPa": "ਵੇਖੋ ਕਿ ਹਾਈਲਾਈਟ ਕੀਤਾ ਸ਼ਬਦ ਇਸ ਵਾਕ ਵਿੱਚ ਵਿਆਕਰਨ ਅਨੁਸਾਰ ਸਹੀ ਹੈ ਜਾਂ ਨਹੀਂ।",
     "explanationEn": "Yes. “Beautifully” is an adverb that describes how she sings.",
-    "explanationPa": "ਹਾਂ। “beautifully” ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ ਜੋ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਗਾਂਦੀ ਹੈ।"
+    "explanationPa": "ਹਾਂ। “ਸੁੰਦਰ ਤਰੀਕੇ ਨਾਲ” ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਵਾਂਗ ਕੰਮ ਕਰਦਾ ਹੈ ਅਤੇ ਦੱਸਦਾ ਹੈ ਕਿ ਉਹ ਕਿਵੇਂ ਗਾਂਦੀ ਹੈ।"
   },
   {
     "lessonId": "L_ARTICLE_BASICS_01",

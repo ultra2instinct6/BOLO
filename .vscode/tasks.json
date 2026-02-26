@@ -8,6 +8,74 @@
 			"isBackground": true,
 			"problemMatcher": [],
 			"group": "build"
+		},
+		{
+			"label": "Sync templates books 6 7",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/sync_book_templates_from_readings.cjs",
+				"6,7"
+			]
+		},
+		{
+			"label": "Fill reading template fields",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/fill_reading_templates_fields.cjs"
+			]
+		},
+		{
+			"label": "Ensure min4 verbs books 6 7",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/ensure_story_verbs_min4.cjs",
+				"6,7"
+			]
+		},
+		{
+			"label": "Audit reading templates fields",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/audit_reading_templates_fields.cjs"
+			]
+		},
+		{
+			"label": "Sync templates books 8 9",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/sync_book_templates_from_readings.cjs",
+				"8,9"
+			]
+		},
+		{
+			"label": "Fill reading template fields now",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/fill_reading_templates_fields.cjs"
+			]
+		},
+		{
+			"label": "Ensure min4 verbs books 8 9",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/ensure_story_verbs_min4.cjs",
+				"8,9"
+			]
+		},
+		{
+			"label": "Audit reading templates fields final",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"tools/audit_reading_templates_fields.cjs"
+			]
 		}
 	]
 }

@@ -2,6 +2,110 @@
 // Reading Module - owns screen-reading and screen-reading-detail
 // =====================================
 
+// Punjabi translations for UI labels in the Reading module.
+// All bilingual helpers reference this map so translations stay in one place.
+var _ReadingPA = {
+  // Section headings
+  "Study Elements": "ਅਧਿਐਨ ਤੱਤ",
+  "Grammar, vocabulary, questions, and speaking prompts for this story.": "ਇਸ ਕਹਾਣੀ ਲਈ ਵਿਆਕਰਨ, ਸ਼ਬਦਾਵਲੀ, ਸਵਾਲ ਅਤੇ ਬੋਲਣ ਦੇ ਸੰਕੇਤ।",
+  "Parts of Speech": "ਬੋਲੀ ਦੇ ਹਿੱਸੇ",
+  "Vocabulary Words": "ਸ਼ਬਦਾਵਲੀ ਦੇ ਸ਼ਬਦ",
+  "Multiple Choice Questions": "ਬਹੁ-ਚੋਣ ਸਵਾਲ",
+  "Practice Extras": "ਅਭਿਆਸ ਵਾਧੂ",
+  "Story complete": "ਕਹਾਣੀ ਪੂਰੀ",
+  "All done": "ਸਭ ਪੂਰਾ",
+  // POS labels
+  "Nouns": "ਨਾਂਵ",
+  "Verbs": "ਕਿਰਿਆ",
+  "Pronouns": "ਪੜਨਾਂਵ",
+  "Adjectives": "ਵਿਸ਼ੇਸ਼ਣ",
+  "Adverbs": "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+  "Prepositions": "ਸੰਬੰਧਕ",
+  "Conjunctions": "ਯੋਜਕ",
+  "Articles": "ਆਰਟੀਕਲ",
+  "Interjections": "ਵਿਸਮਿਕ",
+  // Empty states
+  "No entries in this story yet.": "ਇਸ ਕਹਾਣੀ ਵਿੱਚ ਅਜੇ ਕੋਈ ਉਦਾਹਰਨ ਨਹੀਂ ਹੈ।",
+  "No vocabulary for this story yet.": "ਇਸ ਕਹਾਣੀ ਲਈ ਅਜੇ ਕੋਈ ਸ਼ਬਦਾਵਲੀ ਨਹੀਂ।",
+  // Buttons
+  "Read again": "ਦੁਬਾਰਾ ਪੜ੍ਹੋ",
+  "Check answer": "ਜਵਾਬ ਜਾਂਚੋ",
+  "Change answer": "ਜਵਾਬ ਬਦਲੋ",
+  "Replay": "ਦੁਬਾਰਾ ਚਲਾਓ",
+  "Continue": "ਜਾਰੀ ਰੱਖੋ",
+  "I finished reading": "ਮੈਂ ਪੜ੍ਹ ਲਿਆ",
+  // Kid-flow steps
+  "Step 1: Read the story first.": "ਪੜਾਅ 1: ਪਹਿਲਾਂ ਕਹਾਣੀ ਪੜ੍ਹੋ।",
+  "Step 2: Answer the question.": "ਪੜਾਅ 2: ਸਵਾਲ ਦਾ ਜਵਾਬ ਦਿਓ।",
+  "Step 3: Practice vocabulary (optional).": "ਪੜਾਅ 3: ਸ਼ਬਦਾਵਲੀ ਅਭਿਆਸ (ਵਿਕਲਪਿਕ)।",
+  "Great job! You can move to the next story.": "ਬਹੁਤ ਵਧੀਆ! ਤੁਸੀਂ ਅਗਲੀ ਕਹਾਣੀ ਤੇ ਜਾ ਸਕਦੇ ਹੋ।",
+  // Quiz feedback
+  "✓ Great job!": "✓ ਬਹੁਤ ਵਧੀਆ!",
+  "✗ Try again.": "✗ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "✓ Correct!": "✓ ਸਹੀ!",
+  "Explanation: ": "ਵਿਆਖਿਆ: ",
+  // Quiz prompts
+  "Which word/phrase matches this meaning?": "ਕਿਹੜਾ ਸ਼ਬਦ/ਵਾਕਾਂਸ਼ ਇਸ ਅਰਥ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ?",
+  // Progress / status
+  "Passage ": "ਪੈਰਾ ",
+  " of ": " ਵਿੱਚੋਂ ",
+  " · Question ": " · ਸਵਾਲ ",
+  "Spacing: ": "ਸਪੇਸਿੰਗ: ",
+  "Wide": "ਚੌੜੀ",
+  "Normal": "ਸਾਧਾਰਨ",
+  "On": "ਚਾਲੂ",
+  "Off": "ਬੰਦ",
+  // Story reader
+  "Swipe left to continue": "ਅੱਗੇ ਜਾਣ ਲਈ ਖੱਬੇ ਸਵਾਈਪ ਕਰੋ",
+  "Great job! Swipe to review study cards.": "ਬਹੁਤ ਵਧੀਆ! ਅਧਿਐਨ ਕਾਰਡ ਦੇਖਣ ਲਈ ਸਵਾਈਪ ਕਰੋ।",
+  "Replay this story or continue.": "ਇਹ ਕਹਾਣੀ ਦੁਬਾਰਾ ਚਲਾਓ ਜਾਂ ਜਾਰੀ ਰੱਖੋ।",
+  // Study page titles
+  "Vocabulary": "ਸ਼ਬਦਾਵਲੀ",
+  "Key words": "ਮੁੱਖ ਸ਼ਬਦ",
+  "Questions": "ਸਵਾਲ",
+  "Check understanding": "ਸਮਝ ਜਾਂਚੋ",
+  "Explanations": "ਵਿਆਖਿਆਵਾਂ",
+  "Why answers are correct": "ਜਵਾਬ ਸਹੀ ਕਿਉਂ ਹਨ",
+  "Extras": "ਵਾਧੂ",
+  "Study": "ਅਧਿਐਨ",
+  // Extras labels
+  "Say It": "ਬੋਲੋ",
+  "Panel Prompts": "ਪੈਨਲ ਸੰਕੇਤ",
+  "Act It Out": "ਅਦਾਕਾਰੀ ਕਰੋ",
+  "Quick Yes/No": "ਤੁਰੰਤ ਹਾਂ/ਨਹੀਂ",
+  "Home Connection": "ਘਰ ਨਾਲ ਸੰਬੰਧ",
+  // Deck card text
+  "BOOK": "ਕਿਤਾਬ",
+  "STEP 2 · CHOOSE STORY": "ਪੜਾਅ 2 · ਕਹਾਣੀ ਚੁਣੋ",
+  "More stories ahead": "ਹੋਰ ਕਹਾਣੀਆਂ ਅੱਗੇ",
+  "Finish current stories to open this card": "ਇਹ ਕਾਰਡ ਖੋਲ੍ਹਣ ਲਈ ਮੌਜੂਦਾ ਕਹਾਣੀਆਂ ਪੂਰੀਆਂ ਕਰੋ",
+  "No content yet": "ਅਜੇ ਕੋਈ ਸਮੱਗਰੀ ਨਹੀਂ",
+  "Add stories to this bundle to begin reading": "ਪੜ੍ਹਨਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਇਸ ਬੰਡਲ ਵਿੱਚ ਕਹਾਣੀਆਂ ਸ਼ਾਮਲ ਕਰੋ",
+  "Preview card: complete earlier reads first": "ਪਹਿਲਾਂ ਪਿਛਲੀਆਂ ਕਹਾਣੀਆਂ ਪੂਰੀਆਂ ਕਰੋ",
+  "Level: ": "ਪੱਧਰ: ",
+  "Easy": "ਆਸਾਨ",
+  "Story Reader": "ਕਹਾਣੀ ਪਾਠਕ",
+  "Choose a story · ": "ਕਹਾਣੀ ਚੁਣੋ · ",
+  "Story ": "ਕਹਾਣੀ ",
+  "Book ": "ਕਿਤਾਬ ",
+  " | Story ": " | ਕਹਾਣੀ ",
+  // Legacy/retired
+  " is currently unavailable.": " ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+  "Bundle ": "ਬੰਡਲ "
+};
+
+// Helper: returns bilingual innerHTML with a secondary PA label.
+// Used for headings, titles, buttons, etc. that show both languages.
+function _readingBi(en, pa) {
+  if (!pa) return en;
+  return '<span class="btn-label-en">' + en + '</span><span class="btn-label-pa">' + (pa || "") + '</span>';
+}
+// Helper: returns text for the active language only (for status, feedback).
+function _readingTx(en) {
+  var pa = _ReadingPA[en];
+  return uiText({ en: en, pa: pa || en }, { autoPunjabi: true });
+}
+
 var Reading = {
   _initialized: false,
   _vocabPanelCollapsed: false,
@@ -91,10 +195,10 @@ var Reading = {
     
     var queueItems = State.getUnmasteredQuestionsInBundle(bundleId);
     if (!queueItems || queueItems.length === 0) {
-      alert(uiText({
+      if (typeof UI !== 'undefined' && UI.showToast) UI.showToast(uiText({
         en: "No unmastered questions in this bundle.",
         pa: "ਇਸ ਬੰਡਲ ਵਿੱਚ ਕੋਈ ਬਾਕੀ ਸਵਾਲ ਨਹੀਂ ਹਨ।"
-      }, { autoPunjabi: true }));
+      }, { autoPunjabi: true }), 2000);
       return;
     }
     
@@ -314,29 +418,53 @@ var Reading = {
     if (typeof correctIndex !== "number" || !isFinite(correctIndex)) return null;
     if (correctIndex < 0 || correctIndex >= choicesEn.length) return null;
 
-    var options = [];
+    var optionEntries = [];
     for (var i = 0; i < choicesEn.length; i++) {
       var enOpt = choicesEn[i];
       var paOpt = Array.isArray(choicesPa) ? choicesPa[i] : null;
+      var optionData = null;
       if (typeof enOpt === "object" && enOpt && typeof enOpt.en === "string") {
-        options.push({
+        optionData = {
           en: enOpt.en,
           pa: (typeof enOpt.pa === "string") ? enOpt.pa : ((typeof paOpt === "string") ? paOpt : "")
-        });
+        };
       } else {
-        options.push({
+        optionData = {
           en: String(enOpt == null ? "" : enOpt),
           pa: (typeof paOpt === "string") ? paOpt : ""
-        });
+        };
+      }
+      optionEntries.push({
+        originalIndex: i,
+        option: optionData
+      });
+    }
+
+    if (optionEntries.length > 1) {
+      for (var s = optionEntries.length - 1; s > 0; s--) {
+        var j = Math.floor(Math.random() * (s + 1));
+        var t = optionEntries[s];
+        optionEntries[s] = optionEntries[j];
+        optionEntries[j] = t;
       }
     }
+
+    var options = [];
+    var remappedCorrectIndex = -1;
+    for (var k = 0; k < optionEntries.length; k++) {
+      var entry = optionEntries[k];
+      options.push(entry.option);
+      if (entry.originalIndex === correctIndex) remappedCorrectIndex = k;
+    }
+
+    if (remappedCorrectIndex < 0 || remappedCorrectIndex >= options.length) return null;
 
     return {
       q: questionEn,
       qEn: questionEn,
       qPa: questionPa,
       options: options,
-      correctIndex: correctIndex,
+      correctIndex: remappedCorrectIndex,
       explanation: {
         en: explanationEn,
         pa: explanationPa
@@ -367,20 +495,44 @@ var Reading = {
     list.className = "reading-study-list";
     for (var i = 0; i < items.length; i++) {
       var it = items[i] || {};
+      var enText = (it.en || "").trim();
+      var paText = (it.pa || "").trim();
+      if (!enText && !paText) continue;
       var li = document.createElement("li");
       li.className = "reading-study-list__item";
       var en = document.createElement("div");
       en.className = "reading-study-list__en";
-      en.textContent = it.en || "";
+      en.textContent = enText || paText || "—";
       var pa = document.createElement("div");
       pa.className = "reading-study-list__pa";
       pa.setAttribute("lang", "pa");
-      pa.textContent = it.pa || "";
+      pa.textContent = paText || enText || "—";
       li.appendChild(en);
       li.appendChild(pa);
       list.appendChild(li);
     }
+    if (!list.children.length) return;
     parent.appendChild(list);
+  },
+
+  _getReadingPosSource: function(rd) {
+    if (rd && rd.partsOfSpeech && typeof rd.partsOfSpeech === "object") return rd.partsOfSpeech;
+    if (rd && rd.partsOfGrammar && typeof rd.partsOfGrammar === "object") return rd.partsOfGrammar;
+    return {};
+  },
+
+  _getReadingPosKeys: function() {
+    return [
+      { key: "nouns", label: "Nouns" },
+      { key: "verbs", label: "Verbs" },
+      { key: "pronouns", label: "Pronouns" },
+      { key: "adjectives", label: "Adjectives" },
+      { key: "adverbs", label: "Adverbs" },
+      { key: "prepositions", label: "Prepositions" },
+      { key: "conjunctions", label: "Conjunctions" },
+      { key: "articles", label: "Articles" },
+      { key: "interjections", label: "Interjections" }
+    ];
   },
 
   _buildStudyElement: function(rd) {
@@ -389,38 +541,38 @@ var Reading = {
 
     var heading = document.createElement("div");
     heading.className = "section-title";
-    heading.textContent = "Study Elements";
+    heading.innerHTML = _readingBi("Study Elements", _ReadingPA["Study Elements"]);
     wrap.appendChild(heading);
 
     var subtitle = document.createElement("div");
     subtitle.className = "section-subtitle";
-    subtitle.textContent = "Grammar, vocabulary, questions, and speaking prompts for this story.";
+    subtitle.innerHTML = _readingBi("Grammar, vocabulary, questions, and speaking prompts for this story.", _ReadingPA["Grammar, vocabulary, questions, and speaking prompts for this story."]);
     wrap.appendChild(subtitle);
 
-    var pos = (rd && rd.partsOfSpeech && typeof rd.partsOfSpeech === "object") ? rd.partsOfSpeech : {};
-    var posKeys = [
-      { key: "pronouns", label: "Pronouns" },
-      { key: "nouns", label: "Nouns" },
-      { key: "verbs", label: "Verbs" },
-      { key: "adjectives", label: "Adjectives" },
-      { key: "prepositions", label: "Prepositions" }
-    ];
+    var pos = Reading._getReadingPosSource(rd);
+    var posKeys = Reading._getReadingPosKeys();
 
     var posDetails = document.createElement("details");
     posDetails.className = "reading-study-block reading-study-block--pos";
     posDetails.open = true;
     var posSummary = document.createElement("summary");
-    posSummary.textContent = "Parts of Speech";
+    posSummary.innerHTML = _readingBi("Parts of Speech", _ReadingPA["Parts of Speech"]);
     posDetails.appendChild(posSummary);
     for (var p = 0; p < posKeys.length; p++) {
       var cfg = posKeys[p];
       var arr = Array.isArray(pos[cfg.key]) ? pos[cfg.key] : [];
-      if (!arr.length) continue;
       var blockTitle = document.createElement("div");
       blockTitle.className = "lang-label reading-study-subhead";
-      blockTitle.textContent = cfg.label;
+      blockTitle.innerHTML = _readingBi(cfg.label, _ReadingPA[cfg.label] || "");
       posDetails.appendChild(blockTitle);
-      Reading._appendStudyPairs(posDetails, arr);
+      if (arr.length) {
+        Reading._appendStudyPairs(posDetails, arr);
+      } else {
+        var empty = document.createElement("div");
+        empty.className = "section-subtitle";
+        empty.innerHTML = _readingBi("No entries in this story yet.", _ReadingPA["No entries in this story yet."]);
+        posDetails.appendChild(empty);
+      }
     }
     wrap.appendChild(posDetails);
 
@@ -429,7 +581,7 @@ var Reading = {
       var vocabDetails = document.createElement("details");
       vocabDetails.className = "reading-study-block reading-study-block--vocab";
       var vocabSummary = document.createElement("summary");
-      vocabSummary.textContent = "Vocabulary Words";
+      vocabSummary.innerHTML = _readingBi("Vocabulary Words", _ReadingPA["Vocabulary Words"]);
       vocabDetails.appendChild(vocabSummary);
       var vocabList = document.createElement("ul");
       vocabList.className = "reading-study-list";
@@ -457,7 +609,7 @@ var Reading = {
       var qDetails = document.createElement("details");
       qDetails.className = "reading-study-block reading-study-block--mcq";
       var qSummary = document.createElement("summary");
-      qSummary.textContent = "Multiple Choice Questions";
+      qSummary.innerHTML = _readingBi("Multiple Choice Questions", _ReadingPA["Multiple Choice Questions"]);
       qDetails.appendChild(qSummary);
       for (var q = 0; q < questions.length; q++) {
         var item = questions[q];
@@ -495,7 +647,7 @@ var Reading = {
         if (item.explanation && (item.explanation.en || item.explanation.pa)) {
           var exp = document.createElement("div");
           exp.className = "section-subtitle reading-study-question__explanation";
-          exp.textContent = "Explanation: " + (item.explanation.en || "");
+          exp.innerHTML = _readingBi("Explanation: " + Reading._escapeHtml(item.explanation.en || ""), (_ReadingPA["Explanation: "] || "ਵਿਆਖਿਆ: ") + Reading._escapeHtml(item.explanation.pa || item.explanation.en || ""));
           block.appendChild(exp);
           if (item.explanation.pa) {
             var expPa = document.createElement("div");
@@ -514,20 +666,20 @@ var Reading = {
     var extrasDetails = document.createElement("details");
     extrasDetails.className = "reading-study-block reading-study-block--extras";
     var extrasSummary = document.createElement("summary");
-    extrasSummary.textContent = "Practice Extras";
+    extrasSummary.innerHTML = _readingBi("Practice Extras", _ReadingPA["Practice Extras"]);
     extrasDetails.appendChild(extrasSummary);
 
     if (Array.isArray(extras.sayItSentenceFrames) && extras.sayItSentenceFrames.length) {
       var frameLabel = document.createElement("div");
       frameLabel.className = "lang-label reading-study-subhead";
-      frameLabel.textContent = "Say It";
+      frameLabel.innerHTML = _readingBi("Say It", _ReadingPA["Say It"]);
       extrasDetails.appendChild(frameLabel);
       Reading._appendStudyPairs(extrasDetails, extras.sayItSentenceFrames);
     }
     if (Array.isArray(extras.panelPrompts) && extras.panelPrompts.length) {
       var panelLabel = document.createElement("div");
       panelLabel.className = "lang-label reading-study-subhead";
-      panelLabel.textContent = "Panel Prompts";
+      panelLabel.innerHTML = _readingBi("Panel Prompts", _ReadingPA["Panel Prompts"]);
       extrasDetails.appendChild(panelLabel);
       var panelPairs = extras.panelPrompts.map(function(p) { return { en: p.en || "", pa: p.pa || "" }; });
       Reading._appendStudyPairs(extrasDetails, panelPairs);
@@ -535,14 +687,14 @@ var Reading = {
     if (Array.isArray(extras.actItOutCommands) && extras.actItOutCommands.length) {
       var actLabel = document.createElement("div");
       actLabel.className = "lang-label reading-study-subhead";
-      actLabel.textContent = "Act It Out";
+      actLabel.innerHTML = _readingBi("Act It Out", _ReadingPA["Act It Out"]);
       extrasDetails.appendChild(actLabel);
       Reading._appendStudyPairs(extrasDetails, extras.actItOutCommands);
     }
     if (Array.isArray(extras.quickYesNo) && extras.quickYesNo.length) {
       var yesNoLabel = document.createElement("div");
       yesNoLabel.className = "lang-label reading-study-subhead";
-      yesNoLabel.textContent = "Quick Yes/No";
+      yesNoLabel.innerHTML = _readingBi("Quick Yes/No", _ReadingPA["Quick Yes/No"]);
       extrasDetails.appendChild(yesNoLabel);
       var yesNoPairs = extras.quickYesNo.map(function(p) {
         var enText = p.en || "";
@@ -554,7 +706,7 @@ var Reading = {
     if (extras.homeConnection && typeof extras.homeConnection === "object") {
       var homeLabel = document.createElement("div");
       homeLabel.className = "lang-label reading-study-subhead";
-      homeLabel.textContent = "Home Connection";
+      homeLabel.innerHTML = _readingBi("Home Connection", _ReadingPA["Home Connection"]);
       extrasDetails.appendChild(homeLabel);
       Reading._appendStudyPairs(extrasDetails, [{ en: extras.homeConnection.en || "", pa: extras.homeConnection.pa || "" }]);
     }
@@ -671,15 +823,15 @@ var Reading = {
     helperBtn.style.display = "none";
 
     if (normalizedStep === "read") {
-      helperText.textContent = "Step 1: Read the story first.";
+      helperText.innerHTML = _readingBi("Step 1: Read the story first.", _ReadingPA["Step 1: Read the story first."]);
       helperBtn.style.display = "inline-flex";
-      helperBtn.textContent = "I finished reading";
+      helperBtn.innerHTML = _readingBi("I finished reading", _ReadingPA["I finished reading"]);
     } else if (normalizedStep === "questions") {
-      helperText.textContent = "Step 2: Answer the question.";
+      helperText.innerHTML = _readingBi("Step 2: Answer the question.", _ReadingPA["Step 2: Answer the question."]);
     } else if (normalizedStep === "vocab") {
-      helperText.textContent = "Step 3: Practice vocabulary (optional).";
+      helperText.innerHTML = _readingBi("Step 3: Practice vocabulary (optional).", _ReadingPA["Step 3: Practice vocabulary (optional)."]);
     } else {
-      helperText.textContent = "Great job! You can move to the next story.";
+      helperText.innerHTML = _readingBi("Great job! You can move to the next story.", _ReadingPA["Great job! You can move to the next story."]);
     }
 
     Reading._setDetailDeckStep(normalizedStep);
@@ -1245,7 +1397,7 @@ var Reading = {
       if (nextBtn.dataset) nextBtn.dataset.bound = "1";
       nextBtn.addEventListener("click", function() {
         var rid = Reading._detailUiState && Reading._detailUiState.readingId;
-        if (rid) Reading.goToNextPassage(rid);
+        if (rid) Reading.goToNextStoryInBundle(rid);
       });
     }
     if (againBtn && (!againBtn.dataset || againBtn.dataset.bound !== "1")) {
@@ -1275,7 +1427,9 @@ var Reading = {
     var passageIndex = Reading._detailUiState && Reading._detailUiState.passageIndex ? Reading._detailUiState.passageIndex : 1;
     var totalPassages = Reading._detailUiState && Reading._detailUiState.totalPassages ? Reading._detailUiState.totalPassages : (Array.isArray(READINGS) ? READINGS.length : 1);
     if (progressEl) {
-      progressEl.textContent = "Passage " + passageIndex + " of " + totalPassages + " · Question " + (qIndex + 1) + " of " + questions.length;
+      var enProgress = "Passage " + passageIndex + " of " + totalPassages + " · Question " + (qIndex + 1) + " of " + questions.length;
+      var paProgress = _ReadingPA["Passage "] + passageIndex + _ReadingPA[" of "] + totalPassages + _ReadingPA[" · Question "] + (qIndex + 1) + _ReadingPA[" of "] + questions.length;
+      progressEl.innerHTML = _readingBi(enProgress, paProgress);
     }
 
     Reading._renderQuizFlow(rd, q, qIndex);
@@ -1330,10 +1484,10 @@ var Reading = {
       // Check if mastery is now >= 70%
       var masteryPct = State.getBundleMasteryPct(bundleId);
       if (masteryPct >= 0.7) {
-        alert(uiText({
+        if (typeof UI !== 'undefined' && UI.showToast) UI.showToast(uiText({
           en: "🎉 Mastery achieved! Great work.",
           pa: "🎉 ਵਧਾਈ! ਮਾਹਰਤਾ ਹਾਸਲ ਹੋ ਗਈ।"
-        }, { autoPunjabi: true }));
+        }, { autoPunjabi: true }), 2200);
       }
     }
     
@@ -1593,7 +1747,7 @@ var Reading = {
       var readAgainBtn = document.createElement("button");
       readAgainBtn.type = "button";
       readAgainBtn.className = "reading-quiz-readagain";
-      readAgainBtn.textContent = "Read again";
+      readAgainBtn.innerHTML = _readingBi("Read again", _ReadingPA["Read again"]);
       readAgainBtn.addEventListener("click", function() {
         Reading._scrollToPassageTop();
       });
@@ -1602,7 +1756,7 @@ var Reading = {
       checkBtn.type = "button";
       checkBtn.id = "reading-quiz-check";
       checkBtn.className = "btn";
-      checkBtn.textContent = "Check answer";
+      checkBtn.innerHTML = _readingBi("Check answer", _ReadingPA["Check answer"]);
       checkBtn.disabled = true;
       checkBtn.addEventListener("click", function() {
         if (st.selectedOptionIndex == null || !q) return;
@@ -1622,7 +1776,7 @@ var Reading = {
       changeBtn.type = "button";
       changeBtn.id = "reading-quiz-change";
       changeBtn.className = "btn btn-secondary btn-small";
-      changeBtn.textContent = "Change answer";
+      changeBtn.innerHTML = _readingBi("Change answer", _ReadingPA["Change answer"]);
       changeBtn.style.display = "none";
       changeBtn.addEventListener("click", function() {
         st.checked = false;
@@ -1818,7 +1972,9 @@ var Reading = {
     // Update buttons (labels + aria-pressed)
     var btnSpacing = document.getElementById("btn-reading-spacing");
     if (btnSpacing) {
-      btnSpacing.textContent = "Spacing: " + (s.lineSpacing === "wide" ? "Wide" : "Normal");
+      var spacingEn = "Spacing: " + (s.lineSpacing === "wide" ? "Wide" : "Normal");
+      var spacingPa = _ReadingPA["Spacing: "] + (s.lineSpacing === "wide" ? _ReadingPA["Wide"] : _ReadingPA["Normal"]);
+      btnSpacing.innerHTML = _readingBi(spacingEn, spacingPa);
       btnSpacing.setAttribute("aria-pressed", s.lineSpacing === "wide" ? "true" : "false");
     }
 
@@ -1895,7 +2051,7 @@ var Reading = {
     // If the button has the new span markup, only update the status chip.
     var statusEl = document.getElementById("reading-vocab-status");
     if (statusEl) {
-      statusEl.textContent = isOn ? "On" : "Off";
+      statusEl.innerHTML = _readingBi(isOn ? "On" : "Off", isOn ? _ReadingPA["On"] : _ReadingPA["Off"]);
     } else {
       // Fallback for older markup
       btn.textContent = "Vocabulary / ਸ਼ਬਦਾਵਲੀ: " + (isOn ? "On" : "Off");
@@ -2237,7 +2393,7 @@ var Reading = {
     if (!hasPhrases && !hasWords && !hasForms) {
       var empty = document.createElement("div");
       empty.className = "section-subtitle";
-      empty.textContent = "No vocabulary for this story yet.";
+      empty.innerHTML = _readingBi("No vocabulary for this story yet.", _ReadingPA["No vocabulary for this story yet."]);
       panel.appendChild(empty);
     }
   },
@@ -2419,6 +2575,7 @@ var Reading = {
 
     return {
       subtitle: "Book " + bundleId + " | Story " + storyNumber,
+      subtitlePa: _ReadingPA["Book "] + bundleId + _ReadingPA[" | Story "] + storyNumber,
       titleEn: cleanedStoryTitle,
       titlePa: storyTitlePa,
       readingId: story.id || ""
@@ -2443,13 +2600,19 @@ var Reading = {
     }
 
     var metaEl = document.getElementById("reading-detail-meta");
-    if (metaEl) metaEl.textContent = heroMeta.subtitle;
+    if (metaEl) metaEl.innerHTML = _readingBi(heroMeta.subtitle, heroMeta.subtitlePa || heroMeta.subtitle);
   },
 
   _formatStorySelectorLabel: function(storyNum) {
     var n = parseInt(storyNum, 10);
     if (!isFinite(n) || n < 1) n = 1;
     return "Story " + n;
+  },
+
+  _formatStorySelectorLabelBi: function(storyNum) {
+    var n = parseInt(storyNum, 10);
+    if (!isFinite(n) || n < 1) n = 1;
+    return _readingBi("Story " + n, _ReadingPA["Story "] + n);
   },
 
   _getBundleCardStoryName: function(bundleId) {
@@ -2509,7 +2672,8 @@ var Reading = {
 
     var bundleMeta = Reading._getBundleMeta(bId) || {};
     var bundleNameEn = bundleMeta.nameEn || ("Book " + bId);
-    if (title) title.textContent = "Choose a story · " + bundleNameEn;
+    var bundleNamePa = bundleMeta.namePa || (_ReadingPA["Book "] + bId);
+    if (title) title.innerHTML = _readingBi("Choose a story · " + bundleNameEn, _ReadingPA["Choose a story · "] + bundleNamePa);
     var stories = Reading._getOrderedStoriesForBook(bId);
     var storyCount = stories.length;
     if (!storyCount || storyCount < 1) storyCount = 1;
@@ -2523,7 +2687,7 @@ var Reading = {
       var isDisabled = !!(story && (story.locked || story.disabled || story.isLocked || story.isUnavailable || story.unavailable));
       button.className = "reading-story-sheet__item" + (i === selected ? " is-selected" : "") + (isDisabled ? " is-disabled" : "");
       button.setAttribute("data-story-num", String(i));
-      button.textContent = Reading._formatStorySelectorLabel(i);
+      button.innerHTML = Reading._formatStorySelectorLabelBi(i);
       if (isDisabled) button.setAttribute("aria-disabled", "true");
       if (isDisabled) button.disabled = true;
       button.setAttribute("aria-selected", i === selected ? "true" : "false");
@@ -2700,7 +2864,7 @@ var Reading = {
 
       var kicker = document.createElement("div");
       kicker.className = "deck-card-kicker";
-      kicker.textContent = "BOOK";
+      kicker.innerHTML = _readingBi("BOOK", _ReadingPA["BOOK"]);
 
       var subtitle = document.createElement("p");
       subtitle.className = "deck-card-subtitle";
@@ -2717,7 +2881,7 @@ var Reading = {
       selector.setAttribute("aria-haspopup", "dialog");
       selector.setAttribute("aria-controls", "readingStorySheet");
       selector.setAttribute("aria-expanded", "false");
-      selector.textContent = Reading._formatStorySelectorLabel(storySelection);
+      selector.innerHTML = Reading._formatStorySelectorLabelBi(storySelection);
       selector.addEventListener("pointerdown", function(e) {
         try { e.stopPropagation(); } catch (eStopPointerDown) {}
       });
@@ -2925,7 +3089,7 @@ var Reading = {
           if (selector) {
             var selectedStoryNum = Reading._getSelectedStoryForBook(cardBundleId);
             var selectorLabel = Reading._formatStorySelectorLabel(selectedStoryNum);
-            selector.textContent = selectorLabel;
+            selector.innerHTML = Reading._formatStorySelectorLabelBi(selectedStoryNum);
             selector.setAttribute("aria-label", "Choose story for Book " + cardBundleId + ": " + selectorLabel);
           }
           var storyNameEl = cards[c].querySelector(".read-book-story-name");
@@ -3387,18 +3551,18 @@ var Reading = {
         card.classList.add("deck-card--more");
         card.classList.add("reading-deck-card--locked");
         card.setAttribute("data-kind", "more");
-        kicker.textContent = "STEP 2 · CHOOSE STORY";
-        title.textContent = "More stories ahead";
+        kicker.innerHTML = _readingBi("STEP 2 · CHOOSE STORY", _ReadingPA["STEP 2 · CHOOSE STORY"]);
+        title.innerHTML = _readingBi("More stories ahead", _ReadingPA["More stories ahead"]);
         subtitle.textContent = "ਹੋਰ ਕਹਾਣੀਆਂ ਆ ਰਹੀਆਂ ਹਨ";
-        meta.textContent = "Finish current stories to open this card";
+        meta.innerHTML = _readingBi("Finish current stories to open this card", _ReadingPA["Finish current stories to open this card"]);
       } else if (entry.kind === "empty") {
         card.classList.add("deck-card--more");
         card.classList.add("reading-deck-card--locked");
         card.setAttribute("data-kind", "empty");
-        kicker.textContent = "STEP 2 · CHOOSE STORY";
-        title.textContent = "No content yet";
+        kicker.innerHTML = _readingBi("STEP 2 · CHOOSE STORY", _ReadingPA["STEP 2 · CHOOSE STORY"]);
+        title.innerHTML = _readingBi("No content yet", _ReadingPA["No content yet"]);
         subtitle.textContent = "ਇਸ ਬੰਡਲ ਵਿੱਚ ਹਾਲੇ ਸਮੱਗਰੀ ਨਹੀਂ";
-        meta.textContent = "Add stories to this bundle to begin reading";
+        meta.innerHTML = _readingBi("Add stories to this bundle to begin reading", _ReadingPA["Add stories to this bundle to begin reading"]);
       } else {
         card.setAttribute("data-kind", "reading");
         card.setAttribute("data-reading-id", String(entry.id || ""));
@@ -3406,7 +3570,7 @@ var Reading = {
         if (entry.isPreviewLocked) card.classList.add("reading-deck-card--locked");
         if (entry.isCompleted) card.classList.add("reading-deck-card--completed");
         if (entry.isCurrent) card.classList.add("reading-deck-card--current");
-        kicker.textContent = "STEP 2 · CHOOSE STORY";
+        kicker.innerHTML = _readingBi("STEP 2 · CHOOSE STORY", _ReadingPA["STEP 2 · CHOOSE STORY"]);
         var storyTitleEn = "R" + (entry.index || i + 1) + ": " + (entry.titleEn || "Story");
         var storyTitlePa = entry.titlePa || "ਕਹਾਣੀ";
         card.setAttribute("data-reading-title-en", storyTitleEn);
@@ -3414,9 +3578,11 @@ var Reading = {
         title.textContent = storyTitleEn;
         subtitle.textContent = storyTitlePa;
         if (entry.isPreviewLocked) {
-          meta.textContent = "Preview card: complete earlier reads first";
+          meta.innerHTML = _readingBi("Preview card: complete earlier reads first", _ReadingPA["Preview card: complete earlier reads first"]);
         } else {
-          meta.textContent = "Level: " + (entry.levelHint || "Easy");
+          var levelEn = entry.levelHint || "Easy";
+          var levelPa = _ReadingPA[levelEn] || levelEn;
+          meta.innerHTML = _readingBi("Level: " + levelEn, _ReadingPA["Level: "] + levelPa);
         }
       }
 
@@ -4122,18 +4288,20 @@ var Reading = {
 
   _buildStoryReaderStudyPages: function(rd) {
     var pages = [];
-    var pos = (rd && rd.partsOfSpeech && typeof rd.partsOfSpeech === "object") ? rd.partsOfSpeech : {};
-    var posKeys = [
-      { key: "pronouns", label: "Pronouns" },
-      { key: "nouns", label: "Nouns" },
-      { key: "verbs", label: "Verbs" },
-      { key: "adjectives", label: "Adjectives" },
-      { key: "prepositions", label: "Prepositions" }
-    ];
+    var pos = Reading._getReadingPosSource(rd);
+    var posKeys = Reading._getReadingPosKeys();
     for (var p = 0; p < posKeys.length; p++) {
       var posCfg = posKeys[p];
       var posItems = Array.isArray(pos[posCfg.key]) ? pos[posCfg.key] : [];
-      if (!posItems.length) continue;
+      if (!posItems.length) {
+        pages.push({
+          kind: "study",
+          title: "Parts of Speech",
+          subtitle: posCfg.label,
+          pairs: [{ en: "No entries in this story yet.", pa: "ਇਸ ਕਹਾਣੀ ਵਿੱਚ ਅਜੇ ਕੋਈ ਉਦਾਹਰਨ ਨਹੀਂ ਹੈ।" }]
+        });
+        continue;
+      }
       var posChunks = Reading._chunkArray(posItems, 3);
       for (var pc = 0; pc < posChunks.length; pc++) {
         pages.push({
@@ -4242,15 +4410,18 @@ var Reading = {
 
   _renderStoryReaderStudyPage: function(card, page, pageIndex) {
     if (!card || !page) return;
+    var titleEn = page.title || "Study";
+    var titlePa = _ReadingPA[titleEn] || "";
     var title = document.createElement("div");
     title.className = "section-title";
-    title.textContent = page.title || "Study";
+    title.innerHTML = _readingBi(titleEn, titlePa);
     card.appendChild(title);
 
     if (page.subtitle) {
+      var subtitlePa = _ReadingPA[page.subtitle] || "";
       var subtitle = document.createElement("div");
       subtitle.className = "section-subtitle";
-      subtitle.textContent = page.subtitle;
+      subtitle.innerHTML = _readingBi(page.subtitle, subtitlePa);
       card.appendChild(subtitle);
     }
 
@@ -4328,7 +4499,7 @@ var Reading = {
     var swipeHint = document.createElement("div");
     swipeHint.className = "reading-reader-hint";
     swipeHint.setAttribute("aria-live", "polite");
-    swipeHint.textContent = "Swipe left to continue";
+    swipeHint.innerHTML = _readingBi("Swipe left to continue", _ReadingPA["Swipe left to continue"]);
     deck.appendChild(swipeHint);
 
     var viewport = document.createElement("div");
@@ -4349,24 +4520,24 @@ var Reading = {
 
         var introTitle = document.createElement("div");
         introTitle.className = "section-title";
-        introTitle.textContent = "Story complete";
+        introTitle.innerHTML = _readingBi("Story complete", _ReadingPA["Story complete"]);
         card.appendChild(introTitle);
 
         var introSubtitle = document.createElement("div");
         introSubtitle.className = "section-subtitle";
-        introSubtitle.textContent = "Great job! Swipe to review study cards.";
+        introSubtitle.innerHTML = _readingBi("Great job! Swipe to review study cards.", _ReadingPA["Great job! Swipe to review study cards."]);
         card.appendChild(introSubtitle);
       } else if (page.kind === "complete-actions") {
         card.classList.add("reading-detail-deck__card--complete");
 
         var doneTitle = document.createElement("div");
         doneTitle.className = "section-title";
-        doneTitle.textContent = "All done";
+        doneTitle.innerHTML = _readingBi("All done", _ReadingPA["All done"]);
         card.appendChild(doneTitle);
 
         var doneSubtitle = document.createElement("div");
         doneSubtitle.className = "section-subtitle";
-        doneSubtitle.textContent = "Replay this story or continue.";
+        doneSubtitle.innerHTML = _readingBi("Replay this story or continue.", _ReadingPA["Replay this story or continue."]);
         card.appendChild(doneSubtitle);
 
         var completeActions = document.createElement("div");
@@ -4375,18 +4546,30 @@ var Reading = {
         var replayBtn = document.createElement("button");
         replayBtn.type = "button";
         replayBtn.className = "btn";
-        replayBtn.textContent = "Replay";
+        replayBtn.innerHTML = _readingBi("Replay", _ReadingPA["Replay"]);
         replayBtn.addEventListener("click", function() {
+          if (Reading._storyReaderUi && Reading._storyReaderUi.questionStateByPage) {
+            Reading._storyReaderUi.questionStateByPage = {};
+          }
+          setTurnDirection(0);
           render(0);
         });
 
         var continueBtn = document.createElement("button");
         continueBtn.type = "button";
         continueBtn.className = "btn cta-primary";
-        continueBtn.textContent = "Continue";
+        var nextStoryId = Reading.getNextStoryInBundleId(rd && rd.id);
+        var hasNextStory = !!nextStoryId;
+        continueBtn.innerHTML = hasNextStory
+          ? _readingBi("Continue", _ReadingPA["Continue"])
+          : _readingBi("Back to reading list", "ਪੜ੍ਹਾਈ ਸੂਚੀ ਵਾਪਸ");
         continueBtn.addEventListener("click", function() {
-          UI.goTo("screen-reading");
+          if (nextStoryId) {
+            Reading.openReadingDetail(nextStoryId);
+            return;
+          }
           Reading.renderReadingList();
+          UI.goTo("screen-reading");
         });
 
         completeActions.appendChild(replayBtn);
@@ -4945,11 +5128,17 @@ var Reading = {
       }
     }
 
-    function isQuestionOptionTarget(target) {
+    function isInteractiveControlTarget(target) {
       if (!target) return false;
       var el = target;
       if (el.nodeType === 3 && el.parentElement) el = el.parentElement;
-      return !!(el && el.closest && el.closest('.reading-study-question__option[data-option-index][data-page-index]'));
+      if (!el || !el.closest) return false;
+      return !!(
+        el.closest('.reading-study-question__option[data-option-index][data-page-index]') ||
+        el.closest('.reading-complete-actions .btn') ||
+        el.closest('.reading-detail-deck__nav .btn') ||
+        el.closest('button, a, input, select, textarea, label')
+      );
     }
 
     bindQuestionOptionHandlers();
@@ -4967,7 +5156,7 @@ var Reading = {
 
     viewport.addEventListener("touchstart", function(e) {
       var state = Reading._storyReaderUi;
-      if (isQuestionOptionTarget(e && e.target)) return;
+      if (isInteractiveControlTarget(e && e.target)) return;
       if (!e.touches || !e.touches.length) return;
       state.touchStartX = e.touches[0].clientX;
       state.touchStartY = e.touches[0].clientY;
@@ -5033,7 +5222,7 @@ var Reading = {
       var state = Reading._storyReaderUi;
       if (!evt || evt.pointerType === "touch") return;
       if (evt.button != null && evt.button !== 0) return;
-      if (isQuestionOptionTarget(evt.target)) return;
+      if (isInteractiveControlTarget(evt.target)) return;
 
       state.pointerId = evt.pointerId;
       state.pointerStartX = evt.clientX;
@@ -5134,7 +5323,8 @@ var Reading = {
         }
         if (retiredMessage) {
           var title = (rd && rd.titleEn) ? rd.titleEn : "This story";
-          retiredMessage.textContent = title + " is currently unavailable.";
+          var titlePa = (rd && rd.titlePa) ? rd.titlePa : "ਇਹ ਕਹਾਣੀ";
+          retiredMessage.innerHTML = _readingBi(title + " is currently unavailable.", titlePa + _ReadingPA[" is currently unavailable."]);
         }
       },
 
@@ -5146,7 +5336,7 @@ var Reading = {
     for (var b = 0; b < bundleIds.length; b++) {
       var bundleId = bundleIds[b];
       var header = document.createElement("li");
-      header.textContent = "Bundle " + bundleId;
+      header.innerHTML = _readingBi("Bundle " + bundleId, _ReadingPA["Bundle "] + bundleId);
       ul.appendChild(header);
 
       var readings = Reading._getReadingsForBundle(bundleId);
@@ -5442,11 +5632,11 @@ var Reading = {
     line1.className = "reading-vocab-quiz-line";
     line1.textContent = meaningEn ? ("Which word/phrase means: \"" + meaningEn + "\"?") : "Which word/phrase matches this meaning?";
     prompt.appendChild(line1);
-    if (meaningPa) {
+    if (meaningPa || !meaningEn) {
       var line2 = document.createElement("div");
       line2.className = "reading-vocab-quiz-line";
       line2.setAttribute("lang", "pa");
-      line2.textContent = "ਕਿਹੜਾ ਸ਼ਬਦ/ਵਾਕਾਂਸ਼ ਦਾ ਅਰਥ ਹੈ: \"" + meaningPa + "\"?";
+      line2.textContent = meaningPa ? ("ਕਿਹੜਾ ਸ਼ਬਦ/ਵਾਕਾਂਸ਼ ਦਾ ਅਰਥ ਹੈ: \"" + meaningPa + "\"?") : _ReadingPA["Which word/phrase matches this meaning?"];
       prompt.appendChild(line2);
     }
 
@@ -5491,30 +5681,58 @@ var Reading = {
     fb.classList.remove("correct", "wrong");
     if (correct) {
       fb.classList.add("correct");
-      fb.textContent = "✓ Great job!";
+      fb.innerHTML = _readingBi("✓ Great job!", _ReadingPA["✓ Great job!"]);
 
       // Disable options
       var btns = opts.querySelectorAll("button");
       for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
     } else {
-      fb.textContent = "✗ Try again.";
+      fb.innerHTML = _readingBi("✗ Try again.", _ReadingPA["✗ Try again."]);
       fb.classList.add("wrong");
     }
   },
 
   // Handle Next button click
   goToNextPassage: function(currentId) {
+    return Reading.goToNextStoryInBundle(currentId);
+  },
+
+  getNextStoryInBundleId: function(currentId) {
     var currentIndex = READINGS.findIndex(function(r) { return r.id === currentId; });
-    if (currentIndex === -1) return;
-    
-    if (currentIndex + 1 < READINGS.length) {
-      // More passages available
-      Reading.openReadingDetail(READINGS[currentIndex + 1].id);
-    } else {
-      // All passages completed - go back to list
-      Reading.renderReadingList();
-      UI.goTo("screen-reading");
+    if (currentIndex === -1) return null;
+
+    var currentReading = READINGS[currentIndex] || null;
+    var bundleId = (currentReading && typeof currentReading.bundleId === "number")
+      ? currentReading.bundleId
+      : Reading._ensureActiveBundleId();
+    var bundleReadings = Reading._getReadingsForBundle(bundleId);
+
+    if (!Array.isArray(bundleReadings) || !bundleReadings.length) return null;
+
+    var inBundleIndex = -1;
+    for (var i = 0; i < bundleReadings.length; i++) {
+      if (bundleReadings[i] && bundleReadings[i].id === currentId) {
+        inBundleIndex = i;
+        break;
+      }
     }
+
+    if (inBundleIndex >= 0 && inBundleIndex + 1 < bundleReadings.length) {
+      return bundleReadings[inBundleIndex + 1].id;
+    }
+
+    return null;
+  },
+
+  goToNextStoryInBundle: function(currentId) {
+    var nextStoryId = Reading.getNextStoryInBundleId(currentId);
+    if (nextStoryId) {
+      Reading.openReadingDetail(nextStoryId);
+      return;
+    }
+
+    Reading.renderReadingList();
+    UI.goTo("screen-reading");
   },
 
   // Internal: handle answer selection
@@ -5539,7 +5757,7 @@ var Reading = {
     if (feedbackEl) {
       feedbackEl.classList.remove("correct", "wrong");
       if (correct) {
-        feedbackEl.textContent = "✓ Correct!";
+        feedbackEl.innerHTML = _readingBi("✓ Correct!", _ReadingPA["✓ Correct!"]);
         feedbackEl.classList.add("correct");
         
         // Add explanation if available
@@ -5602,7 +5820,7 @@ var Reading = {
 
       } else {
         if (Reading._isKidMode()) Reading._goToKidFlowStep("questions");
-        feedbackEl.textContent = "✗ Try again.";
+        feedbackEl.innerHTML = _readingBi("✗ Try again.", _ReadingPA["✗ Try again."]);
         feedbackEl.classList.add("wrong");
       }
     }

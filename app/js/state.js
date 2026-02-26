@@ -415,25 +415,49 @@ var State = {
 
   // Clear all persisted state (main + backups) and reload
   resetAll: function(confirmMsg) {
+    function doResetAndReload() {
+      try {
+        localStorage.removeItem(State.STORAGE_KEY);
+        localStorage.removeItem(State.STORAGE_KEY + "_backup_1");
+        localStorage.removeItem(State.STORAGE_KEY + "_backup_2");
+      } catch (e) {
+        console.warn("Failed to reset state:", e);
+      }
+
+      try {
+        window.location.reload();
+      } catch (e2) {
+        // As a fallback, allow caller to handle reload issues
+      }
+      return true;
+    }
+
+    if (confirmMsg && typeof UI !== "undefined" && UI && typeof UI.showConfirmDialog === "function") {
+      try {
+        UI.showConfirmDialog(confirmMsg, {
+          title: "Reset state",
+          confirmText: "Reset",
+          cancelText: "Cancel",
+          allowCancel: true
+        }).then(function(ok) {
+          if (!ok) return;
+          doResetAndReload();
+        });
+      } catch (e0) {
+        console.warn("Failed to reset state:", e0);
+      }
+      return false;
+    }
+
     try {
       if (confirmMsg) {
         var ok = window.confirm(confirmMsg);
         if (!ok) return false;
       }
-
-      localStorage.removeItem(State.STORAGE_KEY);
-      localStorage.removeItem(State.STORAGE_KEY + "_backup_1");
-      localStorage.removeItem(State.STORAGE_KEY + "_backup_2");
     } catch (e) {
       console.warn("Failed to reset state:", e);
     }
-
-    try {
-      window.location.reload();
-    } catch (e2) {
-      // As a fallback, allow caller to handle reload issues
-    }
-    return true;
+    return doResetAndReload();
   },
 
   // Ensure defaults and track buckets exist (safe if TRACKS is missing)

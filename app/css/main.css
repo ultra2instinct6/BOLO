@@ -1,5 +1,36 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── iOS WEBVIEW / PWA SMOOTHNESS ─────────────────────────── */
+html {
+  /* Momentum scrolling for the whole page on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent rubber-band overscroll from shifting fixed elements */
+  overscroll-behavior-y: none;
+}
+
+html, body {
+  /* Kill 300ms tap delay on iOS */
+  touch-action: manipulation;
+  /* GPU-accelerate the root layers so fixed children composite cleanly */
+  -webkit-transform: translateZ(0);
+}
+
+/* Force GPU compositing on all fixed/sticky elements (prevents iOS jank
+   when backdrop-filter or box-shadow is used on fixed bars/modals) */
+[style*="position:fixed"],
+[style*="position: fixed"] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Smooth scroll for programmatic scrolls (scrollIntoView, etc.) */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Prevent iOS text-size inflation on orientation change */
+html { -webkit-text-size-adjust: 100%; }
+
 /* Section Transition Overlay — hidden by default, shown briefly during section switches */
 .section-transition {
   position: fixed;
@@ -972,6 +1003,8 @@ section.screen.active {
   z-index: 100;
   pointer-events: auto;
   backdrop-filter: blur(2px);
+  -webkit-transform: translateX(-50%) translateZ(0);
+  transform: translateX(-50%) translateZ(0);
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -1584,12 +1617,15 @@ section.screen.active {
   display: flex;
   width: 100%;
   transition: transform 220ms var(--ease-standard);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .reading-detail-deck__card {
   flex: 0 0 100%;
   margin: 0;
   transition: transform var(--motion-base) var(--ease-standard), opacity var(--motion-base) var(--ease-standard), filter var(--motion-base) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), border-color var(--motion-fast) var(--ease-standard);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: center center;
   will-change: transform, opacity, filter;
@@ -1691,7 +1727,9 @@ section.screen.active {
   border: 1px solid var(--border);
   background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
   box-shadow: var(--shadow-1);
-  transform-style: preserve-3d;
+  transform-style: flat;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -3064,6 +3102,8 @@ section.screen.active {
   height: var(--app-dvh, 100vh);
   pointer-events: auto;
   overscroll-behavior: contain;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .modal-backdrop.active { display: flex; }
 .modal-card {
@@ -3493,7 +3533,7 @@ section.screen.active {
 
 .example-text-display span {
   display: inline;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight-word {
@@ -3523,7 +3563,7 @@ section.screen.active {
   padding: 12px 18px;
   border-radius: 8px;
   font-size: 16px;
-  transition: all 0.2s;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
   border: 2px solid var(--primary);
   background-color: #f0f7ff;
   color: #333;
@@ -4998,7 +5038,7 @@ body {
   border-radius: 8px;
   border: 2px solid var(--border);
   box-shadow: var(--shadow-1);
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .bundle-card:active {
@@ -5104,7 +5144,7 @@ body {
   border: none;
   background: var(--primary);
   color: white;
-  transition: all 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .bundle-card__button:active {
@@ -6678,6 +6718,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   transition: transform var(--motion-base) var(--ease-standard);
   will-change: transform;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 #screen-typing-center #typingDeckTrack .typing-mode-card {
@@ -8741,7 +8783,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 .status-shelf {
   position: fixed;
   left: var(--app-center-x, 50%);
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
+  -webkit-transform: translateX(-50%) translateZ(0);
   bottom: calc(var(--footer-h, 70px) + 8px + env(safe-area-inset-bottom));
   width: var(--app-shell-inner-width, min(420px, calc(100% - 20px)));
   min-height: var(--status-shelf-h, 56px);
@@ -8935,6 +8978,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   transition: transform var(--motion-base) var(--ease-standard);
   will-change: transform;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 #readingBundleTrack,
@@ -8942,6 +8987,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   display: flex;
   transition: transform var(--motion-base) var(--ease-standard);
   will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .deck-card {
@@ -8957,6 +9004,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   justify-content: flex-start;
   gap: 6px;
   transition: border-color var(--motion-fast) var(--ease-standard), box-shadow var(--motion-base) var(--ease-standard), transform var(--motion-base) var(--ease-standard), opacity var(--motion-base) var(--ease-standard), filter var(--motion-base) var(--ease-standard);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: center center;
   will-change: transform, opacity, filter;
@@ -10181,6 +10229,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   transition: transform var(--motion-base) var(--ease-standard);
   will-change: transform;
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 #learnSwipeDeck .module-card,
@@ -11121,9 +11171,14 @@ body {
 
 html {
   scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
+  /* iOS: prevent content from being hidden behind notch/home-indicator */
+  padding-top: env(safe-area-inset-top);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   background:
     radial-gradient(120% 140% at 50% -14%, rgba(0, 80, 168, 0.12) 0%, rgba(0, 80, 168, 0) 52%),
     radial-gradient(120% 120% at 8% 0%, rgba(0, 80, 168, 0.09) 0%, transparent 56%),
@@ -13242,4 +13297,43 @@ main {
     height: 44px !important;
     min-height: 44px !important;
   }
+}
+
+/* ========================================
+   iOS SAFARI / WEBVIEW SMOOTHNESS FIXES
+   ======================================== */
+
+/* GPU-promote all position:fixed and position:sticky elements
+   so backdrop-filter, box-shadow, and opacity don't cause
+   compositing jank on iOS WebKit.                          */
+.section-transition,
+.modal-backdrop,
+.status-shelf,
+.g8-wo__header,
+.g8-wo__dock {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* All interactive elements: kill the 300ms iOS tap delay */
+button, a, input, select, textarea, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* iOS adds a tap-highlight colour by default — remove it */
+button, a, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth momentum scrolling for any overflow:auto container */
+.app-container,
+.typing-shell,
+.modal-card {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent iOS "pull to refresh" and rubber-banding from
+   interfering with fixed bottom bars                      */
+.app-container {
+  overscroll-behavior-y: contain;
 }

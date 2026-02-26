@@ -132,13 +132,13 @@
     <!-- Header -->
     <header class="app-header">
       <div class="header-logo">
-        <button type="button" id="header-back-chevron" class="header-back-chevron is-hidden" aria-label="Go back" aria-hidden="true">←</button>
         <img src="./img/logo.png" alt="BOLO logo" class="logo-img logo-img-header" />
       </div>
       <nav class="header-text-block header-section-tabs" id="header-section-tabs" aria-label="Section navigation">
         <button type="button" class="header-section-tab" data-header-section="home" data-target-screen="screen-home">Home</button>
         <button type="button" class="header-section-tab" data-header-section="learn" data-target-screen="screen-learn">Learn</button>
         <button type="button" class="header-section-tab" data-header-section="read" data-target-screen="screen-reading">Read</button>
+        <button type="button" class="header-section-tab is-disabled" data-header-section="play" data-target-screen="screen-play-home" aria-disabled="true">Play</button>
         <button type="button" class="header-section-tab is-disabled" data-header-section="type" data-target-screen="screen-typing-center" aria-disabled="true">Type</button>
       </nav>
     </header>
@@ -316,7 +316,7 @@
       <!-- GAMES SCREEN -->
       
       <!-- PLAY HOME (Game Home Menu) -->
-      <section id="screen-play-home" class="screen" aria-label="Unavailable">
+      <section id="screen-play-home" class="screen" aria-label="Play Home">
         <div class="card">
           <div class="section-title">Unavailable</div>
           <div class="section-subtitle" lang="pa">ਉਪਲਬਧ ਨਹੀਂ</div>
@@ -325,7 +325,7 @@
 
         <div class="card">
           <div class="section-title" style="font-size:15px;">Unavailable</div>
-          <div class="playhome-grid" id="playhome-grid" role="grid" aria-label="Unavailable grid">
+          <div class="playhome-grid" id="playhome-grid" role="grid" aria-label="Games grid">
             <button type="button" class="playhome-tile" id="btn-playhome-game1" data-playhome-game="1" role="gridcell">
               <div class="playhome-tile-icon" aria-hidden="true">1</div>
               <div class="playhome-tile-body">
@@ -700,7 +700,7 @@
         </div>
       </section>
 
-      <section id="screen-play" class="screen" aria-label="Unavailable">
+      <section id="screen-play" class="screen" aria-label="Play">
         <div id="playActivePanel" class="is-hidden" style="margin-top:8px;" aria-hidden="true">
           <!-- IN_ROUND: Round in progress (answering questions) -->
           <div id="playRound" class="is-hidden" style="margin-top:8px;" aria-hidden="true">

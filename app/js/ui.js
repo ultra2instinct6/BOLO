@@ -86,7 +86,7 @@ window.SCREEN_TO_SECTION = SCREEN_TO_SECTION;
   }
 
   window.TransitionOverlay = {
-    show: function(label, durationMs) {
+    show: function(label, durationMs, section) {
       var reduced = prefersReducedMotion();
       var raw = (typeof durationMs === "number" && isFinite(durationMs)) ? durationMs : 250;
       // Hard caps: keeps overlay bounded even if called incorrectly.
@@ -104,7 +104,12 @@ window.SCREEN_TO_SECTION = SCREEN_TO_SECTION;
         return effectiveDuration;
       }
 
-      labelEl.textContent = (label == null) ? "" : String(label);
+      if (section === "home") {
+        labelEl.innerHTML = '<img src="./img/logo.png" alt="BOLO" class="section-transition__logo">';
+      } else {
+        labelEl.textContent = (label == null) ? "" : String(label);
+      }
+      if (section) el.setAttribute("data-section", section);
       el.setAttribute("aria-hidden", "false");
       el.classList.add("is-visible");
 
@@ -259,32 +264,6 @@ var UI = {
     }
   },
 
-  updateHeaderBackChevron: function(screenId) {
-    var chevron = document.getElementById("header-back-chevron");
-    if (!chevron) return;
-    chevron.removeAttribute("hidden");
-
-    var targetScreen = null;
-    if (screenId === "screen-learn") targetScreen = "screen-home";
-    else if (screenId === "screen-typing-center") targetScreen = "screen-home";
-    else if (screenId === "screen-lesson") targetScreen = "screen-learn";
-    else if (screenId === "screen-play-home") targetScreen = "screen-home";
-    else if (screenId === "screen-play") targetScreen = "screen-play-home";
-    else if (screenId === "screen-reading") targetScreen = "screen-home";
-    else if (screenId === "screen-reading-detail") targetScreen = "screen-reading";
-
-    if (!targetScreen) {
-      chevron.classList.add("is-hidden");
-      chevron.setAttribute("aria-hidden", "true");
-      chevron.removeAttribute("data-target-screen");
-      return;
-    }
-
-    chevron.classList.remove("is-hidden");
-    chevron.setAttribute("aria-hidden", "false");
-    chevron.setAttribute("data-target-screen", targetScreen);
-  },
-
   updateHeaderHelper: function(screenId) {
     var sid = screenId;
     if (!sid) {
@@ -299,12 +278,11 @@ var UI = {
     var sectionKey = UI.getSectionKeyForScreen(sid) || "home";
 
     UI.updateHeaderSectionTabs(sid);
-    UI.updateHeaderBackChevron(sid);
   },
 
   // Major sections only (entry overlay)
   isMajorSection: function(sectionKey) {
-    return sectionKey === "learn" || sectionKey === "read" || sectionKey === "type";
+    return sectionKey === "home" || sectionKey === "learn" || sectionKey === "read" || sectionKey === "type";
   },
 
   // Gate section transitions (Phase 2)
@@ -333,7 +311,6 @@ var UI = {
     if (opts.skipTransition === true) return false;
     if (!UI.isMajorSection(nextSection)) return false;
     if (!nextSection || nextSection === prevSection) return false;
-    if (nextSection === "home") return false;
     return true;
   },
 
@@ -430,7 +407,7 @@ var UI = {
       dismissed = !!(State && State.state && State.state.settings && State.state.settings.onboardingHintDismissed);
     } catch (e0) { dismissed = false; }
 
-    wrap.style.display = dismissed ? "none" : "block";
+    wrap.style.display = "none";
   },
 
   initStatusShelfMotion: function() {
@@ -862,7 +839,7 @@ var UI = {
       var requestedDuration = 250;
       var effectiveDuration = 250;
       try {
-        effectiveDuration = window.TransitionOverlay.show(label, requestedDuration);
+        effectiveDuration = window.TransitionOverlay.show(label, requestedDuration, nextSection);
       } catch (e) {
         // If overlay fails, continue navigation without blocking
         effectiveDuration = 1;

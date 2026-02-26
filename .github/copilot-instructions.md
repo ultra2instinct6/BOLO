@@ -3,8 +3,9 @@
 ## Big picture
 - This is a single-page web app: screens are `<section class="screen">` blocks in `app/index.html` and navigation is class-toggled via `UI.goTo(screenId)`.
 - No bundler/build step. Everything is loaded as `<script ... defer>` and communicated through globals.
-- Code is organized as global “modules” (plain objects): `State`, `UI`, `Lessons`, `Games`, `Reading`, `Progress`, `DailyQuest`, `ParentGuide`.
-- Content lives in `app/data/*.js` as global constants (`TRACKS`, `LESSONS`, `READINGS`, `GAMES_DATA`, etc). Feature logic lives in `app/js/*.js`.
+- Active global "modules" (plain objects): `State`, `UI`, `Lessons`, `Games`, `Reading`, `Sound`, `TypingPremium` (+ typing sub-modules), `PracticePacks`, `Practice` (+ practice sub-modules).
+- **Not loaded** (files exist on disk but are excluded from `index.html`): `Progress`, `ParentGuide`, `TypeGame`. There is no `DailyQuest` module.
+- Content lives in `app/data/*.js` as global constants (`TRACKS`, `LESSONS`, `READINGS`, `GAMES_DATA`, `TYPING_PROMPTS`, `BOLO_TYPE_DEFINE_VOCAB_V1`, `USMLE_STEP_TOP_500_FACTS`, etc). Feature logic lives in `app/js/*.js`.
 
 ## Run / debug
 - Start a local server from `app/`: `cd app && npm start` (runs `python3 -m http.server 8000 --directory .`).
@@ -17,24 +18,30 @@
 - **Screen wiring**: button IDs in `app/index.html` are bound in module `init()` methods and in `app/js/app.js`. If you rename an element id/class, update the corresponding bindings.
 - **Script order matters**: `app/index.html` loads `app/js/utils.js` → `app/data/*.js` → `app/js/state.js` → UI/feature modules → `app/js/app.js` last.
 
-## Lessons: two formats + catalog sync
-- `LESSONS` supports:
-  - **Legacy format**: `LESSONS.noun = [ { step_type, english_text, ... }, ... ]` in `app/data/lessons.js`.
-  - **New format**: `LESSONS.L_SOMETHING = { metadata: {...}, steps: [...] }` (normalized by `Lessons.normalizeLesson()` / `Lessons.getSteps()` in `app/js/lessons.js`).
+## Lessons: catalog sync
+- All 32 lessons use the **new format**: `LESSONS.L_SOMETHING = { metadata: {...}, steps: [...] }` (normalized by `Lessons.normalizeLesson()` / `Lessons.getSteps()` in `app/js/lessons.js`).
 - Lesson listing metadata lives in `LESSON_META` in `app/data/tracks.js`. `Lessons.ensureLessonCatalogSync()` keeps `LESSONS` and `LESSON_META` aligned.
 - When adding a new lesson ID starting with `L_`, update both:
   - `app/data/lessons.js` (content)
   - `app/data/tracks.js` `LESSON_META` (id/labels/trackId/difficulty)
 
-## XP, progress, daily quest
-- Award XP via `State.awardXP(amount, { trackId })`; track accuracy via `State.recordQuestionAttempt(trackId, correct)`.
-- Daily Quest is deterministic per day+profile: `DailyQuest.buildQueue()` uses seeded RNG and normalized questions from `buildAllGameQuestions()` in `app/data/games.js`.
-- Streaks + milestone XP are handled centrally in `State.markDailyQuestCompleted(dateKey)`.
-- Quest flows use globals: `window.DQ_QUEST_CONTEXT` (Learn/Reading) and `window.DQ_QUEST_MODE` + `window.DQ_CALLBACK` (DailyQuest → Games).
+## XP & progress (stubs)
+- `State.awardXP(amount, { trackId })` and `State.recordQuestionAttempt(trackId, correct)` exist but are **no-op stubs** that return immediately. Do not rely on them for tracking until they are implemented.
 
 ## Reading content format
-- `READINGS` is an array in `app/data/readings.js`. Primary question is `questions[0]` with `{ q, options, explanation, correctIndex }`.
-- `options` commonly use bilingual objects `{ en, pa }` (supported by `Reading.openReadingDetail()` in `app/js/reading.js`).
+- `READINGS` is built in `app/data/readings.js` from `BUNDLES` (10 books × 10 stories) + `BOOK*_CUSTOM_STORIES` arrays, normalized by `normalizeCustomStory()`.
+- Questions use `multipleChoiceQuestions` array with `{ question, questionPa, choices, choicesPa, correctChoiceIndex, explanation, explanationPa }`.
+- Vocab data lives in `READING_VOCAB_DETAIL` / `READING_VOCAB` in `app/data/readingVocab.js` (Books 1–10).
+- The active reader is `_renderStoryReader()` in `app/js/reading.js`. It dynamically creates its DOM inside `reading-detail-selection-host`. The old card-based reader code (~2,000 lines) is dead but null-guarded.
+
+## Play / Games (Coming Soon)
+- The Play module card is gated as `is-coming-soon` / `aria-disabled="true"` on the home screen. The `screen-play` DOM has been stripped to a skeleton (status bar + completion panel only). All question/option/feedback element lookups in `games.js` are null-guarded and silently no-op.
+- Game data exists for games 1–6, 8, 10–12 in `app/data/games.js`. Game 12 has no UI tile.
+
+## Typing / Practice
+- `TypingPremium` self-initializes via its own `DOMContentLoaded` listener in `app/js/typing.js`.
+- `Practice` subsystem (`app/js/practice/*.js`) initializes lazily on first open.
+- Typing is gated as Coming Soon on the home deck and header tab.
 
 ## Practical editing tips
 - Prefer small, localized changes; keep the existing “module object” pattern and DOM id conventions.

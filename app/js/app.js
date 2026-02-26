@@ -936,15 +936,6 @@ document.addEventListener("DOMContentLoaded", function() {
     UI.goToInitial("screen-home");
     initHomeSwipeDeck();
 
-  var headerBackChevron = document.getElementById("header-back-chevron");
-  if (headerBackChevron) {
-    UI.bindOnce(headerBackChevron, "headerBackChevronBound", "click", function() {
-      var targetScreen = headerBackChevron.getAttribute("data-target-screen");
-      if (!targetScreen) return;
-      UI.goTo(targetScreen);
-    });
-  }
-
   } catch (e) {
     console.error("❌ Failed to initialize BOLO:", e.message, e.stack);
     if (typeof UI !== "undefined" && UI && typeof UI.showAlertDialog === "function") {

@@ -1,5 +1,78 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Section Transition Overlay — hidden by default, shown briefly during section switches */
+.section-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--motion-base, 240ms) var(--ease-standard, cubic-bezier(0.2, 0.7, 0.2, 1)),
+              visibility var(--motion-base, 240ms) var(--ease-standard, cubic-bezier(0.2, 0.7, 0.2, 1));
+}
+.section-transition.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+/* Card-style content block (mirrors deck-card aesthetic) */
+.section-transition__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 28px 44px 24px;
+  border-radius: var(--radius-md, 20px);
+  border: 1px solid rgba(var(--transition-accent-rgb, 0, 80, 168), 0.22);
+  background: var(--surface, #fff);
+  box-shadow: 0 12px 32px rgba(11, 31, 59, 0.12),
+              0 0 0 1px rgba(var(--transition-accent-rgb, 0, 80, 168), 0.06);
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.92) translateY(8px);
+  transition: transform var(--motion-base, 240ms) var(--ease-standard, cubic-bezier(0.2, 0.7, 0.2, 1));
+}
+.section-transition.is-visible .section-transition__content {
+  transform: scale(1) translateY(0);
+}
+/* Accent stripe at top — matching deck-card ::before stripe */
+.section-transition__content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(var(--transition-accent-rgb, 0, 80, 168), 0.95);
+}
+.section-transition__label {
+  font-size: 18px;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  color: rgb(var(--transition-accent-rgb, 0, 80, 168));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-transition__logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+/* Section-specific accent colors (matches deck card stripes) */
+.section-transition[data-section="home"]   { --transition-accent-rgb: 0, 80, 168; }
+.section-transition[data-section="learn"]  { --transition-accent-rgb: 0, 80, 168; }
+.section-transition[data-section="read"]   { --transition-accent-rgb: 220, 38, 38; }
+.section-transition[data-section="play"]   { --transition-accent-rgb: 245, 111, 35; }
+.section-transition[data-section="type"]   { --transition-accent-rgb: 44, 188, 96; }
+
 section.screen {
   display: none;
 }
@@ -92,7 +165,7 @@ section.screen.active {
 }
 
 .header-progress-subtext[data-section="home"] { --helper-accent-rgb: 0, 80, 168; }
-.header-progress-subtext[data-section="learn"] { --helper-accent-rgb: 33, 125, 255; }
+.header-progress-subtext[data-section="learn"] { --helper-accent-rgb: 0, 80, 168; }
 .header-progress-subtext[data-section="read"] { --helper-accent-rgb: 220, 38, 38; }
 .header-progress-subtext[data-section="play"] { --helper-accent-rgb: 255, 152, 52; }
 .header-progress-subtext[data-section="type"] { --helper-accent-rgb: 44, 188, 96; }
@@ -114,7 +187,7 @@ section.screen.active {
 
 #screen-learn,
 #screen-lesson {
-  --section-accent-rgb: 33, 125, 255;
+  --section-accent-rgb: 0, 80, 168;
   --section-warm-rgb: 115, 176, 255;
 }
 
@@ -889,7 +962,7 @@ section.screen.active {
   padding: 10px 12px;
   padding-right: 118px;
   border-radius: var(--ui-radius-sm);
-  border: 1px solid rgba(33, 125, 255, 0.2);
+  border: 1px solid rgba(0, 80, 168, 0.2);
   background: linear-gradient(180deg, rgba(247, 252, 255, 0.96) 0%, rgba(241, 249, 255, 0.9) 100%);
   box-sizing: border-box;
   position: fixed;
@@ -1009,11 +1082,11 @@ section.screen.active {
   right: 0;
   top: 0;
   height: 3px;
-  background: rgba(33, 125, 255, 0.94);
+  background: rgba(0, 80, 168, 0.94);
 }
 
 #screen-lesson #lessonDeckCard.is-active {
-  border-color: rgba(var(--section-accent-rgb, 33, 125, 255), 0.35);
+  border-color: rgba(var(--section-accent-rgb, 0, 80, 168), 0.35);
   box-shadow: 0 10px 18px rgba(11, 31, 59, 0.12);
 }
 
@@ -1030,7 +1103,7 @@ section.screen.active {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.95) 0%, rgba(242, 248, 255, 0.9) 100%),
     radial-gradient(130% 130% at 14% 14%, rgba(176, 214, 255, 0.42) 0%, rgba(176, 214, 255, 0) 44%);
-  box-shadow: 0 0 0 1px rgba(var(--section-accent-rgb, 33, 125, 255), 0.08), 0 8px 16px rgba(11, 31, 59, 0.1), 0 2px 4px rgba(11, 31, 59, 0.07);
+  box-shadow: 0 0 0 1px rgba(var(--section-accent-rgb, 0, 80, 168), 0.08), 0 8px 16px rgba(11, 31, 59, 0.1), 0 2px 4px rgba(11, 31, 59, 0.07);
   color: rgba(13, 30, 56, 0.94);
   display: inline-flex;
   align-items: center;
@@ -1056,15 +1129,15 @@ section.screen.active {
 
 #screen-lesson #lessonSwipeDeck .deck-prev-handle:hover,
 #screen-lesson #lessonSwipeDeck .deck-next-handle:hover {
-  border-color: rgba(var(--section-accent-rgb, 33, 125, 255), 0.32);
-  box-shadow: 0 0 0 1px rgba(var(--section-accent-rgb, 33, 125, 255), 0.16), 0 0 14px rgba(var(--section-accent-rgb, 33, 125, 255), 0.15), 0 9px 18px rgba(11, 31, 59, 0.12), 0 3px 6px rgba(11, 31, 59, 0.08);
+  border-color: rgba(var(--section-accent-rgb, 0, 80, 168), 0.32);
+  box-shadow: 0 0 0 1px rgba(var(--section-accent-rgb, 0, 80, 168), 0.16), 0 0 14px rgba(var(--section-accent-rgb, 0, 80, 168), 0.15), 0 9px 18px rgba(11, 31, 59, 0.12), 0 3px 6px rgba(11, 31, 59, 0.08);
   filter: brightness(1.03);
 }
 
 #screen-lesson #lessonSwipeDeck .deck-prev-handle:focus-visible,
 #screen-lesson #lessonSwipeDeck .deck-next-handle:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(var(--section-accent-rgb, 33, 125, 255), 0.18), 0 0 0 5px rgba(var(--section-accent-rgb, 33, 125, 255), 0.14), 0 8px 16px rgba(11, 31, 59, 0.12);
+  box-shadow: 0 0 0 2px rgba(var(--section-accent-rgb, 0, 80, 168), 0.18), 0 0 0 5px rgba(var(--section-accent-rgb, 0, 80, 168), 0.14), 0 8px 16px rgba(11, 31, 59, 0.12);
 }
 
 #screen-lesson #lessonSwipeDeck .deck-prev-handle:active,
@@ -1751,7 +1824,7 @@ section.screen.active {
   margin: 0 auto;
   padding: 10px 12px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(33, 125, 255, 0.2);
+  border: 1px solid rgba(0, 80, 168, 0.2);
   background: linear-gradient(180deg, rgba(247, 252, 255, 0.95) 0%, rgba(241, 249, 255, 0.9) 100%);
   position: fixed;
   left: var(--app-center-x, 50%);
@@ -8446,48 +8519,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   flex: 0 0 auto;
 }
 
-.app-header .header-back-chevron {
-  min-width: 44px;
-  width: 44px;
-  min-height: 44px;
-  height: 44px;
-  border-radius: 12px;
-  border: 1px solid rgba(13, 30, 56, 0.16);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 248, 253, 0.9) 100%);
-  color: rgba(13, 30, 56, 0.9);
-  font-size: 17px;
-  font-weight: 900;
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 8px rgba(11, 31, 59, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.72);
-  transition: border-color var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), filter var(--motion-fast) var(--ease-standard);
-}
-
-.app-header .header-back-chevron:hover {
-  filter: brightness(1.03);
-  box-shadow: 0 6px 12px rgba(11, 31, 59, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.76);
-}
-
-.app-header .header-back-chevron:active {
-  transform: translateY(1px) scale(0.952);
-  filter: brightness(1.02);
-  box-shadow: 0 0 0 2px rgba(var(--section-accent-rgb, 0, 80, 168), 0.2), 0 0 0 6px rgba(var(--section-accent-rgb, 0, 80, 168), 0.14), 0 9px 16px rgba(11, 31, 59, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.app-header .header-back-chevron:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(var(--section-accent-rgb, 0, 80, 168), 0.18), 0 0 0 4px rgba(var(--section-accent-rgb, 0, 80, 168), 0.12), 0 5px 10px rgba(11, 31, 59, 0.1);
-}
-
-.app-header .header-back-chevron.is-hidden {
-  visibility: hidden;
-  pointer-events: none;
-}
-
 /* Unified back button interaction across sections */
-.app-header .header-back-chevron,
 #btn-practice-back,
 #typingRaceBackBtn,
 #btn-play-back-games,
@@ -8496,7 +8528,6 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   transition: border-color var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), filter var(--motion-fast) var(--ease-standard);
 }
 
-.app-header .header-back-chevron:hover,
 #btn-practice-back:hover,
 #typingRaceBackBtn:hover,
 #btn-play-back-games:hover,
@@ -8506,7 +8537,6 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   box-shadow: 0 6px 12px rgba(11, 31, 59, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.76);
 }
 
-.app-header .header-back-chevron:active,
 #btn-practice-back:active,
 #typingRaceBackBtn:active,
 #btn-play-back-games:active,
@@ -8517,7 +8547,6 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   box-shadow: 0 0 0 2px rgba(var(--section-accent-rgb, 0, 80, 168), 0.2), 0 0 0 6px rgba(var(--section-accent-rgb, 0, 80, 168), 0.14), 0 9px 16px rgba(11, 31, 59, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-.app-header .header-back-chevron:focus-visible,
 #btn-practice-back:focus-visible,
 #typingRaceBackBtn:focus-visible,
 #btn-play-back-games:focus-visible,
@@ -8594,7 +8623,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 }
 
 .app-header .header-section-tab[data-header-section='learn'] {
-  --header-section-accent-rgb: 33, 125, 255;
+  --header-section-accent-rgb: 0, 80, 168;
 }
 
 .app-header .header-section-tab[data-header-section='read'] {
@@ -8785,7 +8814,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   height: 100%;
   width: 0;
   border-radius: inherit;
-  background: linear-gradient(90deg, rgba(0, 80, 168, 0.92) 0%, rgba(33, 125, 255, 0.94) 72%, rgba(78, 156, 255, 0.95) 100%);
+  background: linear-gradient(90deg, rgba(0, 80, 168, 0.92) 0%, rgba(0, 80, 168, 0.94) 72%, rgba(78, 156, 255, 0.95) 100%);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -8862,7 +8891,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  --active-module-accent-rgb: 33, 125, 255;
+  --active-module-accent-rgb: 0, 80, 168;
   --ui-cta-h: 50px;
   --ui-radius: var(--radius-md);
   --ui-radius-sm: var(--radius-sm);
@@ -8966,7 +8995,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 }
 
 #readingBundleDeck .deck-card--reading { --module-accent-rgb: 255, 91, 106; }
-#readingSwipeDeck .deck-card--reading { --module-accent-rgb: 33, 125, 255; }
+#readingSwipeDeck .deck-card--reading { --module-accent-rgb: 0, 80, 168; }
 
 #readingBundleDeck .module-card::before {
   content: "";
@@ -8985,12 +9014,12 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   right: 0;
   top: 0;
   height: 3px;
-  background: rgba(var(--module-accent-rgb, 33, 125, 255), 0.95);
+  background: rgba(var(--module-accent-rgb, 0, 80, 168), 0.95);
 }
 
 #readingBundleDeck .deck-card.is-active,
 #readingSwipeDeck .deck-card.is-active {
-  border-color: rgba(var(--module-accent-rgb, 33, 125, 255), 0.42);
+  border-color: rgba(var(--module-accent-rgb, 0, 80, 168), 0.42);
   box-shadow: 0 12px 24px rgba(11, 31, 59, 0.18);
 }
 
@@ -9075,7 +9104,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   display: none;
 }
 
-#homeSwipeDeck .deck-card--learn { --module-accent-rgb: 33, 125, 255; }
+#homeSwipeDeck .deck-card--learn { --module-accent-rgb: 0, 80, 168; }
 #homeSwipeDeck .deck-card--reading { --module-accent-rgb: 255, 91, 106; }
 #homeSwipeDeck .deck-card--play { --module-accent-rgb: 255, 152, 52; }
 #homeSwipeDeck .deck-card--type { --module-accent-rgb: 44, 188, 96; }
@@ -9888,7 +9917,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   margin: 0 auto;
   padding: 10px 12px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(33, 125, 255, 0.2);
+  border: 1px solid rgba(0, 80, 168, 0.2);
   background: linear-gradient(180deg, rgba(247, 252, 255, 0.95) 0%, rgba(241, 249, 255, 0.9) 100%);
   position: fixed;
   left: var(--app-center-x, 50%);
@@ -10128,7 +10157,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  --active-module-accent-rgb: 33, 125, 255;
+  --active-module-accent-rgb: 0, 80, 168;
   --ui-cta-h: 50px;
   --ui-radius: var(--radius-md);
   --ui-radius-sm: var(--radius-sm);
@@ -10163,7 +10192,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   gap: 10px;
   position: relative;
   overflow: hidden;
-  --module-accent-rgb: 33, 125, 255;
+  --module-accent-rgb: 0, 80, 168;
 }
 
 #learnSwipeDeck .module-card::before {
@@ -10173,7 +10202,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   right: 0;
   top: 0;
   height: 3px;
-  background: rgba(var(--section-accent-rgb, 33, 125, 255), 0.95);
+  background: rgba(var(--section-accent-rgb, 0, 80, 168), 0.95);
 }
 
 #learnSwipeDeck .module-card::after,
@@ -10184,7 +10213,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 
 #learnSwipeDeck .deck-card.is-stack-prev,
 #learnSwipeDeck .deck-card.is-stack-next {
-  border-color: rgba(var(--section-accent-rgb, 33, 125, 255), 0.2);
+  border-color: rgba(var(--section-accent-rgb, 0, 80, 168), 0.2);
 }
 
 #learnSwipeDeck .deck-card.is-stack-far {
@@ -10192,7 +10221,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 }
 
 #learnSwipeDeck .deck-card.is-stack-peek {
-  border-color: rgba(var(--section-accent-rgb, 33, 125, 255), 0.26);
+  border-color: rgba(var(--section-accent-rgb, 0, 80, 168), 0.26);
   box-shadow: 0 6px 14px rgba(11, 31, 59, 0.11);
   z-index: 280 !important;
 }
@@ -10219,7 +10248,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 
 #learnSwipeDeck .deck-card.is-active {
   z-index: 620 !important;
-  border-color: rgba(var(--section-accent-rgb, 33, 125, 255), 0.42);
+  border-color: rgba(var(--section-accent-rgb, 0, 80, 168), 0.42);
   box-shadow: 0 12px 24px rgba(11, 31, 59, 0.18);
 }
 
@@ -10561,8 +10590,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
-  border: 1px solid rgba(33, 125, 255, 0.28);
-  background: rgba(33, 125, 255, 0.1);
+  border: 1px solid rgba(0, 80, 168, 0.28);
+  background: rgba(0, 80, 168, 0.1);
   color: var(--primary-700);
 }
 
@@ -10584,13 +10613,13 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 }
 
 #learnSwipeDeck .learn-deck-card--current {
-  border-color: rgba(33, 125, 255, 0.5);
-  box-shadow: 0 0 0 2px rgba(33, 125, 255, 0.16), var(--module-card-shadow);
+  border-color: rgba(0, 80, 168, 0.5);
+  box-shadow: 0 0 0 2px rgba(0, 80, 168, 0.16), var(--module-card-shadow);
 }
 
 #learnSwipeDeck .learn-deck-card--current .learn-deck-badge {
-  border-color: rgba(33, 125, 255, 0.45);
-  background: rgba(33, 125, 255, 0.18);
+  border-color: rgba(0, 80, 168, 0.45);
+  background: rgba(0, 80, 168, 0.18);
 }
 
 #learnSwipeDeck .learn-deck-card--locked {
@@ -10610,7 +10639,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 
 #learnSwipeDeck .learn-deck-card--more {
   border-style: dashed;
-  border-color: rgba(33, 125, 255, 0.45);
+  border-color: rgba(0, 80, 168, 0.45);
   background: linear-gradient(180deg, rgba(246, 251, 255, 0.94) 0%, rgba(238, 247, 255, 0.9) 100%);
 }
 
@@ -10619,8 +10648,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 }
 
 #learnSwipeDeck .learn-deck-card--more .learn-deck-badge {
-  border-color: rgba(33, 125, 255, 0.35);
-  background: rgba(33, 125, 255, 0.14);
+  border-color: rgba(0, 80, 168, 0.35);
+  background: rgba(0, 80, 168, 0.14);
 }
 
 .learn-deck-status {
@@ -10718,8 +10747,8 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
 }
 
 #readingSwipeDeck .reading-deck-card--current {
-  border-color: rgba(33, 125, 255, 0.5);
-  box-shadow: 0 0 0 2px rgba(33, 125, 255, 0.16), var(--module-card-shadow);
+  border-color: rgba(0, 80, 168, 0.5);
+  box-shadow: 0 0 0 2px rgba(0, 80, 168, 0.16), var(--module-card-shadow);
 }
 
 #readingSwipeDeck .reading-deck-card--locked .deck-card-title,
@@ -11583,7 +11612,7 @@ main {
 #screen-reading,
 #screen-typing-center {
   --indicator-base-rgb: 245, 111, 35;
-  --indicator-active-rgb: 33, 125, 255;
+  --indicator-active-rgb: 0, 80, 168;
   --indicator-shift-duration: 220ms;
   --indicator-pop-duration: 260ms;
 }
@@ -11780,11 +11809,6 @@ main {
 #screen-typing-center #typingModeDeck .deck-next-handle,
 #screen-lesson #lessonSwipeDeck .deck-prev-handle,
 #screen-lesson #lessonSwipeDeck .deck-next-handle,
-#screen-home .app-header .header-back-chevron,
-#screen-learn .app-header .header-back-chevron,
-#screen-lesson .app-header .header-back-chevron,
-#screen-reading .app-header .header-back-chevron,
-#screen-typing-center .app-header .header-back-chevron,
 #btn-practice-back,
 #typingRaceBackBtn,
 #btn-play-back-games,
@@ -11835,11 +11859,6 @@ main {
 #screen-typing-center #typingModeDeck .deck-next-handle:hover,
 #screen-lesson #lessonSwipeDeck .deck-prev-handle:hover,
 #screen-lesson #lessonSwipeDeck .deck-next-handle:hover,
-#screen-home .app-header .header-back-chevron:hover,
-#screen-learn .app-header .header-back-chevron:hover,
-#screen-lesson .app-header .header-back-chevron:hover,
-#screen-reading .app-header .header-back-chevron:hover,
-#screen-typing-center .app-header .header-back-chevron:hover,
 #btn-practice-back:hover,
 #typingRaceBackBtn:hover,
 #btn-play-back-games:hover,
@@ -11866,11 +11885,6 @@ main {
 #screen-typing-center #typingModeDeck .deck-next-handle:focus-visible,
 #screen-lesson #lessonSwipeDeck .deck-prev-handle:focus-visible,
 #screen-lesson #lessonSwipeDeck .deck-next-handle:focus-visible,
-#screen-home .app-header .header-back-chevron:focus-visible,
-#screen-learn .app-header .header-back-chevron:focus-visible,
-#screen-lesson .app-header .header-back-chevron:focus-visible,
-#screen-reading .app-header .header-back-chevron:focus-visible,
-#screen-typing-center .app-header .header-back-chevron:focus-visible,
 #btn-practice-back:focus-visible,
 #typingRaceBackBtn:focus-visible,
 #btn-play-back-games:focus-visible,
@@ -11896,11 +11910,6 @@ main {
 #screen-typing-center #typingModeDeck .deck-next-handle:active,
 #screen-lesson #lessonSwipeDeck .deck-prev-handle:active,
 #screen-lesson #lessonSwipeDeck .deck-next-handle:active,
-#screen-home .app-header .header-back-chevron:active,
-#screen-learn .app-header .header-back-chevron:active,
-#screen-lesson .app-header .header-back-chevron:active,
-#screen-reading .app-header .header-back-chevron:active,
-#screen-typing-center .app-header .header-back-chevron:active,
 #btn-practice-back:active,
 #typingRaceBackBtn:active,
 #btn-play-back-games:active,
@@ -12492,7 +12501,7 @@ main {
 #screen-typing-center .typing-hero-nav,
 #screen-lesson #lessonSwipeDeck .lesson-hero-nav,
 #screen-reading-detail #reading-detail-hero-nav-host {
-  --hero-glow-rgb: 33, 125, 255;
+  --hero-glow-rgb: 0, 80, 168;
   position: absolute !important;
   top: 7px !important;
   right: 9px !important;
@@ -12547,7 +12556,7 @@ main {
   background:
     linear-gradient(160deg, rgba(255, 255, 255, 0.95) 0%, rgba(242, 248, 255, 0.9) 100%),
     radial-gradient(130% 130% at 14% 14%, rgba(176, 214, 255, 0.42) 0%, rgba(176, 214, 255, 0) 44%) !important;
-  box-shadow: 0 0 0 1px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.08), 0 8px 16px rgba(11, 31, 59, 0.1), 0 2px 4px rgba(11, 31, 59, 0.07) !important;
+  box-shadow: 0 0 0 1px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.08), 0 8px 16px rgba(11, 31, 59, 0.1), 0 2px 4px rgba(11, 31, 59, 0.07) !important;
   color: rgba(13, 30, 56, 0.94) !important;
   transition: border-color var(--motion-fast) var(--ease-standard), transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), filter var(--motion-fast) var(--ease-standard) !important;
   font-size: 0 !important;
@@ -12565,8 +12574,8 @@ main {
 #screen-lesson #lessonSwipeDeck .lesson-hero-nav .deck-next-handle:hover,
 #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-hero-nav .deck-prev-handle:hover,
 #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-hero-nav .deck-next-handle:hover {
-  border-color: rgba(var(--hero-glow-rgb, 33, 125, 255), 0.32) !important;
-  box-shadow: 0 0 0 1px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.16), 0 0 14px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.15), 0 9px 18px rgba(11, 31, 59, 0.12), 0 3px 6px rgba(11, 31, 59, 0.08) !important;
+  border-color: rgba(var(--hero-glow-rgb, 0, 80, 168), 0.32) !important;
+  box-shadow: 0 0 0 1px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.16), 0 0 14px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.15), 0 9px 18px rgba(11, 31, 59, 0.12), 0 3px 6px rgba(11, 31, 59, 0.08) !important;
   filter: brightness(1.03) !important;
 }
 
@@ -12583,7 +12592,7 @@ main {
 #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-hero-nav .deck-prev-handle:focus-visible,
 #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-hero-nav .deck-next-handle:focus-visible {
   outline: none !important;
-  box-shadow: 0 0 0 2px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.18), 0 0 0 5px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.14), 0 8px 16px rgba(11, 31, 59, 0.12) !important;
+  box-shadow: 0 0 0 2px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.18), 0 0 0 5px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.14), 0 8px 16px rgba(11, 31, 59, 0.12) !important;
 }
 
 #screen-home .home-hero-nav .deck-prev-handle:active,
@@ -12676,7 +12685,7 @@ main {
   background: var(--primary) !important;
   border: 1px solid var(--primary-700) !important;
   color: var(--surface) !important;
-  box-shadow: 0 0 0 1px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.08), 0 8px 16px rgba(11, 31, 59, 0.1), 0 2px 4px rgba(11, 31, 59, 0.07) !important;
+  box-shadow: 0 0 0 1px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.08), 0 8px 16px rgba(11, 31, 59, 0.1), 0 2px 4px rgba(11, 31, 59, 0.07) !important;
   transition: transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard), background-color var(--motion-fast) var(--ease-standard) !important;
 }
 
@@ -12717,7 +12726,7 @@ main {
 #screen-lesson #lessonSwipeDeck .lesson-hero-nav #btn-lesson-check.lesson-check-btn:focus-visible,
 #screen-reading-detail #reading-detail-hero-nav-host .reading-detail-start-btn:focus-visible {
   outline: none !important;
-  box-shadow: 0 0 0 3px rgba(var(--hero-glow-rgb, 33, 125, 255), 0.24), var(--shadow-2) !important;
+  box-shadow: 0 0 0 3px rgba(var(--hero-glow-rgb, 0, 80, 168), 0.24), var(--shadow-2) !important;
 }
 
 #screen-home .home-hero-nav #btn-home-deck-start:active,
@@ -13006,7 +13015,6 @@ main {
   .deck-prev-handle,
   .deck-next-handle,
   .header-section-tab,
-  .header-back-chevron,
   .modal-close-btn,
   .header-switch-link
 ):not(:disabled):not([aria-disabled="true"]) {
@@ -13030,7 +13038,6 @@ main {
     .deck-prev-handle,
     .deck-next-handle,
     .header-section-tab,
-    .header-back-chevron,
     .modal-close-btn,
     .header-switch-link
   ):not(:disabled):not([aria-disabled="true"]):hover {
@@ -13054,7 +13061,6 @@ main {
   .deck-prev-handle,
   .deck-next-handle,
   .header-section-tab,
-  .header-back-chevron,
   .modal-close-btn,
   .header-switch-link
 ):not(:disabled):not([aria-disabled="true"]):active {
@@ -13077,7 +13083,6 @@ main {
   .deck-prev-handle,
   .deck-next-handle,
   .header-section-tab,
-  .header-back-chevron,
   .modal-close-btn,
   .header-switch-link
 ):focus-visible {

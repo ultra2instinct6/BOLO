@@ -1,12 +1,12 @@
 /* =========================================================
-   BOLO – Reading Vocabulary (R1–R50)
-   Fresh dataset aligned to 5 books x 10 stories.
+   BOLO – Reading Vocabulary (R1–R100)
+   Fresh dataset aligned to 10 books x 10 stories.
    ========================================================= */
 
 var READING_VOCAB_DETAIL = {};
 
 (function buildReadingVocabDetail() {
-  for (var bookId = 1; bookId <= 5; bookId++) {
+  for (var bookId = 1; bookId <= 10; bookId++) {
     for (var storyInBook = 1; storyInBook <= 10; storyInBook++) {
       var idx = ((bookId - 1) * 10) + storyInBook;
       var rid = "R" + idx;

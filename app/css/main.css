@@ -39,9 +39,9 @@ html { -webkit-text-size-adjust: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -110,6 +110,29 @@ section.screen {
 
 section.screen.active {
   display: block;
+  animation: screenFadeIn 220ms var(--ease-standard, cubic-bezier(0.2, 0.7, 0.2, 1)) both;
+}
+
+/* Skip animation on the very first screen render (already visible) */
+section.screen.active.no-enter-anim {
+  animation: none;
+}
+
+@keyframes screenFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  section.screen.active {
+    animation: none;
+  }
 }
 
 :root {
@@ -8650,7 +8673,7 @@ body.typing-scroll-lock #screen-typing-race .race-dock {
   width: 100%;
   padding: 9px 8px;
   min-height: 48px;
-  transition: color 140ms var(--ease-standard), background-color 140ms var(--ease-standard), box-shadow 140ms var(--ease-standard), border-color 140ms var(--ease-standard), transform 140ms var(--ease-standard), font-size 140ms var(--ease-standard), opacity 140ms var(--ease-standard);
+  transition: color 140ms var(--ease-standard), background-color 140ms var(--ease-standard), box-shadow 140ms var(--ease-standard), border-color 140ms var(--ease-standard), transform 140ms var(--ease-standard), opacity 140ms var(--ease-standard);
   --header-section-accent-rgb: 0, 80, 168;
 }
 
@@ -13336,4 +13359,117 @@ button, a, [role="button"] {
    interfering with fixed bottom bars                      */
 .app-container {
   overscroll-behavior-y: contain;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MICRO-INTERACTIONS — subtle haptic-like feedback & entrances
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- 1. Button press haptic scale (:active) ------------- */
+button:active,
+[role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 60ms ease-out;
+}
+
+/* --- 2. Modal enter / exit animation -------------------- */
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes modalCardPop {
+  from { opacity: 0; transform: scale(0.92) translateY(12px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+@keyframes modalFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes modalCardDrop {
+  from { opacity: 1; transform: scale(1)    translateY(0);    }
+  to   { opacity: 0; transform: scale(0.92) translateY(12px); }
+}
+
+.modal-backdrop.active,
+.media-modal-backdrop.active {
+  animation: modalFadeIn 200ms var(--ease-standard) both;
+}
+.modal-backdrop.active .modal-card,
+.modal-backdrop.active .profile-modal-card,
+.media-modal-backdrop.active .media-modal-card {
+  animation: modalCardPop 260ms var(--ease-standard) both;
+}
+/* Exit: toggled via JS before removing .active */
+.modal-backdrop.modal-exit,
+.media-modal-backdrop.modal-exit {
+  animation: modalFadeOut 180ms ease-in both;
+}
+.modal-backdrop.modal-exit .modal-card,
+.modal-backdrop.modal-exit .profile-modal-card,
+.media-modal-backdrop.modal-exit .media-modal-card {
+  animation: modalCardDrop 180ms ease-in both;
+}
+
+/* --- 3. Lesson feedback panel entrance ------------------ */
+@keyframes feedbackSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.lesson-feedback-panel {
+  animation: feedbackSlideUp 220ms var(--ease-standard) both;
+}
+
+/* --- 4. Deck-card stagger entrance (home + reading) ----- */
+@keyframes cardRise {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+}
+section.screen.active .deck-card {
+  animation: cardRise 280ms var(--ease-standard) both;
+}
+section.screen.active .deck-card:nth-child(2) { animation-delay: 60ms; }
+section.screen.active .deck-card:nth-child(3) { animation-delay: 120ms; }
+section.screen.active .deck-card:nth-child(4) { animation-delay: 180ms; }
+section.screen.active .deck-card:nth-child(5) { animation-delay: 240ms; }
+/* Skip animation on initial page load */
+section.screen.no-enter-anim .deck-card { animation: none; }
+
+/* --- 5. Smooth list-item / tile fade-in for reading ----- */
+@keyframes tileFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+section.screen.active .book-tile,
+section.screen.active .story-tile {
+  animation: tileFadeIn 200ms var(--ease-standard) both;
+}
+section.screen.active .book-tile:nth-child(2),
+section.screen.active .story-tile:nth-child(2) { animation-delay: 40ms; }
+section.screen.active .book-tile:nth-child(3),
+section.screen.active .story-tile:nth-child(3) { animation-delay: 80ms; }
+section.screen.active .book-tile:nth-child(4),
+section.screen.active .story-tile:nth-child(4) { animation-delay: 120ms; }
+
+/* --- 6. Respect prefers-reduced-motion for everything --- */
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop.active,
+  .media-modal-backdrop.active,
+  .modal-backdrop.active .modal-card,
+  .modal-backdrop.active .profile-modal-card,
+  .media-modal-backdrop.active .media-modal-card,
+  .modal-backdrop.modal-exit,
+  .media-modal-backdrop.modal-exit,
+  .modal-backdrop.modal-exit .modal-card,
+  .modal-backdrop.modal-exit .profile-modal-card,
+  .media-modal-backdrop.modal-exit .media-modal-card,
+  .lesson-feedback-panel,
+  section.screen.active .deck-card,
+  section.screen.active .book-tile,
+  section.screen.active .story-tile {
+    animation: none !important;
+  }
+  button:active,
+  [role="button"]:active {
+    transform: none !important;
+  }
 }

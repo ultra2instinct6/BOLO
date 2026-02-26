@@ -673,7 +673,7 @@ var UI = {
 
   // Boot-time routing helper (skip transitions). Use only for programmatic startup/restore.
   goToInitial: function(screenId) {
-    return UI.goTo(screenId, { skipTransition: true });
+    return UI.goTo(screenId, { skipTransition: true, skipEnterAnim: true });
   },
 
   // Navigate to a screen
@@ -763,7 +763,7 @@ var UI = {
       // Make target screen visible (but don't hide others yet)
       // This is critical: we must make the new screen visible BEFORE moving focus
       // to avoid any timing gap where a focused element could be inside an aria-hidden ancestor.
-      UI.makeScreenVisible(targetScreen);
+      UI.makeScreenVisible(targetScreen, opts);
 
       // Screen-specific mount hooks (render/sync after becoming active)
       UI._runScreenHook(screenId, "mount");
@@ -970,9 +970,20 @@ var UI = {
   // Make a target screen visible to users and assistive technology.
   // Does NOT hide other screens (see hideOtherScreens for that).
   // This is called BEFORE moving focus to ensure the screen is not hidden when focus arrives.
-  makeScreenVisible: function(targetScreen) {
+  makeScreenVisible: function(targetScreen, opts) {
     if (!targetScreen) return;
-    targetScreen.classList.add("active");
+    opts = opts || {};
+    // Re-trigger the CSS enter animation by removing + re-adding .active
+    // (the animation is defined on section.screen.active via @keyframes screenFadeIn)
+    targetScreen.classList.remove("active", "no-enter-anim");
+    if (opts.skipEnterAnim) {
+      // For initial load: show immediately without animation
+      targetScreen.classList.add("active", "no-enter-anim");
+    } else {
+      // Force reflow so the browser registers the class removal before re-adding it
+      void targetScreen.offsetWidth;
+      targetScreen.classList.add("active");
+    }
     targetScreen.setAttribute("aria-hidden", "false");
     targetScreen.removeAttribute("hidden");
     if ("inert" in targetScreen) {
@@ -1078,35 +1089,46 @@ var UI = {
     var modal = document.getElementById(modalId);
     if (!modal) return;
 
-    modal.classList.remove("active");
-    modal.setAttribute("aria-hidden", "true");
+    // Animate exit, then remove .active
+    modal.classList.add("modal-exit");
+    var didFinish = false;
+    var onEnd = function() {
+      if (didFinish) return;
+      didFinish = true;
+      modal.removeEventListener("animationend", onEnd);
+      modal.classList.remove("active", "modal-exit");
+      modal.setAttribute("aria-hidden", "true");
 
-    try {
-      if (typeof modal._onAfterClose === "function") {
-        modal._onAfterClose();
+      try {
+        if (typeof modal._onAfterClose === "function") {
+          modal._onAfterClose();
+        }
+      } catch (eAfterClose) {
+        // no-op
       }
-    } catch (eAfterClose) {
-      // no-op
-    }
-    modal._onAfterClose = null;
+      modal._onAfterClose = null;
 
-    // Only unlock if no other modals are active.
-    try {
-      var anyActive = document.querySelector(".modal-backdrop.active");
-      if (!anyActive) UI.unlockBodyScroll();
-    } catch (e) {
-      UI.unlockBodyScroll();
-    }
-
-    try {
-      var returnEl = modal._returnFocusEl;
-      if (returnEl && typeof returnEl.focus === "function" && document.contains(returnEl)) {
-        returnEl.focus({ preventScroll: true });
+      // Only unlock if no other modals are active.
+      try {
+        var anyActive = document.querySelector(".modal-backdrop.active");
+        if (!anyActive) UI.unlockBodyScroll();
+      } catch (e) {
+        UI.unlockBodyScroll();
       }
-      modal._returnFocusEl = null;
-    } catch (eFocusBack) {
-      // no-op
-    }
+
+      try {
+        var returnEl = modal._returnFocusEl;
+        if (returnEl && typeof returnEl.focus === "function" && document.contains(returnEl)) {
+          returnEl.focus({ preventScroll: true });
+        }
+        modal._returnFocusEl = null;
+      } catch (eFocusBack) {
+        // no-op
+      }
+    };
+    modal.addEventListener("animationend", onEnd);
+    // Safety fallback if animation doesn't fire
+    setTimeout(onEnd, 250);
   },
 
   // =============================

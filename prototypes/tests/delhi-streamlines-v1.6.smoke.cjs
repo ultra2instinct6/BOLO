@@ -242,7 +242,10 @@ game.act('flip');assert(game.p.flipAge>.4);const trickPoints=game.state.combo;ga
 const scales=[];ctx.scale=(x,y)=>scales.push([x,y]);game.update(1/60,neutral);for(let i=0;i<7;i++)game.update(1/60,neutral);game.drawRider();assert(scales.some(([,y])=>y<.8),'board renders edge-on during a kickflip');
 game.act('grab');assert(game.p.grabAge>0);const grabPoints=game.state.combo;game.act('grab');assert.equal(game.state.combo,grabPoints,'one grab per airtime');
 for(let i=0;i<80&&game.p.z>0;i++)game.update(1/60,neutral);assert.equal(game.p.flipUsed,false,'landing resets trick availability');assert(game.p.landingAge>0,'landing compression is animated');
-game.enterZone(0);game.state.paused=false;game.p.x=3284;game.p.y=1305;game.p.vx=300;game.p.vy=0;game.p.dir=0;game.add('ollie','connector line',100,'cross-district');
-for(let i=0;i<12;i++)game.update(1/60,neutral);
-assert.equal(game.state.zone,1,'rider crosses the market connector at ground level');assert.equal(game.state.combo,100,'cross-district route preserves the current combo');
+for(const [from,to,x,y,vx,vy] of [[0,1,3284,1305,300,0],[0,2,1400,2134,0,300],[1,3,4893,2134,0,300],[2,3,3284,2990,300,0]]){
+  game.enterZone(from);game.state.paused=false;game.p.x=x;game.p.y=y;game.p.vx=vx;game.p.vy=vy;game.p.dir=Math.atan2(vy,vx);game.add('ollie','connector line',100,'cross-district');
+  for(let i=0;i<14;i++)game.update(1/60,neutral);
+  assert.equal(game.state.zone,to,`rider crosses city link ${from} to ${to} at ground level`);
+  assert.equal(game.state.combo,100,'cross-district route preserves the current combo');
+}
 console.log('PASS: clear road centre lines and four connected routes; animated flip, grab, landing and trick input gating');
